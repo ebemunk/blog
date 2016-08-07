@@ -1,7 +1,0 @@
-{{ $shuf := split "goat,fox,plants,ornate,smallfloral" "," | shuffle }}
-{{ $svg := index $shuf . }}
-<!-- <div class="divider">
-	{{ readFile (print "themes/lexo/static/img/divider-" $svg ".svg") | safeHTML }}
-</div> -->
-<div class="divider" style='background-image: url({{print "img/divider-" $svg ".svg"}})'>
-</div>

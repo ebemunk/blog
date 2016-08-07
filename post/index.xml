@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Thinking Through the Party</title>
+    <link>http://blog.ebemunk.com/post/</link>
+    <description>Recent content in Posts on Thinking Through the Party</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Mar 2016 11:18:33 -0700</lastBuildDate>
+    <atom:link href="http://blog.ebemunk.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Visual Look at 2 Million Chess Games</title>
+      <link>http://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link>
+      <pubDate>Wed, 02 Mar 2016 11:18:33 -0700</pubDate>
+      
+      <guid>http://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid>
+      <description>
+
+&lt;p&gt;I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ll take a look at more than 2 million games, taken from the &lt;a href=&#34;http://www.top-5000.nl/pgn.htm&#34;&gt;MillionBase&lt;/a&gt; PGN database. I ignored any Chess960 games contained, but in total there are &lt;strong&gt;2,197,113 games&lt;/strong&gt;. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games. It was the biggest collection of games I could find, spanning games from 1801 up to 2013, and players with ratings between 215 (wow!) to 2861 (I wonder who that is?). So I think it&amp;rsquo;s a pretty good representation of chess games all around.&lt;/p&gt;
+
+&lt;p&gt;I also wanted to show off some of the software I wrote for this purpose, checkout the last section for links to those.&lt;/p&gt;
+
+&lt;h2 id=&#34;meta&#34;&gt;Meta&lt;/h2&gt;
+
+&lt;p&gt;Lets start with some general numbers. White wins a bit more often than Black, 39% to 30%, with the rest being draws. It&amp;rsquo;s not very surprising, although I would have expected the difference to be less. There are also some negligible amount of unfinished games, and I couldn&amp;rsquo;t discern what happened to those.&lt;/p&gt;
+
+&lt;div id=&#34;wins-combined&#34;&gt;
+    &lt;div id=&#34;wins&#34; class=&#34;donut&#34;&gt;
+        &lt;span class=&#34;caption&#34;&gt;Wins&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This generally seems to agree with all the other statistics out there. Nothing crazy going on here.&lt;/p&gt;
+
+&lt;h2 id=&#34;openings&#34;&gt;Openings&lt;/h2&gt;
+
+&lt;p&gt;Like many other amateur players, I tend place more importance on openings than I probably should. That being said, I was really excited about seeing the opening tendencies and popular moves. Below is a visualization of the first 5 moves (10-ply) from every game.&lt;/p&gt;
+
+&lt;div id=&#34;op-combined&#34;&gt;
+    &lt;span class=&#34;caption&#34;&gt;Openings Tree&lt;/span&gt;
+    &lt;div id=&#34;openingsg&#34; class=&#34;cdv-openings&#34;&gt;&lt;/div&gt;
+    &lt;div id=&#34;board&#34;&gt;&lt;/div&gt;
+    &lt;span id=&#34;op-name&#34;&gt;&lt;/span&gt;
+    &lt;span id=&#34;op-percentage&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Right from the first move, I see that e4 dominates by a large margin (48%), followed by d4 (34%). I would have expected the gap between these two most-popular moves to be smaller, but given the time range of this database, it seems reasonable. I will focus on some of my favorite openings and an insight I found to be quite interesting.&lt;/p&gt;
+
+&lt;p&gt;Of course, among e4 openings, the beloved (and my favorite reply as Black) Sicilian (c5) is the most common reply, even more than e5. 2. Nf3 is by far the most played as White, aside from some respectable chunks from Alapin and Closed Sicilian. Interestingly, Black&amp;rsquo;s second move seems to be a very critical crossroads of how the game will play out.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s clear that after Black&amp;rsquo;s second move, the next couple moves in the opening phase are almost set in stone. I believe this is because the Sicilian has a great deal of opening theory behind it, and people very rarely deviate from mainlines (perhaps because it&amp;rsquo;s rather sharp, and gets complicated very quickly).&lt;/p&gt;
+
+&lt;p&gt;The three big choices are 2.. d6, Nc6 or e6. e6 and Nc6 almost invariably lead to a similar position, but Black chooses to delay his Queen&amp;rsquo;s Knight&amp;rsquo;s development for more flexibility in the case of e6 (more on that later).&lt;/p&gt;
+
+&lt;p&gt;When 2.. d6 is played, the game almost always follows the pawn exchange line, and ends up in Najdorf (58% of the time!). The Sicilian Dragon (one of my favorite variations in the Sicilian) also gets a respectable 20% chance of occurring.&lt;/p&gt;
+
+&lt;p&gt;I knew because of the huge theory behind it, almost all moves in the Sicilian lines are very decisive in how the game will play out, but seeing the critical junctions visually really emphasizes this point.&lt;/p&gt;
+
+&lt;p&gt;Other notable openings are Ruy Lopez, with French and Caro-Kann getting a nice chunk. What I found weird was that there were more French games than there were Queen&amp;rsquo;s Gambit. As a beginner everyone focuses on this classical line, yet it seems a bit under-represented here.&lt;/p&gt;
+
+&lt;p&gt;The Indian Defense is the most popular against d4, often resulting in King&amp;rsquo;s Indian, or Nimzo/Bogo Indian variations.&lt;/p&gt;
+
+&lt;p&gt;Regarding uncommon openings, like English (c4) or Reti (Nf3), it&amp;rsquo;s worth noting that while the main variations are usually followed pretty strictly in other systems, these openings show a lot more variation, and there are less obvious/dominant moves that were followed. If you&amp;rsquo;re a player that doesn&amp;rsquo;t like to get into theoretical arguments with your opponent, such openings might be a better fit for you.&lt;/p&gt;
+
+&lt;h2 id=&#34;castling&#34;&gt;Castling&lt;/h2&gt;
+
+&lt;div class=&#34;castling&#34;&gt;
+    &lt;div id=&#34;white-castling&#34; class=&#34;donut&#34;&gt;
+        &lt;span class=&#34;caption&#34;&gt;White Castling&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id=&#34;black-castling&#34; class=&#34;donut&#34;&gt;
+        &lt;span class=&#34;caption&#34;&gt;Black Castling&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id=&#34;castling-side&#34; class=&#34;donut&#34;&gt;
+        &lt;span class=&#34;caption&#34;&gt;Castling Side&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Both colors seem to castle kingside about 80% of the time. What was surprising to me was that Black was more likely to castle queenside, but White was more likely to not castle at all!&lt;/p&gt;
+
+&lt;p&gt;Another unexpected result for me was the castling side. I would have expected to see a lot more opposite-side castling, yet it&amp;rsquo;s at a relatively low 10%, and its almost twice as likely that one side won&amp;rsquo;t castle. Not sure what to make of this result, but definitely interesting to see.&lt;/p&gt;
+
+&lt;h2 id=&#34;endings&#34;&gt;Endings&lt;/h2&gt;
+
+&lt;p&gt;I wanted to collect some stats about the game endings, but this little project got a bit out of hand and so I&amp;rsquo;ll defer the piece-type endings to a later date. I did however get some interesting stats on games ending with check or checkmate. The results aren&amp;rsquo;t that shocking, but still cute to see.&lt;/p&gt;
+
+&lt;p&gt;There are more than 50 thousand games that end in mate! Obviously this is minuscule compared to the size of the database, but I wonder if the players really didn&amp;rsquo;t see it coming, or just &amp;ldquo;allowed&amp;rdquo; their opponent to finish what might have been a nice combination?&lt;/p&gt;
+
+&lt;div class=&#34;ending&#34;&gt;
+    &lt;div id=&#34;ending-check&#34; class=&#34;donut&#34;&gt;
+        &lt;span class=&#34;caption&#34;&gt;Games ending with Check&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id=&#34;ending-mate&#34; class=&#34;donut&#34;&gt;
+        &lt;span class=&#34;caption&#34;&gt;Games ending with Checkmate&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Games ending on a check makes me think that either it was a draw-by-perpetual scenario, or that one side had that &amp;ldquo;Oh shit!&amp;rdquo; moment, perhaps a double attack by a queen or a knight fork.&lt;/p&gt;
+
+&lt;h2 id=&#34;game-length&#34;&gt;Game Length&lt;/h2&gt;
+
+&lt;p&gt;To get a sense of how long the games took, I plotted them as a simple histogram, number of plies vs number of games.&lt;/p&gt;
+
+&lt;div id=&#34;game-lengths&#34; class=&#34;histogram&#34;&gt;
+    &lt;span class=&#34;caption&#34;&gt;Game Length Frequencies&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So, this graph is perhaps too skewed because of some ridiculously long games. The 2 longest games are &lt;em&gt;really&lt;/em&gt; long, and I wonder how long the players had to be at the chess board. You can seriously pass out from dehydration!&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://chesstempo.com/gamedb/game/3242097&#34;&gt;longest game&lt;/a&gt;, with a whopping &lt;strong&gt;228 moves&lt;/strong&gt; was played in 2012, and after such an arduous struggle, it ended in a draw. Kinda anti-climactic if you ask me. Guess what the result was for the second longest game, at a measly 227 moves? That was a draw too! So perhaps its wise to not push your luck move after move hoping your opponent will give up and just agree on the draw about 100 moves earlier. Interestingly, the longest game was also one that ended with a check (and also featured my current favorite variation, the Sicilian Accelerated Dragon).&lt;/p&gt;
+
+&lt;p&gt;Instead of having a super-skewed graph, I think I can sacrifice 6,474 (0.3%) of the games and focus on the ones with at most 100 moves (or 200-ply).&lt;/p&gt;
+
+&lt;div id=&#34;game-lengths-200&#34; class=&#34;histogram&#34;&gt;
+    &lt;span class=&#34;caption&#34;&gt;Game Length Frequencies (max 200-ply)&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;At first glance my reaction was: &lt;em&gt;&amp;ldquo;Uh oh, this histogram looks dangerously like a &lt;a href=&#34;http://asq.org/learn-about-quality/data-collection-analysis-tools/overview/histogram2.html&#34;&gt;comb distribution&lt;/a&gt;&amp;ldquo;&lt;/em&gt;, making me question whether my statistics-gathering was faulty. Although, there isn&amp;rsquo;t anything that would cause a rounding/collection error. Upon closer look though, you can see that the peaks are higher on odd-numbered plies. This means that Black is more likely to end any given game (whether win, lose or draw). Otherwise, ignoring the peaks, it looks like a good old normal distribution with a mean somewhere around 70-ply.&lt;/p&gt;
+
+&lt;p&gt;We shouldn&amp;rsquo;t ignore the peaks though! And seriously, what&amp;rsquo;s up with those peaks? The largest peak is on ply 81 (Black&amp;rsquo;s 40th move), and there is a second peak on ply 120 (White&amp;rsquo;s 60th move), and a tiny but noticeable peak at ply 160. Hmmm, I wonder if this has anything to do with the classical time controls?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;120 minutes for 40 moves, followed by 60 minutes for 20 moves, followed by 15 minutes for the rest of the game, with a 30-second increment starting on move 61&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Perhaps it&amp;rsquo;s a result of players pushing to make the time-control, only to realize they&amp;rsquo;ve messed up their position? Or straight up running out of time? I think the peaks correspond to the standard time controls too closely to be a coincidence.&lt;/p&gt;
+
+&lt;h2 id=&#34;heatmaps&#34;&gt;Heatmaps&lt;/h2&gt;
+
+&lt;p&gt;Heatmaps are one of my favorite visualizations to show multiple games on the board. They give insight on what moves occured with frequencies and you get a greater sense of the whole board.&lt;/p&gt;
+
+&lt;p&gt;Below is the heatmap visualization, which I hope you&amp;rsquo;ll take some time to play around. There are 4 categories:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Square Utilization:&lt;/em&gt; the squares that a piece moves to&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Move Squares:&lt;/em&gt; squares that a piece moved from&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Capture Squares:&lt;/em&gt; squares where a capture occurred&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Checking Squares:&lt;/em&gt; squares where the move resulted in a check&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div id=&#34;hm-combined&#34;&gt;
+    &lt;div id=&#34;heatmap&#34; class=&#34;cdv-heatmap&#34;&gt;&lt;/div&gt;
+    &lt;select id=&#34;heatmap-selector&#34;&gt;
+        &lt;option value=&#34;squareUtilization&#34;&gt;Square Utilization&lt;/option&gt;
+        &lt;option value=&#34;moveSquares&#34;&gt;Move Squares&lt;/option&gt;
+        &lt;option value=&#34;captureSquares&#34;&gt;Capture Squares&lt;/option&gt;
+        &lt;option value=&#34;checkSquares&#34;&gt;Checking Squares&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;div id=&#34;piece-selectors-w&#34;&gt;&lt;/div&gt;
+    &lt;div id=&#34;piece-selectors-b&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Square utilization shows that White tries to be more aggressive and keep its inherent initiative alive. Comparing &lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;squareUtilization&#34; data-pc=&#34;wb&#34;&gt;White Bishops&lt;/a&gt; versus &lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;squareUtilization&#34; data-pc=&#34;bb&#34;&gt;Black Bishops&lt;/a&gt;, we see White positions them more actively and closer to the center (d3, e3, b5, c4, f4, g5) whereas Black more often prefers more passive but controlling squares (d7, e7, g7) and is more likely to fianchetto his bishops. This might be an interesting artifact of the hypermodern school that had so much impact on Black&amp;rsquo;s defense.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;squareUtilization&#34; data-pc=&#34;wn&#34;&gt;White Knights&lt;/a&gt; are also almost always placed on c3 and f3, but &lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;squareUtilization&#34; data-pc=&#34;bn&#34;&gt;Black Knights&lt;/a&gt;, especially the Queen&amp;rsquo;s Knight likes keeping it flexible and utilize d7 much more than White does for d2.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;moveSquares&#34; data-pc=&#34;wall&#34;&gt;Move Squares&lt;/a&gt; are mirrored on both sides almost perfectly. I wonder if this says something about how people think when playing with White vs Black pieces.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;captureSquares&#34; data-pc=&#34;wall&#34;&gt;Bloodiest squares&lt;/a&gt; without a doubt are the d4 and d5 squares, boasting over 6 million capturing moves, about 15% more than any other square.&lt;/p&gt;
+
+&lt;p&gt;The long range of Bishops are also highlighted in captures, whereas &lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;captureSquares&#34; data-pc=&#34;wb&#34;&gt;Bishops&lt;/a&gt; capture more around the center, the &lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;captureSquares&#34; data-pc=&#34;wn&#34;&gt;Knights&lt;/a&gt; are very much focused on the key central squares.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;captureSquares&#34; data-pc=&#34;wr&#34;&gt;Rooks&lt;/a&gt; come out as being the most versatile in their bloodthirst, their capture squares span a much greater area than any other piece (even the &lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;captureSquares&#34; data-pc=&#34;wq&#34;&gt;Queens&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Finally, one very unexpected thing for me was that both &lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;checkSquares&#34; data-pc=&#34;wp&#34;&gt;White Pawns&lt;/a&gt; and &lt;a href=&#34;&#34; class=&#34;hms&#34; data-hm=&#34;checkSquares&#34; data-pc=&#34;bp&#34;&gt;Black Pawns&lt;/a&gt; deliver checks much more on the kingside. I supposed there would be some bias, as the kings prefer castling kingside and then in the endgame support those pawns easier, but its still astonishing to see how much of a bias there is.&lt;/p&gt;
+
+&lt;h2 id=&#34;material-count-and-exchange-tendencies&#34;&gt;Material Count and Exchange Tendencies&lt;/h2&gt;
+
+&lt;p&gt;We can see the exchange tendencies of players as the game goes on by plotting the average material count. The material on the board is counted using the standard valuations (Pawn: 1, Knight/Bishop: 3, Rook: 5, Queen: 9).&lt;/p&gt;
+
+&lt;div id=&#34;material-count&#34;&gt;
+    &lt;span class=&#34;caption&#34;&gt;Average Material Count per Ply&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Surprisingly pleasant graph! The decay is definitely quite expected, as the game goes on and pieces get exchanged. The line pretty much settles somewhere between 12-13, which is about 3 pawns + 1 minor piece each. After about 150 moves (300-ply) things start going a bit wild, I suppose from promotions and blunders, which are much easier to make in the endgame.&lt;/p&gt;
+
+&lt;p&gt;As for exchange tendencies, we see that after about 30 moves in, the material on the board is halved. There is a very nice comparison of exchange tendencies per player on &lt;a href=&#34;http://chess-db.com/public/research/game_statistics.html&#34;&gt;Chess-DB&amp;rsquo;s Game Statistics&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;p&gt;Another statistic I was interested in is the average material difference during the game. I wasn&amp;rsquo;t sure what I was expecting to see, but it&amp;rsquo;s definitely a nice one.&lt;/p&gt;
+
+&lt;div id=&#34;material-diff&#34;&gt;
+    &lt;span class=&#34;caption&#34;&gt;Average Material Difference per Ply&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Wow, what a graph! Values after 250-ply get a bit crazy as promotions and blunders take place, but look at that first section!&lt;/p&gt;
+
+&lt;div id=&#34;material-diff-200&#34;&gt;
+    &lt;span class=&#34;caption&#34;&gt;Average Material Difference per Ply (max 250-ply)&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Perhaps the best metaphor for a game of chess, the ultimate back and forth between White and Black for control and material dominance. It&amp;rsquo;s surprisingly balanced all the way up until 120 moves, with White having a slight but probably negligible pull.&lt;/p&gt;
+
+&lt;h2 id=&#34;abstract-art&#34;&gt;Abstract art&lt;/h2&gt;
+
+&lt;p&gt;I leave you with a rendition of the pieces journeys throughout the game. I think it looks very pretty. Click on the pieces to explore its moves. Every thin strand of line represents 25,000 moves.&lt;/p&gt;
+
+&lt;div id=&#34;paths-combined&#34;&gt;
+    &lt;div class=&#34;cdv-move-paths&#34; id=&#34;movepaths&#34;&gt;&lt;/div&gt;
+    &lt;div id=&#34;board2&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;closing-words&#34;&gt;Closing words&lt;/h2&gt;
+
+&lt;p&gt;I hope it was pleasant and maybe even useful or instructive to see so many games analyzed visually. Keep in mind this isn&amp;rsquo;t meant to be a super scientifically rigorous analysis! Let me know of any other interesting patterns or insights you see in the comments.&lt;/p&gt;
+
+&lt;p&gt;For more technical details, you might be interested in checking out &lt;a href=&#34;http://ebemunk.github.io/chess-dataviz/&#34;&gt;chess-dataviz&lt;/a&gt; for some of the visualizations, it&amp;rsquo;s quite easy to use. The numbers were gathered by &lt;a href=&#34;https://github.com/ebemunk/pgnstats&#34;&gt;pgnstats&lt;/a&gt;, so check that out if you would like to extract such statistics for your own PGN databases.&lt;/p&gt;
+
+&lt;p&gt;&lt;script src=&#34;http://blog.ebemunk.com/chess/js.js&#34;&gt;&lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://blog.ebemunk.com/chess/css.css&#34;&gt;&lt;/p&gt;
+
+&lt;!-- &lt;link rel=&#34;stylesheet&#34; href=&#34;http://blog.ebemunk.com/content/images/other/mb/chessanalysis.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://blog.ebemunk.com/content/images/other/mb/style.css&#34;&gt;
+&lt;script src=&#34;http://blog.ebemunk.com/content/images/other/mb/chessanalysis.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://blog.ebemunk.com/content/images/other/mb/openings.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://blog.ebemunk.com/content/images/other/mb/js.js&#34;&gt;&lt;/script&gt; --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Optimizing Particle Background Performance with Quadtrees</title>
+      <link>http://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</link>
+      <pubDate>Thu, 21 Jan 2016 04:56:00 -0700</pubDate>
+      
+      <guid>http://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</guid>
+      <description>
+
+&lt;p&gt;I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, &lt;a href=&#34;https://github.com/jnicol/particleground&#34;&gt;Particleground&lt;/a&gt; and &lt;a href=&#34;https://github.com/VincentGarreau/particles.js&#34;&gt;particles.js&lt;/a&gt;. Before jumping in and copy/pasting sample code, I figured I&amp;rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance.&lt;/p&gt;
+
+&lt;p&gt;So - okay, simple enough, 100% width/height canvas at the background, put out some randomly placed dots, then link the dots depending on the distance. Hmm.&lt;/p&gt;
+
+&lt;p&gt;How do you actually find the points closest to a given point? A naive approach is to loop over all points, and then for every point check all the other points and calculate their distance. Uh-oh, that sounds like a &lt;em&gt;O(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/em&gt; algorithm.&lt;/p&gt;
+
+&lt;p&gt;Okay, so maybe doing it myself from scratch isn&amp;rsquo;t such a good idea. Surely, the libraries would have cleverer solutions than that, right? (Hint: &lt;em&gt;nope&lt;/em&gt;)&lt;/p&gt;
+
+&lt;h2 id=&#34;digging-in&#34;&gt;Digging in&lt;/h2&gt;
+
+&lt;p&gt;Lets dig in their code and see what they&amp;rsquo;re actually doing to find points that are closer than some distance.&lt;/p&gt;
+
+&lt;p&gt;In both cases, the main draw function does something to the effect of:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;points&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;length&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;++&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;point&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;points&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;];&lt;/span&gt;
+
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;j&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;points&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;length&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;++&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;point2&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;points&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;j&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;];&lt;/span&gt;
+
+    &lt;span style=&#34;color: #75715e&#34;&gt;//get the distance between points&lt;/span&gt;
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;dx&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;point&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;point2&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;dy&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;point&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;point2&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;y&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
+
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;dist&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;Math.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;sqrt&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;dx&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;dx&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;dy&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;dy&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;dist&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;someDistance&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color: #75715e&#34;&gt;//link points - draw stuff&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;every single frame.&lt;/p&gt;
+
+&lt;p&gt;Maybe it&amp;rsquo;s not exactly &lt;em&gt;O(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/em&gt;, but it seems like a whole lot of extra work. So basically, most of the processing is spent calculating euclidian distances only to throw it away.&lt;/p&gt;
+
+&lt;p&gt;Surely, there must be a better way to do this! (Hint: &lt;em&gt;there is!&lt;/em&gt;)&lt;/p&gt;
+
+&lt;h2 id=&#34;quadtrees&#34;&gt;Quadtrees&lt;/h2&gt;
+
+&lt;p&gt;Turns out, we can drastically reduce the number of checks we have to make, by using &lt;a href=&#34;https://en.wikipedia.org/wiki/Quadtree&#34;&gt;Quadtrees&lt;/a&gt;. I wont go into how they work, there are a lot of resources out there. What I want to do is to see if we can improve the performance and squeeze more FPS out of them.&lt;/p&gt;
+
+&lt;p&gt;Hang on, though, let&amp;rsquo;s backtrack. Who&amp;rsquo;s saying they are slow anyway? Just because the code &lt;em&gt;seems&lt;/em&gt; slow doesn&amp;rsquo;t mean it is. Checking out the demo pages, they seem to work just fine! But, I have a nagging feeling that they will get exponentially slower the more points we add&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Check out these examples and play with the density (Particleground - lower density = more points) and number of points (particles.js - more points = uh.. more points).&lt;/p&gt;
+
+&lt;h3 id=&#34;particleground&#34;&gt;Particleground&lt;/h3&gt;
+
+&lt;iframe width=&#34;100%&#34; height=&#34;300&#34; src=&#34;//jsfiddle.net/ebemunk/jjvhdw7r/embedded/result,js,html,css/dark/&#34; allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&#34;particles-js&#34;&gt;particles.js&lt;/h3&gt;
+
+&lt;iframe width=&#34;100%&#34; height=&#34;300&#34; src=&#34;//jsfiddle.net/ebemunk/q0try1kw/embedded/result,js,html,css/dark/&#34; allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Okay, so they obviously work well with default settings. Increasing the number of points very quickly grinds the performance to a halt, with about 500 points on screen, you&amp;rsquo;re lucky to get 3-4 fps.&lt;/p&gt;
+
+&lt;p&gt;Now here are the same examples, but this time I&amp;rsquo;ve modified both sources to use a quadtree search instead of looping through a gazillion points every frame.&lt;/p&gt;
+
+&lt;p&gt;For the quadtree implementation, I went with &lt;a href=&#34;https://github.com/d3/d3-quadtree&#34;&gt;d3-quadtree&lt;/a&gt; from the brilliant d3 library. The guts of it is:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;//on every frame, we reset the quadtree and reconstruct it, as such&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;QUADTREE&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;d3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;geom&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;quadtree&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;()&lt;/span&gt;
+&lt;span style=&#34;color: #75715e&#34;&gt;//luckily both libraries use .x .y properties&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;})&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;y&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;y&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;})&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;points&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #75715e&#34;&gt;//pass in the points&lt;/span&gt;
+
+&lt;span style=&#34;color: #75715e&#34;&gt;//searching the quadtree&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;closePoints&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color: #75715e&#34;&gt;//we&amp;#39;ll collect all the potentially close points&lt;/span&gt;
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;arr&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;[];&lt;/span&gt;
+
+  &lt;span style=&#34;color: #75715e&#34;&gt;//distance calculations&lt;/span&gt;
+  &lt;span style=&#34;color: #75715e&#34;&gt;//DISTANCE is whatever distance the library uses&lt;/span&gt;
+  &lt;span style=&#34;color: #75715e&#34;&gt;//CANVAS refers to the canvas element of the library&lt;/span&gt;
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;x0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;y0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;x3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;y3&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
+  &lt;span style=&#34;color: #a6e22e&#34;&gt;x0&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;Math.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;max&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;DISTANCE&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+  &lt;span style=&#34;color: #a6e22e&#34;&gt;y0&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;Math.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;max&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;DISTANCE&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+  &lt;span style=&#34;color: #a6e22e&#34;&gt;x3&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;Math.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;min&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;CANVAS&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;w&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;x&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;DISTANCE&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+  &lt;span style=&#34;color: #a6e22e&#34;&gt;y3&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;Math.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;min&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;CANVAS&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;h&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;DISTANCE&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+
+  &lt;span style=&#34;color: #75715e&#34;&gt;//start visiting nodes of the quadtree&lt;/span&gt;
+  &lt;span style=&#34;color: #a6e22e&#34;&gt;QUADTREE&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;visit&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;node&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;x1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;y1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;x2&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;y2&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;tooFar&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;x1&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;x3&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;y1&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;y3&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;x2&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;x0&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;||&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;y2&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;y0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
+
+    &lt;span style=&#34;color: #75715e&#34;&gt;//make sure its not too far, and we dont return the point&lt;/span&gt;
+    &lt;span style=&#34;color: #75715e&#34;&gt;//that we&amp;#39;re searching against&lt;/span&gt;
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;node&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;data&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;!&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;tooFar&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;node&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;index&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;p&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;index&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+         &lt;span style=&#34;color: #a6e22e&#34;&gt;arr&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;push&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;node&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color: #66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;tooFar&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;});&lt;/span&gt;
+  &lt;span style=&#34;color: #66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;arr&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will retrieve potentially close points, which we then iterate over and calculate the distance and connect/discard accordingly.&lt;/p&gt;
+
+&lt;p&gt;Those of you with a keen eye will notice there is a further optimization we can do, in that once we connect PointX and PointY, we don&amp;rsquo;t need to connect PointY to PointX. The naive approach of looping through all points avoids this, but with a quadtree we don&amp;rsquo;t iterate over points sequentially, so it needs to be handled. I won&amp;rsquo;t produce the code here, but it just involves keeping track of connected points discarding them if we&amp;rsquo;ve already connected those two. Check out the examples below to see the difference.&lt;/p&gt;
+
+&lt;h3 id=&#34;particleground-quadtree&#34;&gt;Particleground - Quadtree&lt;/h3&gt;
+
+&lt;iframe width=&#34;100%&#34; height=&#34;300&#34; src=&#34;//jsfiddle.net/ebemunk/n178donc/embedded/result,js,html,css/dark/&#34; allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&#34;particle-js-quadtree&#34;&gt;particle.js - Quadtree&lt;/h3&gt;
+
+&lt;iframe width=&#34;100%&#34; height=&#34;300&#34; src=&#34;//jsfiddle.net/ebemunk/bsfL61q0/embedded/result,js,html,css/dark/&#34; allowfullscreen=&#34;allowfullscreen&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Wow! Do you see that?&lt;/p&gt;
+
+&lt;p&gt;In fact, here are some numbers: with 623 particles on the screen, the naive version has to do &lt;strong&gt;193,753&lt;/strong&gt; comparisons per frame (623*&lt;sup&gt;622&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;). Quadtree version does something around &lt;strong&gt;44,000&lt;/strong&gt; comparisons per frame. That&amp;rsquo;s almost 4.5 times the difference!&lt;/p&gt;
+
+&lt;h2 id=&#34;something-s-fishy-here&#34;&gt;Something&amp;rsquo;s fishy here&lt;/h2&gt;
+
+&lt;p&gt;Okay, so we do 4.5 times less work, but comparing the fiddle examples, the FPS increase is nowhere near 4.5 times! What gives?&lt;/p&gt;
+
+&lt;p&gt;Well, turns out we hit the browser&amp;rsquo;s limitations for canvas drawing a lot sooner than we hit the point where this optimization pays off. Replacing the canvas drawing with something that takes time, like an empty loop that does 10,000 iterations, the difference in FPS becomes much more noticeable.&lt;/p&gt;
+
+&lt;p&gt;Of course, if you were doing something other than just drawing lines between points (for example, a force-directed graph, or an interactive one where the mouse somehow affects nearby points, or simulating gravity, etc.) you would almost certainly have to do such an optimization, and quadtrees are an awesome device for this (albeit not the only one).&lt;/p&gt;
+
+&lt;h2 id=&#34;take-aways&#34;&gt;Take-aways&lt;/h2&gt;
+
+&lt;p&gt;I learned two things from this experiment. Firstly, don&amp;rsquo;t go cowboy mode and do the most naive implementation, especially when it involves exponential growth. It usually pays off greatly when you consider alternatives, which might be a tad more complicated, but have substantial performance gains.&lt;/p&gt;
+
+&lt;p&gt;Secondly, make sure to optimize pieces of code that are actually bottlenecks. As seen above, the visible gains in FPS do not reflect the actual gains in performance, because the bottleneck in question soon becomes drawing on canvas, instead of the loop through the points.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,6 +1,0 @@
-<div class="tags">
-	{{ range $index, $tag := .Params.tags -}}
-		{{ if gt $index 0 }},{{ end }}
-		<a href="tags/{{ . | urlize }}">{{ . }}</a>
-	{{- end }}
-</div>

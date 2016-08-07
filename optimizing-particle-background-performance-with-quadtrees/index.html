@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<meta name="referrer" content="origin" />
+		
+		<meta property="og:url" content="http://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Optimizing Particle Background Performance with Quadtrees">
+		<meta property="og:site_name" content="Thinking Through the Party">
+		
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:url" content="http://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/">
+		<meta name="twitter:title" content="Optimizing Particle Background Performance with Quadtrees">
+		<meta name="twitter:creator" content="@ebemunk">
+		
+			<meta name="description" content="I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, Particleground and particles.js. Before jumping in and copy/pasting sample code, I figured I&rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance. So - okay, simple enough, 100% width/height canvas at the background, put out some randomly placed dots, then link the dots depending on the distance.">
+			<meta property="og:description" content="I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, Particleground and particles.js. Before jumping in and copy/pasting sample code, I figured I&rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance. So - okay, simple enough, 100% width/height canvas at the background, put out some randomly placed dots, then link the dots depending on the distance.">
+			<meta property="article:published_time" content="2016-01-21T04:56:00-07:00">
+			<meta property="article:modified_time" content="2016-01-21T04:56:00-0700">
+			<meta property="article:author" content="ebemunk">
+			<meta name="twitter:description" content="I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, Particleground and particles.js. Before jumping in and copy/pasting sample code, I figured I&rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance. So - okay, simple enough, 100% width/height canvas at the background, put out some randomly placed dots, then link the dots depending on the distance.">
+			
+		
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+		<link rel='stylesheet' href="//fonts.googleapis.com/css?family=Marcellus+SC">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.min.css">
+		<link rel="stylesheet" href="http://blog.ebemunk.com/css/style.css">
+
+		
+		<meta name="generator" content="Hugo 0.16" />
+	</head>
+	<body>
+		<header class="container site-header">
+			Thinking Through the Party
+		</header>
+
+
+<div class="container single">
+	<div class="row">
+		<div class="column">
+			<article class="article">
+				<h1>Optimizing Particle Background Performance with Quadtrees</h1>
+				<section class="toc">
+					<header>Table Of Contents</header>
+					<div><nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#digging-in">Digging in</a></li>
+<li><a href="#quadtrees">Quadtrees</a>
+<ul>
+<li><a href="#particleground">Particleground</a></li>
+<li><a href="#particles-js">particles.js</a></li>
+<li><a href="#particleground-quadtree">Particleground - Quadtree</a></li>
+<li><a href="#particle-js-quadtree">particle.js - Quadtree</a></li>
+</ul></li>
+<li><a href="#something-s-fishy-here">Something&rsquo;s fishy here</a></li>
+<li><a href="#take-aways">Take-aways</a></li>
+</ul></li>
+</ul>
+</nav></div>
+				</section>
+				<div class="date-and-tags">
+					<time title='2016-01-21 @ 04:56am'>21 January 2016</time>
+					on <div class="tags">
+	
+		<a href="tags/performance">performance</a>,
+		<a href="tags/optimization">optimization</a>,
+		<a href="tags/javascript">javascript</a>
+</div>
+
+				</div>
+				
+
+<p>I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, <a href="https://github.com/jnicol/particleground">Particleground</a> and <a href="https://github.com/VincentGarreau/particles.js">particles.js</a>. Before jumping in and copy/pasting sample code, I figured I&rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance.</p>
+
+<p>So - okay, simple enough, 100% width/height canvas at the background, put out some randomly placed dots, then link the dots depending on the distance. Hmm.</p>
+
+<p>How do you actually find the points closest to a given point? A naive approach is to loop over all points, and then for every point check all the other points and calculate their distance. Uh-oh, that sounds like a <em>O(n<sup>2</sup>)</em> algorithm.</p>
+
+<p>Okay, so maybe doing it myself from scratch isn&rsquo;t such a good idea. Surely, the libraries would have cleverer solutions than that, right? (Hint: <em>nope</em>)</p>
+
+<h2 id="digging-in">Digging in</h2>
+
+<p>Lets dig in their code and see what they&rsquo;re actually doing to find points that are closer than some distance.</p>
+
+<p>In both cases, the main draw function does something to the effect of:</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span> <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">i</span><span style="color: #f92672">=</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span> <span style="color: #a6e22e">i</span> <span style="color: #f92672">&lt;</span> <span style="color: #a6e22e">points</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">length</span><span style="color: #f8f8f2">;</span> <span style="color: #a6e22e">i</span><span style="color: #f92672">++</span> <span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">point</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">points</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">i</span><span style="color: #f8f8f2">];</span>
+
+  <span style="color: #66d9ef">for</span><span style="color: #f8f8f2">(</span> <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">j</span><span style="color: #f92672">=</span><span style="color: #a6e22e">i</span><span style="color: #f92672">+</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span> <span style="color: #a6e22e">j</span> <span style="color: #f92672">&lt;</span> <span style="color: #a6e22e">points</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">length</span><span style="color: #f8f8f2">;</span> <span style="color: #a6e22e">j</span><span style="color: #f92672">++</span> <span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">point2</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">points</span><span style="color: #f8f8f2">[</span><span style="color: #a6e22e">j</span><span style="color: #f8f8f2">];</span>
+
+    <span style="color: #75715e">//get the distance between points</span>
+    <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">dx</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">point</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">x</span> <span style="color: #f92672">-</span> <span style="color: #a6e22e">point2</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">x</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">dy</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">point</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">y</span> <span style="color: #f92672">-</span> <span style="color: #a6e22e">point2</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">y</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">dist</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Math.</span><span style="color: #a6e22e">sqrt</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">dx</span><span style="color: #f92672">*</span><span style="color: #a6e22e">dx</span> <span style="color: #f92672">+</span> <span style="color: #a6e22e">dy</span><span style="color: #f92672">*</span><span style="color: #a6e22e">dy</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #a6e22e">dist</span> <span style="color: #f92672">&lt;</span> <span style="color: #a6e22e">someDistance</span> <span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+      <span style="color: #75715e">//link points - draw stuff</span>
+    <span style="color: #f8f8f2">}</span>
+  <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<p>every single frame.</p>
+
+<p>Maybe it&rsquo;s not exactly <em>O(n<sup>2</sup>)</em>, but it seems like a whole lot of extra work. So basically, most of the processing is spent calculating euclidian distances only to throw it away.</p>
+
+<p>Surely, there must be a better way to do this! (Hint: <em>there is!</em>)</p>
+
+<h2 id="quadtrees">Quadtrees</h2>
+
+<p>Turns out, we can drastically reduce the number of checks we have to make, by using <a href="https://en.wikipedia.org/wiki/Quadtree">Quadtrees</a>. I wont go into how they work, there are a lot of resources out there. What I want to do is to see if we can improve the performance and squeeze more FPS out of them.</p>
+
+<p>Hang on, though, let&rsquo;s backtrack. Who&rsquo;s saying they are slow anyway? Just because the code <em>seems</em> slow doesn&rsquo;t mean it is. Checking out the demo pages, they seem to work just fine! But, I have a nagging feeling that they will get exponentially slower the more points we add&hellip;</p>
+
+<p>Check out these examples and play with the density (Particleground - lower density = more points) and number of points (particles.js - more points = uh.. more points).</p>
+
+<h3 id="particleground">Particleground</h3>
+
+<iframe width="100%" height="300" src="//jsfiddle.net/ebemunk/jjvhdw7r/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<h3 id="particles-js">particles.js</h3>
+
+<iframe width="100%" height="300" src="//jsfiddle.net/ebemunk/q0try1kw/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<p>Okay, so they obviously work well with default settings. Increasing the number of points very quickly grinds the performance to a halt, with about 500 points on screen, you&rsquo;re lucky to get 3-4 fps.</p>
+
+<p>Now here are the same examples, but this time I&rsquo;ve modified both sources to use a quadtree search instead of looping through a gazillion points every frame.</p>
+
+<p>For the quadtree implementation, I went with <a href="https://github.com/d3/d3-quadtree">d3-quadtree</a> from the brilliant d3 library. The guts of it is:</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #75715e">//on every frame, we reset the quadtree and reconstruct it, as such</span>
+<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">QUADTREE</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">d3</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">geom</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">quadtree</span><span style="color: #f8f8f2">()</span>
+<span style="color: #75715e">//luckily both libraries use .x .y properties</span>
+<span style="color: #f8f8f2">.</span><span style="color: #a6e22e">x</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">function</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">d</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span> <span style="color: #66d9ef">return</span> <span style="color: #a6e22e">d</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">x</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">})</span>
+<span style="color: #f8f8f2">.</span><span style="color: #a6e22e">y</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">function</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">d</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span> <span style="color: #66d9ef">return</span> <span style="color: #a6e22e">d</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">y</span><span style="color: #f8f8f2">;</span> <span style="color: #f8f8f2">})</span>
+<span style="color: #f8f8f2">(</span><span style="color: #a6e22e">points</span><span style="color: #f8f8f2">)</span> <span style="color: #75715e">//pass in the points</span>
+
+<span style="color: #75715e">//searching the quadtree</span>
+<span style="color: #66d9ef">function</span> <span style="color: #a6e22e">closePoints</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">p</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #75715e">//we&#39;ll collect all the potentially close points</span>
+  <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">arr</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[];</span>
+
+  <span style="color: #75715e">//distance calculations</span>
+  <span style="color: #75715e">//DISTANCE is whatever distance the library uses</span>
+  <span style="color: #75715e">//CANVAS refers to the canvas element of the library</span>
+  <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">x0</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">y0</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">x3</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">y3</span><span style="color: #f8f8f2">;</span>
+  <span style="color: #a6e22e">x0</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Math.</span><span style="color: #a6e22e">max</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">p</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">x</span> <span style="color: #f92672">-</span> <span style="color: #a6e22e">DISTANCE</span><span style="color: #f8f8f2">);</span>
+  <span style="color: #a6e22e">y0</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Math.</span><span style="color: #a6e22e">max</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">p</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">y</span> <span style="color: #f92672">-</span> <span style="color: #a6e22e">DISTANCE</span><span style="color: #f8f8f2">);</span>
+  <span style="color: #a6e22e">x3</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Math.</span><span style="color: #a6e22e">min</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">CANVAS</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">w</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">p</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">x</span> <span style="color: #f92672">+</span> <span style="color: #a6e22e">DISTANCE</span><span style="color: #f8f8f2">);</span>
+  <span style="color: #a6e22e">y3</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Math.</span><span style="color: #a6e22e">min</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">CANVAS</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">h</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">p</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">y</span> <span style="color: #f92672">+</span> <span style="color: #a6e22e">DISTANCE</span><span style="color: #f8f8f2">);</span>
+
+  <span style="color: #75715e">//start visiting nodes of the quadtree</span>
+  <span style="color: #a6e22e">QUADTREE</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">visit</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">function</span> <span style="color: #f8f8f2">(</span><span style="color: #a6e22e">node</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">x1</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">y1</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">x2</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">y2</span><span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">var</span> <span style="color: #a6e22e">tooFar</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">x1</span> <span style="color: #f92672">&gt;=</span> <span style="color: #a6e22e">x3</span> <span style="color: #f92672">||</span> <span style="color: #a6e22e">y1</span> <span style="color: #f92672">&gt;=</span> <span style="color: #a6e22e">y3</span> <span style="color: #f92672">||</span> <span style="color: #a6e22e">x2</span> <span style="color: #f92672">&lt;</span> <span style="color: #a6e22e">x0</span> <span style="color: #f92672">||</span> <span style="color: #a6e22e">y2</span> <span style="color: #f92672">&lt;</span> <span style="color: #a6e22e">y0</span><span style="color: #f8f8f2">;</span>
+
+    <span style="color: #75715e">//make sure its not too far, and we dont return the point</span>
+    <span style="color: #75715e">//that we&#39;re searching against</span>
+    <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(</span> <span style="color: #a6e22e">node</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">data</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #f92672">!</span> <span style="color: #a6e22e">tooFar</span> <span style="color: #f92672">&amp;&amp;</span> <span style="color: #a6e22e">node</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">data</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">index</span> <span style="color: #f92672">!=</span> <span style="color: #a6e22e">p</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">index</span> <span style="color: #f8f8f2">)</span> <span style="color: #f8f8f2">{</span>
+         <span style="color: #a6e22e">arr</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">push</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">node</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">data</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">}</span>
+
+    <span style="color: #66d9ef">return</span> <span style="color: #a6e22e">tooFar</span><span style="color: #f8f8f2">;</span>
+  <span style="color: #f8f8f2">});</span>
+  <span style="color: #66d9ef">return</span> <span style="color: #a6e22e">arr</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<p>This will retrieve potentially close points, which we then iterate over and calculate the distance and connect/discard accordingly.</p>
+
+<p>Those of you with a keen eye will notice there is a further optimization we can do, in that once we connect PointX and PointY, we don&rsquo;t need to connect PointY to PointX. The naive approach of looping through all points avoids this, but with a quadtree we don&rsquo;t iterate over points sequentially, so it needs to be handled. I won&rsquo;t produce the code here, but it just involves keeping track of connected points discarding them if we&rsquo;ve already connected those two. Check out the examples below to see the difference.</p>
+
+<h3 id="particleground-quadtree">Particleground - Quadtree</h3>
+
+<iframe width="100%" height="300" src="//jsfiddle.net/ebemunk/n178donc/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<h3 id="particle-js-quadtree">particle.js - Quadtree</h3>
+
+<iframe width="100%" height="300" src="//jsfiddle.net/ebemunk/bsfL61q0/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+<p>Wow! Do you see that?</p>
+
+<p>In fact, here are some numbers: with 623 particles on the screen, the naive version has to do <strong>193,753</strong> comparisons per frame (623*<sup>622</sup>&frasl;<sub>2</sub>). Quadtree version does something around <strong>44,000</strong> comparisons per frame. That&rsquo;s almost 4.5 times the difference!</p>
+
+<h2 id="something-s-fishy-here">Something&rsquo;s fishy here</h2>
+
+<p>Okay, so we do 4.5 times less work, but comparing the fiddle examples, the FPS increase is nowhere near 4.5 times! What gives?</p>
+
+<p>Well, turns out we hit the browser&rsquo;s limitations for canvas drawing a lot sooner than we hit the point where this optimization pays off. Replacing the canvas drawing with something that takes time, like an empty loop that does 10,000 iterations, the difference in FPS becomes much more noticeable.</p>
+
+<p>Of course, if you were doing something other than just drawing lines between points (for example, a force-directed graph, or an interactive one where the mouse somehow affects nearby points, or simulating gravity, etc.) you would almost certainly have to do such an optimization, and quadtrees are an awesome device for this (albeit not the only one).</p>
+
+<h2 id="take-aways">Take-aways</h2>
+
+<p>I learned two things from this experiment. Firstly, don&rsquo;t go cowboy mode and do the most naive implementation, especially when it involves exponential growth. It usually pays off greatly when you consider alternatives, which might be a tad more complicated, but have substantial performance gains.</p>
+
+<p>Secondly, make sure to optimize pieces of code that are actually bottlenecks. As seen above, the visible gains in FPS do not reflect the actual gains in performance, because the bottleneck in question soon becomes drawing on canvas, instead of the loop through the points.</p>
+
+			</article>
+		</div>
+	</div>
+	<div class="row">
+		<div class="column share">
+			<h5>Share this post</h5>
+			<p><small>I'm pretty sure you know how to share things on social media, so I'll spare you the 50 different obnoxious buttons. If you liked this, feel free to share anywhere, it helps me out.</small></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="column">
+			<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'ebemunk';
+    var disqus_identifier = 'http:\/\/blog.ebemunk.com\/optimizing-particle-background-performance-with-quadtrees\/';
+    var disqus_title = 'Optimizing Particle Background Performance with Quadtrees';
+    var disqus_url = 'http:\/\/blog.ebemunk.com\/optimizing-particle-background-performance-with-quadtrees\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		</div>
+	</div>
+</div>
+
+
+		<footer class="container site-footer">
+			<p>Thinking Through the Party &copy; 2016</p>
+			<p>Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a></p>
+		</footer>
+
+		
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-212741-11', 'auto');
+ga('send', 'pageview');
+</script>
+
+	</body>
+</html>
+
