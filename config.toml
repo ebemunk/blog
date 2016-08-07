@@ -1,0 +1,18 @@
+baseurl = "http://blog.ebemunk.com/"
+languageCode = "en-us"
+title = "Thinking Through the Party"
+
+pygmentscodefences = true
+
+googleAnalytics = "UA-212741-11"
+disqusShortname = "ebemunk"
+
+[params]
+  author = "ebemunk"
+
+[taxonomies]
+tag = "tags"
+series = "series"
+
+[permalinks]
+post = "/:title/"
