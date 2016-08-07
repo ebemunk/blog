@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Thinking Through the Party</title>
-    <link>http://blog.ebemunk.com/post/</link>
+    <link>https://blog.ebemunk.com/post/</link>
     <description>Recent content in Posts on Thinking Through the Party</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 Mar 2016 11:18:33 -0700</lastBuildDate>
-    <atom:link href="http://blog.ebemunk.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.ebemunk.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Visual Look at 2 Million Chess Games</title>
-      <link>http://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link>
+      <link>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link>
       <pubDate>Wed, 02 Mar 2016 11:18:33 -0700</pubDate>
       
-      <guid>http://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid>
+      <guid>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid>
       <description>
 
 &lt;p&gt;I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.&lt;/p&gt;
@@ -208,23 +208,23 @@
 
 &lt;p&gt;For more technical details, you might be interested in checking out &lt;a href=&#34;http://ebemunk.github.io/chess-dataviz/&#34;&gt;chess-dataviz&lt;/a&gt; for some of the visualizations, it&amp;rsquo;s quite easy to use. The numbers were gathered by &lt;a href=&#34;https://github.com/ebemunk/pgnstats&#34;&gt;pgnstats&lt;/a&gt;, so check that out if you would like to extract such statistics for your own PGN databases.&lt;/p&gt;
 
-&lt;p&gt;&lt;script src=&#34;http://blog.ebemunk.com/chess/js.js&#34;&gt;&lt;/script&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://blog.ebemunk.com/chess/css.css&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script src=&#34;https://blog.ebemunk.com/chess/js.js&#34;&gt;&lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://blog.ebemunk.com/chess/css.css&#34;&gt;&lt;/p&gt;
 
-&lt;!-- &lt;link rel=&#34;stylesheet&#34; href=&#34;http://blog.ebemunk.com/content/images/other/mb/chessanalysis.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://blog.ebemunk.com/content/images/other/mb/style.css&#34;&gt;
-&lt;script src=&#34;http://blog.ebemunk.com/content/images/other/mb/chessanalysis.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://blog.ebemunk.com/content/images/other/mb/openings.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://blog.ebemunk.com/content/images/other/mb/js.js&#34;&gt;&lt;/script&gt; --&gt;
+&lt;!-- &lt;link rel=&#34;stylesheet&#34; href=&#34;https://blog.ebemunk.com/content/images/other/mb/chessanalysis.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://blog.ebemunk.com/content/images/other/mb/style.css&#34;&gt;
+&lt;script src=&#34;https://blog.ebemunk.com/content/images/other/mb/chessanalysis.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://blog.ebemunk.com/content/images/other/mb/openings.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://blog.ebemunk.com/content/images/other/mb/js.js&#34;&gt;&lt;/script&gt; --&gt;
 </description>
     </item>
     
     <item>
       <title>Optimizing Particle Background Performance with Quadtrees</title>
-      <link>http://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</link>
+      <link>https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</link>
       <pubDate>Thu, 21 Jan 2016 04:56:00 -0700</pubDate>
       
-      <guid>http://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</guid>
+      <guid>https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</guid>
       <description>
 
 &lt;p&gt;I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, &lt;a href=&#34;https://github.com/jnicol/particleground&#34;&gt;Particleground&lt;/a&gt; and &lt;a href=&#34;https://github.com/VincentGarreau/particles.js&#34;&gt;particles.js&lt;/a&gt;. Before jumping in and copy/pasting sample code, I figured I&amp;rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance.&lt;/p&gt;

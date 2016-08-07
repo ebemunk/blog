@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chess on Thinking Through the Party</title>
-    <link>http://blog.ebemunk.com/tags/chess/</link>
+    <link>https://blog.ebemunk.com/tags/chess/</link>
     <description>Recent content in Chess on Thinking Through the Party</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 Mar 2016 11:18:33 -0700</lastBuildDate>
-    <atom:link href="http://blog.ebemunk.com/tags/chess/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.ebemunk.com/tags/chess/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Visual Look at 2 Million Chess Games</title>
-      <link>http://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link>
+      <link>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link>
       <pubDate>Wed, 02 Mar 2016 11:18:33 -0700</pubDate>
       
-      <guid>http://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid>
+      <guid>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid>
       <description>
 
 &lt;p&gt;I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.&lt;/p&gt;
@@ -208,14 +208,14 @@
 
 &lt;p&gt;For more technical details, you might be interested in checking out &lt;a href=&#34;http://ebemunk.github.io/chess-dataviz/&#34;&gt;chess-dataviz&lt;/a&gt; for some of the visualizations, it&amp;rsquo;s quite easy to use. The numbers were gathered by &lt;a href=&#34;https://github.com/ebemunk/pgnstats&#34;&gt;pgnstats&lt;/a&gt;, so check that out if you would like to extract such statistics for your own PGN databases.&lt;/p&gt;
 
-&lt;p&gt;&lt;script src=&#34;http://blog.ebemunk.com/chess/js.js&#34;&gt;&lt;/script&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://blog.ebemunk.com/chess/css.css&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script src=&#34;https://blog.ebemunk.com/chess/js.js&#34;&gt;&lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://blog.ebemunk.com/chess/css.css&#34;&gt;&lt;/p&gt;
 
-&lt;!-- &lt;link rel=&#34;stylesheet&#34; href=&#34;http://blog.ebemunk.com/content/images/other/mb/chessanalysis.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;http://blog.ebemunk.com/content/images/other/mb/style.css&#34;&gt;
-&lt;script src=&#34;http://blog.ebemunk.com/content/images/other/mb/chessanalysis.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://blog.ebemunk.com/content/images/other/mb/openings.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://blog.ebemunk.com/content/images/other/mb/js.js&#34;&gt;&lt;/script&gt; --&gt;
+&lt;!-- &lt;link rel=&#34;stylesheet&#34; href=&#34;https://blog.ebemunk.com/content/images/other/mb/chessanalysis.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://blog.ebemunk.com/content/images/other/mb/style.css&#34;&gt;
+&lt;script src=&#34;https://blog.ebemunk.com/content/images/other/mb/chessanalysis.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://blog.ebemunk.com/content/images/other/mb/openings.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://blog.ebemunk.com/content/images/other/mb/js.js&#34;&gt;&lt;/script&gt; --&gt;
 </description>
     </item>
     
