@@ -33,18 +33,12 @@
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.min.css">
 		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
 
-		<!-- {{ if eq .URL "/" }}
+		{{ if eq .URL "/" }}
 			<title>{{ .Title }}</title>
-			<meta property='og:title' content="{{ .Title }}">
-			<meta property="og:type" content="website">
 		{{ else }}
 			<title>{{ .Title }} - {{ .Site.Title }}</title>
-			<meta property='og:title' content="{{ .Title }} - {{ .Site.Title }}">
-			<meta property="og:type" content="article">
 		{{ end }}
-
-		<meta property="og:url" content="{{ .Permalink }}">
-		-->
+		
 		{{ .Hugo.Generator }}
 	</head>
 	<body>
