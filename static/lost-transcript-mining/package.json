@@ -1,0 +1,32 @@
+{
+  "name": "lost-analysis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "scrape": "babel-node scrape-episode-transcripts.js",
+    "scrape:dbg": "babel-node scrape-episode-transcripts.js --debug --debug-brk"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/__mocks__"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "babel-cli": "^6.22.2",
+    "bluebird": "^3.4.7",
+    "chalk": "^1.1.3",
+    "cheerio": "^0.22.0",
+    "lodash": "^4.17.4",
+    "progress": "^1.1.8"
+  },
+  "devDependencies": {
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "jest": "^18.1.0"
+  }
+}
