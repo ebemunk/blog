@@ -13,8 +13,13 @@ Reading level
 Emotions per char
 	sentiment analysis on char lines?
 
+Stage directions per char
+
 Char closeness
 	which chars appear together often (network/edge graph)
+
+Word bubble
+	total, per season, per episode, per char
 
 dialog
 	season

@@ -1,15 +1,9 @@
-import fs from 'fs'
-
 import axios from 'axios'
 import cheerio from 'cheerio'
 import _ from 'lodash'
-import Promise from 'bluebird'
-import ProgressBar from 'progress'
 import c from 'chalk'
 
-const log = _.partial(console.log, c.bgGreen('scraper'))
-const writeFile = Promise.promisify(fs.writeFile)
-const pad2 = _.partialRight(_.padStart, 2, 0)
+const log = _.partial(console.log, c.bgMagenta('scrape-fns'))
 
 export async function getSeasonList() {
 	const { data } = await axios.get('http://lostpedia.wikia.com/wiki/Portal:Transcripts')
@@ -43,13 +37,13 @@ export async function getEpisode(episode) {
 	const lines = $('#toc')
 	.nextAll()
 	.filter((i, el) => {
-		return ['hr', 'h2', 'p'].includes(el.tagName)
+		return ['hr', 'h2', 'p'].includes(el.tagName) && $(el).text().trim()
 	})
 	.map((i, el) => {
 		const row = {
 			season: episode.season,
 			episode: episode.ep,
-			seq: i,
+			// seq: i,
 		}
 		switch( el.tagName ) {
 			case 'hr': return {
@@ -72,12 +66,15 @@ export async function getEpisode(episode) {
 					}
 				} else {
 					const charLine = text.match(/^(.+)\: (.+)$/)
+					// log(charLine)
+					if( ! charLine ) return null
 					const char_name = charLine[1]
 					let line = charLine[2]
 					let directions = line.match(/\[([^\]]+)\]/g)
 					if( directions ) {
 						directions = directions.map(str => str.replace(/[\[\]]/g, ''))
-						line = line.replace(/\[[^\]]+\][ ]?/g, '')
+						line = line
+						.replace(/\[[^\]]+\][ ]?/g, '')
 					}
 					return {
 						...row,
@@ -88,35 +85,14 @@ export async function getEpisode(episode) {
 				}
 			}
 		}
-		// const kek = text.replace(/\n/gm, '')
-		// return kek
 	})
+	.filter(row => row)
 	.get()
-	// .join('\n')
 	return lines
+	.map((row, i) => {
+		return {
+			...row,
+			seq: i+1
+		}
+	})
 }
-
-async function scrape() {
-	log('starting')
-	const seasons = await getSeasonList()
-	const allEpisodes = seasons.reduce((prev, cur) => {
-		return [...prev, ...cur.episodes]
-	}, [])
-	log(`found ${c.blue(allEpisodes.length)} episodes in ${c.blue(seasons.length)} seasons`)
-	log('downloading...')
-	// const progress = new ProgressBar(':current/:total :bar :eta', allEpisodes.length)
-	return Promise.map(allEpisodes, async episode => {
-		const episodeText = await getEpisode(episode)
-		const fileName = `episodes/${pad2(episode.season)}-${pad2(episode.ep)}.txt`
-		await writeFile(fileName, episodeText)
-		// progress.tick()
-	}, {concurrency: 10})
-}
-
-// scrape()
-// .then(() => {
-// 	log('done');
-// })
-// .catch(err => {
-// 	log(err);
-// })
