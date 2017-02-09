@@ -1,6 +1,6 @@
 jest.mock('axios')
 
-import { getSeasonList, getEpisode } from '../scrape-episode-transcripts'
+import { getSeasonList, getEpisode } from '../scrape-fns'
 
 describe('getSeasonList', () => {
 	it('gets season list', async () => {

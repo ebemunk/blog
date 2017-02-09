@@ -65,7 +65,7 @@ export async function getEpisode(episode) {
 						type: 'stageDirection'
 					}
 				} else {
-					const charLine = text.match(/^(.+)\: (.+)$/)
+					const charLine = text.match(/^(.+?)\: (.+)$/)
 					// log(charLine)
 					if( ! charLine ) return null
 					const char_name = charLine[1]
@@ -80,7 +80,8 @@ export async function getEpisode(episode) {
 						...row,
 						char_name,
 						line,
-						directions
+						directions,
+						type: 'dialog'
 					}
 				}
 			}

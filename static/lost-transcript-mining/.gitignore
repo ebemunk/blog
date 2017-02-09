@@ -1,3 +1,4 @@
-node_modules/
 .vscode/
-episodes/
+collect/episodes/
+collect/node_modules/
+viz/node_modules/

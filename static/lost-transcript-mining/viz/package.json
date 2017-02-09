@@ -1,0 +1,15 @@
+{
+  "name": "viz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^6.2.10",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "jest": "^18.1.0",
+    "webpack": "^2.2.1"
+  }
+}

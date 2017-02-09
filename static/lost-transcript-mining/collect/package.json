@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "scrape": "babel-node scrape.js",
-    "scrape:dbg": "babel-node scrape.js --debug --debug-brk"
+    "scrape:dbg": "babel-node scrape.js --debug --debug-brk",
+    "write-db": "babel-node write-db.js"
   },
   "jest": {
     "testPathIgnorePatterns": [
