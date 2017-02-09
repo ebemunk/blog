@@ -1,4 +1,5 @@
 .vscode/
 collect/episodes/
 collect/node_modules/
+viz/yarn-error.log
 viz/node_modules/
