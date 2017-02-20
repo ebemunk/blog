@@ -1,37 +1,52 @@
 import fs from 'fs'
 
-import _ from 'lodash'
 import Promise from 'bluebird'
-import ProgressBar from 'progress'
+import _ from 'lodash'
 import c from 'chalk'
+import ProgressBar from 'progress'
 
-import { getSeasonList, getEpisode } from '../lib'
+import {
+	parseEpisodeIndex,
+	saveEpisodeHtml,
+	getLines,
+	parseLine,
+} from '../lib/scrape'
 
 const log = _.partial(console.log, c.bgGreen('scrape'))
+const readFile = Promise.promisify(fs.readFile)
 const writeFile = Promise.promisify(fs.writeFile)
-const pad2 = _.partialRight(_.padStart, 2, 0)
 
 export default async function scrape(opts) {
 	const {
-		concurrency
+		concurrency,
+		useCache
 	} = opts
 
 	log('starting')
-	log('getting season list...')
-	const seasons = await getSeasonList()
-	const allEpisodes = seasons.reduce((prev, cur) => {
-		return [...prev, ...cur.episodes]
-	}, [])
-	log(`found ${c.blue(allEpisodes.length)} episodes in ${c.blue(seasons.length)} seasons`)
+	log('getting episode index...')
 
-	log('downloading...')
-	const progress = new ProgressBar(':current/:total :bar :eta', allEpisodes.length)
-	await Promise.map(allEpisodes, async episode => {
-		const episodeText = await getEpisode(episode)
-		const fileName = `episodes/${pad2(episode.season)}-${pad2(episode.ep)}.json`
-		await writeFile(fileName, JSON.stringify(episodeText, null, 2))
+	const episodeIndex = await readFile('tmp/episode-index.html')
+	const episodes = await parseEpisodeIndex(episodeIndex)
+
+	log(`found ${c.blue(episodes.length)} episodes`)
+
+	let progress = new ProgressBar(':current/:total :bar :eta', {
+		total: episodes.length,
+	})
+
+	log('ya?')
+
+	await Promise.map(episodes, async (episode) => {
+		if( useCache ) {
+			episode.html = await readFile(`tmp/html/${episode.season}-${episode.episode}.html`)
+		} else {
+			episode.html = await saveEpisodeHtml(episode.url, `tmp/html/${episode.season}-${episode.episode}.html`)
+		}
+
+		const lines = getLines(episode.html)
+
+		await writeFile(`tmp/json/${episode.season}-${episode.episode}.json`, JSON.stringify(lines, null, 2))
+
 		progress.tick()
-	}, {concurrency})
-
-	log('done')
+	}, { concurrency })
 }

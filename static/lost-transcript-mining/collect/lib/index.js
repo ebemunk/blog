@@ -1,2 +1,2 @@
-export * from './scrape-fns'
+export * from './scrape'
 export * from './db'
