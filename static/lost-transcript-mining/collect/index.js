@@ -17,6 +17,7 @@ cli
 .command('scrape')
 .description('scrape transcripts and save as json')
 .option('-c, --concurrency <num>', 'promise concurrency', Infinity)
+.option('--use-cache', 'use local cache', Infinity)
 .action(scrape)
 
 cli
