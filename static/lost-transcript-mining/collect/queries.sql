@@ -12,3 +12,18 @@ select distinct season, episode, char_name from dialog
 where type='dialog'
 order by season, episode, char_name asc
 ;
+
+-- all spoken dialog prefixed with char name by episode
+select season, episode, string_agg(char_name || ': ' || line, E'\n' order by seq)
+from dialog
+where type='dialog'
+group by season,episode
+order by season,episode
+;
+
+-- all dialog for each char ordered chronologically
+select char_name, string_agg(line, E'\n' order by season, episode, seq)
+from dialog
+where type='dialog'
+group by char_name
+;
