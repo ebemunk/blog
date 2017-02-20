@@ -56,6 +56,7 @@ export function getLines(htmlString) {
 	})
 	.get()
 	.map(lineType)
+	.filter(Boolean)
 	return lines
 }
 

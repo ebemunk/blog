@@ -18,15 +18,16 @@ export default async function writeDb(opts) {
 	} = opts
 
 	log('starting')
-	log('reading episodes')
-	const dir = await readDirAsync('episodes')
+	log('reading tmp/json')
+	const dir = (await readDirAsync('tmp/json'))
+	.filter(name => /\.json$/.test(name))
 	log(`found ${c.blue(dir.length)} episode files`)
 
 	log('parsing files...')
 	let progress = new ProgressBar(':current/:total :bar :eta', dir.length)
 	const rows = []
 	await Promise.map(dir, async (file) => {
-		const text = await readFileAsync(`episodes/${file}`)
+		const text = await readFileAsync(`tmp/json/${file}`)
 		const json = JSON.parse(text)
 		json.map(row => rows.push(row))
 		progress.tick()

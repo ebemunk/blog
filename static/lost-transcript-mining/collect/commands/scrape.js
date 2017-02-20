@@ -34,8 +34,6 @@ export default async function scrape(opts) {
 		total: episodes.length,
 	})
 
-	log('ya?')
-
 	await Promise.map(episodes, async (episode) => {
 		if( useCache ) {
 			episode.html = await readFile(`tmp/html/${episode.season}-${episode.episode}.html`)
@@ -44,6 +42,12 @@ export default async function scrape(opts) {
 		}
 
 		const lines = getLines(episode.html)
+		.map((line, i) => ({
+			...line,
+			season: episode.season,
+			episode: episode.episode,
+			seq: i+1
+		}))
 
 		await writeFile(`tmp/json/${episode.season}-${episode.episode}.json`, JSON.stringify(lines, null, 2))
 
