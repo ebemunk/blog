@@ -10,6 +10,7 @@ import {
 	saveEpisodeHtml,
 	getLines,
 	parseLine,
+	getActsAndFlashbacks
 } from '../lib/scrape'
 
 const log = _.partial(console.log, c.bgGreen('scrape'))
@@ -41,7 +42,7 @@ export default async function scrape(opts) {
 			episode.html = await saveEpisodeHtml(episode.url, `tmp/html/${episode.season}-${episode.episode}.html`)
 		}
 
-		const lines = getLines(episode.html)
+		const lines = getActsAndFlashbacks(getLines(episode.html))
 		.map((line, i) => ({
 			...line,
 			season: episode.season,

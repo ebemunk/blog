@@ -46,7 +46,7 @@ export function getLines(htmlString) {
 	.nextAll()
 	// only hr h2 and p tags with content in them
 	.filter((i, el) => {
-		return ['hr', 'h2', 'p'].includes(el.tagName) && $(el).text().trim()
+		return ['hr', 'h2', 'p'].includes(el.tagName)
 	})
 	.map((i, el) => {
 		return {
@@ -56,6 +56,7 @@ export function getLines(htmlString) {
 	})
 	.get()
 	.map(lineType)
+	// filter falsy values
 	.filter(Boolean)
 	return lines
 }
@@ -121,4 +122,41 @@ export function parseLine(text) {
 		line,
 		directions,
 	}
+}
+
+export function getActsAndFlashbacks(lines) {
+	let act = 0
+	let scene = 0
+	let flashback = false
+	let flashsideways = false
+
+	return lines.map(line => {
+		if( line.type === 'act' ) {
+			flashback = false
+			flashsideways = false
+			act++
+		}
+
+		if( line.type === 'scene' ) {
+			flashback = false
+			flashsideways = false
+			scene++
+		}
+
+		if( /^Flashback/.test(line.line) ) {
+			flashback = true
+		}
+
+		if( /^Flash sideways/.test(line.line) ) {
+			flashsideways = true
+		}
+
+		return {
+			...line,
+			act,
+			scene,
+			flashback,
+			flashsideways
+		}
+	})
 }

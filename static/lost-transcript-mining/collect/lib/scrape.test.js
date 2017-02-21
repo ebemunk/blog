@@ -12,7 +12,8 @@ import {
 	saveEpisodeHtml,
 	getLines,
 	lineType,
-	parseLine
+	parseLine,
+	getActsAndFlashbacks
 } from './scrape'
 
 describe('parseEpisodeIndex', () => {
@@ -118,5 +119,18 @@ describe('parseLine', () => {
 
 		// text = `TOM: I didn\'t say you were going back to the Island. You\'re not going on that boat so you can swab decks, Michael.`
 		// console.log(parseLine(text));
+	})
+})
+
+describe('getActsAndFlashbacks', () => {
+	let html
+
+	beforeAll(async () => {
+		html = await readFile('tmp/html/1-1.html')
+	})
+
+	it('should return array of parsed lines', () => {
+		const lines = getActsAndFlashbacks(getLines(html))
+		expect(lines).toMatchSnapshot()
 	})
 })
