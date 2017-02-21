@@ -1,0 +1,18 @@
+exports[`insertObj provide correct sql 1`] = `
+Array [
+  "
+		INSERT INTO dialog
+		(faf,lolol,directions)
+		VALUES
+		($1,$2,$3)
+	",
+  Array [
+    "etet",
+    "yaya",
+    Array [
+      "some",
+      "things",
+    ],
+  ],
+]
+`;
