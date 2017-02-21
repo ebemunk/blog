@@ -1,22 +1,17 @@
-
-export function insert(row) {
+export function insertObj(obj) {
+	const cols = Object.keys(obj)
+	.join(',')
+	const valOrder = Object.keys(obj)
+	.map((v, i) => `$${i+1}`)
+	.join(',')
 	const sql = `
 		INSERT INTO dialog
-		(season, episode, seq, type, char_name, line, directions, raw)
+		(${cols})
 		VALUES
-		($1, $2, $3, $4, $5, $6, $7, $8)
+		(${valOrder})
 	`
 	return [
 		sql,
-		[
-			row.season,
-			row.episode,
-			row.seq,
-			row.type,
-			row.char_name,
-			row.line,
-			JSON.stringify(row.directions),
-			row.raw
-		]
+		Object.values(obj)
 	]
 }

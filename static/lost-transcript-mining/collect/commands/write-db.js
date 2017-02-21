@@ -6,7 +6,7 @@ import ProgressBar from 'progress'
 import c from 'chalk'
 import { Pool } from 'pg'
 
-import { insert } from '../lib'
+import { insertObj } from '../lib'
 
 const log = _.partial(console.log, c.bgGreen('write-db'))
 const readDirAsync = Promise.promisify(readdir)
@@ -47,7 +47,8 @@ export default async function writeDb(opts) {
 	log('writing to db...')
 	progress = new ProgressBar(':current/:total :bar :eta', rows.length)
 	await Promise.map(rows, async (row) => {
-		await pool.query(...insert(row))
+		row.directions = JSON.stringify(row.directions)
+		await pool.query(...insertObj(row))
 		progress.tick()
 	}, {concurrency})
 
