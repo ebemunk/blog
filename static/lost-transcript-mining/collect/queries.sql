@@ -1,6 +1,13 @@
+-- total lines by char
+select char_name, count(*) as lines
+from dialog
+where type='dialog' and char_name is not null
+group by char_name
+order by lines desc
+;
+
 -- total lines per char per episode per season
-select
-  season, episode, char_name, count(*) as lines
+select season, episode, char_name, count(*) as lines
 from dialog
 where type='dialog'
 group by season, episode, char_name
@@ -26,6 +33,13 @@ select char_name, string_agg(line, E'\n' order by season, episode, seq)
 from dialog
 where type='dialog'
 group by char_name
+;
+
+-- chars in every scene
+select season, episode, act, scene, array_agg(distinct char_name)
+from dialog
+where type='dialog'
+group by season, episode, act, scene
 ;
 
 -- dialog table
