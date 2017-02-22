@@ -135,6 +135,7 @@ export function getActsAndFlashbacks(lines) {
 			flashback = false
 			flashsideways = false
 			act++
+			scene++
 		}
 
 		if( line.type === 'scene' ) {

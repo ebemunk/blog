@@ -4,7 +4,7 @@ Array [
     "act": 1,
     "flashback": false,
     "flashsideways": false,
-    "scene": 0,
+    "scene": 1,
     "type": "act",
   },
   Object {
@@ -13,7 +13,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Jack\'s eye opening, looking up at bamboo trees. Overhead shot panning out to show Jack is lying injured in a jungle. Jack sees a dog, slowly gets up, in pain. Finds a little liquor bottle in his pocket. Then he runs though the bamboo and emerges on a tropical beach. He sees plane wreckage and people running around, screaming, in distress. The engine is still spinning. Charlie gets dangerously close to it. Jin yells out in Korean.",
     "raw": "[Shot of Jack\'s eye opening, looking up at bamboo trees. Overhead shot panning out to show Jack is lying injured in a jungle. Jack sees a dog, slowly gets up, in pain. Finds a little liquor bottle in his pocket. Then he runs though the bamboo and emerges on a tropical beach. He sees plane wreckage and people running around, screaming, in distress. The engine is still spinning. Charlie gets dangerously close to it. Jin yells out in Korean.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -24,7 +24,7 @@ Array [
     "flashsideways": false,
     "line": "Walt! Walt!",
     "raw": "MICHAEL: Walt! Walt!",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -35,7 +35,7 @@ Array [
     "flashsideways": false,
     "line": "Stay away from the gas! Stay there!",
     "raw": "REDSHIRT: Stay away from the gas! Stay there!",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -44,7 +44,7 @@ Array [
     "flashsideways": false,
     "line": "Shannon screaming. Jack looks up at the wing.",
     "raw": "[Shannon screaming. Jack looks up at the wing.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -57,7 +57,7 @@ Array [
     "flashsideways": false,
     "line": "Help! Help! Somebody help me! Help! Help! Ahh, my leg! Ah! Ah!",
     "raw": "REDSHIRT #2: [trapped under the piece with the still moving engine] Help! Help! Somebody help me! Help! Help! Ahh, my leg! Ah! Ah!",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -71,7 +71,7 @@ Array [
     "flashsideways": false,
     "line": "Hey you, just give me a hand! You, come on! Come over here, give me a hand! On the count of three: One, two, three.",
     "raw": "JACK: Hey you, just give me a hand! You, come on! Come over here, give me a hand! [A group of redshirts (and Locke) gather around to lift the metal piece that\'s trapping the man.] On the count of three: One, two, three.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -80,7 +80,7 @@ Array [
     "flashsideways": false,
     "line": "Jack pulls the man out from under. One leg is bloody. Jack starts ripping the man\'s pants to get to the wound. Jack uses his tie as a tourniquet.",
     "raw": "[Jack pulls the man out from under. One leg is bloody. Jack starts ripping the man\'s pants to get to the wound. Jack uses his tie as a tourniquet.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -91,7 +91,7 @@ Array [
     "flashsideways": false,
     "line": "Help! Please help me! Help me, please help me!",
     "raw": "CLAIRE: Help! Please help me! Help me, please help me!",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -100,7 +100,7 @@ Array [
     "flashsideways": false,
     "line": "Jack sees Claire, who is is pregnant and on her hands and knees.",
     "raw": "[Jack sees Claire, who is is pregnant and on her hands and knees.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -113,7 +113,7 @@ Array [
     "flashsideways": false,
     "line": "All right, get him out of here! Get him away from the engine! Get him out of here!",
     "raw": "JACK: [to a redshirt and Locke] All right, get him out of here! Get him away from the engine! Get him out of here!",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -122,7 +122,7 @@ Array [
     "flashsideways": false,
     "line": "He runs over to Claire through a lot of wreckage.",
     "raw": "[He runs over to Claire through a lot of wreckage.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -133,7 +133,7 @@ Array [
     "flashsideways": false,
     "line": "Help me, please. I\'m having, I\'m having contractions.",
     "raw": "CLAIRE: Help me, please. I\'m having, I\'m having contractions.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -144,7 +144,7 @@ Array [
     "flashsideways": false,
     "line": "How many months pregnant are you?",
     "raw": "JACK: How many months pregnant are you?",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -155,7 +155,7 @@ Array [
     "flashsideways": false,
     "line": "I\'m, I\'m nearly eight months.",
     "raw": "CLAIRE: I\'m, I\'m nearly eight months.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -164,7 +164,7 @@ Array [
     "flashsideways": false,
     "line": "Jack looks over and sees Boone doing CPR on Rose.",
     "raw": "[Jack looks over and sees Boone doing CPR on Rose.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -177,7 +177,7 @@ Array [
     "flashsideways": false,
     "line": "How far apart are they coming?",
     "raw": "JACK: [to Claire] How far apart are they coming?",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -188,7 +188,7 @@ Array [
     "flashsideways": false,
     "line": "I don\'t know, a-a few just happened.",
     "raw": "CLAIRE: I don\'t know, a-a few just happened.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -197,7 +197,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Locke and Redshirt carrying bad-leg-guy away. A man named Gary Troup starts walking in front of the engine and Locke sees him.",
     "raw": "[Shot of Locke and Redshirt carrying bad-leg-guy away. A man named Gary Troup starts walking in front of the engine and Locke sees him.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -208,7 +208,7 @@ Array [
     "flashsideways": false,
     "line": "Hey! Hey, hey, hey, get away from there!",
     "raw": "LOCKE: Hey! Hey, hey, hey, get away from there!",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -219,7 +219,7 @@ Array [
     "flashsideways": false,
     "line": "What?",
     "raw": "GARY: What?",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -228,7 +228,7 @@ Array [
     "flashsideways": false,
     "line": "Gary gets sucked into the engine and the engine explodes. Shot of people running. Jack sort of falls on top of Claire to protect her.",
     "raw": "[Gary gets sucked into the engine and the engine explodes. Shot of people running. Jack sort of falls on top of Claire to protect her.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -239,7 +239,7 @@ Array [
     "flashsideways": false,
     "line": "Listen to me! Look at me! You\'re going to be okay, do you understand me? But you have to sit absolutely still!",
     "raw": "JACK: Listen to me! Look at me! You\'re going to be okay, do you understand me? But you have to sit absolutely still!",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -248,7 +248,7 @@ Array [
     "flashsideways": false,
     "line": "Jack looking at Boone giving Rose mouth-to-mouth.",
     "raw": "[Jack looking at Boone giving Rose mouth-to-mouth.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -261,7 +261,7 @@ Array [
     "flashsideways": false,
     "line": "Hey, you! Come here! I need you to get this woman away from these fumes! Take her over there. Stay with her. If her contractions occur any closer than three minutes apart, call out for me.",
     "raw": "JACK: [to Hurley] Hey, you! Come here! I need you to get this woman away from these fumes! Take her over there. Stay with her. If her contractions occur any closer than three minutes apart, call out for me.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -272,7 +272,7 @@ Array [
     "flashsideways": false,
     "line": "Oh, you got to be kidding me.",
     "raw": "HURLEY: Oh, you got to be kidding me.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -283,7 +283,7 @@ Array [
     "flashsideways": false,
     "line": "I\'ll be right back, okay?",
     "raw": "JACK: I\'ll be right back, okay?",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -294,7 +294,7 @@ Array [
     "flashsideways": false,
     "line": "Thank you.",
     "raw": "CLAIRE: Thank you.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -303,7 +303,7 @@ Array [
     "flashsideways": false,
     "line": "Jack starts running off.",
     "raw": "[Jack starts running off.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -314,7 +314,7 @@ Array [
     "flashsideways": false,
     "line": "Hey! What\'s your name?",
     "raw": "HURLEY: Hey! What\'s your name?",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -325,7 +325,7 @@ Array [
     "flashsideways": false,
     "line": "Jack.",
     "raw": "JACK: Jack.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -334,7 +334,7 @@ Array [
     "flashsideways": false,
     "line": "Jack runs up to Boone and Rose.",
     "raw": "[Jack runs up to Boone and Rose.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -345,7 +345,7 @@ Array [
     "flashsideways": false,
     "line": "Stop! Her head\'s not tilted far back enough. You\'re blowing air into her stomach.",
     "raw": "JACK: Stop! Her head\'s not tilted far back enough. You\'re blowing air into her stomach.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -356,7 +356,7 @@ Array [
     "flashsideways": false,
     "line": "You sure?",
     "raw": "BOONE: You sure?",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -365,7 +365,7 @@ Array [
     "flashsideways": false,
     "line": "Jack starts giving her mouth-to-mouth. ",
     "raw": "[Jack starts giving her mouth-to-mouth. ]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -376,7 +376,7 @@ Array [
     "flashsideways": false,
     "line": "That\'s exactly what I was doing. I\'m a lifeguard. I\'m licensed.",
     "raw": "BOONE: That\'s exactly what I was doing. I\'m a lifeguard. I\'m licensed.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -387,7 +387,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah, well, you need to seriously think about giving that license back.",
     "raw": "JACK: Yeah, well, you need to seriously think about giving that license back.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -398,7 +398,7 @@ Array [
     "flashsideways": false,
     "line": "Maybe we should do one of those hole things. You know, stick the pen in the throat?",
     "raw": "BOONE: Maybe we should do one of those hole things. You know, stick the pen in the throat?",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -409,7 +409,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah, good idea. You go get me a pen.",
     "raw": "JACK: Yeah, good idea. You go get me a pen.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -418,7 +418,7 @@ Array [
     "flashsideways": false,
     "line": "Boone runs off to get pens.",
     "raw": "[Boone runs off to get pens.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -431,7 +431,7 @@ Array [
     "flashsideways": false,
     "line": "Come on. Come on! Come on! Come on!",
     "raw": "JACK: [doing CPR] Come on. Come on! Come on! Come on!",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -440,7 +440,7 @@ Array [
     "flashsideways": false,
     "line": "Rose breathes.",
     "raw": "[Rose breathes.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -451,7 +451,7 @@ Array [
     "flashsideways": false,
     "line": "Big deep breaths. Take breaths!",
     "raw": "JACK: Big deep breaths. Take breaths!",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -460,7 +460,7 @@ Array [
     "flashsideways": false,
     "line": "Sound of metal. Jack looks up to see a big piece of metal high up (the wing) on some of the wreckage starting to wobble. Claire and Hurley are right under where it would fall. Jack runs over to them.",
     "raw": "[Sound of metal. Jack looks up to see a big piece of metal high up (the wing) on some of the wreckage starting to wobble. Claire and Hurley are right under where it would fall. Jack runs over to them.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -473,7 +473,7 @@ Array [
     "flashsideways": false,
     "line": "Move! Move! Move! Get her up! Get her out of there! The wing!",
     "raw": "JACK: [as he\'s running] Move! Move! Move! Get her up! Get her out of there! The wing!",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -482,7 +482,7 @@ Array [
     "flashsideways": false,
     "line": "Jack, Hurley, and Claire run out of way as there is a huge explosion. A big piece of burning debris lands near Charlie.",
     "raw": "[Jack, Hurley, and Claire run out of way as there is a huge explosion. A big piece of burning debris lands near Charlie.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -495,7 +495,7 @@ Array [
     "flashsideways": false,
     "line": "You okay?",
     "raw": "JACK: [to Claire] You okay?",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -506,7 +506,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah.",
     "raw": "CLAIRE: Yeah.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -520,7 +520,7 @@ Array [
     "flashsideways": false,
     "line": "You? Stay with her.",
     "raw": "JACK: [to Hurley] You? [Hurley sort of nods lying on the ground]. Stay with her.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -531,7 +531,7 @@ Array [
     "flashsideways": false,
     "line": "Dude, I\'m not going anywhere.",
     "raw": "HURLEY: Dude, I\'m not going anywhere.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -540,7 +540,7 @@ Array [
     "flashsideways": false,
     "line": "Jack sort of stumbling around the beach, looks into the fuselage. Takes a moment to steady himself, almost crying.",
     "raw": "[Jack sort of stumbling around the beach, looks into the fuselage. Takes a moment to steady himself, almost crying.]",
-    "scene": 0,
+    "scene": 1,
     "type": "stageDirection",
   },
   Object {
@@ -553,7 +553,7 @@ Array [
     "flashsideways": false,
     "line": "I didn\'t know which one would work best.",
     "raw": "BOONE: [walking up holding out a handful of pens] I didn\'t know which one would work best.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
@@ -564,14 +564,14 @@ Array [
     "flashsideways": false,
     "line": "They\'re all good. Thanks.",
     "raw": "JACK: They\'re all good. Thanks.",
-    "scene": 0,
+    "scene": 1,
     "type": "dialog",
   },
   Object {
     "act": 1,
     "flashback": false,
     "flashsideways": false,
-    "scene": 1,
+    "scene": 2,
     "type": "scene",
   },
   Object {
@@ -580,7 +580,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Jack going through a suitcase, and finding a sewing kit. Jack going to a deserted part of the beach and taking his jacket and shirt off. He has a big gash on his side. Kate comes walking by, doesn\'t know Jack is there. Kate rubbing her wrist.",
     "raw": "[Shot of Jack going through a suitcase, and finding a sewing kit. Jack going to a deserted part of the beach and taking his jacket and shirt off. He has a big gash on his side. Kate comes walking by, doesn\'t know Jack is there. Kate rubbing her wrist.]",
-    "scene": 1,
+    "scene": 2,
     "type": "stageDirection",
   },
   Object {
@@ -591,7 +591,7 @@ Array [
     "flashsideways": false,
     "line": "Excuse me. Did you ever use a needle?",
     "raw": "JACK: Excuse me. Did you ever use a needle?",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -602,7 +602,7 @@ Array [
     "flashsideways": false,
     "line": "What?",
     "raw": "KATE: What?",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -613,7 +613,7 @@ Array [
     "flashsideways": false,
     "line": "Did you ever … patch a pair of jeans?",
     "raw": "JACK: Did you ever … patch a pair of jeans?",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -624,7 +624,7 @@ Array [
     "flashsideways": false,
     "line": "I, uhm, I made the drapes in my apartment.",
     "raw": "KATE: I, uhm, I made the drapes in my apartment.",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -635,7 +635,7 @@ Array [
     "flashsideways": false,
     "line": "That\'s fantastic. Listen, do you have a second? I could use a little help here.",
     "raw": "JACK: That\'s fantastic. Listen, do you have a second? I could use a little help here.",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -644,7 +644,7 @@ Array [
     "flashsideways": false,
     "line": "Kate walks over to him.",
     "raw": "[Kate walks over to him.]",
-    "scene": 1,
+    "scene": 2,
     "type": "stageDirection",
   },
   Object {
@@ -655,7 +655,7 @@ Array [
     "flashsideways": false,
     "line": "And with what?",
     "raw": "KATE: And with what?",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -666,7 +666,7 @@ Array [
     "flashsideways": false,
     "line": "With this.",
     "raw": "JACK: With this.",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -675,7 +675,7 @@ Array [
     "flashsideways": false,
     "line": "Jack shows her the wound, and she grimaces.",
     "raw": "[Jack shows her the wound, and she grimaces.]",
-    "scene": 1,
+    "scene": 2,
     "type": "stageDirection",
   },
   Object {
@@ -686,7 +686,7 @@ Array [
     "flashsideways": false,
     "line": "Look, I\'d do it myself, I\'m a doctor, but I just can\'t reach it.",
     "raw": "JACK: Look, I\'d do it myself, I\'m a doctor, but I just can\'t reach it.",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -697,7 +697,7 @@ Array [
     "flashsideways": false,
     "line": "You want me to sew that up?",
     "raw": "KATE: You want me to sew that up?",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -708,7 +708,7 @@ Array [
     "flashsideways": false,
     "line": "It\'s just like the drapes, same thing.",
     "raw": "JACK: It\'s just like the drapes, same thing.",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -719,7 +719,7 @@ Array [
     "flashsideways": false,
     "line": "No, with the drapes I used a sewing machine.",
     "raw": "KATE: No, with the drapes I used a sewing machine.",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -730,7 +730,7 @@ Array [
     "flashsideways": false,
     "line": "No, you can do this. I\'m telling you. If you wouldn\'t mind.",
     "raw": "JACK: No, you can do this. I\'m telling you. If you wouldn\'t mind.",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -739,7 +739,7 @@ Array [
     "flashsideways": false,
     "line": "Jack looks at her pleadingly.",
     "raw": "[Jack looks at her pleadingly.]",
-    "scene": 1,
+    "scene": 2,
     "type": "stageDirection",
   },
   Object {
@@ -750,7 +750,7 @@ Array [
     "flashsideways": false,
     "line": "Of course I will.",
     "raw": "KATE: Of course I will.",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -763,7 +763,7 @@ Array [
     "flashsideways": false,
     "line": "Thank you. It\'s for your hands. Save me some for the, for the wound.",
     "raw": "JACK: Thank you. [handing her the little liquor bottle from his pocket] It\'s for your hands. Save me some for the, for the wound.",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -772,7 +772,7 @@ Array [
     "flashsideways": false,
     "line": "Kate picks up a little sewing kit.",
     "raw": "[Kate picks up a little sewing kit.]",
-    "scene": 1,
+    "scene": 2,
     "type": "stageDirection",
   },
   Object {
@@ -783,7 +783,7 @@ Array [
     "flashsideways": false,
     "line": "Any color preference?",
     "raw": "KATE: Any color preference?",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -796,7 +796,7 @@ Array [
     "flashsideways": false,
     "line": "No. Standard black.",
     "raw": "JACK: [laughing] No. Standard black.",
-    "scene": 1,
+    "scene": 2,
     "type": "dialog",
   },
   Object {
@@ -805,14 +805,14 @@ Array [
     "flashsideways": false,
     "line": "Jack dumps the vodka on his wound.",
     "raw": "[Jack dumps the vodka on his wound.]",
-    "scene": 1,
+    "scene": 2,
     "type": "stageDirection",
   },
   Object {
     "act": 1,
     "flashback": false,
     "flashsideways": false,
-    "scene": 2,
+    "scene": 3,
     "type": "scene",
   },
   Object {
@@ -821,7 +821,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Sawyer lighting up a cigarette. Looking around. Then walking away, looks like he tosses his smoke down, disgusted-like; Claire standing by the shore; Hurley stacking airline food; Locke sitting alone looking out toward the ocean; Boone getting a \"no service\" signal on his cell phone.",
     "raw": "[Shot of Sawyer lighting up a cigarette. Looking around. Then walking away, looks like he tosses his smoke down, disgusted-like; Claire standing by the shore; Hurley stacking airline food; Locke sitting alone looking out toward the ocean; Boone getting a \"no service\" signal on his cell phone.]",
-    "scene": 2,
+    "scene": 3,
     "type": "stageDirection",
   },
   Object {
@@ -832,7 +832,7 @@ Array [
     "flashsideways": false,
     "line": "Come on.",
     "raw": "BOONE: Come on.",
-    "scene": 2,
+    "scene": 3,
     "type": "dialog",
   },
   Object {
@@ -841,7 +841,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Sayid adding wood to a big fire.",
     "raw": "[Shot of Sayid adding wood to a big fire.]",
-    "scene": 2,
+    "scene": 3,
     "type": "stageDirection",
   },
   Object {
@@ -854,7 +854,7 @@ Array [
     "flashsideways": false,
     "line": "Hey you. What\'s your name?",
     "raw": "SAYID: [to Charlie] Hey you. What\'s your name?",
-    "scene": 2,
+    "scene": 3,
     "type": "dialog",
   },
   Object {
@@ -865,7 +865,7 @@ Array [
     "flashsideways": false,
     "line": "Me? Charlie.",
     "raw": "CHARLIE: Me? Charlie.",
-    "scene": 2,
+    "scene": 3,
     "type": "dialog",
   },
   Object {
@@ -876,7 +876,7 @@ Array [
     "flashsideways": false,
     "line": "Charlie. We need help with the fire. No-one will see it if it isn\'t big.",
     "raw": "SAYID: Charlie. We need help with the fire. No-one will see it if it isn\'t big.",
-    "scene": 2,
+    "scene": 3,
     "type": "dialog",
   },
   Object {
@@ -887,7 +887,7 @@ Array [
     "flashsideways": false,
     "line": "Okay, I\'m on it. What\'s your name?",
     "raw": "CHARLIE: Okay, I\'m on it. What\'s your name?",
-    "scene": 2,
+    "scene": 3,
     "type": "dialog",
   },
   Object {
@@ -898,7 +898,7 @@ Array [
     "flashsideways": false,
     "line": "Sayid.",
     "raw": "SAYID: Sayid.",
-    "scene": 2,
+    "scene": 3,
     "type": "dialog",
   },
   Object {
@@ -909,7 +909,7 @@ Array [
     "flashsideways": false,
     "line": "Sayid. I\'m on it, Sayid.",
     "raw": "CHARLIE: Sayid. I\'m on it, Sayid.",
-    "scene": 2,
+    "scene": 3,
     "type": "dialog",
   },
   Object {
@@ -918,14 +918,14 @@ Array [
     "flashsideways": false,
     "line": "Shot of Rose kissing the ring on her necklace",
     "raw": "[Shot of Rose kissing the ring on her necklace]",
-    "scene": 2,
+    "scene": 3,
     "type": "stageDirection",
   },
   Object {
     "act": 1,
     "flashback": false,
     "flashsideways": false,
-    "scene": 3,
+    "scene": 4,
     "type": "scene",
   },
   Object {
@@ -934,7 +934,7 @@ Array [
     "flashsideways": false,
     "line": "Kate sewing up Jack\'s wound.",
     "raw": "[Kate sewing up Jack\'s wound.]",
-    "scene": 3,
+    "scene": 4,
     "type": "stageDirection",
   },
   Object {
@@ -945,7 +945,7 @@ Array [
     "flashsideways": false,
     "line": "I might throw up on you.",
     "raw": "KATE: I might throw up on you.",
-    "scene": 3,
+    "scene": 4,
     "type": "dialog",
   },
   Object {
@@ -958,7 +958,7 @@ Array [
     "flashsideways": false,
     "line": "You\'re doing fine.",
     "raw": "JACK: [shaking his head] You\'re doing fine.",
-    "scene": 3,
+    "scene": 4,
     "type": "dialog",
   },
   Object {
@@ -969,7 +969,7 @@ Array [
     "flashsideways": false,
     "line": "You don\'t seem afraid at all. I don\'t understand that.",
     "raw": "KATE: You don\'t seem afraid at all. I don\'t understand that.",
-    "scene": 3,
+    "scene": 4,
     "type": "dialog",
   },
   Object {
@@ -982,7 +982,7 @@ Array [
     "flashsideways": false,
     "line": "Well, fear\'s sort of an odd thing. When I was in residency, my first solo procedure was a spinal surgery on a 16 year old kid, a girl. And at the end, after 13 hours, I was closing her up and I, I accidentally ripped her dural sac. Shredded the base of the spine where all the nerves come together, membrane as thin as tissue. And so it ripped open. And the nerves just spilled out of her like angel hair pasta, spinal fluid flowing out of her and I … And the terror was just so … crazy. So real. And I knew I had to deal with it. So I just made a choice. I\'d let the fear in, let it take over, let it do its thing, but only for five seconds, that\'s all I was going to give it. So I started to count: One, two, three, four, five. Then it was gone. I went back to work, sewed her up and she was fine.",
     "raw": "JACK: Well, fear\'s sort of an odd thing. When I was in residency, my first solo procedure was a spinal surgery on a 16 year old kid, a girl. And at the end, after 13 hours, I was closing her up and I, I accidentally ripped her dural sac. Shredded the base of the spine where all the nerves come together, membrane as thin as tissue. And so it ripped open. And the nerves just spilled out of her like angel hair pasta, spinal fluid flowing out of her and I … And the terror was just so … crazy. So real. And I knew I had to deal with it. (He\'s crying). So I just made a choice. I\'d let the fear in, let it take over, let it do its thing, but only for five seconds, that\'s all I was going to give it. So I started to count: One, two, three, four, five. Then it was gone. I went back to work, sewed her up and she was fine.",
-    "scene": 3,
+    "scene": 4,
     "type": "dialog",
   },
   Object {
@@ -993,7 +993,7 @@ Array [
     "flashsideways": false,
     "line": "If that had been me, I think I would have run for the door.",
     "raw": "KATE: If that had been me, I think I would have run for the door.",
-    "scene": 3,
+    "scene": 4,
     "type": "dialog",
   },
   Object {
@@ -1004,14 +1004,14 @@ Array [
     "flashsideways": false,
     "line": "No, I don\'t think that\'s true. You\'re not running now.",
     "raw": "JACK: No, I don\'t think that\'s true. You\'re not running now.",
-    "scene": 3,
+    "scene": 4,
     "type": "dialog",
   },
   Object {
     "act": 1,
     "flashback": false,
     "flashsideways": false,
-    "scene": 4,
+    "scene": 5,
     "type": "scene",
   },
   Object {
@@ -1020,7 +1020,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of stars in night sky; Charlie writing F.A.T.E. on his taped fingers, sitting next to Sayid.",
     "raw": "[Shot of stars in night sky; Charlie writing F.A.T.E. on his taped fingers, sitting next to Sayid.]",
-    "scene": 4,
+    "scene": 5,
     "type": "stageDirection",
   },
   Object {
@@ -1031,7 +1031,7 @@ Array [
     "flashsideways": false,
     "line": "You think they would have come by now.",
     "raw": "SAYID: You think they would have come by now.",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1042,7 +1042,7 @@ Array [
     "flashsideways": false,
     "line": "Huh? Who?",
     "raw": "CHARLIE: Huh? Who?",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1053,7 +1053,7 @@ Array [
     "flashsideways": false,
     "line": "Anyone.",
     "raw": "SAYID: Anyone.",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1062,7 +1062,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Shannon painting her toenails. Boone comes up, offers her a candy bar.",
     "raw": "[Shot of Shannon painting her toenails. Boone comes up, offers her a candy bar.]",
-    "scene": 4,
+    "scene": 5,
     "type": "stageDirection",
   },
   Object {
@@ -1073,7 +1073,7 @@ Array [
     "flashsideways": false,
     "line": "As if I\'m going to start eating chocolate.",
     "raw": "SHANNON: As if I\'m going to start eating chocolate.",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1084,7 +1084,7 @@ Array [
     "flashsideways": false,
     "line": "Shannon, we may be here for a while.",
     "raw": "BOONE: Shannon, we may be here for a while.",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1098,7 +1098,7 @@ Array [
     "flashsideways": false,
     "line": "The plane had a black box, idiot. They know exactly where they are, they\'re coming. I\'ll eat on the rescue boat. I\'ll. Eat. On. The. Rescue. Boat.",
     "raw": "SHANNON: The plane had a black box, idiot. They know exactly where they are, they\'re coming. I\'ll eat on the rescue boat. [He offers the chocolate again]. I\'ll. Eat. On. The. Rescue. Boat. [Boone eats the chocolate.]",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1107,7 +1107,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Claire sitting on a piece of wreckage. Hurley comes up with a tray of airplane food.",
     "raw": "[Shot of Claire sitting on a piece of wreckage. Hurley comes up with a tray of airplane food.]",
-    "scene": 4,
+    "scene": 5,
     "type": "stageDirection",
   },
   Object {
@@ -1118,7 +1118,7 @@ Array [
     "flashsideways": false,
     "line": "Hungry?",
     "raw": "HURLEY: Hungry?",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1129,7 +1129,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah, thanks.",
     "raw": "CLAIRE: Yeah, thanks.",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1140,7 +1140,7 @@ Array [
     "flashsideways": false,
     "line": "Anymore, uh... you know, baby stuff?",
     "raw": "HURLEY: Anymore, uh... you know, baby stuff?",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1151,7 +1151,7 @@ Array [
     "flashsideways": false,
     "line": "No. I\'m-I\'m okay.",
     "raw": "CLAIRE: No. I\'m-I\'m okay.",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1162,7 +1162,7 @@ Array [
     "flashsideways": false,
     "line": "Well, hang in there.",
     "raw": "HURLEY: Well, hang in there.",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1173,7 +1173,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah, you too.",
     "raw": "CLAIRE: Yeah, you too.",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1182,7 +1182,7 @@ Array [
     "flashsideways": false,
     "line": "Hurley\'s arm comes back into the shot and gives her another meal.",
     "raw": "[Hurley\'s arm comes back into the shot and gives her another meal.]",
-    "scene": 4,
+    "scene": 5,
     "type": "stageDirection",
   },
   Object {
@@ -1191,7 +1191,7 @@ Array [
     "flashsideways": false,
     "line": "Close up of Michael",
     "raw": "[Close up of Michael]",
-    "scene": 4,
+    "scene": 5,
     "type": "stageDirection",
   },
   Object {
@@ -1202,7 +1202,7 @@ Array [
     "flashsideways": false,
     "line": "You sure you\'re warm enough?",
     "raw": "MICHAEL: You sure you\'re warm enough?",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1211,7 +1211,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Walt lying on the beach under a blanket. He just nods, with a far-off look; shot of Jin and Sun.",
     "raw": "[Shot of Walt lying on the beach under a blanket. He just nods, with a far-off look; shot of Jin and Sun.]",
-    "scene": 4,
+    "scene": 5,
     "type": "stageDirection",
   },
   Object {
@@ -1225,7 +1225,7 @@ Array [
     "flashsideways": false,
     "line": "내 옆에서 없어지면 안 돼. 내가 어디로 가든지 꼭 따라와. 알겠지? 다른 사람 신경쓰지 말고 우린 같이 있어야 돼.",
     "raw": "JIN: 내 옆에서 없어지면 안 돼. 내가 어디로 가든지 꼭 따라와. 알겠지? [Sun nods.] 다른 사람 신경쓰지 말고 우린 같이 있어야 돼. [Subtitle: You must not leave my sight. You must follow me wherever I go. Do you understand? Don\'t worry about the others. We need to stay together.]",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1234,7 +1234,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Kate standing over Jack while he\'s working on Marshal Mars, examining the Marshal\'s wound.",
     "raw": "[Shot of Kate standing over Jack while he\'s working on Marshal Mars, examining the Marshal\'s wound.]",
-    "scene": 4,
+    "scene": 5,
     "type": "stageDirection",
   },
   Object {
@@ -1245,7 +1245,7 @@ Array [
     "flashsideways": false,
     "line": "Do you think he\'s going to live?",
     "raw": "KATE: Do you think he\'s going to live?",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1256,7 +1256,7 @@ Array [
     "flashsideways": false,
     "line": "Do you know him?",
     "raw": "JACK: Do you know him?",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
@@ -1267,14 +1267,14 @@ Array [
     "flashsideways": false,
     "line": "He was sitting next to me.",
     "raw": "KATE: He was sitting next to me.",
-    "scene": 4,
+    "scene": 5,
     "type": "dialog",
   },
   Object {
     "act": 1,
     "flashback": false,
     "flashsideways": false,
-    "scene": 5,
+    "scene": 6,
     "type": "scene",
   },
   Object {
@@ -1283,7 +1283,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of a leaf torn into the shape of an airplane.",
     "raw": "[Shot of a leaf torn into the shape of an airplane.]",
-    "scene": 5,
+    "scene": 6,
     "type": "stageDirection",
   },
   Object {
@@ -1296,7 +1296,7 @@ Array [
     "flashsideways": false,
     "line": "We must have been at about 40,000 feet when it happened. Hit an air pocket. Dropped, maybe, 200 feet. The turbulence was … I blacked out.",
     "raw": "JACK: [off camera at first] We must have been at about 40,000 feet when it happened. Hit an air pocket. Dropped, maybe, 200 feet. The turbulence was … I blacked out.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1307,7 +1307,7 @@ Array [
     "flashsideways": false,
     "line": "I didn\'t. I saw the whole thing. I knew that the tail was gone, but I couldn\'t bring myself to look back. And then the, the front of the plane broke off.",
     "raw": "KATE: I didn\'t. I saw the whole thing. I knew that the tail was gone, but I couldn\'t bring myself to look back. And then the, the front of the plane broke off.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1318,7 +1318,7 @@ Array [
     "flashsideways": false,
     "line": "Well, it\'s not here on the beach. Neither is the tail. We need to figure out which way we came in.",
     "raw": "JACK: Well, it\'s not here on the beach. Neither is the tail. We need to figure out which way we came in.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1329,7 +1329,7 @@ Array [
     "flashsideways": false,
     "line": "Why?",
     "raw": "KATE: Why?",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1340,7 +1340,7 @@ Array [
     "flashsideways": false,
     "line": "Because there\'s a chance we could find the cockpit. If it\'s intact, we might be able to find a transceiver. Send out a signal, help the rescue party find us.",
     "raw": "JACK: Because there\'s a chance we could find the cockpit. If it\'s intact, we might be able to find a transceiver. Send out a signal, help the rescue party find us.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1351,7 +1351,7 @@ Array [
     "flashsideways": false,
     "line": "How do you know all that?",
     "raw": "KATE: How do you know all that?",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1362,7 +1362,7 @@ Array [
     "flashsideways": false,
     "line": "Took a couple flying lessons. Wasn\'t for me.",
     "raw": "JACK: Took a couple flying lessons. Wasn\'t for me.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1373,7 +1373,7 @@ Array [
     "flashsideways": false,
     "line": "I saw some smoke. Just through the valley. If you\'re thinking about going for the cockpit, I\'m going with you.",
     "raw": "KATE: I saw some smoke. Just through the valley. If you\'re thinking about going for the cockpit, I\'m going with you.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1384,7 +1384,7 @@ Array [
     "flashsideways": false,
     "line": "I don\'t know your name.",
     "raw": "JACK: I don\'t know your name.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1395,7 +1395,7 @@ Array [
     "flashsideways": false,
     "line": "I\'m Kate.",
     "raw": "KATE: I\'m Kate.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1406,7 +1406,7 @@ Array [
     "flashsideways": false,
     "line": "Jack.",
     "raw": "JACK: Jack.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1415,7 +1415,7 @@ Array [
     "flashsideways": false,
     "line": "Metal/weird sound coming from the jungle. Everyone on the beach is looking; Kate looks; Locke looks (the camera pans forward toward him for a close up); Walt looks; Shannon and Boone look.",
     "raw": "[Metal/weird sound coming from the jungle. Everyone on the beach is looking; Kate looks; Locke looks (the camera pans forward toward him for a close up); Walt looks; Shannon and Boone look.]",
-    "scene": 5,
+    "scene": 6,
     "type": "stageDirection",
   },
   Object {
@@ -1426,7 +1426,7 @@ Array [
     "flashsideways": false,
     "line": "What was that?",
     "raw": "SHANNON: What was that?",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1435,7 +1435,7 @@ Array [
     "flashsideways": false,
     "line": "Kate looks back at Jack; Charlie and Sayid look.",
     "raw": "[Kate looks back at Jack; Charlie and Sayid look.]",
-    "scene": 5,
+    "scene": 6,
     "type": "stageDirection",
   },
   Object {
@@ -1446,7 +1446,7 @@ Array [
     "flashsideways": false,
     "line": "That was weird, right?",
     "raw": "CHARLIE: That was weird, right?",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1457,7 +1457,7 @@ Array [
     "flashsideways": false,
     "line": "Is that Vincent?",
     "raw": "WALT: Is that Vincent?",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1466,7 +1466,7 @@ Array [
     "flashsideways": false,
     "line": "Walt gets up and goes toward it.",
     "raw": "[Walt gets up and goes toward it.]",
-    "scene": 5,
+    "scene": 6,
     "type": "stageDirection",
   },
   Object {
@@ -1479,7 +1479,7 @@ Array [
     "flashsideways": false,
     "line": "It\'s not Vincent.",
     "raw": "MICHAEL: [getting up to follow] It\'s not Vincent.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1488,7 +1488,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of trees moving/getting smashed down.",
     "raw": "[Shot of trees moving/getting smashed down.]",
-    "scene": 5,
+    "scene": 6,
     "type": "stageDirection",
   },
   Object {
@@ -1501,7 +1501,7 @@ Array [
     "flashsideways": false,
     "line": "Did anybody see that?",
     "raw": "CLAIRE: [coming into the frame] Did anybody see that?",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1514,7 +1514,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah.",
     "raw": "HURLEY: [in disbelief] Yeah.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1523,7 +1523,7 @@ Array [
     "flashsideways": false,
     "line": "Boone gets up, moves off.",
     "raw": "[Boone gets up, moves off.]",
-    "scene": 5,
+    "scene": 6,
     "type": "stageDirection",
   },
   Object {
@@ -1534,7 +1534,7 @@ Array [
     "flashsideways": false,
     "line": "Boone!",
     "raw": "SHANNON: Boone!",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
@@ -1543,7 +1543,7 @@ Array [
     "flashsideways": false,
     "line": "Everyone moving toward the sound, except Michael who backs off. Everyone looking out at the trees moving/getting smashed.",
     "raw": "[Everyone moving toward the sound, except Michael who backs off. Everyone looking out at the trees moving/getting smashed.]",
-    "scene": 5,
+    "scene": 6,
     "type": "stageDirection",
   },
   Object {
@@ -1554,14 +1554,14 @@ Array [
     "flashsideways": false,
     "line": "Terrific.",
     "raw": "CHARLIE: Terrific.",
-    "scene": 5,
+    "scene": 6,
     "type": "dialog",
   },
   Object {
     "act": 2,
     "flashback": false,
     "flashsideways": false,
-    "scene": 5,
+    "scene": 7,
     "type": "act",
   },
   Object {
@@ -1570,7 +1570,7 @@ Array [
     "flashsideways": false,
     "line": "Flashback - Shot out of airplane window over wing above clouds. Shot of Jack. Sound of cart rolling up.",
     "raw": "[Flashback - Shot out of airplane window over wing above clouds. Shot of Jack. Sound of cart rolling up.]",
-    "scene": 5,
+    "scene": 7,
     "type": "stageDirection",
   },
   Object {
@@ -1581,7 +1581,7 @@ Array [
     "flashsideways": false,
     "line": "So, how\'s the drink?",
     "raw": "CINDY: So, how\'s the drink?",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1592,7 +1592,7 @@ Array [
     "flashsideways": false,
     "line": "It\'s good.",
     "raw": "JACK: It\'s good.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1603,7 +1603,7 @@ Array [
     "flashsideways": false,
     "line": "That wasn\'t a very strong reaction.",
     "raw": "CINDY: That wasn\'t a very strong reaction.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1614,7 +1614,7 @@ Array [
     "flashsideways": false,
     "line": "Well, it\'s not a very strong drink.",
     "raw": "JACK: Well, it\'s not a very strong drink.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1627,7 +1627,7 @@ Array [
     "flashsideways": false,
     "line": "Shhh. Just don\'t tell anyone.",
     "raw": "CINDY: [hands him two more bottles] Shhh. Just don\'t tell anyone.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1638,7 +1638,7 @@ Array [
     "flashsideways": false,
     "line": "This of course breaks some critical FAA regulations.",
     "raw": "JACK: This of course breaks some critical FAA regulations.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1647,7 +1647,7 @@ Array [
     "flashsideways": false,
     "line": "Jack puts one of the bottles in his coat pocket and drinks the other. He stands up, then Charlie comes by him in the aisle.",
     "raw": "[Jack puts one of the bottles in his coat pocket and drinks the other. He stands up, then Charlie comes by him in the aisle.]",
-    "scene": 5,
+    "scene": 7,
     "type": "stageDirection",
   },
   Object {
@@ -1658,7 +1658,7 @@ Array [
     "flashsideways": false,
     "line": "Excuse me.",
     "raw": "CHARLIE: Excuse me.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1671,7 +1671,7 @@ Array [
     "flashsideways": false,
     "line": "Sir, excuse me!",
     "raw": "CINDY: [in background, to Charlie] Sir, excuse me!",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1684,7 +1684,7 @@ Array [
     "flashsideways": false,
     "line": "Guess he really had to go.",
     "raw": "ROSE: [looking at Charlie, then at Jack] Guess he really had to go.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1693,7 +1693,7 @@ Array [
     "flashsideways": false,
     "line": "Two Flight Attendants run by.",
     "raw": "[Two Flight Attendants run by.]",
-    "scene": 5,
+    "scene": 7,
     "type": "stageDirection",
   },
   Object {
@@ -1704,7 +1704,7 @@ Array [
     "flashsideways": false,
     "line": "Sir, excuse me!",
     "raw": "CINDY: Sir, excuse me!",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1713,7 +1713,7 @@ Array [
     "flashsideways": false,
     "line": "Jack sits back down. Then there is turbulence. Jack puts on his seatbelt.",
     "raw": "[Jack sits back down. Then there is turbulence. Jack puts on his seatbelt.]",
-    "scene": 5,
+    "scene": 7,
     "type": "stageDirection",
   },
   Object {
@@ -1726,7 +1726,7 @@ Array [
     "flashsideways": false,
     "line": "Ladies and gentleman, the pilot has switched on the \"fasten seatbelt\" sign. Please return to your seats and fasten your seatbelts.",
     "raw": "CINDY: [on the intercom] Ladies and gentleman, the pilot has switched on the \"fasten seatbelt\" sign. Please return to your seats and fasten your seatbelts.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1739,7 +1739,7 @@ Array [
     "flashsideways": false,
     "line": "It\'s normal.",
     "raw": "JACK: [to Rose] It\'s normal.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1750,7 +1750,7 @@ Array [
     "flashsideways": false,
     "line": "Oh, I know. I\'ve just never been a very good flier. My husband keeps reminding me that planes want to be in the air.",
     "raw": "ROSE: Oh, I know. I\'ve just never been a very good flier. My husband keeps reminding me that planes want to be in the air.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1761,7 +1761,7 @@ Array [
     "flashsideways": false,
     "line": "Well, he sounds like a very smart man.",
     "raw": "JACK: Well, he sounds like a very smart man.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1772,7 +1772,7 @@ Array [
     "flashsideways": false,
     "line": "Be sure and tell him that when he gets back from the bathroom.",
     "raw": "ROSE: Be sure and tell him that when he gets back from the bathroom.",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1781,7 +1781,7 @@ Array [
     "flashsideways": false,
     "line": "The plane is really shaking now.",
     "raw": "[The plane is really shaking now.]",
-    "scene": 5,
+    "scene": 7,
     "type": "stageDirection",
   },
   Object {
@@ -1792,7 +1792,7 @@ Array [
     "flashsideways": false,
     "line": "Well, I\'ll keep you company until he does. Don\'t worry it\'s going to be over...",
     "raw": "JACK: Well, I\'ll keep you company until he does. Don\'t worry it\'s going to be over...",
-    "scene": 5,
+    "scene": 7,
     "type": "dialog",
   },
   Object {
@@ -1801,14 +1801,14 @@ Array [
     "flashsideways": false,
     "line": "There\'s a sudden lurch and one passenger goes flying out of his seat and hits the ceiling. More shaking and screaming. The oxygen masks come down. Jack and Rose put their masks on. Shot of another guy putting his mask on.",
     "raw": "[There\'s a sudden lurch and one passenger goes flying out of his seat and hits the ceiling. More shaking and screaming. The oxygen masks come down. Jack and Rose put their masks on. Shot of another guy putting his mask on.]",
-    "scene": 5,
+    "scene": 7,
     "type": "stageDirection",
   },
   Object {
     "act": 2,
     "flashback": false,
     "flashsideways": false,
-    "scene": 6,
+    "scene": 8,
     "type": "scene",
   },
   Object {
@@ -1817,7 +1817,7 @@ Array [
     "flashsideways": false,
     "line": "On-Island - Shot of ocean, then Jack looking out at the ocean. Rose and a bunch of redshirts in the background.",
     "raw": "[On-Island - Shot of ocean, then Jack looking out at the ocean. Rose and a bunch of redshirts in the background.]",
-    "scene": 6,
+    "scene": 8,
     "type": "stageDirection",
   },
   Object {
@@ -1828,7 +1828,7 @@ Array [
     "flashsideways": false,
     "line": "It didn\'t sound like an animal. Not exactly, I mean.",
     "raw": "MICHAEL: It didn\'t sound like an animal. Not exactly, I mean.",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1839,7 +1839,7 @@ Array [
     "flashsideways": false,
     "line": "That sound that it made, I keep thinking that there was something really familiar about it.",
     "raw": "ROSE: That sound that it made, I keep thinking that there was something really familiar about it.",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1850,7 +1850,7 @@ Array [
     "flashsideways": false,
     "line": "Really? Where are you from?",
     "raw": "SHANNON: Really? Where are you from?",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1861,7 +1861,7 @@ Array [
     "flashsideways": false,
     "line": "The Bronx.",
     "raw": "ROSE: The Bronx.",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1872,7 +1872,7 @@ Array [
     "flashsideways": false,
     "line": "Might be monkeys. It\'s monkeys, right?",
     "raw": "CHARLIE: Might be monkeys. It\'s monkeys, right?",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1883,7 +1883,7 @@ Array [
     "flashsideways": false,
     "line": "Sure it\'s monkeys. It\'s Monkey Island.",
     "raw": "SAWYER: Sure it\'s monkeys. It\'s Monkey Island.",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1894,7 +1894,7 @@ Array [
     "flashsideways": false,
     "line": "Technically, you know, we don\'t even know if we\'re on an island.",
     "raw": "HURLEY: Technically, you know, we don\'t even know if we\'re on an island.",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1905,7 +1905,7 @@ Array [
     "flashsideways": false,
     "line": "We\'re on an Island.",
     "raw": "SAYID: We\'re on an Island.",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1918,7 +1918,7 @@ Array [
     "flashsideways": false,
     "line": "You ready?",
     "raw": "KATE: [coming up behind Jack] You ready?",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1929,7 +1929,7 @@ Array [
     "flashsideways": false,
     "line": "Kate, you showed me where the smoke was. I can get there myself.",
     "raw": "JACK: Kate, you showed me where the smoke was. I can get there myself.",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1940,7 +1940,7 @@ Array [
     "flashsideways": false,
     "line": "I\'m coming.",
     "raw": "KATE: I\'m coming.",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1953,7 +1953,7 @@ Array [
     "flashsideways": false,
     "line": "Well, you\'re going to need better shoes.",
     "raw": "JACK: [smiling] Well, you\'re going to need better shoes.",
-    "scene": 6,
+    "scene": 8,
     "type": "dialog",
   },
   Object {
@@ -1962,14 +1962,14 @@ Array [
     "flashsideways": false,
     "line": "Shot of a dead body\'s feet. Kate reaches down to take hiking boots, checks the size. She looks at Locke, who\'s looking at her. He gives her the \"orange\" smile. He keeps eating the orange and looks away. She looks slightly freaked out/disgusted.",
     "raw": "[Shot of a dead body\'s feet. Kate reaches down to take hiking boots, checks the size. She looks at Locke, who\'s looking at her. He gives her the \"orange\" smile. He keeps eating the orange and looks away. She looks slightly freaked out/disgusted.]",
-    "scene": 6,
+    "scene": 8,
     "type": "stageDirection",
   },
   Object {
     "act": 2,
     "flashback": false,
     "flashsideways": false,
-    "scene": 7,
+    "scene": 9,
     "type": "scene",
   },
   Object {
@@ -1978,7 +1978,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of a group: Michael, Walt, Charlie, Sayid, Boone and Shannon, with Hurley approaching.",
     "raw": "[Shot of a group: Michael, Walt, Charlie, Sayid, Boone and Shannon, with Hurley approaching.]",
-    "scene": 7,
+    "scene": 9,
     "type": "stageDirection",
   },
   Object {
@@ -1989,7 +1989,7 @@ Array [
     "flashsideways": false,
     "line": "Whatever it was … it wasn\'t natural.",
     "raw": "MICHAEL: Whatever it was … it wasn\'t natural.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2000,7 +2000,7 @@ Array [
     "flashsideways": false,
     "line": "Does anyone have any sun block?",
     "raw": "CHARLIE: Does anyone have any sun block?",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2011,7 +2011,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah, I do.",
     "raw": "SHANNON: Yeah, I do.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2022,7 +2022,7 @@ Array [
     "flashsideways": false,
     "line": "Ah. Cool.",
     "raw": "CHARLIE: Ah. Cool.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2035,7 +2035,7 @@ Array [
     "flashsideways": false,
     "line": "So, I was just looking inside the fuselage … It\'s pretty grim in there. You think we should do something about the, uh … b-o-d-y-s?",
     "raw": "HURLEY: So, I was just looking inside the fuselage … It\'s pretty grim in there. You think we should do something about the, uh … [stopping and looking at Walt] b-o-d-y-s?",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2046,7 +2046,7 @@ Array [
     "flashsideways": false,
     "line": "What are you spelling, man? \"Bodies\"?",
     "raw": "MICHAEL: What are you spelling, man? \"Bodies\"?",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2057,7 +2057,7 @@ Array [
     "flashsideways": false,
     "line": "B-o-d-i-e-s.",
     "raw": "WALT: B-o-d-i-e-s.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2068,7 +2068,7 @@ Array [
     "flashsideways": false,
     "line": "That sounds like a good idea.",
     "raw": "SAYID: That sounds like a good idea.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2079,7 +2079,7 @@ Array [
     "flashsideways": false,
     "line": "No! They\'ll deal with it when they get here.",
     "raw": "SHANNON: No! They\'ll deal with it when they get here.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2093,7 +2093,7 @@ Array [
     "flashsideways": false,
     "line": "We go out and look for the cockpit. See if we can find a transceiver, to send a distress signal, help the rescue team. You\'re going to need to keep an eye on the wounded. If the guy in the suit wakes up, try to keep him calm, but don\'t let him remove that piece of shrapnel. You understand?",
     "raw": "JACK: [entering] We go out and look for the cockpit. See if we can find a transceiver, to send a distress signal, help the rescue team. (To Boone) You\'re going to need to keep an eye on the wounded. If the guy in the suit wakes up, try to keep him calm, but don\'t let him remove that piece of shrapnel. You understand?",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2104,7 +2104,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah, got it. What about the guy with the leg? The, the tourniquet.",
     "raw": "BOONE: Yeah, got it. What about the guy with the leg? The, the tourniquet.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2115,7 +2115,7 @@ Array [
     "flashsideways": false,
     "line": "I stopped the bleeding. I took it off last night. He … he should be all right.",
     "raw": "JACK: I stopped the bleeding. I took it off last night. He … he should be all right.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2126,7 +2126,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah. Cool. Good job.",
     "raw": "BOONE: Yeah. Cool. Good job.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2137,7 +2137,7 @@ Array [
     "flashsideways": false,
     "line": "I\'ll come with you. I want to help.",
     "raw": "CHARLIE: I\'ll come with you. I want to help.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2148,7 +2148,7 @@ Array [
     "flashsideways": false,
     "line": "I don\'t need any more help.",
     "raw": "JACK: I don\'t need any more help.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
@@ -2161,14 +2161,14 @@ Array [
     "flashsideways": false,
     "line": "No, it\'s cool, I don\'t really feel like standing still, so. Excellent.",
     "raw": "CHARLIE: No, it\'s cool, I don\'t really feel like standing still, so. [Jack nods.] Excellent.",
-    "scene": 7,
+    "scene": 9,
     "type": "dialog",
   },
   Object {
     "act": 2,
     "flashback": false,
     "flashsideways": false,
-    "scene": 8,
+    "scene": 10,
     "type": "scene",
   },
   Object {
@@ -2177,7 +2177,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of valley looking out toward sea. You can see Jack, Charlie, and Kate in the distance coming toward camera.",
     "raw": "[Shot of valley looking out toward sea. You can see Jack, Charlie, and Kate in the distance coming toward camera.]",
-    "scene": 8,
+    "scene": 10,
     "type": "stageDirection",
   },
   Object {
@@ -2188,7 +2188,7 @@ Array [
     "flashsideways": false,
     "line": "May I ask you something?",
     "raw": "KATE: May I ask you something?",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2199,7 +2199,7 @@ Array [
     "flashsideways": false,
     "line": "Me? I\'d be thrilled. I\'ve been waiting.",
     "raw": "CHARLIE: Me? I\'d be thrilled. I\'ve been waiting.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2210,7 +2210,7 @@ Array [
     "flashsideways": false,
     "line": "Have we ever met, anywhere?",
     "raw": "KATE: Have we ever met, anywhere?",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2221,7 +2221,7 @@ Array [
     "flashsideways": false,
     "line": "No, that would be unlikely.",
     "raw": "CHARLIE: No, that would be unlikely.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2232,7 +2232,7 @@ Array [
     "flashsideways": false,
     "line": "Hum.",
     "raw": "KATE: Hum.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2243,7 +2243,7 @@ Array [
     "flashsideways": false,
     "line": "I look familiar, though, right?",
     "raw": "CHARLIE: I look familiar, though, right?",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2254,7 +2254,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah.",
     "raw": "KATE: Yeah.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2267,7 +2267,7 @@ Array [
     "flashsideways": false,
     "line": "Can\'t quite place it?",
     "raw": "CHARLIE: [Sighs.] Can\'t quite place it?",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2278,7 +2278,7 @@ Array [
     "flashsideways": false,
     "line": "No, I can\'t.",
     "raw": "KATE: No, I can\'t.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2289,7 +2289,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah. I think I know.",
     "raw": "CHARLIE: Yeah. I think I know.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2300,7 +2300,7 @@ Array [
     "flashsideways": false,
     "line": "You do?",
     "raw": "KATE: You do?",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2313,7 +2313,7 @@ Array [
     "flashsideways": false,
     "line": "You all everybody … You all everybody! You\'ve never heard that song?",
     "raw": "CHARLIE: [singing] You all everybody … You all everybody! You\'ve never heard that song?",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2324,7 +2324,7 @@ Array [
     "flashsideways": false,
     "line": "I\'ve heard it. I just don\'t know what the hell it is—",
     "raw": "KATE: I\'ve heard it. I just don\'t know what the hell it is—",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2335,7 +2335,7 @@ Array [
     "flashsideways": false,
     "line": "That\'s us. Drive Shaft. Look, the ring—second tour of Finland. You\'ve never heard of Drive Shaft?",
     "raw": "CHARLIE: That\'s us. Drive Shaft. Look, the ring—second tour of Finland. You\'ve never heard of Drive Shaft?",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2348,7 +2348,7 @@ Array [
     "flashsideways": false,
     "line": "The band?",
     "raw": "KATE: [incredulous] The band?",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2359,7 +2359,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah, the band.",
     "raw": "CHARLIE: Yeah, the band.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2370,7 +2370,7 @@ Array [
     "flashsideways": false,
     "line": "You were in Drive Shaft.",
     "raw": "KATE: You were in Drive Shaft.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2381,7 +2381,7 @@ Array [
     "flashsideways": false,
     "line": "I am in Drive Shaft. I play bass.",
     "raw": "CHARLIE: I am in Drive Shaft. I play bass.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2392,7 +2392,7 @@ Array [
     "flashsideways": false,
     "line": "Seriously?",
     "raw": "KATE: Seriously?",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2403,7 +2403,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah, Charlie. Track 3, you know, I do backing vocals.",
     "raw": "CHARLIE: Yeah, Charlie. Track 3, you know, I do backing vocals.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2414,7 +2414,7 @@ Array [
     "flashsideways": false,
     "line": "My friend Beth would freak. She loved you guys.",
     "raw": "KATE: My friend Beth would freak. She loved you guys.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2425,7 +2425,7 @@ Array [
     "flashsideways": false,
     "line": "Give me Beth\'s number, I\'ll call her, I\'d, I\'d love to.",
     "raw": "CHARLIE: Give me Beth\'s number, I\'ll call her, I\'d, I\'d love to.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2436,7 +2436,7 @@ Array [
     "flashsideways": false,
     "line": "Hey—",
     "raw": "JACK: Hey—",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2447,7 +2447,7 @@ Array [
     "flashsideways": false,
     "line": "Does she live nearby?",
     "raw": "CHARLIE: Does she live nearby?",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2458,7 +2458,7 @@ Array [
     "flashsideways": false,
     "line": "Have you ever heard of Drive Shaft?",
     "raw": "KATE: Have you ever heard of Drive Shaft?",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2471,7 +2471,7 @@ Array [
     "flashsideways": false,
     "line": "You all everybody... You all every...body.",
     "raw": "CHARLIE: [singing] You all everybody... You all every...body.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2484,7 +2484,7 @@ Array [
     "flashsideways": false,
     "line": "We\'ve got to keep moving.",
     "raw": "JACK: [shakes his head] We\'ve got to keep moving.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2495,7 +2495,7 @@ Array [
     "flashsideways": false,
     "line": "They were good.",
     "raw": "KATE: They were good.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2506,7 +2506,7 @@ Array [
     "flashsideways": false,
     "line": "They are good. We\'re still together. In the middle of a comeback.",
     "raw": "CHARLIE: They are good. We\'re still together. In the middle of a comeback.",
-    "scene": 8,
+    "scene": 10,
     "type": "dialog",
   },
   Object {
@@ -2515,14 +2515,14 @@ Array [
     "flashsideways": false,
     "line": "Camera pans down to reveal Vincent",
     "raw": "[Camera pans down to reveal Vincent]",
-    "scene": 8,
+    "scene": 10,
     "type": "stageDirection",
   },
   Object {
     "act": 2,
     "flashback": false,
     "flashsideways": false,
-    "scene": 9,
+    "scene": 11,
     "type": "scene",
   },
   Object {
@@ -2531,7 +2531,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Locke alone on the beach looking out to sea; we see clouds forming, sound of thunder. Shot of Kate, Charlie, Jack in the jungle in the rain.",
     "raw": "[Shot of Locke alone on the beach looking out to sea; we see clouds forming, sound of thunder. Shot of Kate, Charlie, Jack in the jungle in the rain.]",
-    "scene": 9,
+    "scene": 11,
     "type": "stageDirection",
   },
   Object {
@@ -2542,7 +2542,7 @@ Array [
     "flashsideways": false,
     "line": "Hey guys, is this normal? Kind of ... day turning into night, you know? End of the world type weather. Is this—guys?",
     "raw": "CHARLIE: Hey guys, is this normal? Kind of ... day turning into night, you know? End of the world type weather. Is this—guys?",
-    "scene": 9,
+    "scene": 11,
     "type": "dialog",
   },
   Object {
@@ -2551,7 +2551,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Locke sitting on the beach with people running around to get out of the rain. Locke just sits there. Jin kicks a guy out from Jin and Sun\'s little overhang of debris; Hurley runs past Boone and Shannon who are racing to get inside the fuselage.",
     "raw": "[Shot of Locke sitting on the beach with people running around to get out of the rain. Locke just sits there. Jin kicks a guy out from Jin and Sun\'s little overhang of debris; Hurley runs past Boone and Shannon who are racing to get inside the fuselage.]",
-    "scene": 9,
+    "scene": 11,
     "type": "stageDirection",
   },
   Object {
@@ -2562,7 +2562,7 @@ Array [
     "flashsideways": false,
     "line": "I don\'t know if you want to go in there! There\'s too many bodies.",
     "raw": "HURLEY: I don\'t know if you want to go in there! There\'s too many bodies.",
-    "scene": 9,
+    "scene": 11,
     "type": "dialog",
   },
   Object {
@@ -2571,7 +2571,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Michael holding something up (some kind of tarp?) under some debris, puts his arm on Walt\'s shoulder. Shot of Locke alone on the beach in a sort of meditation pose (music is sort of bittersweet). Locke holds his arms out, turns his face up to the rain, seems happy; we see the Monster in the jungle by the beach. Claire and Rose see it.",
     "raw": "[Shot of Michael holding something up (some kind of tarp?) under some debris, puts his arm on Walt\'s shoulder. Shot of Locke alone on the beach in a sort of meditation pose (music is sort of bittersweet). Locke holds his arms out, turns his face up to the rain, seems happy; we see the Monster in the jungle by the beach. Claire and Rose see it.]",
-    "scene": 9,
+    "scene": 11,
     "type": "stageDirection",
   },
   Object {
@@ -2582,7 +2582,7 @@ Array [
     "flashsideways": false,
     "line": "There it is again.",
     "raw": "CLAIRE: There it is again.",
-    "scene": 9,
+    "scene": 11,
     "type": "dialog",
   },
   Object {
@@ -2593,14 +2593,14 @@ Array [
     "flashsideways": false,
     "line": "Oh my god.",
     "raw": "ROSE: Oh my god.",
-    "scene": 9,
+    "scene": 11,
     "type": "dialog",
   },
   Object {
     "act": 2,
     "flashback": false,
     "flashsideways": false,
-    "scene": 10,
+    "scene": 12,
     "type": "scene",
   },
   Object {
@@ -2609,7 +2609,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Jack, Kate, Charlie coming upon the cockpit. They all look a bit scared.",
     "raw": "[Shot of Jack, Kate, Charlie coming upon the cockpit. They all look a bit scared.]",
-    "scene": 10,
+    "scene": 12,
     "type": "stageDirection",
   },
   Object {
@@ -2620,14 +2620,14 @@ Array [
     "flashsideways": false,
     "line": "Well? Let\'s do this.",
     "raw": "JACK: Well? Let\'s do this.",
-    "scene": 10,
+    "scene": 12,
     "type": "dialog",
   },
   Object {
     "act": 3,
     "flashback": false,
     "flashsideways": false,
-    "scene": 10,
+    "scene": 13,
     "type": "act",
   },
   Object {
@@ -2636,7 +2636,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Jack, Kate, and Charlie making their way to the cockpit wreckage.",
     "raw": "[Shot of Jack, Kate, and Charlie making their way to the cockpit wreckage.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -2647,7 +2647,7 @@ Array [
     "flashsideways": false,
     "line": "Let\'s get this trans…",
     "raw": "CHARLIE: Let\'s get this trans…",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2658,7 +2658,7 @@ Array [
     "flashsideways": false,
     "line": "Transceiver.",
     "raw": "JACK: Transceiver.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2669,7 +2669,7 @@ Array [
     "flashsideways": false,
     "line": "Transceiver thing and get out of here.",
     "raw": "CHARLIE: Transceiver thing and get out of here.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2678,7 +2678,7 @@ Array [
     "flashsideways": false,
     "line": "We see them climbing up, through the front of the plane. There are dead bodies. Jack can\'t open the cockpit door, bangs on it with a fire extinguisher.",
     "raw": "[We see them climbing up, through the front of the plane. There are dead bodies. Jack can\'t open the cockpit door, bangs on it with a fire extinguisher.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -2689,7 +2689,7 @@ Array [
     "flashsideways": false,
     "line": "Come on! Come...",
     "raw": "JACK: Come on! Come...",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2698,7 +2698,7 @@ Array [
     "flashsideways": false,
     "line": "The door opens and a body comes falling out.",
     "raw": "[The door opens and a body comes falling out.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -2711,7 +2711,7 @@ Array [
     "flashsideways": false,
     "line": "You okay?",
     "raw": "JACK: [to Kate] You okay?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2722,7 +2722,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah. You?",
     "raw": "KATE: Yeah. You?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2733,7 +2733,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah.",
     "raw": "JACK: Yeah.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2744,7 +2744,7 @@ Array [
     "flashsideways": false,
     "line": "I\'m fine. Charlie\'s fine, by the way. Okay?",
     "raw": "CHARLIE: I\'m fine. Charlie\'s fine, by the way. Okay?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2757,7 +2757,7 @@ Array [
     "flashsideways": false,
     "line": "Hey. You don\'t have to come up here.",
     "raw": "JACK: [to Kate] Hey. You don\'t have to come up here.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2768,7 +2768,7 @@ Array [
     "flashsideways": false,
     "line": "No, I\'m good.",
     "raw": "KATE: No, I\'m good.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2777,7 +2777,7 @@ Array [
     "flashsideways": false,
     "line": "Kate and Jack get inside the cockpit.",
     "raw": "[Kate and Jack get inside the cockpit.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -2788,7 +2788,7 @@ Array [
     "flashsideways": false,
     "line": "So, what does a transceiver look like?",
     "raw": "KATE: So, what does a transceiver look like?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2799,7 +2799,7 @@ Array [
     "flashsideways": false,
     "line": "Complicated walkie-talkie.",
     "raw": "JACK: Complicated walkie-talkie.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2808,7 +2808,7 @@ Array [
     "flashsideways": false,
     "line": "Kate climbs over the pilot looking for the transceiver when suddenly the pilot takes a breath. Jack and Kate are shocked.",
     "raw": "[Kate climbs over the pilot looking for the transceiver when suddenly the pilot takes a breath. Jack and Kate are shocked.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -2822,7 +2822,7 @@ Array [
     "flashsideways": false,
     "line": "Hey! Can you hear me? I need that water. Here. Here you go. Hey.",
     "raw": "JACK: Hey! Can you hear me? [to Kate] I need that water. [He gives the pilot some water] Here. Here you go. Hey.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2833,7 +2833,7 @@ Array [
     "flashsideways": false,
     "line": "How many survived?",
     "raw": "PILOT: How many survived?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2844,7 +2844,7 @@ Array [
     "flashsideways": false,
     "line": "At least 48. Does anything feel broken?",
     "raw": "JACK: At least 48. Does anything feel broken?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2855,7 +2855,7 @@ Array [
     "flashsideways": false,
     "line": "No, no. Just my head\'s a little dizzy, that\'s all.",
     "raw": "PILOT: No, no. Just my head\'s a little dizzy, that\'s all.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2866,7 +2866,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah. It\'s probably a concussion.",
     "raw": "JACK: Yeah. It\'s probably a concussion.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2877,7 +2877,7 @@ Array [
     "flashsideways": false,
     "line": "How long has it been?",
     "raw": "PILOT: How long has it been?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2888,7 +2888,7 @@ Array [
     "flashsideways": false,
     "line": "Sixteen hours.",
     "raw": "JACK: Sixteen hours.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2899,7 +2899,7 @@ Array [
     "flashsideways": false,
     "line": "Sixteen? Has anybody come?",
     "raw": "PILOT: Sixteen? Has anybody come?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2910,7 +2910,7 @@ Array [
     "flashsideways": false,
     "line": "Not yet.",
     "raw": "JACK: Not yet.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2921,7 +2921,7 @@ Array [
     "flashsideways": false,
     "line": "Six hours in, our radio went out. No-one could see us. We turned back to land in Fiji. By the time we hit turbulence, we … we were a thousand miles off course. They\'re looking for us in the wrong place.",
     "raw": "PILOT: Six hours in, our radio went out. No-one could see us. We turned back to land in Fiji. By the time we hit turbulence, we … we were a thousand miles off course. They\'re looking for us in the wrong place.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2932,7 +2932,7 @@ Array [
     "flashsideways": false,
     "line": "We have a transceiver.",
     "raw": "PILOT: We have a transceiver.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2941,7 +2941,7 @@ Array [
     "flashsideways": false,
     "line": "The pilot moves to go get it.",
     "raw": "[The pilot moves to go get it.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -2952,7 +2952,7 @@ Array [
     "flashsideways": false,
     "line": "Good. Good, that\'s what we were hoping. Listen, you shouldn\'t try to move.",
     "raw": "JACK: Good. Good, that\'s what we were hoping. Listen, you shouldn\'t try to move.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2963,7 +2963,7 @@ Array [
     "flashsideways": false,
     "line": "No, no. I\'m okay. It\'s okay. Transceiver\'s right there. It\'s right there.",
     "raw": "PILOT: No, no. I\'m okay. It\'s okay. Transceiver\'s right there. It\'s right there.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2972,7 +2972,7 @@ Array [
     "flashsideways": false,
     "line": "Kate gets it and hands it to the pilot.",
     "raw": "[Kate gets it and hands it to the pilot.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -2985,7 +2985,7 @@ Array [
     "flashsideways": false,
     "line": "Where\'s Charlie?",
     "raw": "JACK: [to Kate] Where\'s Charlie?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -2994,7 +2994,7 @@ Array [
     "flashsideways": false,
     "line": "Kate goes to look for Charlie. The pilot is fiddling with the transceiver.",
     "raw": "[Kate goes to look for Charlie. The pilot is fiddling with the transceiver.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -3005,7 +3005,7 @@ Array [
     "flashsideways": false,
     "line": "It\'s not working.",
     "raw": "PILOT: It\'s not working.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3018,7 +3018,7 @@ Array [
     "flashsideways": false,
     "line": "Charlie?",
     "raw": "KATE: [going through cabin, seeing two dead bodies] Charlie?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3027,7 +3027,7 @@ Array [
     "flashsideways": false,
     "line": "Charlie comes out of the bathroom.",
     "raw": "[Charlie comes out of the bathroom.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -3038,7 +3038,7 @@ Array [
     "flashsideways": false,
     "line": "What were you doing in the bathroom?",
     "raw": "KATE: What were you doing in the bathroom?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3049,7 +3049,7 @@ Array [
     "flashsideways": false,
     "line": "What?",
     "raw": "CHARLIE: What?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3058,7 +3058,7 @@ Array [
     "flashsideways": false,
     "line": "The plane starts shaking. We hear the monster sounds. Shot of Kate and Charlie, Pilot and Jack reacting.",
     "raw": "[The plane starts shaking. We hear the monster sounds. Shot of Kate and Charlie, Pilot and Jack reacting.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -3069,7 +3069,7 @@ Array [
     "flashsideways": false,
     "line": "What the hell was that?",
     "raw": "PILOT: What the hell was that?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3080,7 +3080,7 @@ Array [
     "flashsideways": false,
     "line": "Kate.",
     "raw": "JACK: Kate.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3089,7 +3089,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Kate going back into Cockpit with Charlie\'s help.",
     "raw": "[Shot of Kate going back into Cockpit with Charlie\'s help.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -3100,7 +3100,7 @@ Array [
     "flashsideways": false,
     "line": "It\'s right outside.",
     "raw": "KATE: It\'s right outside.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3111,7 +3111,7 @@ Array [
     "flashsideways": false,
     "line": "What, what\'s right outside?",
     "raw": "PILOT: What, what\'s right outside?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3122,7 +3122,7 @@ Array [
     "flashsideways": false,
     "line": "Shhhh.",
     "raw": "JACK: Shhhh.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3131,7 +3131,7 @@ Array [
     "flashsideways": false,
     "line": "Kate looks terrified. We see the shadow of the monster going past window. Jack tries to look out the window to see it. The pilot goes up to try and see it. Briefly hesitating, he first puts the transceiver on the co-pilot\'s seat, then climbs part way out of an opening above. Charlie comes into the cockpit. The pilot gets snatched out of a broken window. There\'s blood all over the window.",
     "raw": "[Kate looks terrified. We see the shadow of the monster going past window. Jack tries to look out the window to see it. The pilot goes up to try and see it. Briefly hesitating, he first puts the transceiver on the co-pilot\'s seat, then climbs part way out of an opening above. Charlie comes into the cockpit. The pilot gets snatched out of a broken window. There\'s blood all over the window.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -3142,7 +3142,7 @@ Array [
     "flashsideways": false,
     "line": "What the hell just happened?",
     "raw": "CHARLIE: What the hell just happened?",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3151,7 +3151,7 @@ Array [
     "flashsideways": false,
     "line": "Big crashing and shaking. Jack reaches for the transceiver just before it falls. The cockpit falls to the ground from its inclined position. Jack is reaching for the transceiver.",
     "raw": "[Big crashing and shaking. Jack reaches for the transceiver just before it falls. The cockpit falls to the ground from its inclined position. Jack is reaching for the transceiver.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -3162,7 +3162,7 @@ Array [
     "flashsideways": false,
     "line": "Jack, come on!",
     "raw": "KATE: Jack, come on!",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3173,7 +3173,7 @@ Array [
     "flashsideways": false,
     "line": "Just leave it!",
     "raw": "CHARLIE: Just leave it!",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3182,7 +3182,7 @@ Array [
     "flashsideways": false,
     "line": "Jack grabs it. They run. Monster sounds, running, anxious music. Charlie falls. His leg is trapped in some vines.",
     "raw": "[Jack grabs it. They run. Monster sounds, running, anxious music. Charlie falls. His leg is trapped in some vines.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -3195,7 +3195,7 @@ Array [
     "flashsideways": false,
     "line": "Hey!",
     "raw": "CHARLIE: [shouts] Hey!",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3204,7 +3204,7 @@ Array [
     "flashsideways": false,
     "line": "Jack goes back to rescue him.",
     "raw": "[Jack goes back to rescue him.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -3215,7 +3215,7 @@ Array [
     "flashsideways": false,
     "line": "Okay, let\'s run.",
     "raw": "JACK: Okay, let\'s run.",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
@@ -3224,7 +3224,7 @@ Array [
     "flashsideways": false,
     "line": "Kate keeps running and ends up alone.",
     "raw": "[Kate keeps running and ends up alone.]",
-    "scene": 10,
+    "scene": 13,
     "type": "stageDirection",
   },
   Object {
@@ -3238,14 +3238,14 @@ Array [
     "flashsideways": false,
     "line": "J-J-J... Jaaaack! One! Two! Three! Four! Five!",
     "raw": "KATE: [terrified] J-J-J... Jaaaack! [Big door slamming sound/big footstep sounds. Kate is trying to compose herself] One! Two! Three! Four! Five!",
-    "scene": 10,
+    "scene": 13,
     "type": "dialog",
   },
   Object {
     "act": 4,
     "flashback": false,
     "flashsideways": false,
-    "scene": 10,
+    "scene": 14,
     "type": "act",
   },
   Object {
@@ -3254,7 +3254,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of Kate, she hears something and looks off. Charlie comes up behind her, she turns to find him and knocks him down.",
     "raw": "[Shot of Kate, she hears something and looks off. Charlie comes up behind her, she turns to find him and knocks him down.]",
-    "scene": 10,
+    "scene": 14,
     "type": "stageDirection",
   },
   Object {
@@ -3265,7 +3265,7 @@ Array [
     "flashsideways": false,
     "line": "Kate!",
     "raw": "CHARLIE: Kate!",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3276,7 +3276,7 @@ Array [
     "flashsideways": false,
     "line": "Where the hell is Jack?",
     "raw": "KATE: Where the hell is Jack?",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3287,7 +3287,7 @@ Array [
     "flashsideways": false,
     "line": "I don\'t know!",
     "raw": "CHARLIE: I don\'t know!",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3298,7 +3298,7 @@ Array [
     "flashsideways": false,
     "line": "Did you see him?",
     "raw": "KATE: Did you see him?",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3309,7 +3309,7 @@ Array [
     "flashsideways": false,
     "line": "Yeah, he pulled me up!",
     "raw": "CHARLIE: Yeah, he pulled me up!",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3320,7 +3320,7 @@ Array [
     "flashsideways": false,
     "line": "Where is he?",
     "raw": "KATE: Where is he?",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3331,7 +3331,7 @@ Array [
     "flashsideways": false,
     "line": "I don\'t know!",
     "raw": "CHARLIE: I don\'t know!",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3342,7 +3342,7 @@ Array [
     "flashsideways": false,
     "line": "How can you not know?",
     "raw": "KATE: How can you not know?",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3353,7 +3353,7 @@ Array [
     "flashsideways": false,
     "line": "We got separated! Look, I … I fell down, and he, he came back for me, that thing was just…",
     "raw": "CHARLIE: We got separated! Look, I … I fell down, and he, he came back for me, that thing was just…",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3364,7 +3364,7 @@ Array [
     "flashsideways": false,
     "line": "Did you see it?",
     "raw": "KATE: Did you see it?",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3375,7 +3375,7 @@ Array [
     "flashsideways": false,
     "line": "No. No! But it was right there. We were dead! I was. An-And then Jack came back, and he, he pulled me up. I don\'t know where he is.",
     "raw": "CHARLIE: No. No! But it was right there. We were dead! I was. An-And then Jack came back, and he, he pulled me up. I don\'t know where he is.",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3384,7 +3384,7 @@ Array [
     "flashsideways": false,
     "line": "Kate looks around.",
     "raw": "[Kate looks around.]",
-    "scene": 10,
+    "scene": 14,
     "type": "stageDirection",
   },
   Object {
@@ -3395,7 +3395,7 @@ Array [
     "flashsideways": false,
     "line": "We have to go back for him.",
     "raw": "KATE: We have to go back for him.",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3406,7 +3406,7 @@ Array [
     "flashsideways": false,
     "line": "Go back? There? Kate, there\'s a certain gargantuan quality about this thing.",
     "raw": "CHARLIE: Go back? There? Kate, there\'s a certain gargantuan quality about this thing.",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3417,7 +3417,7 @@ Array [
     "flashsideways": false,
     "line": "Then don\'t come.",
     "raw": "KATE: Then don\'t come.",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
@@ -3426,7 +3426,7 @@ Array [
     "flashsideways": false,
     "line": "Kate walks off, Charlie gets up to follow (reluctantly).",
     "raw": "[Kate walks off, Charlie gets up to follow (reluctantly).]",
-    "scene": 10,
+    "scene": 14,
     "type": "stageDirection",
   },
   Object {
@@ -3437,14 +3437,14 @@ Array [
     "flashsideways": false,
     "line": "Kate!",
     "raw": "CHARLIE: Kate!",
-    "scene": 10,
+    "scene": 14,
     "type": "dialog",
   },
   Object {
     "act": 4,
     "flashback": false,
     "flashsideways": false,
-    "scene": 11,
+    "scene": 15,
     "type": "scene",
   },
   Object {
@@ -3453,7 +3453,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of jungle. Kate and Charlie walking around.",
     "raw": "[Shot of jungle. Kate and Charlie walking around.]",
-    "scene": 11,
+    "scene": 15,
     "type": "stageDirection",
   },
   Object {
@@ -3464,7 +3464,7 @@ Array [
     "flashsideways": false,
     "line": "I heard you shout. I heard you shout \"Jack\". I\'m Charlie, by the way.",
     "raw": "CHARLIE: I heard you shout. I heard you shout \"Jack\". I\'m Charlie, by the way.",
-    "scene": 11,
+    "scene": 15,
     "type": "dialog",
   },
   Object {
@@ -3473,7 +3473,7 @@ Array [
     "flashsideways": false,
     "line": "Kate sees something.",
     "raw": "[Kate sees something.]",
-    "scene": 11,
+    "scene": 15,
     "type": "stageDirection",
   },
   Object {
@@ -3484,7 +3484,7 @@ Array [
     "flashsideways": false,
     "line": "What is that?",
     "raw": "CHARLIE: What is that?",
-    "scene": 11,
+    "scene": 15,
     "type": "dialog",
   },
   Object {
@@ -3493,7 +3493,7 @@ Array [
     "flashsideways": false,
     "line": "Kate picks up pilot\'s wings from the muddy ground. Shot shifts focus from wings to the reflection in the water where they see the pilot\'s body in the tree above them.",
     "raw": "[Kate picks up pilot\'s wings from the muddy ground. Shot shifts focus from wings to the reflection in the water where they see the pilot\'s body in the tree above them.]",
-    "scene": 11,
+    "scene": 15,
     "type": "stageDirection",
   },
   Object {
@@ -3504,7 +3504,7 @@ Array [
     "flashsideways": false,
     "line": "What is...",
     "raw": "CHARLIE: What is...",
-    "scene": 11,
+    "scene": 15,
     "type": "dialog",
   },
   Object {
@@ -3517,7 +3517,7 @@ Array [
     "flashsideways": false,
     "line": "It\'s the pilot.",
     "raw": "JACK: [approaching] It\'s the pilot.",
-    "scene": 11,
+    "scene": 15,
     "type": "dialog",
   },
   Object {
@@ -3528,7 +3528,7 @@ Array [
     "flashsideways": false,
     "line": "Did you see it?",
     "raw": "KATE: Did you see it?",
-    "scene": 11,
+    "scene": 15,
     "type": "dialog",
   },
   Object {
@@ -3539,7 +3539,7 @@ Array [
     "flashsideways": false,
     "line": "No. It was right behind me, but... I dove into the bushes.",
     "raw": "JACK: No. It was right behind me, but... I dove into the bushes.",
-    "scene": 11,
+    "scene": 15,
     "type": "dialog",
   },
   Object {
@@ -3552,7 +3552,7 @@ Array [
     "flashsideways": false,
     "line": "Guys? How does something like that happen?",
     "raw": "CHARLIE: [pointing up to the pilot in the tree] Guys? How does something like that happen?",
-    "scene": 11,
+    "scene": 15,
     "type": "dialog",
   },
   Object {
@@ -3561,7 +3561,7 @@ Array [
     "flashsideways": false,
     "line": "Shot of bloody pilot in the treetop, bloody and with face-skin torn off, but not eaten.",
     "raw": "[Shot of bloody pilot in the treetop, bloody and with face-skin torn off, but not eaten.]",
-    "scene": 11,
+    "scene": 15,
     "type": "stageDirection",
   },
 ]
