@@ -1,0 +1,2609 @@
+{
+	"total_lines":
+	[
+		{
+			"char_name": "JACK",
+			"lines": 3793
+		},
+		{
+			"char_name": "SAWYER",
+			"lines": 2730
+		},
+		{
+			"char_name": "LOCKE",
+			"lines": 2634
+		},
+		{
+			"char_name": "KATE",
+			"lines": 2456
+		},
+		{
+			"char_name": "HURLEY",
+			"lines": 2067
+		},
+		{
+			"char_name": "SAYID",
+			"lines": 1655
+		},
+		{
+			"char_name": "CHARLIE",
+			"lines": 1459
+		},
+		{
+			"char_name": "DESMOND",
+			"lines": 1140
+		},
+		{
+			"char_name": "BEN",
+			"lines": 1115
+		},
+		{
+			"char_name": "MICHAEL",
+			"lines": 973
+		},
+		{
+			"char_name": "CLAIRE",
+			"lines": 909
+		},
+		{
+			"char_name": "JULIET",
+			"lines": 871
+		},
+		{
+			"char_name": "SUN",
+			"lines": 853
+		},
+		{
+			"char_name": "JIN",
+			"lines": 754
+		},
+		{
+			"char_name": "BOONE",
+			"lines": 427
+		},
+		{
+			"char_name": "RICHARD",
+			"lines": 399
+		},
+		{
+			"char_name": "MILES",
+			"lines": 383
+		},
+		{
+			"char_name": "EKO",
+			"lines": 370
+		},
+		{
+			"char_name": "SHANNON",
+			"lines": 349
+		},
+		{
+			"char_name": "WALT",
+			"lines": 282
+		},
+		{
+			"char_name": "FARADAY",
+			"lines": 276
+		},
+		{
+			"char_name": "ANA LUCIA",
+			"lines": 252
+		},
+		{
+			"char_name": "BERNARD",
+			"lines": 218
+		},
+		{
+			"char_name": "ROSE",
+			"lines": 199
+		},
+		{
+			"char_name": "ANA",
+			"lines": 198
+		},
+		{
+			"char_name": "WIDMORE",
+			"lines": 193
+		},
+		{
+			"char_name": "LIBBY",
+			"lines": 186
+		},
+		{
+			"char_name": "TOM",
+			"lines": 183
+		},
+		{
+			"char_name": "GALE",
+			"lines": 182
+		},
+		{
+			"char_name": "LAPIDUS",
+			"lines": 179
+		},
+		{
+			"char_name": "CHARLOTTE",
+			"lines": 174
+		},
+		{
+			"char_name": "JACOB",
+			"lines": 165
+		},
+		{
+			"char_name": "ILANA",
+			"lines": 149
+		},
+		{
+			"char_name": "DANIELLE",
+			"lines": 147
+		},
+		{
+			"char_name": "KEAMY",
+			"lines": 143
+		},
+		{
+			"char_name": "ALEX",
+			"lines": 136
+		},
+		{
+			"char_name": "DANIEL",
+			"lines": 131
+		},
+		{
+			"char_name": "MIKHAIL",
+			"lines": 122
+		},
+		{
+			"char_name": "MAN",
+			"lines": 120
+		},
+		{
+			"char_name": "DAVID",
+			"lines": 120
+		},
+		{
+			"char_name": "CHRISTIAN",
+			"lines": 109
+		},
+		{
+			"char_name": "PENNY",
+			"lines": 108
+		},
+		{
+			"char_name": "FRANK",
+			"lines": 102
+		},
+		{
+			"char_name": "JOHN",
+			"lines": 99
+		},
+		{
+			"char_name": "NIKKI",
+			"lines": 99
+		},
+		{
+			"char_name": "MOTHER",
+			"lines": 91
+		},
+		{
+			"char_name": "COOPER",
+			"lines": 87
+		},
+		{
+			"char_name": "PICKETT",
+			"lines": 85
+		},
+		{
+			"char_name": "HORACE",
+			"lines": 83
+		},
+		{
+			"char_name": "NURSE",
+			"lines": 82
+		},
+		{
+			"char_name": "HELEN",
+			"lines": 82
+		},
+		{
+			"char_name": "CASSIDY",
+			"lines": 80
+		},
+		{
+			"char_name": "ELOISE",
+			"lines": 76
+		},
+		{
+			"char_name": "DOGEN",
+			"lines": 75
+		},
+		{
+			"char_name": "ROUSSEAU",
+			"lines": 74
+		},
+		{
+			"char_name": "WOMAN",
+			"lines": 74
+		},
+		{
+			"char_name": "PAULO",
+			"lines": 73
+		},
+		{
+			"char_name": "ETHAN",
+			"lines": 72
+		},
+		{
+			"char_name": "GOODWIN",
+			"lines": 71
+		},
+		{
+			"char_name": "LENNON",
+			"lines": 71
+		},
+		{
+			"char_name": "RAY",
+			"lines": 71
+		},
+		{
+			"char_name": "LIAM",
+			"lines": 70
+		},
+		{
+			"char_name": "ZOE",
+			"lines": 70
+		},
+		{
+			"char_name": "NAOMI",
+			"lines": 69
+		},
+		{
+			"char_name": "DAN",
+			"lines": 68
+		},
+		{
+			"char_name": "SARAH",
+			"lines": 68
+		},
+		{
+			"char_name": "ARZT",
+			"lines": 66
+		},
+		{
+			"char_name": "CARMEN",
+			"lines": 64
+		},
+		{
+			"char_name": "MAN IN BLACK",
+			"lines": 63
+		},
+		{
+			"char_name": "SUSAN",
+			"lines": 61
+		},
+		{
+			"char_name": "CINDY",
+			"lines": 58
+		},
+		{
+			"char_name": "ROGER",
+			"lines": 57
+		},
+		{
+			"char_name": "RADZINSKY",
+			"lines": 57
+		},
+		{
+			"char_name": "DAVE",
+			"lines": 55
+		},
+		{
+			"char_name": "CHRISTIAN SHEPHARD",
+			"lines": 55
+		},
+		{
+			"char_name": "DOCTOR",
+			"lines": 53
+		},
+		{
+			"char_name": "BOY IN BLACK",
+			"lines": 53
+		},
+		{
+			"char_name": "MS. HAWKING",
+			"lines": 52
+		},
+		{
+			"char_name": "EDDIE",
+			"lines": 51
+		},
+		{
+			"char_name": "KARL",
+			"lines": 51
+		},
+		{
+			"char_name": "MARSHAL",
+			"lines": 46
+		},
+		{
+			"char_name": "NADIA",
+			"lines": 45
+		},
+		{
+			"char_name": "PHIL",
+			"lines": 45
+		},
+		{
+			"char_name": "DR. BROOKS",
+			"lines": 44
+		},
+		{
+			"char_name": "JAE",
+			"lines": 43
+		},
+		{
+			"char_name": "GAULT",
+			"lines": 43
+		},
+		{
+			"char_name": "PENELOPE",
+			"lines": 41
+		},
+		{
+			"char_name": "MINKOWSKI",
+			"lines": 40
+		},
+		{
+			"char_name": "MR. PAIK",
+			"lines": 40
+		},
+		{
+			"char_name": "YEMI",
+			"lines": 39
+		},
+		{
+			"char_name": "INMAN",
+			"lines": 39
+		},
+		{
+			"char_name": "OMAR",
+			"lines": 39
+		},
+		{
+			"char_name": "ROBERT",
+			"lines": 38
+		},
+		{
+			"char_name": "MALKIN",
+			"lines": 37
+		},
+		{
+			"char_name": "MS. KLUGH",
+			"lines": 36
+		},
+		{
+			"char_name": "AMY",
+			"lines": 36
+		},
+		{
+			"char_name": "DR. CHANG",
+			"lines": 34
+		},
+		{
+			"char_name": "DUNCAN",
+			"lines": 33
+		},
+		{
+			"char_name": "BONNIE",
+			"lines": 33
+		},
+		{
+			"char_name": "THOMAS",
+			"lines": 33
+		},
+		{
+			"char_name": "DIANE",
+			"lines": 32
+		},
+		{
+			"char_name": "ESSAM",
+			"lines": 32
+		},
+		{
+			"char_name": "ACHARA",
+			"lines": 31
+		},
+		{
+			"char_name": "VOICE",
+			"lines": 30
+		},
+		{
+			"char_name": "ABADDON",
+			"lines": 30
+		},
+		{
+			"char_name": "CAESAR",
+			"lines": 30
+		},
+		{
+			"char_name": "RACHEL",
+			"lines": 29
+		},
+		{
+			"char_name": "JOHNNY",
+			"lines": 29
+		},
+		{
+			"char_name": "ELSA",
+			"lines": 29
+		},
+		{
+			"char_name": "MARGO",
+			"lines": 29
+		},
+		{
+			"char_name": "LUCY",
+			"lines": 29
+		},
+		{
+			"char_name": "ALDO",
+			"lines": 28
+		},
+		{
+			"char_name": "CAPTAIN",
+			"lines": 28
+		},
+		{
+			"char_name": "EMILY",
+			"lines": 27
+		},
+		{
+			"char_name": "RANDY",
+			"lines": 26
+		},
+		{
+			"char_name": "ALPERT",
+			"lines": 26
+		},
+		{
+			"char_name": "KEVIN",
+			"lines": 26
+		},
+		{
+			"char_name": "JASON",
+			"lines": 26
+		},
+		{
+			"char_name": "MATTHEW",
+			"lines": 26
+		},
+		{
+			"char_name": "GABRIELA",
+			"lines": 24
+		},
+		{
+			"char_name": "BRIAN",
+			"lines": 24
+		},
+		{
+			"char_name": "NATHAN",
+			"lines": 24
+		},
+		{
+			"char_name": "JESS",
+			"lines": 23
+		},
+		{
+			"char_name": "HARPER",
+			"lines": 23
+		},
+		{
+			"char_name": "RYAN",
+			"lines": 22
+		},
+		{
+			"char_name": "DIRECTOR",
+			"lines": 21
+		},
+		{
+			"char_name": "JUSTIN",
+			"lines": 21
+		},
+		{
+			"char_name": "JONES",
+			"lines": 20
+		},
+		{
+			"char_name": "MARS",
+			"lines": 20
+		},
+		{
+			"char_name": "CLAUDIA",
+			"lines": 20
+		},
+		{
+			"char_name": "MONK",
+			"lines": 20
+		},
+		{
+			"char_name": "YOUNG BEN",
+			"lines": 20
+		},
+		{
+			"char_name": "MAN 1",
+			"lines": 19
+		},
+		{
+			"char_name": "TEMPLE LEADER",
+			"lines": 19
+		},
+		{
+			"char_name": "NORTON",
+			"lines": 19
+		},
+		{
+			"char_name": "ISABELLA",
+			"lines": 19
+		},
+		{
+			"char_name": "SEAMUS",
+			"lines": 19
+		},
+		{
+			"char_name": "SAMI",
+			"lines": 19
+		},
+		{
+			"char_name": "ELLIE",
+			"lines": 19
+		},
+		{
+			"char_name": "DR. HAMILL",
+			"lines": 17
+		},
+		{
+			"char_name": "MONTAND",
+			"lines": 17
+		},
+		{
+			"char_name": "REGINA",
+			"lines": 17
+		},
+		{
+			"char_name": "TOMMY",
+			"lines": 17
+		},
+		{
+			"char_name": "CHANG",
+			"lines": 17
+		},
+		{
+			"char_name": "PILOT",
+			"lines": 16
+		},
+		{
+			"char_name": "LIZZY",
+			"lines": 16
+		},
+		{
+			"char_name": "CO-PILOT",
+			"lines": 16
+		},
+		{
+			"char_name": "CLERK",
+			"lines": 15
+		},
+		{
+			"char_name": "LILY",
+			"lines": 15
+		},
+		{
+			"char_name": "EDMUND",
+			"lines": 15
+		},
+		{
+			"char_name": "WOMAN'S AUTOMATED VOICE",
+			"lines": 15
+		},
+		{
+			"char_name": "DETECTIVE",
+			"lines": 15
+		},
+		{
+			"char_name": "LINDSEY",
+			"lines": 15
+		},
+		{
+			"char_name": "GEORGE",
+			"lines": 15
+		},
+		{
+			"char_name": "MIKE",
+			"lines": 14
+		},
+		{
+			"char_name": "ATTORNEY",
+			"lines": 14
+		},
+		{
+			"char_name": "OMER",
+			"lines": 14
+		},
+		{
+			"char_name": "DR. BAE",
+			"lines": 14
+		},
+		{
+			"char_name": "FROGURT",
+			"lines": 14
+		},
+		{
+			"char_name": "JONAS",
+			"lines": 14
+		},
+		{
+			"char_name": "SABRINA",
+			"lines": 13
+		},
+		{
+			"char_name": "DOCTOR GOODSPEED",
+			"lines": 13
+		},
+		{
+			"char_name": "SALONGA",
+			"lines": 13
+		},
+		{
+			"char_name": "MR. KIM",
+			"lines": 13
+		},
+		{
+			"char_name": "MELISSA",
+			"lines": 13
+		},
+		{
+			"char_name": "BRYAN",
+			"lines": 13
+		},
+		{
+			"char_name": "MRS. PAIK",
+			"lines": 13
+		},
+		{
+			"char_name": "FATHER SUAREZ",
+			"lines": 13
+		},
+		{
+			"char_name": "BIG MIKE",
+			"lines": 13
+		},
+		{
+			"char_name": "YOUNG WOMAN",
+			"lines": 13
+		},
+		{
+			"char_name": "PARACHUTIST",
+			"lines": 13
+		},
+		{
+			"char_name": "AGENT COLE",
+			"lines": 13
+		},
+		{
+			"char_name": "OLDHAM",
+			"lines": 13
+		},
+		{
+			"char_name": "AMINA",
+			"lines": 13
+		},
+		{
+			"char_name": "BOY",
+			"lines": 13
+		},
+		{
+			"char_name": "MARTHA",
+			"lines": 12
+		},
+		{
+			"char_name": "JERRY",
+			"lines": 12
+		},
+		{
+			"char_name": "ZUKERMAN",
+			"lines": 12
+		},
+		{
+			"char_name": "DONOVAN",
+			"lines": 12
+		},
+		{
+			"char_name": "PRYCE",
+			"lines": 12
+		},
+		{
+			"char_name": "JUDGE",
+			"lines": 12
+		},
+		{
+			"char_name": "JAN",
+			"lines": 12
+		},
+		{
+			"char_name": "MAN #1",
+			"lines": 12
+		},
+		{
+			"char_name": "HUTTON",
+			"lines": 12
+		},
+		{
+			"char_name": "COLLEEN",
+			"lines": 12
+		},
+		{
+			"char_name": "AVA",
+			"lines": 12
+		},
+		{
+			"char_name": "STORE OWNER",
+			"lines": 12
+		},
+		{
+			"char_name": "REYNOLDS",
+			"lines": 12
+		},
+		{
+			"char_name": "MAN 2",
+			"lines": 12
+		},
+		{
+			"char_name": "SGT. AUSTEN",
+			"lines": 11
+		},
+		{
+			"char_name": "MRS. LOCKE",
+			"lines": 11
+		},
+		{
+			"char_name": "DR. KIM",
+			"lines": 11
+		},
+		{
+			"char_name": "AGENT",
+			"lines": 11
+		},
+		{
+			"char_name": "LENNY",
+			"lines": 11
+		},
+		{
+			"char_name": "CAROLE",
+			"lines": 11
+		},
+		{
+			"char_name": "ISABEL",
+			"lines": 11
+		},
+		{
+			"char_name": "GOVERNMENT WORKER",
+			"lines": 10
+		},
+		{
+			"char_name": "MS. DECKER",
+			"lines": 10
+		},
+		{
+			"char_name": "MUNSON",
+			"lines": 10
+		},
+		{
+			"char_name": "ERIKA",
+			"lines": 10
+		},
+		{
+			"char_name": "MAN #2",
+			"lines": 10
+		},
+		{
+			"char_name": "FLIGHT ATTENDANT",
+			"lines": 10
+		},
+		{
+			"char_name": "ABIGAIL",
+			"lines": 10
+		},
+		{
+			"char_name": "FOREMAN",
+			"lines": 10
+		},
+		{
+			"char_name": "HAN",
+			"lines": 10
+		},
+		{
+			"char_name": "DETECTIVE MASON",
+			"lines": 10
+		},
+		{
+			"char_name": "GORDY",
+			"lines": 10
+		},
+		{
+			"char_name": "NORA",
+			"lines": 10
+		},
+		{
+			"char_name": "MICHAEL'S MOTHER",
+			"lines": 10
+		},
+		{
+			"char_name": "UNKNOWN",
+			"lines": 9
+		},
+		{
+			"char_name": "LYNN",
+			"lines": 9
+		},
+		{
+			"char_name": "MCVAY",
+			"lines": 9
+		},
+		{
+			"char_name": "AUSTEN",
+			"lines": 9
+		},
+		{
+			"char_name": "BRUNETTE WOMAN",
+			"lines": 9
+		},
+		{
+			"char_name": "DUCKETT",
+			"lines": 9
+		},
+		{
+			"char_name": "LEADER",
+			"lines": 9
+		},
+		{
+			"char_name": "ORDERLY",
+			"lines": 9
+		},
+		{
+			"char_name": "MONITOR",
+			"lines": 9
+		},
+		{
+			"char_name": "PETER",
+			"lines": 9
+		},
+		{
+			"char_name": "JILL",
+			"lines": 9
+		},
+		{
+			"char_name": "FATHER",
+			"lines": 9
+		},
+		{
+			"char_name": "MARC",
+			"lines": 9
+		},
+		{
+			"char_name": "EMEKA",
+			"lines": 8
+		},
+		{
+			"char_name": "KEN",
+			"lines": 8
+		},
+		{
+			"char_name": "MR. FRIENDLY",
+			"lines": 8
+		},
+		{
+			"char_name": "BEARDED MAN",
+			"lines": 8
+		},
+		{
+			"char_name": "JOYCE",
+			"lines": 8
+		},
+		{
+			"char_name": "LAWYER",
+			"lines": 8
+		},
+		{
+			"char_name": "CALDERWOOD",
+			"lines": 8
+		},
+		{
+			"char_name": "NEWSCASTER",
+			"lines": 8
+		},
+		{
+			"char_name": "WARDEN HARRIS",
+			"lines": 8
+		},
+		{
+			"char_name": "PHOTOGRAPHER",
+			"lines": 8
+		},
+		{
+			"char_name": "SGT",
+			"lines": 8
+		},
+		{
+			"char_name": "BARNES",
+			"lines": 8
+		},
+		{
+			"char_name": "YOUNG BLONDE HOSTILE",
+			"lines": 8
+		},
+		{
+			"char_name": "TAI",
+			"lines": 8
+		},
+		{
+			"char_name": "GELLERT",
+			"lines": 8
+		},
+		{
+			"char_name": "SULLIVAN",
+			"lines": 8
+		},
+		{
+			"char_name": "AGENT HEWITT",
+			"lines": 8
+		},
+		{
+			"char_name": "YOUNG GIRL",
+			"lines": 8
+		},
+		{
+			"char_name": "CUSTODIAN",
+			"lines": 8
+		},
+		{
+			"char_name": "BANE",
+			"lines": 7
+		},
+		{
+			"char_name": "SGT. BUCCELLI",
+			"lines": 7
+		},
+		{
+			"char_name": "AARON",
+			"lines": 7
+		},
+		{
+			"char_name": "TOUGH MOROCCAN",
+			"lines": 7
+		},
+		{
+			"char_name": "RECEPTIONIST",
+			"lines": 7
+		},
+		{
+			"char_name": "NANNY",
+			"lines": 7
+		},
+		{
+			"char_name": "MARVIN CANDLE",
+			"lines": 7
+		},
+		{
+			"char_name": "BILLY",
+			"lines": 7
+		},
+		{
+			"char_name": "WOODRUFF",
+			"lines": 7
+		},
+		{
+			"char_name": "BRENNAN",
+			"lines": 7
+		},
+		{
+			"char_name": "JEFF",
+			"lines": 7
+		},
+		{
+			"char_name": "RAGGS",
+			"lines": 7
+		},
+		{
+			"char_name": "MR. KWON",
+			"lines": 7
+		},
+		{
+			"char_name": "CREWMAN",
+			"lines": 7
+		},
+		{
+			"char_name": "MALCOLM",
+			"lines": 7
+		},
+		{
+			"char_name": "HOTEL MANAGER",
+			"lines": 7
+		},
+		{
+			"char_name": "KINCAID",
+			"lines": 7
+		},
+		{
+			"char_name": "HADDAD",
+			"lines": 7
+		},
+		{
+			"char_name": "NARJISS",
+			"lines": 7
+		},
+		{
+			"char_name": "REPAIRMAN",
+			"lines": 7
+		},
+		{
+			"char_name": "HIBBS",
+			"lines": 7
+		},
+		{
+			"char_name": "YOUNG HURLEY",
+			"lines": 6
+		},
+		{
+			"char_name": "OCEANIC-MALE",
+			"lines": 6
+		},
+		{
+			"char_name": "EMT #1",
+			"lines": 6
+		},
+		{
+			"char_name": "BILLY DEE",
+			"lines": 6
+		},
+		{
+			"char_name": "MR. PACE",
+			"lines": 6
+		},
+		{
+			"char_name": "ANNIE",
+			"lines": 6
+		},
+		{
+			"char_name": "CUSTOMS-AGENT",
+			"lines": 6
+		},
+		{
+			"char_name": "GARDNER",
+			"lines": 6
+		},
+		{
+			"char_name": "CUNNINGHAM",
+			"lines": 6
+		},
+		{
+			"char_name": "CALDWELL",
+			"lines": 6
+		},
+		{
+			"char_name": "TRICIA",
+			"lines": 6
+		},
+		{
+			"char_name": "STARLA",
+			"lines": 6
+		},
+		{
+			"char_name": "MRS SHEPARD",
+			"lines": 6
+		},
+		{
+			"char_name": "CAROLINE",
+			"lines": 6
+		},
+		{
+			"char_name": "YOUNG TOM",
+			"lines": 6
+		},
+		{
+			"char_name": "INTERN",
+			"lines": 6
+		},
+		{
+			"char_name": "MARY JO",
+			"lines": 6
+		},
+		{
+			"char_name": "OLIVIA",
+			"lines": 6
+		},
+		{
+			"char_name": "YOUNG KATE",
+			"lines": 6
+		},
+		{
+			"char_name": "BARTENDER",
+			"lines": 6
+		},
+		{
+			"char_name": "BALIFF",
+			"lines": 6
+		},
+		{
+			"char_name": "PRIEST",
+			"lines": 6
+		},
+		{
+			"char_name": "OFFICER",
+			"lines": 5
+		},
+		{
+			"char_name": "ISAAC",
+			"lines": 5
+		},
+		{
+			"char_name": "INTERIOR DECORATOR",
+			"lines": 5
+		},
+		{
+			"char_name": "DETECTIVE RASMUSSEN",
+			"lines": 5
+		},
+		{
+			"char_name": "NABIL",
+			"lines": 5
+		},
+		{
+			"char_name": "RON",
+			"lines": 5
+		},
+		{
+			"char_name": "TARIQ",
+			"lines": 5
+		},
+		{
+			"char_name": "GRAY",
+			"lines": 5
+		},
+		{
+			"char_name": "NUN",
+			"lines": 5
+		},
+		{
+			"char_name": "NURSE #2",
+			"lines": 5
+		},
+		{
+			"char_name": "WAYNE",
+			"lines": 5
+		},
+		{
+			"char_name": "MICHELLE",
+			"lines": 5
+		},
+		{
+			"char_name": "MARY",
+			"lines": 5
+		},
+		{
+			"char_name": "EVA",
+			"lines": 5
+		},
+		{
+			"char_name": "AMIRA",
+			"lines": 5
+		},
+		{
+			"char_name": "EMT #2",
+			"lines": 5
+		},
+		{
+			"char_name": "ARLENE",
+			"lines": 5
+		},
+		{
+			"char_name": "NURSE 1",
+			"lines": 5
+		},
+		{
+			"char_name": "MONSIGNOR",
+			"lines": 5
+		},
+		{
+			"char_name": "FEMALE OPERATOR",
+			"lines": 5
+		},
+		{
+			"char_name": "LOUDSPEAKER VOICE",
+			"lines": 5
+		},
+		{
+			"char_name": "MODERATOR",
+			"lines": 5
+		},
+		{
+			"char_name": "SCIENTIST",
+			"lines": 5
+		},
+		{
+			"char_name": "BRAM",
+			"lines": 5
+		},
+		{
+			"char_name": "FEMALE SURGEON",
+			"lines": 5
+		},
+		{
+			"char_name": "RUTH",
+			"lines": 5
+		},
+		{
+			"char_name": "JD",
+			"lines": 5
+		},
+		{
+			"char_name": "STEWARDESS",
+			"lines": 5
+		},
+		{
+			"char_name": "MALE DRIVER",
+			"lines": 5
+		},
+		{
+			"char_name": "WAITER",
+			"lines": 5
+		},
+		{
+			"char_name": "ROSIE",
+			"lines": 5
+		},
+		{
+			"char_name": "IGNACIO",
+			"lines": 5
+		},
+		{
+			"char_name": "RADIO",
+			"lines": 5
+		},
+		{
+			"char_name": "PHARMACIST",
+			"lines": 5
+		},
+		{
+			"char_name": "CAB DRIVER",
+			"lines": 5
+		},
+		{
+			"char_name": "BLONDE WOMAN",
+			"lines": 5
+		},
+		{
+			"char_name": "MRS. PACE",
+			"lines": 5
+		},
+		{
+			"char_name": "KID",
+			"lines": 5
+		},
+		{
+			"char_name": "TICKET AGENT",
+			"lines": 5
+		},
+		{
+			"char_name": "AIRPORT COP",
+			"lines": 5
+		},
+		{
+			"char_name": "TECHNICIAN",
+			"lines": 5
+		},
+		{
+			"char_name": "HAWAIIAN SHIRT",
+			"lines": 5
+		},
+		{
+			"char_name": "LAURENCE",
+			"lines": 4
+		},
+		{
+			"char_name": "ENGINEER",
+			"lines": 4
+		},
+		{
+			"char_name": "SOLDIER 1",
+			"lines": 4
+		},
+		{
+			"char_name": "FIRST MAN",
+			"lines": 4
+		},
+		{
+			"char_name": "DR. CANDLE",
+			"lines": 4
+		},
+		{
+			"char_name": "GUNMAN'S VOICE",
+			"lines": 4
+		},
+		{
+			"char_name": "CASHIER",
+			"lines": 4
+		},
+		{
+			"char_name": "BEST FRIEND",
+			"lines": 4
+		},
+		{
+			"char_name": "ARCHIVIST",
+			"lines": 4
+		},
+		{
+			"char_name": "CRYSTAL",
+			"lines": 4
+		},
+		{
+			"char_name": "ANGELO",
+			"lines": 4
+		},
+		{
+			"char_name": "SHROUDED WOMAN",
+			"lines": 4
+		},
+		{
+			"char_name": "ERIK",
+			"lines": 4
+		},
+		{
+			"char_name": "ROBBER #2",
+			"lines": 4
+		},
+		{
+			"char_name": "ADAM",
+			"lines": 4
+		},
+		{
+			"char_name": "SECURITY OFFICER",
+			"lines": 4
+		},
+		{
+			"char_name": "AUTUMN",
+			"lines": 4
+		},
+		{
+			"char_name": "GATE AGENT",
+			"lines": 4
+		},
+		{
+			"char_name": "UNKNOWN VOICE",
+			"lines": 4
+		},
+		{
+			"char_name": "THUG CAPTAIN",
+			"lines": 4
+		},
+		{
+			"char_name": "KAREN",
+			"lines": 4
+		},
+		{
+			"char_name": "DRIVER",
+			"lines": 4
+		},
+		{
+			"char_name": "REDSHIRT",
+			"lines": 4
+		},
+		{
+			"char_name": "IVAN",
+			"lines": 4
+		},
+		{
+			"char_name": "SUZANNE",
+			"lines": 4
+		},
+		{
+			"char_name": "AUTOMATED FEMALE VOICE",
+			"lines": 4
+		},
+		{
+			"char_name": "BASEBALL HAT",
+			"lines": 4
+		},
+		{
+			"char_name": "EMT",
+			"lines": 4
+		},
+		{
+			"char_name": "SAM",
+			"lines": 4
+		},
+		{
+			"char_name": "POOR MAN",
+			"lines": 4
+		},
+		{
+			"char_name": "POLICEMAN",
+			"lines": 4
+		},
+		{
+			"char_name": "AGENT FREEDMAN",
+			"lines": 4
+		},
+		{
+			"char_name": "DIANA",
+			"lines": 4
+		},
+		{
+			"char_name": "AUSTRALIAN OFFICIAL",
+			"lines": 4
+		},
+		{
+			"char_name": "TRAVIS",
+			"lines": 4
+		},
+		{
+			"char_name": "DR. ARIZA",
+			"lines": 4
+		},
+		{
+			"char_name": "GL12",
+			"lines": 4
+		},
+		{
+			"char_name": "DR. CURTIS",
+			"lines": 4
+		},
+		{
+			"char_name": "GUS",
+			"lines": 4
+		},
+		{
+			"char_name": "RECORD",
+			"lines": 4
+		},
+		{
+			"char_name": "MALE REPORTER #4",
+			"lines": 4
+		},
+		{
+			"char_name": "SHAWNA",
+			"lines": 4
+		},
+		{
+			"char_name": "FRAINEY",
+			"lines": 4
+		},
+		{
+			"char_name": "SHERIFF",
+			"lines": 4
+		},
+		{
+			"char_name": "SECURITY AGENT",
+			"lines": 4
+		},
+		{
+			"char_name": "WOMAN 2",
+			"lines": 4
+		},
+		{
+			"char_name": "TV REPORTER",
+			"lines": 3
+		},
+		{
+			"char_name": "CHARLES",
+			"lines": 3
+		},
+		{
+			"char_name": "MAGICIAN",
+			"lines": 3
+		},
+		{
+			"char_name": "THERESA",
+			"lines": 3
+		},
+		{
+			"char_name": "MALE OTHER",
+			"lines": 3
+		},
+		{
+			"char_name": "ALL",
+			"lines": 3
+		},
+		{
+			"char_name": "NORRIS",
+			"lines": 3
+		},
+		{
+			"char_name": "KILO",
+			"lines": 3
+		},
+		{
+			"char_name": "ARTURO",
+			"lines": 3
+		},
+		{
+			"char_name": "WOMAN 1",
+			"lines": 3
+		},
+		{
+			"char_name": "NEWSREADER",
+			"lines": 3
+		},
+		{
+			"char_name": "REDSHIRT #2",
+			"lines": 3
+		},
+		{
+			"char_name": "GRETA",
+			"lines": 3
+		},
+		{
+			"char_name": "GINA",
+			"lines": 3
+		},
+		{
+			"char_name": "FATHER CHUCK",
+			"lines": 3
+		},
+		{
+			"char_name": "SUBTITLE",
+			"lines": 3
+		},
+		{
+			"char_name": "YOUNG JACOB",
+			"lines": 3
+		},
+		{
+			"char_name": "THAI BOY",
+			"lines": 3
+		},
+		{
+			"char_name": "RADIO VOICE",
+			"lines": 3
+		},
+		{
+			"char_name": "POLICE RADIO VOICE",
+			"lines": 3
+		},
+		{
+			"char_name": "PRISON TOUGH",
+			"lines": 3
+		},
+		{
+			"char_name": "COP",
+			"lines": 3
+		},
+		{
+			"char_name": "BLACK-TSA-AGENT",
+			"lines": 3
+		},
+		{
+			"char_name": "FEMALE REPORTER #1",
+			"lines": 3
+		},
+		{
+			"char_name": "SOLDIER",
+			"lines": 3
+		},
+		{
+			"char_name": "BEARD",
+			"lines": 3
+		},
+		{
+			"char_name": "GUARD",
+			"lines": 3
+		},
+		{
+			"char_name": "GAME SHOW HOST",
+			"lines": 3
+		},
+		{
+			"char_name": "MALE VOICE",
+			"lines": 3
+		},
+		{
+			"char_name": "JI YEON",
+			"lines": 3
+		},
+		{
+			"char_name": "SUITED GUARD",
+			"lines": 3
+		},
+		{
+			"char_name": "AMELIA",
+			"lines": 3
+		},
+		{
+			"char_name": "CREW",
+			"lines": 3
+		},
+		{
+			"char_name": "TRUCK DRIVER",
+			"lines": 3
+		},
+		{
+			"char_name": "HOSPITAL ADMINISTRATOR",
+			"lines": 3
+		},
+		{
+			"char_name": "DR. STILLMAN",
+			"lines": 3
+		},
+		{
+			"char_name": "U.S. SOLDIER #1",
+			"lines": 3
+		},
+		{
+			"char_name": "MAN IN SUIT",
+			"lines": 3
+		},
+		{
+			"char_name": "PATIENT",
+			"lines": 3
+		},
+		{
+			"char_name": "THUG #2",
+			"lines": 3
+		},
+		{
+			"char_name": "DOORMAN",
+			"lines": 3
+		},
+		{
+			"char_name": "GUY",
+			"lines": 3
+		},
+		{
+			"char_name": "JOHNSON",
+			"lines": 3
+		},
+		{
+			"char_name": "REDSHIRT #1",
+			"lines": 3
+		},
+		{
+			"char_name": "FEMALE NEWS ANCHOR",
+			"lines": 3
+		},
+		{
+			"char_name": "HENDRICKS",
+			"lines": 3
+		},
+		{
+			"char_name": "MITCH",
+			"lines": 3
+		},
+		{
+			"char_name": "MRS. BERENBERG",
+			"lines": 3
+		},
+		{
+			"char_name": "RANDOM-OTHER",
+			"lines": 3
+		},
+		{
+			"char_name": "THUG",
+			"lines": 3
+		},
+		{
+			"char_name": "MALE REPORTER #1",
+			"lines": 3
+		},
+		{
+			"char_name": "BAKIR",
+			"lines": 3
+		},
+		{
+			"char_name": "EMMA",
+			"lines": 3
+		},
+		{
+			"char_name": "TICKETING AGENT",
+			"lines": 3
+		},
+		{
+			"char_name": "COMPUTER VOICE",
+			"lines": 3
+		},
+		{
+			"char_name": "TONY",
+			"lines": 2
+		},
+		{
+			"char_name": "MRS. SHIN",
+			"lines": 2
+		},
+		{
+			"char_name": "REST",
+			"lines": 2
+		},
+		{
+			"char_name": "AUTOMATED VOICE OVER RADIO",
+			"lines": 2
+		},
+		{
+			"char_name": "LAFLEUR",
+			"lines": 2
+		},
+		{
+			"char_name": "WAITRESS",
+			"lines": 2
+		},
+		{
+			"char_name": "WIFE",
+			"lines": 2
+		},
+		{
+			"char_name": "CHET",
+			"lines": 2
+		},
+		{
+			"char_name": "HOACE",
+			"lines": 2
+		},
+		{
+			"char_name": "OPAL",
+			"lines": 2
+		},
+		{
+			"char_name": "LARA",
+			"lines": 2
+		},
+		{
+			"char_name": "CREWMAN AT PERISCOPE",
+			"lines": 2
+		},
+		{
+			"char_name": "GIRL",
+			"lines": 2
+		},
+		{
+			"char_name": "MARVIN",
+			"lines": 2
+		},
+		{
+			"char_name": "MAN'S VOICE",
+			"lines": 2
+		},
+		{
+			"char_name": "MEATHEAD",
+			"lines": 2
+		},
+		{
+			"char_name": "YOUNG CHARLIE",
+			"lines": 2
+		},
+		{
+			"char_name": "BANK CLERK",
+			"lines": 2
+		},
+		{
+			"char_name": "POLICEWOMAN",
+			"lines": 2
+		},
+		{
+			"char_name": "WOMAN ON PA",
+			"lines": 2
+		},
+		{
+			"char_name": "AIRPORT ANNOUNCEMENT",
+			"lines": 2
+		},
+		{
+			"char_name": "HEAD NURSE",
+			"lines": 2
+		},
+		{
+			"char_name": "TSA-AGENT-ON-RADIO",
+			"lines": 2
+		},
+		{
+			"char_name": "RADIO LYRICS",
+			"lines": 2
+		},
+		{
+			"char_name": "DELIVERY MAN",
+			"lines": 2
+		},
+		{
+			"char_name": "ARABIC REPORTER",
+			"lines": 2
+		},
+		{
+			"char_name": "ROBBERS",
+			"lines": 2
+		},
+		{
+			"char_name": "YOUNG SUN",
+			"lines": 2
+		},
+		{
+			"char_name": "MELANIE",
+			"lines": 2
+		},
+		{
+			"char_name": "GUY #2",
+			"lines": 2
+		},
+		{
+			"char_name": "FEMALE ANCHOR",
+			"lines": 2
+		},
+		{
+			"char_name": "YUSEF",
+			"lines": 2
+		},
+		{
+			"char_name": "STEVE",
+			"lines": 2
+		},
+		{
+			"char_name": "NURSE 2",
+			"lines": 2
+		},
+		{
+			"char_name": "FEMALE OTHER",
+			"lines": 2
+		},
+		{
+			"char_name": "UNKNOWN BOY",
+			"lines": 2
+		},
+		{
+			"char_name": "MAN ON RECORDING",
+			"lines": 2
+		},
+		{
+			"char_name": "MANAGER",
+			"lines": 2
+		},
+		{
+			"char_name": "MRS. TALBOT",
+			"lines": 2
+		},
+		{
+			"char_name": "RED",
+			"lines": 2
+		},
+		{
+			"char_name": "MALE DOCTOR",
+			"lines": 2
+		},
+		{
+			"char_name": "THAI MAN",
+			"lines": 2
+		},
+		{
+			"char_name": "MASTER SERGEANT",
+			"lines": 2
+		},
+		{
+			"char_name": "YOUNG SAWYER",
+			"lines": 2
+		},
+		{
+			"char_name": "ANDREA",
+			"lines": 2
+		},
+		{
+			"char_name": "YOUNG JACK",
+			"lines": 2
+		},
+		{
+			"char_name": "WOMAN ON THE PHONE",
+			"lines": 2
+		},
+		{
+			"char_name": "LOTTO OFFICIAL",
+			"lines": 2
+		},
+		{
+			"char_name": "VARIOUS",
+			"lines": 2
+		},
+		{
+			"char_name": "SECOND MAN",
+			"lines": 2
+		},
+		{
+			"char_name": "AUCTIONEER",
+			"lines": 2
+		},
+		{
+			"char_name": "WARLORD",
+			"lines": 2
+		},
+		{
+			"char_name": "MRS. BASKUM",
+			"lines": 2
+		},
+		{
+			"char_name": "WORKER",
+			"lines": 2
+		},
+		{
+			"char_name": "ANSWERING MACHINE MESSAGE",
+			"lines": 2
+		},
+		{
+			"char_name": "JANE",
+			"lines": 2
+		},
+		{
+			"char_name": "LESLIE ARTZ",
+			"lines": 2
+		},
+		{
+			"char_name": "SANJAY",
+			"lines": 2
+		},
+		{
+			"char_name": "GUY IN LINE",
+			"lines": 2
+		},
+		{
+			"char_name": "AMBASSADOR",
+			"lines": 2
+		},
+		{
+			"char_name": "OTHER PRISONER",
+			"lines": 2
+		},
+		{
+			"char_name": "PAUL",
+			"lines": 2
+		},
+		{
+			"char_name": "LAURA",
+			"lines": 2
+		},
+		{
+			"char_name": "VOICEMAIL",
+			"lines": 2
+		},
+		{
+			"char_name": "KIM",
+			"lines": 2
+		},
+		{
+			"char_name": "TANNOY",
+			"lines": 2
+		},
+		{
+			"char_name": "PHYSICAL THERAPIST",
+			"lines": 2
+		},
+		{
+			"char_name": "CREW-MEMBER",
+			"lines": 2
+		},
+		{
+			"char_name": "HENRIK",
+			"lines": 2
+		},
+		{
+			"char_name": "NARRATION",
+			"lines": 2
+		},
+		{
+			"char_name": "REPORTER",
+			"lines": 2
+		},
+		{
+			"char_name": "FEMALE VOICE",
+			"lines": 2
+		},
+		{
+			"char_name": "RANDOM-LADY",
+			"lines": 2
+		},
+		{
+			"char_name": "SHERRY",
+			"lines": 2
+		},
+		{
+			"char_name": "ANNOUNCER",
+			"lines": 2
+		},
+		{
+			"char_name": "2ND MAN",
+			"lines": 2
+		},
+		{
+			"char_name": "SECURITY GUARD",
+			"lines": 2
+		},
+		{
+			"char_name": "POLICE OFFICER",
+			"lines": 1
+		},
+		{
+			"char_name": "FEMALE REPORTER #2",
+			"lines": 1
+		},
+		{
+			"char_name": "E.R. DOCTOR",
+			"lines": 1
+		},
+		{
+			"char_name": "CASS ELLIOT",
+			"lines": 1
+		},
+		{
+			"char_name": "ANOTHER MAN",
+			"lines": 1
+		},
+		{
+			"char_name": "CHARLIE HUME",
+			"lines": 1
+		},
+		{
+			"char_name": "ANOTHER VOICE",
+			"lines": 1
+		},
+		{
+			"char_name": "AYESHA",
+			"lines": 1
+		},
+		{
+			"char_name": "RADIO ANNOUNCER",
+			"lines": 1
+		},
+		{
+			"char_name": "OTHER MAN",
+			"lines": 1
+		},
+		{
+			"char_name": "NIGERIAN WOMAN",
+			"lines": 1
+		},
+		{
+			"char_name": "SOLDIER 2",
+			"lines": 1
+		},
+		{
+			"char_name": "GAS STATION CLERK",
+			"lines": 1
+		},
+		{
+			"char_name": "SECRETARY",
+			"lines": 1
+		},
+		{
+			"char_name": "OLU",
+			"lines": 1
+		},
+		{
+			"char_name": "DISTANT VOICE",
+			"lines": 1
+		},
+		{
+			"char_name": "SEVERAL PEOPLE",
+			"lines": 1
+		},
+		{
+			"char_name": "MAN #3",
+			"lines": 1
+		},
+		{
+			"char_name": "HUGO",
+			"lines": 1
+		},
+		{
+			"char_name": "SCOTT",
+			"lines": 1
+		},
+		{
+			"char_name": "HOSPITAL ANNOUNCEMENT",
+			"lines": 1
+		},
+		{
+			"char_name": "GOLDIE",
+			"lines": 1
+		},
+		{
+			"char_name": "EMPLOYEE",
+			"lines": 1
+		},
+		{
+			"char_name": "SAYID AND KATE",
+			"lines": 1
+		},
+		{
+			"char_name": "SUN, JIN",
+			"lines": 1
+		},
+		{
+			"char_name": "WIDMORE'S MAN",
+			"lines": 1
+		},
+		{
+			"char_name": "DOUG",
+			"lines": 1
+		},
+		{
+			"char_name": "WHEELER",
+			"lines": 1
+		},
+		{
+			"char_name": "PIERCE",
+			"lines": 1
+		},
+		{
+			"char_name": "POLICEMAN 2",
+			"lines": 1
+		},
+		{
+			"char_name": "MATTINGLY",
+			"lines": 1
+		},
+		{
+			"char_name": "MARK HUTTON",
+			"lines": 1
+		},
+		{
+			"char_name": "RICAHRD",
+			"lines": 1
+		},
+		{
+			"char_name": "SOLDIER 3",
+			"lines": 1
+		},
+		{
+			"char_name": "FRANCINE",
+			"lines": 1
+		},
+		{
+			"char_name": "TEHCNICIAN",
+			"lines": 1
+		},
+		{
+			"char_name": "DETECTIVE RASMUSSEN.",
+			"lines": 1
+		},
+		{
+			"char_name": "WICKMAN",
+			"lines": 1
+		},
+		{
+			"char_name": "WOMAN P.A. VOICE",
+			"lines": 1
+		},
+		{
+			"char_name": "PARTNER",
+			"lines": 1
+		},
+		{
+			"char_name": "DR. WOODRUFF",
+			"lines": 1
+		},
+		{
+			"char_name": "RICARDO",
+			"lines": 1
+		},
+		{
+			"char_name": "UNDERLING",
+			"lines": 1
+		},
+		{
+			"char_name": "MORGUE EMPLOYEE",
+			"lines": 1
+		},
+		{
+			"char_name": "DELIVERY TRUCK DRIVER",
+			"lines": 1
+		},
+		{
+			"char_name": "BEARDED MAN IN CROWD",
+			"lines": 1
+		},
+		{
+			"char_name": "ARABIC MAN",
+			"lines": 1
+		},
+		{
+			"char_name": "DONALD",
+			"lines": 1
+		},
+		{
+			"char_name": "MALE ANNOUNCER",
+			"lines": 1
+		},
+		{
+			"char_name": "CHILD",
+			"lines": 1
+		},
+		{
+			"char_name": "MAN OVER P.A.",
+			"lines": 1
+		},
+		{
+			"char_name": "FEMALE CONTESTANT",
+			"lines": 1
+		},
+		{
+			"char_name": "SIMMONS",
+			"lines": 1
+		},
+		{
+			"char_name": "MONK 2",
+			"lines": 1
+		},
+		{
+			"char_name": "TV",
+			"lines": 1
+		},
+		{
+			"char_name": "MRS. LEE",
+			"lines": 1
+		},
+		{
+			"char_name": "HURLEY AND DESMOND",
+			"lines": 1
+		},
+		{
+			"char_name": "MINISTER",
+			"lines": 1
+		},
+		{
+			"char_name": "OLD SCOOTER MAN",
+			"lines": 1
+		},
+		{
+			"char_name": "OTHER WOMAN",
+			"lines": 1
+		},
+		{
+			"char_name": "MAN ON MICROPHONE",
+			"lines": 1
+		},
+		{
+			"char_name": "JACKS",
+			"lines": 1
+		},
+		{
+			"char_name": "WOMAN OVER PA",
+			"lines": 1
+		},
+		{
+			"char_name": "VALERIE",
+			"lines": 1
+		},
+		{
+			"char_name": "AUTOMATED MALE VOICE",
+			"lines": 1
+		},
+		{
+			"char_name": "SAYWER",
+			"lines": 1
+		},
+		{
+			"char_name": "CABBIE",
+			"lines": 1
+		},
+		{
+			"char_name": "SOPHIE",
+			"lines": 1
+		},
+		{
+			"char_name": "FEMALE FLIGHT ATTENDANT",
+			"lines": 1
+		},
+		{
+			"char_name": "YOUNG EKO",
+			"lines": 1
+		},
+		{
+			"char_name": "FEMALE-CUSTOMS-AGENT",
+			"lines": 1
+		},
+		{
+			"char_name": "VOICE OVER P.A.",
+			"lines": 1
+		},
+		{
+			"char_name": "YELLING MAN",
+			"lines": 1
+		},
+		{
+			"char_name": "PRISONER",
+			"lines": 1
+		},
+		{
+			"char_name": "JULET",
+			"lines": 1
+		},
+		{
+			"char_name": "JIMMY",
+			"lines": 1
+		},
+		{
+			"char_name": "FEMALE KOREAN REPORTER",
+			"lines": 1
+		},
+		{
+			"char_name": "VOICE ON INTERCOM",
+			"lines": 1
+		},
+		{
+			"char_name": "AUSSIE WOMAN",
+			"lines": 1
+		},
+		{
+			"char_name": "DESMOND AND SAYID",
+			"lines": 1
+		},
+		{
+			"char_name": "ROBBER #3",
+			"lines": 1
+		},
+		{
+			"char_name": "RED-HEADED GIRL",
+			"lines": 1
+		},
+		{
+			"char_name": "WOMAN OVER P.A.",
+			"lines": 1
+		},
+		{
+			"char_name": "OFFICER BARNES",
+			"lines": 1
+		},
+		{
+			"char_name": "KEN HALPERIN",
+			"lines": 1
+		},
+		{
+			"char_name": "BUSINESSMAN 1",
+			"lines": 1
+		},
+		{
+			"char_name": "ISABELA",
+			"lines": 1
+		},
+		{
+			"char_name": "WHITE SUIT",
+			"lines": 1
+		},
+		{
+			"char_name": "OTHER",
+			"lines": 1
+		},
+		{
+			"char_name": "BUSINESSMAN",
+			"lines": 1
+		},
+		{
+			"char_name": "UNKNOWN TECHNICIAN",
+			"lines": 1
+		},
+		{
+			"char_name": "TANK CARRYING WORKER",
+			"lines": 1
+		},
+		{
+			"char_name": "JEANNETTE LEWIS",
+			"lines": 1
+		},
+		{
+			"char_name": "THIRD MAN",
+			"lines": 1
+		},
+		{
+			"char_name": "BUTCHER",
+			"lines": 1
+		},
+		{
+			"char_name": "JUDGE GALZETHRON",
+			"lines": 1
+		},
+		{
+			"char_name": "MALE NURSE",
+			"lines": 1
+		},
+		{
+			"char_name": "TUX SHOP OWNER",
+			"lines": 1
+		},
+		{
+			"char_name": "FEDERAL AGENT",
+			"lines": 1
+		},
+		{
+			"char_name": "SEALS",
+			"lines": 1
+		},
+		{
+			"char_name": "MALE SURVIVOR",
+			"lines": 1
+		},
+		{
+			"char_name": "SERVANT",
+			"lines": 1
+		},
+		{
+			"char_name": "EDWARD MARS",
+			"lines": 1
+		},
+		{
+			"char_name": "PA VOICE",
+			"lines": 1
+		},
+		{
+			"char_name": "WOMEN",
+			"lines": 1
+		},
+		{
+			"char_name": "DESMOND AND CHARLIE",
+			"lines": 1
+		},
+		{
+			"char_name": "OTHER VOICE",
+			"lines": 1
+		},
+		{
+			"char_name": "BOTH",
+			"lines": 1
+		},
+		{
+			"char_name": "CAB-DRIVER",
+			"lines": 1
+		},
+		{
+			"char_name": "WORKER GUY",
+			"lines": 1
+		},
+		{
+			"char_name": "YOUNG LIAM",
+			"lines": 1
+		},
+		{
+			"char_name": "MEDICAL EXAMINER",
+			"lines": 1
+		},
+		{
+			"char_name": "MAN2",
+			"lines": 1
+		},
+		{
+			"char_name": "VANESSA",
+			"lines": 1
+		},
+		{
+			"char_name": "UNNAMED OTHER",
+			"lines": 1
+		},
+		{
+			"char_name": "CAR RADIO",
+			"lines": 1
+		},
+		{
+			"char_name": "MEN",
+			"lines": 1
+		},
+		{
+			"char_name": "COPILOT",
+			"lines": 1
+		},
+		{
+			"char_name": "SAWYER'S FATHER",
+			"lines": 1
+		},
+		{
+			"char_name": "BACKGROUND VOICE",
+			"lines": 1
+		},
+		{
+			"char_name": "MILE",
+			"lines": 1
+		},
+		{
+			"char_name": "GARY",
+			"lines": 1
+		},
+		{
+			"char_name": "REPORTER #2",
+			"lines": 1
+		},
+		{
+			"char_name": "U.S. SOLDIER #2",
+			"lines": 1
+		},
+		{
+			"char_name": "VOICE FROM OUTSIDE THE SHIP",
+			"lines": 1
+		},
+		{
+			"char_name": "N.D. SURVIVOR",
+			"lines": 1
+		},
+		{
+			"char_name": "NICOLE",
+			"lines": 1
+		},
+		{
+			"char_name": "GUY IN CAR",
+			"lines": 1
+		},
+		{
+			"char_name": "DIEGO",
+			"lines": 1
+		},
+		{
+			"char_name": "MALE REPORTER #3",
+			"lines": 1
+		},
+		{
+			"char_name": "LOUDSPEAKER",
+			"lines": 1
+		},
+		{
+			"char_name": "SERGEANT",
+			"lines": 1
+		},
+		{
+			"char_name": "BUSINESSMAN 2",
+			"lines": 1
+		},
+		{
+			"char_name": "OPERATOR",
+			"lines": 1
+		},
+		{
+			"char_name": "ZACH",
+			"lines": 1
+		},
+		{
+			"char_name": "MAN ON RADIO",
+			"lines": 1
+		},
+		{
+			"char_name": "TEENAGE GIRL",
+			"lines": 1
+		},
+		{
+			"char_name": "MAN 3",
+			"lines": 1
+		},
+		{
+			"char_name": "NURSES",
+			"lines": 1
+		},
+		{
+			"char_name": "VISITOR",
+			"lines": 1
+		},
+		{
+			"char_name": "SOUND MAN",
+			"lines": 1
+		},
+		{
+			"char_name": "TITO",
+			"lines": 1
+		},
+		{
+			"char_name": "MR. GOODSPEED",
+			"lines": 1
+		},
+		{
+			"char_name": "INTERIOR DECORATOR,",
+			"lines": 1
+		},
+		{
+			"char_name": "AIRPORT PA",
+			"lines": 1
+		},
+		{
+			"char_name": "REPORTER #1",
+			"lines": 1
+		},
+		{
+			"char_name": "SUSIE",
+			"lines": 1
+		}
+	]
+}

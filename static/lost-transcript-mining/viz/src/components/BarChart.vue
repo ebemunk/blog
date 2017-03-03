@@ -5,9 +5,11 @@
 			:width="width"
 			:height="height"
 		>
+			<g class="x-axis"></g>
+			<g class="y-axis"></g>
 			<g
 				:style="{
-					transform: `translate(${margin.left}px, ${margin.top}px)`
+					transform: `translate(${padding.left}px, ${padding.top}px)`
 				}
 			">
 				<g class="bars"></g>
@@ -22,13 +24,13 @@ import * as d3 from 'd3'
 export default {
 	name: 'bar-chart',
 	props: {
-		margin: {
+		padding: {
 			type: Object,
 			default: () => ({
-				left: 0,
+				left: 50,
 				right: 0,
-				top: 10,
-				bottom: 10,
+				top: 50,
+				bottom: 0,
 			})
 		},
 		width: {
@@ -41,53 +43,102 @@ export default {
 		},
 		data: {
 			type: Array,
-			default: () => [
-				{name: 'fak', val: 5},
-				{name: 'fafe', val: 3},
-				{name: 'gege', val: 16},
+			default: () => [		{
+						"char_name": "JACK",
+						"lines": 3793
+					},
+					{
+						"char_name": "SAWYER",
+						"lines": 2730
+					},
+					{
+						"char_name": "LOCKE",
+						"lines": 2634
+					},
 			]
 		}
 	},
-	data: function() {
-		const {
-			width,
-			height,
-			margin
-		} = this;
-
-		return {
-			chartWidth: width - margin.left - margin.right,
-			chartHeight: height - margin-top - margin.bottom
+	mounted() {
+		this.render()
+	},
+	computed: {
+		chartHeight: function () {
+			return this.height - this.padding.top - this.padding.bottom
+		},
+		chartWidth: function () {
+			return this.width - this.padding.left - this.padding.right
 		}
 	},
-	mounted() {
-		this.init()
+	watch: {
+		data: function() {
+			this.render()
+		}
 	},
 	methods: {
-		init() {
+		render() {
 			const {
-				width,
-				height,
+				chartWidth,
+				chartHeight,
 				data
 			} = this
-			var x = d3.scaleBand()
-			          .range([0, width])
-			          .padding(0.1);
-			var y = d3.scaleLinear()
-			          .range([height, 0]);
 
-		  // Scale the range of the data in the domains
-		  x.domain(data.map(function(d) { return d.name; }));
-		  y.domain([0, d3.max(data, function(d) { return d.val; })]);
+			const x = d3.scaleLinear().range([0, chartWidth])
+			const y = d3.scaleBand().range([0, data.length*25]).padding(0.1)
 
-			  d3.select('.bars').selectAll(".bar")
-			      .data(this.data)
-			    .enter().append("rect")
-			      .attr("class", "bar")
-			      .attr("x", function(d) { return x(d.name); })
-			      .attr("width", x.bandwidth())
-			      .attr("y", function(d) { return y(d.val); })
-			      .attr("height", function(d) { return height - y(d.val); });
+			x.domain([0, d3.max(data, d => d.lines)])
+			y.domain(data.map(d => d.char_name))
+
+			const yAxis = d3.axisLeft(y)
+				.tickSize(0)
+
+			d3.select('.y-axis')
+			.attr('transform', `translate(${this.padding.left}, ${this.padding.top})`)
+			.call(yAxis)
+			.select('.domain').remove()
+
+			const xAxis = d3.axisTop(x)
+				.tickSize(-this.chartHeight)
+
+			d3.select('.x-axis')
+			.attr('transform', `translate(${this.padding.left}, ${this.padding.top})`)
+			.call(xAxis)
+			.select('.domain').remove()
+
+			var sel = d3.select('.bars').selectAll('.bar')
+				.data(data)
+
+			sel.exit().remove()
+
+			const barG = sel.enter()
+				.append('g')
+					.attr('transform', d => `translate(0, ${y(d.char_name)})`)
+
+			barG
+					.append('rect')
+						.attr('class', 'bar')
+						.attr('x', 0)
+						.attr('y', 0)
+						.attr('height', y.bandwidth())
+					.merge(sel)
+					.transition()
+								.duration(750)
+						.attr('width', d => x(d.lines))
+
+			barG
+					.append('text')
+					.filter((d, i) => i < 10)
+						.text(d => d.lines)
+							.attr('dx', d => x(d.lines)-5)
+							.attr('dy', d => y.bandwidth()/2)
+							.attr('dominant-baseline', 'central')
+							.attr('text-anchor', 'end')
+							.style('fill', 'white')
+
+
+				// .merge(sel)
+				// .transition()
+				// 			.duration(750)
+				// 	.attr('width', d => x(d.lines))
 
 		}
 	}
