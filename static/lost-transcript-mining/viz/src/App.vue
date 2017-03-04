@@ -14,7 +14,7 @@ import {
 	EpisodeSelector,
 } from './components'
 
-import dataJson from './data.json'
+// import dataJson from './data.json'
 
 export default {
 	name: 'app',
@@ -22,11 +22,11 @@ export default {
 		// BarChart
 		EpisodeSelector
 	},
-	data: () => {
-		return {
-			charLines: dataJson.total_lines
-		}
-	},
+	// data: () => {
+	// 	return {
+	// 		charLines: dataJson.total_lines
+	// 	}
+	// },
 	methods: {
 		dataplz() {
 		}

@@ -36,7 +36,7 @@ export default async function writeDb(opts) {
 	log('connection to db')
 	const pool = new Pool({
 		user: 'postgres',
-		password: 'deneme',
+		password: 'dr4w3r5',
 		host: 'localhost',
 		port: 5432,
 		database: 'lost_text_mining',
