@@ -7,7 +7,10 @@
 		<g transform="translate(0, 0)">
 			<g class="episodes"></g>
 			<g class="x-axis"></g>
+			<g class="x-axis2"></g>
+			<g class="b-axis"></g>
 			<g class="brush"></g>
+			<g class="fak"></g>
 		</g>
 	</svg>
 </div>
@@ -27,7 +30,7 @@ export default {
 	props: {
 		width: {
 			type: Number,
-			default: () => 960
+			default: () => 990
 		},
 		height: {
 			type: Number,
@@ -37,7 +40,7 @@ export default {
 	computed: {
 		...mapGetters([
 			'seasonEpisodes'
-		])
+		]),
 	},
 	mounted() {
 		this.render()
@@ -47,92 +50,80 @@ export default {
 			'selectEpisodes'
 		]),
 		render() {
-			const {
+			let {
 				seasonEpisodes
 			} = this
 
-			const x = d3.scaleBand()
-				.range([0, this.width])
-				.padding(0.1)
-				.domain(seasonEpisodes.map(d => d.key))
-
-			const xAxis = d3.axisBottom(x)
-			.tickValues([
-				'S01-E01',
-				'S02-E01',
-				'S03-E01',
-				'S04-E01',
-				'S05-E01',
-				'S06-E01'
-			])
-			.tickFormat((d, i) => `Season ${i+1}`)
-			.tickSize(35)
-
-			d3.select('.x-axis')
-			.attr('transform', `translate(0, ${x.bandwidth()})`)
-			.call(xAxis)
-			.call(sel => {
-				sel.selectAll('.tick line')
-					.attr('transform', () => {
-						const dx = (x.bandwidth()/2) + (x.padding()*x.step())
-						const dy = x.bandwidth()
-						return `translate(-${dx}, -${dy})`
-					})
-				sel.selectAll('.tick text')
-					.attr('text-anchor', 'start')
-					.attr('transform', () => {
-						return `translate(0, -15)`
-					})
+			seasonEpisodes = seasonEpisodes//.slice(0,15)
+			const hashmap = {}
+			seasonEpisodes.map((d, i) => {
+				hashmap[d.date.getTime()] = i
 			})
 
-			const sel = d3.select('.episodes')
-			.selectAll('.bar')
-			.data(seasonEpisodes)
+			const lolz = seasonEpisodes.map(d => d.date)
+			lolz.push(new Date(0,0,seasonEpisodes.length))
 
-			sel.enter()
-				.append('rect')
-				.attr('class', 'bar')
-				.attr('x', d => x(d.key))
-				.attr('width', x.bandwidth())
-				.attr('y', 0)
-				.attr('height', 25)
+			const x = d3.scaleTime()
+			.domain(
+				d3.extent(
+					lolz
+				)
+			)
+			.rangeRound([0, this.width])
 
-			const leftEdges = x.domain().map(x)
-			const invert = d => {
-				const res = d3.bisectLeft(leftEdges, d)
-				return x.domain()[res]
-			}
+			const xAxis = d3.axisBottom(x)
+			// .ticks(d3.timeDay)
+			.tickValues(seasonEpisodes.filter(d => d.episode === 1).map(d => d.date))
+			.tickSize(-25)
+			.tickFormat((d, i) => this.seasonEpisodes[hashmap[d.getTime()]].key)
 
-			x.invert = (function(){
-		    var domain = x.domain()
-		    var range = x.range()
-		    var scale = d3.scaleQuantize()
-				.domain(range).range(domain)
-				// .domain(domain).range(range)
-				// return scale.invertExtent
+			d3.select('.x-axis')
+			.attr('transform', `translate(0, 25)`)
+			.call(xAxis)
+			.call(sel => {
+				sel.selectAll('.tick text')
+					.attr('text-anchor', 'start')
+			})
 
-		    return function(x){
-		        return scale(x)
-		    }
-			})()
+			d3.select('.x-axis2')
+			.attr('transform', `translate(0, 22)`)
+			.call(
+				d3.axisBottom(x)
+				.ticks(d3.timeDay)
+				.tickSize(-15)
+				.tickFormat(() => null)
+			)
+			.call(sel => {
+				sel.selectAll('.tick text').remove()
+				sel.selectAll('.tick')
+				.filter(d => this.seasonEpisodes[hashmap[d.getTime()]] && this.seasonEpisodes[hashmap[d.getTime()]].episode === 1).remove()
+			})
 
 			const brush = d3.brushX()
 			.extent([[0, 0], [this.width, 25]])
 			.handleSize(1)
-			.on('end', () => {
-				// if( d3.event.sourceEvent.type === 'brush' ) return
-				if( ! d3.event.sourceEvent ) return
-				if( ! d3.event.selection ) return
-				console.log(d3.event);
-				const x0 = d3.event.selection.map(x.invert)
-				console.log(x0);
-				const selection = x0.map(x)
-				// if( selection[0] === selection[1] ) {
-					// selection[1] += x.bandwidth()
-				// }
-				// d3.select('.brush').call(d3.event.target.move, selection)
-				// d3.select('.brush').transition().call(d3.event.target.move, selection)
-				// this.selectEpisodes(x0)
+			.on('brush', () => {
+				if (d3.event.sourceEvent.type === "brush") return;
+				var d0 = d3.event.selection.map(x.invert),
+						d1 = d0.map(d3.timeDay.round);
+
+				// If empty when rounded, use floor instead.
+				if (d1[0] >= d1[1]) {
+					d1[0] = d3.timeDay.floor(d0[0]);
+					d1[1] = d3.timeDay.offset(d1[0]);
+				}
+
+				d3.select('.brush').call(d3.event.target.move, d1.map(x));
+				// console.group('ya')
+				// console.log('event', d3.event);
+				// console.log('selection', d3.event.selection);
+				// console.log('d0', d0);
+				// console.log('d1', d1);
+				// console.log('snapped', d1.map(x));
+				// console.log('seasonEpisodes', seasonEpisodes);
+				// console.log('sel eps', hashmap[d1[0].getTime()], hashmap[d1[1].getTime()]);
+				// console.groupEnd()
+				this.selectEpisodes([hashmap[d1[0].getTime()], hashmap[d1[1].getTime()]])
 			})
 
 			d3.select('.brush')
@@ -143,12 +134,25 @@ export default {
 </script>
 
 <style>
-.episode-selector svg .x-axis .domain {
+svg {
+	shape-rendering: crispEdges;
+}
+.domain {
 	display: none;
 }
 
-.bar:hover {
+.x-axis2 .tick line {
+	stroke-width: 0.5;
+	stroke: red;
+}
+
+/*.bar:hover {
 	fill: red;
+}*/
+
+.bar {
+	stroke: lightblue;
+	fill: steelblue;
 }
 
 .brush .selection {
@@ -157,5 +161,6 @@ export default {
 
 .brush .handle {
 	fill: red;
+	stroke-width: 0.01;
 }
 </style>

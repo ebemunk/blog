@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>Bar bro</h1>
+		<h2>Total Lines</h2>
 		<svg
 			:width="width"
 			:height="height"
@@ -20,6 +20,7 @@
 
 <script>
 import * as d3 from 'd3'
+import { mapGetters } from 'vuex'
 
 export default {
 	name: 'bar-chart',
@@ -43,19 +44,7 @@ export default {
 		},
 		data: {
 			type: Array,
-			default: () => [		{
-						"char_name": "JACK",
-						"lines": 3793
-					},
-					{
-						"char_name": "SAWYER",
-						"lines": 2730
-					},
-					{
-						"char_name": "LOCKE",
-						"lines": 2634
-					},
-			]
+			default: () => []
 		}
 	},
 	mounted() {
@@ -67,7 +56,10 @@ export default {
 		},
 		chartWidth: function () {
 			return this.width - this.padding.left - this.padding.right
-		}
+		},
+		...mapGetters([
+			'episodeSelection'
+		])
 	},
 	watch: {
 		data: function() {
@@ -124,15 +116,15 @@ export default {
 								.duration(750)
 						.attr('width', d => x(d.lines))
 
-			barG
-					.append('text')
-					.filter((d, i) => i < 10)
-						.text(d => d.lines)
-							.attr('dx', d => x(d.lines)-5)
-							.attr('dy', d => y.bandwidth()/2)
-							.attr('dominant-baseline', 'central')
-							.attr('text-anchor', 'end')
-							.style('fill', 'white')
+			// barG
+			// 		.append('text')
+			// 		.filter((d, i) => i < 10)
+			// 			.text(d => d.lines)
+			// 				.attr('dx', d => x(d.lines)-5)
+			// 				.attr('dy', d => y.bandwidth()/2)
+			// 				.attr('dominant-baseline', 'central')
+			// 				.attr('text-anchor', 'end')
+			// 				.style('fill', 'white')
 
 
 				// .merge(sel)
@@ -145,7 +137,7 @@ export default {
 }
 </script>
 
-<style>
+<style module>
 .bar {
 	fill: steelblue;
 }
