@@ -1,7 +1,8 @@
 <template>
 	<div>
 		<EpisodeSelector />
-		<BarChart :data="totalLines">
+		<!-- <BarChart :data="totalLines"> -->
+		<div>{{ episodeSelection }}</div>
 	</div>
 </template>
 
