@@ -11,7 +11,7 @@ export const seasonEpisodes = seasonEpisodeRaw.rows
 .map((row, i) => ({
   ...row,
   key: episodeKey(row),
-  date: new Date(0, 0, i),
+  date: new Date(0, 0, i).getTime(),
   i,
 }))
 

@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<EpisodeSelector />
-		<!-- <BarChart :data="totalLines"> -->
-		<div>{{ episodeSelection }}</div>
+		<BarChart :data="totalLines" />
+		<div>{{ selected[0] }} - {{ selected[1] }}</div>
 	</div>
 </template>
 
@@ -18,6 +18,7 @@ import {
 } from './components'
 
 const pad2 = _.partialRight(_.padStart, 2, 0)
+const getKey = _.partialRight(_.get, 'key')
 
 export default {
 	name: 'app',
@@ -30,6 +31,16 @@ export default {
 			'seasonEpisodes',
 			'episodeSelection'
 		]),
+		selected: function () {
+			const {
+				episodeSelection
+			} = this
+
+			return [
+				getKey(episodeSelection[0]),
+				getKey(_.last(episodeSelection))
+			]
+		},
 		totalLines: function () {
 			console.log('computing');
 			const keepKeys = this.episodeSelection.map(d => d.key)
