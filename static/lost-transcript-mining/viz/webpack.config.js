@@ -28,7 +28,12 @@ module.exports = {
 			},
 			{
 				test: /\.vue$/,
-				use: 'vue-loader'
+				use: {
+					loader: 'vue-loader',
+					options: {
+						postcss: [require('postcss-cssnext')()]
+					}
+				}
 			},
 			{
 				test: /\.json$/,
