@@ -1,5 +1,8 @@
-import _ from 'lodash'
+import { isEqual } from 'lodash'
 
 export const selectEpisodes = (state, selection) => {
-	state.episodeSelection = state.seasonEpisodes.slice(...selection)
+	const newSelection = state.seasonEpisodes.slice(...selection)
+	if( !isEqual(newSelection, state.episodeSelection) )
+	state.episodeSelection = newSelection
+	// state.episodeSelectionRaw = selection
 }

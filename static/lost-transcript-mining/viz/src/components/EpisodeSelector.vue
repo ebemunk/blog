@@ -62,7 +62,7 @@ export default {
 			} = this
 			const brush = d3.brushX()
 			.extent([[0, 0], [this.width, 25]])
-			.handleSize(1)
+			.handleSize(6)
 			.on('brush', () => {
 				if (d3.event.sourceEvent.type === 'brush') return
 				const d0 = d3.event.selection.map(x.invert)
@@ -75,7 +75,8 @@ export default {
 				}
 				d3.select('.brush').call(d3.event.target.move, d1.map(x))
 				const selected = d1.map(d => {
-					return this.seasonEpisodes.find(ep => ep.date===d.getTime()).i
+					const episode = this.seasonEpisodes.find(ep => ep.date===d.getTime())
+					return _.get(episode, 'i')
 				})
 				this.selectEpisodes(selected)
 			})
@@ -136,8 +137,6 @@ export default {
 		.call(episodeAxis)
 		.call(sel => {
 			sel.selectAll('.tick text').remove()
-			// sel.selectAll('.tick')
-			// .filter(d => this.seasonEpisodes[hashmap[d]] && this.seasonEpisodes[hashmap[d]].episode === 1).remove()
 		})
 	},
 	methods: {

@@ -1,22 +1,45 @@
 <template>
-	<div>
-		<h2>Total Lines</h2>
-		<svg
-			:width="width"
-			:height="height"
+<div :class="$style.barChart">
+	<svg
+		:width="width"
+		:height="height"
+	>
+		<g
+			:class="$style.xAxis"
+			:transform="transform"
+		/>
+		<g
+			:class="$style.yAxis"
+			:transform="transform"
+		/>
+		<g
+			:transform="transform"
 		>
-			<g class="x-axis"></g>
-			<g class="y-axis"></g>
-			<g
-				:style="{
-					transform: `translate(${padding.left}px, ${padding.top}px)`
-				}
-			">
-				<g class="bars"></g>
-			</g>
-		</svg>
-	</div>
+			<g :class="$style.bars"></g>
+		</g>
+	</svg>
+</div>
 </template>
+
+<style module>
+.barChart {
+	max-height: 15em;
+	overflow-y: scroll;
+	border: 1px solid black;
+}
+.bars {
+
+}
+.bar {
+	fill: steelblue;
+}
+.xAxis {
+
+}
+.yAxis {
+
+}
+</style>
 
 <script>
 import * as d3 from 'd3'
@@ -29,8 +52,8 @@ export default {
 			type: Object,
 			default: () => ({
 				left: 50,
-				right: 0,
-				top: 50,
+				right: 10,
+				top: 20,
 				bottom: 0,
 			})
 		},
@@ -38,107 +61,116 @@ export default {
 			type: Number,
 			default: () => 960
 		},
-		height: {
+		barHeight: {
 			type: Number,
-			default: () => 500
+			default: () => 20
 		},
 		data: {
 			type: Array,
 			default: () => []
 		}
 	},
-	mounted() {
-		this.render()
-	},
 	computed: {
 		chartHeight: function () {
-			return this.height - this.padding.top - this.padding.bottom
+			return this.data.length*this.barHeight
 		},
 		chartWidth: function () {
 			return this.width - this.padding.left - this.padding.right
 		},
-		...mapGetters([
-			'episodeSelection'
-		])
+		transform: function () {
+			return `translate(${this.padding.left}, ${this.padding.top})`
+		},
+		height: function () {
+			return this.chartHeight + this.padding.top + this.padding.bottom
+		},
+		x: function () {
+			const {
+				chartWidth,
+				data
+			} = this
+
+			return d3.scaleLinear()
+			.range([0, chartWidth])
+			.domain([0, d3.max(data, d => d.lines)])
+		},
+		y: function () {
+			const { data } = this
+
+			return d3.scaleBand()
+			.range([0, this.chartHeight])
+			.padding(0.1)
+			.domain(data.map(d => d.char_name))
+		},
+		xAxis: function () {
+			const {
+				x,
+				chartHeight
+			} = this
+
+			return d3.axisTop(x)
+			.tickSize(-chartHeight)
+		},
+		yAxis: function () {
+			const { y } = this
+
+			return d3.axisLeft(y)
+			.tickSize(0)
+			.tickFormat(d => d.replace(
+				/\w+/g,
+				txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+			))
+		}
+	},
+	mounted() {
+		this.render()
 	},
 	watch: {
-		data: function() {
+		data: function () {
 			this.render()
 		}
 	},
 	methods: {
 		render() {
 			const {
-				chartWidth,
-				chartHeight,
-				data
+				$style,
+				data,
+				y,
+				x
 			} = this
 
-			const x = d3.scaleLinear().range([0, chartWidth])
-			const y = d3.scaleBand().range([0, data.length*25]).padding(0.1)
+			// x axis
+			d3.select(`.${$style.xAxis}`)
+			.transition().duration(750)
+			.call(this.xAxis)
 
-			x.domain([0, d3.max(data, d => d.lines)])
-			y.domain(data.map(d => d.char_name))
+			// y axis
+			d3.select(`.${$style.yAxis}`)
+			.call(this.yAxis)
 
-			const yAxis = d3.axisLeft(y)
-				.tickSize(0)
+			// bar selection
+			var selection = d3.select(`.${$style.bars}`)
+			.selectAll(`.${$style.bar}`)
+			.data(data)
 
-			d3.select('.y-axis')
-			.attr('transform', `translate(${this.padding.left}, ${this.padding.top})`)
-			.call(yAxis)
-			.select('.domain').remove()
+			// remove bars that leave data
+			selection.exit().remove()
 
-			const xAxis = d3.axisTop(x)
-				.tickSize(-this.chartHeight)
+			// place <g>s to hold bars
+			const barG = selection.enter()
+			.append('g')
+				.attr('transform', d => `translate(0, ${y(d.char_name)})`)
 
-			d3.select('.x-axis')
-			.attr('transform', `translate(${this.padding.left}, ${this.padding.top})`)
-			.call(xAxis)
-			.select('.domain').remove()
-
-			var sel = d3.select('.bars').selectAll('.bar')
-				.data(data)
-
-			sel.exit().remove()
-
-			const barG = sel.enter()
-				.append('g')
-					.attr('transform', d => `translate(0, ${y(d.char_name)})`)
-
+			// render bars
 			barG
-					.append('rect')
-						.attr('class', 'bar')
-						.attr('x', 0)
-						.attr('y', 0)
-						.attr('height', y.bandwidth())
-					.merge(sel)
-					.transition()
-								.duration(750)
-						.attr('width', d => x(d.lines))
-
-			// barG
-			// 		.append('text')
-			// 		.filter((d, i) => i < 10)
-			// 			.text(d => d.lines)
-			// 				.attr('dx', d => x(d.lines)-5)
-			// 				.attr('dy', d => y.bandwidth()/2)
-			// 				.attr('dominant-baseline', 'central')
-			// 				.attr('text-anchor', 'end')
-			// 				.style('fill', 'white')
-
-
-				// .merge(sel)
-				// .transition()
-				// 			.duration(750)
-				// 	.attr('width', d => x(d.lines))
-
+			.append('rect')
+				.attr('class', $style.bar)
+				.attr('x', 0)
+				.attr('y', 0)
+				.attr('height', y.bandwidth())
+			.merge(selection)
+			.transition().duration(750)
+				.attr('width', d => x(d.lines))
 		}
 	}
 }
 </script>
-
-<style module>
-.bar {
-	fill: steelblue;
-}
-</style>

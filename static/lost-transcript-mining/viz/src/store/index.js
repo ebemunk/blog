@@ -10,7 +10,7 @@ Vue.use(Vuex)
 
 const state = {
 	seasonEpisodes,
-	episodeSelection: seasonEpisodes,
+	episodeSelection: seasonEpisodes.slice(),
 }
 
 const store = new Vuex.Store({
