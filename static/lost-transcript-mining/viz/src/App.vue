@@ -58,22 +58,22 @@ export default {
 	},
 	computed: {
 		...mapGetters([
-			'seasonEpisodes',
-			'episodeSelection'
+			'episodeSelection',
+			'selectedEpisodes',
 		]),
 		selected: function () {
 			const {
-				episodeSelection
+				selectedEpisodes
 			} = this
 
 			return [
-				getKey(episodeSelection[0]),
-				getKey(_.last(episodeSelection))
+				getKey(selectedEpisodes[0]),
+				getKey(_.last(selectedEpisodes))
 			]
 		},
 		totalLines: function () {
 			// console.log('computing');
-			const keepKeys = this.episodeSelection.map(d => d.key)
+			const keepKeys = this.selectedEpisodes.map(d => d.key)
 			const plz = _(data.totalLines)
 			.filter(d => {
 				// console.log('wa', d);
@@ -105,7 +105,7 @@ export default {
 			return nodes
 		},
 		charCooccurrence: function () {
-			const keepKeys = this.episodeSelection.map(d => d.key)
+			const keepKeys = this.selectedEpisodes.map(d => d.key)
 			const plz = _(data.charCooccurrence)
 			.filter(d => {
 				// console.log('wa', d);
