@@ -1,8 +1,11 @@
 <template>
 <div :class="$style.app">
-	<EpisodeSelector />
+	<EpisodeSelector
+		:selection="episodeSelection"
+	/>
 	<div>{{ selected[0] }} - {{ selected[1] }}</div>
-	<Ex
+	<div><button @click="epx">Select some shit</button></div>
+	<ForceGraph
 		:nodesProp="charOccNodes"
 		:linksProp="charCooccurrence"
 	/>
@@ -30,7 +33,7 @@
 
 <script>
 import _ from 'lodash'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import * as d3 from 'd3'
 
 import * as data from './data'
@@ -38,8 +41,7 @@ import * as data from './data'
 import {
 	BarChart,
 	EpisodeSelector,
-	ForceGraph,
-	Ex
+	ForceGraph
 } from './components'
 
 const pad2 = _.partialRight(_.padStart, 2, 0)
@@ -50,8 +52,7 @@ export default {
 	components: {
 		BarChart,
 		EpisodeSelector,
-		ForceGraph,
-		Ex
+		ForceGraph
 	},
 	data: function () {
 		return {}
@@ -146,6 +147,12 @@ export default {
 	mounted() {
 	},
 	methods: {
+		epx: function () {
+			this.selectEpisodes([0, 16])
+		},
+		...mapActions([
+			'selectEpisodes'
+		])
 	}
 }
 </script>

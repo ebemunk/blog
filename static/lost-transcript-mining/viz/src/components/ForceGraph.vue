@@ -1,171 +1,132 @@
 <template>
-<div>
-  <svg
-    :width="width"
-    :height="height"
-    class="forceGraph"
-  >
-  </svg>
-</div>
+<svg class="keko" width="960" height="500">
+  <g class="links" />
+  <g class="nodes" />
+</svg>
 </template>
 
 <style>
-.forceGraph {
-	shape-rendering: inherit;
+.keko {
+  shape-rendering: initial;
 }
-.link {
-  stroke: #999;
-  stroke-opacity: 0.6;
+.nodes {
+  stroke: white;
+  /*stroke-width: 2px;*/
 }
-
-.node {
-  stroke: #fff;
-  stroke-width: 1.5px;
+.links {
+  stroke: black;
+  stroke-width: 1px;
 }
-
 </style>
 
 <script>
 import * as d3 from 'd3'
+import { mapGetters } from 'vuex'
+import _ from 'lodash'
 
 export default {
   name: 'force-graph',
   props: {
-    width: {
-      type: Number,
-      default: () => 500
-    },
-    height: {
-      type: Number,
-      default: () => 500
-    },
-    nodes: {
-      type: Array,
+    nodesProp: {
+      types: Array,
       default: () => []
     },
-    links: {
-      type: Array,
+    linksProp: {
+      types: Array,
       default: () => []
-    },
-    simulation: {
-      type: Object,
-      default: () => d3.forceSimulation()
-        .force('link', d3.forceLink().id(d => d.id))
-        .force('charge', d3.forceManyBody())
-        // .stop()
     }
   },
-  computed: {
-    color: function () {
-      return d3.scaleOrdinal(d3.schemeCategory20)
+  data: function () {
+    const nodes = _.cloneDeep(this.nodesProp)
+    const links = _.cloneDeep(this.linksProp)
+    return {
+      color: d3.scaleOrdinal(d3.schemeCategory20),
+      nodes,
+      links,
+      node: d3.select('.nodes').selectAll('.node'),
+      link: d3.select('.links').selectAll('.link'),
+      simulation: d3.forceSimulation(nodes)
+      .force('charge', d3.forceManyBody().strength(-50))
+      .force('link', d3.forceLink(links).id(d => d.id))
+      .force('center', d3.forceCenter(960 / 2, 500 / 2))
+      .force('y', d3.forceY().strength(0.2))
+      .force('x', d3.forceX().strength(0.1))
+      .on('tick', () => {
+        console.log('tick');
+        this.node
+        .attr('cx', d => d.x)
+        .attr('cy', d => d.y)
+
+        this.link
+        .attr('x1', d => d.source.x)
+        .attr('y1', d => d.source.y)
+        .attr('x2', d => d.target.x)
+        .attr('y2', d => d.target.y)
+      }),
+      nodeSizeScale: d3.scaleLinear().range([3, 20]),
+      linkOpacityScale: d3.scaleLinear().range([0.1, 1]),
+    }
+  },
+  watch: {
+    nodesProp: function (newVal) {
+      this.nodes = _.cloneDeep(newVal)
+      this.update()
     },
-    throttledRender: function () {
-      return _.debounce(this.render, 1000)
+    linksProp: function (newVal) {
+      this.links = _.cloneDeep(newVal)
+      this.update()
     }
   },
   mounted() {
-    const {
-      width,
-      height,
-      simulation,
-      nodes
-    } = this
+    this.node = d3.select('.nodes').selectAll('.node')
+    this.link = d3.select('.links').selectAll('.link')
 
-    simulation.force('center', d3.forceCenter(width/2, height/2))
-    // const node = d3.select('.forceGraph').selectAll('.node')
-    // const link = d3.select('.forceGraph').selectAll('.link')
-
-    simulation
-    .on('tick', () => {
-      const { node, link } = this
-      // console.log('tick', node, link);
-      if(! node || ! link ) return
-      node
-        .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; })
-
-
-      link.attr("x1", function(d) { return d.source.x; })
-          .attr("y1", function(d) { return d.source.y; })
-          .attr("x2", function(d) { return d.target.x; })
-          .attr("y2", function(d) { return d.target.y; });
-      console.log('tick', node.nodes().length);
-
-    })
-
-    console.log('mounted', nodes);
-    this.render()
-  },
-  watch: {
-    links: function () {
-      this.render()
-    },
-    nodes: function () {
-      this.render()
-    }
+    this.update();
   },
   methods: {
-    render() {
-      const {
-        width,
-        height,
-        color,
-        simulation,
-        nodes,
-        links,
-      } = this
+    update() {
+      const { simulation, color } = this
+      let { nodes, links } = this
 
+      this.nodeSizeScale.domain(d3.extent(this.nodes.map(d => d.r)))
+      this.simulation.force('collision', d3.forceCollide(d => this.nodeSizeScale(d.r)))
+      this.linkOpacityScale.domain(d3.extent(this.links.map(d => d.value)))
+      // Apply the general update pattern to the nodes.
+      this.node = this.node.data(nodes, d => d.id)
 
-                    simulation.nodes(nodes)
-                    simulation.force('link').links(links)
-                    simulation.alpha(1).restart()
+      this.node.exit().transition()
+        .attr('r', 0)
+        .remove()
 
-                    // // See https://github.com/d3/d3-force/blob/master/README.md#simulation_tick
-                    // for (var i = 0, n = Math.ceil(Math.log(simulation.alphaMin()) / Math.log(1 - simulation.alphaDecay())); i < n; ++i) {
-                    //   simulation.tick();
-                    //   console.log('tick');
-                    // }
-                        // this.simulation.restart()
-                        // this.simulation.nodes(this.nodes)
-                        //
-                        //
-                        //
+      this.node = this.node.enter().append('circle')
+          .attr('fill', d => color(d.id))
+        .merge(this.node)
+          .attr('stroke-width', 1)
+          .call(node => node.transition().attr('r', d => this.nodeSizeScale(d.r)))
 
-                              this.link = d3.select('.forceGraph').selectAll('.link').data(this.links)
+      this.node.append('title')
+        .text(d => d.id)
 
-                              this.link.exit().remove()
-                              this.link = this.link.enter().append('line')
-                                .attr('class', 'link')
-                                .merge(this.link)
+      // Apply the general update pattern to the links.
+      this.link = this.link.data(links, d => `${d.source.id}-${d.target.id}`)
 
+      // Keep the exiting links connected to the moving remaining nodes.
+      this.link.exit().transition()
+        .attr('stroke-opacity', 0)
+        .attrTween('x1', d => () => d.source.x)
+        .attrTween('x2', d => () => d.target.x)
+        .attrTween('y1', d => () => d.source.y)
+        .attrTween('y2', d => () => d.target.y)
+        .remove()
 
+      this.link = this.link.enter().append('line')
+        .merge(this.link)
+          .call(link => link.transition().attr('stroke-opacity', d => this.linkOpacityScale(d.value)))
 
-
-
-    this.node = d3.select('.forceGraph').selectAll('.node').data(this.nodes)
-
-                this.node.exit().transition()
-                    .attr("r", 0)
-                    .remove();
-
-
-            this.node = this.node.enter().append('circle')
-              .attr('class', 'node')
-              // .attr('cx', d => d.x)
-              // .attr('cy', d => d.y)
-              // .call(function(node) { node.transition().attr("r", 5); })
-              .attr('r', 5)
-              // .append("title").text(function(d) { return d.id; })
-              // .merge(this.node)
-
-
-
-console.log('nodes', nodes.length, nodes);
-
-      // node.append('title')
-      // .classed('fafa', true)
-      // .text(d => d.id)
-
+      // Update and restart the simulation.
+      simulation.nodes(nodes)
+      simulation.force('link').links(links)
+      simulation.alpha(1).restart()
     }
   }
 }

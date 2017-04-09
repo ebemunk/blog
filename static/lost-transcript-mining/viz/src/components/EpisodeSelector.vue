@@ -29,6 +29,14 @@
 }
 
 .seasonAxis {
+	& :global .tick text {
+		cursor: pointer;
+		fill: #666;
+
+		&:hover {
+			fill: black;
+		}
+	}
 }
 
 .episodeAxis {
@@ -80,8 +88,10 @@ export default {
 			const {
 				seasonEpisodes
 			} = this
+
 			const domain = seasonEpisodes.map(d => new Date(d.date))
 			domain.push(new Date(0, 0, seasonEpisodes.length))
+
 			return domain
 		},
 		x: function () {
@@ -89,6 +99,7 @@ export default {
 			.domain(
 				d3.extent(this.domain)
 			)
+
 			return x
 		},
 		brush: function () {
@@ -112,7 +123,6 @@ export default {
 					d1[0] = d3.timeDay.floor(d0[0])
 					d1[1] = d3.timeDay.offset(d1[0])
 				}
-
 
 				const selected = d1.map(d => {
 					const episode = this.seasonEpisodes.find(ep => ep.date === d.getTime())
@@ -185,6 +195,21 @@ export default {
 			sel.selectAll('.tick text')
 				.attr('text-anchor', 'start')
 		})
+		.call(sel => {
+			sel.selectAll('.tick text')
+				.on('click', (d, i) => {
+					const seasons = [
+						[0, 24],
+						[24, 47],
+						[47, 69],
+						[69, 82],
+						[82, 94],
+						[94, 110]
+					]
+
+					this.selectEpisodes(seasons[i])
+				})
+		})
 
 		d3.select(`.${$style.episodeAxis}`)
 		.call(episodeAxis)
@@ -195,9 +220,11 @@ export default {
 	watch: {
 		selection: function (newVal) {
 			if( _.every(newVal, val => !val) ) return
+
 			if( newVal[1] === undefined ) newVal[1] = this.seasonEpisodes.length
 
-			d3.select(`.${this.$style.brush}`).call(this.brush.move, newVal.map(v => new Date(0,0,v)).map(this.x))
+			d3.select(`.${this.$style.brush}`)
+			.call(this.brush.move, newVal.map(v => new Date(0,0,v)).map(this.x))
 		}
 	},
 	methods: {
