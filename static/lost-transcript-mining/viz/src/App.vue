@@ -1,33 +1,51 @@
 <template>
-<div :class="$style.app">
-	<EpisodeSelector
-		:selection="episodeSelection"
-	/>
-	<div>{{ selected[0] }} - {{ selected[1] }}</div>
-	<div><button @click="epx">Select some shit</button></div>
-	<ForceGraph
-		:nodesProp="charOccNodes"
-		:linksProp="charCooccurrence"
-	/>
-	<BarChart
-		:data="totalLines"
-		:class="$style.totalLines"
-	/>
-</div>
+	<div :class="$style.app">
+		<EpisodeSelector
+			:selection="episodeSelection"
+		/>
+		<div>{{ selected[0] }} - {{ selected[1] }}</div>
+		<!-- <div><button @click="epx">Select some shit</button></div> -->
+		<div :class="$style.row">
+			<div :class="$style.force">
+				<ForceGraph
+					:width="650"
+					:height="500"
+					:data="charCooccurrence"
+				/>
+			</div>
+			<div :class="$style.bar">
+				<BarChart
+					:width="650"
+					:data="totalLines"
+					:class="$style.totalLines"
+				/>
+			</div>
+		</div>
+	</div>
 </template>
 
 <style module>
+div {
+	/*max-width: 960px;*/
+}
+
 .app {
 	display: flex;
 	flex-direction: column;
 }
 
-.totalLines {
-	flex: 0 0 50%;
+.force, .bar {
+	width: 50%;
 }
 
-.forceGraph {
-	border: 1px solid black
+.bar {
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
 }
 </style>
 
@@ -55,7 +73,8 @@ export default {
 		ForceGraph
 	},
 	data: function () {
-		return {}
+		return {
+		}
 	},
 	computed: {
 		...mapGetters([
@@ -63,7 +82,6 @@ export default {
 			'selectedEpisodes',
 			'totalLines',
 			'charCooccurrence',
-			'charOccNodes',
 		]),
 		selected: function () {
 			const {
@@ -74,7 +92,7 @@ export default {
 				getKey(selectedEpisodes[0]),
 				getKey(_.last(selectedEpisodes))
 			]
-		},
+		}
 	},
 	mounted() {
 	},
