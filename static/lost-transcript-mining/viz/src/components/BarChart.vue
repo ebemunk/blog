@@ -1,5 +1,4 @@
 <template>
-<div :class="$style.barChart">
 	<svg
 		:width="width"
 		:height="height"
@@ -18,15 +17,9 @@
 			<g :class="$style.bars"></g>
 		</g>
 	</svg>
-</div>
 </template>
 
 <style module>
-.barChart {
-	max-height: 15em;
-	overflow-y: scroll;
-	border: 1px solid black;
-}
 .bars {
 
 }

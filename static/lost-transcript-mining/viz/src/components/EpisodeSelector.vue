@@ -1,8 +1,8 @@
 <template>
-<div :class="$style.episodeSelector">
 	<svg
 		:width="width"
 		:height="height"
+		:class="$style.episodeSelector"
 	>
 		<g transform="translate(0, 0)">
 			<g
@@ -16,7 +16,6 @@
 			<g :class="$style.brush"></g>
 		</g>
 	</svg>
-</div>
 </template>
 
 <style module>
