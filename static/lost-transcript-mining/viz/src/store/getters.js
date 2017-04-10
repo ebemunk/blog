@@ -11,38 +11,35 @@ export const episodeSelection = state => state.episodeSelection
 
 export const selectedEpisodes = state => state.seasonEpisodes.slice(...state.episodeSelection)
 
-export const totalLines = (state, getters) => {
-  const m = new Measure('totalLines')
-  m.start()
-  const keepKeys = getters.selectedEpisodes.map(d => d.key)
-  const plz = _(data.totalLines)
-  .filter(d => {
-    return keepKeys.includes(`S${pad2(d.season)}-E${pad2(d.episode)}`)
-  })
-  .groupBy('char_name')
-  .map((char, key) => ({
-    char_name: key,
-    lines: char.reduce((total, val) => {
-      return total + val.lines
-    }, 0)
-  }))
-  .orderBy('lines', 'desc')
-  .value()
-  m.end().log()
-  return plz
+export const filterDataBySelectedEpisodes = (state, getters) => {
+  return data => {
+    const keys = getters.selectedEpisodes.map(d => d.key)
+
+    return _.chain(data)
+      .filter(d => keys.includes(`S${pad2(d.season)}-E${pad2(d.episode)}`))
+  }
 }
 
+export const totalLines = (state, getters) => {
+  const m = new Measure('totalLines').start()
+
+  return getters.filterDataBySelectedEpisodes(data.totalLines)
+    .groupBy('char_name')
+    .map((char, key) => ({
+      char_name: key,
+      lines: char.reduce((total, val) => {
+        return total + val.lines
+      }, 0)
+    }))
+    .orderBy('lines', 'desc')
+    .tap(() => m.end().log())
+    .value()
+}
 
 export const charCooccurrence = (state, getters) => {
-  const m = new Measure('charCooccurrence')
-  m.start()
-  const keepKeys = getters.selectedEpisodes.map(d => d.key)
-  const plz = _(data.charCooccurrence)
-  .filter(d => {
-    // console.log('wa', d);
-    return keepKeys.includes(`S${pad2(d.season)}-E${pad2(d.episode)}`)
-  })
-  // .tap(plzl => console.log('ya', plzl))
+  const m = new Measure('charCooccurrence').start()
+
+  const links = getters.filterDataBySelectedEpisodes(data.charCooccurrence)
   .reduce((map, val) => {
     const key = _.pick(val, ['from_char', 'to_char'])
     if( ! map.has(key) ) {
@@ -53,8 +50,7 @@ export const charCooccurrence = (state, getters) => {
     }
     return map
   }, new Map())
-
-  const plz2 = Array.from(plz)
+  .thru(Array.from)
   .map(d => {
     return {
       source: d[0].from_char,
@@ -62,25 +58,25 @@ export const charCooccurrence = (state, getters) => {
       value: d[1]
     }
   })
+  .tap(() => m.end().log())
+  .value()
 
-  // console.log('val', plz2);
-  m.end().log()
-  return plz2
-}
-
-export const charOccNodes = (state, getters) => {
-  const m = new Measure('charOccNodes')
-  m.start()
-  const { charCooccurrence } = getters
-  const nodes = _.uniq(charCooccurrence.map(d => d.source).concat(charCooccurrence.map(d => d.target)))
+  const nodes = _([
+    ...links.map(d => d.source),
+    ...links.map(d => d.target)
+  ])
+  .uniq()
   .map(d => {
-    const r = charCooccurrence.filter(item => item.target === d).length
+    const r = links.filter(item => item.target === d).length
     return {
       id: d,
       r: Math.max(r+2, 3)
     }
   })
+  .value()
 
-  m.end().log()
-  return nodes
+  return {
+    nodes,
+    links
+  }
 }
