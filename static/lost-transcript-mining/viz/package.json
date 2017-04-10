@@ -23,7 +23,8 @@
     "vue-loader": "^11.1.4",
     "vue-template-compiler": "^2.1.10",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
+    "webpack-dev-server": "^2.3.0",
+    "worker-loader": "^0.8.0"
   },
   "dependencies": {
     "appmetrics.js": "^0.0.7",

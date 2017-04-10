@@ -19,6 +19,9 @@ module.exports = {
 		port: 9000,
 		hot: true
 	},
+	resolve: {
+		extensions: ['.js', '.vue']
+	},
 	module: {
 		rules: [
 			{
@@ -34,6 +37,10 @@ module.exports = {
 						postcss: [require('postcss-cssnext')()]
 					}
 				}
+			},
+			{
+				test: /\.worker\.js$/,
+				use: 'worker-loader',
 			},
 			{
 				test: /\.json$/,
