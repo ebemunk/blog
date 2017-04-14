@@ -64,8 +64,6 @@ import _ from 'lodash'
 import Worker from './ForceGraph.worker'
 import Loader from '../Loader'
 
-console.log('wut', Loader);
-
 export default {
   name: 'force-graph',
   components: {
@@ -102,6 +100,7 @@ export default {
         .domain(d3.extent(nodes.map(d => d.r))),
       worker: new Worker(),
       loading: 0,
+      highlighted: false,
     }
   },
   watch: {
@@ -157,11 +156,16 @@ export default {
         linkOpacityScale,
         width,
         height,
+        $style,
+        onNodeClick
       } = this
 
-      let { nodes, links } = data
-      let node = d3.select(`.${this.$style.nodes}`).selectAll(`.${this.$style.node}`)
-      let link = d3.select(`.${this.$style.links}`).selectAll(`.${this.$style.link}`)
+      const { nodes, links } = data
+      this.nodes = nodes
+      this.links = links
+
+      let node = d3.select(`.${$style.nodes}`).selectAll(`.${$style.node}`)
+      let link = d3.select(`.${$style.links}`).selectAll(`.${$style.link}`)
 
       node = node.data(nodes, d => d.id)
       node.exit().transition()
@@ -169,39 +173,13 @@ export default {
         .remove()
       node = node.enter().append('circle')
           .attr('fill', d => colorScale(d.id))
-          .attr('class', this.$style.node)
+          .attr('class', $style.node)
           .attr('r', 1)
         .merge(node)
           .attr('cx', d => d.x)
           .attr('cy', d => d.y)
           .call(node => node.transition().attr('r', d => nodeSizeScale(d.r)))
-          .on('click', d => {
-            console.log('cl', d);
-            if( d.focused ) {
-              node.transition().style('opacity', 1)
-              link.transition().attr('stroke-opacity', d1 => this.linkOpacityScale(d1.value))
-              d.focused = false
-              return
-            }
-            const filteredLinks = links
-              .filter(l => l.source.id === d.id || l.target.id === d.id)
-            const hLinks = filteredLinks
-              .map(l => l.index)
-            const hNodes = _.chain(filteredLinks)
-              .reduce((acc, val) => acc.concat([val.source.id, val.target.id]), [])
-              .uniq()
-              .value()
-            console.log({hNodes, hLinks});
-            node.transition().style('opacity', 0.2)
-              .filter(d1 => hNodes.includes(d1.id))
-              .style('opacity', 1)
-            link.transition().attr('stroke-opacity', 0)
-              .filter(d1 => hLinks.includes(d1.index))
-              .attr('stroke-opacity', d1 => this.linkOpacityScale(d1.value))
-
-            d.focused = true
-          })
-
+          .on('click', onNodeClick)
       node.append('title')
         .text(d => d.id)
 
@@ -209,7 +187,7 @@ export default {
       link.exit()
         .remove()
       link = link.enter().append('line')
-        .attr('class', this.$style.link)
+        .attr('class', $style.link)
         .merge(link)
           .attr('x1', d => d.source.x)
           .attr('y1', d => d.source.y)
@@ -218,24 +196,67 @@ export default {
           .attr('stroke-opacity', d => linkOpacityScale(d.value))
 
       setTimeout(() => {
-        const { width, height } = this
-
-        let bounds = d3.select(`.${this.$style.nodes}`).node().getBBox()
+        let bounds = d3.select(`.${$style.nodes}`).node().getBBox()
         bounds = [[bounds.x, bounds.y], [bounds.x+bounds.width, bounds.y+bounds.height]]
-        const dx = bounds[1][0] - bounds[0][0]
-        const dy = bounds[1][1] - bounds[0][1]
-        const x = (bounds[0][0] + bounds[1][0]) / 2
-        const y = (bounds[0][1] + bounds[1][1]) / 2
-        const scale = .9 / Math.max(dx / width, dy / height)
-        const translate = [width / 2 - scale * x, height / 2 - scale * y]
+        this.zoomToBounds(bounds)
+      }, 250)
+    },
+    onNodeClick(data) {
+      const {
+        linkOpacityScale,
+        links,
+        $style
+      } = this
 
-        d3.select(`.${this.$style.viewport}`)
-        .transition()
-          .duration(750)
-          .attr('transform', `translate(${translate}) scale(${scale})`)
-      }, 150)
+      let node = d3.select(`.${$style.nodes}`).selectAll(`.${$style.node}`)
+      let link = d3.select(`.${$style.links}`).selectAll(`.${$style.link}`)
 
+      if( this.highlighted === data.id ) {
+        node.transition().style('opacity', 1)
+        link.transition().attr('stroke-opacity', d => linkOpacityScale(d.value))
+        this.highlighted = false
+        return
+      }
 
+      const filteredLinks = links
+        .filter(d => d.source.id === data.id || d.target.id === data.id)
+      const hLinks = filteredLinks
+        .map(d => d.index)
+      const hNodes = _.chain(filteredLinks)
+        .reduce((acc, val) => acc.concat([val.source.id, val.target.id]), [])
+        .uniq()
+        .value()
+
+      node.transition().style('opacity', 0.2)
+        .filter(d => hNodes.includes(d.id))
+        .style('opacity', 1)
+      link.transition().attr('stroke-opacity', 0)
+        .filter(d => hLinks.includes(d.index))
+        .attr('stroke-opacity', d => linkOpacityScale(d.value))
+
+      this.highlighted = data.id
+    },
+    getBoundsFromSelection(selection) {
+
+    },
+    zoomToBounds([[x0, y0], [x1, y1]]) {
+      const {
+        width,
+        height,
+        $style
+      } = this
+
+      const dx = x1 - x0
+      const dy = y1 - y0
+      const x = (x0 + x1) / 2
+      const y = (y0 + y1) / 2
+      const scale = .9 / Math.max(dx / width, dy / height)
+      const translate = [width / 2 - scale * x, height / 2 - scale * y]
+
+      d3.select(`.${$style.viewport}`)
+      .transition()
+        .duration(750)
+        .attr('transform', `translate(${translate}) scale(${scale})`)
     }
   }
 }
