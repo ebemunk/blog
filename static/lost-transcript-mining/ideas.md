@@ -15,7 +15,7 @@
 
 - [ ] Stage directions per char
 
-- [ ] Char closeness
+- [x] Char closeness (co-occurrence)
 	- which chars appear together often (network/edge graph)
 
 - [ ] Word bubble

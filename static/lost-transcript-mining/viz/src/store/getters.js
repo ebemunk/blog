@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import Measure from 'appmetrics.js'
+import { Metric } from '../util'
 
 import * as data from '../data'
 
@@ -21,7 +21,7 @@ export const filterDataBySelectedEpisodes = (state, getters) => {
 }
 
 export const totalLines = (state, getters) => {
-  const m = new Measure('totalLines').start()
+  const m = new Metric('totalLines').start()
 
   return getters.filterDataBySelectedEpisodes(data.totalLines)
     .groupBy('char_name')
@@ -37,7 +37,7 @@ export const totalLines = (state, getters) => {
 }
 
 export const charCooccurrence = (state, getters) => {
-  const m = new Measure('charCooccurrence').start()
+  const m = new Metric('charCooccurrence').start()
 
   const links = getters.filterDataBySelectedEpisodes(data.charCooccurrence)
   .reduce((map, val) => {

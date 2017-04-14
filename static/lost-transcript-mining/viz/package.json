@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "webpack -p",
+    "build": "rimraf dist/* && webpack -p",
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
@@ -20,6 +20,7 @@
     "jest": "^19.0.2",
     "json-loader": "^0.5.4",
     "postcss-cssnext": "^2.10.0",
+    "rimraf": "^2.6.1",
     "vue-loader": "^11.1.4",
     "vue-template-compiler": "^2.1.10",
     "webpack": "^2.2.1",

@@ -40,11 +40,13 @@ module.exports = {
 			},
 			{
 				test: /\.worker\.js$/,
-				use: 'worker-loader',
+				use: ['worker-loader', 'babel-loader'],
+				exclude: /node_modules/
 			},
 			{
 				test: /\.json$/,
-				use: 'json-loader'
+				use: 'json-loader',
+				exclude: /node_modules/
 			}
 		]
 	},
