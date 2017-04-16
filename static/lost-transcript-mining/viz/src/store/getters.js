@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import R from 'ramda'
 import { Metric } from '../util'
 
 import * as data from '../data'
@@ -79,4 +80,58 @@ export const charCooccurrence = (state, getters) => {
     nodes,
     links
   }
+}
+
+export const wordsChars = (state, getters) => {
+  const m = new Metric('wordsChars ramda').start()
+
+  const keys = getters.selectedEpisodes.map(d => d.key)
+  const lol = R.pipe(
+    R.filter(d => keys.includes(`S${pad2(d.season)}-E${pad2(d.episode)}`)),
+    R.groupBy(d => `S${pad2(d.season)}-E${pad2(d.episode)}`),
+    R.map(R.map(d => d.words)),
+    R.toPairs,
+    R.tap(v => console.log('yxxxa;', v))
+  )(data.wordsChars)
+
+  const maxActs = Math.max(...lol.map(d => d[1].length))
+  const fillArr = length => length < maxActs ? Array(maxActs - length).fill(0) : []
+
+  console.log('keke', maxActs);
+
+  const faf = R.pipe(
+    R.map(([key, data]) => [key, data.concat(fillArr(data.length))]),
+    R.map(([key, data]) => ({
+      key,
+      total: R.sum(data),
+      ...R.zipObj(R.keys(data).map(d => `scene-${+d+1}`), R.values(data))
+    })),
+  )(lol)
+
+  console.log('fafa', faf);
+
+  m.end().log()
+  return faf
+}
+
+export const wordsCharsxx = (state, getters) => {
+  const m = new Metric('wordsChars').start()
+
+  const filtered = getters.filterDataBySelectedEpisodes(data.wordsChars)
+  .groupBy(d => `S${pad2(d.season)}-E${pad2(d.episode)}`)
+
+  // const max = filtered.tap(v => console.log('wtff', v)).maxBy(d => { console.log('yayaxxx', d); return d.length})
+  // .value()
+  //
+  // console.log('yayaya', max);
+
+  return filtered.map((ep, key) => ep.reduce((acc, d) => ({
+    ...acc,
+    [`scene-${d.scene}`]: d.words,
+    total: acc.total + d.words
+  }), {key, total: 0}))
+  .tap(v => console.log('ya', v))
+  .tap(() => m.end().log())
+  .value()
+
 }

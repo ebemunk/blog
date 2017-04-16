@@ -4,6 +4,11 @@
 			:selection="episodeSelection"
 		/>
 		<div>{{ selected[0] }} - {{ selected[1] }}</div>
+		<div>
+			<LengthChart
+				:data="wordsChars"
+			/>
+		</div>
 		<!-- <div><button @click="epx">Select some shit</button></div> -->
 		<div :class="$style.row">
 			<div :class="$style.force">
@@ -25,6 +30,10 @@
 </template>
 
 <style module>
+body {
+	/*background-color: #282c34;*/
+}
+
 div {
 	/*max-width: 960px;*/
 }
@@ -59,7 +68,8 @@ import * as data from './data'
 import {
 	BarChart,
 	EpisodeSelector,
-	ForceGraph
+	ForceGraph,
+	LengthChart
 } from './components'
 
 const pad2 = _.partialRight(_.padStart, 2, 0)
@@ -70,7 +80,8 @@ export default {
 	components: {
 		BarChart,
 		EpisodeSelector,
-		ForceGraph
+		ForceGraph,
+		LengthChart
 	},
 	data: function () {
 		return {
@@ -82,6 +93,8 @@ export default {
 			'selectedEpisodes',
 			'totalLines',
 			'charCooccurrence',
+			'wordsChars',
+			'wordsCharsxx'
 		]),
 		selected: function () {
 			const {

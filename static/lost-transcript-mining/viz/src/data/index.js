@@ -18,3 +18,5 @@ export const seasonEpisodes = seasonEpisodeRaw.rows
 export const totalLines = totalLinesRaw.rows
 
 export charCooccurrence from './char-cooccurrence'
+
+export wordsChars from './words-chars'
