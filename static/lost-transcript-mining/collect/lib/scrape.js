@@ -111,6 +111,32 @@ export function parseLine(text) {
 
 	const charLine = line.trim().match(/^(.+?)\:\s*(.+)?$/)
 	if( ! charLine ) {
+		// special case handling
+
+		// missing semicolon
+		if( line.includes('KATE  Hi, Cassidy.') ) {
+			return lineType({
+				tagName: 'p',
+				text: 'KATE: Hi, Cassidy.'
+			})
+		}
+		// missing brackets
+		if( line.includes('Eva hands the picture to Nadia')
+			|| line.includes('Flashback - 32 days ago.')
+			|| line.includes('Keamy sits down')
+	 	) {
+			return lineType({
+				tagName: 'p',
+				text: `[${line}]`
+			})
+		}
+		// missing opening bracket
+		if( line.includes('On-Island - Sayid is') ) {
+			return lineType({
+				tagName: 'p',
+				text: `[${line}`
+			})
+		}
 		console.log('unparseable line:', text)
 		console.log()
 		return

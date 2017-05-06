@@ -4,11 +4,12 @@
 			:selection="episodeSelection"
 		/>
 		<div>{{ selected[0] }} - {{ selected[1] }}</div>
-		<div>
+		<Sunburst />
+		<!-- <div>
 			<LengthChart
 				:data="wordsChars"
 			/>
-		</div>
+		</div> -->
 		<!-- <div><button @click="epx">Select some shit</button></div> -->
 		<div :class="$style.row">
 			<div :class="$style.force">
@@ -69,7 +70,8 @@ import {
 	BarChart,
 	EpisodeSelector,
 	ForceGraph,
-	LengthChart
+	LengthChart,
+	Sunburst
 } from './components'
 
 const pad2 = _.partialRight(_.padStart, 2, 0)
@@ -81,7 +83,8 @@ export default {
 		BarChart,
 		EpisodeSelector,
 		ForceGraph,
-		LengthChart
+		LengthChart,
+		Sunburst,
 	},
 	data: function () {
 		return {

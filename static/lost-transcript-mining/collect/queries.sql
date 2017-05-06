@@ -59,3 +59,11 @@ CREATE TABLE public.dialog
   directions json DEFAULT '[]'::json,
   raw text DEFAULT NULL
 )
+
+-- watson persoanlity insights
+CREATE TABLE public.personality
+(
+  id SERIAL NOT NULL,
+  char_name character varying DEFAULT NULL,
+  profile json DEFAULT '{}'::json
+)
