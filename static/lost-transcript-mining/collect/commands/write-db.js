@@ -1,57 +1,52 @@
-import { readdir, readFile } from 'fs'
-
-import _ from 'lodash'
+import R from 'ramda'
 import Promise from 'bluebird'
 import ProgressBar from 'progress'
-import c from 'chalk'
-import { Pool } from 'pg'
 
-import { insertObj } from '../lib'
+import {
+	readDir,
+	readFile,
+	insertObj,
+	logger
+} from '../util'
+import { getPool } from '../db'
 
-const log = _.partial(console.log, c.bgGreen('write-db'))
-const readDirAsync = Promise.promisify(readdir)
-const readFileAsync = Promise.promisify(readFile)
+const log = logger('write-db')
 
-export default async function writeDb(opts) {
+export default async function writeDB(opts) {
 	const {
 		concurrency
 	} = opts
 
-	log('starting')
-	log('reading tmp/json')
-	const dir = (await readDirAsync('tmp/json'))
-	.filter(name => /\.json$/.test(name))
-	log(`found ${c.blue(dir.length)} episode files`)
+	const rows = await R.pipeP(
+		() => readDir('data/json'),
+		R.filter(name => /\.json$/.test(name)),
+		R.tap(() => log('reading data/json')),
+		R.partialRight(Promise.map, [
+			file => readFile(`data/json/${file}`),
+			{ concurrency }
+		]),
+		R.map(JSON.parse),
+		R.flatten,
+		R.map(R.evolve({
+			directions: JSON.stringify
+		})),
+	)()
 
-	log('parsing files...')
-	let progress = new ProgressBar(':current/:total :bar :eta', dir.length)
-	const rows = []
-	await Promise.map(dir, async (file) => {
-		const text = await readFileAsync(`tmp/json/${file}`)
-		const json = JSON.parse(text)
-		json.map(row => rows.push(row))
+	log(`found ${rows.length} rows, writing`)
+
+	const progress = new ProgressBar(':current/:total :bar :eta', rows.length)
+	const pool = getPool()
+
+	await Promise.map(rows, async row => {
+		try {
+			await pool.query(...insertObj(row))
+		} catch (e) {
+			log('failed', e, row)
+		}
 		progress.tick()
-	}, {concurrency})
-
-	log('connection to db')
-	const pool = new Pool({
-		user: 'postgres',
-		password: 'dr4w3r5',
-		host: 'localhost',
-		port: 5432,
-		database: 'lost_text_mining',
-		Promise
-	})
-
-	log(`found ${c.blue(rows.length)} rows to insert`)
-	log('writing to db...')
-	progress = new ProgressBar(':current/:total :bar :eta', rows.length)
-	await Promise.map(rows, async (row) => {
-		row.directions = JSON.stringify(row.directions)
-		await pool.query(...insertObj(row))
-		progress.tick()
-	}, {concurrency})
+	}, { concurrency })
 
 	await pool.end()
-	log('done')
+
+	return rows
 }

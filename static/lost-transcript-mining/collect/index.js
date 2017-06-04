@@ -1,7 +1,7 @@
 import { default as cli } from 'commander'
 
 import { default as packageJson } from './package.json'
-import { scrape, writeDb, lol } from './commands'
+import { scrape, parse, writeDb, personality } from './commands'
 
 cli
 .version(packageJson.version)
@@ -15,20 +15,26 @@ cli
 
 cli
 .command('scrape')
-.description('scrape transcripts and save as json')
+.description('scrape episode html')
 .option('-c, --concurrency <num>', 'promise concurrency', Infinity)
-.option('--use-cache', 'use local cache', Infinity)
 .action(scrape)
 
 cli
+.command('parse')
+.description('parse episode html and save as json')
+.option('-c, --concurrency <num>', 'promise concurrency', Infinity)
+.action(parse)
+
+cli
 .command('write-db')
-.description('write scraped episodes to db')
+.description('write parsed jsons to db')
 .option('-c, --concurrency <num>', 'promise concurrency', Infinity)
 .action(writeDb)
 
 cli
-.command('watson')
-.description('call watson api')
-.action(lol)
+.command('personality')
+.description('write parsed jsons to db')
+.option('-c, --concurrency <num>', 'promise concurrency', Infinity)
+.action(personality)
 
 cli.parse(process.argv)

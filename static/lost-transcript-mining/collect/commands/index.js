@@ -1,3 +1,4 @@
 export scrape from './scrape'
+export parse from './parse'
 export writeDb from './write-db'
-export lol from './watson'
+export personality from './personality'
