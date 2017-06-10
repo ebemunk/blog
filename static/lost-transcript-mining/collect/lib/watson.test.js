@@ -30,8 +30,8 @@ describe('watson', () => {
 
 	describe('episodeTone', () => {
 		it('should make it happen', async () => {
-			const kek = await watson.episodeTone(db.getPool(), 1, 1)
-			console.log(kek);
+			const kek = await watson.episodeTone(db.getPool(), 1, 2)
+			console.log(kek[0]);
 		})
 	})
 })
