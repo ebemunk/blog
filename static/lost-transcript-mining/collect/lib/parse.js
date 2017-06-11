@@ -129,6 +129,18 @@ export function parseText(text) {
 	}
 	const char_name = charLine[1].trim().toUpperCase()
 	line = charLine[2] || ''
+	// replace line with subtitle if it exists
+	directions.map(direction => {
+		const sub = direction.match(/Subtitled?: (.+)/)
+		// replace line with subtitle and remove direction
+		if( sub && sub[1] ) {
+			line = sub[1]
+			return false
+		}
+		return direction
+	})
+	.filter(Boolean)
+
 	return {
 		char_name,
 		line,

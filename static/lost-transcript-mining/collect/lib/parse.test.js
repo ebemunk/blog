@@ -82,5 +82,8 @@ describe('parseText', () => {
 
 		text = `TOM: I didn\'t say you were going back to the Island. You\'re not going on that boat so you can swab decks, Michael.`
 		expect(parseText(text)).toMatchSnapshot()
+
+		text = `JIN: 내 옆에서 없어지면 안 돼. 내가 어디로 가든지 꼭 따라와. 알겠지? [Sun nods.] 다른 사람 신경쓰지 말고 우린 같이 있어야 돼. [Subtitle: You must not leave my sight. You must follow me wherever I go. Do you understand? Don't worry about the others. We need to stay together.]`
+		expect(parseText(text)).toMatchSnapshot()
 	})
 })

@@ -1892,3 +1892,14 @@ Object {
   "line": "I didn't say you were going back to the Island. You're not going on that boat so you can swab decks, Michael.",
 }
 `;
+
+exports[`parseText should parse correctly 6`] = `
+Object {
+  "char_name": "JIN",
+  "directions": Array [
+    "Sun nods",
+    "Subtitle: You must not leave my sight. You must follow me wherever I go. Do you understand? Don't worry about the others. We need to stay together",
+  ],
+  "line": "You must not leave my sight. You must follow me wherever I go. Do you understand? Don't worry about the others. We need to stay together",
+}
+`;
