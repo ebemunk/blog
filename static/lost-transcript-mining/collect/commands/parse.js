@@ -19,6 +19,8 @@ export default async function scrape(opts) {
 	} = opts
 
 	return Promise.map(readDir('data/html'), async file => {
+		if( file === '.gitignore' ) return
+
 		const [, season, episode] = /(\d+)-(\d+)/.exec(file)
 
 		const content = await readFile(`data/html/${file}`)
