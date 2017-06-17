@@ -19,7 +19,7 @@ const {
 	PERSONALITY_INSIGHTS_PASSWORD
 } = process.env
 
-const toneAnalyzer = Promise.promisifyAll(tone_analyzer({
+export const toneAnalyzer = Promise.promisifyAll(tone_analyzer({
 	version: 'v3',
 	version_date: '2016-05-19',
 	username: TONE_ANALYZER_USERNAME,
@@ -42,17 +42,50 @@ export async function charProfile(pool, char_name) {
 	return profile
 }
 
-import {writeFile} from '../util'
-export async function episodeTone(pool, season, episode) {
+export async function allSentenceTones(text) {
+	let txt = text
+	const tones = []
+
+	while( txt ) {
+		const tone = await toneAnalyzer.toneAsync({
+			text: txt
+		})
+		tones.push(tone)
+
+		const nextChunk = R.last(tone.sentences_tone).input_to + 1
+		txt = txt.substr(nextChunk)
+	}
+
+	return tones
+}
+
+export function episodeText(pool, season, episode) {
 	return R.pipeP(
-		sql => pool.query(sql),
+		(pool, season, episode) => pool.query(queries.episodeText(season, episode)),
 		R.path(['rows', '0', 'text']),
-		// str.match( /[^\.!\?]+[\.!\?]+/g )
-		R.split(/[\.!\?]+/),
-		R.splitEvery(100),
-		// R.splitEvery(128*1024),
-		// R.tap(v => console.log('ya', v.length))
-		// text => toneAnalyzer.toneAsync({ text }),
-		// res => writeFile('haha.json', JSON.stringify(res, null, 2))
-	)(queries.episodeText(season, episode))
+		R.replace('...', '…')
+	)(pool, season, episode)
+}
+
+export function episodeTone(pool, season, episode) {
+	return R.pipeP(
+		exports.episodeText,
+		exports.allSentenceTones,
+		R.addIndex(R.reduce)(
+			(acc, val, i) => ({
+				document_tone: i === 0 ? val.document_tone : acc.document_tone,
+				sentences_tone: [
+					...acc.sentences_tone,
+					...R.map(R.pick([
+						'text',
+						'tone_categories'
+					]))(val.sentences_tone)
+				]
+			}),
+			{
+				document_tone: {},
+				sentences_tone: []
+			}
+		)
+	)(pool, season, episode)
 }
