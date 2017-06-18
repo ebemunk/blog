@@ -17,8 +17,11 @@ export default async function writeDB(opts) {
 		concurrency
 	} = opts
 
-	const rows = await R.pipeP(
-		() => readDir('data/json'),
+	const pool = getPool()
+	let progress
+
+	return R.pipeP(
+		readDir,
 		R.filter(name => /\.json$/.test(name)),
 		R.tap(() => log('reading data/json')),
 		R.partialRight(Promise.map, [
@@ -30,23 +33,18 @@ export default async function writeDB(opts) {
 		R.map(R.evolve({
 			directions: JSON.stringify
 		})),
-	)()
-
-	log(`found ${rows.length} rows, writing`)
-
-	const progress = new ProgressBar(':current/:total :bar :eta', rows.length)
-	const pool = getPool()
-
-	await Promise.map(rows, async row => {
-		try {
-			await pool.query(...insertObj(row))
-		} catch (e) {
-			log('failed', e, row)
-		}
-		progress.tick()
-	}, { concurrency })
-
-	await pool.end()
-
-	return rows
+		R.tap(rows => {
+			progress = new ProgressBar(':current/:total :bar :eta', rows.length)
+			log(`found ${rows.length} rows, writing`)
+		}),
+		R.map(R.partialRight(insertObj, ['dialog'])),
+		R.partialRight(Promise.map, [
+			R.pipeP(
+				insert => pool.query(...insert),
+				R.tap(() => progress.tick())
+			),
+			{ concurrency }
+		]),
+		() => pool.end()
+	)('data/json')
 }

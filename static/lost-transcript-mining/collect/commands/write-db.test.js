@@ -24,9 +24,8 @@ describe('writeDb', () => {
 			end: jest.fn(() => Promise.resolve())
 		})
 
-		const rows = await writeDb({ concurrency: 1 })
+		await writeDb({ concurrency: 1 })
 
-		expect(rows).toMatchSnapshot()
 		expect(queryStub.mock.calls).toMatchSnapshot()
 	})
 })
