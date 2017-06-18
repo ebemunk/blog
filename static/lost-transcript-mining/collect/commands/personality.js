@@ -10,7 +10,7 @@ import {
 	queries
 } from '../db'
 import {
-	charProfile
+	watson
 } from '../lib'
 
 const log = logger('personality')
@@ -23,7 +23,7 @@ export default async function writeDB(opts) {
 	const pool = getPool()
 
 	const getProfileAndSave = async char_name => {
-		const getCharProfile = R.curry(charProfile)(pool)
+		const getCharProfile = R.curry(watson.charProfile)(pool)
 		return R.pipeP(
 			getCharProfile,
 			profile => ({

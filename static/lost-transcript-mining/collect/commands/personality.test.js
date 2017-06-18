@@ -1,31 +1,21 @@
-import sinon from 'sinon'
-
 import personality from './personality'
-import { personalityInsights } from '../lib'
+import { watson } from '../lib'
 import * as db from '../db'
 
-describe('watson', () => {
-	const sandbox = sinon.sandbox.create()
-
-	afterEach(() => sandbox.restore())
-
-	it('should do it', async () => {
-		const profileStub = jest.fn(() => Promise.resolve({ personality: 42 }))
-		sandbox
-		.stub(personalityInsights, 'profileAsync')
-		.callsFake(profileStub)
-
-		const queryStub = jest.fn(() => Promise.resolve({
-			rows: [{ char_name: 'RAISTLIN MAJERE' }]
+describe('personality', () => {
+	it('should query for chars and return personality insights', async () => {
+		watson.personalityInsights.profileAsync = jest.fn(() => Promise.resolve({
+			personality: 42
 		}))
-		sandbox
-		.stub(db, 'getPool')
-		.returns({
-			query: queryStub,
+		db.getPool = jest.fn(() => ({
+			query: jest.fn(() => Promise.resolve({
+				rows: [{ char_name: 'RAISTLIN MAJERE' }]
+			})),
 			end: jest.fn(() => Promise.resolve())
-		})
+		}))
 
-		await personality({ concurrency: 1 })
+		const p = await personality({ concurrency: 1 })
 
+		expect(p).toMatchSnapshot()
 	})
 })
