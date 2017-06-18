@@ -79,7 +79,7 @@ Array [
 ]
 `;
 
-exports[`watson episodeText should query db 2`] = `"some text… hello"`;
+exports[`watson episodeText should query db 2`] = `"some text... hello"`;
 
 exports[`watson episodeTone should return document_tone and all sentences_tone combined 1`] = `
 Object {

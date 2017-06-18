@@ -141,6 +141,12 @@ export function parseText(text) {
 	})
 	.filter(Boolean)
 
+	// clean up line
+	line = line
+	.replace(/\.\.\.?/g, '… ')
+	.replace(/\s\s/g, ' ')
+	.trim()
+
 	return {
 		char_name,
 		line,

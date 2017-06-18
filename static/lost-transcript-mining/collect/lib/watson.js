@@ -62,7 +62,6 @@ export function episodeText(pool, season, episode) {
 	return R.pipeP(
 		(pool, season, episode) => pool.query(queries.episodeText(season, episode)),
 		R.path(['rows', '0', 'text']),
-		R.replace('...', '…')
 	)(pool, season, episode)
 }
 
