@@ -19,10 +19,18 @@ export function allLines(char_name) {
 
 export function episodeText(season, episode) {
 	return `
-		select string_agg(char_name || ': ' || line, E'\n' order by seq) as text
+		select string_agg(line, ' ' order by seq) as text
 		from dialog
-		where type='dialog' and season=${season} and episode=${episode}
+		where type='dialog' and season=${season} and episode=${episode} and line!=''
 		group by season,episode
 		order by season,episode
+	;`
+}
+
+export function allEpisodes() {
+	return `
+		select distinct season, episode
+		from dialog
+		order by season, episode asc
 	;`
 }

@@ -1,2 +1,2 @@
 export * from './parse'
-export * from './watson'
+export * as watson from './watson'

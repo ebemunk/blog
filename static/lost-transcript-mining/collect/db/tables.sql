@@ -23,3 +23,12 @@ CREATE TABLE public.personality
   char_name character varying DEFAULT NULL,
   profile json DEFAULT '{}'::json
 )
+
+-- watson tone analyzer for all episodes
+CREATE TABLE public.tone
+(
+  season integer NOT NULL,
+  episode integer NOT NULL,
+  document_tone json DEFAULT '{}'::json,
+  sentences_tone json DEFAULT '[]'::json
+)

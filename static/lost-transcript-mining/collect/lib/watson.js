@@ -51,7 +51,6 @@ export async function allSentenceTones(text) {
 			text: txt
 		})
 		tones.push(tone)
-
 		const nextChunk = R.last(tone.sentences_tone).input_to + 1
 		txt = txt.substr(nextChunk)
 	}
@@ -73,9 +72,11 @@ export function episodeTone(pool, season, episode) {
 		exports.allSentenceTones,
 		R.addIndex(R.reduce)(
 			(acc, val, i) => ({
+				...acc,
 				document_tone: i === 0 ? val.document_tone : acc.document_tone,
 				sentences_tone: [
 					...acc.sentences_tone,
+					// ...val.sentences_tone
 					...R.map(R.pick([
 						'text',
 						'tone_categories'
@@ -83,6 +84,8 @@ export function episodeTone(pool, season, episode) {
 				]
 			}),
 			{
+				season,
+				episode,
 				document_tone: {},
 				sentences_tone: []
 			}

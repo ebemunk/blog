@@ -69,10 +69,9 @@ exports[`watson episodeText should query db 1`] = `
 Array [
   Array [
     "
-		select string_agg(char_name || ': ' || line, E'
-' order by seq) as text
+		select string_agg(line, ' ' order by seq) as text
 		from dialog
-		where type='dialog' and season=2 and episode=3
+		where type='dialog' and season=2 and episode=3 and line!=''
 		group by season,episode
 		order by season,episode
 	;",
@@ -87,6 +86,8 @@ Object {
   "document_tone": Object {
     "something": 1,
   },
+  "episode": 4,
+  "season": 3,
   "sentences_tone": Array [
     Object {
       "text": 1,
