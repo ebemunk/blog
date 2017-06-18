@@ -1,18 +1,16 @@
 -- dialog table
 CREATE TABLE public.dialog
 (
-  id SERIAL NOT NULL,
   season integer NOT NULL,
   episode integer NOT NULL,
   seq integer NOT NULL,
   act integer NOT NULL,
   scene integer NOT NULL,
-  flashback boolean NOT NULL,
-  flashsideways boolean NOT NULL,
   type character varying NOT NULL,
   char_name character varying DEFAULT NULL,
   line text DEFAULT NULL,
   directions json DEFAULT '[]'::json,
+  meta json DEFAULT '{}'::json,
   raw text DEFAULT NULL
 )
 

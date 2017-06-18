@@ -186,8 +186,10 @@ export function countActsAndFlashbacks(lines) {
 			...line,
 			act,
 			scene,
-			flashback,
-			flashsideways
+			meta: {
+				flashback,
+				flashsideways
+			}
 		}
 	})
 }

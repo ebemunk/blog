@@ -25,7 +25,7 @@ export default async function scrape(opts) {
 
 		const content = await readFile(`data/html/${file}`)
 
-		const parseFile = R.pipe(
+		const lines = R.pipe(
 			getLines,
 			R.map(parseLine),
 			R.filter(Boolean),
@@ -36,9 +36,7 @@ export default async function scrape(opts) {
 				episode: +episode,
 				seq: seq+1
 			}))
-		)
-
-		const lines = parseFile(content)
+		)(content)
 
 		await writeFile(`data/json/${season}-${episode}.json`, prettyJson(lines))
 
