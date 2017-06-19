@@ -144,7 +144,7 @@ export function parseText(text) {
 	// clean up line
 	line = line
 	.replace(/\.\.\.?/g, '… ')
-	.replace(/\s\s/g, ' ')
+	.replace(/\s\s+/g, ' ')
 	.trim()
 
 	return {

@@ -5,16 +5,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "act",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       1,
@@ -23,9 +25,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -33,8 +35,10 @@ Array [
       "Shot of bloody pilot in the treetop, bloody and with face-skin torn off, but not eaten.",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       335,
@@ -43,9 +47,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -55,8 +59,10 @@ Array [
       "[\\"pointing up to the pilot in the tree\\"]",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       334,
@@ -65,9 +71,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -77,8 +83,10 @@ Array [
       "[]",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       333,
@@ -87,9 +95,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -99,8 +107,10 @@ Array [
       "[]",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       332,
@@ -109,9 +119,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -121,8 +131,10 @@ Array [
       "[\\"approaching\\"]",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       331,
@@ -131,9 +143,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -143,8 +155,10 @@ Array [
       "[]",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       330,
@@ -153,9 +167,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -163,8 +177,10 @@ Array [
       "Kate picks up pilot's wings from the muddy ground. Shot shifts focus from wings to the reflection in the water where they see the pilot's body in the tree above them.",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       329,
@@ -173,9 +189,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -185,8 +201,10 @@ Array [
       "[]",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       328,
@@ -195,9 +213,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -205,8 +223,10 @@ Array [
       "Kate sees something.",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       327,
@@ -215,9 +235,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -227,8 +247,10 @@ Array [
       "[]",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       326,
@@ -237,9 +259,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -247,8 +269,10 @@ Array [
       "Shot of jungle. Kate and Charlie walking around.",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       325,
@@ -257,16 +281,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "scene",
       4,
       15,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       324,
@@ -275,9 +301,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -287,8 +313,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       323,
@@ -297,9 +325,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -307,8 +335,10 @@ Array [
       "Kate walks off, Charlie gets up to follow (reluctantly).",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       322,
@@ -317,9 +347,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -329,8 +359,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       321,
@@ -339,9 +371,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -351,8 +383,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       320,
@@ -361,9 +395,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -373,8 +407,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       319,
@@ -383,9 +419,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -393,8 +429,10 @@ Array [
       "Kate looks around.",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       318,
@@ -403,9 +441,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -415,8 +453,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       317,
@@ -425,9 +465,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -437,8 +477,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       316,
@@ -447,9 +489,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -459,8 +501,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       315,
@@ -469,9 +513,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -481,8 +525,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       314,
@@ -491,9 +537,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -503,8 +549,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       313,
@@ -513,9 +561,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -525,8 +573,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       312,
@@ -535,9 +585,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -547,8 +597,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       311,
@@ -557,9 +609,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -569,8 +621,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       310,
@@ -579,9 +633,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -591,8 +645,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       309,
@@ -601,9 +657,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -613,8 +669,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       308,
@@ -623,9 +681,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -635,8 +693,10 @@ Array [
       "[]",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       307,
@@ -645,9 +705,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -655,8 +715,10 @@ Array [
       "Shot of Kate, she hears something and looks off. Charlie comes up behind her, she turns to find him and knocks him down.",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       306,
@@ -665,16 +727,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "act",
       4,
       14,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       305,
@@ -683,9 +747,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -695,8 +759,10 @@ Array [
       "[\\"terrified\\",\\"Big door slamming sound/big footstep sounds. Kate is trying to compose herself\\"]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       304,
@@ -705,9 +771,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -715,8 +781,10 @@ Array [
       "Kate keeps running and ends up alone.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       303,
@@ -725,9 +793,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -737,8 +805,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       302,
@@ -747,9 +817,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -757,8 +827,10 @@ Array [
       "Jack goes back to rescue him.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       301,
@@ -767,9 +839,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -779,8 +851,10 @@ Array [
       "[\\"shouts\\"]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       300,
@@ -789,9 +863,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -799,8 +873,10 @@ Array [
       "Jack grabs it. They run. Monster sounds, running, anxious music. Charlie falls. His leg is trapped in some vines.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       299,
@@ -809,9 +885,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -821,8 +897,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       298,
@@ -831,9 +909,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -843,8 +921,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       297,
@@ -853,9 +933,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -863,8 +943,10 @@ Array [
       "Big crashing and shaking. Jack reaches for the transceiver just before it falls. The cockpit falls to the ground from its inclined position. Jack is reaching for the transceiver.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       296,
@@ -873,9 +955,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -885,8 +967,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       295,
@@ -895,9 +979,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -905,8 +989,10 @@ Array [
       "Kate looks terrified. We see the shadow of the monster going past window. Jack tries to look out the window to see it. The pilot goes up to try and see it. Briefly hesitating, he first puts the transceiver on the co-pilot's seat, then climbs part way out of an opening above. Charlie comes into the cockpit. The pilot gets snatched out of a broken window. There's blood all over the window.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       294,
@@ -915,9 +1001,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -927,8 +1013,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       293,
@@ -937,9 +1025,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -949,8 +1037,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       292,
@@ -959,9 +1049,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -971,8 +1061,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       291,
@@ -981,9 +1073,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -991,8 +1083,10 @@ Array [
       "Shot of Kate going back into Cockpit with Charlie's help.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       290,
@@ -1001,9 +1095,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1013,8 +1107,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       289,
@@ -1023,9 +1119,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1035,8 +1131,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       288,
@@ -1045,9 +1143,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -1055,8 +1153,10 @@ Array [
       "The plane starts shaking. We hear the monster sounds. Shot of Kate and Charlie, Pilot and Jack reacting.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       287,
@@ -1065,9 +1165,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1077,8 +1177,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       286,
@@ -1087,9 +1189,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1099,8 +1201,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       285,
@@ -1109,9 +1213,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -1119,8 +1223,10 @@ Array [
       "Charlie comes out of the bathroom.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       284,
@@ -1129,9 +1235,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1141,8 +1247,10 @@ Array [
       "[\\"going through cabin, seeing two dead bodies\\"]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       283,
@@ -1151,9 +1259,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1163,8 +1271,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       282,
@@ -1173,9 +1283,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -1183,8 +1293,10 @@ Array [
       "Kate goes to look for Charlie. The pilot is fiddling with the transceiver.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       281,
@@ -1193,9 +1305,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1205,8 +1317,10 @@ Array [
       "[\\"to Kate\\"]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       280,
@@ -1215,9 +1329,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -1225,8 +1339,10 @@ Array [
       "Kate gets it and hands it to the pilot.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       279,
@@ -1235,9 +1351,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1247,8 +1363,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       278,
@@ -1257,9 +1375,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1269,8 +1387,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       277,
@@ -1279,9 +1399,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -1289,8 +1409,10 @@ Array [
       "The pilot moves to go get it.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       276,
@@ -1299,9 +1421,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1311,8 +1433,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       275,
@@ -1321,9 +1445,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1333,8 +1457,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       274,
@@ -1343,9 +1469,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1355,8 +1481,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       273,
@@ -1365,9 +1493,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1377,8 +1505,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       272,
@@ -1387,9 +1517,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1399,8 +1529,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       271,
@@ -1409,9 +1541,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1421,8 +1553,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       270,
@@ -1431,9 +1565,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1443,8 +1577,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       269,
@@ -1453,9 +1589,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1465,8 +1601,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       268,
@@ -1475,9 +1613,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1487,8 +1625,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       267,
@@ -1497,9 +1637,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1509,8 +1649,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       266,
@@ -1519,9 +1661,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1531,8 +1673,10 @@ Array [
       "[\\"to Kate\\",\\"He gives the pilot some water\\"]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       265,
@@ -1541,9 +1685,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -1551,8 +1695,10 @@ Array [
       "Kate climbs over the pilot looking for the transceiver when suddenly the pilot takes a breath. Jack and Kate are shocked.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       264,
@@ -1561,9 +1707,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1573,8 +1719,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       263,
@@ -1583,9 +1731,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1595,8 +1743,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       262,
@@ -1605,9 +1755,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -1615,8 +1765,10 @@ Array [
       "Kate and Jack get inside the cockpit.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       261,
@@ -1625,9 +1777,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1637,8 +1789,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       260,
@@ -1647,9 +1801,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1659,8 +1813,10 @@ Array [
       "[\\"to Kate\\"]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       259,
@@ -1669,9 +1825,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1681,8 +1837,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       258,
@@ -1691,9 +1849,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1703,8 +1861,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       257,
@@ -1713,9 +1873,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1725,8 +1885,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       256,
@@ -1735,9 +1897,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1747,8 +1909,10 @@ Array [
       "[\\"to Kate\\"]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       255,
@@ -1757,9 +1921,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -1767,8 +1931,10 @@ Array [
       "The door opens and a body comes falling out.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       254,
@@ -1777,9 +1943,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1789,8 +1955,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       253,
@@ -1799,9 +1967,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -1809,8 +1977,10 @@ Array [
       "We see them climbing up, through the front of the plane. There are dead bodies. Jack can't open the cockpit door, bangs on it with a fire extinguisher.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       252,
@@ -1819,9 +1989,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1831,8 +2001,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       251,
@@ -1841,9 +2013,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1853,8 +2025,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       250,
@@ -1863,9 +2037,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1875,8 +2049,10 @@ Array [
       "[]",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       249,
@@ -1885,9 +2061,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -1895,8 +2071,10 @@ Array [
       "Shot of Jack, Kate, and Charlie making their way to the cockpit wreckage.",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       248,
@@ -1905,16 +2083,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "act",
       3,
       13,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       247,
@@ -1923,9 +2103,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1935,8 +2115,10 @@ Array [
       "[]",
       2,
       12,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       246,
@@ -1945,9 +2127,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -1955,8 +2137,10 @@ Array [
       "Shot of Jack, Kate, Charlie coming upon the cockpit. They all look a bit scared.",
       2,
       12,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       245,
@@ -1965,16 +2149,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "scene",
       2,
       12,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       244,
@@ -1983,9 +2169,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -1995,8 +2181,10 @@ Array [
       "[]",
       2,
       11,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       243,
@@ -2005,9 +2193,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2017,8 +2205,10 @@ Array [
       "[]",
       2,
       11,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       242,
@@ -2027,9 +2217,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -2037,8 +2227,10 @@ Array [
       "Shot of Michael holding something up (some kind of tarp?) under some debris, puts his arm on Walt's shoulder. Shot of Locke alone on the beach in a sort of meditation pose (music is sort of bittersweet). Locke holds his arms out, turns his face up to the rain, seems happy; we see the Monster in the jungle by the beach. Claire and Rose see it.",
       2,
       11,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       241,
@@ -2047,9 +2239,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2059,8 +2251,10 @@ Array [
       "[]",
       2,
       11,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       240,
@@ -2069,9 +2263,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -2079,8 +2273,10 @@ Array [
       "Shot of Locke sitting on the beach with people running around to get out of the rain. Locke just sits there. Jin kicks a guy out from Jin and Sun's little overhang of debris; Hurley runs past Boone and Shannon who are racing to get inside the fuselage.",
       2,
       11,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       239,
@@ -2089,9 +2285,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2101,8 +2297,10 @@ Array [
       "[]",
       2,
       11,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       238,
@@ -2111,9 +2309,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -2121,8 +2319,10 @@ Array [
       "Shot of Locke alone on the beach looking out to sea; we see clouds forming, sound of thunder. Shot of Kate, Charlie, Jack in the jungle in the rain.",
       2,
       11,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       237,
@@ -2131,16 +2331,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "scene",
       2,
       11,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       236,
@@ -2149,9 +2351,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -2159,8 +2361,10 @@ Array [
       "Camera pans down to reveal Vincent",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       235,
@@ -2169,9 +2373,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2181,8 +2385,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       234,
@@ -2191,9 +2397,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2203,8 +2409,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       233,
@@ -2213,9 +2421,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2225,8 +2433,10 @@ Array [
       "[\\"shakes his head\\"]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       232,
@@ -2235,9 +2445,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2247,8 +2457,10 @@ Array [
       "[\\"singing\\"]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       231,
@@ -2257,9 +2469,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2269,8 +2481,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       230,
@@ -2279,9 +2493,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2291,8 +2505,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       229,
@@ -2301,9 +2517,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2313,8 +2529,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       228,
@@ -2323,9 +2541,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2335,8 +2553,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       227,
@@ -2345,9 +2565,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2357,8 +2577,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       226,
@@ -2367,9 +2589,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2379,8 +2601,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       225,
@@ -2389,9 +2613,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2401,8 +2625,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       224,
@@ -2411,9 +2637,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2423,8 +2649,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       223,
@@ -2433,9 +2661,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2445,8 +2673,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       222,
@@ -2455,9 +2685,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2467,8 +2697,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       221,
@@ -2477,9 +2709,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2489,8 +2721,10 @@ Array [
       "[\\"incredulous\\"]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       220,
@@ -2499,9 +2733,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2511,8 +2745,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       219,
@@ -2521,9 +2757,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2533,8 +2769,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       218,
@@ -2543,9 +2781,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2555,8 +2793,10 @@ Array [
       "[\\"singing\\"]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       217,
@@ -2565,9 +2805,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2577,8 +2817,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       216,
@@ -2587,9 +2829,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2599,8 +2841,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       215,
@@ -2609,9 +2853,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2621,8 +2865,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       214,
@@ -2631,9 +2877,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2643,8 +2889,10 @@ Array [
       "[\\"Sighs\\"]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       213,
@@ -2653,9 +2901,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2665,8 +2913,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       212,
@@ -2675,9 +2925,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2687,8 +2937,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       211,
@@ -2697,9 +2949,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2709,8 +2961,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       210,
@@ -2719,9 +2973,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2731,8 +2985,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       209,
@@ -2741,9 +2997,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2753,8 +3009,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       208,
@@ -2763,9 +3021,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2775,8 +3033,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       207,
@@ -2785,9 +3045,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2797,8 +3057,10 @@ Array [
       "[]",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       206,
@@ -2807,9 +3069,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -2817,8 +3079,10 @@ Array [
       "Shot of valley looking out toward sea. You can see Jack, Charlie, and Kate in the distance coming toward camera.",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       205,
@@ -2827,16 +3091,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "scene",
       2,
       10,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       204,
@@ -2845,9 +3111,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2857,8 +3123,10 @@ Array [
       "[\\"Jack nods\\"]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       203,
@@ -2867,9 +3135,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2879,8 +3147,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       202,
@@ -2889,9 +3159,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2901,8 +3171,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       201,
@@ -2911,9 +3183,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2923,8 +3195,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       200,
@@ -2933,9 +3207,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2945,8 +3219,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       199,
@@ -2955,9 +3231,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2967,8 +3243,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       198,
@@ -2977,9 +3255,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -2989,8 +3267,10 @@ Array [
       "[\\"entering\\",\\"To Boone\\"]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       197,
@@ -2999,9 +3279,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3011,8 +3291,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       196,
@@ -3021,9 +3303,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3033,8 +3315,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       195,
@@ -3043,9 +3327,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3055,8 +3339,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       194,
@@ -3065,9 +3351,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3077,8 +3363,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       193,
@@ -3087,9 +3375,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3099,8 +3387,10 @@ Array [
       "[\\"stopping and looking at Walt\\"]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       192,
@@ -3109,9 +3399,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3121,8 +3411,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       191,
@@ -3131,9 +3423,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3143,8 +3435,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       190,
@@ -3153,9 +3447,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3165,8 +3459,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       189,
@@ -3175,9 +3471,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3187,8 +3483,10 @@ Array [
       "[]",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       188,
@@ -3197,9 +3495,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -3207,8 +3505,10 @@ Array [
       "Shot of a group: Michael, Walt, Charlie, Sayid, Boone and Shannon, with Hurley approaching.",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       187,
@@ -3217,16 +3517,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "scene",
       2,
       9,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       186,
@@ -3235,9 +3537,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -3245,8 +3547,10 @@ Array [
       "Shot of a dead body's feet. Kate reaches down to take hiking boots, checks the size. She looks at Locke, who's looking at her. He gives her the \\"orange\\" smile. He keeps eating the orange and looks away. She looks slightly freaked out/disgusted.",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       185,
@@ -3255,9 +3559,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3267,8 +3571,10 @@ Array [
       "[\\"smiling\\"]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       184,
@@ -3277,9 +3583,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3289,8 +3595,10 @@ Array [
       "[]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       183,
@@ -3299,9 +3607,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3311,8 +3619,10 @@ Array [
       "[]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       182,
@@ -3321,9 +3631,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3333,8 +3643,10 @@ Array [
       "[\\"coming up behind Jack\\"]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       181,
@@ -3343,9 +3655,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3355,8 +3667,10 @@ Array [
       "[]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       180,
@@ -3365,9 +3679,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3377,8 +3691,10 @@ Array [
       "[]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       179,
@@ -3387,9 +3703,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3399,8 +3715,10 @@ Array [
       "[]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       178,
@@ -3409,9 +3727,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3421,8 +3739,10 @@ Array [
       "[]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       177,
@@ -3431,9 +3751,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3443,8 +3763,10 @@ Array [
       "[]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       176,
@@ -3453,9 +3775,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3465,8 +3787,10 @@ Array [
       "[]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       175,
@@ -3475,9 +3799,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3487,8 +3811,10 @@ Array [
       "[]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       174,
@@ -3497,9 +3823,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3509,8 +3835,10 @@ Array [
       "[]",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       173,
@@ -3519,9 +3847,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -3529,8 +3857,10 @@ Array [
       "On-Island - Shot of ocean, then Jack looking out at the ocean. Rose and a bunch of redshirts in the background.",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       172,
@@ -3539,16 +3869,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "scene",
       2,
       8,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       171,
@@ -3557,9 +3889,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -3567,8 +3899,10 @@ Array [
       "There's a sudden lurch and one passenger goes flying out of his seat and hits the ceiling. More shaking and screaming. The oxygen masks come down. Jack and Rose put their masks on. Shot of another guy putting his mask on.",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       170,
@@ -3577,9 +3911,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3589,8 +3923,10 @@ Array [
       "[]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       169,
@@ -3599,9 +3935,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -3609,8 +3945,10 @@ Array [
       "The plane is really shaking now.",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       168,
@@ -3619,9 +3957,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3631,8 +3969,10 @@ Array [
       "[]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       167,
@@ -3641,9 +3981,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3653,8 +3993,10 @@ Array [
       "[]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       166,
@@ -3663,9 +4005,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3675,8 +4017,10 @@ Array [
       "[]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       165,
@@ -3685,9 +4029,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3697,8 +4041,10 @@ Array [
       "[\\"to Rose\\"]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       164,
@@ -3707,9 +4053,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3719,8 +4065,10 @@ Array [
       "[\\"on the intercom\\"]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       163,
@@ -3729,9 +4077,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -3739,8 +4087,10 @@ Array [
       "Jack sits back down. Then there is turbulence. Jack puts on his seatbelt.",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       162,
@@ -3749,9 +4099,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3761,8 +4111,10 @@ Array [
       "[]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       161,
@@ -3771,9 +4123,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -3781,8 +4133,10 @@ Array [
       "Two Flight Attendants run by.",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       160,
@@ -3791,9 +4145,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3803,8 +4157,10 @@ Array [
       "[\\"looking at Charlie, then at Jack\\"]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       159,
@@ -3813,9 +4169,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3825,8 +4181,10 @@ Array [
       "[\\"in background, to Charlie\\"]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       158,
@@ -3835,9 +4193,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3847,8 +4205,10 @@ Array [
       "[]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       157,
@@ -3857,9 +4217,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -3867,8 +4227,10 @@ Array [
       "Jack puts one of the bottles in his coat pocket and drinks the other. He stands up, then Charlie comes by him in the aisle.",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       156,
@@ -3877,9 +4239,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3889,8 +4251,10 @@ Array [
       "[]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       155,
@@ -3899,9 +4263,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3911,8 +4275,10 @@ Array [
       "[\\"hands him two more bottles\\"]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       154,
@@ -3921,9 +4287,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3933,8 +4299,10 @@ Array [
       "[]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       153,
@@ -3943,9 +4311,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3955,8 +4323,10 @@ Array [
       "[]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       152,
@@ -3965,9 +4335,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3977,8 +4347,10 @@ Array [
       "[]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       151,
@@ -3987,9 +4359,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -3999,8 +4371,10 @@ Array [
       "[]",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       150,
@@ -4009,9 +4383,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4019,8 +4393,10 @@ Array [
       "Flashback - Shot out of airplane window over wing above clouds. Shot of Jack. Sound of cart rolling up.",
       2,
       7,
-      true,
-      false,
+      Object {
+        "flashback": true,
+        "flashsideways": false,
+      },
       1,
       1,
       149,
@@ -4029,16 +4405,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "act",
       2,
       7,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       148,
@@ -4047,9 +4425,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4059,8 +4437,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       147,
@@ -4069,9 +4449,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4079,8 +4459,10 @@ Array [
       "Everyone moving toward the sound, except Michael who backs off. Everyone looking out at the trees moving/getting smashed.",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       146,
@@ -4089,9 +4471,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4101,8 +4483,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       145,
@@ -4111,9 +4495,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4121,8 +4505,10 @@ Array [
       "Boone gets up, moves off.",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       144,
@@ -4131,9 +4517,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4143,8 +4529,10 @@ Array [
       "[\\"in disbelief\\"]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       143,
@@ -4153,9 +4541,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4165,8 +4553,10 @@ Array [
       "[\\"coming into the frame\\"]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       142,
@@ -4175,9 +4565,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4185,8 +4575,10 @@ Array [
       "Shot of trees moving/getting smashed down.",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       141,
@@ -4195,9 +4587,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4207,8 +4599,10 @@ Array [
       "[\\"getting up to follow\\"]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       140,
@@ -4217,9 +4611,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4227,8 +4621,10 @@ Array [
       "Walt gets up and goes toward it.",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       139,
@@ -4237,9 +4633,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4249,8 +4645,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       138,
@@ -4259,9 +4657,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4271,8 +4669,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       137,
@@ -4281,9 +4681,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4291,8 +4691,10 @@ Array [
       "Kate looks back at Jack; Charlie and Sayid look.",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       136,
@@ -4301,9 +4703,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4313,8 +4715,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       135,
@@ -4323,9 +4727,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4333,8 +4737,10 @@ Array [
       "Metal/weird sound coming from the jungle. Everyone on the beach is looking; Kate looks; Locke looks (the camera pans forward toward him for a close up); Walt looks; Shannon and Boone look.",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       134,
@@ -4343,9 +4749,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4355,8 +4761,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       133,
@@ -4365,9 +4773,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4377,8 +4785,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       132,
@@ -4387,9 +4797,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4399,8 +4809,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       131,
@@ -4409,9 +4821,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4421,8 +4833,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       130,
@@ -4431,9 +4845,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4443,8 +4857,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       129,
@@ -4453,9 +4869,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4465,8 +4881,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       128,
@@ -4475,9 +4893,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4487,8 +4905,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       127,
@@ -4497,9 +4917,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4509,8 +4929,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       126,
@@ -4519,9 +4941,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4531,8 +4953,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       125,
@@ -4541,9 +4965,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4553,8 +4977,10 @@ Array [
       "[]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       124,
@@ -4563,9 +4989,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4575,8 +5001,10 @@ Array [
       "[\\"off camera at first\\"]",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       123,
@@ -4585,9 +5013,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4595,8 +5023,10 @@ Array [
       "Shot of a leaf torn into the shape of an airplane.",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       122,
@@ -4605,16 +5035,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "scene",
       1,
       6,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       121,
@@ -4623,9 +5055,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4635,8 +5067,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       120,
@@ -4645,9 +5079,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4657,8 +5091,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       119,
@@ -4667,9 +5103,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4679,8 +5115,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       118,
@@ -4689,9 +5127,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4699,8 +5137,10 @@ Array [
       "Shot of Kate standing over Jack while he's working on Marshal Mars, examining the Marshal's wound.",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       117,
@@ -4709,9 +5149,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4721,8 +5161,10 @@ Array [
       "[\\"Sun nods\\",\\"Subtitle: You must not leave my sight. You must follow me wherever I go. Do you understand? Don't worry about the others. We need to stay together\\"]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       116,
@@ -4731,9 +5173,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4741,8 +5183,10 @@ Array [
       "Shot of Walt lying on the beach under a blanket. He just nods, with a far-off look; shot of Jin and Sun.",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       115,
@@ -4751,9 +5195,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4763,8 +5207,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       114,
@@ -4773,9 +5219,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4783,8 +5229,10 @@ Array [
       "Close up of Michael",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       113,
@@ -4793,9 +5241,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4803,8 +5251,10 @@ Array [
       "Hurley's arm comes back into the shot and gives her another meal.",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       112,
@@ -4813,9 +5263,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4825,8 +5275,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       111,
@@ -4835,9 +5287,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4847,8 +5299,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       110,
@@ -4857,9 +5311,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4869,8 +5323,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       109,
@@ -4879,9 +5335,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4891,8 +5347,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       108,
@@ -4901,9 +5359,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4913,8 +5371,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       107,
@@ -4923,9 +5383,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4935,8 +5395,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       106,
@@ -4945,9 +5407,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -4955,8 +5417,10 @@ Array [
       "Shot of Claire sitting on a piece of wreckage. Hurley comes up with a tray of airplane food.",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       105,
@@ -4965,9 +5429,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4977,8 +5441,10 @@ Array [
       "[\\"He offers the chocolate again\\",\\"Boone eats the chocolate\\"]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       104,
@@ -4987,9 +5453,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -4999,8 +5465,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       103,
@@ -5009,9 +5477,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5021,8 +5489,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       102,
@@ -5031,9 +5501,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -5041,8 +5511,10 @@ Array [
       "Shot of Shannon painting her toenails. Boone comes up, offers her a candy bar.",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       101,
@@ -5051,9 +5523,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5063,8 +5535,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       100,
@@ -5073,9 +5547,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5085,8 +5559,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       99,
@@ -5095,9 +5571,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5107,8 +5583,10 @@ Array [
       "[]",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       98,
@@ -5117,9 +5595,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -5127,8 +5605,10 @@ Array [
       "Shot of stars in night sky; Charlie writing F.A.T.E. on his taped fingers, sitting next to Sayid.",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       97,
@@ -5137,16 +5617,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "scene",
       1,
       5,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       96,
@@ -5155,9 +5637,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5167,8 +5649,10 @@ Array [
       "[]",
       1,
       4,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       95,
@@ -5177,9 +5661,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5189,8 +5673,10 @@ Array [
       "[]",
       1,
       4,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       94,
@@ -5199,9 +5685,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5211,8 +5697,10 @@ Array [
       "[\\"He's crying\\"]",
       1,
       4,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       93,
@@ -5221,9 +5709,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5233,8 +5721,10 @@ Array [
       "[]",
       1,
       4,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       92,
@@ -5243,9 +5733,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5255,8 +5745,10 @@ Array [
       "[\\"shaking his head\\"]",
       1,
       4,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       91,
@@ -5265,9 +5757,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5277,8 +5769,10 @@ Array [
       "[]",
       1,
       4,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       90,
@@ -5287,9 +5781,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -5297,8 +5791,10 @@ Array [
       "Kate sewing up Jack's wound.",
       1,
       4,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       89,
@@ -5307,16 +5803,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "scene",
       1,
       4,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       88,
@@ -5325,9 +5823,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -5335,8 +5833,10 @@ Array [
       "Shot of Rose kissing the ring on her necklace",
       1,
       3,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       87,
@@ -5345,9 +5845,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5357,8 +5857,10 @@ Array [
       "[]",
       1,
       3,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       86,
@@ -5367,9 +5869,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5379,8 +5881,10 @@ Array [
       "[]",
       1,
       3,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       85,
@@ -5389,9 +5893,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5401,8 +5905,10 @@ Array [
       "[]",
       1,
       3,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       84,
@@ -5411,9 +5917,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5423,8 +5929,10 @@ Array [
       "[]",
       1,
       3,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       83,
@@ -5433,9 +5941,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5445,8 +5953,10 @@ Array [
       "[]",
       1,
       3,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       82,
@@ -5455,9 +5965,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5467,8 +5977,10 @@ Array [
       "[\\"to Charlie\\"]",
       1,
       3,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       81,
@@ -5477,9 +5989,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -5487,8 +5999,10 @@ Array [
       "Shot of Sayid adding wood to a big fire.",
       1,
       3,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       80,
@@ -5497,9 +6011,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5509,8 +6023,10 @@ Array [
       "[]",
       1,
       3,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       79,
@@ -5519,9 +6035,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -5529,8 +6045,10 @@ Array [
       "Shot of Sawyer lighting up a cigarette. Looking around. Then walking away, looks like he tosses his smoke down, disgusted-like; Claire standing by the shore; Hurley stacking airline food; Locke sitting alone looking out toward the ocean; Boone getting a \\"no service\\" signal on his cell phone.",
       1,
       3,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       78,
@@ -5539,16 +6057,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "scene",
       1,
       3,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       77,
@@ -5557,9 +6077,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -5567,8 +6087,10 @@ Array [
       "Jack dumps the vodka on his wound.",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       76,
@@ -5577,9 +6099,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5589,8 +6111,10 @@ Array [
       "[\\"laughing\\"]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       75,
@@ -5599,9 +6123,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5611,8 +6135,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       74,
@@ -5621,9 +6147,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -5631,8 +6157,10 @@ Array [
       "Kate picks up a little sewing kit.",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       73,
@@ -5641,9 +6169,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5653,8 +6181,10 @@ Array [
       "[\\"handing her the little liquor bottle from his pocket\\"]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       72,
@@ -5663,9 +6193,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5675,8 +6205,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       71,
@@ -5685,9 +6217,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -5695,8 +6227,10 @@ Array [
       "Jack looks at her pleadingly.",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       70,
@@ -5705,9 +6239,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5717,8 +6251,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       69,
@@ -5727,9 +6263,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5739,8 +6275,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       68,
@@ -5749,9 +6287,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5761,8 +6299,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       67,
@@ -5771,9 +6311,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5783,8 +6323,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       66,
@@ -5793,9 +6335,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5805,8 +6347,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       65,
@@ -5815,9 +6359,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -5825,8 +6369,10 @@ Array [
       "Jack shows her the wound, and she grimaces.",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       64,
@@ -5835,9 +6381,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5847,8 +6393,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       63,
@@ -5857,9 +6405,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5869,8 +6417,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       62,
@@ -5879,9 +6429,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -5889,8 +6439,10 @@ Array [
       "Kate walks over to him.",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       61,
@@ -5899,9 +6451,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5911,8 +6463,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       60,
@@ -5921,9 +6475,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5933,8 +6487,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       59,
@@ -5943,9 +6499,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5955,8 +6511,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       58,
@@ -5965,9 +6523,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5977,8 +6535,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       57,
@@ -5987,9 +6547,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -5999,8 +6559,10 @@ Array [
       "[]",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       56,
@@ -6009,9 +6571,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6019,8 +6581,10 @@ Array [
       "Shot of Jack going through a suitcase, and finding a sewing kit. Jack going to a deserted part of the beach and taking his jacket and shirt off. He has a big gash on his side. Kate comes walking by, doesn't know Jack is there. Kate rubbing her wrist.",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       55,
@@ -6029,16 +6593,18 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8)
+		($1,$2,$3,$4,$5,$6,$7)
 	",
     Array [
       "scene",
       1,
       2,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       54,
@@ -6047,9 +6613,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6059,8 +6625,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       53,
@@ -6069,9 +6637,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6081,8 +6649,10 @@ Array [
       "[\\"walking up holding out a handful of pens\\"]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       52,
@@ -6091,9 +6661,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6101,8 +6671,10 @@ Array [
       "Jack sort of stumbling around the beach, looks into the fuselage. Takes a moment to steady himself, almost crying.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       51,
@@ -6111,9 +6683,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6123,8 +6695,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       50,
@@ -6133,9 +6707,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6145,8 +6719,10 @@ Array [
       "[\\"to Hurley\\",\\"Hurley sort of nods lying on the ground\\"]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       49,
@@ -6155,9 +6731,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6167,8 +6743,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       48,
@@ -6177,9 +6755,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6189,8 +6767,10 @@ Array [
       "[\\"to Claire\\"]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       47,
@@ -6199,9 +6779,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6209,8 +6789,10 @@ Array [
       "Jack, Hurley, and Claire run out of way as there is a huge explosion. A big piece of burning debris lands near Charlie.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       46,
@@ -6219,9 +6801,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6231,8 +6813,10 @@ Array [
       "[\\"as he's running\\"]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       45,
@@ -6241,9 +6825,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6251,8 +6835,10 @@ Array [
       "Sound of metal. Jack looks up to see a big piece of metal high up (the wing) on some of the wreckage starting to wobble. Claire and Hurley are right under where it would fall. Jack runs over to them.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       44,
@@ -6261,9 +6847,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6273,8 +6859,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       43,
@@ -6283,9 +6871,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6293,8 +6881,10 @@ Array [
       "Rose breathes.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       42,
@@ -6303,9 +6893,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6315,8 +6905,10 @@ Array [
       "[\\"doing CPR\\"]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       41,
@@ -6325,9 +6917,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6335,8 +6927,10 @@ Array [
       "Boone runs off to get pens.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       40,
@@ -6345,9 +6939,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6357,8 +6951,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       39,
@@ -6367,9 +6963,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6379,8 +6975,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       38,
@@ -6389,9 +6987,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6401,8 +6999,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       37,
@@ -6411,9 +7011,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6423,8 +7023,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       36,
@@ -6433,9 +7035,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6443,8 +7045,10 @@ Array [
       "Jack starts giving her mouth-to-mouth. ",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       35,
@@ -6453,9 +7057,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6465,8 +7069,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       34,
@@ -6475,9 +7081,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6487,8 +7093,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       33,
@@ -6497,9 +7105,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6507,8 +7115,10 @@ Array [
       "Jack runs up to Boone and Rose.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       32,
@@ -6517,9 +7127,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6529,8 +7139,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       31,
@@ -6539,9 +7151,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6551,8 +7163,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       30,
@@ -6561,9 +7175,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6571,8 +7185,10 @@ Array [
       "Jack starts running off.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       29,
@@ -6581,9 +7197,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6593,8 +7209,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       28,
@@ -6603,9 +7221,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6615,8 +7233,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       27,
@@ -6625,9 +7245,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6637,8 +7257,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       26,
@@ -6647,9 +7269,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6659,8 +7281,10 @@ Array [
       "[\\"to Hurley\\"]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       25,
@@ -6669,9 +7293,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6679,8 +7303,10 @@ Array [
       "Jack looking at Boone giving Rose mouth-to-mouth.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       24,
@@ -6689,9 +7315,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6701,8 +7327,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       23,
@@ -6711,9 +7339,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6721,8 +7349,10 @@ Array [
       "Gary gets sucked into the engine and the engine explodes. Shot of people running. Jack sort of falls on top of Claire to protect her.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       22,
@@ -6731,9 +7361,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6743,8 +7373,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       21,
@@ -6753,9 +7385,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6765,8 +7397,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       20,
@@ -6775,9 +7409,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6785,8 +7419,10 @@ Array [
       "Shot of Locke and Redshirt carrying bad-leg-guy away. A man named Gary Troup starts walking in front of the engine and Locke sees him.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       19,
@@ -6795,9 +7431,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6807,8 +7443,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       18,
@@ -6817,9 +7455,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6829,8 +7467,10 @@ Array [
       "[\\"to Claire\\"]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       17,
@@ -6839,9 +7479,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6849,8 +7489,10 @@ Array [
       "Jack looks over and sees Boone doing CPR on Rose.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       16,
@@ -6859,9 +7501,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6871,8 +7513,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       15,
@@ -6881,9 +7525,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6893,8 +7537,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       14,
@@ -6903,9 +7549,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6915,8 +7561,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       13,
@@ -6925,9 +7573,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6935,8 +7583,10 @@ Array [
       "He runs over to Claire through a lot of wreckage.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       12,
@@ -6945,9 +7595,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6957,8 +7607,10 @@ Array [
       "[\\"to a redshirt and Locke\\"]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       11,
@@ -6967,9 +7619,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -6977,8 +7629,10 @@ Array [
       "Jack sees Claire, who is is pregnant and on her hands and knees.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       10,
@@ -6987,9 +7641,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -6999,8 +7653,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       9,
@@ -7009,9 +7665,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -7019,8 +7675,10 @@ Array [
       "Jack pulls the man out from under. One leg is bloody. Jack starts ripping the man's pants to get to the wound. Jack uses his tie as a tourniquet.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       8,
@@ -7029,9 +7687,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -7041,8 +7699,10 @@ Array [
       "[\\"A group of redshirts and Locke gather around to lift the metal piece that's trapping the man\\",\\"and Locke\\"]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       7,
@@ -7051,9 +7711,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -7063,8 +7723,10 @@ Array [
       "[\\"trapped under the piece with the still moving engine\\"]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       6,
@@ -7073,9 +7735,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -7083,8 +7745,10 @@ Array [
       "Shannon screaming. Jack looks up at the wing.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       5,
@@ -7093,9 +7757,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -7105,8 +7769,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       4,
@@ -7115,9 +7781,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,char_name,line,directions,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,char_name,line,directions,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
 	",
     Array [
       "dialog",
@@ -7127,8 +7793,10 @@ Array [
       "[]",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       3,
@@ -7137,9 +7805,9 @@ Array [
   Array [
     "
 		INSERT INTO dialog
-		(type,raw,line,act,scene,flashback,flashsideways,season,episode,seq)
+		(type,raw,line,act,scene,meta,season,episode,seq)
 		VALUES
-		($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
+		($1,$2,$3,$4,$5,$6,$7,$8,$9)
 	",
     Array [
       "stageDirection",
@@ -7147,8 +7815,10 @@ Array [
       "Shot of Jack's eye opening, looking up at bamboo trees. Overhead shot panning out to show Jack is lying injured in a jungle. Jack sees a dog, slowly gets up, in pain. Finds a little liquor bottle in his pocket. Then he runs though the bamboo and emerges on a tropical beach. He sees plane wreckage and people running around, screaming, in distress. The engine is still spinning. Charlie gets dangerously close to it. Jin yells out in Korean.",
       1,
       1,
-      false,
-      false,
+      Object {
+        "flashback": false,
+        "flashsideways": false,
+      },
       1,
       1,
       2,

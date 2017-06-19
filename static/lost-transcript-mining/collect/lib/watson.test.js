@@ -2,13 +2,20 @@ import * as watson from './watson'
 
 describe('watson', () => {
 	describe('charProfile', () => {
+		beforeEach(() => {
+			watson.personalityInsights.profileAsync = jest.fn(() => Promise.resolve({}))
+		})
+
+		afterEach(() => {
+			watson.personalityInsights.profileAsync.mockRestore()
+		})
+
 		it('should make it happen', async () => {
 			const queryStub = jest.fn(() => Promise.resolve({
 				rows: [
 					{ text: 'blabla' }
 				]
 			}))
-			watson.personalityInsights.profileAsync = jest.fn(() => Promise.resolve({}))
 
 			await watson.charProfile({ query: queryStub }, 'JACK')
 
@@ -20,19 +27,23 @@ describe('watson', () => {
 	})
 
 	describe('allSentenceTones', () => {
-		it('make requests until all text is analyzed', async () => {
+		beforeEach(() => {
 			watson.toneAnalyzer.toneAsync = jest.fn()
 			.mockReturnValue({
 				sentences_tone: [
 					{ input_to: 1 }
 				]
 			})
+		})
 
+		afterEach(() => {
+			watson.toneAnalyzer.toneAsync.mockRestore()
+		})
+
+		it('make requests until all text is analyzed', async () => {
 			await watson.allSentenceTones('blabla blabla')
 
 			expect(watson.toneAnalyzer.toneAsync.mock.calls).toMatchSnapshot()
-
-			watson.toneAnalyzer.toneAsync.mockRestore()
 		})
 	})
 
@@ -55,7 +66,7 @@ describe('watson', () => {
 	})
 
 	describe('episodeTone', () => {
-		it('should return document_tone and all sentences_tone combined', async () => {
+		beforeEach(() => {
 			watson.episodeText = jest.fn(() => Promise.resolve())
 			watson.allSentenceTones = jest.fn(() => [
 				{
@@ -72,7 +83,14 @@ describe('watson', () => {
 					]
 				}
 			])
+		})
 
+		afterEach(() => {
+			watson.episodeText.mockRestore()
+			watson.allSentenceTones.mockRestore()
+		})
+
+		it('should return document_tone and all sentences_tone combined', async () => {
 			const tone = await watson.episodeTone({}, 3, 4)
 
 			expect(tone).toMatchSnapshot()

@@ -1,7 +1,6 @@
 import fs from 'fs'
 
 import Promise from 'bluebird'
-import sinon from 'sinon'
 import axios from 'axios'
 
 import {
@@ -11,14 +10,14 @@ import {
 	insertObj
 } from './'
 
-const sandbox = sinon.sandbox.create()
-
 describe('util', () => {
-	afterEach(() => sandbox.restore())
-
 	describe('readFile', () => {
 		beforeEach(() => {
-			sandbox.stub(fs, 'readFile').yields()
+			fs.readFile = jest.fn(() => Promise.resolve())
+		})
+
+		afterEach(() => {
+			fs.readFile.mockRestore()
 		})
 
 		it('returns Promise', () => {
@@ -28,13 +27,17 @@ describe('util', () => {
 
 		it('calls fs.readFile with utf-8 encoding', () => {
 			readFile('hehe.jpg')
-			sinon.assert.calledWith(fs.readFile, 'hehe.jpg', 'utf-8')
+			expect(fs.readFile).toHaveBeenCalledWith('hehe.jpg', 'utf-8', expect.any(Function))
 		})
 	})
 
 	describe('writeFile', () => {
 		beforeEach(() => {
-			sandbox.stub(fs, 'writeFile').yields()
+			fs.writeFile = jest.fn(() => Promise.resolve())
+		})
+
+		afterEach(() => {
+			fs.writeFile.mockRestore()
 		})
 
 		it('returns Promise', () => {
@@ -44,31 +47,28 @@ describe('util', () => {
 
 		it('calls fs.writeFile', () => {
 			writeFile('meh/heh', 'okay')
-			sinon.assert.calledWith(fs.writeFile, 'meh/heh', 'okay')
+			expect(fs.writeFile, 'meh/heh', 'okay', expect.any(Function))
 		})
 	})
 
 	describe('download', () => {
-		let sandbox
-
 		beforeEach(() => {
-			sandbox = sinon.sandbox.create()
-		})
-
-		afterEach(() => sandbox.restore())
-
-		it('should write html to path', async () => {
-			sandbox.stub(axios, 'get')
-			.returns(Promise.resolve({
+			axios.get = jest.fn(() => Promise.resolve({
 				data: '<html>yezs</html>'
 			}))
-			const writeMock = sandbox.stub(fs, 'writeFile')
-			.callsArgWith(2)
+			fs.writeFile = jest.fn((a, b, cb) => cb())
+		})
 
+		afterEach(() => {
+			axios.get.mockRestore()
+			fs.writeFile.mockRestore()
+		})
+
+		it('should write html to path', async () => {
 			await download('url', 'path/')
 
-			expect(writeMock.calledOnce).toBe(true)
-			expect(writeMock.firstCall.args).toMatchSnapshot()
+			expect(fs.writeFile).toHaveBeenCalledTimes(1)
+			expect(fs.writeFile.mock.calls).toMatchSnapshot()
 		})
 	})
 

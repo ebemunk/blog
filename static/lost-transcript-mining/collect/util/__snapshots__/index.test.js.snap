@@ -2,9 +2,11 @@
 
 exports[`util download should write html to path 1`] = `
 Array [
-  "path/",
-  "<html>yezs</html>",
-  [Function],
+  Array [
+    "path/",
+    "<html>yezs</html>",
+    [Function],
+  ],
 ]
 `;
 
