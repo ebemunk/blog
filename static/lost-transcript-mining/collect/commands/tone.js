@@ -30,7 +30,6 @@ export default async function tone() {
 					log('faf', season, episode)
 					return watson.episodeTone(pool, season, episode)
 				},
-				// R.tap(() => log('got tone')),
 				R.evolve({
 					document_tone: JSON.stringify,
 					sentences_tone: JSON.stringify
@@ -39,7 +38,6 @@ export default async function tone() {
 				insert => pool.query(...insert),
 				R.tap(() => {
 					progress.tick()
-					// log('inserted')
 				})
 			)
 		]),
