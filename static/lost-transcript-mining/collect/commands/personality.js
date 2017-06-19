@@ -35,6 +35,8 @@ export default async function writeDB(opts) {
 		)(char_name)
 	}
 
+	log('starting')
+
 	return R.pipeP(
 		sql => pool.query(sql),
 		R.prop('rows'),
