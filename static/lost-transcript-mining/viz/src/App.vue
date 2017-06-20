@@ -4,7 +4,7 @@
 			:selection="episodeSelection"
 		/>
 		<div>{{ selected[0] }} - {{ selected[1] }}</div>
-		<Sunburst />
+		<!--<Sunburst />-->
 		<!-- <div>
 			<LengthChart
 				:data="wordsChars"
