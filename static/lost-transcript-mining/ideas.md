@@ -21,17 +21,19 @@
 - [ ] Word bubble
 	- total, per season, per episode, per char
 
-```
-dialog
-	season
-	episode
-	seq
-	char_name
-	char_name_suffix
-	line
-	type: [scene, act, dialog, stageDirection]
-	directions: []
-```
-
 
 http://lotrproject.com/statistics/books/chapters
+
+
+
+
+
+
+
+// number of episodes
+s1 24/25
+s2 23/24
+s3 22/23
+s4 13/14
+s5 16/17
+s6 17/18

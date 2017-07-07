@@ -5,7 +5,6 @@
   >
     <g
       :class="$style.rects"
-      :transform="transform"
     />
   </svg>
 </template>
@@ -18,9 +17,8 @@
 }
 
 .scene {
-  fill: #333;
-  stroke: white;
-  stroke-width: 1;
+  stroke: #333;
+  stroke-width: 0;
 }
 </style>
 
@@ -31,22 +29,13 @@ import R from 'ramda'
 export default {
 	name: 'length-chart',
 	props: {
-		padding: {
-			type: Object,
-			default: () => ({
-				left: 5,
-				right: 5,
-				top: 5,
-				bottom: 5,
-			})
-		},
 		width: {
 			type: Number,
 			default: () => 960
 		},
 		height: {
 			type: Number,
-			default: () => 500
+			default: () => 40
 		},
 		data: {
 			type: Array,
@@ -54,18 +43,9 @@ export default {
 		}
 	},
 	computed: {
-		chartHeight: function () {
-			return this.height - this.padding.top - this.padding.bottom
-		},
-		chartWidth: function () {
-			return this.width - this.padding.left - this.padding.right
-		},
-		transform: function () {
-			return `translate(${this.padding.left}, ${this.padding.top})`
-		},
     xScale: function () {
 			return d3.scaleLinear()
-			.range([0, this.chartWidth])
+			.range([0, this.width])
 			.domain([0, d3.max(this.data, d => d.lines)])
     }
   },
@@ -93,13 +73,8 @@ export default {
       var series = stack(data);
 
       const x = d3.scaleLinear()
-      .range([0, this.chartWidth])
+      .range([0, this.width])
       .domain([0, d3.max(data, d => d.total)])
-
-      const y = d3.scaleBand()
-      .rangeRound([0, this.chartHeight])
-      .padding(0.1)
-      .domain(data.map(d => d.key))
 
       const color = d3.scaleOrdinal(d3.schemeCategory20)
 
@@ -113,7 +88,7 @@ export default {
 
       scenes.enter()
         .append('g')
-          // .attr('fill', color)
+          .attr('fill', color)
           .attr('class', $style.scene)
 
       const eps = scenes
@@ -124,15 +99,15 @@ export default {
 
       eps.enter()
         .append('rect')
-          .attr('y', d => y(d.data.key))
-          .attr('height', y.bandwidth())
-          .attr('rx', 3)
-          .attr('ry', 3)
+          .attr('y', 0)
+          .attr('height', this.height)
+          // .attr('rx', 3)
+          // .attr('ry', 3)
         .merge(eps)
           .attr('x', d => x(d[0]))
           .attr('width', d => {return x(d[1]) - x(d[0])})
-          .attr('y', d => y(d.data.key))
-          .attr('height', y.bandwidth())
+          .attr('y', 0)
+          .attr('height', this.height)
     }
   }
 }

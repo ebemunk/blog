@@ -31,6 +31,7 @@
 	& :global .tick text {
 		cursor: pointer;
 		fill: #666;
+		text-anchor: start;
 
 		&:hover {
 			fill: black;
@@ -39,6 +40,9 @@
 }
 
 .episodeAxis {
+	& :global .domain {
+		display: none;
+	}
 }
 
 .brush {
@@ -51,12 +55,15 @@
 		stroke: none;
 	}
 }
+
 </style>
 
 <script>
 import * as d3 from 'd3'
 import _ from 'lodash'
 import { mapGetters, mapActions } from 'vuex'
+
+import { onBrush, onBrushEnd } from './brush'
 
 export default {
 	name: 'episode-selector',
@@ -71,12 +78,7 @@ export default {
 		},
 		selection: {
 			type: Array,
-			default: () => [0, 110]
-		}
-	},
-	data: function () {
-		return {
-			selectionz: this.selection
+			default: () => [0, 113]
 		}
 	},
 	computed: {
@@ -84,137 +86,73 @@ export default {
 			'seasonEpisodes'
 		]),
 		domain: function () {
-			const {
-				seasonEpisodes
-			} = this
-
-			const domain = seasonEpisodes.map(d => new Date(d.date))
-			domain.push(new Date(0, 0, seasonEpisodes.length))
-
-			return domain
+			return [
+				...this.seasonEpisodes.map(d => new Date(d.date)),
+				new Date(0, 0, this.seasonEpisodes.length)
+			]
 		},
 		x: function () {
-			const x = d3.scaleTime()
+			return d3.scaleTime()
 			.domain(
 				d3.extent(this.domain)
 			)
-
-			return x
+			.rangeRound([0, this.width])
 		},
 		brush: function () {
-			const {
-				x,
-				dateMap,
-				$style
-			} = this
-
-			const brush = d3.brushX()
+			return d3.brushX()
 			.extent([[0, 0], [this.width, 25]])
 			.handleSize(6)
-			.on('brush', () => {
-				if( ! d3.event.sourceEvent ) return
-				if( d3.event.sourceEvent.type === 'brush' ) return
-
-				const d0 = d3.event.selection.map(x.invert)
-				const d1 = d0.map(d3.timeDay.round)
-
-				if( d1[0] >= d1[1] ) {
-					d1[0] = d3.timeDay.floor(d0[0])
-					d1[1] = d3.timeDay.offset(d1[0])
-				}
-
-				const selected = d1.map(d => {
-					const episode = this.seasonEpisodes.find(ep => ep.date === d.getTime())
-					return _.get(episode, 'i')
-				})
-
-				if( selected[0] === 0 && selected[1] === undefined ) {
-					this.selectEpisodes([undefined, undefined])
-					d3.select(`.${$style.brush}`).call(d3.event.target.move, null)
-				} else {
-					this.selectEpisodes(selected)
-					d3.select(`.${$style.brush}`).call(d3.event.target.move, d1.map(x))
-				}
-			})
-			.on('end', () => {
-				if( ! d3.event.sourceEvent ) return
-				if( ! d3.event.selection ) {
-					this.selectEpisodes([undefined, undefined])
-				}
-			})
-
-			return brush
+			.on('brush', onBrush.bind(this))
+			.on('end', onBrushEnd.bind(this))
 		},
 		xAxis: function () {
-			const {
-				x,
-				seasonEpisodes,
-			} = this
-
-			const xAxis = d3.axisBottom(x)
+			return d3.axisBottom(this.x)
 			.tickValues(
-				seasonEpisodes
+				this.seasonEpisodes
 				.filter(d => d.episode === 1)
 				.map(d => d.date)
 			)
 			.tickSize(-25)
 			.tickFormat((d, i) => `Season ${i+1}`)
-
-			return xAxis
 		},
 		episodeAxis: function () {
-			const {
-				x
-			} = this
-
-			const axis = d3.axisBottom(x)
+			return d3.axisBottom(this.x)
 			.ticks(d3.timeDay)
 			.tickSize(-15)
 			.tickFormat(() => null)
-
-			return axis
 		}
 	},
 	mounted() {
 		const {
-			x,
 			brush,
 			xAxis,
 			episodeAxis,
 			$style,
 		} = this
 
-		x.rangeRound([0, this.width])
-
-		d3.select(`.${$style.brush}`).call(brush)
+		d3.select(`.${$style.brush}`)
+		.call(brush)
 
 		d3.select(`.${$style.seasonAxis}`)
 		.call(xAxis)
 		.call(sel => {
 			sel.selectAll('.tick text')
-				.attr('text-anchor', 'start')
-		})
-		.call(sel => {
-			sel.selectAll('.tick text')
-				.on('click', (d, i) => {
-					const seasons = [
-						[0, 24],
-						[24, 47],
-						[47, 69],
-						[69, 82],
-						[82, 94],
-						[94, 110]
-					]
+			.on('click', (d, i) => {
+				const seasons = [
+					[0, 24],
+					[24, 47],
+					[47, 69],
+					[69, 82],
+					[82, 98],
+					[98, 114]
+				]
 
-					this.selectEpisodes(seasons[i])
-				})
+				this.selectEpisodes(seasons[i])
+			})
 		})
 
 		d3.select(`.${$style.episodeAxis}`)
 		.call(episodeAxis)
-		.call(sel => {
-			sel.selectAll('.tick text').remove()
-		})
 	},
 	watch: {
 		selection: function (newVal) {

@@ -10,29 +10,29 @@
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
-    "babel-loader": "^6.2.10",
-    "babel-preset-latest": "^6.22.0",
-    "babel-preset-stage-0": "^6.22.0",
-    "babel-register": "^6.22.0",
-    "css-loader": "^0.27.3",
+    "babel-loader": "^7.1.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "css-loader": "^0.28.4",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.28.0",
-    "jest": "^19.0.2",
+    "jest": "^20.0.4",
     "json-loader": "^0.5.4",
-    "postcss-cssnext": "^2.10.0",
+    "postcss-cssnext": "^2.11.0",
     "rimraf": "^2.6.1",
-    "vue-loader": "^11.1.4",
-    "vue-template-compiler": "^2.1.10",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0",
+    "vue-loader": "^12.2.1",
+    "vue-template-compiler": "^2.3.4",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "2.4.5",
     "worker-loader": "^0.8.0"
   },
   "dependencies": {
     "appmetrics.js": "^0.0.7",
-    "d3": "^4.5.0",
+    "d3": "^4.9.1",
     "lodash": "^4.17.4",
-    "ramda": "^0.23.0",
-    "vue": "^2.1.10",
-    "vuex": "^2.1.2"
+    "ramda": "^0.24.1",
+    "vue": "^2.3.4",
+    "vuex": "^2.3.1"
   }
 }

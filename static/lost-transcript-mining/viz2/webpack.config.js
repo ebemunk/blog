@@ -1,13 +1,17 @@
 const path = require('path')
 
-const _ = require('lodash')
+const R = require('ramda')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const dir = _.partial(path.resolve, __dirname)
+const dir = R.partial(path.resolve, [__dirname])
 
 module.exports = {
-	entry: dir('index.js'),
+	entry: [
+		'react-hot-loader/patch',
+		'babel-polyfill',
+		dir('index.js'),
+	],
 	output: {
 		filename: 'bundle.js',
 		path: dir('dist')
@@ -16,35 +20,41 @@ module.exports = {
 	devServer: {
 		contentBase: dir('dist'),
 		compress: true,
-		port: 9000,
+		port: 9001,
 		hot: true
 	},
 	resolve: {
-		extensions: ['.js', '.vue']
+		extensions: ['.js', '.jsx']
 	},
 	module: {
 		rules: [
 			{
-				test: /\.js$/,
+				test: /\.jsx?$/,
 				use: 'babel-loader',
 				exclude: /node_modules/
 			},
 			{
-				test: /\.vue$/,
-				use: {
-					loader: 'vue-loader',
-					options: {
-						postcss: [require('postcss-cssnext')()],
-						cssModules: {
-							localIdentName: '[local]-[hash:base64:5]'
+				test: /\.css$/,
+				use: [
+					'style-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 1,
+							modules: true,
+							// localIdentName: '[path][name]__[local]--[hash:base64:5]'
+							localIdentName: '[name]__[local]'
+						}
+					},
+					{
+						loader: 'postcss-loader',
+						options: {
+							plugins: [
+								require('postcss-cssnext')
+							]
 						}
 					}
-				}
-			},
-			{
-				test: /\.worker\.js$/,
-				use: ['worker-loader', 'babel-loader'],
-				exclude: /node_modules/
+				]
 			},
 			{
 				test: /\.json$/,

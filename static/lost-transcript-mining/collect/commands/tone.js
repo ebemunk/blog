@@ -42,5 +42,4 @@ export default async function tone() {
 			)
 		]),
 	)(queries.allEpisodes())
-	// )('select distinct season, episode from dialog where season=2 and episode=23')
 }

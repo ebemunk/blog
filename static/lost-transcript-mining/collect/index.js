@@ -6,7 +6,8 @@ import {
 	parse,
 	writeDb,
 	personality,
-	tone
+	tone,
+	writeForViz
 } from './commands'
 
 cli
@@ -47,5 +48,10 @@ cli
 .command('tone')
 .description('get tone analysis for all episodes')
 .action(tone)
+
+cli
+.command('write-for-viz')
+.description('write all required data for viz proj')
+.action(writeForViz)
 
 cli.parse(process.argv)

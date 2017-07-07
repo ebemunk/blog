@@ -1,0 +1,13 @@
+
+.brush {
+	fill: rgba(0, 0, 0, 0.2);
+
+	& :global .handle {
+		fill: red;
+		stroke-width: 0.01;
+	}
+
+	& :global .selection {
+		stroke: none;
+	}
+}
