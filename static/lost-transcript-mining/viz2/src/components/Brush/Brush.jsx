@@ -26,40 +26,42 @@ export default class Brush extends Component {
 	}
 
 	renderBrush() {
-		if( ! this.props.selection ) return
+		const {
+			selection,
+			extent,
+			handleSize,
+
+			onBrush,
+			onBrushEnd
+		} = this.props
+
+		if( ! selection ) return
 
 		const brush = d3.brushX()
-			.extent(this.props.extent)
-			.handleSize(this.props.handleSize)
+			.extent(extent)
+			.handleSize(handleSize)
 			.on('brush', () => {
-				this.props.onBrush({
-					event: d3.event,
-					node: this.node
-				})
+				onBrush(d3.event)
 			})
 			.on('end', () => {
-				this.props.onBrushEnd({
-					event: d3.event,
-					node: this.node
-				})
+				onBrushEnd(d3.event)
 			})
 
-		d3.select(this.node)
-			.call(brush)
-
-		if( this.props.selection[0] === this.props.extent[0][0] && this.props.selection[1] === this.props.extent[1][0] ) {
-			d3.select(this.node).call(brush.move, null)
-		} else {
-			d3.select(this.node).call(brush.move, this.props.selection)
-		}
+		d3.select(this.node).call(brush)
+		d3.select(this.node).call(brush.move, selection)
 	}
 
 	render() {
+		const {
+			className,
+			transform
+		} = this.props
+
 		return (
 			<g
 				ref={(el) => { this.node = el; }}
-				className={this.props.className}
-				transform={this.props.transform}
+				className={className}
+				transform={transform}
 			/>
 		)
 	}

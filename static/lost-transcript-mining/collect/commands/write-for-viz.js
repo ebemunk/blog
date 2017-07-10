@@ -25,9 +25,29 @@ export default async function writeForViz() {
 			process: R.addIndex(R.map)(({season, episode}, i) => ({
 				season: season,
 				episode: episode,
-				key: episodeKey(season, episode),
-				date: new Date(0, 0, i).getTime(),
-				i
+				key: episodeKey(season, episode)
+			}))
+		},
+		{
+			filename: 'episodeLengths',
+			query: queries.episodeLengths(),
+			process: R.map(R.evolve({
+				words: parseInt,
+				chars: parseInt
+			}))
+		},
+		{
+			filename: 'flashes',
+			query: queries.flashbacksAndSideways(),
+			process: R.map(d => ({
+				season: d.season,
+				episode: d.episode,
+				flashes: R.transpose([d.flashback, d.flashsideways, d.chars])
+				.map(([flashback, flashsideways, chars]) => ({
+					flashback,
+					flashsideways,
+					chars
+				}))
 			}))
 		}
 	]

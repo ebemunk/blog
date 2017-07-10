@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import { AppContainer } from 'react-hot-loader'
+import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'react-redux'
 
 import App from './src'
@@ -9,11 +9,11 @@ import configureStore from './src/store'
 const store = configureStore({})
 
 const render = Component => ReactDOM.render(
-	// <AppContainer>
+	<AppContainer>
 		<Provider store={store}>
 			<Component />
-		</Provider>,
-	// </AppContainer>,
+		</Provider>
+	</AppContainer>,
 	document.getElementById('root')
 )
 

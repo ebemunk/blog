@@ -18,11 +18,31 @@ const episodeSelection = (state = [null, null], action) => {
 	}
 }
 
+const episodeLengths = (state = [], action) => {
+	switch( action.type ) {
+		case 'EPISODE_LENGTHS':
+			return action.payload
+		default:
+			return state
+	}
+}
+
+const flashes = (state = [], action) => {
+	switch( action.type ) {
+		case 'FLASHES':
+			return action.payload
+		default:
+			return state
+	}
+}
+
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
 	episodes,
-	episodeSelection
+	episodeSelection,
+	episodeLengths,
+	flashes
 })
 
 export default rootReducer
