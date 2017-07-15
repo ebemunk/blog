@@ -1,11 +1,12 @@
 import { connect } from 'react-redux'
 
 import { getFlashes } from '../../actions'
+import { selectedFlashes } from '../../selectors'
 
 import FlashScenes from './FlashScenes'
 
 const mapStateToProps = state => ({
-	episodes: state.flashes.slice(state.episodeSelection[0], state.episodeSelection[1] ? state.episodeSelection[1]+1 : null)
+	episodes: selectedFlashes(state)
 })
 
 const mapDispatchToProps = {
