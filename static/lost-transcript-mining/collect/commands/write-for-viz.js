@@ -42,12 +42,35 @@ export default async function writeForViz() {
 			process: R.map(d => ({
 				season: d.season,
 				episode: d.episode,
-				flashes: R.transpose([d.flashback, d.flashsideways, d.chars])
-				.map(([flashback, flashsideways, chars]) => ({
-					flashback,
-					flashsideways,
-					chars
-				}))
+				flashbacks: R.transpose([d.flashback, d.chars])
+				.reduce((acc, [flashback, chars]) => {
+					if( ! acc.length ) {
+						return [{
+							flashback,
+							chars
+						}]
+					}
+
+					if( R.last(acc).flashback != flashback ) {
+						acc.push({
+							flashback,
+							chars
+						})
+						return acc
+					}
+
+					acc[acc.length-1] = {
+						...R.last(acc),
+						chars: R.last(acc).chars + chars
+					}
+					return acc
+				}, [])
+				// flashes: R.transpose([d.flashback, d.flashsideways, d.chars])
+				// .map(([flashback, flashsideways, chars]) => ({
+				// 	flashback,
+				// 	flashsideways,
+				// 	chars
+				// }))
 			}))
 		}
 	]

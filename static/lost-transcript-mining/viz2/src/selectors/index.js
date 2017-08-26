@@ -9,5 +9,5 @@ export const selectedFlashes = createSelector(
 		flashes,
 		episodeSelection
 	],
-	(flashes, [start, end]) => R.equals([start, end], [null, null]) ? flashes : flashes.slice(start, end)
+	(flashes, [start, end]) => R.equals([start, end], [null, null]) ? flashes : flashes.slice(start, end + 1)
 )
