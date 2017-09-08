@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import * as d3 from 'd3'
 
 export default class Brush extends Component {
+	static displayName = 'Brush'
+
 	static propTypes = {
 		extent: PropTypes.array.isRequired,
 		selection: PropTypes.array.isRequired,
@@ -38,14 +40,14 @@ export default class Brush extends Component {
 		if( ! selection ) return
 
 		const brush = d3.brushX()
-			.extent(extent)
-			.handleSize(handleSize)
-			.on('brush', () => {
-				onBrush(d3.event)
-			})
-			.on('end', () => {
-				onBrushEnd(d3.event)
-			})
+		.extent(extent)
+		.handleSize(handleSize)
+		.on('brush', () => {
+			onBrush(d3.event)
+		})
+		.on('end', () => {
+			onBrushEnd(d3.event)
+		})
 
 		d3.select(this.node).call(brush)
 		d3.select(this.node).call(brush.move, selection)

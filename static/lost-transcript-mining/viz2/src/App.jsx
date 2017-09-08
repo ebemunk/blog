@@ -8,6 +8,10 @@ import {
 	FlashScenes
 } from './components'
 
+import {
+	WordCount
+} from './sections'
+
 import style from './App.css'
 
 export class App extends Component {
@@ -26,9 +30,18 @@ export class App extends Component {
 				<h1>bro</h1>
 				<EpisodeRangeSelector
 				/>
-				<FlashScenes />
-				{/*<hr />
-				<HorizontalBarChart
+				<WordCount
+					data={
+						episodeLengths
+						.map(d => ({
+							key: `${d.season}-${d.episode}`,
+							value: d.words
+						}))
+					}
+				/>
+				{/* <FlashScenes />
+				<hr /> */}
+				{/* <HorizontalBarChart
 					width={500}
 					height={500}
 					padding={{
@@ -36,8 +49,14 @@ export class App extends Component {
 						left: 30,
 						right: 10,
 					}}
-				/>
-				<hr />
+					data={[
+			{key: 'JACK', value: 1234},
+			{key: 'KATaE', value: 1121},
+			{key: 'QdAYT', value: 821},
+			{key: 'JACQUEAUIAZXAUQX', value: 314},
+		]}
+				/> */}
+				{/*<hr />
 				<EpisodeBar
 					data={episodeLengths.filter(d => d.season == 1 && d.episode == 2).map(d => ({
 						key: d.scene,

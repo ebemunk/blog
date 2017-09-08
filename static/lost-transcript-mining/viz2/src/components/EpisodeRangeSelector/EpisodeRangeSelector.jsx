@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import * as d3 from 'd3'
-import _ from 'lodash'
-import fp from 'lodash/fp'
+import R from 'ramda'
 import classnames from 'classnames'
 
-import { Axis, Brush } from '../'
+import { Brush } from '../'
 
 import style from './EpisodeRangeSelector.css'
 
@@ -18,6 +17,8 @@ const SEASONS = [
 ]
 
 export default class EpisodeRangeSelector extends Component {
+	static displayName = 'EpisodeRangeSelector'
+
 	static defaultProps = {
 		width: 960,
 		height: 40,
@@ -28,7 +29,6 @@ export default class EpisodeRangeSelector extends Component {
 	state = {
 		scale: () => {},
 		color: () => {},
-		debouncedSelect: () => {},
 		brushSelection: [null, null],
 		isBrushing: false
 	}
@@ -38,18 +38,15 @@ export default class EpisodeRangeSelector extends Component {
 	}
 
 	componentWillReceiveProps({episodes, width, selectEpisodes, selection}) {
-		const debouncedSelect = _.debounce(selectEpisodes, 250)
-		// const debouncedSelect = selectEpisodes
-
 		const scale = d3.scalePoint()
-		.domain(_.range(0, episodes.length))
+		.domain(R.range(0, episodes.length))
 		.range([0, width])
 		.padding(0.5)
 
 		// not null and not full selection
 		const isBrushing = ! (
-			_.isEqual(selection, [null, null])
-			|| _.isEqual(selection, [0, episodes.length-1])
+			R.equals(selection, [null, null])
+			|| R.equals(selection, [0, episodes.length-1])
 		)
 
 		let brushSelection
@@ -63,12 +60,11 @@ export default class EpisodeRangeSelector extends Component {
 		}
 
 		const color = d3.scaleOrdinal(d3.schemeCategory10)
-		.domain(_.range(0, episodes.length))
+		.domain(R.range(0, episodes.length))
 
 		this.setState({
 			scale,
 			color,
-			debouncedSelect,
 			brushSelection,
 			isBrushing
 		})
@@ -77,23 +73,25 @@ export default class EpisodeRangeSelector extends Component {
 	onBrush = (event) => {
 		if( ! event.sourceEvent ) return
 		if( event.sourceEvent.type === 'brush' ) return
+		if( ! event.selection ) return
 
-		const { scale, debouncedSelect } = this.state
+		const { selectEpisodes } = this.props
+		const { scale } = this.state
 
 		const selection = scale.domain()
 		.filter(d => event.selection[0] <= scale(d) && event.selection[1] >= scale(d))
 
 		if( selection.length ) {
-			debouncedSelect([_.first(selection), _.last(selection)])
+			selectEpisodes([R.head(selection), R.last(selection)])
 		} else {
-			debouncedSelect([null, null])
+			selectEpisodes([null, null])
 		}
 	}
 
 	onBrushEnd = (event) => {
-		if( ! event.sourceEvent ) return
+		if( ! event.sourceEvent || event.sourceEvent.type === 'end' ) return
 		if( ! event.selection ) {
-			this.state.debouncedSelect([null, null])
+			this.props.selectEpisodes([null, null])
 		}
 	}
 
@@ -101,12 +99,12 @@ export default class EpisodeRangeSelector extends Component {
 		const {
 			width,
 			height,
-			episodes
+			episodes,
+			selectEpisodes
 		} = this.props
 		const {
 			scale,
 			color,
-			debouncedSelect,
 			isBrushing,
 			brushSelection
 		} = this.state
@@ -160,50 +158,50 @@ export default class EpisodeRangeSelector extends Component {
 							/>
 						</mask>
 					</defs>
-						<g className={style.seasons}>
-							{SEASONS.map(([start, end], i) =>
-								<rect
-									x={scale(start) - halfStep}
-									y={0}
-									width={(scale(end) + halfStep) - (scale(start) - halfStep)}
-									height={height}
-									fill={color(i)}
-									key={[start, end]}
-								/>
-							)}
-						</g>
-						<g className={style.seasonSelectors}>
-							{SEASONS.map(([start, end], i) =>
-								<text
-									x={scale(start) + (scale(end) - scale(start)) / 2}
-									y={height+15}
-									fill={color(i)}
-									key={start}
-									onClick={() => debouncedSelect([start, end])}
-								>
-									Season {i+1}
-								</text>
-							)}
-						</g>
-						<g className={style.episodes}>
-							{episodes.map((episode, i) =>
-								<rect
-									x={scale(i) - 1.5}
-									y={5}
-									width={3}
-									height={height - 10}
-									key={i}
-								/>
-							)}
-						</g>
-						<Brush
-							className={style.brush}
-							extent={[[0, 0], [width, height]]}
-							handleSize={2}
-							onBrush={this.onBrush}
-							onBrushEnd={this.onBrushEnd}
-							selection={this.state.brushSelection}
-						/>
+					<g className={style.seasons}>
+						{SEASONS.map(([start, end], i) =>
+							<rect
+								x={scale(start) - halfStep}
+								y={0}
+								width={(scale(end) + halfStep) - (scale(start) - halfStep)}
+								height={height}
+								fill={color(i)}
+								key={[start, end]}
+							/>
+						)}
+					</g>
+					<g className={style.seasonSelectors}>
+						{SEASONS.map(([start, end], i) =>
+							<text
+								x={scale(start) + (scale(end) - scale(start)) / 2}
+								y={height+15}
+								fill={color(i)}
+								key={start}
+								onClick={() => selectEpisodes([start, end])}
+							>
+								Season {i+1}
+							</text>
+						)}
+					</g>
+					<g className={style.episodes}>
+						{episodes.map((episode, i) =>
+							<rect
+								x={scale(i) - 1.5}
+								y={5}
+								width={3}
+								height={height - 10}
+								key={i}
+							/>
+						)}
+					</g>
+					<Brush
+						className={style.brush}
+						extent={[[0, 0], [width, height]]}
+						handleSize={2}
+						onBrush={this.onBrush}
+						onBrushEnd={this.onBrushEnd}
+						selection={this.state.brushSelection}
+					/>
 				</svg>
 			</div>
 		)

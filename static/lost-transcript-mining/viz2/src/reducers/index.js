@@ -9,8 +9,6 @@ const episodes = (state = [], action) => {
 
 const episodeSelection = (state = [null, null], action) => {
 	switch( action.type ) {
-		case 'EPISODES':
-			return [0, action.payload.length-1]
 		case 'SELECT_EPISODES':
 			return action.payload
 		default:
