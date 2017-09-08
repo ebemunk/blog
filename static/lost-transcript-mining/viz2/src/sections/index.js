@@ -1,0 +1,1 @@
+export WordCount from './WordCount'

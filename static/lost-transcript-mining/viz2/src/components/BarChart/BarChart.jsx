@@ -3,9 +3,9 @@ import * as d3 from 'd3'
 
 import { Axis } from '../'
 
-import style from './HorizontalBarChart.css'
+import style from './BarChart.css'
 
-export default class HorizontalBarChart extends Component {
+export default class BarChart extends Component {
 	static defaultProps = {
 		width: 480,
 		height: 500,
@@ -16,7 +16,7 @@ export default class HorizontalBarChart extends Component {
 			left: 0,
 		},
 		data: [
-			{key: 'JACK', value: 1234},
+			{key: 'JACK', value: 134},
 			{key: 'KATE', value: 1121},
 			{key: 'QAYT', value: 821},
 			{key: 'JACQUEAUIAZXAUQX', value: 314},
@@ -24,23 +24,24 @@ export default class HorizontalBarChart extends Component {
 	}
 
 	state = {
-		x: d3.scaleLinear(),
-		y: d3.scaleBand(),
+		linearScale: d3.scaleLinear(),
+		bandScale: d3.scaleBand(),
 	}
 
 	componentWillReceiveProps({ data, width, height, padding }) {
-		const x = d3.scaleLinear()
-		.range([0, width - padding.left - padding.right])
+		console.log('recalc')
+		const linearScale = d3.scaleLinear()
+		.range([height - padding.top - padding.bottom, 0])
 		.domain([0, d3.max(data, d => d.value)])
 
-		const y = d3.scaleBand()
-		.range([0, height])
+		const bandScale = d3.scaleBand()
+		.range([0, width - padding.right - padding.left])
 		.padding(0.1)
 		.domain(data.map(d => d.key))
 
 		this.setState({
-			x,
-			y
+			linearScale,
+			bandScale
 		})
 	}
 
@@ -53,8 +54,8 @@ export default class HorizontalBarChart extends Component {
 		} = this.props
 
 		const {
-			x,
-			y
+			linearScale,
+			bandScale
 		} = this.state
 
 		return (
@@ -66,24 +67,25 @@ export default class HorizontalBarChart extends Component {
 					transform={`translate(${padding.left}, ${padding.top})`}
 				>
 					<Axis
-						orientation="top"
-						scale={x}
-						tickSize={-height}
-						className={style.xAxis}
+						orientation="left"
+						scale={linearScale}
+						tickSize={-width + padding.right + padding.left}
+						className={style.yAxis}
 					/>
 					<Axis
-						orientation="left"
-						scale={y}
+						orientation="bottom"
+						scale={bandScale}
 						tickSize={3}
-						className={style.yAxis}
+						className={style.xAxis}
+						transform={`translate(0, ${height - padding.top - padding.bottom})`}
 					/>
 					<g>
 						{data.map(({ key, value }) =>
 							<rect
-								x={0}
-								y={y(key)}
-								width={x(value)}
-								height={y.bandwidth()}
+								x={bandScale(key)}
+								y={linearScale(value)}
+								width={bandScale.bandwidth()}
+								height={height - padding.top - padding.bottom - linearScale(value)}
 								className={style.bar}
 								key={key}
 							/>

@@ -40,13 +40,12 @@ export function episodeLengths() {
 		select
 			season,
 			episode,
-			scene,
-			sum(array_length(regexp_split_to_array(line, '\s'),1)) as words,
+			sum(array_length(regexp_split_to_array(line, '\\s'),1)) as words,
 			sum(length(line)) as chars
 		from dialog
 		where type='dialog'
-		group by season, episode, scene
-		order by season, episode, scene
+		group by season, episode
+		order by season, episode
 	;`
 }
 

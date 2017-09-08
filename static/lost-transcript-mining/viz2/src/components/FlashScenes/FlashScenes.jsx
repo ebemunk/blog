@@ -26,8 +26,8 @@ export default class FlashScenes extends Component {
 
 		const x = d3.scaleLinear()
 		.range([0, 960])
-		// .domain([0, 100])
-		.domain([0, d3.max(totals)])
+		.domain([0, 100])
+		// .domain([0, d3.max(totals)])
 
 		const stack = d3.stack()
 		.keys(R.range(0, lengths))
@@ -40,7 +40,7 @@ export default class FlashScenes extends Component {
 			d.flashbacks
 			.map(v => ({
 				...v,
-				// chars: v.chars / totals[i] * 100
+				chars: v.chars / totals[i] * 100
 			}))
 			.concat(
 				new Array(lengths - d.flashbacks.length)
