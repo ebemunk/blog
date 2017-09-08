@@ -16,15 +16,15 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.4",
-    "flow-bin": "^0.49.1",
+    "flow-bin": "^0.54.1",
     "html-webpack-plugin": "^2.29.0",
     "json-loader": "^0.5.4",
-    "postcss-cssnext": "^2.11.0",
+    "postcss-cssnext": "^3.0.2",
     "postcss-loader": "^2.0.6",
     "react-hot-loader": "next",
     "style-loader": "^0.18.2",
     "webpack": "^3.0.0",
-    "webpack-dev-server": "2.4.5"
+    "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
