@@ -17,7 +17,7 @@ export default class FlashScenes extends Component {
 
 		return (
 			<svg height="1000" width="960">
-				{episodes.map(episode => (
+				{episodes.map((episode, i) => (
 					<EpisodeBar
 						data={episode.flashes.map((d, i) => ({
 							key: i,
@@ -26,6 +26,8 @@ export default class FlashScenes extends Component {
 						}))}
 						classScale={d3.scaleOrdinal().range([style.normal, style.flashback]).domain([false, true])}
 						key={`${episode.season}-${episode.episode}`}
+						transform={`translate(0, ${17*i})`}
+						height={15}
 					/>
 				))}
 			</svg>

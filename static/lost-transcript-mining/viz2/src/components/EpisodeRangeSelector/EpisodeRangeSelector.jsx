@@ -38,8 +38,8 @@ export default class EpisodeRangeSelector extends Component {
 	}
 
 	componentWillReceiveProps({episodes, width, selectEpisodes, selection}) {
-		// const debouncedSelect = _.debounce(selectEpisodes, 250)
-		const debouncedSelect = selectEpisodes
+		const debouncedSelect = _.debounce(selectEpisodes, 250)
+		// const debouncedSelect = selectEpisodes
 
 		const scale = d3.scalePoint()
 		.domain(_.range(0, episodes.length))

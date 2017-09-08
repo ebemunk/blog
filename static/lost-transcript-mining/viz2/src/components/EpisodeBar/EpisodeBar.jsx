@@ -9,7 +9,8 @@ export default function EpisodeBar(props) {
 		width,
 		height,
 		data,
-		classScale
+		classScale,
+		transform
 	} = props
 
 	const total = data.reduce((sum, d) => sum + d.value, 0)
@@ -21,6 +22,7 @@ export default function EpisodeBar(props) {
 		<g
 			width={width}
 			height={height}
+			transform={transform}
 		>
 			{data.map((d, i) =>
 				<rect

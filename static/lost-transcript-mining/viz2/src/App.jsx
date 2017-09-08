@@ -23,7 +23,7 @@ export class App extends Component {
 
 		return (
 			<div className={style.app}>
-				<h1>haiv</h1>
+				<h1>bro</h1>
 				<EpisodeRangeSelector
 				/>
 				<FlashScenes />
