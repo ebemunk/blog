@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import * as d3 from 'd3'
+import classnames from 'classnames'
 
 import { Axis } from '../'
 
@@ -20,7 +21,8 @@ export default class BarChart extends Component {
 			{key: 'KATE', value: 1121},
 			{key: 'QAYT', value: 821},
 			{key: 'JACQUEAUIAZXAUQX', value: 314},
-		]
+		],
+		barStyle: () => {}
 	}
 
 	state = {
@@ -47,10 +49,14 @@ export default class BarChart extends Component {
 
 	render() {
 		const {
+			className,
 			width,
 			height,
 			padding,
-			data
+			data,
+			linearAxisProps,
+			bandAxisProps,
+			barStyle
 		} = this.props
 
 		const {
@@ -62,6 +68,7 @@ export default class BarChart extends Component {
 			<svg
 				width={width}
 				height={height}
+				className={className}
 			>
 				<g
 					transform={`translate(${padding.left}, ${padding.top})`}
@@ -70,14 +77,16 @@ export default class BarChart extends Component {
 						orientation="left"
 						scale={linearScale}
 						tickSize={-width + padding.right + padding.left}
-						className={style.yAxis}
+						{...linearAxisProps}
+						className={classnames(style.linearAxis, linearAxisProps.className)}
 					/>
 					<Axis
 						orientation="bottom"
 						scale={bandScale}
 						tickSize={3}
-						className={style.xAxis}
 						transform={`translate(0, ${height - padding.top - padding.bottom})`}
+						{...bandAxisProps}
+						className={classnames(style.bandAxis, bandAxisProps.className)}
 					/>
 					<g>
 						{data.map(({ key, value }) =>
@@ -88,6 +97,7 @@ export default class BarChart extends Component {
 								height={height - padding.top - padding.bottom - linearScale(value)}
 								className={style.bar}
 								key={key}
+								style={barStyle({ key, value })}
 							/>
 						)}
 					</g>

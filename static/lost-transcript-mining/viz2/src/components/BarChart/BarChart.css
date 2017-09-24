@@ -6,7 +6,7 @@
 	fill: steelblue;
 }
 
-.xAxis, .yAxis {
+.bandAxis, .linearAxis {
 	& text {
 		fill: var(--white);
 	}

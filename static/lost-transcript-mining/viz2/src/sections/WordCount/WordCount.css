@@ -1,0 +1,12 @@
+.bandAxis {
+	& :global(.tick) text {
+		text-anchor: start;
+		transform: translateY(3px);
+	}
+}
+
+.linearAxis {
+	& :global(.tick) line {
+		opacity: 0.3;
+	}
+}
