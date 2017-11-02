@@ -40,6 +40,21 @@ Array [
 ]
 `;
 
+exports[`watson allSentenceTones should stop queries if no sentences_tone exists 1`] = `
+Array [
+  Array [
+    Object {
+      "text": "blabla blabla",
+    },
+  ],
+  Array [
+    Object {
+      "text": "abla blabla",
+    },
+  ],
+]
+`;
+
 exports[`watson charProfile should make it happen 1`] = `
 Array [
   Array [

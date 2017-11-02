@@ -28,12 +28,6 @@ describe('watson', () => {
 
 	describe('allSentenceTones', () => {
 		beforeEach(() => {
-			watson.toneAnalyzer.toneAsync = jest.fn()
-			.mockReturnValue({
-				sentences_tone: [
-					{ input_to: 1 }
-				]
-			})
 		})
 
 		afterEach(() => {
@@ -41,8 +35,30 @@ describe('watson', () => {
 		})
 
 		it('make requests until all text is analyzed', async () => {
+			watson.toneAnalyzer.toneAsync = jest.fn()
+			.mockReturnValue({
+				sentences_tone: [
+					{ input_to: 1 }
+				]
+			})
+
 			await watson.allSentenceTones('blabla blabla')
 
+			expect(watson.toneAnalyzer.toneAsync.mock.calls).toMatchSnapshot()
+		})
+
+		it('should stop queries if no sentences_tone exists', async () => {
+			watson.toneAnalyzer.toneAsync = jest.fn()
+			.mockReturnValueOnce({
+				sentences_tone: [
+					{ input_to: 1 }
+				]
+			})
+			.mockReturnValueOnce({})
+
+			await watson.allSentenceTones('blabla blabla')
+
+			expect(watson.toneAnalyzer.toneAsync).toHaveBeenCalledTimes(2)
 			expect(watson.toneAnalyzer.toneAsync.mock.calls).toMatchSnapshot()
 		})
 	})
