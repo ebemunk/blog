@@ -14,7 +14,8 @@ module.exports = {
 			"error",
 			"tab",
 			{
-				"SwitchCase": 1
+				"SwitchCase": 1,
+				"MemberExpression": "off"
 			}
 		],
 		"linebreak-style": [

@@ -1,6 +1,10 @@
 import cheerio from 'cheerio'
 import R from 'ramda'
 
+import { logger } from '../util'
+
+const log = logger('lib/parse')
+
 function getEpisodeLinks(el) {
 	return el
 	.parent()
@@ -122,9 +126,7 @@ export function parseText(text) {
 				text: `[${line}`
 			})
 		}
-		/* eslint-disable no-console */
-		console.log('unparseable line:', text)
-		console.log()
+		log('unparseable line:', text, '\n')
 		return
 	}
 	const char_name = charLine[1].trim().toUpperCase()

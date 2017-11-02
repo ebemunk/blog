@@ -3,6 +3,9 @@
 exports[`writeDb should do it 1`] = `
 Array [
   Array [
+    "truncate dialog",
+  ],
+  Array [
     "
 		INSERT INTO dialog
 		(type,act,scene,meta,season,episode,seq)

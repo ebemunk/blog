@@ -26,10 +26,7 @@ export default async function tone() {
 		}),
 		R.partialRight(Promise.mapSeries, [
 			R.pipeP(
-				({ season, episode }) => {
-					log('faf', season, episode)
-					return watson.episodeTone(pool, season, episode)
-				},
+				({ season, episode }) => watson.episodeTone(pool, season, episode),
 				R.evolve({
 					document_tone: JSON.stringify,
 					sentences_tone: JSON.stringify

@@ -33,6 +33,10 @@ export default async function writeDB(opts) {
 		R.map(R.evolve({
 			directions: JSON.stringify
 		})),
+		R.tap(() => {
+			log('truncating dialog')
+			return pool.query('truncate dialog')
+		}),
 		R.tap(rows => {
 			progress = new ProgressBar(':current/:total :bar :eta', rows.length)
 			log(`found ${rows.length} rows, writing`)
