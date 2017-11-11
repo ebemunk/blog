@@ -3,7 +3,7 @@ import {
 	tone_analyzer,
 	personality_insights,
 } from 'watson-developer-cloud'
-import R from 'ramda'
+import * as R from 'ramda'
 import Promise from 'bluebird'
 
 import {

@@ -45,7 +45,11 @@ export default async function writeDB(opts) {
 		R.partialRight(Promise.map, [
 			R.pipeP(
 				insert => pool.query(...insert),
-				R.tap(() => progress.tick())
+				// R.tap as last element in pipeP fails for ramda@0.25 for some reason
+				async result => {
+					progress.tick()
+					return result
+				}
 			),
 			{ concurrency }
 		]),

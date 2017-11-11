@@ -22,9 +22,9 @@ export default async function writeForViz() {
 		{
 			filename: 'episodes',
 			query: queries.allEpisodes(),
-			process: R.addIndex(R.map)(({season, episode}, i) => ({
-				season: season,
-				episode: episode,
+			process: R.addIndex(R.map)(({season, episode}) => ({
+				season,
+				episode,
 				key: episodeKey(season, episode)
 			}))
 		},
