@@ -1,5 +1,6 @@
 import R from 'ramda'
 import Promise from 'bluebird'
+import ProgressBar from 'progress'
 
 import {
 	insertObj,
@@ -21,6 +22,7 @@ export default async function writeDB(opts) {
 	} = opts
 
 	const pool = getPool()
+	let progress = new ProgressBar(':current/:total :bar :eta', 25)
 
 	const getProfileAndSave = async char_name => {
 		const getCharProfile = R.curry(watson.charProfile)(pool)
@@ -31,6 +33,9 @@ export default async function writeDB(opts) {
 				profile: JSON.stringify(profile)
 			}),
 			R.partialRight(insertObj, ['personality']),
+			R.tap(() => {
+				progress.tick()
+			}),
 			insert => pool.query(...insert),
 		)(char_name)
 	}

@@ -30,15 +30,7 @@ export class App extends Component {
 				<h1>bro</h1>
 				<EpisodeRangeSelector
 				/>
-				<WordCount
-					data={
-						episodeLengths
-						.map(d => ({
-							key: `${d.season}-${d.episode}`,
-							value: d.words
-						}))
-					}
-				/>
+				<WordCount 	/>
 				{/* <FlashScenes />
 				<hr /> */}
 				{/* <HorizontalBarChart

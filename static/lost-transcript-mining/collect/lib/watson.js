@@ -3,12 +3,16 @@ import {
 	tone_analyzer,
 	personality_insights,
 } from 'watson-developer-cloud'
-import R from 'ramda'
+import * as R from 'ramda'
 import Promise from 'bluebird'
 
 import {
 	queries
 } from '../db'
+
+import { logger } from '../util'
+
+const log = logger('lib/watson')
 
 config()
 
@@ -50,6 +54,7 @@ export async function allSentenceTones(text) {
 		const tone = await toneAnalyzer.toneAsync({
 			text: txt
 		})
+		if( !tone.sentences_tone ) break
 		tones.push(tone)
 		const nextChunk = R.last(tone.sentences_tone).input_to + 1
 		txt = txt.substr(nextChunk)

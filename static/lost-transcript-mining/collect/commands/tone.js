@@ -1,4 +1,4 @@
-import R from 'ramda'
+import * as R from 'ramda'
 import Promise from 'bluebird'
 import ProgressBar from 'progress'
 
@@ -26,19 +26,18 @@ export default async function tone() {
 		}),
 		R.partialRight(Promise.mapSeries, [
 			R.pipeP(
-				({ season, episode }) => {
-					log('faf', season, episode)
-					return watson.episodeTone(pool, season, episode)
-				},
+				({ season, episode }) => watson.episodeTone(pool, season, episode),
 				R.evolve({
 					document_tone: JSON.stringify,
 					sentences_tone: JSON.stringify
 				}),
 				R.partialRight(insertObj, ['tone']),
 				insert => pool.query(...insert),
-				R.tap(() => {
+				// R.tap as last element in pipeP fails for ramda@0.25 for some reason
+				async result => {
 					progress.tick()
-				})
+					return result
+				}
 			)
 		]),
 	)(queries.allEpisodes())

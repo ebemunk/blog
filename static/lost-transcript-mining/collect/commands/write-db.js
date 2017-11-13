@@ -33,6 +33,10 @@ export default async function writeDB(opts) {
 		R.map(R.evolve({
 			directions: JSON.stringify
 		})),
+		R.tap(() => {
+			log('truncating dialog')
+			return pool.query('truncate dialog')
+		}),
 		R.tap(rows => {
 			progress = new ProgressBar(':current/:total :bar :eta', rows.length)
 			log(`found ${rows.length} rows, writing`)
@@ -41,7 +45,11 @@ export default async function writeDB(opts) {
 		R.partialRight(Promise.map, [
 			R.pipeP(
 				insert => pool.query(...insert),
-				R.tap(() => progress.tick())
+				// R.tap as last element in pipeP fails for ramda@0.25 for some reason
+				async result => {
+					progress.tick()
+					return result
+				}
 			),
 			{ concurrency }
 		]),

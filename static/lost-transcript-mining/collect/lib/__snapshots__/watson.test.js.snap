@@ -40,16 +40,25 @@ Array [
 ]
 `;
 
+exports[`watson allSentenceTones should stop queries if no sentences_tone exists 1`] = `
+Array [
+  Array [
+    Object {
+      "text": "blabla blabla",
+    },
+  ],
+  Array [
+    Object {
+      "text": "abla blabla",
+    },
+  ],
+]
+`;
+
 exports[`watson charProfile should make it happen 1`] = `
 Array [
   Array [
-    "
-		select string_agg(line, E'
-' order by season, episode, seq) as text
-		from dialog
-		where type='dialog' and char_name='JACK'
-		group by char_name
-	;",
+    "select text from all_lines_by_char where char_name='JACK';",
   ],
 ]
 `;
@@ -68,13 +77,7 @@ Array [
 exports[`watson episodeText should query db 1`] = `
 Array [
   Array [
-    "
-		select string_agg(line, ' ' order by seq) as text
-		from dialog
-		where type='dialog' and season=2 and episode=3 and line!=''
-		group by season,episode
-		order by season,episode
-	;",
+    "select text from episode_text where season=2 and episode=3;",
   ],
 ]
 `;

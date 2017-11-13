@@ -22,6 +22,7 @@ export const prettyJson = R.partialRight(JSON.stringify, [null, 2])
 
 // console.log(name, ...)
 export function logger(name) {
+	if( process.env.NODE_ENV === 'test' ) return () => {}
 	/* eslint-disable no-console */
 	return R.partial(console.log, [chalk.bgGreen(name)])
 }

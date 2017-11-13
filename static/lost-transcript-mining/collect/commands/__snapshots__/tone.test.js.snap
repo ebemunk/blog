@@ -22,11 +22,7 @@ Array [
 exports[`tone should get tone analysis for all episodes 2`] = `
 Array [
   Array [
-    "
-		select distinct season, episode
-		from dialog
-		order by season, episode asc
-	;",
+    "select * from episodes;",
   ],
   Array [
     "

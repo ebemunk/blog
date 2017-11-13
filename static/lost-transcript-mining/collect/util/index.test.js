@@ -47,7 +47,8 @@ describe('util', () => {
 
 		it('calls fs.writeFile', () => {
 			writeFile('meh/heh', 'okay')
-			expect(fs.writeFile, 'meh/heh', 'okay', expect.any(Function))
+
+			expect(fs.writeFile).toHaveBeenCalledWith('meh/heh', 'okay', expect.any(Function))
 		})
 	})
 
