@@ -19,25 +19,16 @@ describe('parse', () => {
 		]))
 		util.writeFile = jest.fn(() => Promise.resolve())
 		util.readFile = jest.fn(() => Promise.resolve(text))
-		// console.log('before each');
 	})
 
 	afterEach(() => {
 		util.readDir.mockRestore()
 		util.writeFile.mockRestore()
 		util.readFile.mockRestore()
-		// console.log('after each');
 	})
 
 	it('should do it', async () => {
-		// console.log('test');
-		let parsed
-		try {
-			parsed = await parse({ concurrency: 1 })
-		} catch (e) {
-			// console.log('erozrrz', e);
-		}
-		// console.log('test2');
+		const parsed = await parse({ concurrency: 1 })
 
 		expect(parsed).toMatchSnapshot()
 	})
