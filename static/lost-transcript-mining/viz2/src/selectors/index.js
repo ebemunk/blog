@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import R from 'ramda'
+import * as R from 'ramda'
 
 const flashes = R.path(['flashes'])
 const episodeSelection = R.path(['episodeSelection'])

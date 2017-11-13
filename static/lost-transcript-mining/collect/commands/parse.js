@@ -1,5 +1,5 @@
 import Promise from 'bluebird'
-import R from 'ramda'
+import * as R from 'ramda'
 
 import {
 	getLines,

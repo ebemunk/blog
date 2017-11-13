@@ -1,7 +1,7 @@
 import fs from 'fs'
 
 import Promise from 'bluebird'
-import R from 'ramda'
+import * as R from 'ramda'
 import chalk from 'chalk'
 import axios from 'axios'
 
