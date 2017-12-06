@@ -14,18 +14,8 @@ export function allEpisodes() {
 	return 'select * from episodes;'
 }
 
-export function episodeLengths() {
-	return `
-		select
-			season,
-			episode,
-			sum(array_length(regexp_split_to_array(line, '\\s'),1)) as words,
-			sum(length(line)) as chars
-		from dialog
-		where type='dialog'
-		group by season, episode
-		order by season, episode
-	;`
+export function wordCount() {
+	return 'select * from word_count;'
 }
 
 export function flashbacksAndSideways() {

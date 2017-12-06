@@ -29,11 +29,11 @@ export default async function writeForViz() {
 			}))
 		},
 		{
-			filename: 'episodeLengths',
-			query: queries.episodeLengths(),
-			process: R.map(R.evolve({
-				words: parseInt,
-				chars: parseInt
+			filename: 'wordCount',
+			query: queries.wordCount(),
+			process: R.map(row => ({
+				...row,
+				density: row.uniq / row.total * 100,
 			}))
 		},
 		{

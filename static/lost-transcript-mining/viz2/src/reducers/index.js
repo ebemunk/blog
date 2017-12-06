@@ -16,9 +16,9 @@ const episodeSelection = (state = [null, null], action) => {
 	}
 }
 
-const episodeLengths = (state = [], action) => {
+const wordCount = (state = [], action) => {
 	switch( action.type ) {
-		case 'EPISODE_LENGTHS':
+		case 'WORD_COUNT':
 			return action.payload
 		default:
 			return state
@@ -39,7 +39,7 @@ import { combineReducers } from 'redux'
 const rootReducer = combineReducers({
 	episodes,
 	episodeSelection,
-	episodeLengths,
+	wordCount,
 	flashes
 })
 

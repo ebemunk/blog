@@ -10,7 +10,11 @@ import style from './WordCount.css'
 const color = d3.scaleOrdinal(d3.schemeCategory10)
 
 export default function WordCount(props) {
-	const { data } = props
+	const {
+		data,
+		linearScale,
+	} = props
+
 	return (
 		<div style={{ display: 'flex' }}>
 			<div style={{ alignSelf: 'center' }}>
@@ -37,6 +41,7 @@ export default function WordCount(props) {
 						return
 					},
 				}}
+				linearScaleProps={linearScale}
 				linearAxisProps={{
 					className: style.linearAxis,
 					tickFormat: d3.format('.2s')

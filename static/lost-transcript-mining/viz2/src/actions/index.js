@@ -12,12 +12,12 @@ export const selectEpisodes = selection => ({
 	payload: selection
 })
 
-export const getEpisodeLengths = () => async dispatch => {
-	const episodeLengths = await import('../data/episodeLengths.json')
+export const getWordCount = () => async dispatch => {
+	const wordCount = await import('../data/wordCount.json')
 
 	dispatch({
-		type: 'EPISODE_LENGTHS',
-		payload: episodeLengths
+		type: 'WORD_COUNT',
+		payload: wordCount
 	})
 }
 

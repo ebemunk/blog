@@ -16,7 +16,7 @@ import style from './App.css'
 
 export class App extends Component {
 	componentWillMount() {
-		this.props.getEpisodeLengths()
+		this.props.getWordCount()
 	}
 
 	render() {

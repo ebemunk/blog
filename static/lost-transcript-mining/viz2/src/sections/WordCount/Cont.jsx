@@ -4,18 +4,16 @@ import WordCount from './WordCount'
 
 export class Co extends Component {
 	state = {
-		dataType: 'words'
+		dataType: 'total'
 	}
 
-	setDataType = val => this.setState({
-		dataType: val
-	})
+	setDataType = dataType => this.setState({ dataType })
 
 	render() {
 		const { dataType } = this.state
-		const { episodeLengths } = this.props
+		const { wordCount } = this.props
 
-		const data = episodeLengths
+		const data = wordCount
 		.map(d => ({
 			key: `${d.season}-${d.episode}`,
 			value: d[dataType]
@@ -24,12 +22,17 @@ export class Co extends Component {
 		return (
 			<div>
 				<div>
-					<button onClick={() => this.setDataType('words')}>Words</button>
-					<button onClick={() => this.setDataType('chars')}>Unique Words</button>
-					<button>Unique Word Density</button>
+					<button onClick={() => this.setDataType('total')}>Total</button>
+					<button onClick={() => this.setDataType('uniq')}>Unique</button>
+					<button onClick={() => this.setDataType('density')}>Density</button>
 				</div>
 				<div>
-					<WordCount data={data} />
+					<WordCount
+						data={data}
+						linearScale={{
+							domain: dataType === 'density' ? [0, 100] : {},
+						}}
+					/>
 				</div>
 			</div>
 		)
@@ -40,7 +43,7 @@ import { connect } from 'react-redux'
 
 export default connect(
 	(state) => ({
-		episodeLengths: state.episodeLengths
+		wordCount: state.wordCount
 	}),
 	null
 )
