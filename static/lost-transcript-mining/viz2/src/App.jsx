@@ -30,9 +30,11 @@ export class App extends Component {
 				<h1>bro</h1>
 				<EpisodeRangeSelector
 				/>
+				<hr />
 				<WordCount 	/>
-				{/* <FlashScenes />
-				<hr /> */}
+				<hr />
+				<FlashScenes />
+				<hr />
 				{/* <HorizontalBarChart
 					width={500}
 					height={500}

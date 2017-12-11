@@ -1,1 +1,1 @@
-export default from './Cont'
+export default from './WordCount'

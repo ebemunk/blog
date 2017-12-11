@@ -57,6 +57,7 @@ export default class FlashScenes extends Component {
 				{
 					stax.map((cat, ci) => cat.map((r, i) => (
 							<rect
+								key={i}
 								x={x(r[0])}
 								y={i*27}
 								height={25}

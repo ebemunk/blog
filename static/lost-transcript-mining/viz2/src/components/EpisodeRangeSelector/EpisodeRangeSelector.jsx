@@ -71,6 +71,7 @@ export default class EpisodeRangeSelector extends Component {
 	}
 
 	onBrush = (event) => {
+		if( ! event ) return
 		if( ! event.sourceEvent ) return
 		if( event.sourceEvent.type === 'brush' ) return
 		if( ! event.selection ) return
@@ -89,6 +90,7 @@ export default class EpisodeRangeSelector extends Component {
 	}
 
 	onBrushEnd = (event) => {
+		if( ! event ) return
 		if( ! event.sourceEvent || event.sourceEvent.type === 'end' ) return
 		if( ! event.selection ) {
 			this.props.selectEpisodes([null, null])

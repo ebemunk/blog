@@ -77,7 +77,7 @@ export default class Axis extends Component {
 
 		return (
 			<g
-				ref={el => { this.axisElement = el; }}
+				ref={el => this.axisElement = el}
 				{...otherProps}
 			/>
 		)
