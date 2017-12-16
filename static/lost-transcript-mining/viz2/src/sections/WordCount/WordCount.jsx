@@ -23,8 +23,6 @@ export class WordCount extends Component {
 		dataType: 'total'
 	}
 
-	setDataType = dataType => this.setState({ dataType })
-
 	render() {
 		const { dataType } = this.state
 		const { wordCount } = this.props

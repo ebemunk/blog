@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as d3 from 'd3'
 import classnames from 'classnames'
+import { NodeGroup } from 'react-move'
 
 import { Axis } from '../'
 
@@ -31,7 +32,6 @@ export default class BarChart extends Component {
 	}
 
 	componentWillReceiveProps({ data, width, height, padding, linearScaleProps }) {
-		console.log('recalc')
 		const linearDomain = linearScaleProps.domain ? linearScaleProps.domain : [0, d3.max(data, d => d.value)]
 
 		const linearScale = d3.scaleLinear()
@@ -90,19 +90,51 @@ export default class BarChart extends Component {
 						{...bandAxisProps}
 						className={classnames(style.bandAxis, bandAxisProps.className)}
 					/>
-					<g>
-						{data.map(({ key, value }) =>
-							<rect
-								x={bandScale(key)}
-								y={linearScale(value)}
-								width={bandScale.bandwidth()}
-								height={height - padding.top - padding.bottom - linearScale(value)}
-								className={style.bar}
-								key={key}
-								style={barStyle({ key, value })}
-							/>
-						)}
-					</g>
+					<NodeGroup
+						data={data}
+						keyAccessor={d => d.key}
+						start={() => ({
+							y: height - padding.top - padding.bottom,
+							height: 0,
+						})}
+						enter={d => ({
+							y: [linearScale(d.value)],
+							height: [height - padding.top - padding.bottom - linearScale(d.value)],
+							timing: { duration: 250 }
+						})}
+						update={d => ({
+							y: [linearScale(d.value)],
+							height: [height - padding.top - padding.bottom - linearScale(d.value)],
+							timing: { duration: 250 }
+						})}
+					>
+						{
+							nodeData => {
+								return (
+									<g>
+										{
+											nodeData.map(node => {
+												const { key, data: { value } } = node
+												const { y, height } = node.state
+												return (
+													<rect
+														x={bandScale(key)}
+														y={y}
+														width={bandScale.bandwidth()}
+														height={height}
+														className={style.bar}
+														key={key}
+														style={barStyle({ key, value })}
+													/>
+												)
+											}
+											)
+										}
+									</g>
+								)
+							}
+						}
+					</NodeGroup>
 				</g>
 			</svg>
 		)
