@@ -4,17 +4,9 @@ import * as R from 'ramda'
 import classnames from 'classnames'
 
 import { Brush } from '../'
+import { seasonColor, SEASONS } from '../../util'
 
 import style from './EpisodeRangeSelector.css'
-
-const SEASONS = [
-	[0, 23],
-	[24, 46],
-	[47, 68],
-	[69, 81],
-	[82, 97],
-	[98, 113]
-]
 
 export default class EpisodeRangeSelector extends Component {
 	static displayName = 'EpisodeRangeSelector'
@@ -28,7 +20,6 @@ export default class EpisodeRangeSelector extends Component {
 
 	state = {
 		scale: () => {},
-		color: () => {},
 		brushSelection: [null, null],
 		isBrushing: false
 	}
@@ -59,12 +50,8 @@ export default class EpisodeRangeSelector extends Component {
 			brushSelection = [null, null]
 		}
 
-		const color = d3.scaleOrdinal(d3.schemeCategory10)
-		.domain(R.range(0, episodes.length))
-
 		this.setState({
 			scale,
-			color,
 			brushSelection,
 			isBrushing
 		})
@@ -106,7 +93,6 @@ export default class EpisodeRangeSelector extends Component {
 		} = this.props
 		const {
 			scale,
-			color,
 			isBrushing,
 			brushSelection
 		} = this.state
@@ -167,7 +153,7 @@ export default class EpisodeRangeSelector extends Component {
 								y={0}
 								width={(scale(end) + halfStep) - (scale(start) - halfStep)}
 								height={height}
-								fill={color(i)}
+								fill={seasonColor(i)}
 								key={[start, end]}
 							/>
 						)}
@@ -177,7 +163,7 @@ export default class EpisodeRangeSelector extends Component {
 							<text
 								x={scale(start) + (scale(end) - scale(start)) / 2}
 								y={height+15}
-								fill={color(i)}
+								fill={seasonColor(i)}
 								key={start}
 								onClick={() => selectEpisodes([start, end])}
 							>

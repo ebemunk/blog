@@ -44,7 +44,7 @@ export default class FlashScenes extends Component {
 			}))
 			.concat(
 				new Array(lengths - d.flashbacks.length)
-				.fill({ chars: 0, flashback: false }, 0, lengths - d.flashbacks.length)
+				.fill({ chars: 0, flashback: false, flashsideways: false }, 0, lengths - d.flashbacks.length)
 			),
 		]), [])
 		console.log('--------------');
@@ -59,10 +59,10 @@ export default class FlashScenes extends Component {
 							<rect
 								key={i}
 								x={x(r[0])}
-								y={i*27}
-								height={25}
+								y={i*6}
+								height={5}
 								width={x(r[1]) - x(r[0])}
-								fill={r.data[ci].flashback ? 'red' : 'white'}
+								fill={r.data[ci].flashback ? 'red' : r.data[ci].flashsideways ? 'green' : 'white'}
 							/>
 						))
 					)

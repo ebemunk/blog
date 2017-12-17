@@ -31,7 +31,7 @@ export class App extends Component {
 				<EpisodeRangeSelector
 				/>
 				<hr />
-				<WordCount 	/>
+				<WordCount />
 				<hr />
 				<FlashScenes />
 				<hr />

@@ -1,4 +1,4 @@
-- [x] Number of Characters per episode
+- [ ] Number of Characters per episode
 	- how many (which) characters appear in each episode
 
 - [ ] Words per char
@@ -15,7 +15,7 @@
 
 - [ ] Stage directions per char
 
-- [x] Char closeness (co-occurrence)
+- [ ] Char closeness (co-occurrence)
 	- which chars appear together often (network/edge graph)
 
 - [ ] Word bubble

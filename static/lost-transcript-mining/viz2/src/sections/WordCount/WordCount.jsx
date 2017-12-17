@@ -5,18 +5,9 @@ import classnames from 'classnames'
 import {
 	BarChart
 } from '../../components'
+import { seasonColor } from '../../util'
 
 import style from './WordCount.css'
-
-const color = d3.scaleOrdinal(d3.schemeCategory10)
-const barStyle = ({ key }) => ({
-	fill: color(key.split('-')[0])
-})
-const ep1Tick = key => {
-	const [season, episode] = key.split('-')
-	if( episode !== '1' ) return
-	return `Season ${season}`
-}
 
 export class WordCount extends Component {
 	state = {
@@ -25,9 +16,9 @@ export class WordCount extends Component {
 
 	render() {
 		const { dataType } = this.state
-		const { wordCount } = this.props
+		// const { wordCount } = this.props
 
-		const data = wordCount
+		const data = this.props.data
 		.map(d => ({
 			key: `${d.season}-${d.episode}`,
 			value: d[dataType]
@@ -84,7 +75,11 @@ export class WordCount extends Component {
 						bandAxisProps={{
 							className: style.bandAxis,
 							tickSize: 0,
-							tickFormat: ep1Tick,
+							tickFormat: key => {
+								const [season, episode] = key.split('-')
+								if( episode !== '1' ) return
+								return `Season ${season}`
+							},
 						}}
 						linearScaleProps={{
 							domain: dataType === 'density' ? [0, 100] : undefined,
@@ -93,7 +88,9 @@ export class WordCount extends Component {
 							className: style.linearAxis,
 							tickFormat: d3.format('.2s')
 						}}
-						barStyle={barStyle}
+						barStyle={({ key }) => ({
+							fill: seasonColor(key.split('-')[0]-1)
+						})}
 					/>
 				</div>
 			</div>
@@ -103,9 +100,11 @@ export class WordCount extends Component {
 
 import { connect } from 'react-redux'
 
+import { wordCountBySelection } from '../../selectors'
+
 export default connect(
 	(state) => ({
-		wordCount: state.wordCount
+		data: wordCountBySelection(state)
 	}),
 	null
 )

@@ -107,6 +107,10 @@ export default class BarChart extends Component {
 							height: [height - padding.top - padding.bottom - linearScale(d.value)],
 							timing: { duration: 250 }
 						})}
+						leave={d => ({
+							y: height - padding.top - padding.bottom,
+							height: 0,
+						})}
 					>
 						{
 							nodeData => {
