@@ -29,3 +29,12 @@ export const getFlashes = () => async dispatch => {
 		payload: flashes
 	})
 }
+
+export const getLinesPerChar = () => async dispatch => {
+	const linesPerChar = await import('../data/linesPerChar.json')
+
+	dispatch({
+		type: 'LINES_PER_CHAR',
+		payload: linesPerChar
+	})
+}

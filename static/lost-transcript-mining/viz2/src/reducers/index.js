@@ -34,13 +34,23 @@ const flashes = (state = [], action) => {
 	}
 }
 
+const linesPerChar = (state = [], action) => {
+	switch( action.type ) {
+		case 'LINES_PER_CHAR':
+			return action.payload
+		default:
+			return state
+	}
+}
+
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
 	episodes,
 	episodeSelection,
 	wordCount,
-	flashes
+	flashes,
+	linesPerChar
 })
 
 export default rootReducer

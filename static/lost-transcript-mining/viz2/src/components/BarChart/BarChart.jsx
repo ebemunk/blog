@@ -23,7 +23,10 @@ export default class BarChart extends Component {
 			{key: 'QAYT', value: 821},
 			{key: 'JACQUEAUIAZXAUQX', value: 314},
 		],
-		barStyle: () => {}
+		barStyle: () => {},
+		linearAxisProps: {},
+		bandAxisProps: {},
+		linearScaleProps: {},
 	}
 
 	state = {

@@ -32,3 +32,12 @@ export function flashbacksAndSideways() {
 		order by season, episode
 	;`
 }
+
+export function linesPerChar() {
+	return `
+		select season, episode, char_name, count(*) as lines from dialog
+		where type='dialog'
+		group by season, episode, char_name
+		order by season, episode, lines desc
+	;`
+}

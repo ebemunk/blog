@@ -37,6 +37,15 @@ export default async function writeForViz() {
 			}))
 		},
 		{
+			filename: 'linesPerChar',
+			query: queries.linesPerChar(),
+			process: R.map(row => ({
+				...row,
+				lines: +row.lines,
+				key: episodeKey(row.season, row.episode)
+			}))
+		},
+		{
 			filename: 'flashes',
 			query: queries.flashbacksAndSideways(),
 			process: R.map(d => ({

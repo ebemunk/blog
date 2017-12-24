@@ -9,7 +9,8 @@ import {
 } from './components'
 
 import {
-	WordCount
+	WordCount,
+	LinesPerChar
 } from './sections'
 
 import style from './App.css'
@@ -17,6 +18,7 @@ import style from './App.css'
 export class App extends Component {
 	componentWillMount() {
 		this.props.getWordCount()
+		this.props.getLinesPerChar()
 	}
 
 	render() {
@@ -33,23 +35,10 @@ export class App extends Component {
 				<hr />
 				<WordCount />
 				<hr />
-				<FlashScenes />
+				<LinesPerChar />
 				<hr />
-				{/* <HorizontalBarChart
-					width={500}
-					height={500}
-					padding={{
-						top: 30,
-						left: 30,
-						right: 10,
-					}}
-					data={[
-			{key: 'JACK', value: 1234},
-			{key: 'KATaE', value: 1121},
-			{key: 'QdAYT', value: 821},
-			{key: 'JACQUEAUIAZXAUQX', value: 314},
-		]}
-				/> */}
+				{/* <FlashScenes /> */}
+				<hr />
 				{/*<hr />
 				<EpisodeBar
 					data={episodeLengths.filter(d => d.season == 1 && d.episode == 2).map(d => ({
