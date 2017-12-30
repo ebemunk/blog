@@ -40,6 +40,7 @@ export default function CharWordHistogram(props) {
   const line = d3.line()
     .x(d => x(d.x))
     .y(d => y2(d.y))
+    .curve(d3.curveStepAfter)
 
   const halfway = d => d.x1 - (d.x1 - d.x0) / 2
   const addToLastY = (arr, val) => R.last(arr) ? R.last(arr).y + val : val
