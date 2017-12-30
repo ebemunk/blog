@@ -30,3 +30,13 @@ loop
 			from ts_stat('select text from tsvector_simple where season='||r.season||' and episode='||r.episode);
 end loop;
 end $$;
+
+create table total_words_by_char as
+	select
+		char_name,
+		sum(array_length(regexp_split_to_array(text, '\s'), 1)) as words
+	from
+		all_lines_by_char
+	group by
+		char_name
+;

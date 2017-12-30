@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import * as d3 from 'd3'
-import _ from 'lodash'
+import classnames from 'classnames'
+
+import style from './Axis.css'
 
 const AXIS_TYPE = {
 	top: 'axisTop',
@@ -70,14 +72,26 @@ export default class Axis extends Component {
 	}
 
 	render() {
-		const otherProps = _.pick(this.props, [
-			'className',
-			'transform'
-		])
+		const {
+			orientation,
+			scale,
+			ticks,
+			tickArguments,
+			tickValues,
+			tickFormat,
+			tickSize,
+			tickSizeInner,
+			tickSizeOuter,
+			tickPadding,
+			transitionDuration,
+			className,
+			...otherProps
+		} = this.props
 
 		return (
 			<g
 				ref={el => this.axisElement = el}
+				className={classnames(style.axis, className)}
 				{...otherProps}
 			/>
 		)

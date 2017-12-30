@@ -1,0 +1,17 @@
+:root {
+	--white: rgba(255, 255, 255, 0.6)
+}
+
+.axis {
+	& text {
+		fill: var(--white);
+	}
+
+	& line {
+		stroke: var(--white);
+	}
+
+	& :global .domain {
+		stroke: var(--white);
+	}
+}

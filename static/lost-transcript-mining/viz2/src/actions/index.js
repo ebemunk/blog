@@ -38,3 +38,12 @@ export const getLinesPerChar = () => async dispatch => {
 		payload: linesPerChar
 	})
 }
+
+export const getCharWordFrequencies = () => async dispatch => {
+	const charWordFreq = await import('../data/charWordFrequencies.json')
+
+	dispatch({
+		type: 'CHAR_WORD_FREQ',
+		payload: charWordFreq
+	})
+}

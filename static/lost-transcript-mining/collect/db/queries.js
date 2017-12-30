@@ -41,3 +41,10 @@ export function linesPerChar() {
 		order by season, episode, lines desc
 	;`
 }
+
+export function charWordFrequencies() {
+	return `
+		select *
+		from total_words_by_char;
+	;`
+}

@@ -1,21 +1,3 @@
-:root {
-	--white: rgba(255, 255, 255, 0.8)
-}
-
 .bar {
 	fill: steelblue;
-}
-
-.bandAxis, .linearAxis {
-	& text {
-		fill: var(--white);
-	}
-
-	& line {
-		stroke: var(--white);
-	}
-
-	& :global .domain {
-		stroke: var(--white);
-	}
 }

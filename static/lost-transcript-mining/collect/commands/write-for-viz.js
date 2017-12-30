@@ -46,6 +46,11 @@ export default async function writeForViz() {
 			}))
 		},
 		{
+			filename: 'charWordFrequencies',
+			query: queries.charWordFrequencies(),
+			process: R.identity
+		},
+		{
 			filename: 'flashes',
 			query: queries.flashbacksAndSideways(),
 			process: R.map(d => ({

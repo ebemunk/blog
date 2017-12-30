@@ -43,6 +43,15 @@ const linesPerChar = (state = [], action) => {
 	}
 }
 
+const charWordFrequencies = (state = [], action) => {
+	switch( action.type ) {
+		case 'CHAR_WORD_FREQ':
+			return action.payload
+		default:
+			return state
+	}
+}
+
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
@@ -50,7 +59,8 @@ const rootReducer = combineReducers({
 	episodeSelection,
 	wordCount,
 	flashes,
-	linesPerChar
+	linesPerChar,
+	charWordFrequencies
 })
 
 export default rootReducer
