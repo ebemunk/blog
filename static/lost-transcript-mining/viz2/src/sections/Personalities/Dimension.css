@@ -1,0 +1,15 @@
+.text {
+  composes: text from './Facet.css';
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+.rect {
+  composes: rect from './Facet.css';
+}
+
+.circle {
+  stroke: white;
+  fill: red;
+  stroke-width: 2;
+}

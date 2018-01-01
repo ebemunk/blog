@@ -52,6 +52,15 @@ const charWordFrequencies = (state = [], action) => {
 	}
 }
 
+const personalities = (state = [], action) => {
+	switch( action.type ) {
+		case 'PERSONALITIES':
+			return action.payload
+		default:
+			return state
+	}
+}
+
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
@@ -60,7 +69,8 @@ const rootReducer = combineReducers({
 	wordCount,
 	flashes,
 	linesPerChar,
-	charWordFrequencies
+	charWordFrequencies,
+	personalities
 })
 
 export default rootReducer

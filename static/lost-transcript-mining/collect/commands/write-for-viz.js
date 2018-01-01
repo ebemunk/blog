@@ -51,6 +51,11 @@ export default async function writeForViz() {
 			process: R.identity
 		},
 		{
+			filename: 'personalities',
+			query: queries.personalities(),
+			process: R.identity
+		},
+		{
 			filename: 'flashes',
 			query: queries.flashbacksAndSideways(),
 			process: R.map(d => ({

@@ -43,8 +43,9 @@ export function linesPerChar() {
 }
 
 export function charWordFrequencies() {
-	return `
-		select *
-		from total_words_by_char;
-	;`
+	return 'select * from total_words_by_char;'
+}
+
+export function personalities() {
+	return 'select * from personality;'
 }

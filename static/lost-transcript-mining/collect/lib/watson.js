@@ -32,7 +32,7 @@ export const toneAnalyzer = Promise.promisifyAll(tone_analyzer({
 
 export const personalityInsights = Promise.promisifyAll(personality_insights({
 	version: 'v3',
-	version_date: '2016-10-19',
+	version_date: '2017-10-13',
 	username: PERSONALITY_INSIGHTS_USERNAME,
 	password: PERSONALITY_INSIGHTS_PASSWORD
 }))

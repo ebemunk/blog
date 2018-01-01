@@ -47,3 +47,12 @@ export const getCharWordFrequencies = () => async dispatch => {
 		payload: charWordFreq
 	})
 }
+
+export const getPersonalities = () => async dispatch => {
+	const personalities = await import('../data/personalities.json')
+
+	dispatch({
+		type: 'PERSONALITIES',
+		payload: personalities
+	})
+}

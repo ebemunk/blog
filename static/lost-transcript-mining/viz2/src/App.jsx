@@ -11,7 +11,8 @@ import {
 import {
 	WordCount,
 	LinesPerChar,
-	CharWordHistogram
+	CharWordHistogram,
+	Personalities
 } from './sections'
 
 import style from './App.css'
@@ -21,6 +22,7 @@ export class App extends Component {
 		this.props.getWordCount()
 		this.props.getLinesPerChar()
 		this.props.getCharWordFrequencies()
+		this.props.getPersonalities()
 	}
 
 	render() {
@@ -33,6 +35,8 @@ export class App extends Component {
 			<div className={style.app}>
 				<h1>bro</h1>
 				<EpisodeRangeSelector />
+				<hr />
+				<Personalities />
 				<hr />
 				<CharWordHistogram />
 				<hr />
