@@ -1,10 +1,12 @@
 import React from 'react'
 import * as d3 from 'd3'
-import * as R from 'ramda'
+import classnames from 'classnames'
 
 import dimensions from './dimensions'
 import labels from './labels'
 import Dimension from './Dimension'
+
+import style from './Personalities.css'
 
 export default function Personalities(props) {
   const {
@@ -21,10 +23,10 @@ export default function Personalities(props) {
   const barHeight = 30
 
   return (
-    <div style={{display: 'flex', flexWrap: 'wrap'}}>
+    <div className={style.dimensions}>
       {dimensions.map((dimension) => (
-        <div style={{ width: '450px', flexShrink: 0 }} key={dimension.key}>
-          <div style={{ textAlign: 'center' }}>{labels[dimension.key].label}</div>
+        <div key={dimension.key} className={style.dimension}>
+          <div className={style.label}>{labels[dimension.key].label}</div>
           <svg
             width={width}
             height={6 * barHeight + padding.top + padding.bottom}

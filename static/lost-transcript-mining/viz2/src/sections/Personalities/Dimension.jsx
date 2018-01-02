@@ -1,6 +1,7 @@
 import React from 'react'
 import * as R from 'ramda'
 import * as d3 from 'd3'
+import { NodeGroup } from 'react-move'
 
 import { groupColor } from '../../util'
 import Facet from './Facet'
@@ -26,56 +27,65 @@ export default function Dimension(props) {
 
   return (
     <React.Fragment>
-    {
-      dimension.facets.map((facet, i) => (
-        <g
-          key={facet}
-          transform={`translate(0, ${i * barHeight})`}
-        >
-          <Facet
-            trait_id={facet}
-            height={barHeight}
-            width={barWidth}
-          />
-          {/* {points[facet].map((p, i) =>
-            <circle
-              key={p}
-              r={5}
-              cx={x(p)}
-              cy={barHeight / 2}
-              className={style.circle}
-              fill={groupColor(i)}
+      {
+        dimension.facets.map((facet, i) => (
+          <g
+            key={facet}
+            transform={`translate(0, ${i * barHeight})`}
+          >
+            <Facet
+              trait_id={facet}
+              height={barHeight}
+              width={barWidth}
             />
-          )} */}
-        </g>
-      ))
-    }
-    {
-      linePoints.map((pts, i) => (
-        <React.Fragment key={pts.join()}>
-          <path
-            d={line(pts)}
-            stroke={groupColor(i)}
-            strokeWidth={5}
-            opacity={0.8}
-            fill="none"
-          />
-          {
-            pts.map((p, ii) =>
-              <circle
-                key={p}
-                r={5}
-                cx={x(p)}
-                cy={barHeight / 2}
-                className={style.circle}
-                fill={groupColor(i)}
-                transform={`translate(0, ${ii * barHeight})`}
-              />
-            )
-          }
-        </React.Fragment>
-      ))
-    }
+          </g>
+        ))
+      }
+      {
+        linePoints.map((pts, i) => (
+          <React.Fragment key={i}>
+            <path
+              d={line(pts)}
+              stroke={groupColor(i)}
+              className={style.line}
+            />
+            <NodeGroup
+              data={pts}
+              keyAccessor={d => d}
+              start={(d) => ({
+                cx: x(0.5),
+                cy: barHeight / 2,
+                r: 5
+              })}
+              enter={d => ({
+                cx: [x(d)],
+                timing: { duration: 250 }
+              })}
+              update={d => ({
+                cx: [x(d)],
+                timing: { duration: 250 }
+              })}
+            >
+              {
+                nodes =>
+                <React.Fragment>
+                  {
+                    nodes.map((node, ii) =>
+                      <circle
+                        key={ii}
+                        {...node.state}
+                        className={style.circle}
+                        fill={groupColor(i)}
+                        transform={`translate(0, ${ii * barHeight})`}
+                      />
+                    )
+                  }
+                </React.Fragment>
+              }
+            </NodeGroup>
+          </React.Fragment>
+        ))
+      }
     </React.Fragment>
   )
 }

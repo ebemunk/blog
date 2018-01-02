@@ -1,0 +1,13 @@
+.dimensions {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dimension {
+  width: 450px;
+  flex-shrink: 0;
+}
+
+.label {
+  text-align: center;
+}
