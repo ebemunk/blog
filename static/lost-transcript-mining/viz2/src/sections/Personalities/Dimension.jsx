@@ -17,12 +17,11 @@ export default function Dimension(props) {
     data,
   } = props
 
-  const points = R.pick(dimension.facets)(data)
-
   const line = d3.line()
     .x(d => x(d))
     .y((d, i) => i * barHeight + (barHeight / 2))
 
+  const points = R.pick(dimension.facets)(data)
   const linePoints = R.transpose(dimension.facets.map(f => points[f] || []))
 
   return (
@@ -51,9 +50,9 @@ export default function Dimension(props) {
             />
             <NodeGroup
               data={pts}
-              keyAccessor={d => d}
+              keyAccessor={(d, i) => i}
               start={(d) => ({
-                cx: x(0.5),
+                cx: [x(0.5)],
                 cy: barHeight / 2,
                 r: 5
               })}
