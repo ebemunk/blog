@@ -56,3 +56,22 @@ export const getPersonalities = () => async dispatch => {
 		payload: personalities
 	})
 }
+
+export const selectProfiles = (groupIndex, selection) => ({
+	type: 'SELECT_PROFILES',
+	payload: {
+		groupIndex,
+		selection
+	}
+})
+
+export const addProfileGroup = () => ({
+	type: 'ADD_PROFILE_GROUP'
+})
+
+export const removeProfileGroup = (groupIndex) => ({
+	type: 'REMOVE_PROFILE_GROUP',
+	payload: {
+		groupIndex
+	}
+})

@@ -7,29 +7,31 @@ export default function Personalities(props) {
   const {
     width,
     padding,
-    dat
+    data
   } = props
 
-  if (!dat) return null
-
-  const odat = dat.profile.personality.find(d => d.trait_id === 'big5_openness')
+  if ( ! data ) return null
 
   const x = d3.scaleLinear()
   .domain([0, 1])
   .range([0, width - padding.left - padding.right])
 
-  const big5x = d3.scaleLinear()
-  .domain([0, 1])
-  .range([0, width - padding.left - padding.right + 100])
+  // const big5x = d3.scaleLinear()
+  // .domain([0, 1])
+  // .range([0, width - padding.left - padding.right + 100])
 
   const barWidth = width - padding.left - padding.right
   const barHeight = 20
 
-  const data = dat.profile.personality
+  console.log('fafe', data)
+
+  return null
+
+  // const data = dat.profile.personality
 
   return (
     <div style={{display: 'flex', flexWrap: 'wrap'}}>
-      <div style={{ width: '33%' }}>
+      {/* <div style={{ width: '400px', flexShrink: 0 }}>
         <div>Big 5</div>
         <svg
           width={width}
@@ -49,9 +51,9 @@ export default function Personalities(props) {
             />
           </g>
         </svg>
-      </div>
+      </div> */}
       {data.map((d, i) => (
-        <div style={{ width: '33%' }} key={d.name}>
+        <div style={{ width: '400px', flexShrink: 0 }} key={d.name}>
           <div>{d.name}</div>
           <svg
             width={width}

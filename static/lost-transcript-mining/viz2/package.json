@@ -40,6 +40,7 @@
     "react-dom": "^16.2.0",
     "react-move": "^2.6.0",
     "react-redux": "^5.0.5",
+    "react-select": "^1.1.0",
     "redux": "^3.7.1",
     "redux-thunk": "^2.2.0",
     "reselect": "^3.0.1"

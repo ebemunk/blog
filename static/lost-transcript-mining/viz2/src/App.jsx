@@ -15,6 +15,8 @@ import {
 	Personalities
 } from './sections'
 
+import Selector from './sections/Personalities/Selector'
+
 import style from './App.css'
 
 export class App extends Component {
@@ -36,6 +38,7 @@ export class App extends Component {
 				<h1>bro</h1>
 				<EpisodeRangeSelector />
 				<hr />
+				<Selector />
 				<Personalities />
 				<hr />
 				<CharWordHistogram />

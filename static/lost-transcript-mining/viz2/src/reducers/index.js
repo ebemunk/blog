@@ -61,6 +61,27 @@ const personalities = (state = [], action) => {
 	}
 }
 
+const personalitySelection = (state = [[]], action) => {
+	switch( action.type ) {
+		case 'SELECT_PROFILES':
+			const copy = [...state]
+			copy[action.payload.groupIndex] = action.payload.selection
+			return copy
+		case 'ADD_PROFILE_GROUP':
+			return [
+				...state,
+				[]
+			]
+		case 'REMOVE_PROFILE_GROUP': {
+			const copy = [...state]
+			copy.splice(action.payload.groupIndex, 1)
+			return copy.length ? copy : [[]]
+		}
+		default:
+			return state
+	}
+}
+
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
@@ -70,7 +91,8 @@ const rootReducer = combineReducers({
 	flashes,
 	linesPerChar,
 	charWordFrequencies,
-	personalities
+	personalities,
+	personalitySelection
 })
 
 export default rootReducer
