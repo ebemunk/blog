@@ -1,6 +1,6 @@
 import React from 'react'
 
-import facets from './facets'
+import labels from './labels'
 
 import style from './Facet.css'
 
@@ -16,7 +16,7 @@ export default function Facet(props) {
     low,
     high,
     label
-  } = facets[trait_id]
+  } = labels[trait_id]
 
   return (
     <React.Fragment>

@@ -10,3 +10,5 @@ export const SEASONS = [
 	[82, 97],
 	[98, 113]
 ]
+
+export const groupColor = d3.scaleOrdinal(d3.schemeCategory10)

@@ -2,6 +2,8 @@ import React from 'react'
 import Select from 'react-select'
 import '!style-loader!css-loader!react-select/dist/react-select.css'
 
+import { groupColor } from '../../util'
+
 export function Selector(props) {
   const {
     personalitySelection,
@@ -12,9 +14,19 @@ export function Selector(props) {
   } = props
 
   return (
-    <React.Fragment>
+    <div style={{ display: 'flex' }}>
       {personalitySelection.map((g, i) => (
-        <div>
+        <div key={i} style={{
+          width: '200px',
+          padding: '1em'
+        }}>
+          <div
+            style={{
+              width: '1em',
+              height: '1em',
+              backgroundColor: groupColor(i)
+            }}
+          />
           <Select
             options={options.map(o => ({
               label: o,
@@ -31,7 +43,7 @@ export function Selector(props) {
         </div>
       ))}
       <button onClick={addProfileGroup}>Add Group</button>
-    </React.Fragment>
+    </div>
   )
 }
 
@@ -42,7 +54,7 @@ import { selectProfiles, addProfileGroup, removeProfileGroup } from '../../actio
 export default connect(
   state => ({
     personalitySelection: state.personalitySelection,
-    options: state.personalities.map(p => p.char_name)
+    options: state.personalities.map(p => p.char_name).sort()
   }),
   {
     selectProfiles,

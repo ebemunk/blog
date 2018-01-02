@@ -1,6 +1,9 @@
 import React from 'react'
 import * as d3 from 'd3'
+import * as R from 'ramda'
 
+import dimensions from './dimensions'
+import labels from './labels'
 import Dimension from './Dimension'
 
 export default function Personalities(props) {
@@ -10,51 +13,18 @@ export default function Personalities(props) {
     data
   } = props
 
-  if ( ! data ) return null
-
   const x = d3.scaleLinear()
   .domain([0, 1])
   .range([0, width - padding.left - padding.right])
 
-  // const big5x = d3.scaleLinear()
-  // .domain([0, 1])
-  // .range([0, width - padding.left - padding.right + 100])
-
   const barWidth = width - padding.left - padding.right
-  const barHeight = 20
-
-  console.log('fafe', data)
-
-  return null
-
-  // const data = dat.profile.personality
+  const barHeight = 30
 
   return (
     <div style={{display: 'flex', flexWrap: 'wrap'}}>
-      {/* <div style={{ width: '400px', flexShrink: 0 }}>
-        <div>Big 5</div>
-        <svg
-          width={width}
-          height={6 * barHeight + padding.top + padding.bottom}
-        >
-          <g transform={`translate(${padding.left - 50}, ${padding.top})`}>
-            <Dimension
-              x={big5x}
-              barWidth={barWidth + 100}
-              barHeight={barHeight}
-              dimension={{
-                children: dat.profile.personality.map(d => ({
-                  trait_id: d.trait_id,
-                  percentile: d.percentile,
-                }))
-              }}
-            />
-          </g>
-        </svg>
-      </div> */}
-      {data.map((d, i) => (
-        <div style={{ width: '400px', flexShrink: 0 }} key={d.name}>
-          <div>{d.name}</div>
+      {dimensions.map((dimension) => (
+        <div style={{ width: '450px', flexShrink: 0 }} key={dimension.key}>
+          <div style={{ textAlign: 'center' }}>{labels[dimension.key].label}</div>
           <svg
             width={width}
             height={6 * barHeight + padding.top + padding.bottom}
@@ -64,7 +34,8 @@ export default function Personalities(props) {
                 x={x}
                 barWidth={barWidth}
                 barHeight={barHeight}
-                dimension={d}
+                dimension={dimension}
+                data={data}
               />
             </g>
           </svg>

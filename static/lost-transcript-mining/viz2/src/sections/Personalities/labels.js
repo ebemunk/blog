@@ -1,4 +1,7 @@
 export default {
+  big5: {
+    label: 'Big 5'
+  },
   // openness
   big5_openness: {
     label: 'Openness'

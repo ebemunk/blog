@@ -68,29 +68,28 @@ export const combinedProfileSelection = createSelector(
 		selectedProfiles
 	],
 	(selected) => {
-		// holy fuck wtf is this
-		const combine = R.pipe(
+		const pickKeys = R.pick(['trait_id', 'percentile'])
+
+		const combineGroup = R.pipe(
 			R.map(d => d.profile.personality),
-			R.map(R.map(d => ({
-				trait_id: d.trait_id,
-				percentile: d.percentile,
-				facets: d.children.map(R.pick(['trait_id', 'percentile'])),
-			}))),
+			R.map(R.map(d => [
+				pickKeys(d),
+				...d.children.map(pickKeys)
+			])),
 			R.flatten,
 			R.groupBy(d => d.trait_id),
-			R.map(d => d.reduce((acc, v, i, arr) => ({
-				percentile: acc.percentile + (v.percentile / arr.length),
-				facets: acc.facets.concat(v.facets)
-			}), { facets: [], percentile: 0 })),
-			R.map(d => ({
-				...d,
-				facets: R.groupBy(dd => dd.trait_id)(d.facets)
-			})),
-			R.map(d => ({
-				...d,
-				facets: R.map(v => v.reduce((acc, vv, i, arr) => acc+(vv.percentile / arr.length), 0))(d.facets)
-			}))
+			R.map(d => d.reduce((acc, v, i, arr) => acc + (v.percentile / arr.length), 0)),
 		)
-		return R.map(combine)(selected)
+
+		return R.pipe(
+			R.map(combineGroup),
+			R.reduce((acc, v) => {
+				for( let key in v ) {
+					if( acc[key] ) acc[key].push(v[key])
+					else acc[key] = [v[key]]
+				}
+				return acc
+			}, {})
+		)(selected)
 	}
 )

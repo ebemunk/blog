@@ -19,7 +19,7 @@
 }
 
 .rect {
-  fill: steelblue;
+  fill: rgb(70, 180, 134);
   stroke: #282c34;
   stroke-width: 4;
 }
