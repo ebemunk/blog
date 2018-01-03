@@ -49,3 +49,25 @@ export function charWordFrequencies() {
 export function personalities() {
 	return 'select * from personality;'
 }
+
+export function charCooccurrence() {
+	return `
+		with s as (
+			select
+				distinct char_name, season, episode, scene
+			from dialog
+			where type='dialog'
+			group by season, episode, scene, char_name
+			order by season, episode, scene
+		)
+		select a.season, a.episode, a.char_name as "from_char", b.char_name as "to_char", count(*) as "val"
+		from s a
+		inner join s b
+			on a.season = b.season
+			and a.episode = b.episode
+			and a.scene = b.scene
+			and a.char_name<b.char_name
+		group by a.season, a.episode, a.char_name, b.char_name
+		order by season,episode;
+	`
+}

@@ -75,3 +75,12 @@ export const removeProfileGroup = (groupIndex) => ({
 		groupIndex
 	}
 })
+
+export const getCooccurrence = () => async dispatch => {
+	const charCooccurrence = await import('../data/charCooccurrence.json')
+
+	dispatch({
+		type: 'CHAR_COOCCURRENCE',
+		payload: charCooccurrence
+	})
+}

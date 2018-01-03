@@ -3,6 +3,7 @@ import * as d3 from 'd3'
 import * as R from 'ramda'
 
 import { Axis } from '../../components'
+import Interaction from './Interaction'
 
 import style from './CharWordHistogram.css'
 
@@ -29,7 +30,8 @@ export default function CharWordHistogram(props) {
     .thresholds(100)
     (data)
 
-  const y1 = d3.scaleLinear()
+  const y1 = d3.scalePow()
+    .exponent(0.5)
     .domain([0, d3.max(bins, d => d.length)])
     .range([chartHeight, 0])
 
@@ -62,6 +64,11 @@ export default function CharWordHistogram(props) {
     }
   ]), [])
 
+  const voronoi = d3.voronoi()
+    .x(d => (x(d.x1) + x(d.x0)) / 2)
+    .y(d => 0)
+    .extent([[0, 0], [chartWidth, chartHeight]])
+
   return (
     <React.Fragment>
       <svg
@@ -69,6 +76,27 @@ export default function CharWordHistogram(props) {
         height={height}
       >
         <g transform={`translate(${padding.left}, ${padding.top})`}>
+          <g>
+            {bins.map(({ x0, x1, length }) => (
+              <rect
+                key={x0}
+                x={x(x0)}
+                y={y1(length)}
+                width={x(x1) - x(x0)}
+                height={chartHeight - y1(length)}
+                fill="steelblue"
+                stroke="#282c34"
+              />
+            ))}
+          </g>
+          <path
+            d={line(cumChars)}
+            className={style.cumChars}
+          />
+          <path
+            d={line(cumWords)}
+            className={style.cumWords}
+          />
           <Axis
             scale={x}
             orientation="bottom"
@@ -81,29 +109,14 @@ export default function CharWordHistogram(props) {
           <Axis
             scale={y2}
             orientation="right"
-            transform={`translate(${width - padding.left - padding.right}, 0)`}
+            transform={`translate(${chartWidth}, 0)`}
           />
-          <g>
-            {bins.map(({ x0, x1, length }) => (
-              <rect
-                key={x0}
-                x={x(x0)}
-                y={y1(length)}
-                width={x(x1) - x(x0) - 1}
-                height={chartHeight - y1(length)}
-                fill="steelblue"
-              />
-            ))}
-          </g>
-          <path
-            d={line(cumChars)}
-            fill="none"
-            stroke="yellow"
-          />
-          <path
-            d={line(cumWords)}
-            fill="none"
-            stroke="red"
+          <Interaction
+            polygons={voronoi.polygons(bins)}
+            scales={{x, y1, y2}}
+            derivedData={{ cumWords, cumChars }}
+            width={chartWidth}
+            height={chartHeight}
           />
         </g>
       </svg>

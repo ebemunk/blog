@@ -1,0 +1,27 @@
+.line {
+  fill: none;
+  stroke-width: 2;
+}
+
+.pctLine {
+  stroke-dasharray: 5, 5;
+  opacity: 0.7;
+}
+
+.cumChars {
+  composes: line;
+  stroke: #7fc97f;
+}
+
+.pctCharsLine {
+  composes: cumChars pctLine;
+}
+
+.cumWords {
+  composes: line;
+  stroke: #beaed4;
+}
+
+.pctWordsLine {
+  composes: cumWords pctLine;
+}

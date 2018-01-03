@@ -56,6 +56,11 @@ export default async function writeForViz() {
 			process: R.identity
 		},
 		{
+			filename: 'charCooccurrence',
+			query: queries.charCooccurrence(),
+			process: R.identity
+		},
+		{
 			filename: 'flashes',
 			query: queries.flashbacksAndSideways(),
 			process: R.map(d => ({
