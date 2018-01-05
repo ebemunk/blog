@@ -56,7 +56,7 @@ export default class LinesPerChar extends React.Component {
               tickFormat: toTitleCase
             }}
 						linearScaleProps={{
-							domain: dataType === 'percentage' ? [0, 15] : undefined,
+							domain: dataType === 'percentage' ? [0, 14] : undefined,
 						}}
           />
         </div>

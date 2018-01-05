@@ -45,7 +45,7 @@ export class WordCount extends Component {
 				</div>
 				<div style={{ display: 'flex' }}>
 					<div style={{ position: 'relative' }}>
-						<div style={{ position: 'absolute', top: '50', left: '35', whiteSpace: 'nowrap', fontSize: '0.85em' }}>
+						<div style={{ position: 'absolute', top: '32', left: '35', whiteSpace: 'nowrap', fontSize: '0.85em' }}>
 							<span style={{ display: 'block' }}>
 								{{
 									total: 'Total Words',
