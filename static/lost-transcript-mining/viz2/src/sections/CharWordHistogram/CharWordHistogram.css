@@ -30,3 +30,7 @@
   composes: pctLine;
   stroke: steelblue;
 }
+
+.numCharsLine {
+  composes: binsLine
+}
