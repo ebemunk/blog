@@ -34,3 +34,34 @@
 .numCharsLine {
   composes: binsLine
 }
+
+.val {
+  font-size: 11px;
+  text-anchor: start;
+  dominant-baseline: middle;
+  stroke: #282c34;
+  stroke-width: 3;
+  paint-order: stroke;
+}
+
+.pctCharsVal {
+  composes: val;
+  fill: #7fc97f;
+}
+
+.pctWordsVal {
+  composes: val;
+  fill: #beaed4;
+}
+
+.words {
+  composes: val;
+  fill: steelblue;
+  text-anchor: middle;
+}
+
+.numCharsVal {
+  composes: val;
+  fill: steelblue;
+  text-anchor: end;
+}
