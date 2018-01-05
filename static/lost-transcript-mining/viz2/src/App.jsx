@@ -11,9 +11,10 @@ import {
 import {
 	WordCount,
 	LinesPerChar,
-	CharWordHistogram,
+	// CharWordHistogram,
 	Personalities
 } from './sections'
+import CharWordHistogram from './sections/CharWordHistogram/Labels'
 
 import Selector from './sections/Personalities/Selector'
 

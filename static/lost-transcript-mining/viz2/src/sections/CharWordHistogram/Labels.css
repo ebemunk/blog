@@ -1,0 +1,38 @@
+.labels {
+  display: flex;
+}
+
+.label {
+  font-size: 12px;
+  white-space: nowrap;
+  position: absolute;
+}
+
+.rotatedLabel {
+  composes: label;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: 0 0;
+  top: 50%;
+  left: 0;
+}
+
+.centeredLabel {
+  composes: label;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+}
+
+.labelWrap {
+  position: relative;
+}
+
+.yLabelWrap {
+  composes: labelWrap;
+  width: 12px;
+}
+
+.xLabelWrap {
+  composes: labelWrap;
+  height: 12px;
+}

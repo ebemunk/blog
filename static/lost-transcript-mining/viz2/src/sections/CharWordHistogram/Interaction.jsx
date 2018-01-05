@@ -1,8 +1,10 @@
 import React from 'react'
+import * as d3 from 'd3'
 
 import style from './CharWordHistogram.css'
 
 const halfway = d => d.x1 - (d.x1 - d.x0) / 2
+const numFormat = d3.format(',')
 
 export default class Interaction extends React.Component {
   state = {
@@ -40,7 +42,7 @@ export default class Interaction extends React.Component {
                 numChars: scales.y1(p.data.length),
               },
               data: {
-                bin: p.data.x1,
+                bin: numFormat(halfway(p.data)),
                 pctChars: derivedData.cumChars[i].y,
                 pctWords: derivedData.cumWords[i].y,
                 numChars: p.data.length,
@@ -89,7 +91,7 @@ export default class Interaction extends React.Component {
               className={style.binsLine}
             />
             <text
-              children={Math.round(data.bin)}
+              children={data.bin}
               className={style.words}
               x={scaled.bin}
               y={height + 6}
@@ -106,7 +108,7 @@ export default class Interaction extends React.Component {
             <text
               children={data.numChars}
               className={style.numCharsVal}
-              x={-6}
+              x={-8}
               y={scaled.numChars}
             />
           </g>
