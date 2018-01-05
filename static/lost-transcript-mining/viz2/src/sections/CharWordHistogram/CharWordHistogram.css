@@ -25,3 +25,8 @@
 .pctWordsLine {
   composes: cumWords pctLine;
 }
+
+.binsLine {
+  composes: pctLine;
+  stroke: steelblue;
+}
