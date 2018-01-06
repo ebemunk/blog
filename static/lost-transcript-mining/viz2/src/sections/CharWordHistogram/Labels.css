@@ -36,3 +36,22 @@
   composes: labelWrap;
   height: 12px;
 }
+
+.charLegend {
+  width: 20px;
+  height: 20px;
+  background-color: #7fc97f;
+}
+
+.wordLegend {
+  width: 20px;
+  height: 20px;
+  background-color: #beaed4;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin: 2px
+}
