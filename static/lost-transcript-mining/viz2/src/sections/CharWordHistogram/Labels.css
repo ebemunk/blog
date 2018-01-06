@@ -37,15 +37,19 @@
   height: 12px;
 }
 
-.charLegend {
+.legendBox {
   width: 20px;
   height: 20px;
+  margin-right: 0.5em;
+}
+
+.charLegend {
+  composes: legendBox;
   background-color: #7fc97f;
 }
 
 .wordLegend {
-  width: 20px;
-  height: 20px;
+  composes: legendBox;
   background-color: #beaed4;
 }
 
