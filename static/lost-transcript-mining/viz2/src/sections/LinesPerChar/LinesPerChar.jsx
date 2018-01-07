@@ -3,11 +3,7 @@ import classnames from 'classnames'
 import * as R from 'ramda'
 
 import { HorizontalBarChart } from '../../components'
-
-function toTitleCase(str)
-{
-    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-}
+import { toTitleCase } from '../../util'
 
 export default class LinesPerChar extends React.Component {
 	state = {

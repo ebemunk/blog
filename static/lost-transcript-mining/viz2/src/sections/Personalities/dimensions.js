@@ -1,3 +1,11 @@
+export const colors = {
+  big5_openness: 'rgba(82, 84, 163, 0.4)',
+  big5_conscientiousness: 'rgba(140, 162, 82, 0.4)',
+  big5_extraversion: 'rgba(189, 158, 57, 0.4)',
+  big5_agreeableness: 'rgba(173, 73, 74, 0.4)',
+  big5_neuroticism: 'rgba(165, 81, 148, 0.4)'
+}
+
 export default [
   {
     key: 'big5',

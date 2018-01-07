@@ -4,6 +4,7 @@ import * as d3 from 'd3'
 import { NodeGroup } from 'react-move'
 
 import { groupColor } from '../../util'
+import { colors } from './dimensions'
 import Facet from './Facet'
 
 import style from './Dimension.css'
@@ -36,6 +37,9 @@ export default function Dimension(props) {
               trait_id={facet}
               height={barHeight}
               width={barWidth}
+              color={
+                dimension.key === 'big5' ? colors[facet] : colors[dimension.key]
+              }
             />
           </g>
         ))

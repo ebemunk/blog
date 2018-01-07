@@ -2,7 +2,9 @@ import React from 'react'
 import Select from 'react-select'
 import '!style-loader!css-loader!react-select/dist/react-select.css'
 
-import { groupColor } from '../../util'
+import { groupColor, toTitleCase } from '../../util'
+
+import style from './Selector.css'
 
 export function Selector(props) {
   const {
@@ -16,33 +18,43 @@ export function Selector(props) {
   return (
     <div style={{ display: 'flex' }}>
       {personalitySelection.map((g, i) => (
-        <div key={i} style={{
-          width: '200px',
-          padding: '1em'
-        }}>
+        <div
+          key={i}
+          className={style.selector}
+        >
           <div
+            className={style.color}
             style={{
-              width: '1em',
-              height: '1em',
-              backgroundColor: groupColor(i)
+              backgroundColor: groupColor(i),
+              borderColor: groupColor(i)
             }}
           />
           <Select
-            options={options.map(o => ({
-              label: o,
-              value: o,
+            options={options.map(opt => ({
+              label: toTitleCase(opt),
+              value: opt,
             }))}
             multi
-            clearable={false}
             onChange={e => {
               selectProfiles(i, e)
             }}
             value={g}
+            closeOnSelect={false}
+            clearable={false}
           />
-          <button onClick={() => removeProfileGroup(i)}>Remove</button>
+          <button
+            onClick={() => removeProfileGroup(i)}
+            disabled={personalitySelection.length === 1}
+            >Remove</button>
         </div>
       ))}
-      <button onClick={addProfileGroup}>Add Group</button>
+      <div>
+        <button
+          disabled={! personalitySelection[personalitySelection.length - 1].length}
+          onClick={addProfileGroup}
+          children="Add Group"
+        />
+      </div>
     </div>
   )
 }

@@ -23,7 +23,8 @@
 
 
 http://lotrproject.com/statistics/books/chapters
-
+https://jezebel.com/every-single-person-on-lost-ranked-from-most-to-least-1546174780 bernard vs sawyer
+http://www.tylervigen.com/literature-statistics
 
 
 

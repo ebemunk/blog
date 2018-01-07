@@ -1,0 +1,24 @@
+.selector {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  height: 6em;
+
+  & :global(.Select-multi-value-wrapper) {
+    width: 15em;
+    height: 4em;
+    overflow-y: scroll;
+  }
+
+  & :global(.Select-control) {
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.color {
+  width: 1em;
+  height: 4em;
+  border: 1px solid;
+}

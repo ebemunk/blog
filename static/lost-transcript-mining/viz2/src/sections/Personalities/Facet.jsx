@@ -9,7 +9,7 @@ export default function Facet(props) {
     trait_id,
     height,
     width,
-    transform
+    color
   } = props
 
   const {
@@ -37,6 +37,7 @@ export default function Facet(props) {
         width={width}
         height={height}
         className={style.rect}
+        fill={color}
       />
       <text
         x={width / 2}
