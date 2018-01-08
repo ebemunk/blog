@@ -22,3 +22,8 @@
   height: 4em;
   border: 1px solid;
 }
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
