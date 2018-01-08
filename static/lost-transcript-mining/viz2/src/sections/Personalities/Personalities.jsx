@@ -9,22 +9,19 @@ import Dimension from './Dimension'
 import style from './Personalities.css'
 
 export default function Personalities(props) {
-  const {
-    width,
-    padding,
-    data
-  } = props
+  const { width, padding, data } = props
 
-  const x = d3.scaleLinear()
-  .domain([0, 1])
-  .range([0, width - padding.left - padding.right])
+  const x = d3
+    .scaleLinear()
+    .domain([0, 1])
+    .range([0, width - padding.left - padding.right])
 
   const barWidth = width - padding.left - padding.right
   const barHeight = 30
 
   return (
     <div className={style.dimensions}>
-      {dimensions.map((dimension) => (
+      {dimensions.map(dimension => (
         <div key={dimension.key} className={style.dimension}>
           <div className={style.label}>{labels[dimension.key].label}</div>
           <svg
@@ -53,6 +50,6 @@ Personalities.defaultProps = {
     top: 0,
     left: 150,
     right: 150,
-    bottom: 0
-  }
+    bottom: 0,
+  },
 }

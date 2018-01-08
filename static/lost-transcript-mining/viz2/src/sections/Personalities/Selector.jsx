@@ -33,18 +33,15 @@ export function Selector(props) {
             }))}
             multi
             onChange={e => {
-              selectProfiles(i, e)
+              selectProfiles(i, e.map(({ value }) => value))
             }}
             value={g}
-            closeOnSelect={false}
-            clearable={false}
           />
           <button
             onClick={() => removeProfileGroup(i)}
             disabled={personalitySelection.length === 1}
-          >
-            Remove
-          </button>
+            children="Remove"
+          />
         </div>
       ))}
       <div>
@@ -54,6 +51,40 @@ export function Selector(props) {
           }
           onClick={addProfileGroup}
           children="Add Group"
+        />
+        <button
+          onClick={() => {
+            selectProfiles(0, [
+              'ANA LUCIA',
+              'CLAIRE',
+              'JULIET',
+              'KATE',
+              'ROSE',
+              'SHANNON',
+              'SUN',
+            ])
+            selectProfiles(1, [
+              'BEN',
+              'BERNARD',
+              'BOONE',
+              'CHARLIE',
+              'DESMOND',
+              'EKO',
+              'FARADAY',
+              'HURLEY',
+              'JACK',
+              'JIN',
+              'LOCKE',
+              'MICHAEL',
+              'MILES',
+              'RICHARD',
+              'SAWYER',
+              'SAYID',
+              'WALT',
+              'WIDMORE',
+            ])
+          }}
+          children="men vs women"
         />
       </div>
     </div>

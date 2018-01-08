@@ -60,7 +60,7 @@ export const selectedProfiles = createSelector(
 		personalitySelection,
 		personalities
 	],
-	(selection, personalities) => selection.map(sel => sel.map(s => personalities.find(p => s.value === p.char_name)))
+	(selection, personalities) => selection.map(sel => sel.map(s => personalities.find(p => s === p.char_name)))
 )
 
 export const combinedProfileSelection = createSelector(
