@@ -1,0 +1,29 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "georgia straight event scraper",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "start": "babel-node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-cli": "^6.26.0",
+    "bluebird": "^3.5.1",
+    "caporal": "^0.9.0",
+    "chalk": "^2.3.0",
+    "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^4.0.0",
+    "pg": "^7.4.0",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "jest": "^22.0.3"
+  }
+}
