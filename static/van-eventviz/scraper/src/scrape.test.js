@@ -2,18 +2,29 @@ import { readFile } from 'fs'
 import { fromCallback } from 'bluebird'
 import axios from 'axios'
 
-import scrape from './scrape'
+import scrape, { parsePage } from './scrape'
+
+let data, empty
+
+beforeAll(async () => {
+  data = await fromCallback(cb => readFile('./test/test2.html', 'utf-8', cb))
+  empty = await fromCallback(cb => readFile('./test/empty.html', 'utf-8', cb))
+})
 
 describe('scrape', () => {
-  let data
-
-  beforeAll(async () => {
-    data = await fromCallback(cb => readFile('./test/test2.html', 'utf-8', cb))
-  })
-
   it('gets', async () => {
-    axios.get = jest.fn(() => Promise.resolve({data}))
+    axios.get = jest.fn()
+      .mockReturnValueOnce(Promise.resolve({ data }))
+      .mockReturnValueOnce(Promise.resolve({ data: empty }))
     const events = await scrape()
-    expect(events).toMatchSnapshot()
+    expect(axios.get).toHaveBeenCalledTimes(2);
+  })
+})
+
+describe('parsePage', () => {
+  it('parses list html', async () => {
+    axios.get = jest.fn(() => Promise.resolve({ data }))
+    const evs = await parsePage(3)
+    expect(evs).toMatchSnapshot()
   })
 })
