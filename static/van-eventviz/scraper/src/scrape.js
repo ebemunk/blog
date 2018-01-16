@@ -17,13 +17,16 @@ const log = logger({
         '```',
         prettyJson(omit(['type'], log.message)),
         '```',
-        `logs: http://lol.com`
       ].join('\n')
     }
   }
 })
 
 export default async function scrape(args, opts) {
+  log.verbose({
+    type: 'env',
+    env: process.env
+  })
   const pool = getPool()
   let page = 0
   let events = []
@@ -87,7 +90,7 @@ export async function save(pool, event) {
     } else {
       e.event = event
       log.verbose({
-        type: 'fucked_lol',
+        type: 'db save error',
         e
       })
     }

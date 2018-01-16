@@ -8,9 +8,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "start": "babel-node index.js",
-    "build": "rollup -c",
-    "zip": "zip -r dist/app dist node_modules"
+    "start": "babel-node index.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
@@ -22,17 +20,11 @@
     "dotenv": "^4.0.0",
     "pg": "^7.4.0",
     "ramda": "^0.25.0",
-    "winston": "^3.0.0-rc1",
-    "winston-transport": "^3.0.1"
+    "winston": "^3.0.0-rc1"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
-    "jest": "^22.0.3",
-    "rollup": "^0.54.0",
-    "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-commonjs": "^8.2.6",
-    "rollup-plugin-json": "^2.3.0",
-    "rollup-plugin-node-resolve": "^3.0.2"
+    "jest": "^22.0.3"
   }
 }
