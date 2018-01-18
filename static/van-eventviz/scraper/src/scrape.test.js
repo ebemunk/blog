@@ -13,11 +13,12 @@ beforeAll(async () => {
 
 describe('scrape', () => {
   it('gets', async () => {
-    axios.get = jest.fn()
+    axios.get = jest
+      .fn()
       .mockReturnValueOnce(Promise.resolve({ data }))
       .mockReturnValueOnce(Promise.resolve({ data: empty }))
     const events = await scrape()
-    expect(axios.get).toHaveBeenCalledTimes(2);
+    expect(axios.get).toHaveBeenCalledTimes(2)
   })
 })
 

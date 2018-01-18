@@ -18,14 +18,14 @@ const log = logger({
         prettyJson(omit(['type'], log.message)),
         '```',
       ].join('\n')
-    }
-  }
+    },
+  },
 })
 
 export default async function scrape(args, opts) {
   log.verbose({
     type: 'env',
-    env: process.env
+    env: process.env,
   })
   const pool = getPool()
   let page = 0
@@ -41,11 +41,11 @@ export default async function scrape(args, opts) {
       type: 'page',
       page,
       events: events.length,
-      saveCount: saves.filter(e => e).length
+      saveCount: saves.filter(e => e).length,
     })
     page++
     // events = []
-  } while ( events.length )
+  } while (events.length)
   log.info({
     type: 'scrape',
     pages: page,
@@ -66,9 +66,14 @@ export async function parsePage(page) {
         image: find('figure a img').attr('src'),
         title: find('.title a').text(),
         url: baseUrl + find('.title a').attr('href'),
-        id: find('.title a').attr('href').split('/').pop(),
+        id: find('.title a')
+          .attr('href')
+          .split('/')
+          .pop(),
         venue: find('.event--venue').text(),
-        tags: find('.venue--tags a').map((i, tag) => $(tag).text()).toArray()
+        tags: find('.venue--tags a')
+          .map((i, tag) => $(tag).text())
+          .toArray(),
       }
     })
     .toArray()
@@ -76,22 +81,27 @@ export async function parsePage(page) {
 
 export async function save(pool, event) {
   try {
-    return await pool.query(...insertObj({
-      id: event.id,
-      evt: event
-    }, 'events'))
+    return await pool.query(
+      ...insertObj(
+        {
+          id: event.id,
+          evt: event,
+        },
+        'events',
+      ),
+    )
   } catch (e) {
     // 23505 = unique_violation
-    if( e.code === '23505' ) {
+    if (e.code === '23505') {
       log.verbose({
         type: 'unique_violation',
-        eventId: event.id
+        eventId: event.id,
       })
     } else {
       e.event = event
       log.verbose({
         type: 'db save error',
-        e
+        e,
       })
     }
     return false

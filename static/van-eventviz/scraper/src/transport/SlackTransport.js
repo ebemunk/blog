@@ -9,6 +9,7 @@ export default class SlackTransport extends Transport {
 
   log(info, callback) {
     const {
+      //
       webhook_url,
       text,
       ...opts

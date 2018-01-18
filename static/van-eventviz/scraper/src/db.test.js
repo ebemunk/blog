@@ -6,10 +6,8 @@ describe('insertObj', () => {
       insertObj({
         faf: 'etet',
         lolol: 'yaya',
-        directions: [
-          'some', 'things'
-        ]
-      })
+        directions: ['some', 'things'],
+      }),
     ).toMatchSnapshot()
   })
 })
