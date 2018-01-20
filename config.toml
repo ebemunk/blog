@@ -1,6 +1,7 @@
 baseurl = "https://blog.ebemunk.com/"
 languageCode = "en-us"
 title = "Thinking Through the Party"
+theme = "lexo"
 
 pygmentscodefences = true
 
