@@ -98,7 +98,7 @@ export default class EpisodeRangeSelector extends Component {
     const halfStep = scale.step() * 0.5
 
     return (
-      <div>
+      <div className={style.wrap}>
         <svg
           className={classnames({
             [style.episodeSelector]: true,

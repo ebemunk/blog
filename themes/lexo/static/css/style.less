@@ -40,6 +40,28 @@ a {
 	}
 }
 
+.button {
+	background: transparent;
+  color: @green;
+	border-color: @green;
+
+	&:hover {
+		background-color: lighten(@green, 5%);
+		border-color: @green;
+		color: @faded-white;
+	}
+
+	&.active {
+		background-color: lighten(@green, 5%);
+		border-color: lighten(@green, 5%);
+		color: @faded-white;
+	}
+
+	&:focus {
+
+	}
+}
+
 header.site-header {
 	height: 180px;
 	max-height: 180px;

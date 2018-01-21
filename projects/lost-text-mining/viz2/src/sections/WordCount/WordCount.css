@@ -5,6 +5,12 @@
   }
 }
 
+.midLabels .bandAxis {
+  & :global(.tick) text {
+    text-anchor: middle;
+  }
+}
+
 .linearAxis {
   & :global(.tick) line {
     opacity: 0.3;
@@ -14,7 +20,10 @@
 .center {
   display: flex;
   justify-content: center;
-  margin-bottom: 1em;
+
+  & ::last-child {
+    margin-bottom: 1em;
+  }
 }
 
 .chart {

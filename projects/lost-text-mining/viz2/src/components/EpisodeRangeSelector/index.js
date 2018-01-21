@@ -10,7 +10,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
 	getEpisodes,
-	selectEpisodes
+	selectEpisodes: selectEpisodes
 }
 
 export default connect(

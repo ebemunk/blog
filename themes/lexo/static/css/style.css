@@ -35,6 +35,21 @@ a:hover {
   color: #a3ca81;
   text-decoration: underline;
 }
+.button {
+  background: transparent;
+  color: #7cb34b;
+  border-color: #7cb34b;
+}
+.button:hover {
+  background-color: #89bb5d;
+  border-color: #7cb34b;
+  color: rgba(255, 255, 255, 0.8);
+}
+.button.active {
+  background-color: #89bb5d;
+  border-color: #89bb5d;
+  color: rgba(255, 255, 255, 0.8);
+}
 header.site-header {
   height: 180px;
   max-height: 180px;

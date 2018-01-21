@@ -2,7 +2,7 @@ import React from 'react'
 import classnames from 'classnames'
 import * as R from 'ramda'
 
-import { HorizontalBarChart } from '../../components'
+import { HorizontalBarChart, ButtonGroup } from '../../components'
 import { toTitleCase } from '../../util'
 
 export default class LinesPerChar extends React.Component {
@@ -19,15 +19,13 @@ export default class LinesPerChar extends React.Component {
     return (
       <React.Fragment>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <button
-            onClick={() => this.setState({ dataType: 'total' })}
-            className={classnames({ active: dataType === 'total' })}
-            children="Total"
-          />
-          <button
-            onClick={() => this.setState({ dataType: 'percentage' })}
-            className={classnames({ active: dataType === 'percentage' })}
-            children="Percentage"
+          <ButtonGroup
+            options={[
+              { name: 'Total', value: 'total' },
+              { name: 'Percentage', value: 'percentage' },
+            ]}
+            selected={dataType}
+            onChange={v => this.setState({ dataType: v })}
           />
         </div>
         <div

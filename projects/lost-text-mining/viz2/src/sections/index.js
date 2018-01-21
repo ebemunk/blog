@@ -1,5 +1,4 @@
 export CharWordHistogram from './CharWordHistogram'
-export EpisodeRangeSelector from './EpisodeRangeSelector'
 export LinesPerChar from './LinesPerChar'
 export Personalities from './Personalities'
 export WordCount from './WordCount'
