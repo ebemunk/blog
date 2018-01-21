@@ -22,7 +22,7 @@ export default function Personalities(props) {
   return (
     <div className={style.dimensions}>
       {dimensions.map(dimension => (
-        <div key={dimension.key} className={style.dimension}>
+        <div key={dimension.key} className={style.dimension} style={{ width }}>
           <div className={style.label}>{labels[dimension.key].label}</div>
           <svg
             width={width}
@@ -45,11 +45,11 @@ export default function Personalities(props) {
 }
 
 Personalities.defaultProps = {
-  width: 450,
+  width: 400,
   padding: {
     top: 0,
-    left: 150,
-    right: 150,
+    left: 125,
+    right: 125,
     bottom: 0,
   },
 }

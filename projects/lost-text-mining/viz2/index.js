@@ -24,7 +24,8 @@ const store = configureStore({})
 // 	})
 // }
 
-import { WordCount, CharWordHistogram } from './src/sections'
+import { WordCount, CharWordHistogram, Personalities } from './src/sections'
+import Selector from './src/sections/Personalities/Selector'
 
 const render = (component, selector) =>
   ReactDOM.render(
@@ -36,3 +37,5 @@ const render = (component, selector) =>
 
 render(<WordCount />, '#word-count')
 render(<CharWordHistogram />, '#char-word-histogram')
+render(<Selector />, '#personality-selector')
+render(<Personalities />, '#personality')

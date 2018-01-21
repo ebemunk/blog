@@ -11,10 +11,9 @@ I wanted to do something like this for a long time, and finally I think it's at 
 
 ## Meta
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit, diam et luctus feugiat, tellus ante lacinia tortor, a fringilla risus lorem at mauris. Suspendisse placerat dui vel lacus hendrerit scelerisque. Nullam enim libero, rutrum et leo eget, elementum maximus enim. Mauris maximus velit nec felis fermentum, et ultrices neque fringilla. Fusce non mollis leo. Maecenas ullamcorper auctor tellus, dictum euismod ipsum pellentesque id. Etiam mollis a ante ac tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent a ligula placerat, tincidunt ex at, ornare odio. Curabitur dolor ante, consequat at nibh at, ultricies gravida urna. Sed diam diam, iaculis a dui ac, pellentesque fringilla justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec ornare interdum magna, eu dictum sem vestibulum sit amet. Nam at tristique purus, eu accumsan dui.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit, diam et luctus feugiat, tellus ante lacinia tortor, a fringilla risus lorem at mauris. Suspendisse placerat dui vel lacus hendrerit scelerisque. Nullam enim libero, rutrum et leo eget, elementum maximus enim. Mauris maximus velit nec felis fermentum, et ultrices neque fringilla. Fusce non mollis leo.
 
 <div id="word-count"></div>
-
 
 Duis ac lorem leo. Quisque non lacus vestibulum, pharetra sem sed, aliquam libero. Nunc condimentum risus vitae tortor dignissim, sed pulvinar velit ullamcorper. Praesent cursus ligula vel tellus aliquam euismod. Integer augue lacus, tempor quis luctus ac, laoreet vel eros. Praesent quis neque felis. Aenean porta aliquet leo sed viverra.
 
@@ -25,5 +24,15 @@ Aenean elementum eros elit, et lacinia enim varius in. Quisque gravida, sapien u
 <div id="char-word-histogram"></div>
 
 Vivamus magna tortor, auctor id leo in, hendrerit interdum justo. Mauris vel risus nec risus molestie lobortis id eu ex. Vivamus ultrices sapien et arcu semper blandit. Donec fringilla scelerisque euismod. Sed euismod dui a velit luctus vestibulum. Vivamus eu diam id nunc finibus posuere vitae scelerisque lacus. Mauris varius, nunc id faucibus facilisis, massa tortor mattis felis, cursus elementum nisi arcu vitae purus. Aliquam id dolor vel lacus accumsan euismod. Duis sem mi, dignissim ac dui id, hendrerit semper mi. Aliquam erat volutpat.
+
+## Personalities
+
+Maecenas ullamcorper auctor tellus, dictum euismod ipsum pellentesque id. Etiam mollis a ante ac tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent a ligula placerat, tincidunt ex at, ornare odio. Curabitur dolor ante, consequat at nibh at, ultricies gravida urna. Sed diam diam, iaculis a dui ac, pellentesque fringilla justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec ornare interdum magna, eu dictum sem vestibulum sit amet. Nam at tristique purus, eu accumsan dui.
+
+<div id="personality-selector"></div>
+<div id="personality"></div>
+
+Vivamus magna tortor, auctor id leo in, hendrerit interdum justo. Mauris vel risus nec risus molestie lobortis id eu ex. Vivamus ultrices sapien et arcu semper blandit. Donec fringilla scelerisque euismod. Sed euismod dui a velit luctus vestibulum. Vivamus eu diam id nunc finibus posuere vitae scelerisque lacus. Mauris varius, nunc id faucibus facilisis, massa tortor mattis felis, cursus elementum nisi arcu vitae purus. Aliquam id dolor vel lacus accumsan euismod. Duis sem mi, dignissim ac dui id, hendrerit semper mi. Aliquam erat volutpat.
+
 
 <script src="http://localhost:9001/bundle.js"></script>

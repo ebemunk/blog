@@ -1,13 +1,18 @@
+import { compose } from 'redux'
 import { connect } from 'react-redux'
 
 import { getCharWordFrequencies } from '../../actions'
-import CharWordHistogram from './Labels'
+import { fireActions } from '../../hoc'
+import Labels from './Labels'
 
-export default connect(
-  state => ({
-    data: state.charWordFrequencies,
-  }),
-  {
-    getCharWordFrequencies,
-  },
-)(CharWordHistogram)
+export default compose(
+  connect(
+    state => ({
+      data: state.charWordFrequencies,
+    }),
+    {
+      getCharWordFrequencies,
+    },
+  ),
+  fireActions(['getCharWordFrequencies']),
+)(Labels)

@@ -11,17 +11,14 @@ import {
 import {
 	WordCount,
 	LinesPerChar,
-	// CharWordHistogram,
 	Personalities
 } from './sections'
-import CharWordHistogram from './sections/CharWordHistogram/Labels'
 
 import Selector from './sections/Personalities/Selector'
 
  class App extends Component {
 	componentWillMount() {
 		this.props.getLinesPerChar()
-		this.props.getCharWordFrequencies()
 		this.props.getPersonalities()
 	}
 
@@ -38,9 +35,6 @@ import Selector from './sections/Personalities/Selector'
 				<hr />
 				<Selector />
 				<Personalities />
-				<hr />
-				<CharWordHistogram />
-				<hr />
 				<hr />
 				<LinesPerChar />
 				<hr />
