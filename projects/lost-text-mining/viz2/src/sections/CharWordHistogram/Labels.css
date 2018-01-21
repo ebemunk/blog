@@ -1,11 +1,16 @@
 .labels {
   display: flex;
+  justify-content: center;
+
+  & div {
+    flex-shrink: 0;
+  }
 }
 
 .label {
   font-size: 12px;
   white-space: nowrap;
-  position: absolute;
+  position: relative;
 }
 
 .rotatedLabel {
@@ -14,6 +19,7 @@
   transform-origin: 0 0;
   top: 50%;
   left: 0;
+  position: absolute;
 }
 
 .centeredLabel {
@@ -29,12 +35,12 @@
 
 .yLabelWrap {
   composes: labelWrap;
-  width: 12px;
+  width: 2rem;
 }
 
-.xLabelWrap {
-  composes: labelWrap;
-  height: 12px;
+.legend {
+  composes: labels;
+  align-content: space-between;
 }
 
 .legendBox {
@@ -57,5 +63,5 @@
   display: flex;
   align-items: center;
   font-size: 12px;
-  margin: 2px
+  margin: 2px;
 }

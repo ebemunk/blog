@@ -1,10 +1,13 @@
 import { connect } from 'react-redux'
 
-import CharWordHistogram from './CharWordHistogram'
+import { getCharWordFrequencies } from '../../actions'
+import CharWordHistogram from './Labels'
 
 export default connect(
   state => ({
-    data: state.charWordFrequencies
+    data: state.charWordFrequencies,
   }),
-  null
+  {
+    getCharWordFrequencies,
+  },
 )(CharWordHistogram)

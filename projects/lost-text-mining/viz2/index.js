@@ -24,15 +24,15 @@ const store = configureStore({})
 // 	})
 // }
 
-import WordCount from './src/sections/WordCount'
+import { WordCount, CharWordHistogram } from './src/sections'
 
-window.renderTo = (component, selector) => ReactDOM.render(
-	<AppContainer>
-		<Provider store={store}>
-			{component}
-		</Provider>
-	</AppContainer>,
-	document.querySelector(selector)
-)
+const render = (component, selector) =>
+  ReactDOM.render(
+    <AppContainer>
+      <Provider store={store}>{component}</Provider>
+    </AppContainer>,
+    document.querySelector(selector),
+  )
 
-window.renderTo(<WordCount />, '#word-count')
+render(<WordCount />, '#word-count')
+render(<CharWordHistogram />, '#char-word-histogram')

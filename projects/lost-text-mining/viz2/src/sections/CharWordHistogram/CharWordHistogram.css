@@ -32,7 +32,7 @@
 }
 
 .numCharsLine {
-  composes: binsLine
+  composes: binsLine;
 }
 
 .val {
@@ -42,6 +42,7 @@
   stroke: #282c34;
   stroke-width: 4;
   paint-order: stroke;
+  letter-spacing: 0;
 }
 
 .pctCharsVal {

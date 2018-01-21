@@ -18,7 +18,7 @@ export default class Interaction extends React.Component {
     data: {
       pctChars: null,
       pctWords: null,
-    }
+    },
   }
 
   render() {
@@ -26,32 +26,32 @@ export default class Interaction extends React.Component {
     const { visible, scaled, data } = this.state
 
     return (
-      <g
-        onMouseLeave={() => this.setState({ visible: false })}
-      >
-        {polygons.map((p, i) =>
+      <g onMouseLeave={() => this.setState({ visible: true })}>
+        {polygons.map((p, i) => (
           <path
             key={p}
             d={`M${p.join('L')}Z`}
             fill="transparent"
-            onMouseEnter={() => this.setState({
-              scaled: {
-                bin: (scales.x(p.data.x0) + scales.x(p.data.x1)) / 2,
-                pctChars: scales.y2(derivedData.cumChars[i].y),
-                pctWords: scales.y2(derivedData.cumWords[i].y),
-                numChars: scales.y1(p.data.length),
-              },
-              data: {
-                bin: numFormat(halfway(p.data)),
-                pctChars: derivedData.cumChars[i].y,
-                pctWords: derivedData.cumWords[i].y,
-                numChars: p.data.length,
-              },
-              visible: true
-            })}
+            onMouseEnter={() =>
+              this.setState({
+                scaled: {
+                  bin: (scales.x(p.data.x0) + scales.x(p.data.x1)) / 2,
+                  pctChars: scales.y2(derivedData.cumChars[i].y),
+                  pctWords: scales.y2(derivedData.cumWords[i].y),
+                  numChars: scales.y1(p.data.length),
+                },
+                data: {
+                  bin: numFormat(halfway(p.data)),
+                  pctChars: derivedData.cumChars[i].y,
+                  pctWords: derivedData.cumWords[i].y,
+                  numChars: p.data.length,
+                },
+                visible: true,
+              })
+            }
           />
-        )}
-        {visible &&
+        ))}
+        {visible && (
           <g>
             <line
               x1={scaled.bin}
@@ -112,7 +112,7 @@ export default class Interaction extends React.Component {
               y={scaled.numChars}
             />
           </g>
-        }
+        )}
       </g>
     )
   }
