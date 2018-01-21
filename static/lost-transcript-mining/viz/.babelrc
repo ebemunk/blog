@@ -1,8 +1,0 @@
-{
-	"presets": [
-		"stage-0",
-		"latest"
-	],
-	"sourceMaps": true,
-	"retainLines": true
-}

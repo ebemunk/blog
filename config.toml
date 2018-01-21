@@ -16,4 +16,4 @@ tag = "tags"
 series = "series"
 
 [permalinks]
-post = "/:title/"
+post = "/:slug/"

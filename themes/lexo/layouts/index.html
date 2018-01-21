@@ -17,9 +17,9 @@
 						on {{ partial "tags.html" . }}
 					</div>
 				</article>
-				{{ if $key }}
-				{{ else }}
+				{{ if ne $key 2 }}
 					<hr>
+				{{ else }}
 				{{ end }}
 			{{ end }}
 		</div>

@@ -1,0 +1,61 @@
+.labels {
+  display: flex;
+}
+
+.label {
+  font-size: 12px;
+  white-space: nowrap;
+  position: absolute;
+}
+
+.rotatedLabel {
+  composes: label;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: 0 0;
+  top: 50%;
+  left: 0;
+}
+
+.centeredLabel {
+  composes: label;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+}
+
+.labelWrap {
+  position: relative;
+}
+
+.yLabelWrap {
+  composes: labelWrap;
+  width: 12px;
+}
+
+.xLabelWrap {
+  composes: labelWrap;
+  height: 12px;
+}
+
+.legendBox {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5em;
+}
+
+.charLegend {
+  composes: legendBox;
+  background-color: #7fc97f;
+}
+
+.wordLegend {
+  composes: legendBox;
+  background-color: #beaed4;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin: 2px
+}

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`personality should query for chars and return personality insights 1`] = `
+Array [
+  Object {
+    "rows": Array [
+      Object {
+        "char_name": "RAISTLIN MAJERE",
+      },
+    ],
+  },
+]
+`;
