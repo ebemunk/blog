@@ -1,10 +1,10 @@
 export default {
   big5: {
-    label: 'Big 5'
+    label: 'Big 5',
   },
   // openness
   big5_openness: {
-    label: 'Openness'
+    label: 'Openness',
   },
   facet_adventurousness: {
     label: 'Adventurousness',
@@ -14,52 +14,52 @@ export default {
   facet_artistic_interests: {
     label: 'Artistic interests',
     low: 'Unconcerned with art',
-    high: 'Appreciative of art'
+    high: 'Appreciative of art',
   },
   facet_emotionality: {
     label: 'Emotionality',
     low: 'Dispassionate',
-    high: 'Emotionally aware'
+    high: 'Emotionally aware',
   },
   facet_imagination: {
     label: 'Imagination',
     low: 'Down-to-eath',
-    high: 'Imaginative'
+    high: 'Imaginative',
   },
   facet_intellect: {
     label: 'Intellect',
     low: 'Concrete',
-    high: 'Philosophical'
+    high: 'Philosophical',
   },
   facet_liberalism: {
     label: 'Liberalism',
     low: 'Respectful of authority',
-    high: 'Authority-challenging'
+    high: 'Authority-challenging',
   },
 
   // conscientiousness
   big5_conscientiousness: {
-    label: 'Conscientiousness'
+    label: 'Conscientiousness',
   },
   facet_achievement_striving: {
     label: 'Achievement-striving',
     low: 'Content',
-    high: 'Driven'
+    high: 'Driven',
   },
   facet_cautiousness: {
     label: 'Cautiousness',
     low: 'Bold',
-    high: 'Deliberate'
+    high: 'Deliberate',
   },
   facet_dutifulness: {
     label: 'Dutifulness',
     low: 'Carefree',
-    high: 'Dutiful'
+    high: 'Dutiful',
   },
   facet_orderliness: {
     label: 'Orderliness',
     low: 'Unstructured',
-    high: 'Organized'
+    high: 'Organized',
   },
   facet_self_discipline: {
     label: 'Self-discipline',
@@ -69,111 +69,172 @@ export default {
   facet_self_efficacy: {
     label: 'Self-efficacy',
     low: 'Self-doubting',
-    high: 'Self-assured'
+    high: 'Self-assured',
   },
 
   // extraversion
   big5_extraversion: {
-    label: 'Extraversion'
+    label: 'Extraversion',
   },
   facet_activity_level: {
     label: 'Activity level',
     low: 'Laid-back',
-    high: 'Energetic'
+    high: 'Energetic',
   },
   facet_assertiveness: {
     label: 'Assertiveness',
     low: 'Demure',
-    high: 'Assertive'
+    high: 'Assertive',
   },
   facet_cheerfulness: {
     label: 'Cheerfulness',
     low: 'Solemn',
-    high: 'Cheerful'
+    high: 'Cheerful',
   },
   facet_excitement_seeking: {
     label: 'Excitement-seeking',
     low: 'Calm-seeking',
-    high: 'Excitement-seeking'
+    high: 'Excitement-seeking',
   },
   facet_friendliness: {
     label: 'Friendliness',
     low: 'Reserved',
-    high: 'Outgoing'
+    high: 'Outgoing',
   },
   facet_gregariousness: {
     label: 'Gregariousness',
     low: 'Independent',
-    high: 'Sociable'
+    high: 'Sociable',
   },
 
   // agreeableness
   big5_agreeableness: {
-    label: 'Agreeableness'
+    label: 'Agreeableness',
   },
   facet_altruism: {
     label: 'Alturism',
     low: 'Self-focused',
-    high: 'Alturistic'
+    high: 'Alturistic',
   },
   facet_cooperation: {
     label: 'Cooperation',
     low: 'Contrary',
-    high: 'Accomodating'
+    high: 'Accomodating',
   },
   facet_modesty: {
     label: 'Modesty',
     low: 'Proud',
-    high: 'Modest'
+    high: 'Modest',
   },
   facet_morality: {
     label: 'Morality',
     low: 'Uncompromising',
-    high: 'Compromising'
+    high: 'Compromising',
   },
   facet_sympathy: {
     label: 'Sympathy',
     low: 'Hard-hearted',
-    high: 'Empathetic'
+    high: 'Empathetic',
   },
   facet_trust: {
     label: 'Trust',
     low: 'Cautious of others',
-    high: 'Trusting of others'
+    high: 'Trusting of others',
   },
 
   // neuroticism/ emotional range
   big5_neuroticism: {
-    label: 'Emotional Range'
+    label: 'Emotional Range',
   },
   facet_anger: {
     label: 'Anger',
     low: 'Mild-tempered',
-    high: 'Fiery'
+    high: 'Fiery',
   },
   facet_anxiety: {
     label: 'Anxiety',
     low: 'Self-assured',
-    high: 'Prone to worry'
+    high: 'Prone to worry',
   },
   facet_depression: {
     label: 'Depression',
     low: 'Content',
-    high: 'Melancholy'
+    high: 'Melancholy',
   },
   facet_immoderation: {
     label: 'Immoderation',
     low: 'Self-controlled',
-    high: 'Hedonistic'
+    high: 'Hedonistic',
   },
   facet_self_consciousness: {
     label: 'Self-consciousness',
     low: 'Confident',
-    high: 'Self-conscious'
+    high: 'Self-conscious',
   },
   facet_vulnerability: {
     label: 'Vulnerability',
     low: 'Calm under pressure',
-    high: 'Susceptible to stress'
-  }
+    high: 'Susceptible to stress',
+  },
+
+  // needs
+  needs: {
+    label: 'Needs',
+  },
+  need_challenge: {
+    label: 'Challenge',
+  },
+  need_closeness: {
+    label: 'Closeness',
+  },
+  need_curiosity: {
+    label: 'Curiosity',
+  },
+  need_excitement: {
+    label: 'Excitement',
+  },
+  need_harmony: {
+    label: 'Harmony',
+  },
+  need_ideal: {
+    label: 'Ideal',
+  },
+  need_liberty: {
+    label: 'Liberty',
+  },
+  need_love: {
+    label: 'Love',
+  },
+  need_practicality: {
+    label: 'Practicality',
+  },
+  need_self_expression: {
+    label: 'Self Expression',
+  },
+  need_stability: {
+    label: 'Stability',
+  },
+  need_structure: {
+    label: 'Structure',
+  },
+
+  //values
+  values: {
+    label: 'Values',
+  },
+  value_conservation: {
+    label: 'Conservation',
+  },
+  value_hedonism: {
+    label: 'Hedonism',
+  },
+  value_openness_to_change: {
+    label: 'Openness to Change',
+  },
+  value_self_enhancement: {
+    label: 'Self-enhancement',
+  },
+  value_self_transcendence: {
+    label: 'Self-transcendence',
+  },
 }

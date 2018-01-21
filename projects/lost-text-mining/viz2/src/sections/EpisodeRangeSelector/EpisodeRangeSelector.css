@@ -21,7 +21,7 @@
 		opacity: 0.75;
 		cursor: pointer;
 		font-weight: 300;
-		font-size: 0.75rem;
+		font-size: 1.2rem;
 
 		&:hover {
 			opacity: 1;

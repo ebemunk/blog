@@ -1,9 +1,11 @@
 export const colors = {
-  big5_openness: 'rgba(82, 84, 163, 0.4)',
-  big5_conscientiousness: 'rgba(140, 162, 82, 0.4)',
-  big5_extraversion: 'rgba(189, 158, 57, 0.4)',
-  big5_agreeableness: 'rgba(173, 73, 74, 0.4)',
-  big5_neuroticism: 'rgba(165, 81, 148, 0.4)'
+  big5_openness: 'rgba(44, 162, 95, 0.4)',
+  big5_conscientiousness: 'rgba(136, 86, 167, 0.4)',
+  big5_extraversion: 'rgba(67, 162, 202, 0.4)',
+  big5_agreeableness: 'rgba(227, 74, 51, 0.4)',
+  big5_neuroticism: 'rgba(28, 144, 153, 0.4)',
+  needs: 'rgba(127, 205, 187, 0.4)',
+  values: 'rgba(221, 28, 119, 0.4)',
 }
 
 export default [
@@ -15,7 +17,7 @@ export default [
       'big5_extraversion',
       'big5_agreeableness',
       'big5_neuroticism',
-    ]
+    ],
   },
   {
     key: 'big5_openness',
@@ -26,7 +28,7 @@ export default [
       'facet_imagination',
       'facet_intellect',
       'facet_liberalism',
-    ]
+    ],
   },
   {
     key: 'big5_conscientiousness',
@@ -37,7 +39,7 @@ export default [
       'facet_orderliness',
       'facet_self_discipline',
       'facet_self_efficacy',
-    ]
+    ],
   },
   {
     key: 'big5_extraversion',
@@ -48,7 +50,7 @@ export default [
       'facet_excitement_seeking',
       'facet_friendliness',
       'facet_gregariousness',
-    ]
+    ],
   },
   {
     key: 'big5_agreeableness',
@@ -59,7 +61,7 @@ export default [
       'facet_morality',
       'facet_sympathy',
       'facet_trust',
-    ]
+    ],
   },
   {
     key: 'big5_neuroticism',
@@ -70,6 +72,33 @@ export default [
       'facet_immoderation',
       'facet_self_consciousness',
       'facet_vulnerability',
-    ]
-  }
+    ],
+  },
+  {
+    key: 'needs',
+    facets: [
+      'need_challenge',
+      'need_closeness',
+      'need_curiosity',
+      'need_excitement',
+      'need_harmony',
+      'need_ideal',
+      'need_liberty',
+      'need_love',
+      'need_practicality',
+      'need_self_expression',
+      'need_stability',
+      'need_structure',
+    ],
+  },
+  {
+    key: 'values',
+    facets: [
+      'value_conservation',
+      'value_hedonism',
+      'value_openness_to_change',
+      'value_self_enhancement',
+      'value_self_transcendence',
+    ],
+  },
 ]

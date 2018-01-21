@@ -26,7 +26,7 @@ export default class Interaction extends React.Component {
     const { visible, scaled, data } = this.state
 
     return (
-      <g onMouseLeave={() => this.setState({ visible: true })}>
+      <g onMouseLeave={() => this.setState({ visible: false })}>
         {polygons.map((p, i) => (
           <path
             key={p}

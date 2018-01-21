@@ -26,7 +26,7 @@ export default function Personalities(props) {
           <div className={style.label}>{labels[dimension.key].label}</div>
           <svg
             width={width}
-            height={6 * barHeight + padding.top + padding.bottom}
+            height={dimension.facets.length * barHeight + padding.top + padding.bottom}
           >
             <g transform={`translate(${padding.left}, ${padding.top})`}>
               <Dimension

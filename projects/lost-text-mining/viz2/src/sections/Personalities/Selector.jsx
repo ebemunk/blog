@@ -36,23 +36,24 @@ export function Selector(props) {
               selectProfiles(i, e.map(({ value }) => value))
             }}
             value={g}
+            closeOnSelect={false}
           />
-          <button
-            onClick={() => removeProfileGroup(i)}
-            disabled={personalitySelection.length === 1}
-            children="Remove"
-          />
+          <div className={style.removeButton}>
+            <button
+              onClick={() => removeProfileGroup(i)}
+              disabled={personalitySelection.length === 1}
+              children="×"
+              title="Remove Group"
+            />
+          </div>
         </div>
       ))}
       <div>
         <button
-          disabled={
-            !personalitySelection[personalitySelection.length - 1].length
-          }
           onClick={addProfileGroup}
           children="Add Group"
         />
-        <button
+        {/* <button
           onClick={() => {
             selectProfiles(0, [
               'ANA LUCIA',
@@ -85,7 +86,7 @@ export function Selector(props) {
             ])
           }}
           children="men vs women"
-        />
+        /> */}
       </div>
     </div>
   )
