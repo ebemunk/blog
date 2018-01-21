@@ -18,11 +18,8 @@ import CharWordHistogram from './sections/CharWordHistogram/Labels'
 
 import Selector from './sections/Personalities/Selector'
 
-import style from './App.css'
-
-export class App extends Component {
+ class App extends Component {
 	componentWillMount() {
-		this.props.getWordCount()
 		this.props.getLinesPerChar()
 		this.props.getCharWordFrequencies()
 		this.props.getPersonalities()
@@ -35,7 +32,7 @@ export class App extends Component {
 		} = this.props
 
 		return (
-			<div className={style.app}>
+			<div>
 				<h1>bro</h1>
 				<EpisodeRangeSelector />
 				<hr />
@@ -44,7 +41,6 @@ export class App extends Component {
 				<hr />
 				<CharWordHistogram />
 				<hr />
-				<WordCount />
 				<hr />
 				<LinesPerChar />
 				<hr />
@@ -77,19 +73,3 @@ export class App extends Component {
 		)
 	}
 }
-
-import { connect } from 'react-redux'
-
-import * as actions from './actions'
-
-const mapStateToProps = state => ({
-	...state,
-})
-
-const mapDispatchToProps = actions
-
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
-)(App)
-

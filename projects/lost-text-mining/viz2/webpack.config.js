@@ -2,7 +2,6 @@ const path = require('path')
 
 const R = require('ramda')
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const dir = R.partial(path.resolve, [__dirname])
 
@@ -14,12 +13,11 @@ module.exports = {
 	],
 	output: {
 		filename: 'bundle.js',
-		path: dir('../../../static/lost-text-mining')
+		path: dir('../../../static/lost-text-mining'),
+		publicPath: 'http://localhost:9001/',
 	},
 	devtool: 'source-map',
 	devServer: {
-		contentBase: dir('dist'),
-		compress: true,
 		port: 9001,
 		hot: true
 	},
@@ -65,9 +63,6 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new HtmlWebpackPlugin({
-			template: dir('index.html')
-		}),
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NamedModulesPlugin()
 	]

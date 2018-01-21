@@ -1,0 +1,17 @@
+.title {
+  position: relative;
+  left: 3.5rem;
+  top: 3.5rem;
+}
+
+.wrap {
+  position: absolute;
+  top: 32;
+  left: 35;
+  white-space: nowrap;
+  font-size: 0.85em;
+}
+
+.block {
+  display: block;
+}

@@ -1,12 +1,21 @@
 .bandAxis {
-	& :global(.tick) text {
-		text-anchor: start;
-		transform: translateY(3px);
-	}
+  & :global(.tick) text {
+    text-anchor: start;
+    transform: translateY(3px);
+  }
 }
 
 .linearAxis {
-	& :global(.tick) line {
-		opacity: 0.3;
-	}
+  & :global(.tick) line {
+    opacity: 0.3;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.chart {
+  flex-shrink: 0;
 }

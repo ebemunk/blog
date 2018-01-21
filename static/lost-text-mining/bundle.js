@@ -85,7 +85,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9c4b5de0d793c91854e3"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4669fde5d63f977d4130"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -794,7 +794,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "http://localhost:9001/";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
@@ -9733,12 +9733,15 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".WordCount__bandAxis .tick text {\n\n    text-anchor: start;\n\n    -webkit-transform: translateY(3px);\n\n            transform: translateY(3px);\n}\n\n.WordCount__linearAxis .tick line {\n\n    opacity: 0.3;\n}\n", ""]);
+exports.push([module.i, ".WordCount__bandAxis .tick text {\n\ttext-anchor: start;\n\t-webkit-transform: translateY(3px);\n\t        transform: translateY(3px);\n}\n\n.WordCount__linearAxis .tick line {\n\topacity: 0.3;\n}\n\n.WordCount__center {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n}\n\n.WordCount__chart {\n\t-ms-flex-negative: 0;\n\t    flex-shrink: 0;\n}\n\n.WordCount__title {\n\tposition: relative;\n\tleft: 56px;\n\tleft: 3.5rem;\n\ttop: 56px;\n\ttop: 3.5rem;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"bandAxis": "WordCount__bandAxis",
-	"linearAxis": "WordCount__linearAxis"
+	"linearAxis": "WordCount__linearAxis",
+	"center": "WordCount__center",
+	"chart": "WordCount__chart",
+	"title": "WordCount__title"
 };
 
 /***/ }),
@@ -83899,7 +83902,6 @@ if(true) {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.WordCount = undefined;
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
@@ -83910,8 +83912,6 @@ var _react = __webpack_require__("./node_modules/react/index.js");
 var _react2 = _interopRequireDefault(_react);
 
 var _d2 = __webpack_require__("./node_modules/d3/index.js");
-
-var d3 = _interopRequireWildcard(_d2);
 
 var _classnames = __webpack_require__("./node_modules/classnames/index.js");
 
@@ -83925,12 +83925,6 @@ var _WordCount = __webpack_require__("./src/sections/WordCount/WordCount.css");
 
 var _WordCount2 = _interopRequireDefault(_WordCount);
 
-var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
-
-var _selectors = __webpack_require__("./src/selectors/index.js");
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -83939,8 +83933,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var WordCount = exports.WordCount = function (_Component) {
-	_inherits(WordCount, _Component);
+var WordCount = function (_React$Component) {
+	_inherits(WordCount, _React$Component);
 
 	function WordCount() {
 		var _ref;
@@ -83964,7 +83958,7 @@ var WordCount = exports.WordCount = function (_Component) {
 			var _this2 = this;
 
 			var dataType = this.state.dataType;
-			// const { wordCount } = this.props
+
 
 			var data = this.props.data.map(function (d) {
 				return {
@@ -83974,11 +83968,11 @@ var WordCount = exports.WordCount = function (_Component) {
 			});
 
 			return _react2.default.createElement(
-				'div',
+				_react2.default.Fragment,
 				null,
 				_react2.default.createElement(
 					'div',
-					{ style: { display: 'flex', justifyContent: 'center' } },
+					{ className: _WordCount2.default.center },
 					_react2.default.createElement('button', {
 						onClick: function onClick() {
 							return _this2.setState({ dataType: 'total' });
@@ -84003,10 +83997,10 @@ var WordCount = exports.WordCount = function (_Component) {
 				),
 				_react2.default.createElement(
 					'div',
-					{ style: { display: 'flex' } },
+					{ className: _WordCount2.default.center },
 					_react2.default.createElement(
 						'div',
-						{ style: { position: 'relative' } },
+						{ className: _WordCount2.default.title },
 						_react2.default.createElement(
 							'div',
 							{ style: { position: 'absolute', top: '32', left: '35', whiteSpace: 'nowrap', fontSize: '0.85em' } },
@@ -84031,6 +84025,7 @@ var WordCount = exports.WordCount = function (_Component) {
 						)
 					),
 					_react2.default.createElement(_components.BarChart, {
+						className: _WordCount2.default.chart,
 						width: 900,
 						height: 350,
 						padding: {
@@ -84058,7 +84053,7 @@ var WordCount = exports.WordCount = function (_Component) {
 						},
 						linearAxisProps: {
 							className: _WordCount2.default.linearAxis,
-							tickFormat: d3.format('.2s')
+							tickFormat: (0, _d2.format)('.2s')
 						},
 						barStyle: function barStyle(_ref2) {
 							var key = _ref2.key;
@@ -84073,14 +84068,9 @@ var WordCount = exports.WordCount = function (_Component) {
 	}]);
 
 	return WordCount;
-}(_react.Component);
+}(_react2.default.Component);
 
-var _default = (0, _reactRedux.connect)(function (state) {
-	return {
-		data: (0, _selectors.wordCountBySelection)(state)
-	};
-}, null)(WordCount);
-
+var _default = WordCount;
 exports.default = _default;
 ;
 
@@ -84105,9 +84095,12 @@ var _temp2 = function () {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
-exports.default = undefined;
+
+var _reactRedux = __webpack_require__("./node_modules/react-redux/es/index.js");
+
+var _selectors = __webpack_require__("./src/selectors/index.js");
 
 var _WordCount = __webpack_require__("./src/sections/WordCount/WordCount.jsx");
 
@@ -84115,13 +84108,21 @@ var _WordCount2 = _interopRequireDefault(_WordCount);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _WordCount2.default;
+var _default = (0, _reactRedux.connect)(function (state) {
+	return {
+		data: (0, _selectors.wordCountBySelection)(state)
+	};
+}, null)(_WordCount2.default);
+
+exports.default = _default;
 ;
 
 var _temp = function () {
-  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-    return;
-  }
+	if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+		return;
+	}
+
+	__REACT_HOT_LOADER__.register(_default, 'default', '/Users/ebemunk/proj/blog/projects/lost-text-mining/viz2/src/sections/WordCount/index.js');
 }();
 
 ;

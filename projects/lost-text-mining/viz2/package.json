@@ -7,7 +7,6 @@
     "build": "webpack -p",
     "devbuild": "webpack",
     "dev": "webpack-dev-server",
-    "flow": "flow",
     "test": "jest"
   },
   "devDependencies": {
@@ -18,8 +17,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.4",
-    "flow-bin": "^0.61.0",
-    "html-webpack-plugin": "^2.29.0",
     "jest": "^21.2.1",
     "json-loader": "^0.5.4",
     "postcss-cssnext": "^3.0.2",
