@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import style from './Toggle.css'
 
 export default function Toggle({ onClick, on, children, className }) {
-  const char = on ? '√' : 'x'
+  const char = on ? '✔' : '×'
   return (
     <button
       children={`${children}: ${char}`}
