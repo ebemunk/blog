@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
+  min-width: 800px;
   position: relative;
   justify-content: center;
   transform: translateX(-50%);
@@ -15,4 +16,10 @@
 
 .label {
   text-align: center;
+}
+
+@media (max-width: 800px) {
+  :global(#personality) {
+    width: 800px;
+  }
 }

@@ -2,23 +2,26 @@ import React from 'react'
 import classnames from 'classnames'
 import * as R from 'ramda'
 
-import { HorizontalBarChart, ButtonGroup } from '../../components'
+import { HorizontalBarChart, ButtonGroup, Toggle } from '../../components'
 import { toTitleCase } from '../../util'
+
+import style from './LinesPerChar.css'
 
 export default class LinesPerChar extends React.Component {
   state = {
     dataType: 'total',
+    showAll: false
   }
 
   render() {
     const { data } = this.props
-    const { dataType } = this.state
+    const { dataType, showAll } = this.state
 
     const sum = R.sum(data.map(d => d.value))
 
     return (
       <React.Fragment>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div className={style.wrap}>
           <ButtonGroup
             options={[
               { name: 'Total', value: 'total' },
@@ -27,24 +30,24 @@ export default class LinesPerChar extends React.Component {
             selected={dataType}
             onChange={v => this.setState({ dataType: v })}
           />
+          <Toggle
+            children={'Show All'}
+            onClick={() => this.setState({ showAll: !showAll })}
+            className={style.all}
+            on={showAll}
+          />
         </div>
-        <div
-          style={{
-            height: '400px',
-            overflowY: 'scroll',
-            width: '500px',
-          }}
-        >
+        <div className={style.chart}>
           <HorizontalBarChart
             data={data.map(d => ({
               ...d,
               value: dataType === 'percentage' ? d.value / sum * 100 : d.value,
-            }))}
+            })).slice(0, showAll ? -1 : 15)}
             width={500}
             height={25}
             padding={{
               top: 20,
-              left: 50,
+              left: 55,
               right: 10,
               bottom: 10,
             }}
@@ -52,7 +55,7 @@ export default class LinesPerChar extends React.Component {
               tickFormat: toTitleCase,
             }}
             linearScaleProps={{
-              domain: dataType === 'percentage' ? [0, 14] : undefined,
+              domain: dataType === 'percentage' ? [0, 50] : undefined,
             }}
           />
         </div>

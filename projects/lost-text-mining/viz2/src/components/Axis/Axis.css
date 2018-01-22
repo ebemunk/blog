@@ -5,6 +5,7 @@
 .axis {
 	& text {
 		fill: var(--white);
+		font-size: 1.2rem;
 	}
 
 	& line {

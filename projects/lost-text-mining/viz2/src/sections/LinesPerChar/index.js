@@ -2,7 +2,7 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 
 import { linesPerCharBySelection } from '../../selectors'
-import { fireActions } from '../../hoc'
+import { fireActions, withEpSelector } from '../../hoc'
 import { getLinesPerChar } from '../../actions'
 import LinesPerChar from './LinesPerChar'
 
@@ -16,4 +16,5 @@ export default compose(
     },
   ),
   fireActions(['getLinesPerChar']),
+  withEpSelector(700),
 )(LinesPerChar)

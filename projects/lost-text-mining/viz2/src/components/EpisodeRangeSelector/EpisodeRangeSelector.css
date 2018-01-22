@@ -4,13 +4,6 @@
   margin-bottom: 0.5rem;
 }
 
-.brushed {
-  & .episodes,
-  & .seasons {
-    mask: url(#brushMask);
-  }
-}
-
 .episodes {
   fill: black;
 }

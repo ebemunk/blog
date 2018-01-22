@@ -29,3 +29,9 @@
 .chart {
   flex-shrink: 0;
 }
+
+@media (max-width: 900px) {
+  :global(#word-count) {
+    width: 900px;
+  }
+}

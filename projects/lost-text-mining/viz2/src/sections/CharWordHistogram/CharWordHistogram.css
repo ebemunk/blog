@@ -66,3 +66,9 @@
   fill: steelblue;
   text-anchor: end;
 }
+
+@media (max-width: 900px) {
+  :global(#char-word-histogram) {
+    width: 900px;
+  }
+}

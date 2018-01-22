@@ -42,7 +42,9 @@ export default class WordCount extends React.Component {
         <div className={style.center}>
           <Title dataType={dataType} />
           <BarChart
-            className={classnames(style.chart,{ [style.midLabels]: data.length < 25})}
+            className={classnames(style.chart, {
+              [style.midLabels]: data.length < 25,
+            })}
             width={900}
             height={300}
             padding={{
@@ -52,6 +54,7 @@ export default class WordCount extends React.Component {
               bottom: 30,
             }}
             data={data}
+            interactive
             bandAxisProps={{
               className: style.bandAxis,
               tickSize: 0,
@@ -74,6 +77,12 @@ export default class WordCount extends React.Component {
             barStyle={({ key }) => ({
               fill: seasonColor(key.split('-')[0] - 1),
             })}
+            interactionProps={{
+              xTickFormat: key => {
+                const [season, episode] = key.split('-')
+                return `S${season}-E${episode}`
+              },
+            }}
           />
         </div>
       </React.Fragment>

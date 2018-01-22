@@ -96,6 +96,7 @@ export default class EpisodeRangeSelector extends Component {
     if (!scale.step) return null
 
     const halfStep = scale.step() * 0.5
+    const brushMaskId = `brushMask-${width}`
 
     return (
       <div className={style.wrap}>
@@ -108,7 +109,7 @@ export default class EpisodeRangeSelector extends Component {
           height={height + 15}
         >
           <defs>
-            <mask id="brushMask" x="0" y="0" width={width} height={height}>
+            <mask id={brushMaskId} x="0" y="0" width={width} height={height}>
               <rect
                 y="0"
                 x="0"
@@ -135,7 +136,12 @@ export default class EpisodeRangeSelector extends Component {
               />
             </mask>
           </defs>
-          <g className={style.seasons}>
+          <g
+            className={style.seasons}
+            style={{
+              mask: isBrushing ? `url(#${brushMaskId})` : '',
+            }}
+          >
             {SEASONS.map(([start, end], i) => (
               <rect
                 x={scale(start) - halfStep}
@@ -160,7 +166,12 @@ export default class EpisodeRangeSelector extends Component {
               </text>
             ))}
           </g>
-          <g className={style.episodes}>
+          <g
+            className={style.episodes}
+            style={{
+              mask: isBrushing ? `url(#${brushMaskId})` : '',
+            }}
+          >
             {episodes.map((episode, i) => (
               <rect
                 x={scale(i) - 1.5}
