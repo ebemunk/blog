@@ -9,8 +9,8 @@ import {
   Personalities,
   LinesPerChar,
   EpisodeRangeSelector,
+  CharSelector,
 } from './src/sections'
-import Selector from './src/sections/Personalities/Selector'
 import configureStore from './src/store'
 
 const store = configureStore({})
@@ -25,6 +25,6 @@ const render = (component, selector) =>
 
 render(<WordCount />, '#word-count')
 render(<CharWordHistogram />, '#char-word-histogram')
-render(<Selector />, '#personality-selector')
+render(<CharSelector />, '#personality-selector')
 render(<Personalities />, '#personality')
 render(<LinesPerChar />, '#lines-per-char')

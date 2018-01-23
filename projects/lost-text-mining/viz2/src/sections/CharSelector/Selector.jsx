@@ -3,6 +3,8 @@ import Select from 'react-select'
 import '!style-loader!css-loader!react-select/dist/react-select.css'
 
 import { groupColor, toTitleCase } from '../../util'
+// import Value from './Value'
+import Option from './Option'
 
 import style from './Selector.css'
 
@@ -37,6 +39,8 @@ export function Selector(props) {
             }}
             value={g}
             closeOnSelect={false}
+            // valueComponent={Value}
+            optionComponent={Option}
           />
           <div className={style.removeButton}>
             <button

@@ -62,6 +62,15 @@ module.exports = {
         use: 'json-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.(png)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {}
+          }
+        ]
+      }
     ],
   },
   plugins: [
