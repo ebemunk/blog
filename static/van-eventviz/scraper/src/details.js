@@ -1,5 +1,3 @@
-import { inspect } from 'util'
-
 import * as R from 'ramda'
 import WAE from 'web-auto-extractor'
 import axios from 'axios'
@@ -22,8 +20,8 @@ export default async function details(args, opts) {
   })
   const pool = getPool()
   const { rows: list } = await pool.query(
-    // 'select * from events where details is null or geo is null;',
-    `select * from events where id='1014681';`,
+    'select * from events where details is null or geo is null;',
+    // `select * from events where id='1027356';`,
   )
   log.verbose({
     type: 'found events without details',
@@ -36,12 +34,13 @@ export default async function details(args, opts) {
       log.verbose({
         type: 'updating',
         rowId: row.id,
+        url: row.evt.url,
       })
       let deets
       try {
         deets = await getDetails(row)
       } catch (e) {
-        log.error({
+        log.verbose({
           type: 'error getting details',
           error: e.message,
           row,
@@ -50,7 +49,7 @@ export default async function details(args, opts) {
       }
 
       if (deets.length > 1) {
-        log.error({
+        log.verbose({
           type: 'more than 1 event found',
           row,
           deets,
@@ -61,7 +60,7 @@ export default async function details(args, opts) {
       const address = R.path(['location', 'address'])(deets[0])
 
       if (!address) {
-        log.error({
+        log.verbose({
           type: 'address is empty',
           row,
           deets,
@@ -73,7 +72,7 @@ export default async function details(args, opts) {
       try {
         geo = await geocode(address)
       } catch (e) {
-        log.error({
+        log.verbose({
           type: 'error geocoding',
           address: address,
           error: e.message,
@@ -91,7 +90,7 @@ export default async function details(args, opts) {
   )
 
   const fails = updates.filter(i => !i).length
-  log.info({
+  log.verbose({
     type: 'details',
     fails,
     saves: updates.length - fails,
