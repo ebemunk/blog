@@ -27,7 +27,7 @@ export default async function details(args, opts) {
     type: 'found events without details',
     count: list.length,
   })
-  // console.log('list', list)
+  const update = R.partial(updatePool, [pool])
   const updates = await Promise.map(
     list,
     async row => {
@@ -42,9 +42,11 @@ export default async function details(args, opts) {
       } catch (e) {
         log.verbose({
           type: 'error getting details',
-          error: e.message,
+          error: e.message.substr(0, 25),
           row,
         })
+
+        await update(false, false, row.id)
         return false
       }
 
@@ -65,6 +67,7 @@ export default async function details(args, opts) {
           row,
           deets,
         })
+        await update(deets[0], false, row.id)
         return false
       }
 
@@ -75,22 +78,19 @@ export default async function details(args, opts) {
         log.verbose({
           type: 'error geocoding',
           address: address,
-          error: e.message,
+          error: e.message.substr(0, 25),
         })
+        await update(deets[0], false, row.id)
         return false
       }
 
-      return pool.query(`update events set details=$1, geo=$2 where id=$3;`, [
-        deets[0],
-        geo,
-        row.id,
-      ])
+      return update(deets[0], geo, row.id)
     },
-    { concurrency: 10 },
+    { concurrency: 5 },
   )
 
   const fails = updates.filter(i => !i).length
-  log.verbose({
+  log.info({
     type: 'details',
     fails,
     saves: updates.length - fails,
@@ -120,4 +120,12 @@ export async function geocode(address) {
     throw new Error('geocode status not OK')
   }
   return data
+}
+
+export async function updatePool(pool, details, geo, id) {
+  return pool.query(`update events set details=$1, geo=$2 where id=$3;`, [
+    details,
+    geo,
+    id,
+  ])
 }
