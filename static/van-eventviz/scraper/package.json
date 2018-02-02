@@ -20,6 +20,7 @@
     "dotenv": "^4.0.0",
     "pg": "^7.4.0",
     "ramda": "^0.25.0",
+    "web-auto-extractor": "^1.0.17",
     "winston": "^3.0.0-rc1"
   },
   "devDependencies": {

@@ -1,7 +1,6 @@
 import axios from 'axios'
 import cheerio from 'cheerio'
 import { map } from 'bluebird'
-import { omit } from 'ramda'
 
 import { getPool, insertObj } from './db'
 import { prettyJson, logger } from './util'
@@ -11,14 +10,8 @@ const eventsUrl = `${baseUrl}/listings/events`
 
 const log = logger({
   slack: {
-    text: log => {
-      return [
-        `*${log.message.type}* _${log.timestamp}_`,
-        '```',
-        prettyJson(omit(['type'], log.message)),
-        '```',
-      ].join('\n')
-    },
+    username: 'Scraper Dude',
+    icon_emoji: ':japanese_ogre:',
   },
 })
 

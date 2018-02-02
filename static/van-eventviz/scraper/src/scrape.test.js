@@ -3,12 +3,18 @@ import { fromCallback } from 'bluebird'
 import axios from 'axios'
 
 import scrape, { parsePage } from './scrape'
+import * as db from './db'
 
 let data, empty
 
 beforeAll(async () => {
   data = await fromCallback(cb => readFile('./test/test2.html', 'utf-8', cb))
   empty = await fromCallback(cb => readFile('./test/empty.html', 'utf-8', cb))
+
+  db.getPool = jest.fn(() => ({
+    query: jest.fn(() => Promise.resolve()),
+    end: jest.fn(() => Promise.resolve()),
+  }))
 })
 
 describe('scrape', () => {
