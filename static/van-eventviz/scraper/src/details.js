@@ -20,13 +20,16 @@ export default async function details(args, opts) {
   })
   const pool = getPool()
   const { rows: list } = await pool.query(
-    'select * from events where details is null or geo is null;',
+    `select * from events where details is null or (geo is null and details!='false'::jsonb);`,
     // `select * from events where id='1027356';`,
   )
   log.verbose({
     type: 'found events without details',
     count: list.length,
   })
+
+  if (!list.length) return pool.end()
+
   const update = R.partial(updatePool, [pool])
   const updates = await Promise.map(
     list,
@@ -45,8 +48,6 @@ export default async function details(args, opts) {
           error: e.message.substr(0, 25),
           row,
         })
-
-        await update(false, false, row.id)
         return false
       }
 
@@ -80,7 +81,6 @@ export default async function details(args, opts) {
           address: address,
           error: e.message.substr(0, 25),
         })
-        await update(deets[0], false, row.id)
         return false
       }
 
@@ -95,6 +95,7 @@ export default async function details(args, opts) {
     fails,
     saves: updates.length - fails,
   })
+
   await pool.end()
 }
 
@@ -117,7 +118,9 @@ export async function geocode(address) {
     `https://maps.googleapis.com/maps/api/geocode/json?${qs(params)}`,
   )
   if (data.status !== 'OK') {
-    throw new Error('geocode status not OK')
+    throw new Error(
+      `geocode status not OK: ${data.status}: ${data.error_message}`,
+    )
   }
   return data
 }
