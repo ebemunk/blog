@@ -1,5 +1,4 @@
 .env
-.DS_STORE
 details.log
 node_modules/
 dist/
