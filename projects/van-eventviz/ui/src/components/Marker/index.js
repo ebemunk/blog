@@ -1,1 +1,1 @@
-export { default } from "./Marker";
+export default from './Marker'
