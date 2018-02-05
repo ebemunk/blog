@@ -1,3 +1,4 @@
+cd $(dirname $0)
 git pull
 yarn
 yarn start scrape &>> /tmp/scrape.log
