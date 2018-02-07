@@ -22,3 +22,8 @@ export const toggleAll = tags => ({
 export const toggleNone = () => ({
   type: 'TOGGLE_NONE',
 })
+
+export const selectDates = range => ({
+  type: 'SELECT_DATES',
+  payload: range,
+})

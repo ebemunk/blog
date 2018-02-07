@@ -29,6 +29,11 @@ const rootReducer = combineReducers({
             action.payload.map(e => new Date(e.endDate)),
           ),
         }
+      case 'SELECT_DATES':
+        return {
+          ...state,
+          ...action.payload,
+        }
       default:
         return state
     }

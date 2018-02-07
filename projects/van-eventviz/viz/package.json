@@ -33,7 +33,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
-    "moment": "^2.20.1",
+    "date-fns": "^1.29.0",
     "ramda": "^0.25.0",
     "react": "^16.2.0",
     "react-day-picker": "^7.0.7",
