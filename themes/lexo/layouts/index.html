@@ -2,7 +2,7 @@
 <div class="container index">
 	<div class="row">
 		<div class="column">
-			{{ range $key, $value := (.Paginator 3).Pages }}
+			{{ range $key, $value := (.Paginator 2).Pages }}
 				<article class="article-list-item">
 					<h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 					<div class="summary">
@@ -17,7 +17,7 @@
 						on {{ partial "tags.html" . }}
 					</div>
 				</article>
-				{{ if ne $key 2 }}
+				{{ if ne $key 1 }}
 					<hr>
 				{{ else }}
 				{{ end }}

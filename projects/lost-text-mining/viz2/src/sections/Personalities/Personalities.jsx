@@ -1,10 +1,12 @@
 import React from 'react'
 import * as d3 from 'd3'
 import classnames from 'classnames'
+import { lift } from 'ramda'
 
 import dimensions from './dimensions'
 import labels from './labels'
 import Dimension from './Dimension'
+import Tooltip from './Tooltip'
 
 import style from './Personalities.css'
 
@@ -16,30 +18,55 @@ export default function Personalities(props) {
     .domain([0, 1])
     .range([0, width - padding.left - padding.right])
 
-  const barWidth = width - padding.left - padding.right
-  const barHeight = 30
-
   return (
-    <div className={style.dimensions}>
-      {dimensions.map(dimension => (
-        <div key={dimension.key} className={style.dimension} style={{ width }}>
-          <div className={style.label}>{labels[dimension.key].label}</div>
-          <svg
-            width={width}
-            height={dimension.facets.length * barHeight + padding.top + padding.bottom}
+    <div className={style.dimensions} id="dimensions-viz">
+      <Tooltip />
+      {dimensions
+        .map(dim => ({
+          ...dim,
+          isNeeds: dim.key === 'needs',
+          width: ['needs', 'values', 'big5'].includes(dim.key)
+            ? width - 250
+            : width,
+          padding: ['needs', 'values', 'big5'].includes(dim.key)
+            ? { top: 0, left: 0, right: 0, bottom: 0 }
+            : padding,
+        }))
+        .map(dimension => (
+          <div
+            key={dimension.key}
+            className={style.dimension}
+            style={{ width: dimension.isNeeds ? width * 2 : width }}
           >
-            <g transform={`translate(${padding.left}, ${padding.top})`}>
+            <div className={style.label}>{labels[dimension.key].label}</div>
+            <div className={style.dims}>
               <Dimension
                 x={x}
-                barWidth={barWidth}
-                barHeight={barHeight}
-                dimension={dimension}
+                dimension={{
+                  ...dimension,
+                  facets: dimension.isNeeds
+                    ? dimension.facets.slice(0, 6)
+                    : dimension.facets,
+                }}
                 data={data}
+                width={dimension.width}
+                padding={dimension.padding}
               />
-            </g>
-          </svg>
-        </div>
-      ))}
+              {dimension.isNeeds && (
+                <Dimension
+                  x={x}
+                  dimension={{
+                    ...dimension,
+                    facets: dimension.facets.slice(6),
+                  }}
+                  data={data}
+                  width={dimension.width}
+                  padding={dimension.padding}
+                />
+              )}
+            </div>
+          </div>
+        ))}
     </div>
   )
 }

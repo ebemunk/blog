@@ -7,11 +7,16 @@
   justify-content: center;
   transform: translateX(-50%);
   left: 50%;
+  user-select: none;
 }
 
 .dimension {
-  /* width: 450px; */
   flex-shrink: 0;
+}
+
+.dims {
+  display: flex;
+  justify-content: center;
 }
 
 .label {

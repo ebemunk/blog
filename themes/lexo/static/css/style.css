@@ -171,6 +171,9 @@ p {
   color: #d19a66;
   font-weight: bold;
 }
+code {
+  background: transparent;
+}
 @media (min-width: 40rem) {
   .toc {
     display: block !important;
