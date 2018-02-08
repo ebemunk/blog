@@ -6,20 +6,10 @@
     <description>Recent content in Posts on Thinking Through the Party</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Jan 2018 02:47:00 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 02 Mar 2016 11:18:33 -0700</lastBuildDate>
     
 	<atom:link href="https://blog.ebemunk.com/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>LOST it</title>
-      <link>https://blog.ebemunk.com/lost-it/</link>
-      <pubDate>Sat, 20 Jan 2018 02:47:00 -0700</pubDate>
-      
-      <guid>https://blog.ebemunk.com/lost-it/</guid>
-      <description> I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.
-Meta    window.loadData() window.renderTo(&#39;WordCount&#39;, &#39;#word-count&#39;)  </description>
-    </item>
     
     <item>
       <title>A Visual Look at 2 Million Chess Games</title>

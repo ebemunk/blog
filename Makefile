@@ -3,7 +3,7 @@ all:
 
 deploy:
 	hugo -t lexo
-	minify -a -r public
+	#minify -a -r public
 	git add -A
 	git commit -m "hugo rebuild"
 	git push origin master
