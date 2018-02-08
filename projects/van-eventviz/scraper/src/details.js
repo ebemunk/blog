@@ -48,6 +48,9 @@ export default async function details(args, opts) {
           error: e.message.substr(0, 25),
           row,
         })
+        if(e.is404) {
+          await update(false, undefined, row.id)
+        }
         return false
       }
 
@@ -101,10 +104,16 @@ export default async function details(args, opts) {
 
 export async function getDetails(row) {
   const { data } = await axios.get(row.evt.url)
-  const { microdata } = WAE().parse(data)
+  if (!data.match('DataObject type="event"')) {
+    const err = new Error('event not found')
+    err.is404 = true
+    throw err
+  }
+  const { microdata } = WAE().parse(data.replace(/<br\s?\/?>/gi, '\n'))
   if (!microdata.Event) {
     throw new Error('microdata.Event is empty')
   }
+
   return microdata.Event
 }
 
