@@ -38,30 +38,75 @@ const rootReducer = combineReducers({
         return state
     }
   },
-  tags: (state = [], action) => {
+  tags: (
+    state = {
+      all: [
+        'Activism',
+        'Attractions',
+        'Comedy',
+        'Concerts',
+        'Dance',
+        'Festivals',
+        'Film',
+        'Food & Drink',
+        'Forums & Talks',
+        'Fundraisers & Charity',
+        'Galleries',
+        'Holiday',
+        "Kids' Stuff",
+        'Literary/Books',
+        'Markets',
+        'Museums',
+        'Nightlife',
+        'Performing Arts',
+        'Sports',
+        'Theatre',
+        'Other',
+      ],
+      filters: [],
+    },
+    action,
+  ) => {
     switch (action.type) {
-      case 'EVENTS':
-        return R.uniq(
-          action.payload.reduce((arr, cur) => [...arr, ...cur.tags], []),
-        )
-      default:
-        return state
-    }
-  },
-  selectedTags: (state = [], action) => {
-    switch (action.type) {
+      // case 'EVENTS':
+      //   return R.uniq(
+      //     action.payload.reduce((arr, cur) => [...arr, ...cur.tags], []),
+      //   )
       case 'TOGGLE_TAG':
-        return state.includes(action.payload)
-          ? state.filter(tag => tag !== action.payload)
-          : [...state, action.payload]
+        return {
+          ...state,
+          filters: state.filters.includes(action.payload)
+            ? state.filters.filter(tag => tag !== action.payload)
+            : [...state.filters, action.payload],
+        }
       case 'TOGGLE_ALL':
-        return action.payload
+        return {
+          ...state,
+          filters: state.all,
+        }
       case 'TOGGLE_NONE':
-        return []
+        return {
+          ...state,
+          filters: [],
+        }
       default:
         return state
     }
   },
+  // selectedTags: (state = [], action) => {
+  //   switch (action.type) {
+  //     case 'TOGGLE_TAG':
+  //       return state.includes(action.payload)
+  //         ? state.filter(tag => tag !== action.payload)
+  //         : [...state, action.payload]
+  //     case 'TOGGLE_ALL':
+  //       return action.payload
+  //     case 'TOGGLE_NONE':
+  //       return []
+  //     default:
+  //       return state
+  //   }
+  // },
 })
 
 export default rootReducer

@@ -14,9 +14,8 @@ export const toggleTag = tag => ({
   payload: tag,
 })
 
-export const toggleAll = tags => ({
+export const toggleAll = () => ({
   type: 'TOGGLE_ALL',
-  payload: tags,
 })
 
 export const toggleNone = () => ({

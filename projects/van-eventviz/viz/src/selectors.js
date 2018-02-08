@@ -3,7 +3,7 @@ import * as R from 'ramda'
 import * as dateFns from 'date-fns'
 
 export const events = state => state.events
-export const selectedTags = state => state.selectedTags
+export const selectedTags = state => state.tags.filters
 export const dateFilter = state => R.pick(['from', 'to'])(state.datePicker)
 
 export const filteredEvents = createSelector(

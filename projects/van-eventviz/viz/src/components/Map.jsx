@@ -11,7 +11,7 @@ import { connect } from 'react-redux'
 
 import { getEvents } from '../actions'
 import { filteredEvents } from '../selectors'
-import pinImage from '../img/pin.png'
+import pinImage from '../img/pin.svg'
 
 import style from './Map.css'
 
@@ -71,7 +71,7 @@ export class GMap extends React.Component {
             onClick={() => this.onToggleOpen(event.id)}
             key={event.id}
             title={event.title}
-            // icon={pinImage}
+            icon={pinImage}
             // icon={{
             //   path:
             //     'M74.89,236.14c-5.35-26.25-14.78-48.1-26.2-68.35-8.47-15-18.29-28.88-27.37-43.45-3-4.86-5.65-10-8.56-15C6.94,99.2,2.21,87.5,2.51,72.32A68.92,68.92,0,0,1,13.28,35.88,71.31,71.31,0,0,1,63.34,3.32,75.55,75.55,0,0,1,112,12.53a70.38,70.38,0,0,1,24,23.22,68.1,68.1,0,0,1,10.9,36.32A67.12,67.12,0,0,1,144,92.82c-1.8,6-4.69,11-7.26,16.34-5,10.44-11.32,20-17.64,29.57C100.29,167.24,82.62,196.3,74.89,236.14Z',

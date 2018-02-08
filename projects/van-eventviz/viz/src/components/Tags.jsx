@@ -1,22 +1,24 @@
 import React from 'react'
 
+import style from './Tags.css'
+
 export function Tags(props) {
-  const { tags, selected, toggleTag, toggleAll, toggleNone } = props
+  const { tags, filters, toggleTag, toggleAll, toggleNone } = props
 
   return (
     <div>
       <div>
-        <a onClick={() => toggleAll(tags)}>All</a>
-        <a onClick={() => toggleNone()}>None</a>
+        <button onClick={() => toggleAll()} children="All" />
+        <button onClick={() => toggleNone()} children="None" />
       </div>
-      <div>
+      <div className={style.tags}>
         {tags.map(tag => (
-          <div key={tag}>
-            <label>
+          <div key={tag} className={style.tag}>
+            <label className={style.label} title={tag}>
               <input
                 type="checkbox"
                 onClick={() => toggleTag(tag)}
-                checked={selected.includes(tag)}
+                checked={filters.includes(tag)}
               />
               {tag}
             </label>
@@ -32,8 +34,8 @@ import { toggleTag, toggleAll, toggleNone } from '../actions'
 
 export default connect(
   state => ({
-    tags: state.tags,
-    selected: state.selectedTags,
+    tags: state.tags.all,
+    filters: state.tags.filters,
   }),
   {
     toggleTag,

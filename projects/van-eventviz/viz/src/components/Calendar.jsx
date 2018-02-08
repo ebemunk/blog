@@ -49,7 +49,7 @@ export function Calendar(props) {
         <button
           onClick={() =>
             selectDates({
-              from: dateFns.startOfDay(now),
+              from: now,
               to: dateFns.endOfWeek(now, { weekStartsOn: 1 }),
             })
           }
@@ -79,7 +79,7 @@ export function Calendar(props) {
         <button
           onClick={() =>
             selectDates({
-              from: dateFns.startOfMonth(now),
+              from: now,
               to: dateFns.endOfMonth(now),
             })
           }
