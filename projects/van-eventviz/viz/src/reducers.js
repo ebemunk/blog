@@ -1,6 +1,30 @@
 import { combineReducers } from 'redux'
 import * as R from 'ramda'
 
+const tags = [
+  'Activism',
+  'Attractions',
+  'Comedy',
+  'Concerts',
+  'Dance',
+  'Festivals',
+  'Film',
+  'Food & Drink',
+  'Forums & Talks',
+  'Fundraisers & Charity',
+  'Galleries',
+  'Holiday',
+  "Kids' Stuff",
+  'Literary/Books',
+  'Markets',
+  'Museums',
+  'Nightlife',
+  'Performing Arts',
+  'Sports',
+  'Theatre',
+  'Other',
+]
+
 const rootReducer = combineReducers({
   events: (state = [], action) => {
     switch (action.type) {
@@ -40,30 +64,8 @@ const rootReducer = combineReducers({
   },
   tags: (
     state = {
-      all: [
-        'Activism',
-        'Attractions',
-        'Comedy',
-        'Concerts',
-        'Dance',
-        'Festivals',
-        'Film',
-        'Food & Drink',
-        'Forums & Talks',
-        'Fundraisers & Charity',
-        'Galleries',
-        'Holiday',
-        "Kids' Stuff",
-        'Literary/Books',
-        'Markets',
-        'Museums',
-        'Nightlife',
-        'Performing Arts',
-        'Sports',
-        'Theatre',
-        'Other',
-      ],
-      filters: [],
+      all: tags,
+      filters: tags,
     },
     action,
   ) => {
@@ -93,20 +95,6 @@ const rootReducer = combineReducers({
         return state
     }
   },
-  // selectedTags: (state = [], action) => {
-  //   switch (action.type) {
-  //     case 'TOGGLE_TAG':
-  //       return state.includes(action.payload)
-  //         ? state.filter(tag => tag !== action.payload)
-  //         : [...state, action.payload]
-  //     case 'TOGGLE_ALL':
-  //       return action.payload
-  //     case 'TOGGLE_NONE':
-  //       return []
-  //     default:
-  //       return state
-  //   }
-  // },
 })
 
 export default rootReducer

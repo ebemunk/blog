@@ -1,5 +1,5 @@
 import * as R from 'ramda'
-// import axios from 'axios'
+import axios from 'axios'
 
 import { logger } from './util'
 import { getPool } from './db'
@@ -26,17 +26,21 @@ export default async function writeJson(args, opts) {
       R.pick(['geometry', 'formatted_address'])(row.geo.results[0])),
   }))
   const json = JSON.stringify(data)
-  console.log(json.length / (1024 * 1024))
+  const jsonSize = json.length / (1024 * 1024)
 
-  require('fs').writeFileSync('../viz/data.json', JSON.stringify(data))
-  // // console.log(rows)
-  // await axios.put('https://api.jsonbin.io/b/5a76d5322cc12d126d717aae', json)
+  // require('fs').writeFileSync('../viz/data.json', JSON.stringify(data))
+  await axios.put(
+    'https://jsonblob.com/api/jsonBlob/6d894d47-0ca2-11e8-a2ea-5d19acf93d35',
+    json,
+    {
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+    },
+  )
 
-  // log.info({
-  //   type: 'details',
-  //   fails,
-  //   saves: updates.length - fails,
-  // })
+  log.info({
+    type: 'json upload',
+    size: jsonSize,
+  })
 
   await pool.end()
 }

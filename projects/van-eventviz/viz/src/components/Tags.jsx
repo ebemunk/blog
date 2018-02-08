@@ -17,7 +17,7 @@ export function Tags(props) {
             <label className={style.label} title={tag}>
               <input
                 type="checkbox"
-                onClick={() => toggleTag(tag)}
+                onChange={() => toggleTag(tag)}
                 checked={filters.includes(tag)}
               />
               {tag}

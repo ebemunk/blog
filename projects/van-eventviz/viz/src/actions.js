@@ -1,7 +1,9 @@
 import { get } from 'axios'
 
 export const getEvents = () => async dispatch => {
-  const events = await import('../data.json')
+  const { data: events } = await get(
+    'https://jsonblob.com/api/jsonBlob/6d894d47-0ca2-11e8-a2ea-5d19acf93d35',
+  )
 
   dispatch({
     type: 'EVENTS',

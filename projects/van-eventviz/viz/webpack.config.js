@@ -16,8 +16,8 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: dir('./dist'),
-    publicPath: 'http://localhost:9001/',
+    path: dir('../../../static/van-eventviz'),
+    // publicPath: 'http://localhost:9001/',
   },
   devtool: 'source-map',
   devServer: {
