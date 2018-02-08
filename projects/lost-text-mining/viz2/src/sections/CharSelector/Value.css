@@ -1,0 +1,21 @@
+.img {
+  width: 2.1rem;
+  height: 2.1rem;
+}
+
+.value {
+  font-size: 1.2rem;
+  border: 1px solid;
+}
+
+.remove {
+  font-size: 1.2rem;
+  border: 1px solid;
+  border-left: none;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+}

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`watson allSentenceTones make requests until all text is analyzed 1`] = `
+Array [
+  Array [
+    Object {
+      "text": "blabla blabla",
+    },
+  ],
+  Array [
+    Object {
+      "text": "abla blabla",
+    },
+  ],
+  Array [
+    Object {
+      "text": "la blabla",
+    },
+  ],
+  Array [
+    Object {
+      "text": " blabla",
+    },
+  ],
+  Array [
+    Object {
+      "text": "labla",
+    },
+  ],
+  Array [
+    Object {
+      "text": "bla",
+    },
+  ],
+  Array [
+    Object {
+      "text": "a",
+    },
+  ],
+]
+`;
+
+exports[`watson allSentenceTones should stop queries if no sentences_tone exists 1`] = `
+Array [
+  Array [
+    Object {
+      "text": "blabla blabla",
+    },
+  ],
+  Array [
+    Object {
+      "text": "abla blabla",
+    },
+  ],
+]
+`;
+
+exports[`watson charProfile should make it happen 1`] = `
+Array [
+  Array [
+    "select text from all_lines_by_char where char_name='JACK';",
+  ],
+]
+`;
+
+exports[`watson charProfile should make it happen 2`] = `
+Array [
+  Array [
+    Object {
+      "consumption_preferences": true,
+      "text": "blabla",
+    },
+  ],
+]
+`;
+
+exports[`watson episodeText should query db 1`] = `
+Array [
+  Array [
+    "select text from episode_text where season=2 and episode=3;",
+  ],
+]
+`;
+
+exports[`watson episodeText should query db 2`] = `"some text... hello"`;
+
+exports[`watson episodeTone should return document_tone and all sentences_tone combined 1`] = `
+Object {
+  "document_tone": Object {
+    "something": 1,
+  },
+  "episode": 4,
+  "season": 3,
+  "sentences_tone": Array [
+    Object {
+      "text": 1,
+      "tone_categories": Array [
+        1,
+        2,
+      ],
+    },
+    Object {
+      "text": 2,
+      "tone_categories": Array [
+        1,
+        2,
+      ],
+    },
+    Object {
+      "text": 3,
+      "tone_categories": Array [
+        1,
+        2,
+      ],
+    },
+  ],
+}
+`;

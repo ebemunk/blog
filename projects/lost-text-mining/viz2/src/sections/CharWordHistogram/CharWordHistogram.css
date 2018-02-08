@@ -1,0 +1,74 @@
+.line {
+  fill: none;
+  stroke-width: 2;
+}
+
+.pctLine {
+  stroke-dasharray: 5, 5;
+  opacity: 0.7;
+}
+
+.cumChars {
+  composes: line;
+  stroke: #7fc97f;
+}
+
+.pctCharsLine {
+  composes: cumChars pctLine;
+}
+
+.cumWords {
+  composes: line;
+  stroke: #beaed4;
+}
+
+.pctWordsLine {
+  composes: cumWords pctLine;
+}
+
+.binsLine {
+  composes: pctLine;
+  stroke: steelblue;
+}
+
+.numCharsLine {
+  composes: binsLine;
+}
+
+.val {
+  font-size: 1.2rem;
+  text-anchor: start;
+  dominant-baseline: middle;
+  stroke: #282c34;
+  stroke-width: 4;
+  paint-order: stroke;
+  letter-spacing: 0;
+}
+
+.pctCharsVal {
+  composes: val;
+  fill: #7fc97f;
+}
+
+.pctWordsVal {
+  composes: val;
+  fill: #beaed4;
+}
+
+.words {
+  composes: val;
+  fill: steelblue;
+  text-anchor: middle;
+}
+
+.numCharsVal {
+  composes: val;
+  fill: steelblue;
+  text-anchor: end;
+}
+
+@media (max-width: 900px) {
+  :global(#char-word-histogram) {
+    width: 900px;
+  }
+}

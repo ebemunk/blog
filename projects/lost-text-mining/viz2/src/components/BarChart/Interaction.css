@@ -1,0 +1,41 @@
+.line {
+  fill: none;
+  stroke-width: 2;
+  stroke-dasharray: 5, 5;
+  opacity: 0.7;
+}
+
+.yLine {
+  composes: line;
+  stroke: steelblue;
+}
+
+.xLine {
+  composes: line;
+  stroke: steelblue;
+}
+
+.polygons path {
+  // stroke: red;
+}
+
+.val {
+  font-size: 1.2rem;
+  text-anchor: end;
+  dominant-baseline: middle;
+  stroke: #282c34;
+  stroke-width: 4;
+  paint-order: stroke;
+  letter-spacing: 0;
+}
+
+.yVal {
+  composes: val;
+  fill: steelblue;
+}
+
+.xVal {
+  composes: val;
+  fill: steelblue;
+  text-anchor: middle;
+}

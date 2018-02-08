@@ -1,0 +1,21 @@
+.text {
+  composes: text from './Facet.css';
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+.rect {
+  composes: rect from './Facet.css';
+}
+
+.circle {
+  stroke: white;
+  stroke-width: 1;
+}
+
+.line {
+  stroke-width: 5;
+  stroke-linejoin: round;
+  opacity: 0.8;
+  fill: none;
+}
