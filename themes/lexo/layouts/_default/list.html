@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+<div class="container index">
+	<div class="row">
+		<div class="column">
+			{{ range $key, $value := (.Paginator 2).Pages }}
+				<article class="article-list-item">
+					<h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+					<div class="summary">
+						{{ if .Params.summary }}
+							{{ .Params.summary | markdownify }}
+						{{ else }}
+							{{ .Summary }}
+						{{ end }}
+					</div>
+					<div class="date-and-tags">
+						<time title='{{ .Date.Format "2006-01-02 @ 15:04pm"}}'>{{ .Date.Format "2 January 2006" }}</time>
+						on {{ partial "tags.html" . }}
+					</div>
+				</article>
+				{{ if ne $key 1 }}
+					<hr>
+				{{ else }}
+				{{ end }}
+			{{ end }}
+		</div>
+	</div>
+	<div class="row">
+		{{ partial "pagination.html" . }}
+	</div>
+</div>
+{{ partial "footer.html" . }}

@@ -1,0 +1,16 @@
+:global .green {
+	fill: green;
+}
+
+:global .red {
+	fill: red;
+}
+
+:global .yellow {
+	fill: yellow;
+}
+
+:global .green, :global .red, :global .yellow {
+	stroke: white;
+	stroke-width: 1;
+}

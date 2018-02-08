@@ -1,0 +1,22 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.chart {
+  composes: wrap;
+  height: 400px;
+  overflow-y: scroll;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.all {
+  margin-left: 2rem;
+}
+
+@media (max-width: 700px) {
+  :global(#word-count) {
+    width: 700px;
+  }
+}

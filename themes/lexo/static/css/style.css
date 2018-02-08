@@ -35,6 +35,21 @@ a:hover {
   color: #a3ca81;
   text-decoration: underline;
 }
+.button {
+  background: transparent;
+  color: #7cb34b;
+  border-color: #7cb34b;
+}
+.button:hover {
+  background-color: #89bb5d;
+  border-color: #7cb34b;
+  color: rgba(255, 255, 255, 0.8);
+}
+.button.active {
+  background-color: #89bb5d;
+  border-color: #89bb5d;
+  color: rgba(255, 255, 255, 0.8);
+}
 header.site-header {
   height: 180px;
   max-height: 180px;
@@ -108,7 +123,7 @@ footer.site-footer p {
   color: rgba(255, 255, 255, 0.8);
 }
 p {
-  font-size: 1.1em;
+  font-size: 1.8rem;
 }
 .index h2 a:hover {
   text-decoration: none;
@@ -125,6 +140,7 @@ p {
   border-bottom: 1px solid #9EABB3;
   height: 0.5rem;
   position: relative;
+  overflow: visible;
 }
 .index hr:after {
   content: "❦";
@@ -154,6 +170,9 @@ p {
 .single .share h5 {
   color: #d19a66;
   font-weight: bold;
+}
+code {
+  background: transparent;
 }
 @media (min-width: 40rem) {
   .toc {

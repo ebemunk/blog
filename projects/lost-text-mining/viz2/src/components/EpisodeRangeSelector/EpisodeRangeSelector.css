@@ -1,0 +1,47 @@
+.episodeSelector {
+  user-select: none;
+	flex-shrink: 0;
+  margin-bottom: 0.5rem;
+}
+
+.episodes {
+  fill: black;
+}
+
+.seasons {
+}
+
+.seasonSelectors {
+  & text {
+    text-anchor: middle;
+    opacity: 0.75;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1.2rem;
+
+    &:hover {
+      opacity: 1;
+      font-weight: 400;
+    }
+  }
+}
+
+.brush {
+  & :global .handle {
+    fill: red;
+    stroke-width: 0.01;
+  }
+
+  & :global .selection {
+    stroke: none;
+    fill: none;
+  }
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}

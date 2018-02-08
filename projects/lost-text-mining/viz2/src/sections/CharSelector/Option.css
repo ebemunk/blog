@@ -1,0 +1,8 @@
+.option {
+  display: flex;
+  align-items: center;
+
+  & img {
+    margin-right: 0.3rem;
+  }
+}

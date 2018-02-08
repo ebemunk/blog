@@ -1,0 +1,30 @@
+.dimensions {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  min-width: 800px;
+  position: relative;
+  justify-content: center;
+  transform: translateX(-50%);
+  left: 50%;
+  user-select: none;
+}
+
+.dimension {
+  flex-shrink: 0;
+}
+
+.dims {
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  :global(#personality) {
+    width: 800px;
+  }
+}
