@@ -28,3 +28,12 @@ export const selectDates = range => ({
   type: 'SELECT_DATES',
   payload: range,
 })
+
+export const openInfo = id => ({
+  type: 'OPEN_INFO',
+  payload: id,
+})
+
+export const closeInfo = () => ({
+  type: 'CLOSE_INFO',
+})

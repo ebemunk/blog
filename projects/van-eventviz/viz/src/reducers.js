@@ -95,6 +95,17 @@ const rootReducer = combineReducers({
         return state
     }
   },
+  info: (state = null, action) => {
+    switch (action.type) {
+      case 'OPEN_INFO':
+        return state === action.payload ? null : action.payload
+      case 'CLOSE_INFO':
+      case 'SELECT_DATES':
+        return null
+      default:
+        return state
+    }
+  },
 })
 
 export default rootReducer

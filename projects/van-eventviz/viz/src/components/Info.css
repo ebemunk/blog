@@ -1,0 +1,14 @@
+.wrap {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: rgb(32, 32, 32);
+}

@@ -1,15 +1,24 @@
 import React from 'react'
 import DayPicker, { DateUtils } from 'react-day-picker'
-import * as dateFns from 'date-fns'
 
 import '!style-loader!css-loader!react-day-picker/lib/style.css'
-
 import style from './Calendar.css'
+
+import {
+  dayClickRange,
+  todayRange,
+  thisWeekRange,
+  thisWeekendRange,
+  nextWeekRange,
+  thisMonthRange,
+  format,
+} from '../date'
 
 export function Calendar(props) {
   const { from, to, minDate, maxDate, selectDates } = props
   const now = new Date()
-  const nextWeek = dateFns.addDays(now, 7)
+
+  console.log('from', from)
 
   return (
     <div className={style.wrap}>
@@ -28,64 +37,34 @@ export function Calendar(props) {
         }}
         onDayClick={day => {
           const range = DateUtils.addDayToRange(day, { from, to })
-          selectDates({
-            from: range.from ? dateFns.startOfDay(range.from) : null,
-            to: range.to ? dateFns.endOfDay(range.to) : null,
-          })
+          selectDates(dayClickRange(range))
         }}
         month={from}
       />
+      <div>
+        {format(from, 'MMM DD @ h:mma')}
+        {format(to, 'MMM DD @ h:mma')}
+      </div>
       <div className={style.buttons}>
         <button
           onClick={() => selectDates({ from: null, to: null })}
           children="Clear"
         />
+        <button onClick={() => selectDates(todayRange(now))} children="Today" />
         <button
-          onClick={() =>
-            selectDates({
-              from: now,
-              to: dateFns.endOfDay(now),
-            })
-          }
-          children="Today"
-        />
-        <button
-          onClick={() =>
-            selectDates({
-              from: now,
-              to: dateFns.endOfWeek(now, { weekStartsOn: 1 }),
-            })
-          }
+          onClick={() => selectDates(thisWeekRange(now))}
           children="This week"
         />
         <button
-          onClick={() =>
-            selectDates({
-              from: dateFns.subDays(
-                dateFns.endOfWeek(now, { weekStartsOn: 1 }),
-                1,
-              ),
-              to: dateFns.endOfWeek(now, { weekStartsOn: 1 }),
-            })
-          }
+          onClick={() => selectDates(thisWeekendRange(now))}
           children="This weekend"
         />
         <button
-          onClick={() =>
-            selectDates({
-              from: dateFns.startOfWeek(nextWeek, { weekStartsOn: 1 }),
-              to: dateFns.endOfWeek(nextWeek, { weekStartsOn: 1 }),
-            })
-          }
+          onClick={() => selectDates(nextWeekRange(now))}
           children="Next week"
         />
         <button
-          onClick={() =>
-            selectDates({
-              from: now,
-              to: dateFns.endOfMonth(now),
-            })
-          }
+          onClick={() => selectDates(thisMonthRange(now))}
           children="This month"
         />
       </div>
