@@ -28,13 +28,16 @@ export function Calendar(props) {
         }}
         onDayClick={day => {
           const range = DateUtils.addDayToRange(day, { from, to })
-          selectDates(range)
+          selectDates({
+            from: range.from ? dateFns.startOfDay(range.from) : null,
+            to: range.to ? dateFns.endOfDay(range.to) : null,
+          })
         }}
         month={from}
       />
       <div className={style.buttons}>
         <button
-          onClick={() => selectDates({ from: undefined, to: undefined })}
+          onClick={() => selectDates({ from: null, to: null })}
           children="Clear"
         />
         <button
