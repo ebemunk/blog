@@ -54,6 +54,7 @@ const rootReducer = combineReducers({
             action.payload.map(e => new Date(e.endDate)),
           ).toString(),
         }
+      // eslint-disable-next-line
       case 'SELECT_DATES':
         const { range: { from, to }, preset } = action.payload
         return {
