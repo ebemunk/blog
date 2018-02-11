@@ -24,9 +24,9 @@ export const toggleNone = () => ({
   type: 'TOGGLE_NONE',
 })
 
-export const selectDates = range => ({
+export const selectDates = (range, preset = null) => ({
   type: 'SELECT_DATES',
-  payload: range,
+  payload: { range, preset },
 })
 
 export const openInfo = id => ({

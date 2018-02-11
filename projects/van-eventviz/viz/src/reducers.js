@@ -55,11 +55,12 @@ const rootReducer = combineReducers({
           ).toString(),
         }
       case 'SELECT_DATES':
-        const { from, to } = action.payload
+        const { range: { from, to }, preset } = action.payload
         return {
           ...state,
-          from: from.toString(),
-          to: to.toString(),
+          from: from ? from.toString() : null,
+          to: to ? to.toString() : null,
+          preset,
         }
       default:
         return state
