@@ -1,14 +1,99 @@
 .wrap {
   max-height: 150px;
   overflow-y: scroll;
+  position: relative;
+  z-index: 1;
+
+  background: #fff no-repeat;
+  background-image: radial-gradient(
+      farthest-side at 50% 0,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(
+      farthest-side at 50% 100%,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    );
+  background-position: 0 0, 0 100%;
+  background-size: 100% 14px;
+
+  &:before,
+  &:after {
+    content: '';
+    position: relative;
+    z-index: -1;
+    display: block;
+    height: 30px;
+    margin: 0 0 -30px;
+    background: linear-gradient(
+      to bottom,
+      #fff,
+      #fff 30%,
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  &:after {
+    margin: -30px 0 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      #fff 70%,
+      #fff
+    );
+  }
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.image {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+
+  & img {
+    max-width: 100%;
+    max-height: 4rem;
+  }
+}
+
+.meta {
+  flex-basis: 80%;
+  position: relative;
+
+  &.noimg {
+    flex-basis: 100%;
+  }
 }
 
 .title {
+  font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-right: 0.5rem;
 }
 
-.date {
-  font-size: 0.8rem;
-  color: rgb(32, 32, 32);
+.date,
+.address {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+.tags {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.tag {
+  background: gray;
+  border-radius: 5px;
+  padding: 0.3rem;
+  font-size: 0.6rem;
+  color: white;
+  display: inline-block;
 }

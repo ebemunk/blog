@@ -8,6 +8,7 @@ import {
   addDays,
   getMinutes,
   format as fmt,
+  isSameDay,
 } from 'date-fns'
 import { compose, partialRight } from 'ramda'
 
@@ -53,6 +54,15 @@ export const thisMonthRange = now => ({
 })
 
 export const format = date => {
-  if (getMinutes(date) == 0) return fmt(date, 'MMM DD @ ha')
-  return fmt(date, 'MMM DD @ h:ma')
+  if (getMinutes(date) == 0) return fmt(date, 'ddd MMM DD @ ha')
+  return fmt(date, 'ddd MMM DD @ h:ma')
+}
+
+export const formatTime = date =>
+  getMinutes(date) === 0 ? fmt(date, 'ha') : fmt(date, 'h:ma')
+
+export const formatEventDate = (start, end) => {
+  if (start.getTime() == end.getTime()) return format(start)
+  const endd = isSameDay(start, end) ? formatTime(end) : format(end)
+  return `${format(start)} - ${endd}`
 }

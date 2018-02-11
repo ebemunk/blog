@@ -58,9 +58,9 @@ export function GMap(props) {
       }}
       defaultZoom={13}
     >
-      {events.filter(e => e.geometry).map(event => (
+      {events.map(event => (
         <Marker
-          defaultPosition={event.geometry.location}
+          defaultPosition={event['geometry.location']}
           onClick={() => openInfo(event.id)}
           key={event.id}
           title={event.title}

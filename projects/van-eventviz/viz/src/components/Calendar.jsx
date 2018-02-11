@@ -1,5 +1,6 @@
 import React from 'react'
 import DayPicker, { DateUtils } from 'react-day-picker'
+import { map } from 'ramda'
 
 import '!style-loader!css-loader!react-day-picker/lib/style.css'
 import style from './Calendar.css'
@@ -77,7 +78,7 @@ import { selectDates } from '../actions'
 
 export default connect(
   state => ({
-    ...state.datePicker,
+    ...map(d => new Date(d), state.datePicker),
   }),
   {
     selectDates,

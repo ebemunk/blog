@@ -42,21 +42,24 @@ const rootReducer = combineReducers({
     switch (action.type) {
       case 'EVENTS':
         return {
+          ...state,
           minDate: R.reduce(
             R.min,
             Infinity,
             action.payload.map(e => new Date(e.startDate)),
-          ),
+          ).toString(),
           maxDate: R.reduce(
             R.max,
             -Infinity,
             action.payload.map(e => new Date(e.endDate)),
-          ),
+          ).toString(),
         }
       case 'SELECT_DATES':
+        const { from, to } = action.payload
         return {
           ...state,
-          ...action.payload,
+          from: from.toString(),
+          to: to.toString(),
         }
       default:
         return state

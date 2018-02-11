@@ -23,3 +23,6 @@ export default class App extends React.Component {
     )
   }
 }
+
+// icons
+//https://mapicons.mapsmarker.com/
