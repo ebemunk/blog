@@ -1,0 +1,32 @@
+.filters {
+}
+
+.hidden {
+  width: 0%;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  overflow-y: scroll;
+  transition: width ease-in-out 350ms;
+  background: white;
+
+  display: flex;
+}
+
+.close {
+  display: flex;
+  width: 6rem;
+  background: lightgray;
+  color: white;
+  cursor: pointer;
+
+  & span {
+    margin: auto;
+  }
+
+  &:hover {
+    background: color(lightgray tint(30%));
+  }
+}

@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Map from './components/Map'
-import Calendar from './components/Calendar'
-import Tags from './components/Tags'
+import Filters from './components/Filters'
+import Menu from './components/Menu'
 
 import style from './App.css'
 
@@ -14,10 +14,8 @@ export default class App extends React.Component {
           <div className={style.map}>
             <Map />
           </div>
-          <div className={style.side}>
-            <Calendar />
-            <Tags />
-          </div>
+          <Menu />
+          <Filters />
         </div>
       </React.Fragment>
     )

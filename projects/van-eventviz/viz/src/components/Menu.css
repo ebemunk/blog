@@ -1,0 +1,9 @@
+.menu {
+  position: absolute;
+  right: 0;
+  width: 5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

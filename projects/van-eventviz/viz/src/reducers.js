@@ -110,6 +110,22 @@ const rootReducer = combineReducers({
         return state
     }
   },
+  overlay: (state = { open: 'filters' }, action) => {
+    switch (action.type) {
+      case 'CLOSE_OVERLAY':
+        return {
+          ...state,
+          open: null,
+        }
+      case 'OPEN_OVERLAY':
+        return {
+          ...state,
+          open: action.payload,
+        }
+      default:
+        return state
+    }
+  },
 })
 
 export default rootReducer

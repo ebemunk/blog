@@ -15,15 +15,7 @@
 }
 
 .wrap {
-  display: flex;
-  flex: 1;
 }
 
 .map {
-  position: relative;
-  flex: 1;
-}
-
-.side {
-  flex-basis: 25%;
 }

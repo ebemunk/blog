@@ -4,7 +4,6 @@
 }
 
 .date {
-  flex-basis: 65%;
 }
 
 .picker {
@@ -36,8 +35,6 @@
 }
 
 .buttons {
-  flex-basis: 25%;
-
   & a {
     margin: 0.3rem;
   }
