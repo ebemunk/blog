@@ -23,7 +23,7 @@ export default function Info(props) {
             className={classnames(style.meta, { [style.noimg]: !event.image })}
           >
             <div className={style.title}>
-              <a href={event.url} target="_blank">
+              <a href={event.url} target="_blank" rel="noopener">
                 {decodeHtmlEntity(event.name)}
               </a>
             </div>

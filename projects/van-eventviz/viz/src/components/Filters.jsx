@@ -44,7 +44,7 @@ export default compose(
   }),
   closeableOverlay({
     style: {
-      width: '25%',
+      width: '25rem',
       right: '0',
     },
     name: 'filters',
