@@ -4,8 +4,7 @@
 }
 
 .tag {
-  flex-basis: 25%;
-
+  flex-basis: 33%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -13,4 +12,22 @@
 
 .label {
   display: inline-block;
+
+  & div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.img {
+  max-height: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+
+  & a {
+    margin: 0.3rem;
+  }
 }

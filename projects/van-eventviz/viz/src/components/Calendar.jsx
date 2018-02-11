@@ -3,6 +3,8 @@ import DayPicker, { DateUtils } from 'react-day-picker'
 import { map } from 'ramda'
 import classnames from 'classnames'
 
+import Button from './Button'
+
 import '!style-loader!css-loader!react-day-picker/lib/style.css'
 import style from './Calendar.css'
 
@@ -19,8 +21,6 @@ import {
 export function Calendar(props) {
   const { from, to, minDate, maxDate, selectDates, preset } = props
   const now = new Date()
-
-  console.log(props)
 
   return (
     <React.Fragment>
@@ -47,35 +47,33 @@ export function Calendar(props) {
           />
         </div>
         <div className={style.buttons}>
-          <button
+          <Button
             onClick={() => selectDates({ from: null, to: null })}
             children="Clear"
           />
-          <button
+          <Button
             onClick={() => selectDates(todayRange(now), 'today')}
-            className={classnames({ [style.active]: preset === 'today' })}
+            active={preset === 'today'}
             children="Today"
           />
-          <button
+          <Button
             onClick={() => selectDates(thisWeekRange(now), 'this-week')}
-            className={classnames({ [style.active]: preset === 'this-week' })}
+            active={preset === 'this-week'}
             children="This week"
           />
-          <button
+          <Button
             onClick={() => selectDates(thisWeekendRange(now), 'this-weekend')}
-            className={classnames({
-              [style.active]: preset === 'this-weekend',
-            })}
+            active={preset === 'this-weekend'}
             children="This weekend"
           />
-          <button
+          <Button
             onClick={() => selectDates(nextWeekRange(now), 'next-week')}
-            className={classnames({ [style.active]: preset === 'next-week' })}
+            active={preset === 'next-week'}
             children="Next week"
           />
-          <button
+          <Button
             onClick={() => selectDates(thisMonthRange(now), 'this-month')}
-            className={classnames({ [style.active]: preset === 'this-month' })}
+            active={preset === 'this-month'}
             children="This month"
           />
         </div>

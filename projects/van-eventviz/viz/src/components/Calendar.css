@@ -1,9 +1,10 @@
 .wrap {
   display: flex;
+  justify-content: center;
 }
 
 .date {
-  flex-basis: 80%;
+  flex-basis: 65%;
 }
 
 .picker {
@@ -35,15 +36,9 @@
 }
 
 .buttons {
-  flex-basis: 20%;
+  flex-basis: 25%;
 
-  & button {
-    height: 2rem;
-    width: 100%;
-    background: lightgray;
-  }
-
-  & .active {
-    border: 2px solid gray;
+  & a {
+    margin: 0.3rem;
   }
 }
