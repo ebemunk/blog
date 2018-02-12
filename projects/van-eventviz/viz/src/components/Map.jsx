@@ -21,8 +21,8 @@ export const gmap = compose(
     googleMapURL:
       'https://maps.googleapis.com/maps/api/js?key=AIzaSyDRCV4YT7GO9mZ66mgggnA2CLUZmihR2Zw&v=3.exp',
     loadingElement: (
-      <div style={{ height: `100%`, background: 'red' }}>
-        Loading bro, chill
+      <div className={style.loading}>
+        <div className={style.loadingText}>Loading bro, chill...</div>
       </div>
     ),
     containerElement: <div className={style.map} />,

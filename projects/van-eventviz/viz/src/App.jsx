@@ -12,13 +12,9 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
         <Title />
-        <div className={style.wrap}>
-          <div className={style.map}>
-            <Map />
-          </div>
-          <Menu />
-          <Filters />
-        </div>
+        <Map />
+        <Menu />
+        <Filters />
       </React.Fragment>
     )
   }
