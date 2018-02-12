@@ -1,0 +1,26 @@
+.title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top: 0;
+  background: white;
+  padding: 0.2rem;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slogan {
+  font-size: 1rem;
+}
+
+.dates {
+  font-style: italic;
+  color: dimgray;
+}

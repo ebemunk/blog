@@ -57,6 +57,7 @@ export function GMap(props) {
         lng: -123.1207375,
       }}
       defaultZoom={13}
+      onClick={closeInfo}
     >
       {events.map(event => (
         <Marker
