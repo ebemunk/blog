@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { format } from '../date'
+import { format } from 'date-fns'
 
 import style from './Title.css'
 
@@ -10,13 +10,12 @@ export function Title(props) {
     <div className={style.title}>
       <span className={style.slogan}>Go Do Some Shit!</span>
       <span className={style.dates}>
-        (
         {preset && preset}
         {!preset &&
           from &&
           to &&
-          `${format(from, 'MMM DD @ h:mma')} - ${format(to, 'MMM DD @ h:mma')}`}
-        )
+          `${format(from, 'MMM DD@h:mma')} - ${format(to, 'MMM DD@h:mma')}`}
+        {!preset && !from && !to && 'pick dates lol'}
       </span>
     </div>
   )

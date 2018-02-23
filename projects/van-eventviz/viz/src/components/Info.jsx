@@ -11,7 +11,10 @@ import style from './Info.css'
 export default function Info(props) {
   const { closeInfo, event } = props
   return (
-    <InfoWindow onCloseClick={closeInfo}>
+    <InfoWindow
+      onCloseClick={closeInfo}
+      options={{ maxWidth: window.innerWidth * 0.6 }}
+    >
       <div className={style.wrap}>
         <div className={style.head}>
           {event.image && (

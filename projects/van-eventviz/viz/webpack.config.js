@@ -64,13 +64,17 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(png|svg)$/,
+        test: /\.png$/,
         use: [
           {
             loader: 'file-loader',
             options: {},
           },
         ],
+      },
+      {
+        test: /\.svg$/,
+        use: 'react-svg-loader',
       },
     ],
   },
