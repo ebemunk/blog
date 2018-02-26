@@ -27,3 +27,7 @@
   font-style: italic;
   color: dimgray;
 }
+
+.checkbox {
+  width: unset;
+}

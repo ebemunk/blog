@@ -2,8 +2,7 @@ import React from 'react'
 import DayPicker, { DateUtils } from 'react-day-picker'
 import { map } from 'ramda'
 import classnames from 'classnames'
-
-import Button from './Button'
+import Button from 'material-ui/Button'
 
 import '!style-loader!css-loader!react-day-picker/lib/style.css'
 import style from './Calendar.css'
@@ -21,6 +20,7 @@ import {
 export function Calendar(props) {
   const { from, to, minDate, maxDate, selectDates, preset } = props
   const now = new Date()
+  const isActive = test => (preset === test ? 'primary' : undefined)
 
   return (
     <React.Fragment>
@@ -48,32 +48,38 @@ export function Calendar(props) {
         </div>
         <div className={style.buttons}>
           <Button
+            fullWidth
             onClick={() => selectDates({ from: null, to: null })}
             children="Clear"
           />
           <Button
+            fullWidth
             onClick={() => selectDates(todayRange(now), 'today')}
-            active={preset === 'today'}
+            color={isActive('today')}
             children="Today"
           />
           <Button
+            fullWidth
             onClick={() => selectDates(thisWeekRange(now), 'this-week')}
-            active={preset === 'this-week'}
+            color={isActive('this-week')}
             children="This week"
           />
           <Button
+            fullWidth
             onClick={() => selectDates(thisWeekendRange(now), 'this-weekend')}
-            active={preset === 'this-weekend'}
+            color={isActive('this-weekend')}
             children="This weekend"
           />
           <Button
+            fullWidth
             onClick={() => selectDates(nextWeekRange(now), 'next-week')}
-            active={preset === 'next-week'}
+            color={isActive('next-week')}
             children="Next week"
           />
           <Button
+            fullWidth
             onClick={() => selectDates(thisMonthRange(now), 'this-month')}
-            active={preset === 'this-month'}
+            color={isActive('this-month')}
             children="This month"
           />
         </div>

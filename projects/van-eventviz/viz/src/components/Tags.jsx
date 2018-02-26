@@ -1,7 +1,7 @@
 import React from 'react'
+import Button from 'material-ui/Button'
 
 import * as pins from '../img'
-import Button from './Button'
 
 import style from './Tags.css'
 
@@ -11,8 +11,8 @@ export function Tags(props) {
   return (
     <div>
       <div className={style.buttons}>
-        <Button onClick={() => toggleAll()} children="All" />
-        <Button onClick={() => toggleNone()} children="None" />
+        <Button mini onClick={() => toggleAll()} children="All" />
+        <Button mini onClick={() => toggleNone()} children="None" />
       </div>
       <div className={style.tags}>
         {tags.map(tag => (

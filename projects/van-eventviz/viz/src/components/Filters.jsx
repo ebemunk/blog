@@ -1,5 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
+import Icon from 'material-ui/Icon'
 
 import Calendar from './Calendar'
 import Tags from './Tags'
@@ -27,7 +28,7 @@ const closeableOverlay = params => Comp => props => {
       style={wrapStyle}
     >
       <div className={style.close} onClick={props.closeOverlay}>
-        <span>>></span>
+        <Icon children="keyboard_arrow_right" />
       </div>
       <Comp {...props} />
     </div>

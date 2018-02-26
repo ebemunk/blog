@@ -12,7 +12,7 @@
   height: 100%;
   max-width: 100%;
   overflow: hidden;
-  transition: width ease-in-out 350ms;
+  transition: width ease-in-out 150ms;
   background: white;
 
   display: flex;
