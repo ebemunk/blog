@@ -1,0 +1,30 @@
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  transition: width ease-in-out 1550ms;
+  background: white;
+  display: flex;
+}
+
+.close {
+  display: flex;
+  background: lightgray;
+  color: white;
+  cursor: pointer;
+
+  & span {
+    margin: auto;
+  }
+
+  &:hover {
+    background: color(lightgray tint(30%));
+  }
+}
+
+.content {
+  composes: scrollShadows from './scrollShadows.css';
+  overflow-y: scroll;
+}

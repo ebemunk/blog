@@ -15,5 +15,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  rules: {},
+  rules: {
+    'react/display-name': 0,
+    'react/no-children-prop': 0,
+    'react/prop-types': 0,
+  },
 }

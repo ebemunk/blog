@@ -2,9 +2,12 @@ import { createSelector } from 'reselect'
 import * as R from 'ramda'
 import * as dateFns from 'date-fns'
 
-export const events = state => state.events
-export const selectedTags = state => state.tags.filters
-export const dateFilter = state => R.pick(['from', 'to'])(state.datePicker)
+export const events = R.pathOr([], ['events'])
+export const selectedTags = R.pathOr([], ['tags', 'filters'])
+export const dateFilter = R.pipe(
+  R.pathOr({}, ['datePicker']),
+  R.pick(['from', 'to']),
+)
 
 export const filteredEvents = createSelector(
   [events, selectedTags, dateFilter],
