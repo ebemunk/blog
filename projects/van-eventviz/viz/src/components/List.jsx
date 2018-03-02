@@ -9,7 +9,7 @@ import style from './List.css'
 export function List(props) {
   return (
     <Overlay name="list" style={{ width: '25rem', right: '0' }}>
-      <div>yo</div>
+      <input />
     </Overlay>
   )
 }

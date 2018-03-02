@@ -1,4 +1,5 @@
 import React from 'react'
+import { hot } from 'react-hot-loader'
 
 import Title from './components/Title'
 import Map from './components/Map'
@@ -28,12 +29,16 @@ export class App extends React.Component {
   }
 }
 
+import { compose } from 'ramda'
 import { connect } from 'react-redux'
 import { selectDates } from './actions'
 
-export default connect(null, {
-  selectDates,
-})(App)
+export default compose(
+  hot(module),
+  connect(null, {
+    selectDates,
+  }),
+)(App)
 
 // icons
 //https://mapicons.mapsmarker.com/

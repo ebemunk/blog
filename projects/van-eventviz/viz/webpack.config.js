@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const dir = R.partial(path.resolve, [__dirname])
 
 module.exports = {
+  mode: 'development',
   entry: [
     //
     'react-hot-loader/patch',
