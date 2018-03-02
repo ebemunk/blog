@@ -18,15 +18,14 @@ export function Filters(props) {
 
 const closeableOverlay = params => Comp => props => {
   const isShown = props.open === params.name
+  if (!isShown) {
+    return null
+  }
   const wrapStyle = {
     ...params.style,
-    ...(isShown ? undefined : { width: '0' }),
   }
   return (
-    <div
-      className={classnames(style.overlay, { [style.hidden]: !isShown })}
-      style={wrapStyle}
-    >
+    <div className={classnames(style.overlay)} style={wrapStyle}>
       <div className={style.close} onClick={props.closeOverlay}>
         <Icon children="keyboard_arrow_right" />
       </div>

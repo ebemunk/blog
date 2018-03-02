@@ -3,18 +3,14 @@
   overflow-y: scroll;
 }
 
-.hidden {
-  width: 0%;
-}
-
 .overlay {
   position: absolute;
   height: 100%;
+  width: 0;
   max-width: 100%;
   overflow: hidden;
   transition: width ease-in-out 150ms;
   background: white;
-
   display: flex;
 }
 
