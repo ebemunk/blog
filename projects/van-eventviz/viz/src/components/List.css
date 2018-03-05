@@ -1,0 +1,17 @@
+.wrap {
+  width: 100%;
+}
+
+.input {
+  padding: 0 2rem;
+}
+
+.image {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.date {
+  color: gray;
+}

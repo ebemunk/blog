@@ -17,9 +17,3 @@ const render = (component, selector) =>
   )
 
 render(<App />, '#root')
-
-// if (module.hot) {
-//   module.hot.accept('./src/App', () => {
-//     render(App)
-//   })
-// }

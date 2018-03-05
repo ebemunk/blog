@@ -5,7 +5,7 @@ import Icon from 'material-ui/Icon'
 import styles from './Overlay.css'
 
 export function Overlay(props) {
-  const { open, name, children, style, closeOverlay } = props
+  const { open, name, children, style, closeOverlay, className } = props
 
   if (open !== name) {
     return null
@@ -16,7 +16,7 @@ export function Overlay(props) {
       <div className={styles.close} onClick={closeOverlay}>
         <Icon children="keyboard_arrow_right" />
       </div>
-      <div className={styles.content}>{children}</div>
+      <div className={classnames(className, styles.content)}>{children}</div>
     </div>
   )
 }
