@@ -21,7 +21,17 @@ export default async function writeJson(args, opts) {
   })
   const pool = getPool()
   const { rows } = await pool.query(
-    `select * from events where geo is not null and geo != 'false'::jsonb;`,
+    `
+    select *
+    from events where
+      geo is not null
+      and geo != 'false'::jsonb
+      and (
+        to_date(details->>'startDate', 'YYYY-MM-DD"T"HH24:MI:SS') > now()
+        or to_date(details->>'endDate', 'YYYY-MM-DD"T"HH24:MI:SS') > now()
+      )
+    ;
+    `,
   )
   const data = rows.map(row => ({
     id: row.id,

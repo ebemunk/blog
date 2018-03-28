@@ -19,8 +19,12 @@ export const filteredEvents = createSelector(
       })
       .filter(e => {
         return (
-          dateFns.isAfter(e.startDate, dates.from) &&
-          dateFns.isBefore(e.startDate, dates.to)
+          (dateFns.isAfter(e.startDate, dates.from) &&
+            dateFns.isBefore(e.startDate, dates.to)) ||
+          (dateFns.isAfter(e.endDate, dates.from) &&
+            dateFns.isBefore(e.endDate, dates.to)) ||
+          (dateFns.isBefore(e.startDate, dates.from) &&
+            dateFns.isAfter(e.endDate, dates.to))
         )
       }),
 )
