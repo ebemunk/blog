@@ -8,6 +8,11 @@ import App from './src/App'
 
 const store = configureStore({})
 
+// if (process.env.NODE_ENV !== 'production') {
+//   const { whyDidYouUpdate } = require('why-did-you-update')
+//   whyDidYouUpdate(React)
+// }
+
 const render = (component, selector) =>
   ReactDOM.render(
     <AppContainer>
