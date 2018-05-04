@@ -127,6 +127,17 @@ const rootReducer = combineReducers({
         return state
     }
   },
+  search: (state = { string: '' }, action) => {
+    switch (action.type) {
+      case 'SEARCH':
+        return {
+          ...state,
+          string: action.payload,
+        }
+      default:
+        return state
+    }
+  },
 })
 
 export default rootReducer

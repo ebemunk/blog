@@ -2,7 +2,6 @@ import React from 'react'
 import classnames from 'classnames'
 import { last } from 'ramda'
 
-import TextField from 'material-ui/TextField'
 import ExpansionPanel, {
   ExpansionPanelSummary,
   ExpansionPanelDetails,
@@ -11,14 +10,16 @@ import Icon from 'material-ui/Icon'
 import Avatar from 'material-ui/Avatar'
 
 import Overlay from './Overlay'
-import { filteredEvents } from '../selectors'
+import SearchInput from './SearchInput'
+
 import { formatEventDate } from '../date'
 import { decodeHtmlEntity } from '../util'
 
 import style from './List.css'
 
 export function List(props) {
-  const { events } = props
+  console.log('List render', props)
+  const { events, searchString, search } = props
 
   return (
     <Overlay
@@ -27,13 +28,7 @@ export function List(props) {
       className={style.wrap}
     >
       <div className={style.input}>
-        <TextField
-          label="Search events"
-          type="search"
-          margin="normal"
-          fullWidth
-          autoFocus
-        />
+        <SearchInput />
       </div>
       <div>
         {events.map(event => (
@@ -73,8 +68,12 @@ export function List(props) {
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
 
+import { search } from '../actions'
+import { filteredEvents } from '../selectors'
+
 export default compose(
   connect(state => ({
-    events: filteredEvents(state),
+    // events: filteredEvents(state),
+    events: [],
   })),
 )(List)

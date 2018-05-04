@@ -37,3 +37,8 @@ export const openInfo = id => ({
 export const closeInfo = () => ({
   type: 'CLOSE_INFO',
 })
+
+export const search = string => ({
+  type: 'SEARCH',
+  payload: string,
+})
