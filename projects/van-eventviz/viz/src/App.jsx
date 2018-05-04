@@ -5,7 +5,7 @@ import Title from './components/Title'
 import Map from './components/Map'
 import Menu from './components/Menu'
 import Filters from './components/Filters'
-import List from './components/List'
+import ListFilter from './components/ListFilter'
 
 import { todayRange } from './date'
 
@@ -23,7 +23,7 @@ export class App extends React.Component {
         <Map />
         <Menu />
         <Filters />
-        <List />
+        <ListFilter />
       </React.Fragment>
     )
   }

@@ -1,11 +1,3 @@
-.wrap {
-  width: 100%;
-}
-
-.input {
-  padding: 0 2rem;
-}
-
 .image {
   height: 3rem;
   width: 3rem;
@@ -14,4 +6,8 @@
 
 .date {
   color: gray;
+}
+
+.details {
+  flex-direction: column;
 }

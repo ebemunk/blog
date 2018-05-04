@@ -1,5 +1,5 @@
 import React from 'react'
-import { compose, withProps, lifecycle, withStateHandlers } from 'recompose'
+import { compose, withProps, lifecycle } from 'recompose'
 import {
   withScriptjs,
   withGoogleMap,

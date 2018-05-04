@@ -8,6 +8,7 @@ export const dateFilter = R.pipe(
   R.pathOr({}, ['datePicker']),
   R.pick(['from', 'to']),
 )
+export const searchFilter = R.pathOr('', ['search', 'string'])
 
 export const filteredEvents = createSelector(
   [events, selectedTags, dateFilter],
@@ -26,4 +27,9 @@ export const filteredEvents = createSelector(
           (dateFns.isBefore(e.startDate, dates.from) &&
             dateFns.isAfter(e.endDate, dates.to)),
       ),
+)
+
+export const searchFilteredEvents = createSelector(
+  [filteredEvents, searchFilter],
+  (evt, filter) => evt.filter(e => e.name.includes(filter)),
 )
