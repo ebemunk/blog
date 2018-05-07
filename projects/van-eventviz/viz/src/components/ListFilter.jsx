@@ -16,7 +16,7 @@ export default function ListFilter() {
       <div className={style.input}>
         <SearchInput />
       </div>
-      <div>
+      <div style={{ height: '100%' }}>
         <List />
       </div>
     </Overlay>

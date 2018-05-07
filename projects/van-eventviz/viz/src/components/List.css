@@ -11,3 +11,7 @@
 .details {
   flex-direction: column;
 }
+
+.summary {
+  align-items: center;
+}
