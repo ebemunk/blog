@@ -15,3 +15,11 @@
 .summary {
   align-items: center;
 }
+
+.meta {
+  text-align: center;
+  width: 100%;
+  display: block;
+  color: darkgray;
+  margin: 0.4rem;
+}

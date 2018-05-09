@@ -1,6 +1,7 @@
-import { createSelector } from 'reselect'
+import { createSelectorCreator, defaultMemoize } from 'reselect'
 import * as R from 'ramda'
 import * as dateFns from 'date-fns'
+import Fuse from 'fuse.js'
 
 export const events = R.pathOr([], ['events'])
 export const selectedTags = R.pathOr([], ['tags', 'filters'])
@@ -9,6 +10,8 @@ export const dateFilter = R.pipe(
   R.pick(['from', 'to']),
 )
 export const searchFilter = R.pathOr('', ['search', 'string'])
+
+const createSelector = createSelectorCreator(defaultMemoize, R.equals)
 
 export const filteredEvents = createSelector(
   [events, selectedTags, dateFilter],
@@ -31,5 +34,17 @@ export const filteredEvents = createSelector(
 
 export const searchFilteredEvents = createSelector(
   [filteredEvents, searchFilter],
-  (evt, filter) => evt.filter(e => e.name.includes(filter)),
+  (evts, filter) => {
+    if (!filter) return evts
+
+    const fuse = new Fuse(evts, {
+      shouldSort: true,
+      keys: [
+        // 'name',
+        { name: 'name', weight: 0.7 },
+        { name: 'description', weight: 0.3 },
+      ],
+    })
+    return fuse.search(filter)
+  },
 )
