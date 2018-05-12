@@ -111,7 +111,7 @@ const rootReducer = combineReducers({
         return state
     }
   },
-  overlay: (state = { open: 'list' }, action) => {
+  overlay: (state = { open: 'filters' }, action) => {
     switch (action.type) {
       case 'CLOSE_OVERLAY':
         return {
