@@ -1,5 +1,5 @@
-export const getEpisodes = () => async dispatch => {
-  const episodes = await import('../data/episodes.json')
+export const getEpisodes = () => dispatch => {
+  const episodes = require('../data/episodes.json')
 
   dispatch({
     type: 'EPISODES',
@@ -12,8 +12,8 @@ export const selectEpisodes = selection => ({
   payload: selection,
 })
 
-export const getWordCount = () => async dispatch => {
-  const wordCount = await import('../data/wordCount.json')
+export const getWordCount = () => dispatch => {
+  const wordCount = require('../data/wordCount.json')
 
   dispatch({
     type: 'WORD_COUNT',
@@ -21,8 +21,8 @@ export const getWordCount = () => async dispatch => {
   })
 }
 
-export const getFlashes = () => async dispatch => {
-  const flashes = await import('../data/flashes.json')
+export const getFlashes = () => dispatch => {
+  const flashes = require('../data/flashes.json')
 
   dispatch({
     type: 'FLASHES',
@@ -30,8 +30,8 @@ export const getFlashes = () => async dispatch => {
   })
 }
 
-export const getLinesPerChar = () => async dispatch => {
-  const linesPerChar = await import('../data/linesPerChar.json')
+export const getLinesPerChar = () => dispatch => {
+  const linesPerChar = require('../data/linesPerChar.json')
 
   dispatch({
     type: 'LINES_PER_CHAR',
@@ -39,8 +39,8 @@ export const getLinesPerChar = () => async dispatch => {
   })
 }
 
-export const getCharWordFrequencies = () => async dispatch => {
-  const charWordFreq = await import('../data/charWordFrequencies.json')
+export const getCharWordFrequencies = () => dispatch => {
+  const charWordFreq = require('../data/charWordFrequencies.json')
 
   dispatch({
     type: 'CHAR_WORD_FREQ',
@@ -48,8 +48,8 @@ export const getCharWordFrequencies = () => async dispatch => {
   })
 }
 
-export const getPersonalities = () => async dispatch => {
-  const personalities = await import('../data/personalities.json')
+export const getPersonalities = () => dispatch => {
+  const personalities = require('../data/personalities.json')
 
   dispatch({
     type: 'PERSONALITIES',
@@ -76,8 +76,8 @@ export const removeProfileGroup = groupIndex => ({
   },
 })
 
-export const getCooccurrence = () => async dispatch => {
-  const charCooccurrence = await import('../data/charCooccurrence.json')
+export const getCooccurrence = () => dispatch => {
+  const charCooccurrence = require('../data/charCooccurrence.json')
 
   dispatch({
     type: 'CHAR_COOCCURRENCE',
@@ -91,5 +91,5 @@ export const showPersonalityTooltip = target => ({
 })
 
 export const hidePersonalityTooltip = () => ({
-	type: 'PERSONALITY_TOOLTIP_HIDE'
+  type: 'PERSONALITY_TOOLTIP_HIDE',
 })

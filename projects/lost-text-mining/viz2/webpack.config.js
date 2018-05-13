@@ -6,9 +6,10 @@ const webpack = require('webpack')
 const dir = R.partial(path.resolve, [__dirname])
 
 module.exports = {
+  mode: 'development',
   entry: [
     //
-    'react-hot-loader/patch',
+    // 'react-hot-loader/patch',
     'babel-polyfill',
     dir('index.js'),
   ],
@@ -26,7 +27,7 @@ module.exports = {
     },
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.json'],
   },
   module: {
     rules: [
@@ -58,23 +59,18 @@ module.exports = {
         ],
       },
       {
-        test: /\.json$/,
-        use: 'json-loader',
-        exclude: /node_modules/,
-      },
-      {
         test: /\.(png)$/,
         use: [
           {
             loader: 'file-loader',
-            options: {}
-          }
-        ]
-      }
+            options: {},
+          },
+        ],
+      },
     ],
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-  ],
+  optimization: {
+    namedModules: true,
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
 }
