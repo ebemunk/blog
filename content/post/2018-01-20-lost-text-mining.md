@@ -1,6 +1,6 @@
 +++
 date = "2018-01-20T02:47:00-07:00"
-draft = true
+draft = false
 title = "LOST it"
 slug = "lost-text-mining"
 tags = ["LOST", "data visualization", "text mining"]
@@ -43,6 +43,5 @@ Phasellus pellentesque laoreet dignissim. Phasellus et malesuada dolor. Morbi he
 <div id="lines-per-char"></div>
 
 Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus. Fusce eget lorem dignissim, mattis velit a, luctus lectus. Curabitur libero magna, pellentesque semper lobortis non, elementum vel justo. Curabitur et urna fringilla orci venenatis scelerisque. Donec auctor orci vitae lacus efficitur eleifend. Donec quis nisi nec risus tempor efficitur tincidunt ut augue. Nunc auctor est sed dignissim blandit. Morbi rhoncus, felis eu facilisis ultrices, metus nibh condimentum lacus, et molestie dui risus eu leo. In iaculis est et magna vulputate tristique. Vivamus convallis magna vitae ipsum lobortis, et laoreet odio luctus. Mauris bibendum sapien dolor, ut malesuada leo luctus eu. Aenean scelerisque arcu rhoncus lobortis rhoncus.
-
 
 <script src="http://localhost:9001/bundle.js"></script>

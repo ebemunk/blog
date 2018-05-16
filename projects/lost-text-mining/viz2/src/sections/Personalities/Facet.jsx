@@ -38,7 +38,14 @@ export class Facet extends React.Component {
     return (
       <React.Fragment>
         {low && (
-          <text dx={-5} dy={height / 2} className={style.low} children={low} />
+          <text
+            data-tip="gaega"
+            data-for="tt"
+            dx={-5}
+            dy={height / 2}
+            className={style.low}
+            children={low}
+          />
         )}
         {high && (
           <text
@@ -50,13 +57,13 @@ export class Facet extends React.Component {
           />
         )}
         <rect
-          id={trait_id}
+          // id={trait_id}
           width={width}
           height={height}
           className={style.rect}
           fill={color}
-          onMouseEnter={this.mouseEnter}
-          onMouseLeave={this.mouseLeave}
+          // onMouseEnter={this.mouseEnter}
+          // onMouseLeave={this.mouseLeave}
         />
         <text
           x={width / 2}

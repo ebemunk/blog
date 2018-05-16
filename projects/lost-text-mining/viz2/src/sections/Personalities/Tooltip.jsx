@@ -12,16 +12,17 @@ export function Tooltip(props) {
     .getBoundingClientRect()
 
   const { left: parentLeft, top: parentTop } = document
-  .querySelector('#dimensions-viz')
-  .getBoundingClientRect()
+    .querySelector('#dimensions-viz')
+    .getBoundingClientRect()
 
   return (
     <div
       className={style.tooltip}
       style={{
         top: top - parentTop,
-        left: left -parentLeft,
-        backgroundColor: 'red'
+        left: left - parentLeft,
+        backgroundColor: 'red',
+        transition: 'all 2s',
       }}
     >
       Derpality

@@ -2,11 +2,12 @@ import React from 'react'
 import * as d3 from 'd3'
 import classnames from 'classnames'
 import { lift } from 'ramda'
+import ReactTooltip from 'react-tooltip'
 
 import dimensions from './dimensions'
 import labels from './labels'
 import Dimension from './Dimension'
-import Tooltip from './Tooltip'
+// import Tooltip from './Tooltip'
 
 import style from './Personalities.css'
 
@@ -20,7 +21,7 @@ export default function Personalities(props) {
 
   return (
     <div className={style.dimensions} id="dimensions-viz">
-      <Tooltip />
+      <ReactTooltip id="tt" />
       {dimensions
         .map(dim => ({
           ...dim,
