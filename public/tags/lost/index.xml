@@ -13,12 +13,12 @@
     
     <item>
       <title>LOST it</title>
-      <link>https://blog.ebemunk.com/lost-it/</link>
+      <link>https://blog.ebemunk.com/lost-text-mining/</link>
       <pubDate>Sat, 20 Jan 2018 02:47:00 -0700</pubDate>
       
-      <guid>https://blog.ebemunk.com/lost-it/</guid>
-      <description> I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.
-Meta    window.loadData() window.renderTo(&#39;WordCount&#39;, &#39;#word-count&#39;)  </description>
+      <guid>https://blog.ebemunk.com/lost-text-mining/</guid>
+      <description>I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.
+Meta Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit, diam et luctus feugiat, tellus ante lacinia tortor, a fringilla risus lorem at mauris. Suspendisse placerat dui vel lacus hendrerit scelerisque. Nullam enim libero, rutrum et leo eget, elementum maximus enim. Mauris maximus velit nec felis fermentum, et ultrices neque fringilla.</description>
     </item>
     
   </channel>

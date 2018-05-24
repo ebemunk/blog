@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Material+Icons');
+
+:global(body) {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 12px;
+  font-family: Roboto;
+}
+
+:global(#root) {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+}
+
+.map {
+}

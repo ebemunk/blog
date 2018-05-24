@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`insertObj provides correct sql 1`] = `
+Array [
+  "
+		INSERT INTO undefined
+		(faf,lolol,directions)
+		VALUES
+		($1,$2,$3)
+	",
+  Array [
+    "etet",
+    "yaya",
+    Array [
+      "some",
+      "things",
+    ],
+  ],
+]
+`;

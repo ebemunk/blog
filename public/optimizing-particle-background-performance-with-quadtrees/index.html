@@ -38,7 +38,7 @@ So - okay, simple enough, 100% width/height canvas at the background, put out so
 			<title>Optimizing Particle Background Performance with Quadtrees - Thinking Through the Party</title>
 		
 
-		<meta name="generator" content="Hugo 0.33" />
+		<meta name="generator" content="Hugo 0.40.3" />
 	</head>
 	<body>
 		<header class="container site-header">
@@ -112,7 +112,8 @@ So - okay, simple enough, 100% width/height canvas at the background, put out so
       <span style="color:#75715e">//link points - draw stuff
 </span><span style="color:#75715e"></span>    }
   }
-}</code></pre></div>
+}
+</code></pre></div>
 <p>every single frame.</p>
 
 <p>Maybe it&rsquo;s not exactly <em>O(n<sup>2</sup>)</em>, but it seems like a whole lot of extra work. So basically, most of the processing is spent calculating euclidian distances only to throw it away.</p>
@@ -174,7 +175,8 @@ So - okay, simple enough, 100% width/height canvas at the background, put out so
     <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">tooFar</span>;
   });
   <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>;
-}</code></pre></div>
+}
+</code></pre></div>
 <p>This will retrieve potentially close points, which we then iterate over and calculate the distance and connect/discard accordingly.</p>
 
 <p>Those of you with a keen eye will notice there is a further optimization we can do, in that once we connect PointX and PointY, we don&rsquo;t need to connect PointY to PointX. The naive approach of looping through all points avoids this, but with a quadtree we don&rsquo;t iterate over points sequentially, so it needs to be handled. I won&rsquo;t produce the code here, but it just involves keeping track of connected points discarding them if we&rsquo;ve already connected those two. Check out the examples below to see the difference.</p>
@@ -242,7 +244,7 @@ So - okay, simple enough, 100% width/height canvas at the background, put out so
 
 
 		<footer class="container site-footer">
-			<p>Thinking Through the Party &copy; 2016</p>
+			<p>Thinking Through the Party &copy; 2018</p>
 			<p>Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a></p>
 		</footer>
 

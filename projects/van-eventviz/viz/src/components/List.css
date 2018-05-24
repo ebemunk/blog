@@ -1,0 +1,25 @@
+.image {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.date {
+  color: gray;
+}
+
+.details {
+  flex-direction: column;
+}
+
+.summary {
+  align-items: center;
+}
+
+.meta {
+  text-align: center;
+  width: 100%;
+  display: block;
+  color: darkgray;
+  margin: 0.4rem;
+}

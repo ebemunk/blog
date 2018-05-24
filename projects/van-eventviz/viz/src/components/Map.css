@@ -1,0 +1,19 @@
+.map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.loading {
+  height: 100vh;
+  display: flex;
+  background: lightgray;
+}
+
+.loadingText {
+  font-size: 1.3rem;
+  color: lightslategray;
+  margin: auto;
+}

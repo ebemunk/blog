@@ -1,0 +1,57 @@
+.wrap {
+  max-height: 150px;
+  composes: scrollShadows from './scrollShadows.css';
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.image {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+
+  & img {
+    max-width: 100%;
+    max-height: 4rem;
+  }
+}
+
+.meta {
+  flex-basis: 80%;
+  position: relative;
+
+  &.noimg {
+    flex-basis: 100%;
+  }
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.date,
+.address {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+.tags {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.tag {
+  background: gray;
+  border-radius: 5px;
+  padding: 0.3rem;
+  font-size: 0.6rem;
+  color: white;
+  display: inline-block;
+}
