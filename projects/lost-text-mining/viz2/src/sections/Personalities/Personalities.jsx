@@ -2,7 +2,8 @@ import React from 'react'
 import * as d3 from 'd3'
 import classnames from 'classnames'
 import { lift } from 'ramda'
-import ReactTooltip from 'react-tooltip'
+// import ReactTooltip from 'react-tooltip'
+import { Manager, Reference, Popper } from 'react-popper'
 
 import dimensions from './dimensions'
 import labels from './labels'
@@ -21,7 +22,7 @@ export default function Personalities(props) {
 
   return (
     <div className={style.dimensions} id="dimensions-viz">
-      <ReactTooltip id="tt" />
+      {/* <Manager> */}
       {dimensions
         .map(dim => ({
           ...dim,
@@ -68,6 +69,7 @@ export default function Personalities(props) {
             </div>
           </div>
         ))}
+      {/* </Manager> */}
     </div>
   )
 }

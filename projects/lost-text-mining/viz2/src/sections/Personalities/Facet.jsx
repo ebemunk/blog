@@ -1,4 +1,6 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
+import { Manager, Reference, Popper } from 'react-popper'
 
 import labels from './labels'
 
@@ -9,19 +11,19 @@ export class Facet extends React.Component {
     hoverTimeout: null,
   }
 
-  mouseEnter = () => {
-    const hoverTimeout = setTimeout(() => {
-      this.props.showPersonalityTooltip(this.props.trait_id)
-    }, 300)
-    this.setState({ hoverTimeout })
-  }
+  // mouseEnter = () => {
+  //   const hoverTimeout = setTimeout(() => {
+  //     this.props.showPersonalityTooltip(this.props.trait_id)
+  //   }, 300)
+  //   this.setState({ hoverTimeout })
+  // }
 
-  mouseLeave = () => {
-    if (this.state.hoverTimeout) clearTimeout(this.state.hoverTimeout)
-    if (!this.props.tooltipShown) return
-    this.props.hidePersonalityTooltip()
-    this.setState({ hoverTimeout: null })
-  }
+  // mouseLeave = () => {
+  //   if (this.state.hoverTimeout) clearTimeout(this.state.hoverTimeout)
+  //   if (!this.props.tooltipShown) return
+  //   this.props.hidePersonalityTooltip()
+  //   this.setState({ hoverTimeout: null })
+  // }
 
   render() {
     const {
@@ -38,14 +40,7 @@ export class Facet extends React.Component {
     return (
       <React.Fragment>
         {low && (
-          <text
-            data-tip="gaega"
-            data-for="tt"
-            dx={-5}
-            dy={height / 2}
-            className={style.low}
-            children={low}
-          />
+          <text dx={-5} dy={height / 2} className={style.low} children={low} />
         )}
         {high && (
           <text
@@ -56,15 +51,32 @@ export class Facet extends React.Component {
             children={high}
           />
         )}
+        {/* <Reference>
+          {({ ref }) => ( */}
         <rect
           // id={trait_id}
           width={width}
           height={height}
           className={style.rect}
           fill={color}
+          // ref={ref}
           // onMouseEnter={this.mouseEnter}
           // onMouseLeave={this.mouseLeave}
         />
+        {/* )}
+        </Reference> */}
+        {/* {ReactDOM.createPortal(
+          <Popper placement="left">
+            {({ ref, style, placement, arrowProps }) => (
+              <div ref={ref} style={style} data-placement={placement}>
+                {label}
+                <div ref={arrowProps.ref} style={arrowProps.style} />
+              </div>
+            )}
+          </Popper>,
+          document.querySelector('#personality'),
+        )} */}
+
         <text
           x={width / 2}
           dy={height / 2}

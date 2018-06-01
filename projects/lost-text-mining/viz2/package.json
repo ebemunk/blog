@@ -39,6 +39,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-move": "^2.6.0",
+    "react-popper": "^1.0.0-beta.6",
     "react-redux": "^5.0.5",
     "react-select": "^1.1.0",
     "react-tippy": "^1.2.2",
