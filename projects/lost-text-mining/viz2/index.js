@@ -11,6 +11,7 @@ import {
   EpisodeRangeSelector,
   CharSelector,
 } from './src/sections'
+import FlashScenes from './src/sections/FlashScenes'
 import configureStore from './src/store'
 
 const store = configureStore({})
@@ -28,3 +29,4 @@ render(<CharWordHistogram />, '#char-word-histogram')
 render(<CharSelector />, '#personality-selector')
 render(<Personalities />, '#personality')
 render(<LinesPerChar />, '#lines-per-char')
+render(<FlashScenes />, '#flashbacks')

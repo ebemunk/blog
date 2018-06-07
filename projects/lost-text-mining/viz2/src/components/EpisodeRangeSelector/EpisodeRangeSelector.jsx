@@ -24,11 +24,18 @@ export default class EpisodeRangeSelector extends Component {
     isBrushing: false,
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.getEpisodes()
   }
 
-  componentWillReceiveProps({ episodes, width, selectEpisodes, selection }) {
+  static getDerivedStateFromProps({
+    episodes,
+    width,
+    selectEpisodes,
+    selection,
+  }) {
+    console.log('drgd')
+
     const scale = d3
       .scalePoint()
       .domain(R.range(0, episodes.length))
@@ -51,11 +58,11 @@ export default class EpisodeRangeSelector extends Component {
       brushSelection = [null, null]
     }
 
-    this.setState({
+    return {
       scale,
       brushSelection,
       isBrushing,
-    })
+    }
   }
 
   onBrush = event => {
