@@ -76,7 +76,7 @@ export const removeProfileGroup = groupIndex => ({
   },
 })
 
-export const getCooccurrence = () => dispatch => {
+export const getCharCooccurrence = () => dispatch => {
   const charCooccurrence = require('../data/charCooccurrence.json')
 
   dispatch({

@@ -96,6 +96,15 @@ const personalityTooltip = (state = { show: false, target: null }, action) => {
   }
 }
 
+const charCooccurrence = (state = [], action) => {
+  switch (action.type) {
+    case 'CHAR_COOCCURRENCE':
+      return action.payload
+    default:
+      return state
+  }
+}
+
 import { combineReducers } from 'redux'
 
 const rootReducer = combineReducers({
@@ -108,6 +117,7 @@ const rootReducer = combineReducers({
   personalities,
   personalitySelection,
   personalityTooltip,
+  charCooccurrence,
 })
 
 export default rootReducer

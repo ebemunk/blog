@@ -10,6 +10,7 @@ import {
   LinesPerChar,
   EpisodeRangeSelector,
   CharSelector,
+  CharCooccurrence,
 } from './src/sections'
 import FlashScenes from './src/sections/FlashScenes'
 import configureStore from './src/store'
@@ -30,3 +31,4 @@ render(<CharSelector />, '#personality-selector')
 render(<Personalities />, '#personality')
 render(<LinesPerChar />, '#lines-per-char')
 render(<FlashScenes />, '#flashbacks')
+render(<CharCooccurrence />, '#char-cooccurrence')

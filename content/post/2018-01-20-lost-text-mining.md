@@ -54,7 +54,7 @@ Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et,
 
 Pellentesque at ex et dolor mattis scelerisque. Vestibulum aliquam, nulla vel porttitor faucibus, sapien turpis feugiat augue, ac tincidunt purus sem nec nisl. Etiam quis ornare lectus.
 
-<div id="cooccurrence"></div>
+<div id="char-cooccurrence"></div>
 
 Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
 

@@ -7,6 +7,7 @@ const episodeSelection = R.path(['episodeSelection'])
 const wordCounts = R.path(['wordCount'])
 const linesPerChar = R.path(['linesPerChar'])
 const flashes = R.path(['flashes'])
+const charCooccurrence = R.path(['charCooccurrence'])
 
 const personalities = R.path(['personalities'])
 const personalitySelection = R.path(['personalitySelection'])
@@ -68,7 +69,7 @@ export const combinedProfileSelection = createSelector(
       R.map(d => [
         ...d.profile.personality,
         { trait_id: 'needs', children: d.profile.needs },
-        { trait_id: 'values', children: d.profile.values }
+        { trait_id: 'values', children: d.profile.values },
       ]),
       R.map(R.map(d => [pickKeys(d), ...d.children.map(pickKeys)])),
       R.flatten,
@@ -88,5 +89,47 @@ export const combinedProfileSelection = createSelector(
         return acc
       }, {}),
     )(selected)
+  },
+)
+
+export const selectedCharCooccurrence = createSelector(
+  [charCooccurrence, episodeSelection],
+  (charCooccurrence, [start, end]) => {
+    const cooc = R.equals([start, end], [null, null])
+      ? charCooccurrence
+      : charCooccurrence.slice(start, end + 1)
+
+    const links = R.pipe(
+      R.reduce((map, val) => {
+        const key = R.pick(['from_char', 'to_char'])(val)
+        if (!map.has(key)) {
+          map.set(key, val.val)
+        } else {
+          const c = map.get(key)
+          map.set(key, c + val.val)
+        }
+        return map
+      }, new Map()),
+      Array.from,
+      R.map(([link, value]) => ({
+        source: link.from_char,
+        target: link.to_char,
+        value,
+      })),
+    )(cooc)
+
+    const nodes = R.pipe(
+      R.uniq,
+      R.map(id => ({
+        id,
+        numLinksTo: links.filter(i => i.target === id).length,
+      })),
+    )([
+      //
+      ...links.map(d => d.source),
+      ...links.map(d => d.target),
+    ])
+
+    return { links, nodes }
   },
 )
