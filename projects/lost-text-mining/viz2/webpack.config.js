@@ -17,6 +17,7 @@ module.exports = {
     filename: 'bundle.js',
     path: dir('../../../static/lost-text-mining'),
     publicPath: 'http://localhost:9001/',
+    globalObject: 'this',
   },
   devtool: 'source-map',
   devServer: {
@@ -65,6 +66,13 @@ module.exports = {
             loader: 'file-loader',
             options: {},
           },
+        ],
+      },
+      {
+        test: /\.worker\.js$/,
+        use: [
+          'babel-loader',
+          { loader: 'worker-loader', options: { inline: true } },
         ],
       },
     ],

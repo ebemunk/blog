@@ -1,0 +1,12 @@
+.viewport {
+}
+
+.links {
+  & line {
+    stroke: white;
+  }
+}
+
+.op {
+  opacity: 0.2;
+}

@@ -92,37 +92,37 @@ export const combinedProfileSelection = createSelector(
   },
 )
 
-export const selectedCharCooccurrence = createSelector(
-  [charCooccurrence, episodeSelection],
-  (charCooccurrence, [start, end]) => {
-    const cooc = R.equals([start, end], [null, null])
-      ? charCooccurrence
-      : charCooccurrence.slice(start, end + 1)
+const pad2 = str => str.toString().padStart(2, '0')
 
-    const links = R.pipe(
-      R.reduce((map, val) => {
-        const key = R.pick(['from_char', 'to_char'])(val)
-        if (!map.has(key)) {
-          map.set(key, val.val)
-        } else {
-          const c = map.get(key)
-          map.set(key, c + val.val)
+export const selectedCharCooccurrence = createSelector(
+  [charCooccurrence, selectedEpisodeKeys],
+  (charCooccurrence, selectedKeys) => {
+    const cooc = charCooccurrence.filter(c =>
+      selectedKeys.includes(`S${pad2(c.season + '')}-E${pad2(c.episode + '')}`),
+    )
+
+    let links = cooc.reduce((map, val) => {
+      const key = `${val.from_char}-${val.to_char}`
+      if (!map[key]) {
+        map[key] = {
+          source: val.from_char,
+          target: val.to_char,
+          value: val.val,
         }
         return map
-      }, new Map()),
-      Array.from,
-      R.map(([link, value]) => ({
-        source: link.from_char,
-        target: link.to_char,
-        value,
-      })),
-    )(cooc)
+      } else {
+        map[key].value = map[key].value + val.val
+        return map
+      }
+    }, {})
+
+    links = Object.values(links)
 
     const nodes = R.pipe(
       R.uniq,
       R.map(id => ({
         id,
-        numLinksTo: links.filter(i => i.target === id).length,
+        numLinksTo: Math.max(links.filter(i => i.target === id).length + 2, 3),
       })),
     )([
       //

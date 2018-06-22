@@ -1,0 +1,54 @@
+:root {
+  --border-size: 5px;
+  --border-transparent: var(--border-size) solid transparent;
+}
+
+.circle {
+  cursor: pointer;
+  transition: opacity 300ms;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.wrap {
+  position: relative;
+  margin: var(--border-size);
+}
+
+.tooltip {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.2rem;
+  font-size: 1.3rem;
+  border: 1px solid slategray;
+  border-radius: 0.5rem;
+  pointer-events: none;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.transparentLR {
+  border-left: var(--border-transparent);
+  border-right: var(--border-transparent);
+}
+
+.bottom {
+  composes: arrow;
+  composes: transparentLR;
+
+  border-bottom: var(--border-size) solid slategray;
+  top: -5px;
+}
+
+.top {
+  composes: arrow;
+  composes: transparentLR;
+
+  border-top: var(--border-size) solid slategray;
+  bottom: -5px;
+}

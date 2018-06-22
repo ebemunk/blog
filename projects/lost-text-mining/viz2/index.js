@@ -32,3 +32,5 @@ render(<Personalities />, '#personality')
 render(<LinesPerChar />, '#lines-per-char')
 render(<FlashScenes />, '#flashbacks')
 render(<CharCooccurrence />, '#char-cooccurrence')
+
+console.log('aefaefaefaefa')
