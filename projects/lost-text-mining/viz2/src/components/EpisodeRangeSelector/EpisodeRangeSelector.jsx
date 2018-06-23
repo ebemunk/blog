@@ -34,8 +34,6 @@ export default class EpisodeRangeSelector extends Component {
     selectEpisodes,
     selection,
   }) {
-    console.log('drgd')
-
     const scale = d3
       .scalePoint()
       .domain(R.range(0, episodes.length))

@@ -2,13 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import * as d3 from 'd3'
 import { schemeSet3 } from 'd3-scale-chromatic'
-import Animate from 'react-move/Animate'
 import * as R from 'ramda'
 import classnames from 'classnames'
 
-import Circle from './Circle'
+import ForceGraph from './ForceGraph'
 import Worker from './ForceSimulation.worker'
 import style from './CharCooccurrence.css'
+import { color } from 'd3-color'
 
 export default class CharCooccurrence extends React.Component {
   state = {
@@ -34,9 +34,9 @@ export default class CharCooccurrence extends React.Component {
 
     switch (type) {
       case 'TICK':
-        this.setState({
-          loading: payload,
-        })
+        // this.setState({
+        //   loading: payload,
+        // })
         break
       case 'END':
         this.setState(
@@ -74,6 +74,7 @@ export default class CharCooccurrence extends React.Component {
             ) {
               this.setState({
                 transform: `translate(${translate.join(',')}) scale(${scale})`,
+                loading: false,
               })
             }
           },
@@ -97,7 +98,9 @@ export default class CharCooccurrence extends React.Component {
       return
     }
 
-    console.log('didupdate')
+    this.worker.terminate()
+    this.worker = new Worker()
+    this.worker.onmessage = this.onmessage
 
     this.worker.postMessage({
       type: 'start',
@@ -106,6 +109,9 @@ export default class CharCooccurrence extends React.Component {
         links,
       },
     })
+    if (!this.state.loading) {
+      this.setState({ loading: true })
+    }
   }
 
   render() {
@@ -121,8 +127,6 @@ export default class CharCooccurrence extends React.Component {
       highlight,
     } = this.state
 
-    console.log('render')
-
     const filteredLinks = links.filter(
       d => d.source.id === highlight || d.target.id === highlight,
     )
@@ -131,66 +135,33 @@ export default class CharCooccurrence extends React.Component {
       R.reduce((acc, val) => acc.concat([val.source.id, val.target.id]), []),
       R.uniq,
     )(filteredLinks)
-
+    // return null
     return (
       <React.Fragment>
-        <div>Loading: {loading}</div>
+        {/* <div>Loading: {loading}</div> */}
         <svg height={500} width={960}>
+          <ForceGraph
+            nodes={nodes}
+            links={links}
+            highlight={highlight}
+            hNodes={hNodes}
+            hLinks={hLinks}
+            colorScale={colorScale}
+            nodeSizeScale={nodeSizeScale}
+            linkOpacityScale={linkOpacityScale}
+            transform={transform}
+            onNodeClick={id =>
+              this.setState({
+                highlight: highlight === id ? false : id,
+              })
+            }
+            domRef={el => (this.nodesDom = el)}
+          />
           <g>
-            {loading < 100 && <text>Loading: {loading}</text>}
-            {loading < 100 && (
+            {loading && <text>Loading: {loading}</text>}
+            {loading && (
               <rect width={960} height={500} fill="white" opacity="0.7" />
             )}
-            <Animate
-              start={{
-                transform: 'translate(0,0) scale(1)',
-              }}
-              update={{
-                transform: [transform],
-                timing: { duration: 750, delay: 250 },
-              }}
-            >
-              {({ transform }) => (
-                <g className={style.viewport} transform={transform}>
-                  <g className={style.links}>
-                    {links.map(
-                      ({ index, source, target, value }) =>
-                        (!highlight ||
-                          (highlight && hLinks.includes(index))) && (
-                          <line
-                            x1={source.x}
-                            y1={source.y}
-                            x2={target.x}
-                            y2={target.y}
-                            strokeOpacity={linkOpacityScale(value)}
-                            key={`${source.id}-${target.id}`}
-                          />
-                        ),
-                    )}
-                  </g>
-                  <g className={style.nodes} ref={el => (this.nodesDom = el)}>
-                    {nodes.map(node => (
-                      <Circle
-                        className={classnames({
-                          [style.op]: !hNodes.includes(node.id) && highlight,
-                        })}
-                        cx={node.x}
-                        cy={node.y}
-                        fill={colorScale(node.id)}
-                        r={nodeSizeScale(node.numLinksTo)}
-                        key={node.id}
-                        tooltip={node.id}
-                        onClick={() =>
-                          this.setState({
-                            highlight: highlight === node.id ? false : node.id,
-                          })
-                        }
-                      />
-                    ))}
-                  </g>
-                </g>
-              )}
-            </Animate>
           </g>
         </svg>
       </React.Fragment>
