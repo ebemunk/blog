@@ -71,10 +71,6 @@ http://www.tylervigen.com/literature-statistics
 
   - how many (which) characters appear in each episode
 
-- [ ] Words per char
-
-  - how many words (on avg/total) a char says when they speak
-
 - [ ] Word complexity per char
 
   - char word usage tendencies (do they use big words, exclams ...)
@@ -87,12 +83,6 @@ http://www.tylervigen.com/literature-statistics
 
   - sentiment analysis on char lines?
 
-- [ ] Stage directions per char
-
-- [ ] Char closeness (co-occurrence)
-
-  - which chars appear together often (network/edge graph)
-
 - [ ] Word bubble
   - total, per season, per episode, per char
 
@@ -104,12 +94,6 @@ s4 13/14
 s5 16/17
 s6 17/18
 
-Episode / Season (bar chart of total words per episode/season)
-
-- word count
-- unique words
-- unique word density
-
 Character Mentions (line/bar chart for all seasons)
 
 - how many times char names are mentioned by others
@@ -118,20 +102,10 @@ Word Map
 
 - most common / least common words
 
-Co-Occurrence (force directed graph)
-
-- filtered by episode selector
-
 Sentiment Analysis (long horizontal stacked bars)
 
 - per episode
 - filtered by ep selector
-
-Episode Lengths (vertical stacked bar)
-
-- word / char count
-- stacks represent scenes/acts
-- all eps together
 
 Population (vertical bar or pie)
 

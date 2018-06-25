@@ -29,6 +29,15 @@ create table tone (
 	sentences_tone json
 );
 
+drop table scene_tone;
+create table scene_tone (
+	season int,
+	episode int,
+	act int,
+	scene int,
+	document_tone json
+);
+
 drop table word_count;
 create table word_count (
 	season int,
