@@ -18,6 +18,10 @@ export function allScenes() {
   return 'select * from scene_text;'
 }
 
+export function sceneTone() {
+  return 'select * from scene_tone;'
+}
+
 export function wordCount() {
   return 'select * from word_count;'
 }

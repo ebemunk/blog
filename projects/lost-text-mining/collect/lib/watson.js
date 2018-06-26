@@ -21,7 +21,7 @@ const {
 export const toneAnalyzer = Promise.promisifyAll(
   tone_analyzer({
     version: 'v3',
-    version_date: '2017-07-21',
+    version_date: '2017-09-21',
     username: TONE_ANALYZER_USERNAME,
     password: TONE_ANALYZER_PASSWORD,
   }),

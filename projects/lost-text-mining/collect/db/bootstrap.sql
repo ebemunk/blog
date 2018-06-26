@@ -35,6 +35,7 @@ create table scene_tone (
 	episode int,
 	act int,
 	scene int,
+	length int,
 	document_tone json
 );
 

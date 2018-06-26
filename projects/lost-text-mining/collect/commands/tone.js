@@ -31,6 +31,7 @@ export default async function scene_tone() {
             act,
             scene,
             document_tone,
+            length: text.length,
           }
         },
         R.evolve({
