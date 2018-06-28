@@ -16,15 +16,6 @@ export const episodeSelection = (state = [null, null], action) => {
   }
 }
 
-export const wordCount = (state = [], action) => {
-  switch (action.type) {
-    case 'WORD_COUNT':
-      return action.payload
-    default:
-      return state
-  }
-}
-
 export const flashes = (state = [], action) => {
   switch (action.type) {
     case 'FLASHES':

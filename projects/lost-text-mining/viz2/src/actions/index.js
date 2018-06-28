@@ -12,15 +12,6 @@ export const selectEpisodes = selection => ({
   payload: selection,
 })
 
-export const getWordCount = () => dispatch => {
-  const wordCount = require('../data/wordCount.json')
-
-  dispatch({
-    type: 'WORD_COUNT',
-    payload: wordCount,
-  })
-}
-
 export const getFlashes = () => dispatch => {
   const flashes = require('../data/flashes.json')
 

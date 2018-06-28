@@ -106,16 +106,23 @@ export default async function writeForViz() {
     },
     {
       filename: 'countsPerEpisode',
-      query: `select distinct season, episode,
-      count(*) filter (where type='act') as num_acts,
-      count(*) filter (where type='scene')+1 as num_scenes,
-      count(distinct char_name) filter (where type='dialog') as num_chars
-    from dialog
-    group by season, episode
-    order by season, episode asc
-    ;
+      query: `
+        select distinct season, episode,
+          count(*) filter (where type='stageDirection') as num_stagedirections,
+          count(*) filter (where type='scene')+1 as num_scenes,
+          count(distinct char_name) filter (where type='dialog') as num_chars
+        from dialog
+        group by season, episode
+        order by season, episode asc
+        ;
 			`,
-      process: R.identity,
+      process: R.map(
+        R.evolve({
+          num_stagedirections: parseInt,
+          num_scenes: parseInt,
+          num_chars: parseInt,
+        }),
+      ),
     },
   ]
 

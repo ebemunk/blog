@@ -1,5 +1,5 @@
 export const getCountsPerEpisode = () => dispatch => {
-  const countsPerEpisode = require('../../data/countsPerEpisode.json')
+  const countsPerEpisode = require('data/countsPerEpisode.json')
 
   dispatch({
     type: 'data/countsPerEpisode',
@@ -14,16 +14,9 @@ export const reducer = reducerFromObj([], {
 })
 
 import * as R from 'ramda'
-import { createSelector } from 'reselect'
 
-import { episodeSelection } from '../selectors'
+import { selectorByEpisode } from '../util'
 
 export const countsPerEpisode = R.path(['countsPerEpisode'])
 
-export const countsPerEpisodeSelection = createSelector(
-  [countsPerEpisode, episodeSelection],
-  (countsPerEpisode, [start, end]) =>
-    R.equals([start, end], [null, null])
-      ? countsPerEpisode
-      : countsPerEpisode.slice(start, end + 1),
-)
+export const countsPerEpisodeSelection = selectorByEpisode(countsPerEpisode)

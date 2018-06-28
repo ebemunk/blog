@@ -5,17 +5,12 @@ import classnames from 'classnames'
 import { BarChart, ButtonGroup } from '../../components'
 import { seasonColor } from 'utils'
 
-import DataTypeButtons from './DataTypeButtons'
 import Title from './Title'
 import style from './WordCount.css'
 
 export default class WordCount extends React.Component {
   state = {
     dataType: 'total',
-  }
-
-  componentWillMount() {
-    this.props.getWordCount()
   }
 
   render() {

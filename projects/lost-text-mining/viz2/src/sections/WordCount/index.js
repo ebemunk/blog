@@ -1,12 +1,14 @@
 import { compose } from 'redux'
 import { connect } from 'react-redux'
+import { hot } from 'react-hot-loader'
 
-import { getWordCount } from '../../actions'
-import { wordCountBySelection } from '../../selectors'
 import WordCount from './WordCount'
-import withEpSelector from '../../hoc/withEpSelector'
+import { getWordCount, wordCountBySelection } from 'store/wordCount'
+import withEpSelector from 'hoc/withEpSelector'
+import fireActions from 'hoc/fireActions'
 
 export default compose(
+  hot(module),
   connect(
     state => ({
       data: wordCountBySelection(state),
@@ -15,5 +17,6 @@ export default compose(
       getWordCount,
     },
   ),
+  fireActions(['getWordCount']),
   withEpSelector(900),
 )(WordCount)

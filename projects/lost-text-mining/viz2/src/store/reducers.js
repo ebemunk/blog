@@ -3,7 +3,6 @@ import { combineReducers } from 'redux'
 import {
   episodes,
   episodeSelection,
-  wordCount,
   flashes,
   linesPerChar,
   charWordFrequencies,
@@ -13,6 +12,7 @@ import {
   charCooccurrence,
 } from '../reducers'
 import { reducer as countsPerEpisode } from './countsPerEpisode'
+import { reducer as wordCount } from './wordCount'
 
 const rootReducer = combineReducers({
   episodes,

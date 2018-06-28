@@ -33,6 +33,8 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components/'),
       store: path.resolve(__dirname, 'src/store/'),
       hoc: path.resolve(__dirname, 'src/hoc/'),
+      viz: path.resolve(__dirname, 'src/viz/'),
+      data: path.resolve(__dirname, 'src/data/'),
       utils: path.resolve(__dirname, 'src/utils/'),
     },
   },
