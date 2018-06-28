@@ -71,11 +71,12 @@ http://lotrproject.com/statistics/books/chapters
 https://jezebel.com/every-single-person-on-lost-ranked-from-most-to-least-1546174780 bernard vs sawyer
 http://www.tylervigen.com/literature-statistics
 
+<pre>
 - [ ] Number of Characters per episode
 
   - how many (which) characters appear in each episode
 
-- # scenes per ep
+- num scenes per ep
 
 * [ ] Word complexity per char
 
@@ -122,6 +123,6 @@ Flashbacks / Flashsideways (horizontal thin stacked bars)
 
 - 1 bar per ep
 - also combined % change of a part being flash/
-
+</pre>
 <script src="http://localhost:9001/bundle.js"></script>
 <!-- <script src="bundle.js"></script> -->

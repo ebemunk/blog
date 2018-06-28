@@ -45,22 +45,16 @@
   position: absolute;
 }
 
-.centeredLabel {
-  composes: label;
-  transform: translateX(-50%);
-  left: 50%;
-  top: 0;
-}
-
 .xLabelWrap {
-  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
 }
 
-.labelWrap {
-  position: relative;
+.xLabel {
+  composes: label;
 }
 
 .yLabelWrap {
-  composes: labelWrap;
+  position: relative;
   width: 2rem;
 }

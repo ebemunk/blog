@@ -1,37 +1,5 @@
-.bandAxis {
-  & :global(.tick) text {
-    text-anchor: start;
-    transform: translateY(3px);
-  }
-}
-
-.midLabels .bandAxis {
-  & :global(.tick) text {
-    text-anchor: middle;
-  }
-}
-
-.linearAxis {
-  & :global(.tick) line {
-    opacity: 0.3;
-  }
-}
-
-.center {
+.buttons {
   display: flex;
   justify-content: center;
-
-  & ::last-child {
-    margin-bottom: 1em;
-  }
-}
-
-.chart {
-  flex-shrink: 0;
-}
-
-@media (max-width: 900px) {
-  :global(#word-count) {
-    width: 900px;
-  }
+  margin-top: 2rem;
 }

@@ -1,12 +1,10 @@
 import React from 'react'
 import { format } from 'd3'
-import classnames from 'classnames'
 
-import { BarChart, ButtonGroup } from '../../components'
-import { seasonColor } from 'utils'
+import ButtonGroup from 'components/ButtonGroup'
+import BarViz from 'viz/BarViz'
 
-import Title from './Title'
-import style from './WordCount.css'
+import css from './WordCount.css'
 
 export default class WordCount extends React.Component {
   state = {
@@ -23,7 +21,24 @@ export default class WordCount extends React.Component {
 
     return (
       <React.Fragment>
-        <div className={style.center}>
+        <BarViz
+          data={data}
+          xLabel="Episodes"
+          y0Label={
+            {
+              total: 'Number of words',
+              uniq: 'Number of unique words',
+              density: 'Percentage of unique words',
+            }[dataType]
+          }
+          linearScaleProps={{
+            domain: dataType === 'density' ? [0, 100] : undefined,
+          }}
+          linearAxisProps={{
+            tickFormat: format('.2s'),
+          }}
+        />
+        <div className={css.buttons}>
           <ButtonGroup
             options={[
               { name: 'Total', value: 'total' },
@@ -32,52 +47,6 @@ export default class WordCount extends React.Component {
             ]}
             onChange={dataType => this.setState({ dataType })}
             selected={dataType}
-          />
-        </div>
-        <div className={style.center}>
-          <Title dataType={dataType} />
-          <BarChart
-            className={classnames(style.chart, {
-              [style.midLabels]: data.length < 25,
-            })}
-            width={900}
-            height={300}
-            padding={{
-              top: 5,
-              left: 30,
-              right: 0,
-              bottom: 30,
-            }}
-            data={data}
-            interactive
-            bandAxisProps={{
-              className: style.bandAxis,
-              tickSize: 0,
-              tickFormat: key => {
-                const [season, episode] = key.split('-')
-                if (data.length < 25) {
-                  return `S${season}-E${episode}`
-                }
-                if (episode !== '1') return
-                return `Season ${season}`
-              },
-            }}
-            linearScaleProps={{
-              domain: dataType === 'density' ? [0, 100] : undefined,
-            }}
-            linearAxisProps={{
-              className: style.linearAxis,
-              tickFormat: format('.2s'),
-            }}
-            barStyle={({ key }) => ({
-              fill: seasonColor(key.split('-')[0] - 1),
-            })}
-            interactionProps={{
-              xTickFormat: key => {
-                const [season, episode] = key.split('-')
-                return `S${season}-E${episode}`
-              },
-            }}
           />
         </div>
       </React.Fragment>

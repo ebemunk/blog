@@ -2,6 +2,7 @@ import React from 'react'
 
 import ButtonGroup from 'components/ButtonGroup'
 import BarViz from 'viz/BarViz'
+
 import css from './CountPerEpisode.css'
 
 export default class CountPerEpisode extends React.Component {
@@ -19,7 +20,18 @@ export default class CountPerEpisode extends React.Component {
 
     return (
       <React.Fragment>
-        <div className={css.center}>
+        <BarViz
+          data={data}
+          xLabel="Episodes"
+          y0Label={
+            {
+              num_chars: 'Number of characters',
+              num_stagedirections: 'Number of stage directions',
+              num_scenes: 'Number of scenes',
+            }[dataType]
+          }
+        />
+        <div className={css.buttons}>
           <ButtonGroup
             options={[
               { name: 'Characters', value: 'num_chars' },
@@ -30,17 +42,6 @@ export default class CountPerEpisode extends React.Component {
             selected={dataType}
           />
         </div>
-        <BarViz
-          data={data}
-          xLabel="Episodes"
-          y0Label={
-            {
-              num_chars: 'Number of Characters',
-              num_stagedirections: 'Number of Stage Directions',
-              num_scenes: 'Number of Scenes',
-            }[dataType]
-          }
-        />
       </React.Fragment>
     )
   }

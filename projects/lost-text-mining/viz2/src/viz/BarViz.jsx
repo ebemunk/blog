@@ -6,14 +6,19 @@ import BarChart from 'components/BarChart'
 
 import css from './BarViz.css'
 
-const BarViz = ({ data, linearScaleProps, y0Label, y1Label, xLabel }) => (
+const BarViz = ({
+  data,
+  y0Label,
+  y1Label,
+  xLabel,
+  linearAxisProps,
+  ...otherProps
+}) => (
   <React.Fragment>
     <div className={css.labels}>
-      {y0Label && (
-        <div className={css.yLabelWrap}>
-          <span className={css.rotatedLabel}>{y0Label}</span>
-        </div>
-      )}
+      <div className={css.yLabelWrap}>
+        <span className={css.rotatedLabel}>{y0Label}</span>
+      </div>
       <BarChart
         className={classnames(css.chart, {
           [css.midLabels]: data.length < 25,
@@ -40,10 +45,10 @@ const BarViz = ({ data, linearScaleProps, y0Label, y1Label, xLabel }) => (
             return `Season ${season}`
           },
         }}
-        linearScaleProps={linearScaleProps}
         linearAxisProps={{
           className: css.linearAxis,
           tickFormat: x => x,
+          ...linearAxisProps,
         }}
         barStyle={({ key }) => ({
           fill: seasonColor(key.split('-')[0] - 1),
@@ -54,18 +59,15 @@ const BarViz = ({ data, linearScaleProps, y0Label, y1Label, xLabel }) => (
             return `S${season}-E${episode}`
           },
         }}
+        {...otherProps}
       />
-      {y1Label && (
-        <div className={css.yLabelWrap}>
-          <span className={css.rotatedLabel}>{y1Label}</span>
-        </div>
-      )}
-    </div>
-    {xLabel && (
-      <div className={css.xLabelWrap}>
-        <span className={css.centeredLabel}>{xLabel}</span>
+      <div className={css.yLabelWrap}>
+        <span className={css.rotatedLabel}>{y1Label}</span>
       </div>
-    )}
+    </div>
+    <div className={css.xLabelWrap}>
+      <span className={css.xLabel}>{xLabel}</span>
+    </div>
   </React.Fragment>
 )
 
