@@ -34,15 +34,6 @@ export const linesPerChar = (state = [], action) => {
   }
 }
 
-export const charWordFrequencies = (state = [], action) => {
-  switch (action.type) {
-    case 'CHAR_WORD_FREQ':
-      return action.payload
-    default:
-      return state
-  }
-}
-
 export const personalities = (state = [], action) => {
   switch (action.type) {
     case 'PERSONALITIES':

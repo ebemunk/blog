@@ -5,7 +5,6 @@ import {
   episodeSelection,
   flashes,
   linesPerChar,
-  charWordFrequencies,
   personalities,
   personalitySelection,
   personalityTooltip,
@@ -13,6 +12,7 @@ import {
 } from '../reducers'
 import { reducer as countsPerEpisode } from './countsPerEpisode'
 import { reducer as wordCount } from './wordCount'
+import { reducer as charWordFrequencies } from './charWordFrequencies'
 
 const rootReducer = combineReducers({
   episodes,

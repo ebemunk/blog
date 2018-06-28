@@ -1,7 +1,7 @@
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 
-import { getCharWordFrequencies } from '../../actions'
+import { getCharWordFrequencies } from 'store/charWordFrequencies'
 import fireActions from 'hoc/fireActions'
 import Legend from './Legend'
 

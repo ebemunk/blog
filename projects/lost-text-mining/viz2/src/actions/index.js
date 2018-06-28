@@ -30,15 +30,6 @@ export const getLinesPerChar = () => dispatch => {
   })
 }
 
-export const getCharWordFrequencies = () => dispatch => {
-  const charWordFreq = require('../data/charWordFrequencies.json')
-
-  dispatch({
-    type: 'CHAR_WORD_FREQ',
-    payload: charWordFreq,
-  })
-}
-
 export const getPersonalities = () => dispatch => {
   const personalities = require('../data/personalities.json')
 

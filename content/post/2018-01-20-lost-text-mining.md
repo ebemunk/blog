@@ -21,11 +21,11 @@ Duis ac lorem leo. Quisque non lacus vestibulum, pharetra sem sed, aliquam liber
 
 Aenean elementum eros elit, et lacinia enim varius in. Quisque gravida, sapien ultrices tristique commodo, risus neque gravida turpis, id efficitur orci nisl id augue. Nam eros nunc, consectetur non dictum sit amet, ultrices in dui.
 
-<div id="char-word-histogram"></div>
+<div id="char-per-episode"></div>
 
 Vivamus magna tortor, auctor id leo in, hendrerit interdum justo. Mauris vel risus nec risus molestie lobortis id eu ex.
 
-<div id="char-per-episode"></div>
+<div id="char-word-histogram"></div>
 
 Vivamus magna tortor, auctor id leo in, hendrerit interdum justo. Mauris vel risus nec risus molestie lobortis id eu ex.
 
