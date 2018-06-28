@@ -12,6 +12,8 @@ import css from './CharSelector.css'
 export default function CharSelector(props) {
   const { charSelection, options, select, addGroup, removeGroup } = props
 
+  bindGlobal(select, removeGroup, charSelection)
+
   return (
     <div className={css.wrapper}>
       {charSelection.map((g, i) => (
@@ -54,41 +56,84 @@ export default function CharSelector(props) {
           children="Add Group"
           className={classnames('button', css.addButton)}
         />
-        {/* <button
-          onClick={() => {
-            select(0, [
-              'ANA LUCIA',
-              'CLAIRE',
-              'JULIET',
-              'KATE',
-              'ROSE',
-              'SHANNON',
-              'SUN',
-            ])
-            select(1, [
-              'BEN',
-              'BERNARD',
-              'BOONE',
-              'CHARLIE',
-              'DESMOND',
-              'EKO',
-              'FARADAY',
-              'HURLEY',
-              'JACK',
-              'JIN',
-              'LOCKE',
-              'MICHAEL',
-              'MILES',
-              'RICHARD',
-              'SAWYER',
-              'SAYID',
-              'WALT',
-              'WIDMORE',
-            ])
-          }}
-          children="men vs women"
-        /> */}
       </div>
     </div>
   )
+}
+
+function bindGlobal(select, removeGroup, charSelection) {
+  function removeAll() {
+    for (let i = 0; i < charSelection.length; i++) removeGroup(i)
+  }
+
+  window.charSelect_sunjin = e => {
+    e.preventDefault()
+    removeAll()
+    select(0, ['SUN'])
+    select(1, ['JIN'])
+  }
+  window.charSelect_everyone = e => {
+    e.preventDefault()
+    removeAll()
+    select(0, [
+      'ANA LUCIA',
+      'BEN',
+      'BERNARD',
+      'BOONE',
+      'CHARLIE',
+      'CLAIRE',
+      'DESMOND',
+      'EKO',
+      'FARADAY',
+      'HURLEY',
+      'JACK',
+      'JIN',
+      'JULIET',
+      'KATE',
+      'LOCKE',
+      'MICHAEL',
+      'MILES',
+      'RICHARD',
+      'ROSE',
+      'SAWYER',
+      'SAYID',
+      'SHANNON',
+      'SUN',
+      'WALT',
+      'WIDMORE',
+    ])
+  }
+  window.charSelect_menWomen = e => {
+    e.preventDefault()
+    removeAll()
+    select(0, [
+      'ANA LUCIA',
+      'CLAIRE',
+      'JULIET',
+      'KATE',
+      'ROSE',
+      'SHANNON',
+      'SUN',
+    ])
+    select(1, [
+      'BEN',
+      'BERNARD',
+      'BOONE',
+      'CHARLIE',
+      'DESMOND',
+      'EKO',
+      'FARADAY',
+      'HURLEY',
+      'JACK',
+      'JIN',
+      'LOCKE',
+      'MICHAEL',
+      'MILES',
+      'RICHARD',
+      'SAWYER',
+      'SAYID',
+      'WALT',
+      'WIDMORE',
+    ])
+  }
 }

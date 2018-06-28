@@ -33,6 +33,8 @@ Vivamus magna tortor, auctor id leo in, hendrerit interdum justo. Mauris vel ris
 
 Maecenas ullamcorper auctor tellus, dictum euismod ipsum pellentesque id. Etiam mollis a ante ac tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 
+For example <a href="" onclick="charSelect_menWomen(event)">men vs women</a>, <a href="" onclick="charSelect_sunjin(event)">sun vs jin</a>, <a href="" onclick="charSelect_everyone(event)">everyone</a>
+
 <div id="personality-selector" class="viz"></div>
 <div id="personality" class="viz"></div>
 
