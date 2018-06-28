@@ -129,6 +129,6 @@ Flashbacks / Flashsideways (horizontal thin stacked bars)
 
 <style>
 .viz {
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 </style>
