@@ -10,55 +10,12 @@ import {
 const flashes = R.path(['flashes'])
 const charCooccurrence = R.path(['charCooccurrence'])
 
-const personalities = R.path(['personalities'])
-const personalitySelection = R.path(['charSelection'])
-
 export const selectedFlashes = createSelector(
   [flashes, episodeSelection],
   (flashes, [start, end]) =>
     R.equals([start, end], [null, null])
       ? flashes
       : flashes.slice(start, end + 1),
-)
-
-export const selectedProfiles = createSelector(
-  [personalitySelection, personalities],
-  (selection, personalities) =>
-    selection.map(sel =>
-      sel.map(s => personalities.find(p => s === p.char_name)),
-    ),
-)
-
-export const combinedProfileSelection = createSelector(
-  [selectedProfiles],
-  selected => {
-    const pickKeys = R.pick(['trait_id', 'percentile'])
-
-    const combineGroup = R.pipe(
-      R.map(d => [
-        ...d.profile.personality,
-        { trait_id: 'needs', children: d.profile.needs },
-        { trait_id: 'values', children: d.profile.values },
-      ]),
-      R.map(R.map(d => [pickKeys(d), ...d.children.map(pickKeys)])),
-      R.flatten,
-      R.groupBy(d => d.trait_id),
-      R.map(d =>
-        d.reduce((acc, v, i, arr) => acc + v.percentile / arr.length, 0),
-      ),
-    )
-
-    return R.pipe(
-      R.map(combineGroup),
-      R.reduce((acc, v) => {
-        for (let key in v) {
-          if (acc[key]) acc[key].push(v[key])
-          else acc[key] = [v[key]]
-        }
-        return acc
-      }, {}),
-    )(selected)
-  },
 )
 
 const pad2 = str => str.toString().padStart(2, '0')

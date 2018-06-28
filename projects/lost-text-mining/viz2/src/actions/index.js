@@ -7,15 +7,6 @@ export const getEpisodes = () => dispatch => {
   })
 }
 
-export const getPersonalities = () => dispatch => {
-  const personalities = require('data/personalities.json')
-
-  dispatch({
-    type: 'data/personalities',
-    payload: personalities,
-  })
-}
-
 export const selectEpisodes = selection => ({
   type: 'SELECT_EPISODES',
   payload: selection,

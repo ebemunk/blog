@@ -25,35 +25,6 @@ export const flashes = (state = [], action) => {
   }
 }
 
-export const personalities = (state = [], action) => {
-  switch (action.type) {
-    case 'data/personalities':
-      return action.payload
-    default:
-      return state
-  }
-}
-
-export const personalityTooltip = (
-  state = { show: false, target: null },
-  action,
-) => {
-  switch (action.type) {
-    case 'PERSONALITY_TOOLTIP_SHOW':
-      return {
-        show: true,
-        target: action.payload,
-      }
-    case 'PERSONALITY_TOOLTIP_HIDE':
-      return {
-        show: false,
-        target: null,
-      }
-    default:
-      return state
-  }
-}
-
 export const charCooccurrence = (state = [], action) => {
   switch (action.type) {
     case 'CHAR_COOCCURRENCE':

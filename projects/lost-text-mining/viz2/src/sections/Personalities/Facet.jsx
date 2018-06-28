@@ -88,15 +88,4 @@ export class Facet extends React.Component {
   }
 }
 
-import { connect } from 'react-redux'
-import { showPersonalityTooltip, hidePersonalityTooltip } from '../../actions'
-
-export default connect(
-  state => ({
-    tooltipShown: state.personalityTooltip.show,
-  }),
-  {
-    showPersonalityTooltip,
-    hidePersonalityTooltip,
-  },
-)(Facet)
+export default Facet
