@@ -2,7 +2,7 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 
 import { getCharWordFrequencies } from '../../actions'
-import { fireActions } from '../../hoc'
+import fireActions from 'hoc/fireActions'
 import Labels from './Labels'
 
 export default compose(

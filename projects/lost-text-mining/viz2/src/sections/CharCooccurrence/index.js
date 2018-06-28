@@ -5,7 +5,8 @@ import { hot } from 'react-hot-loader'
 
 import { selectedCharCooccurrence } from '../../selectors'
 import { getCharCooccurrence } from '../../actions'
-import { fireActions, withEpSelector } from '../../hoc'
+import fireActions from 'hoc/fireActions'
+import withEpSelector from 'hoc/withEpSelector'
 
 import CharCooccurrence from './CharCooccurrence'
 

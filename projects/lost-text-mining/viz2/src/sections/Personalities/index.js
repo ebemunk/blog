@@ -5,7 +5,7 @@ import { hot } from 'react-hot-loader'
 
 import { combinedProfileSelection } from '../../selectors'
 import { getPersonalities } from '../../actions'
-import { fireActions } from '../../hoc'
+import fireActions from 'hoc/fireActions'
 
 import Personalities from './Personalities'
 

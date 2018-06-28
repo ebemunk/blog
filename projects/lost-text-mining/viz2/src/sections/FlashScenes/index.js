@@ -3,7 +3,7 @@ import { compose } from 'redux'
 
 import { getFlashes } from '../../actions'
 import { selectedFlashes } from '../../selectors'
-import { withEpSelector } from '../../hoc'
+import withEpSelector from 'hoc/withEpSelector'
 import FlashScenes from './FlashScenes'
 
 const mapStateToProps = state => ({
