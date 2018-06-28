@@ -1,29 +1,31 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Manager, Reference, Popper } from 'react-popper'
+import { Manager, Reference } from 'react-popper'
+import { color as d3Color } from 'd3'
 
+import Tooltips from './Tooltips'
 import labels from './labels'
 
-import style from './Facet.css'
+import css from './Facet.css'
 
 export class Facet extends React.Component {
   state = {
     hoverTimeout: null,
+    show: false,
   }
 
-  // mouseEnter = () => {
-  //   const hoverTimeout = setTimeout(() => {
-  //     this.props.showPersonalityTooltip(this.props.trait_id)
-  //   }, 300)
-  //   this.setState({ hoverTimeout })
-  // }
+  mouseEnter = () => {
+    const hoverTimeout = setTimeout(() => {
+      this.setState({ show: true })
+    }, 300)
+    this.setState({ hoverTimeout })
+  }
 
-  // mouseLeave = () => {
-  //   if (this.state.hoverTimeout) clearTimeout(this.state.hoverTimeout)
-  //   if (!this.props.tooltipShown) return
-  //   this.props.hidePersonalityTooltip()
-  //   this.setState({ hoverTimeout: null })
-  // }
+  mouseLeave = () => {
+    const { hoverTimeout } = this.state
+    if (hoverTimeout) clearTimeout(hoverTimeout)
+    this.setState({ show: false, hoverTimeout: null })
+  }
 
   render() {
     const {
@@ -31,58 +33,74 @@ export class Facet extends React.Component {
       height,
       width,
       color,
-      showPersonalityTooltip,
-      hidePersonalityTooltip,
+      fullWidth,
+      paddingLeft,
+      points,
+      tooltips,
     } = this.props
 
-    const { low, high, label } = labels[trait_id]
+    const { show } = this.state
+
+    const { low, high, label, lowDesc, highDesc, desc } = labels[trait_id]
 
     return (
       <React.Fragment>
-        {low && (
-          <text dx={-5} dy={height / 2} className={style.low} children={low} />
-        )}
-        {high && (
-          <text
-            x={width}
-            dx={5}
-            dy={height / 2}
-            className={style.high}
-            children={high}
-          />
-        )}
-        {/* <Reference>
-          {({ ref }) => ( */}
-        <rect
-          // id={trait_id}
-          width={width}
-          height={height}
-          className={style.rect}
-          fill={color}
-          // ref={ref}
-          // onMouseEnter={this.mouseEnter}
-          // onMouseLeave={this.mouseLeave}
-        />
-        {/* )}
-        </Reference> */}
-        {/* {ReactDOM.createPortal(
-          <Popper placement="left">
-            {({ ref, style, placement, arrowProps }) => (
-              <div ref={ref} style={style} data-placement={placement}>
-                {label}
-                <div ref={arrowProps.ref} style={arrowProps.style} />
-              </div>
+        <Manager>
+          {low && (
+            <text dx={-5} dy={height / 2} className={css.low} children={low} />
+          )}
+          {high && (
+            <text
+              x={width}
+              dx={5}
+              dy={height / 2}
+              className={css.high}
+              children={high}
+            />
+          )}
+          <Reference>
+            {({ ref }) => (
+              <rect
+                ref={ref}
+                width={width}
+                height={height}
+                className={css.rect}
+                fill={show && tooltips ? d3Color(color).brighter(2) : color}
+              />
             )}
-          </Popper>,
-          document.querySelector('#personality'),
-        )} */}
-
-        <text
-          x={width / 2}
-          dy={height / 2}
-          className={style.label}
-          children={label.toUpperCase()}
-        />
+          </Reference>
+          <text
+            x={width / 2}
+            dy={height / 2}
+            className={css.label}
+            children={label.toUpperCase()}
+          />
+          <rect
+            width={fullWidth}
+            height={height}
+            x={-paddingLeft}
+            onMouseEnter={this.mouseEnter}
+            onMouseLeave={this.mouseLeave}
+            className={css.tooltipTrigger}
+          />
+          {show &&
+            tooltips &&
+            ReactDOM.createPortal(
+              <Tooltips
+                {...{
+                  low,
+                  lowDesc,
+                  high,
+                  highDesc,
+                  label,
+                  desc,
+                  points,
+                  trait_id,
+                }}
+              />,
+              document.querySelector('body'),
+            )}
+        </Manager>
       </React.Fragment>
     )
   }

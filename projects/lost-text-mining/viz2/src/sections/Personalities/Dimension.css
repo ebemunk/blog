@@ -11,6 +11,7 @@
 .circle {
   stroke: white;
   stroke-width: 1;
+  pointer-events: none;
 }
 
 .line {
@@ -18,4 +19,5 @@
   stroke-linejoin: round;
   opacity: 0.8;
   fill: none;
+  pointer-events: none;
 }

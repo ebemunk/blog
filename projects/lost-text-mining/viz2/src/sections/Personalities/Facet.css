@@ -18,8 +18,12 @@
   composes: text;
   text-anchor: middle;
 }
-
 .rect {
   stroke: #282c34;
   stroke-width: 4;
+}
+
+.tooltipTrigger {
+  fill: none;
+  pointer-events: all;
 }

@@ -23,6 +23,11 @@
   text-align: center;
 }
 
+.toggle {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 800px) {
   :global(#personality) {
     width: 800px;

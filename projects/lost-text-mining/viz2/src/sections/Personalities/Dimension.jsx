@@ -10,7 +10,7 @@ import Facet from './Facet'
 import style from './Dimension.css'
 
 export default function Dimension(props) {
-  const { dimension, x, data, width, padding } = props
+  const { dimension, x, data, width, padding, tooltips } = props
 
   const barWidth = width - padding.left - padding.right
   const barHeight = 30
@@ -37,9 +37,16 @@ export default function Dimension(props) {
               trait_id={facet}
               height={barHeight}
               width={barWidth}
+              fullWidth={width}
+              paddingLeft={padding.left}
               color={
                 dimension.key === 'big5' ? colors[facet] : colors[dimension.key]
               }
+              points={linePoints.map((pts, ii) => ({
+                value: pts[i],
+                color: groupColor(ii),
+              }))}
+              tooltips={tooltips}
             />
           </g>
         ))}

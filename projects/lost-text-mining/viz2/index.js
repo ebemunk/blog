@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'react-redux'
 
-import WordCount from './src/sections/WordCount'
-import CharWordHistogram from './src/sections/CharWordHistogram'
-import CountPerEpisode from './src/sections/CountPerEpisode'
-import CharSelector from './src/sections/CharSelector'
-import Personalities from './src/sections/Personalities'
-import LinesPerChar from './src/sections/LinesPerChar'
-import FlashScenes from './src/sections/FlashScenes'
-import CharCooccurrence from './src/sections/CharCooccurrence'
+import WordCount from 'sections/WordCount'
+import CharWordHistogram from 'sections/CharWordHistogram'
+import CountPerEpisode from 'sections/CountPerEpisode'
+import CharSelector from 'sections/CharSelector'
+import Personalities from 'sections/Personalities'
+import LinesPerChar from 'sections/LinesPerChar'
+import FlashScenes from 'sections/FlashScenes'
+import CharCooccurrence from 'sections/CharCooccurrence'
 
-import configureStore from './src/store'
+import configureStore from 'store'
 
 const store = configureStore({})
 

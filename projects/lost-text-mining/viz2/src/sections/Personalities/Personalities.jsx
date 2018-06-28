@@ -1,77 +1,88 @@
 import React from 'react'
 import * as d3 from 'd3'
-import classnames from 'classnames'
-import { lift } from 'ramda'
-// import ReactTooltip from 'react-tooltip'
-import { Manager, Reference, Popper } from 'react-popper'
 
+import Toggle from 'components/Toggle'
 import dimensions from './dimensions'
 import labels from './labels'
 import Dimension from './Dimension'
-// import Tooltip from './Tooltip'
 
-import style from './Personalities.css'
+import css from './Personalities.css'
 
-export default function Personalities(props) {
-  const { width, padding, data } = props
+export default class Personalities extends React.Component {
+  state = { tooltips: true }
 
-  const x = d3
-    .scaleLinear()
-    .domain([0, 1])
-    .range([0, width - padding.left - padding.right])
+  render() {
+    const { width, padding, data } = this.props
+    const { tooltips } = this.state
 
-  return (
-    <div className={style.dimensions} id="dimensions-viz">
-      {/* <Manager> */}
-      {dimensions
-        .map(dim => ({
-          ...dim,
-          isNeeds: dim.key === 'needs',
-          width: ['needs', 'values', 'big5'].includes(dim.key)
-            ? width - 250
-            : width,
-          padding: ['needs', 'values', 'big5'].includes(dim.key)
-            ? { top: 0, left: 0, right: 0, bottom: 0 }
-            : padding,
-        }))
-        .map(dimension => (
-          <div
-            key={dimension.key}
-            className={style.dimension}
-            style={{ width: dimension.isNeeds ? width * 2 : width }}
-          >
-            <div className={style.label}>{labels[dimension.key].label}</div>
-            <div className={style.dims}>
-              <Dimension
-                x={x}
-                dimension={{
-                  ...dimension,
-                  facets: dimension.isNeeds
-                    ? dimension.facets.slice(0, 6)
-                    : dimension.facets,
-                }}
-                data={data}
-                width={dimension.width}
-                padding={dimension.padding}
-              />
-              {dimension.isNeeds && (
-                <Dimension
-                  x={x}
-                  dimension={{
-                    ...dimension,
-                    facets: dimension.facets.slice(6),
-                  }}
-                  data={data}
-                  width={dimension.width}
-                  padding={dimension.padding}
-                />
-              )}
-            </div>
-          </div>
-        ))}
-      {/* </Manager> */}
-    </div>
-  )
+    const x = d3
+      .scaleLinear()
+      .domain([0, 1])
+      .range([0, width - padding.left - padding.right])
+
+    return (
+      <React.Fragment>
+        <div className={css.toggle}>
+          <Toggle
+            children="Tooltips"
+            onClick={() => this.setState({ tooltips: !tooltips })}
+            className={css.all}
+            on={tooltips}
+          />
+        </div>
+        <div className={css.dimensions}>
+          {dimensions
+            .map(dim => ({
+              ...dim,
+              isNeeds: dim.key === 'needs',
+              width: ['needs', 'values', 'big5'].includes(dim.key)
+                ? width - 250
+                : width,
+              padding: ['needs', 'values', 'big5'].includes(dim.key)
+                ? { top: 0, left: 0, right: 0, bottom: 0 }
+                : padding,
+            }))
+            .map(dimension => (
+              <div
+                key={dimension.key}
+                className={css.dimension}
+                style={{ width: dimension.isNeeds ? width * 2 : width }}
+              >
+                <div className={css.label}>{labels[dimension.key].label}</div>
+                <div className={css.dims}>
+                  <Dimension
+                    x={x}
+                    dimension={{
+                      ...dimension,
+                      facets: dimension.isNeeds
+                        ? dimension.facets.slice(0, 6)
+                        : dimension.facets,
+                    }}
+                    data={data}
+                    width={dimension.width}
+                    padding={dimension.padding}
+                    tooltips={tooltips}
+                  />
+                  {dimension.isNeeds && (
+                    <Dimension
+                      x={x}
+                      dimension={{
+                        ...dimension,
+                        facets: dimension.facets.slice(6),
+                      }}
+                      data={data}
+                      width={dimension.width}
+                      padding={dimension.padding}
+                      tooltips={tooltips}
+                    />
+                  )}
+                </div>
+              </div>
+            ))}
+        </div>
+      </React.Fragment>
+    )
+  }
 }
 
 Personalities.defaultProps = {

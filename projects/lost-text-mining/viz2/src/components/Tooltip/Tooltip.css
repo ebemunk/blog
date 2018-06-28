@@ -1,0 +1,88 @@
+:root {
+  --border-size: 5px;
+  --border-transparent: var(--border-size) solid transparent;
+}
+
+.wrap {
+  position: relative;
+  margin: var(--border-size);
+  pointer-events: none;
+}
+
+.tooltip {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.2rem;
+  font-size: 1.3rem;
+  border: 1px solid slategray;
+  border-radius: 0.5rem;
+  pointer-events: none;
+  max-width: 200px;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.transparentLR {
+  border-left: var(--border-transparent);
+  border-right: var(--border-transparent);
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.transparentTB {
+  border-top: var(--border-transparent);
+  border-bottom: var(--border-transparent);
+
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bottom {
+  composes: arrow;
+  composes: transparentLR;
+
+  border-bottom: var(--border-size) solid slategray;
+  top: -5px;
+}
+
+.top {
+  composes: arrow;
+  composes: transparentLR;
+
+  border-top: var(--border-size) solid slategray;
+  bottom: -5px;
+}
+
+.left {
+  composes: arrow;
+  composes: transparentTB;
+
+  border-left: var(--border-size) solid slategray;
+  right: -5px;
+}
+
+.left-end {
+  composes: left;
+
+  top: 100%;
+  transform: translateY(calc(-100%-0.5rem));
+}
+
+.right {
+  composes: arrow;
+  composes: transparentTB;
+
+  border-right: var(--border-size) solid slategray;
+  left: -5px;
+}
+
+.right-end {
+  composes: right;
+
+  top: 100%;
+  transform: translateY(calc(-100%-0.5rem));
+}
