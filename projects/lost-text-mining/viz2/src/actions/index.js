@@ -84,12 +84,3 @@ export const getCharCooccurrence = () => dispatch => {
     payload: charCooccurrence,
   })
 }
-
-export const showPersonalityTooltip = target => ({
-  type: 'PERSONALITY_TOOLTIP_SHOW',
-  payload: target,
-})
-
-export const hidePersonalityTooltip = () => ({
-  type: 'PERSONALITY_TOOLTIP_HIDE',
-})

@@ -2,7 +2,7 @@ import React from 'react'
 import Select from 'react-select'
 import '!style-loader!css-loader!react-select/dist/react-select.css'
 
-import { groupColor, toTitleCase } from '../../util'
+import { groupColor, toTitleCase } from 'utils'
 // import Value from './Value'
 import Option from './Option'
 
@@ -53,10 +53,7 @@ export function Selector(props) {
         </div>
       ))}
       <div>
-        <button
-          onClick={addProfileGroup}
-          children="Add Group"
-        />
+        <button onClick={addProfileGroup} children="Add Group" />
         {/* <button
           onClick={() => {
             selectProfiles(0, [

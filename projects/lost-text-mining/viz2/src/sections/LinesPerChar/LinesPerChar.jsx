@@ -3,14 +3,14 @@ import classnames from 'classnames'
 import * as R from 'ramda'
 
 import { HorizontalBarChart, ButtonGroup, Toggle } from '../../components'
-import { toTitleCase } from '../../util'
+import { toTitleCase } from 'utils'
 
 import style from './LinesPerChar.css'
 
 export default class LinesPerChar extends React.Component {
   state = {
     dataType: 'total',
-    showAll: false
+    showAll: false,
   }
 
   render() {
@@ -39,10 +39,13 @@ export default class LinesPerChar extends React.Component {
         </div>
         <div className={style.chart}>
           <HorizontalBarChart
-            data={data.map(d => ({
-              ...d,
-              value: dataType === 'percentage' ? d.value / sum * 100 : d.value,
-            })).slice(0, showAll ? -1 : 15)}
+            data={data
+              .map(d => ({
+                ...d,
+                value:
+                  dataType === 'percentage' ? d.value / sum * 100 : d.value,
+              }))
+              .slice(0, showAll ? -1 : 15)}
             width={500}
             height={25}
             padding={{

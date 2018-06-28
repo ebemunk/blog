@@ -104,9 +104,22 @@ export default async function writeForViz() {
       query: queries.sceneTone(),
       process: R.identity,
     },
+    {
+      filename: 'countsPerEpisode',
+      query: `select distinct season, episode,
+      count(*) filter (where type='act') as num_acts,
+      count(*) filter (where type='scene')+1 as num_scenes,
+      count(distinct char_name) filter (where type='dialog') as num_chars
+    from dialog
+    group by season, episode
+    order by season, episode asc
+    ;
+			`,
+      process: R.identity,
+    },
   ]
 
-  await Promise.map([dataFiles[7]], async dataFile => {
+  await Promise.map([dataFiles[8]], async dataFile => {
     log('doing', dataFile.filename)
     const { rows } = await pool.query(dataFile.query)
     const data = dataFile.process(rows)

@@ -29,6 +29,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+      store: path.resolve(__dirname, 'src/store/'),
+      hoc: path.resolve(__dirname, 'src/hoc/'),
+      utils: path.resolve(__dirname, 'src/utils/'),
+    },
   },
   module: {
     rules: [

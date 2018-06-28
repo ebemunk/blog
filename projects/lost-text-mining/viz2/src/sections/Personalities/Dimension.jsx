@@ -3,7 +3,7 @@ import * as R from 'ramda'
 import * as d3 from 'd3'
 import { NodeGroup } from 'react-move'
 
-import { groupColor } from '../../util'
+import { groupColor } from 'utils'
 import { colors } from './dimensions'
 import Facet from './Facet'
 

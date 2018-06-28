@@ -21,3 +21,9 @@ create or replace view episodes as
 		from dialog
 		order by season, episode asc
 ;
+
+create or replace view chars as
+	select distinct char_name
+	from dialog
+	where char_name is not null
+;

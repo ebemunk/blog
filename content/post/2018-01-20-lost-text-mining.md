@@ -25,6 +25,10 @@ Aenean elementum eros elit, et lacinia enim varius in. Quisque gravida, sapien u
 
 Vivamus magna tortor, auctor id leo in, hendrerit interdum justo. Mauris vel risus nec risus molestie lobortis id eu ex.
 
+<div id="char-per-episode"></div>
+
+Vivamus magna tortor, auctor id leo in, hendrerit interdum justo. Mauris vel risus nec risus molestie lobortis id eu ex.
+
 ## Personalities
 
 Maecenas ullamcorper auctor tellus, dictum euismod ipsum pellentesque id. Etiam mollis a ante ac tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
@@ -71,19 +75,21 @@ http://www.tylervigen.com/literature-statistics
 
   - how many (which) characters appear in each episode
 
-- [ ] Word complexity per char
+- # scenes per ep
+
+* [ ] Word complexity per char
 
   - char word usage tendencies (do they use big words, exclams ...)
 
-- [ ] Reading level
+* [ ] Reading level
 
   - does it change across chars? is it consistent throughout?
 
-- [ ] Emotions per char
+* [ ] Emotions per char
 
   - sentiment analysis on char lines?
 
-- [ ] Word bubble
+* [ ] Word bubble
   - total, per season, per episode, per char
 
 // number of episodes
@@ -92,7 +98,7 @@ s2 23/24
 s3 22/23
 s4 13/14
 s5 16/17
-s6 17/18
+s6 1/2 17/18
 
 Character Mentions (line/bar chart for all seasons)
 

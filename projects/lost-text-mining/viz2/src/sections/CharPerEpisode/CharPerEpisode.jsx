@@ -2,20 +2,16 @@ import React from 'react'
 import { format } from 'd3'
 import classnames from 'classnames'
 
-import { BarChart, ButtonGroup } from '../../components'
+import BarChart from 'components/BarChart'
+import ButtonGroup from 'components/ButtonGroup'
 import { seasonColor } from 'utils'
 
-import DataTypeButtons from './DataTypeButtons'
-import Title from './Title'
-import style from './WordCount.css'
+// import Title from './Title'
+import css from './Chart.css'
 
-export default class WordCount extends React.Component {
+export default class CharPerEpisode extends React.Component {
   state = {
-    dataType: 'total',
-  }
-
-  componentWillMount() {
-    this.props.getWordCount()
+    dataType: 'num_chars',
   }
 
   render() {
@@ -23,40 +19,40 @@ export default class WordCount extends React.Component {
 
     const data = this.props.data.map(d => ({
       key: `${d.season}-${d.episode}`,
-      value: d[dataType],
+      value: +d[dataType],
     }))
 
     return (
       <React.Fragment>
-        <div className={style.center}>
+        <div className={css.center}>
           <ButtonGroup
             options={[
-              { name: 'Total', value: 'total' },
-              { name: 'Unique', value: 'uniq' },
-              { name: 'Density', value: 'density' },
+              { name: 'Characters', value: 'num_chars' },
+              { name: 'Acts', value: 'num_acts' },
+              { name: 'Scenes', value: 'num_scenes' },
             ]}
             onChange={dataType => this.setState({ dataType })}
             selected={dataType}
           />
         </div>
-        <div className={style.center}>
-          <Title dataType={dataType} />
+        <div className={css.center}>
+          {/* <Title dataType={dataType} /> */}
           <BarChart
-            className={classnames(style.chart, {
-              [style.midLabels]: data.length < 25,
+            className={classnames(css.chart, {
+              [css.midLabels]: data.length < 25,
             })}
             width={900}
             height={300}
             padding={{
               top: 5,
               left: 30,
-              right: 0,
+              right: 15,
               bottom: 30,
             }}
             data={data}
             interactive
             bandAxisProps={{
-              className: style.bandAxis,
+              className: css.bandAxis,
               tickSize: 0,
               tickFormat: key => {
                 const [season, episode] = key.split('-')
@@ -71,8 +67,8 @@ export default class WordCount extends React.Component {
               domain: dataType === 'density' ? [0, 100] : undefined,
             }}
             linearAxisProps={{
-              className: style.linearAxis,
-              tickFormat: format('.2s'),
+              className: css.linearAxis,
+              tickFormat: x => x,
             }}
             barStyle={({ key }) => ({
               fill: seasonColor(key.split('-')[0] - 1),

@@ -13,6 +13,8 @@ import {
   CharCooccurrence,
 } from './src/sections'
 import FlashScenes from './src/sections/FlashScenes'
+import CharPerEpisode from './src/sections/CharPerEpisode'
+
 import configureStore from './src/store'
 
 const store = configureStore({})
@@ -27,10 +29,11 @@ const render = (component, selector) =>
 
 render(<WordCount />, '#word-count')
 render(<CharWordHistogram />, '#char-word-histogram')
+render(<CharPerEpisode />, '#char-per-episode')
 render(<CharSelector />, '#personality-selector')
 render(<Personalities />, '#personality')
 render(<LinesPerChar />, '#lines-per-char')
 render(<FlashScenes />, '#flashbacks')
-render(<CharCooccurrence />, '#char-cooccurrence')
+// render(<CharCooccurrence />, '#char-cooccurrence')
 
 console.log('aefaefaefaefa')

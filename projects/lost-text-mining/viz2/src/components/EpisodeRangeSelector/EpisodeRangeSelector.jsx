@@ -4,7 +4,7 @@ import * as R from 'ramda'
 import classnames from 'classnames'
 
 import { Brush } from '../../components'
-import { seasonColor, SEASONS } from '../../util'
+import { seasonColor, SEASONS } from 'utils'
 
 import style from './EpisodeRangeSelector.css'
 

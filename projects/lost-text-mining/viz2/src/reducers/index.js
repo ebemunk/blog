@@ -1,4 +1,4 @@
-const episodes = (state = [], action) => {
+export const episodes = (state = [], action) => {
   switch (action.type) {
     case 'EPISODES':
       return action.payload
@@ -7,7 +7,7 @@ const episodes = (state = [], action) => {
   }
 }
 
-const episodeSelection = (state = [null, null], action) => {
+export const episodeSelection = (state = [null, null], action) => {
   switch (action.type) {
     case 'SELECT_EPISODES':
       return action.payload
@@ -16,7 +16,7 @@ const episodeSelection = (state = [null, null], action) => {
   }
 }
 
-const wordCount = (state = [], action) => {
+export const wordCount = (state = [], action) => {
   switch (action.type) {
     case 'WORD_COUNT':
       return action.payload
@@ -25,7 +25,7 @@ const wordCount = (state = [], action) => {
   }
 }
 
-const flashes = (state = [], action) => {
+export const flashes = (state = [], action) => {
   switch (action.type) {
     case 'FLASHES':
       return action.payload
@@ -34,7 +34,7 @@ const flashes = (state = [], action) => {
   }
 }
 
-const linesPerChar = (state = [], action) => {
+export const linesPerChar = (state = [], action) => {
   switch (action.type) {
     case 'LINES_PER_CHAR':
       return action.payload
@@ -43,7 +43,7 @@ const linesPerChar = (state = [], action) => {
   }
 }
 
-const charWordFrequencies = (state = [], action) => {
+export const charWordFrequencies = (state = [], action) => {
   switch (action.type) {
     case 'CHAR_WORD_FREQ':
       return action.payload
@@ -52,7 +52,7 @@ const charWordFrequencies = (state = [], action) => {
   }
 }
 
-const personalities = (state = [], action) => {
+export const personalities = (state = [], action) => {
   switch (action.type) {
     case 'PERSONALITIES':
       return action.payload
@@ -61,7 +61,7 @@ const personalities = (state = [], action) => {
   }
 }
 
-const personalitySelection = (state = [[]], action) => {
+export const personalitySelection = (state = [[]], action) => {
   switch (action.type) {
     case 'SELECT_PROFILES':
       const copy = [...state]
@@ -79,7 +79,10 @@ const personalitySelection = (state = [[]], action) => {
   }
 }
 
-const personalityTooltip = (state = { show: false, target: null }, action) => {
+export const personalityTooltip = (
+  state = { show: false, target: null },
+  action,
+) => {
   switch (action.type) {
     case 'PERSONALITY_TOOLTIP_SHOW':
       return {
@@ -96,7 +99,7 @@ const personalityTooltip = (state = { show: false, target: null }, action) => {
   }
 }
 
-const charCooccurrence = (state = [], action) => {
+export const charCooccurrence = (state = [], action) => {
   switch (action.type) {
     case 'CHAR_COOCCURRENCE':
       return action.payload
@@ -104,20 +107,3 @@ const charCooccurrence = (state = [], action) => {
       return state
   }
 }
-
-import { combineReducers } from 'redux'
-
-const rootReducer = combineReducers({
-  episodes,
-  episodeSelection,
-  wordCount,
-  flashes,
-  linesPerChar,
-  charWordFrequencies,
-  personalities,
-  personalitySelection,
-  personalityTooltip,
-  charCooccurrence,
-})
-
-export default rootReducer
