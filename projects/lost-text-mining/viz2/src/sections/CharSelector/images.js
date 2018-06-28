@@ -26,6 +26,8 @@ const images = [
   'SUN',
   'WALT',
   'WIDMORE',
-].map(n => [n, require(`../../images/resized/${n}.png`)])
+].map(n => [n, require(`../../images/${n}.png`)])
 
 export default fromPairs(images)
+
+// for x (/*.webp) ffmpeg -i $x ${x:r}.png

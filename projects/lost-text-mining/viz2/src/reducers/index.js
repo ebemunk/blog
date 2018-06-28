@@ -27,26 +27,8 @@ export const flashes = (state = [], action) => {
 
 export const personalities = (state = [], action) => {
   switch (action.type) {
-    case 'PERSONALITIES':
+    case 'data/personalities':
       return action.payload
-    default:
-      return state
-  }
-}
-
-export const personalitySelection = (state = [[]], action) => {
-  switch (action.type) {
-    case 'SELECT_PROFILES':
-      const copy = [...state]
-      copy[action.payload.groupIndex] = action.payload.selection
-      return copy
-    case 'ADD_PROFILE_GROUP':
-      return [...state, []]
-    case 'REMOVE_PROFILE_GROUP': {
-      const copy = [...state]
-      copy.splice(action.payload.groupIndex, 1)
-      return copy.length ? copy : [[]]
-    }
     default:
       return state
   }

@@ -1,28 +1,23 @@
 import React from 'react'
 import Select from 'react-select'
+import classnames from 'classnames'
 import '!style-loader!css-loader!react-select/dist/react-select.css'
 
 import { groupColor, toTitleCase } from 'utils'
 // import Value from './Value'
 import Option from './Option'
 
-import style from './Selector.css'
+import css from './CharSelector.css'
 
-export function Selector(props) {
-  const {
-    personalitySelection,
-    options,
-    selectProfiles,
-    addProfileGroup,
-    removeProfileGroup,
-  } = props
+export default function CharSelector(props) {
+  const { charSelection, options, select, addGroup, removeGroup } = props
 
   return (
-    <div className={style.wrapper}>
-      {personalitySelection.map((g, i) => (
-        <div key={i} className={style.selector}>
+    <div className={css.wrapper}>
+      {charSelection.map((g, i) => (
+        <div key={i} className={css.selector}>
           <div
-            className={style.color}
+            className={css.color}
             style={{
               backgroundColor: groupColor(i),
               borderColor: groupColor(i),
@@ -35,17 +30,18 @@ export function Selector(props) {
             }))}
             multi
             onChange={e => {
-              selectProfiles(i, e.map(({ value }) => value))
+              select(i, e.map(({ value }) => value))
             }}
             value={g}
             closeOnSelect={false}
             // valueComponent={Value}
             optionComponent={Option}
           />
-          <div className={style.removeButton}>
+          <div className={css.removeButton}>
             <button
-              onClick={() => removeProfileGroup(i)}
-              disabled={personalitySelection.length === 1}
+              className="button"
+              onClick={() => removeGroup(i)}
+              disabled={charSelection.length === 1}
               children="×"
               title="Remove Group"
             />
@@ -53,10 +49,14 @@ export function Selector(props) {
         </div>
       ))}
       <div>
-        <button onClick={addProfileGroup} children="Add Group" />
+        <button
+          onClick={addGroup}
+          children="Add Group"
+          className={classnames('button', css.addButton)}
+        />
         {/* <button
           onClick={() => {
-            selectProfiles(0, [
+            select(0, [
               'ANA LUCIA',
               'CLAIRE',
               'JULIET',
@@ -65,7 +65,7 @@ export function Selector(props) {
               'SHANNON',
               'SUN',
             ])
-            selectProfiles(1, [
+            select(1, [
               'BEN',
               'BERNARD',
               'BOONE',
@@ -92,23 +92,3 @@ export function Selector(props) {
     </div>
   )
 }
-
-import { connect } from 'react-redux'
-
-import {
-  selectProfiles,
-  addProfileGroup,
-  removeProfileGroup,
-} from '../../actions'
-
-export default connect(
-  state => ({
-    personalitySelection: state.personalitySelection,
-    options: state.personalities.map(p => p.char_name).sort(),
-  }),
-  {
-    selectProfiles,
-    addProfileGroup,
-    removeProfileGroup,
-  },
-)(Selector)

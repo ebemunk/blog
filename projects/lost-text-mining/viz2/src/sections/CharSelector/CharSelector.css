@@ -58,7 +58,9 @@
 }
 
 .removeButton {
+  composes: button from 'components/ButtonGroup/ButtonGroup.css';
   height: 5.5rem;
+  padding: 0;
 
   & button {
     height: 5.5rem;
@@ -68,4 +70,9 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+}
+
+.addButton {
+  composes: button from 'components/ButtonGroup/ButtonGroup.css';
+  margin: 0;
 }

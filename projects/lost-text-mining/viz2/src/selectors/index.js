@@ -11,7 +11,7 @@ const flashes = R.path(['flashes'])
 const charCooccurrence = R.path(['charCooccurrence'])
 
 const personalities = R.path(['personalities'])
-const personalitySelection = R.path(['personalitySelection'])
+const personalitySelection = R.path(['charSelection'])
 
 export const selectedFlashes = createSelector(
   [flashes, episodeSelection],
