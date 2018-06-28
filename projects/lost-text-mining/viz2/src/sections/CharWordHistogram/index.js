@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { getCharWordFrequencies } from '../../actions'
 import fireActions from 'hoc/fireActions'
-import Labels from './Labels'
+import Legend from './Legend'
 
 export default compose(
   connect(
@@ -15,4 +15,4 @@ export default compose(
     },
   ),
   fireActions(['getCharWordFrequencies']),
-)(Labels)
+)(Legend)

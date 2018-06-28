@@ -1,0 +1,32 @@
+.legend {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+
+  & div {
+    flex-shrink: 0;
+  }
+}
+
+.legendBox {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5em;
+}
+
+.charLegend {
+  composes: legendBox;
+  background-color: #7fc97f;
+}
+
+.wordLegend {
+  composes: legendBox;
+  background-color: #beaed4;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 2px;
+}
