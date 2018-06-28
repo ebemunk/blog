@@ -3,17 +3,14 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'react-redux'
 
-import {
-  WordCount,
-  CharWordHistogram,
-  Personalities,
-  LinesPerChar,
-  EpisodeRangeSelector,
-  CharSelector,
-  CharCooccurrence,
-} from './src/sections'
-import FlashScenes from './src/sections/FlashScenes'
+import WordCount from './src/sections/WordCount'
+import CharWordHistogram from './src/sections/CharWordHistogram'
 import CountPerEpisode from './src/sections/CountPerEpisode'
+import CharSelector from './src/sections/CharSelector'
+import Personalities from './src/sections/Personalities'
+import LinesPerChar from './src/sections/LinesPerChar'
+import FlashScenes from './src/sections/FlashScenes'
+import CharCooccurrence from './src/sections/CharCooccurrence'
 
 import configureStore from './src/store'
 
@@ -35,5 +32,3 @@ render(<Personalities />, '#personality')
 render(<LinesPerChar />, '#lines-per-char')
 render(<FlashScenes />, '#flashbacks')
 // render(<CharCooccurrence />, '#char-cooccurrence')
-
-console.log('aefaefaefaefa')
