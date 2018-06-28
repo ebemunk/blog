@@ -25,15 +25,6 @@ export const flashes = (state = [], action) => {
   }
 }
 
-export const linesPerChar = (state = [], action) => {
-  switch (action.type) {
-    case 'LINES_PER_CHAR':
-      return action.payload
-    default:
-      return state
-  }
-}
-
 export const personalities = (state = [], action) => {
   switch (action.type) {
     case 'PERSONALITIES':

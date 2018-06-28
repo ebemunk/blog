@@ -21,15 +21,6 @@ export const getFlashes = () => dispatch => {
   })
 }
 
-export const getLinesPerChar = () => dispatch => {
-  const linesPerChar = require('../data/linesPerChar.json')
-
-  dispatch({
-    type: 'LINES_PER_CHAR',
-    payload: linesPerChar,
-  })
-}
-
 export const getPersonalities = () => dispatch => {
   const personalities = require('../data/personalities.json')
 
