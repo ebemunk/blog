@@ -8,6 +8,7 @@ import CharWordHistogram from 'sections/CharWordHistogram'
 import CountPerEpisode from 'sections/CountPerEpisode'
 import CharSelector from 'sections/CharSelector'
 import Personalities from 'sections/Personalities'
+import Individual from 'sections/Individual'
 import LinesPerChar from 'sections/LinesPerChar'
 import FlashScenes from 'sections/FlashScenes'
 import CharCooccurrence from 'sections/CharCooccurrence'
@@ -29,6 +30,7 @@ render(<CharWordHistogram />, '#char-word-histogram')
 render(<CountPerEpisode />, '#char-per-episode')
 render(<CharSelector />, '#personality-selector')
 render(<Personalities />, '#personality')
+render(<Individual />, '#individual')
 render(<LinesPerChar />, '#lines-per-char')
 render(<FlashScenes />, '#flashbacks')
 // render(<CharCooccurrence />, '#char-cooccurrence')

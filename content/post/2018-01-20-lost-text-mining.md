@@ -40,6 +40,12 @@ For example <a href="" onclick="charSelect_menWomen(event)">men vs women</a>, <a
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat placerat odio, a pulvinar diam congue tristique. Praesent ornare placerat sapien a pellentesque. Proin eu viverra turpis.
 
+<div id="individual" class="viz"></div>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat placerat odio, a pulvinar diam congue tristique. Praesent ornare placerat sapien a pellentesque. Proin eu viverra turpis.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat placerat odio, a pulvinar diam congue tristique. Praesent ornare placerat sapien a pellentesque. Proin eu viverra turpis.
+
 ## Speakers
 
 Pellentesque at ex et dolor mattis scelerisque. Vestibulum aliquam, nulla vel porttitor faucibus, sapien turpis feugiat augue, ac tincidunt purus sem nec nisl. Etiam quis ornare lectus. Morbi ultrices, ante vel consequat mattis, diam mauris scelerisque dui, nec tempus lectus ante eget lectus.
