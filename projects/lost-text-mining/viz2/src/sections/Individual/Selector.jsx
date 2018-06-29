@@ -4,7 +4,7 @@ import Select from 'react-select'
 import { toTitleCase } from 'utils'
 import Option from 'sections/CharSelector/Option'
 
-const Selector = ({ options, value, onChange }) => (
+const Selector = ({ options, value, onChange, ...otherProps }) => (
   <Select
     options={options.map(opt => ({
       label: toTitleCase(opt),
@@ -14,6 +14,7 @@ const Selector = ({ options, value, onChange }) => (
     value={value}
     optionComponent={Option}
     clearable={false}
+    {...otherProps}
   />
 )
 
