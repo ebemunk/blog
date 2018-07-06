@@ -11,6 +11,7 @@ export default compose(
     state => ({
       charSelection: state.charSelection,
       options: state.personalities.map(p => p.char_name).sort(),
+      personalities: state.personalities,
     }),
     {
       select,

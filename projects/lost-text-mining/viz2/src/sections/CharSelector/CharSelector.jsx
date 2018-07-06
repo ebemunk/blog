@@ -10,7 +10,14 @@ import Option from './Option'
 import css from './CharSelector.css'
 
 export default function CharSelector(props) {
-  const { charSelection, options, select, addGroup, removeGroup } = props
+  const {
+    charSelection,
+    options,
+    select,
+    addGroup,
+    removeGroup,
+    personalities,
+  } = props
 
   bindGlobal(select, removeGroup, charSelection)
 
@@ -50,12 +57,26 @@ export default function CharSelector(props) {
           </div>
         </div>
       ))}
-      <div>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
         <button
           onClick={addGroup}
           children="Add Group"
           className={classnames('button', css.addButton)}
         />
+        {charSelection.length === 1 && (
+          <button
+            onClick={() =>
+              select(
+                charSelection.length,
+                personalities
+                  .filter(p => !charSelection[0].includes(p.char_name))
+                  .map(p => p.char_name),
+              )
+            }
+            children="Add Everyone Else as Group"
+            className={classnames('button', css.addButton)}
+          />
+        )}
       </div>
     </div>
   )
