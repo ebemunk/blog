@@ -1,3 +1,13 @@
 .svg {
-  shape-rendering: crispEdges;
+  flex-shrink: 0;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.seasonLabel {
+  fill: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
 }

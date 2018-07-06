@@ -5,7 +5,6 @@ import * as d3 from 'd3'
 import css from './Season.css'
 
 export default function Season({ data, season }) {
-  // const total = data.map(ep => ep.flashbacks.map(({ chars }) => chars))
   const total = data.reduce(
     (tot, ep) =>
       tot + ep.flashbacks.reduce((subtotal, fb) => subtotal + fb.chars, 0),
@@ -16,18 +15,36 @@ export default function Season({ data, season }) {
   const scale = d3
     .scaleLinear()
     .domain([0, total])
-    .range([0, 700])
+    .range([0, 900])
 
   let x = 0
+  let acc = 0
   return data.map(episode => {
-    return (
+    const eptotal = episode.flashbacks.reduce((tot, ep) => tot + ep.chars, 0)
+    const r = (
       <React.Fragment>
         <rect
-          x={0}
+          x={scale(acc)}
           y={0}
           height={25}
-          width={scale(total)}
+          width={scale(eptotal)}
           className={css.episode}
+        />
+        <text
+          x={scale(acc)}
+          y={25}
+          dx="2px"
+          dy="1rem"
+          className={css.episodeLabel}
+        >
+          E{episode.episode}
+        </text>
+        <line
+          x1={scale(acc)}
+          x2={scale(acc)}
+          y1={25}
+          y2={30}
+          className={css.episodeLine}
         />
         {episode.flashbacks.map(ep => {
           const ret = (
@@ -48,5 +65,7 @@ export default function Season({ data, season }) {
         })}
       </React.Fragment>
     )
+    acc += eptotal
+    return r
   })
 }

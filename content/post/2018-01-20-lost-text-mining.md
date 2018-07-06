@@ -80,12 +80,6 @@ https://jezebel.com/every-single-person-on-lost-ranked-from-most-to-least-154617
 http://www.tylervigen.com/literature-statistics
 
 <pre>
-- [ ] Number of Characters per episode
-
-  - how many (which) characters appear in each episode
-
-- num scenes per ep
-
 * [ ] Word complexity per char
 
   - char word usage tendencies (do they use big words, exclams ...)
@@ -113,10 +107,6 @@ Character Mentions (line/bar chart for all seasons)
 
 - how many times char names are mentioned by others
 
-Word Map
-
-- most common / least common words
-
 Sentiment Analysis (long horizontal stacked bars)
 
 - per episode
@@ -127,10 +117,6 @@ Population (vertical bar or pie)
 - men vs women
 - any other discriminator?
 
-Flashbacks / Flashsideways (horizontal thin stacked bars)
-
-- 1 bar per ep
-- also combined % change of a part being flash/
 </pre>
 <script src="http://localhost:9001/bundle.js"></script>
 <!-- <script src="bundle.js"></script> -->
