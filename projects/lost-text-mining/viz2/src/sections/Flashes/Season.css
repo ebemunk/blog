@@ -1,0 +1,19 @@
+.flashback {
+  fill: red;
+}
+
+.flashsideways {
+  fill: green;
+}
+
+.normal {
+  fill: none;
+}
+
+/* .rect {
+  stroke: lightslategray;
+} */
+
+.episode {
+  stroke: lightslategray;
+}

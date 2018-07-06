@@ -12,15 +12,6 @@ export const selectEpisodes = selection => ({
   payload: selection,
 })
 
-export const getFlashes = () => dispatch => {
-  const flashes = require('../data/flashes.json')
-
-  dispatch({
-    type: 'FLASHES',
-    payload: flashes,
-  })
-}
-
 export const getCharCooccurrence = () => dispatch => {
   const charCooccurrence = require('../data/charCooccurrence.json')
 

@@ -1,22 +1,9 @@
 import { createSelector } from 'reselect'
 import * as R from 'ramda'
 
-import {
-  episodes,
-  episodeSelection,
-  selectedEpisodeKeys,
-} from 'store/selectors'
+import { selectedEpisodeKeys } from 'store/selectors'
 
-const flashes = R.path(['flashes'])
 const charCooccurrence = R.path(['charCooccurrence'])
-
-export const selectedFlashes = createSelector(
-  [flashes, episodeSelection],
-  (flashes, [start, end]) =>
-    R.equals([start, end], [null, null])
-      ? flashes
-      : flashes.slice(start, end + 1),
-)
 
 const pad2 = str => str.toString().padStart(2, '0')
 
