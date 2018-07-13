@@ -10,8 +10,6 @@ export default function Season({ data, season }) {
       tot + ep.flashbacks.reduce((subtotal, fb) => subtotal + fb.chars, 0),
     0,
   )
-  console.log('season', season, total)
-
   const scale = d3
     .scaleLinear()
     .domain([0, total])
@@ -22,7 +20,7 @@ export default function Season({ data, season }) {
   return data.map(episode => {
     const eptotal = episode.flashbacks.reduce((tot, ep) => tot + ep.chars, 0)
     const r = (
-      <React.Fragment>
+      <g key={`${episode.season}-${episode.episode}`}>
         <rect
           x={scale(acc)}
           y={0}
@@ -46,13 +44,14 @@ export default function Season({ data, season }) {
           y2={30}
           className={css.episodeLine}
         />
-        {episode.flashbacks.map(ep => {
+        {episode.flashbacks.map((ep, i) => {
           const ret = (
             <rect
               x={scale(x)}
               y={0}
               height={25}
               width={scale(ep.chars)}
+              key={`${episode.season}-${episode.episode}-${i}`}
               className={classnames(css.rect, {
                 [css.flashback]: ep.flashback,
                 [css.flashsideways]: ep.flashsideways,
@@ -63,7 +62,7 @@ export default function Season({ data, season }) {
           x += ep.chars
           return ret
         })}
-      </React.Fragment>
+      </g>
     )
     acc += eptotal
     return r

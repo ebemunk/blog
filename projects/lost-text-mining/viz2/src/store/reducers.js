@@ -8,6 +8,8 @@ import { reducer as linesPerChar } from './linesPerChar'
 import { reducer as charSelection } from './charSelection'
 import { reducer as personalities } from './personalities'
 import { reducer as flashes } from './flashes'
+import { reducer as sceneTone } from './sceneTone'
+import { reducer as toneSelection } from './toneSelection'
 
 const rootReducer = combineReducers({
   episodes,
@@ -20,6 +22,8 @@ const rootReducer = combineReducers({
   charSelection,
   charCooccurrence,
   countsPerEpisode,
+  sceneTone,
+  toneSelection,
 })
 
 export default rootReducer

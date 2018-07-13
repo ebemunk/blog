@@ -12,6 +12,7 @@ import Individual from 'sections/Individual'
 import LinesPerChar from 'sections/LinesPerChar'
 import FlashScenes from 'sections/FlashScenes'
 import Flashes from 'sections/Flashes'
+import SceneTone from 'sections/SceneTone'
 import CharCooccurrence from 'sections/CharCooccurrence'
 
 import configureStore from 'store'
@@ -34,4 +35,5 @@ render(<Personalities />, '#personality')
 render(<Individual />, '#individual')
 render(<LinesPerChar />, '#lines-per-char')
 render(<Flashes />, '#flashbacks')
+render(<SceneTone />, '#scene-tone')
 // render(<CharCooccurrence />, '#char-cooccurrence')

@@ -102,7 +102,26 @@ export default async function writeForViz() {
     {
       filename: 'sceneTone',
       query: queries.sceneTone(),
-      process: R.identity,
+      process: R.pipe(
+        R.groupBy(ep => `${ep.season}-${ep.episode}`),
+        Object.values,
+        R.map(scenes => {
+          let start = 0
+          return {
+            season: scenes[0].season,
+            episode: scenes[0].episode,
+            scenes: scenes.map(scene => {
+              const ret = {
+                start,
+                length: scene.length,
+                tones: scene.document_tone ? scene.document_tone.tones : [],
+              }
+              start += scene.length
+              return ret
+            }),
+          }
+        }),
+      ),
     },
     {
       filename: 'countsPerEpisode',
@@ -126,7 +145,7 @@ export default async function writeForViz() {
     },
   ]
 
-  await Promise.map([dataFiles[8]], async dataFile => {
+  await Promise.map([dataFiles[7]], async dataFile => {
     log('doing', dataFile.filename)
     const { rows } = await pool.query(dataFile.query)
     const data = dataFile.process(rows)

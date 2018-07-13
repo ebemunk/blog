@@ -61,16 +61,15 @@ export default class Individual extends React.Component {
           <button
             style={{ flexBasis: '5rem' }}
             className="button"
-            onClick={() =>
+            onClick={() => {
+              const next =
+                personalities.findIndex(p => p.char_name === char) - 1
               this.setState({
                 char:
-                  personalities[
-                    Math.abs(
-                      personalities.findIndex(p => p.char_name === char) - 1,
-                    ) % personalities.length
-                  ].char_name,
+                  personalities[next < 0 ? personalities.length - 1 : next]
+                    .char_name,
               })
-            }
+            }}
           >
             &lt; Prev
           </button>
@@ -83,7 +82,7 @@ export default class Individual extends React.Component {
           <button
             style={{ flexBasis: '5rem' }}
             className="button"
-            onClick={() =>
+            onClick={() => {
               this.setState({
                 char:
                   personalities[
@@ -91,7 +90,7 @@ export default class Individual extends React.Component {
                       personalities.length
                   ].char_name,
               })
-            }
+            }}
           >
             Next &gt;
           </button>

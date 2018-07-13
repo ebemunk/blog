@@ -1,0 +1,43 @@
+.legend {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  border: 1px solid slategray;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.box {
+  height: 2rem;
+  width: 2rem;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.selected {
+}
+
+.tone {
+  display: flex;
+  margin: 0 2rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.key {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.button {
+  composes: button from 'components/ButtonGroup/ButtonGroup.css';
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
