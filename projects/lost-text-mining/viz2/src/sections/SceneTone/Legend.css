@@ -9,6 +9,16 @@
   border: 1px solid slategray;
   border-radius: 5px;
   padding: 1rem;
+  position: relative;
+}
+
+.catLabel {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .box {
@@ -16,9 +26,6 @@
   width: 2rem;
   border-width: 2px;
   border-style: solid;
-}
-
-.selected {
 }
 
 .tone {
@@ -31,6 +38,11 @@
 .key {
   margin-left: 1rem;
   font-size: 1rem;
+  opacity: 0.5;
+
+  &.selected {
+    opacity: 1;
+  }
 }
 
 .button {

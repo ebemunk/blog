@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 
-import toneScales from './toneScales'
+import LegendKey from './LegendKey'
 
 import css from './Legend.css'
 
@@ -24,39 +24,25 @@ export function Legend({ selection, toggle, toggleAll, toggleNone }) {
       </div>
       <div className={css.legend}>
         <div className={css.category}>
+          <div className={css.catLabel}>Emotional Tone</div>
           {['anger', 'fear', 'joy', 'sadness'].map(tone => (
-            <div className={css.tone} key={tone} onClick={() => toggle(tone)}>
-              <div
-                className={classnames(css.box, {
-                  [css.selected]: selection[tone],
-                })}
-                style={{
-                  backgroundColor: selection[tone]
-                    ? toneScales[tone](1)
-                    : 'transparent',
-                  borderColor: toneScales[tone](1),
-                }}
-              />
-              <div className={css.key}>{tone}</div>
-            </div>
+            <LegendKey
+              tone={tone}
+              selection={selection}
+              tol={toggle}
+              key={tone}
+            />
           ))}
         </div>
         <div className={css.category}>
+          <div className={css.catLabel}>Language Tone</div>
           {['analytical', 'confident', 'tentative'].map(tone => (
-            <div className={css.tone} key={tone} onClick={() => toggle(tone)}>
-              <div
-                className={classnames(css.box, {
-                  [css.selected]: selection[tone],
-                })}
-                style={{
-                  backgroundColor: selection[tone]
-                    ? toneScales[tone](1)
-                    : 'transparent',
-                  borderColor: toneScales[tone](1),
-                }}
-              />
-              <div className={css.key}>{tone}</div>
-            </div>
+            <LegendKey
+              tone={tone}
+              selection={selection}
+              tol={toggle}
+              key={tone}
+            />
           ))}
         </div>
       </div>

@@ -33,6 +33,5 @@ export default compose(
     options: sortByNameCaseInsensitive(state.personalities).map(
       p => p.char_name,
     ),
-    // .sort(),
   })),
 )(Selector)

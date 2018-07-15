@@ -16,7 +16,7 @@ export default function Season({ data, season }) {
   )
   let acc = 0
 
-  return data.map(episode => {
+  return data.sort((a, b) => a.episode - b.episode).map(episode => {
     const eptotal = episode.scenes.reduce((tot, scene) => tot + scene.length, 0)
     const r = (
       <Episode

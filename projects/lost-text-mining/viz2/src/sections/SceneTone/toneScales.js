@@ -3,22 +3,22 @@ import * as d3 from 'd3'
 const angerScale = d3
   .scaleLinear()
   .domain([0.5, 1])
-  .range(['transparent', 'red'])
+  .range(['transparent', 'rgb(255,0,0)'])
 
 const fearScale = d3
   .scaleLinear()
   .domain([0.5, 1])
-  .range(['transparent', 'purple'])
+  .range(['transparent', 'rgb(255,100,255)'])
 
 const joyScale = d3
   .scaleLinear()
   .domain([0.5, 1])
-  .range(['transparent', 'yellow'])
+  .range(['transparent', 'rgb(255,255,0)'])
 
 const sadnessScale = d3
   .scaleLinear()
   .domain([0.5, 1])
-  .range(['transparent', 'blue'])
+  .range(['transparent', 'rgb(100,100,255)'])
 
 const analyticalScale = d3
   .scaleLinear()

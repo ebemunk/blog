@@ -20,9 +20,9 @@ const defaultState = {
   fear: true,
   joy: true,
   sadness: true,
-  analytical: true,
-  confident: true,
-  tentative: true,
+  analytical: false,
+  confident: false,
+  tentative: false,
 }
 
 export const reducer = reducerFromObj(defaultState, {
