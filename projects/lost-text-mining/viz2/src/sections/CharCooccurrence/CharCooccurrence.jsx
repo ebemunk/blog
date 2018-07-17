@@ -137,9 +137,9 @@ export default class CharCooccurrence extends React.Component {
     )(filteredLinks)
     // return null
     return (
-      <React.Fragment>
+      <div className={style.wrap}>
         {/* <div>Loading: {loading}</div> */}
-        <svg height={500} width={960}>
+        <svg height={500} width={960} className={style.svg}>
           <ForceGraph
             nodes={nodes}
             links={links}
@@ -164,7 +164,7 @@ export default class CharCooccurrence extends React.Component {
             )}
           </g>
         </svg>
-      </React.Fragment>
+      </div>
     )
   }
 }

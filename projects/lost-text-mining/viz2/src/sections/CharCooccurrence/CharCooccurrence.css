@@ -10,3 +10,12 @@
 .op {
   opacity: 0.2;
 }
+
+.wrap {
+  display: flex;
+  align-items: center;
+}
+
+.svg {
+  flex-shrink: 0;
+}
