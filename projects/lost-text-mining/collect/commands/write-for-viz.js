@@ -143,9 +143,19 @@ export default async function writeForViz() {
         }),
       ),
     },
+    {
+      filename: 'episodeReadingLevel',
+      query: 'select * from episode_readinglevel',
+      process: R.identity,
+    },
+    {
+      filename: 'charReadingLevel',
+      query: 'select * from char_readinglevel',
+      process: R.identity,
+    },
   ]
 
-  await Promise.map([dataFiles[7]], async dataFile => {
+  await Promise.map([dataFiles[9], dataFiles[10]], async dataFile => {
     log('doing', dataFile.filename)
     const { rows } = await pool.query(dataFile.query)
     const data = dataFile.process(rows)

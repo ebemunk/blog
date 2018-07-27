@@ -13,6 +13,8 @@ import LinesPerChar from 'sections/LinesPerChar'
 import Flashes from 'sections/Flashes'
 import SceneTone from 'sections/SceneTone'
 import CharCooccurrence from 'sections/CharCooccurrence'
+import CharReadingLevel from 'sections/CharReadingLevel'
+import EpisodeReadingLevel from 'sections/EpisodeReadingLevel'
 
 import configureStore from 'store'
 
@@ -36,3 +38,5 @@ render(<LinesPerChar />, '#lines-per-char')
 render(<Flashes />, '#flashbacks')
 render(<SceneTone />, '#scene-tone')
 render(<CharCooccurrence />, '#char-cooccurrence')
+render(<CharReadingLevel />, '#char-reading-level')
+render(<EpisodeReadingLevel />, '#episode-reading-level')

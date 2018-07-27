@@ -101,15 +101,7 @@ http://lotrproject.com/statistics/books/chapters
 https://jezebel.com/every-single-person-on-lost-ranked-from-most-to-least-1546174780 bernard vs sawyer
 http://www.tylervigen.com/literature-statistics
 
-<pre>
-* [ ] Word complexity per char
-
-  - char word usage tendencies (do they use big words, exclams ...)
-
-* [ ] Reading level
-
-  - does it change across chars? is it consistent throughout?
-
+<pre style="background: black">
 * [ ] Emotions per char
 
   - sentiment analysis on char lines?

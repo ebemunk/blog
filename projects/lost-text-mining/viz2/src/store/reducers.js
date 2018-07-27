@@ -10,6 +10,7 @@ import { reducer as personalities } from './personalities'
 import { reducer as flashes } from './flashes'
 import { reducer as sceneTone } from './sceneTone'
 import { reducer as toneSelection } from './toneSelection'
+import { reducer as readingLevel } from './readingLevel'
 
 const rootReducer = combineReducers({
   episodes,
@@ -24,6 +25,7 @@ const rootReducer = combineReducers({
   countsPerEpisode,
   sceneTone,
   toneSelection,
+  readingLevel,
 })
 
 export default rootReducer
