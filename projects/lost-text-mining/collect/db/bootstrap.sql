@@ -46,3 +46,16 @@ create table word_count (
 	total int,
 	uniq int
 );
+
+drop table episode_readinglevel;
+create table episode_readinglevel (
+	season int,
+	episode int,
+	score int
+);
+
+drop table char_readinglevel;
+create table char_readinglevel (
+	char_name character varying,
+	score int
+);

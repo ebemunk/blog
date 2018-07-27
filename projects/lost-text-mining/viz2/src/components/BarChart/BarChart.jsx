@@ -3,7 +3,7 @@ import * as d3 from 'd3'
 import classnames from 'classnames'
 import { NodeGroup } from 'react-move'
 
-import { Axis } from '../'
+import Axis from '../Axis'
 import Interaction from './Interaction'
 
 import style from './BarChart.css'
@@ -71,8 +71,8 @@ export default class BarChart extends Component {
       padding,
       data,
       linearAxisProps,
-			bandAxisProps,
-			interactionProps,
+      bandAxisProps,
+      interactionProps,
       barStyle,
     } = this.props
 
@@ -135,7 +135,10 @@ export default class BarChart extends Component {
               return (
                 <g>
                   {nodeData.map(node => {
-                    const { key, data: { value } } = node
+                    const {
+                      key,
+                      data: { value },
+                    } = node
                     const { y, height } = node.state
                     return (
                       <rect
@@ -157,11 +160,11 @@ export default class BarChart extends Component {
             polygons={voro.polygons(data)}
             scales={{ x: bandScale, y: linearScale }}
             width={chartWidth}
-						height={chartHeight}
-						xTickFormat={bandAxisProps.tickFormat}
-						yTickFormat={linearAxisProps.tickFormat}
-						bandwidth={bandScale.bandwidth()}
-						{...interactionProps}
+            height={chartHeight}
+            xTickFormat={bandAxisProps.tickFormat}
+            yTickFormat={linearAxisProps.tickFormat}
+            bandwidth={bandScale.bandwidth()}
+            {...interactionProps}
           />
         </g>
       </svg>

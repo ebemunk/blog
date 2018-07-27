@@ -9,7 +9,11 @@ image = "img/visual-look.png"
 
 I wanted to do something like this for a long time, and finally I think it's at a point where I can release this into the wild.
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit, diam et luctus feugiat, tellus ante lacinia tortor, a fringilla risus lorem at mauris.
+
 ## Meta
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit, diam et luctus feugiat, tellus ante lacinia tortor, a fringilla risus lorem at mauris.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin hendrerit, diam et luctus feugiat, tellus ante lacinia tortor, a fringilla risus lorem at mauris.
 
@@ -76,6 +80,18 @@ Pellentesque at ex et dolor mattis scelerisque. Vestibulum aliquam, nulla vel po
 
 Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
 
+## Reading Level
+
+Pellentesque at ex et dolor mattis scelerisque. Vestibulum aliquam, nulla vel porttitor faucibus, sapien turpis feugiat augue, ac tincidunt purus sem nec nisl. Etiam quis ornare lectus.
+
+<div id="episode-reading-level" class="viz"></div>
+
+Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+
+<div id="char-reading-level" class="viz"></div>
+
+Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+
 ## Refs
 
 https://en.wikipedia.org/wiki/Big_Five_personality_traits
@@ -112,11 +128,6 @@ s6 1/2 17/18
 Character Mentions (line/bar chart for all seasons)
 
 - how many times char names are mentioned by others
-
-Sentiment Analysis (long horizontal stacked bars)
-
-- per episode
-- filtered by ep selector
 
 Population (vertical bar or pie)
 

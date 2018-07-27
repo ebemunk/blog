@@ -3,7 +3,7 @@ import * as d3 from 'd3'
 import * as R from 'ramda'
 import classnames from 'classnames'
 
-import { Brush } from '../../components'
+import Brush from '../Brush'
 import { seasonColor, SEASONS } from 'utils'
 
 import style from './EpisodeRangeSelector.css'
