@@ -1,0 +1,4062 @@
+{
+  "HURLEY": [
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 1,
+      "count": "6"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 2,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 3,
+      "count": "5"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 4,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 5,
+      "count": "2"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 6,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 7,
+      "count": "10"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 8,
+      "count": "2"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 9,
+      "count": "6"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 10,
+      "count": "6"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 11,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 12,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 13,
+      "count": "6"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 14,
+      "count": "2"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 15,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 16,
+      "count": "2"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 17,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 18,
+      "count": "19"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 19,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 20,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 21,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 22,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 23,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 1,
+      "episode": 24,
+      "count": "11"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 1,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 2,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 3,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 4,
+      "count": "19"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 5,
+      "count": "2"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 6,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 8,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 9,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 10,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 11,
+      "count": "2"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 12,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 13,
+      "count": "2"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 14,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 15,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 16,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 17,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 18,
+      "count": "16"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 19,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 20,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 21,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 22,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 2,
+      "episode": 23,
+      "count": "7"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 3,
+      "count": "5"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 4,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 5,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 8,
+      "count": "5"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 10,
+      "count": "17"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 11,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 14,
+      "count": "12"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 15,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 16,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 17,
+      "count": "13"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 18,
+      "count": "5"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 19,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 20,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 21,
+      "count": "5"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 3,
+      "episode": 22,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 1,
+      "count": "15"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 2,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 3,
+      "count": "5"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 4,
+      "count": "2"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 6,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 7,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 8,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 9,
+      "count": "6"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 10,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 11,
+      "count": "7"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 12,
+      "count": "7"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 4,
+      "episode": 13,
+      "count": "9"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 1,
+      "count": "2"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 2,
+      "count": "9"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 4,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 6,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 7,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 9,
+      "count": "7"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 10,
+      "count": "2"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 11,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 13,
+      "count": "8"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 14,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 15,
+      "count": "2"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 5,
+      "episode": 16,
+      "count": "5"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 1,
+      "count": "15"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 2,
+      "count": "4"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 3,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 4,
+      "count": "10"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 6,
+      "count": "5"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 8,
+      "count": "3"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 9,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 10,
+      "count": "1"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 11,
+      "count": "15"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 12,
+      "count": "6"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 13,
+      "count": "5"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 15,
+      "count": "6"
+    },
+    {
+      "char_name": "HURLEY",
+      "season": 6,
+      "episode": 16,
+      "count": "13"
+    }
+  ],
+  "JACK": [
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 1,
+      "count": "12"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 2,
+      "count": "7"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 3,
+      "count": "9"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 4,
+      "count": "8"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 5,
+      "count": "10"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 6,
+      "count": "10"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 7,
+      "count": "7"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 8,
+      "count": "10"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 9,
+      "count": "6"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 10,
+      "count": "7"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 11,
+      "count": "15"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 12,
+      "count": "7"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 13,
+      "count": "5"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 14,
+      "count": "3"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 15,
+      "count": "12"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 16,
+      "count": "2"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 17,
+      "count": "5"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 18,
+      "count": "9"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 19,
+      "count": "5"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 20,
+      "count": "17"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 21,
+      "count": "7"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 22,
+      "count": "9"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 23,
+      "count": "11"
+    },
+    {
+      "char_name": "JACK",
+      "season": 1,
+      "episode": 24,
+      "count": "10"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 1,
+      "count": "15"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 2,
+      "count": "3"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 3,
+      "count": "9"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 4,
+      "count": "5"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 5,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 8,
+      "count": "7"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 9,
+      "count": "8"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 10,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 11,
+      "count": "20"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 12,
+      "count": "2"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 13,
+      "count": "9"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 14,
+      "count": "5"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 15,
+      "count": "8"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 16,
+      "count": "5"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 17,
+      "count": "8"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 18,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 19,
+      "count": "7"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 20,
+      "count": "7"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 21,
+      "count": "5"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 22,
+      "count": "9"
+    },
+    {
+      "char_name": "JACK",
+      "season": 2,
+      "episode": 23,
+      "count": "7"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 1,
+      "count": "12"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 2,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 4,
+      "count": "4"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 5,
+      "count": "4"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 6,
+      "count": "6"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 7,
+      "count": "12"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 9,
+      "count": "15"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 13,
+      "count": "5"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 14,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 15,
+      "count": "2"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 16,
+      "count": "8"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 17,
+      "count": "4"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 18,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 19,
+      "count": "2"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 20,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 21,
+      "count": "6"
+    },
+    {
+      "char_name": "JACK",
+      "season": 3,
+      "episode": 22,
+      "count": "20"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 1,
+      "count": "8"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 2,
+      "count": "10"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 3,
+      "count": "6"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 4,
+      "count": "5"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 5,
+      "count": "4"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 6,
+      "count": "8"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 7,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 9,
+      "count": "3"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 10,
+      "count": "14"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 11,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 12,
+      "count": "8"
+    },
+    {
+      "char_name": "JACK",
+      "season": 4,
+      "episode": 13,
+      "count": "14"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 1,
+      "count": "3"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 2,
+      "count": "6"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 4,
+      "count": "10"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 5,
+      "count": "4"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 6,
+      "count": "15"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 7,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 9,
+      "count": "7"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 10,
+      "count": "3"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 11,
+      "count": "5"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 13,
+      "count": "2"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 14,
+      "count": "9"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 15,
+      "count": "7"
+    },
+    {
+      "char_name": "JACK",
+      "season": 5,
+      "episode": 16,
+      "count": "13"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 1,
+      "count": "16"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 2,
+      "count": "9"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 4,
+      "count": "17"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 6,
+      "count": "5"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 8,
+      "count": "2"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 9,
+      "count": "4"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 10,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 11,
+      "count": "6"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 12,
+      "count": "13"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 13,
+      "count": "13"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 14,
+      "count": "1"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 15,
+      "count": "9"
+    },
+    {
+      "char_name": "JACK",
+      "season": 6,
+      "episode": 16,
+      "count": "22"
+    }
+  ],
+  "SAYID": [
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 1,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 2,
+      "count": "6"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 3,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 4,
+      "count": "5"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 5,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 6,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 7,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 8,
+      "count": "7"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 9,
+      "count": "16"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 10,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 11,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 12,
+      "count": "5"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 13,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 14,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 15,
+      "count": "6"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 16,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 17,
+      "count": "5"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 18,
+      "count": "9"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 20,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 21,
+      "count": "21"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 22,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 23,
+      "count": "5"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 1,
+      "episode": 24,
+      "count": "8"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 1,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 3,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 4,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 6,
+      "count": "6"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 8,
+      "count": "5"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 9,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 11,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 12,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 13,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 14,
+      "count": "19"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 16,
+      "count": "5"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 17,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 18,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 20,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 22,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 2,
+      "episode": 23,
+      "count": "7"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 2,
+      "count": "6"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 5,
+      "count": "5"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 6,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 8,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 10,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 11,
+      "count": "15"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 12,
+      "count": "6"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 13,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 15,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 16,
+      "count": "5"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 19,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 20,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 21,
+      "count": "6"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 3,
+      "episode": 22,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 4,
+      "episode": 1,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 4,
+      "episode": 2,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 4,
+      "episode": 3,
+      "count": "16"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 4,
+      "episode": 5,
+      "count": "10"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 4,
+      "episode": 7,
+      "count": "7"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 4,
+      "episode": 8,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 4,
+      "episode": 9,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 4,
+      "episode": 11,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 4,
+      "episode": 12,
+      "count": "6"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 4,
+      "episode": 13,
+      "count": "8"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 5,
+      "episode": 1,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 5,
+      "episode": 2,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 5,
+      "episode": 4,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 5,
+      "episode": 5,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 5,
+      "episode": 7,
+      "count": "2"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 5,
+      "episode": 9,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 5,
+      "episode": 10,
+      "count": "16"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 5,
+      "episode": 15,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 5,
+      "episode": 16,
+      "count": "7"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 1,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 2,
+      "count": "5"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 4,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 5,
+      "count": "16"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 7,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 9,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 10,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 11,
+      "count": "3"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 12,
+      "count": "4"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 13,
+      "count": "6"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 15,
+      "count": "1"
+    },
+    {
+      "char_name": "SAYID",
+      "season": 6,
+      "episode": 16,
+      "count": "2"
+    }
+  ],
+  "CHARLIE": [
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 1,
+      "count": "11"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 2,
+      "count": "6"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 3,
+      "count": "4"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 4,
+      "count": "5"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 5,
+      "count": "5"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 6,
+      "count": "6"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 7,
+      "count": "20"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 8,
+      "count": "4"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 9,
+      "count": "4"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 10,
+      "count": "12"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 11,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 12,
+      "count": "3"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 13,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 14,
+      "count": "5"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 15,
+      "count": "18"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 16,
+      "count": "4"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 17,
+      "count": "4"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 18,
+      "count": "8"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 20,
+      "count": "5"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 21,
+      "count": "6"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 22,
+      "count": "3"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 23,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 1,
+      "episode": 24,
+      "count": "7"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 1,
+      "count": "3"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 2,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 4,
+      "count": "4"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 6,
+      "count": "3"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 8,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 9,
+      "count": "2"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 10,
+      "count": "10"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 11,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 12,
+      "count": "17"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 13,
+      "count": "2"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 14,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 16,
+      "count": "4"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 17,
+      "count": "2"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 18,
+      "count": "3"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 19,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 21,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 22,
+      "count": "3"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 2,
+      "episode": 23,
+      "count": "10"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 3,
+      "count": "14"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 4,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 5,
+      "count": "2"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 8,
+      "count": "8"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 10,
+      "count": "5"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 11,
+      "count": "2"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 12,
+      "count": "6"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 14,
+      "count": "4"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 15,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 16,
+      "count": "4"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 17,
+      "count": "12"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 18,
+      "count": "5"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 19,
+      "count": "2"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 20,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 21,
+      "count": "15"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 3,
+      "episode": 22,
+      "count": "8"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 4,
+      "episode": 1,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 5,
+      "episode": 12,
+      "count": "1"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 6,
+      "episode": 1,
+      "count": "2"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 6,
+      "episode": 10,
+      "count": "3"
+    },
+    {
+      "char_name": "CHARLIE",
+      "season": 6,
+      "episode": 16,
+      "count": "3"
+    }
+  ],
+  "KATE": [
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 1,
+      "count": "9"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 2,
+      "count": "9"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 3,
+      "count": "10"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 4,
+      "count": "11"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 5,
+      "count": "6"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 6,
+      "count": "8"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 7,
+      "count": "9"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 8,
+      "count": "8"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 9,
+      "count": "4"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 10,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 11,
+      "count": "10"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 12,
+      "count": "13"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 13,
+      "count": "4"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 14,
+      "count": "3"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 15,
+      "count": "3"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 16,
+      "count": "6"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 17,
+      "count": "3"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 18,
+      "count": "1"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 19,
+      "count": "5"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 20,
+      "count": "9"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 21,
+      "count": "6"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 22,
+      "count": "18"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 23,
+      "count": "5"
+    },
+    {
+      "char_name": "KATE",
+      "season": 1,
+      "episode": 24,
+      "count": "9"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 1,
+      "count": "5"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 2,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 3,
+      "count": "4"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 4,
+      "count": "3"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 5,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 8,
+      "count": "6"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 9,
+      "count": "13"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 10,
+      "count": "1"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 11,
+      "count": "5"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 12,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 13,
+      "count": "7"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 15,
+      "count": "12"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 16,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 17,
+      "count": "3"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 18,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 19,
+      "count": "5"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 20,
+      "count": "6"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 21,
+      "count": "5"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 22,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 2,
+      "episode": 23,
+      "count": "6"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 1,
+      "count": "4"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 2,
+      "count": "4"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 4,
+      "count": "8"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 6,
+      "count": "16"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 7,
+      "count": "8"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 9,
+      "count": "5"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 10,
+      "count": "3"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 11,
+      "count": "8"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 12,
+      "count": "7"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 13,
+      "count": "4"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 14,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 15,
+      "count": "16"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 16,
+      "count": "4"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 17,
+      "count": "3"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 18,
+      "count": "1"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 19,
+      "count": "3"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 20,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 21,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 3,
+      "episode": 22,
+      "count": "8"
+    },
+    {
+      "char_name": "KATE",
+      "season": 4,
+      "episode": 1,
+      "count": "6"
+    },
+    {
+      "char_name": "KATE",
+      "season": 4,
+      "episode": 2,
+      "count": "8"
+    },
+    {
+      "char_name": "KATE",
+      "season": 4,
+      "episode": 3,
+      "count": "7"
+    },
+    {
+      "char_name": "KATE",
+      "season": 4,
+      "episode": 4,
+      "count": "17"
+    },
+    {
+      "char_name": "KATE",
+      "season": 4,
+      "episode": 6,
+      "count": "4"
+    },
+    {
+      "char_name": "KATE",
+      "season": 4,
+      "episode": 7,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 4,
+      "episode": 9,
+      "count": "3"
+    },
+    {
+      "char_name": "KATE",
+      "season": 4,
+      "episode": 10,
+      "count": "10"
+    },
+    {
+      "char_name": "KATE",
+      "season": 4,
+      "episode": 12,
+      "count": "7"
+    },
+    {
+      "char_name": "KATE",
+      "season": 4,
+      "episode": 13,
+      "count": "10"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 1,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 2,
+      "count": "4"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 4,
+      "count": "10"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 5,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 6,
+      "count": "6"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 7,
+      "count": "1"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 9,
+      "count": "4"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 10,
+      "count": "4"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 11,
+      "count": "19"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 13,
+      "count": "3"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 14,
+      "count": "7"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 15,
+      "count": "5"
+    },
+    {
+      "char_name": "KATE",
+      "season": 5,
+      "episode": 16,
+      "count": "9"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 1,
+      "count": "14"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 2,
+      "count": "16"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 4,
+      "count": "1"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 5,
+      "count": "6"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 7,
+      "count": "7"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 9,
+      "count": "2"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 11,
+      "count": "1"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 12,
+      "count": "6"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 13,
+      "count": "5"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 14,
+      "count": "1"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 15,
+      "count": "7"
+    },
+    {
+      "char_name": "KATE",
+      "season": 6,
+      "episode": 16,
+      "count": "17"
+    }
+  ],
+  "SAWYER": [
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 1,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 2,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 3,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 4,
+      "count": "3"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 5,
+      "count": "3"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 6,
+      "count": "2"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 7,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 8,
+      "count": "14"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 9,
+      "count": "3"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 10,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 11,
+      "count": "2"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 12,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 13,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 14,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 15,
+      "count": "3"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 16,
+      "count": "14"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 17,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 18,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 19,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 20,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 21,
+      "count": "3"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 22,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 23,
+      "count": "7"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 1,
+      "episode": 24,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 2,
+      "count": "10"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 3,
+      "count": "3"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 4,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 5,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 6,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 7,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 9,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 10,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 11,
+      "count": "10"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 12,
+      "count": "2"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 13,
+      "count": "18"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 14,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 15,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 16,
+      "count": "2"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 17,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 18,
+      "count": "3"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 19,
+      "count": "2"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 20,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 21,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 22,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 2,
+      "episode": 23,
+      "count": "7"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 1,
+      "count": "3"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 2,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 4,
+      "count": "17"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 6,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 7,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 9,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 10,
+      "count": "9"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 11,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 12,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 14,
+      "count": "11"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 15,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 16,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 17,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 19,
+      "count": "9"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 20,
+      "count": "3"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 21,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 3,
+      "episode": 22,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 4,
+      "episode": 1,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 4,
+      "episode": 2,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 4,
+      "episode": 3,
+      "count": "2"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 4,
+      "episode": 4,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 4,
+      "episode": 6,
+      "count": "1"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 4,
+      "episode": 8,
+      "count": "2"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 4,
+      "episode": 9,
+      "count": "11"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 4,
+      "episode": 10,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 4,
+      "episode": 12,
+      "count": "2"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 4,
+      "episode": 13,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 1,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 2,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 3,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 4,
+      "count": "7"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 5,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 8,
+      "count": "22"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 9,
+      "count": "10"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 10,
+      "count": "7"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 11,
+      "count": "8"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 13,
+      "count": "2"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 14,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 15,
+      "count": "5"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 5,
+      "episode": 16,
+      "count": "11"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 6,
+      "episode": 1,
+      "count": "12"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 6,
+      "episode": 2,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 6,
+      "episode": 3,
+      "count": "7"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 6,
+      "episode": 7,
+      "count": "17"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 6,
+      "episode": 9,
+      "count": "4"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 6,
+      "episode": 11,
+      "count": "2"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 6,
+      "episode": 12,
+      "count": "9"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 6,
+      "episode": 13,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 6,
+      "episode": 15,
+      "count": "6"
+    },
+    {
+      "char_name": "SAWYER",
+      "season": 6,
+      "episode": 16,
+      "count": "17"
+    }
+  ],
+  "LOCKE": [
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 1,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 2,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 3,
+      "count": "2"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 4,
+      "count": "9"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 5,
+      "count": "3"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 6,
+      "count": "7"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 7,
+      "count": "5"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 8,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 9,
+      "count": "2"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 10,
+      "count": "2"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 11,
+      "count": "9"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 12,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 13,
+      "count": "8"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 14,
+      "count": "8"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 15,
+      "count": "10"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 16,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 17,
+      "count": "3"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 18,
+      "count": "3"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 19,
+      "count": "25"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 21,
+      "count": "8"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 22,
+      "count": "5"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 23,
+      "count": "6"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 1,
+      "episode": 24,
+      "count": "12"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 1,
+      "count": "7"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 2,
+      "count": "5"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 3,
+      "count": "14"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 4,
+      "count": "3"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 5,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 6,
+      "count": "3"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 8,
+      "count": "4"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 9,
+      "count": "5"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 10,
+      "count": "2"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 11,
+      "count": "10"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 12,
+      "count": "5"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 13,
+      "count": "6"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 14,
+      "count": "6"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 15,
+      "count": "7"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 16,
+      "count": "5"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 17,
+      "count": "16"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 18,
+      "count": "2"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 19,
+      "count": "4"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 20,
+      "count": "6"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 21,
+      "count": "9"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 22,
+      "count": "2"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 2,
+      "episode": 23,
+      "count": "13"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 3,
+      "count": "17"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 5,
+      "count": "9"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 6,
+      "count": "3"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 8,
+      "count": "2"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 10,
+      "count": "2"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 11,
+      "count": "8"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 12,
+      "count": "5"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 13,
+      "count": "18"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 14,
+      "count": "4"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 15,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 19,
+      "count": "15"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 20,
+      "count": "8"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 22,
+      "count": "2"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 4,
+      "episode": 1,
+      "count": "5"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 4,
+      "episode": 2,
+      "count": "7"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 4,
+      "episode": 3,
+      "count": "3"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 4,
+      "episode": 4,
+      "count": "6"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 4,
+      "episode": 6,
+      "count": "4"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 4,
+      "episode": 8,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 4,
+      "episode": 9,
+      "count": "11"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 4,
+      "episode": 11,
+      "count": "10"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 4,
+      "episode": 12,
+      "count": "3"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 4,
+      "episode": 13,
+      "count": "8"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 5,
+      "episode": 1,
+      "count": "4"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 5,
+      "episode": 2,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 5,
+      "episode": 3,
+      "count": "5"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 5,
+      "episode": 4,
+      "count": "6"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 5,
+      "episode": 5,
+      "count": "6"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 5,
+      "episode": 7,
+      "count": "21"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 5,
+      "episode": 8,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 5,
+      "episode": 11,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 5,
+      "episode": 12,
+      "count": "10"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 5,
+      "episode": 15,
+      "count": "6"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 5,
+      "episode": 16,
+      "count": "6"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 1,
+      "count": "6"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 3,
+      "count": "9"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 4,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 5,
+      "count": "3"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 6,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 7,
+      "count": "6"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 9,
+      "count": "7"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 11,
+      "count": "5"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 12,
+      "count": "11"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 13,
+      "count": "4"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 14,
+      "count": "1"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 15,
+      "count": "4"
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 6,
+      "episode": 16,
+      "count": "14"
+    }
+  ],
+  "BEN": [
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 2,
+      "count": "2"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 4,
+      "count": "8"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 5,
+      "count": "3"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 6,
+      "count": "4"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 7,
+      "count": "2"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 9,
+      "count": "1"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 13,
+      "count": "9"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 14,
+      "count": "1"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 16,
+      "count": "7"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 19,
+      "count": "4"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 20,
+      "count": "16"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 21,
+      "count": "1"
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 22,
+      "count": "9"
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 1,
+      "count": "4"
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 2,
+      "count": "2"
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 3,
+      "count": "4"
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 4,
+      "count": "2"
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 6,
+      "count": "11"
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 8,
+      "count": "3"
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 9,
+      "count": "15"
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 11,
+      "count": "7"
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 12,
+      "count": "3"
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 13,
+      "count": "9"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 1,
+      "count": "3"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 2,
+      "count": "5"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 4,
+      "count": "5"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 5,
+      "count": "4"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 6,
+      "count": "6"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 7,
+      "count": "2"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 9,
+      "count": "3"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 10,
+      "count": "4"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 11,
+      "count": "3"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 12,
+      "count": "18"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 15,
+      "count": "6"
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 16,
+      "count": "5"
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 1,
+      "count": "4"
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 3,
+      "count": "4"
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 5,
+      "count": "2"
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 6,
+      "count": "15"
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 8,
+      "count": "1"
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 9,
+      "count": "4"
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 11,
+      "count": "4"
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 12,
+      "count": "1"
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 15,
+      "count": "9"
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 16,
+      "count": "11"
+    }
+  ]
+}

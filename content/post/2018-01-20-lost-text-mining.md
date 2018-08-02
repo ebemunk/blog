@@ -92,14 +92,26 @@ Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et,
 
 Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
 
+## Char Appearancez
+
+Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+
+<div id="char-appearance" class="viz"></div>
+
+Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+
 ## Refs
 
 https://en.wikipedia.org/wiki/Big_Five_personality_traits
 https://console.bluemix.net/docs/services/personality-insights/science.html#science
+https://console.bluemix.net/docs/services/tone-analyzer/using-tone.html#using-the-general-purpose-endpoint
 http://lotrproject.com/statistics/books/sentimentanalysis
 http://lotrproject.com/statistics/books/chapters
 https://jezebel.com/every-single-person-on-lost-ranked-from-most-to-least-1546174780 bernard vs sawyer
 http://www.tylervigen.com/literature-statistics
+https://github.com/shivam5992/textstat
+http://www.neoformix.com/2013/NovelViews.html
+http://www.chrisharrison.net/index.php/Visualizations/Welcome
 
 <pre style="background: black">
 * [ ] Emotions per char

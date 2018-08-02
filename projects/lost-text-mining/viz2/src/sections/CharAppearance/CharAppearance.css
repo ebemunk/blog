@@ -1,0 +1,26 @@
+.line {
+  fill: none;
+  stroke: white;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+  cursor: pointer;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.xAxis {
+  & :global(.tick) text {
+    text-anchor: start;
+  }
+}

@@ -1,31 +1,33 @@
 import { combineReducers } from 'redux'
 
 import { episodes, episodeSelection, charCooccurrence } from '../reducers'
-import { reducer as countsPerEpisode } from './countsPerEpisode'
-import { reducer as wordCount } from './wordCount'
-import { reducer as charWordFrequencies } from './charWordFrequencies'
-import { reducer as linesPerChar } from './linesPerChar'
+import { reducer as charAppearance } from './charAppearance'
 import { reducer as charSelection } from './charSelection'
-import { reducer as personalities } from './personalities'
+import { reducer as charWordFrequencies } from './charWordFrequencies'
+import { reducer as countsPerEpisode } from './countsPerEpisode'
 import { reducer as flashes } from './flashes'
+import { reducer as linesPerChar } from './linesPerChar'
+import { reducer as personalities } from './personalities'
+import { reducer as readingLevel } from './readingLevel'
 import { reducer as sceneTone } from './sceneTone'
 import { reducer as toneSelection } from './toneSelection'
-import { reducer as readingLevel } from './readingLevel'
+import { reducer as wordCount } from './wordCount'
 
 const rootReducer = combineReducers({
+  charAppearance,
+  charCooccurrence,
+  charSelection,
+  charWordFrequencies,
+  countsPerEpisode,
   episodes,
   episodeSelection,
-  wordCount,
   flashes,
   linesPerChar,
-  charWordFrequencies,
   personalities,
-  charSelection,
-  charCooccurrence,
-  countsPerEpisode,
+  readingLevel,
   sceneTone,
   toneSelection,
-  readingLevel,
+  wordCount,
 })
 
 export default rootReducer

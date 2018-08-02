@@ -15,6 +15,7 @@ import SceneTone from 'sections/SceneTone'
 import CharCooccurrence from 'sections/CharCooccurrence'
 import CharReadingLevel from 'sections/CharReadingLevel'
 import EpisodeReadingLevel from 'sections/EpisodeReadingLevel'
+import CharAppearance from 'sections/CharAppearance'
 
 import configureStore from 'store'
 
@@ -40,3 +41,4 @@ render(<SceneTone />, '#scene-tone')
 render(<CharCooccurrence />, '#char-cooccurrence')
 render(<CharReadingLevel />, '#char-reading-level')
 render(<EpisodeReadingLevel />, '#episode-reading-level')
+render(<CharAppearance />, '#char-appearance')

@@ -15,10 +15,11 @@ export default async function writeForViz() {
     {
       filename: 'episodes',
       query: queries.allEpisodes(),
-      process: R.addIndex(R.map)(({ season, episode }) => ({
+      process: R.addIndex(R.map)(({ season, episode }, index) => ({
         season,
         episode,
         key: episodeKey(season, episode),
+        index,
       })),
     },
     {
@@ -153,9 +154,30 @@ export default async function writeForViz() {
       query: 'select * from char_readinglevel',
       process: R.identity,
     },
+    {
+      filename: 'charAppearance',
+      query: `
+        select char_name, season, episode, count(*) from (
+          select char_name, season, episode
+          from dialog
+          where type='dialog' and
+          char_name in (
+            select char_name from total_lines_by_char limit 8
+          )
+          group by season, episode, scene, char_name
+          order by season, episode
+        ) t
+        group by char_name, season, episode
+        order by season, episode
+      `,
+      process: R.pipe(
+        R.groupBy(r => r.char_name),
+        // R.map(R.map(rr => +rr.count)),
+      ),
+    },
   ]
 
-  await Promise.map([dataFiles[9], dataFiles[10]], async dataFile => {
+  await Promise.map([dataFiles[11]], async dataFile => {
     log('doing', dataFile.filename)
     const { rows } = await pool.query(dataFile.query)
     const data = dataFile.process(rows)
