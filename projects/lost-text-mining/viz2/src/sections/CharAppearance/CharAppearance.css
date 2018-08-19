@@ -5,7 +5,7 @@
   transition: opacity 300ms;
 }
 
-.selected {
+.highlighted {
   opacity: 1;
 }
 
@@ -21,7 +21,7 @@
   opacity: 0.7;
   cursor: pointer;
 
-  &.active {
+  &.highlighted {
     opacity: 1;
   }
 }

@@ -10,7 +10,10 @@ export default compose(
   hot(module),
   connect(
     state => ({
-      data: state.charAppearance,
+      data: {
+        appearances: state.charAppearance.appearances,
+        mentions: state.charAppearance.mentions,
+      },
       episodes: state.episodes,
     }),
     {

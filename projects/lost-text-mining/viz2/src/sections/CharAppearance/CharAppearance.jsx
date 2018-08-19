@@ -4,6 +4,9 @@ import * as R from 'ramda'
 import classnames from 'classnames'
 
 import Axis from 'components/Axis'
+import ButtonGroup from 'components/ButtonGroup'
+
+import { MAIN_CHARS } from 'utils'
 
 import css from './CharAppearance.css'
 
@@ -11,13 +14,15 @@ export const charColor = d3.scaleOrdinal(d3.schemeCategory10)
 
 export default class CharAppearance extends React.Component {
   state = {
-    selected: 'JACK',
+    highlighted: 'JACK',
+    dataType: 'appearances',
   }
 
   render() {
     const { data, width, height, padding, episodes } = this.props
+    const { dataType, highlighted } = this.state
 
-    const charNames = Object.keys(data)
+    const charNames = Object.keys(data.appearances)
 
     if (!episodes.length || !charNames.length) return null
 
@@ -26,29 +31,38 @@ export default class CharAppearance extends React.Component {
       .domain([0, 113])
       .range([0, width - padding.left - padding.right])
 
+    const yDomain = R.pipe(
+      R.map(R.map(d => d.count)),
+      R.map(R.reduce(R.max, 0)),
+      R.values,
+      R.reduce(R.max, 0),
+    )(data[dataType])
+
+    console.log(yDomain, 'yDomain')
+
     const y2 = d3
       .scaleLinear()
-      .domain([0, 25])
+      .domain([0, yDomain])
       .range([height - padding.top - padding.bottom, 0])
 
     const line = d3
       .line()
       .x(d => x(d.x))
       .y(d => y2(d.y))
-      .curve(d3.curveBasis)
+    // .curve(d3.curveBasis)
 
     return (
       <React.Fragment>
         <div className={css.legend}>
-          {charNames.map(charName => (
+          {MAIN_CHARS.map(charName => (
             <div
               key={charName}
               className={classnames(css.legendItem, {
-                [css.active]: this.state.selected === charName,
+                [css.highlighted]: highlighted === charName,
               })}
               onClick={() =>
                 this.setState({
-                  selected: charName === this.state.selected ? null : charName,
+                  highlighted: charName === highlighted ? null : charName,
                 })
               }
             >
@@ -66,15 +80,15 @@ export default class CharAppearance extends React.Component {
         </div>
         <svg width={width} height={height}>
           <g transform={`translate(${padding.left}, ${padding.top})`}>
-            {Object.keys(data).map(charName => (
+            {MAIN_CHARS.map(charName => (
               <path
                 key={charName}
                 className={classnames(css.line, {
-                  [css.selected]: this.state.selected === charName,
+                  [css.highlighted]: highlighted === charName,
                 })}
                 d={line(
                   d3.range(114).map(k => {
-                    const val = data[charName].find(
+                    const val = data[dataType][charName].find(
                       vals =>
                         vals.season === episodes[k].season &&
                         vals.episode === episodes[k].episode,
@@ -104,6 +118,15 @@ export default class CharAppearance extends React.Component {
             <Axis scale={y2} orientation="left" />
           </g>
         </svg>
+
+        <ButtonGroup
+          options={[
+            { name: 'Appearances', value: 'appearances' },
+            { name: 'Mentions', value: 'mentions' },
+          ]}
+          onChange={dataType => this.setState({ dataType })}
+          selected={dataType}
+        />
       </React.Fragment>
     )
   }

@@ -92,7 +92,7 @@ Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et,
 
 Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
 
-## Character Appearances
+## Character Popularity
 
 Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
 
