@@ -11,7 +11,7 @@ export const charColor = d3.scaleOrdinal(d3.schemeCategory10)
 
 export default class CharAppearance extends React.Component {
   state = {
-    selected: {},
+    selected: 'JACK',
   }
 
   render() {
@@ -44,14 +44,11 @@ export default class CharAppearance extends React.Component {
             <div
               key={charName}
               className={classnames(css.legendItem, {
-                [css.active]: this.state.selected[charName],
+                [css.active]: this.state.selected === charName,
               })}
               onClick={() =>
                 this.setState({
-                  selected: {
-                    ...this.state.selected,
-                    [charName]: !this.state.selected[charName],
-                  },
+                  selected: charName === this.state.selected ? null : charName,
                 })
               }
             >
@@ -69,32 +66,31 @@ export default class CharAppearance extends React.Component {
         </div>
         <svg width={width} height={height}>
           <g transform={`translate(${padding.left}, ${padding.top})`}>
-            {Object.keys(this.state.selected).map(
-              charName =>
-                this.state.selected[charName] && (
-                  <path
-                    key={charName}
-                    className={css.line}
-                    d={line(
-                      d3.range(114).map(k => {
-                        const val = data[charName].find(
-                          vals =>
-                            vals.season === episodes[k].season &&
-                            vals.episode === episodes[k].episode,
-                        )
-                        return {
-                          x: k,
-                          y: val ? +val.count : 0,
-                        }
-                      }),
-                    )}
-                    style={{
-                      stroke: charColor(charName),
-                      strokeWidth: 2,
-                    }}
-                  />
-                ),
-            )}
+            {Object.keys(data).map(charName => (
+              <path
+                key={charName}
+                className={classnames(css.line, {
+                  [css.selected]: this.state.selected === charName,
+                })}
+                d={line(
+                  d3.range(114).map(k => {
+                    const val = data[charName].find(
+                      vals =>
+                        vals.season === episodes[k].season &&
+                        vals.episode === episodes[k].episode,
+                    )
+                    return {
+                      x: k,
+                      y: val ? val.count : 0,
+                    }
+                  }),
+                )}
+                style={{
+                  stroke: charColor(charName),
+                  strokeWidth: 2,
+                }}
+              />
+            ))}
             <Axis
               scale={x}
               orientation="bottom"
