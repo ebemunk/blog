@@ -1,0 +1,1476 @@
+{
+  "the monster": [
+    {
+      "season": 1,
+      "episode": 4,
+      "count": 1,
+      "word": "the monster"
+    },
+    {
+      "season": 1,
+      "episode": 9,
+      "count": 1,
+      "word": "the monster"
+    },
+    {
+      "season": 3,
+      "episode": 6,
+      "count": 1,
+      "word": "the monster"
+    },
+    {
+      "season": 3,
+      "episode": 14,
+      "count": 1,
+      "word": "the monster"
+    },
+    {
+      "season": 4,
+      "episode": 2,
+      "count": 2,
+      "word": "the monster"
+    },
+    {
+      "season": 4,
+      "episode": 11,
+      "count": 1,
+      "word": "the monster"
+    },
+    {
+      "season": 5,
+      "episode": 12,
+      "count": 2,
+      "word": "the monster"
+    },
+    {
+      "season": 5,
+      "episode": 16,
+      "count": 1,
+      "word": "the monster"
+    },
+    {
+      "season": 6,
+      "episode": 1,
+      "count": 1,
+      "word": "the monster"
+    },
+    {
+      "season": 6,
+      "episode": 15,
+      "count": 2,
+      "word": "the monster"
+    }
+  ],
+  "the others": [
+    {
+      "season": 1,
+      "episode": 1,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 2,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 3,
+      "count": 4,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 4,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 5,
+      "count": 5,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 7,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 9,
+      "count": 3,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 12,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 15,
+      "count": 6,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 16,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 22,
+      "count": 3,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 23,
+      "count": 2,
+      "word": "the others"
+    },
+    {
+      "season": 1,
+      "episode": 24,
+      "count": 4,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 1,
+      "count": 2,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 2,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 3,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 7,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 8,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 13,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 14,
+      "count": 2,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 15,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 16,
+      "count": 3,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 19,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 20,
+      "count": 3,
+      "word": "the others"
+    },
+    {
+      "season": 2,
+      "episode": 23,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 2,
+      "count": 2,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 3,
+      "count": 2,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 5,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 10,
+      "count": 2,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 11,
+      "count": 3,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 13,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 14,
+      "count": 6,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 18,
+      "count": 4,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 19,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 20,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 21,
+      "count": 3,
+      "word": "the others"
+    },
+    {
+      "season": 3,
+      "episode": 22,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 4,
+      "episode": 1,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 4,
+      "episode": 2,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 4,
+      "episode": 11,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 5,
+      "episode": 2,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 5,
+      "episode": 4,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 5,
+      "episode": 6,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 5,
+      "episode": 7,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 5,
+      "episode": 8,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 5,
+      "episode": 9,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 5,
+      "episode": 10,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 5,
+      "episode": 11,
+      "count": 3,
+      "word": "the others"
+    },
+    {
+      "season": 5,
+      "episode": 12,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 5,
+      "episode": 13,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 5,
+      "episode": 15,
+      "count": 2,
+      "word": "the others"
+    },
+    {
+      "season": 6,
+      "episode": 1,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 6,
+      "episode": 2,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 6,
+      "episode": 4,
+      "count": 1,
+      "word": "the others"
+    },
+    {
+      "season": 6,
+      "episode": 7,
+      "count": 1,
+      "word": "the others"
+    }
+  ],
+  "dharma": [
+    {
+      "season": 2,
+      "episode": 3,
+      "count": 3,
+      "word": "dharma"
+    },
+    {
+      "season": 2,
+      "episode": 4,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 2,
+      "episode": 9,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 2,
+      "episode": 14,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 2,
+      "episode": 21,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 2,
+      "episode": 23,
+      "count": 3,
+      "word": "dharma"
+    },
+    {
+      "season": 3,
+      "episode": 1,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 3,
+      "episode": 5,
+      "count": 2,
+      "word": "dharma"
+    },
+    {
+      "season": 3,
+      "episode": 10,
+      "count": 3,
+      "word": "dharma"
+    },
+    {
+      "season": 3,
+      "episode": 11,
+      "count": 5,
+      "word": "dharma"
+    },
+    {
+      "season": 3,
+      "episode": 15,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 3,
+      "episode": 20,
+      "count": 2,
+      "word": "dharma"
+    },
+    {
+      "season": 3,
+      "episode": 21,
+      "count": 2,
+      "word": "dharma"
+    },
+    {
+      "season": 4,
+      "episode": 11,
+      "count": 3,
+      "word": "dharma"
+    },
+    {
+      "season": 4,
+      "episode": 13,
+      "count": 3,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 1,
+      "count": 5,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 2,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 4,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 5,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 6,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 7,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 8,
+      "count": 5,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 9,
+      "count": 6,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 10,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 12,
+      "count": 2,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 13,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 14,
+      "count": 2,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 15,
+      "count": 4,
+      "word": "dharma"
+    },
+    {
+      "season": 5,
+      "episode": 16,
+      "count": 4,
+      "word": "dharma"
+    },
+    {
+      "season": 6,
+      "episode": 6,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 6,
+      "episode": 9,
+      "count": 2,
+      "word": "dharma"
+    },
+    {
+      "season": 6,
+      "episode": 11,
+      "count": 1,
+      "word": "dharma"
+    },
+    {
+      "season": 6,
+      "episode": 12,
+      "count": 1,
+      "word": "dharma"
+    }
+  ],
+  "oceanic": [
+    {
+      "season": 1,
+      "episode": 19,
+      "count": 2,
+      "word": "oceanic"
+    },
+    {
+      "season": 1,
+      "episode": 21,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 1,
+      "episode": 24,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 2,
+      "episode": 4,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 2,
+      "episode": 7,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 2,
+      "episode": 20,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 3,
+      "episode": 12,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 3,
+      "episode": 16,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 3,
+      "episode": 18,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 3,
+      "episode": 22,
+      "count": 2,
+      "word": "oceanic"
+    },
+    {
+      "season": 4,
+      "episode": 1,
+      "count": 4,
+      "word": "oceanic"
+    },
+    {
+      "season": 4,
+      "episode": 2,
+      "count": 7,
+      "word": "oceanic"
+    },
+    {
+      "season": 4,
+      "episode": 3,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 4,
+      "episode": 4,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 4,
+      "episode": 7,
+      "count": 2,
+      "word": "oceanic"
+    },
+    {
+      "season": 4,
+      "episode": 8,
+      "count": 5,
+      "word": "oceanic"
+    },
+    {
+      "season": 4,
+      "episode": 10,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 4,
+      "episode": 12,
+      "count": 4,
+      "word": "oceanic"
+    },
+    {
+      "season": 5,
+      "episode": 1,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 5,
+      "episode": 2,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 5,
+      "episode": 4,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 5,
+      "episode": 7,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 5,
+      "episode": 9,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 5,
+      "episode": 10,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 5,
+      "episode": 14,
+      "count": 3,
+      "word": "oceanic"
+    },
+    {
+      "season": 6,
+      "episode": 1,
+      "count": 3,
+      "word": "oceanic"
+    },
+    {
+      "season": 6,
+      "episode": 3,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 6,
+      "episode": 6,
+      "count": 2,
+      "word": "oceanic"
+    },
+    {
+      "season": 6,
+      "episode": 7,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 6,
+      "episode": 10,
+      "count": 2,
+      "word": "oceanic"
+    },
+    {
+      "season": 6,
+      "episode": 11,
+      "count": 1,
+      "word": "oceanic"
+    },
+    {
+      "season": 6,
+      "episode": 13,
+      "count": 2,
+      "word": "oceanic"
+    },
+    {
+      "season": 6,
+      "episode": 15,
+      "count": 2,
+      "word": "oceanic"
+    },
+    {
+      "season": 6,
+      "episode": 16,
+      "count": 2,
+      "word": "oceanic"
+    }
+  ],
+  "island": [
+    {
+      "season": 1,
+      "episode": 1,
+      "count": 3,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 2,
+      "count": 2,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 3,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 4,
+      "count": 6,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 5,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 6,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 7,
+      "count": 7,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 8,
+      "count": 3,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 9,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 10,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 11,
+      "count": 7,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 12,
+      "count": 6,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 13,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 14,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 15,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 16,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 17,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 18,
+      "count": 3,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 19,
+      "count": 8,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 20,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 21,
+      "count": 2,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 22,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 23,
+      "count": 3,
+      "word": "island"
+    },
+    {
+      "season": 1,
+      "episode": 24,
+      "count": 7,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 2,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 3,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 4,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 5,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 6,
+      "count": 2,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 7,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 8,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 9,
+      "count": 3,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 10,
+      "count": 2,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 11,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 12,
+      "count": 2,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 13,
+      "count": 3,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 14,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 15,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 16,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 17,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 18,
+      "count": 7,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 19,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 20,
+      "count": 2,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 21,
+      "count": 3,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 22,
+      "count": 2,
+      "word": "island"
+    },
+    {
+      "season": 2,
+      "episode": 23,
+      "count": 9,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 2,
+      "count": 3,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 3,
+      "count": 6,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 4,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 5,
+      "count": 1,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 6,
+      "count": 2,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 7,
+      "count": 8,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 8,
+      "count": 9,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 9,
+      "count": 6,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 10,
+      "count": 6,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 11,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 12,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 13,
+      "count": 11,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 14,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 15,
+      "count": 2,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 16,
+      "count": 12,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 17,
+      "count": 2,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 18,
+      "count": 11,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 19,
+      "count": 16,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 20,
+      "count": 14,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 21,
+      "count": 9,
+      "word": "island"
+    },
+    {
+      "season": 3,
+      "episode": 22,
+      "count": 17,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 1,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 2,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 3,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 4,
+      "count": 8,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 5,
+      "count": 9,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 6,
+      "count": 11,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 7,
+      "count": 10,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 8,
+      "count": 13,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 9,
+      "count": 7,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 10,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 11,
+      "count": 11,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 12,
+      "count": 17,
+      "word": "island"
+    },
+    {
+      "season": 4,
+      "episode": 13,
+      "count": 27,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 1,
+      "count": 14,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 2,
+      "count": 6,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 3,
+      "count": 17,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 4,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 5,
+      "count": 14,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 6,
+      "count": 11,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 7,
+      "count": 24,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 8,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 9,
+      "count": 14,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 10,
+      "count": 3,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 11,
+      "count": 9,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 12,
+      "count": 24,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 13,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 14,
+      "count": 11,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 15,
+      "count": 9,
+      "word": "island"
+    },
+    {
+      "season": 5,
+      "episode": 16,
+      "count": 21,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 1,
+      "count": 7,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 2,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 3,
+      "count": 9,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 4,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 5,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 6,
+      "count": 9,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 7,
+      "count": 16,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 8,
+      "count": 5,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 9,
+      "count": 14,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 10,
+      "count": 4,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 11,
+      "count": 18,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 12,
+      "count": 12,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 13,
+      "count": 9,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 14,
+      "count": 12,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 15,
+      "count": 9,
+      "word": "island"
+    },
+    {
+      "season": 6,
+      "episode": 16,
+      "count": 24,
+      "word": "island"
+    }
+  ]
+}

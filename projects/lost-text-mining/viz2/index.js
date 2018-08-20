@@ -16,6 +16,7 @@ import CharCooccurrence from 'sections/CharCooccurrence'
 import CharReadingLevel from 'sections/CharReadingLevel'
 import EpisodeReadingLevel from 'sections/EpisodeReadingLevel'
 import CharAppearance from 'sections/CharAppearance'
+import WordConnections from 'sections/WordConnections'
 
 import configureStore from 'store'
 
@@ -42,3 +43,4 @@ render(<CharCooccurrence />, '#char-cooccurrence')
 render(<CharReadingLevel />, '#char-reading-level')
 render(<EpisodeReadingLevel />, '#episode-reading-level')
 render(<CharAppearance />, '#char-appearance')
+render(<WordConnections />, '#word-connections')

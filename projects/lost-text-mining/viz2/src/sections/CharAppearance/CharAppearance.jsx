@@ -38,8 +38,6 @@ export default class CharAppearance extends React.Component {
       R.reduce(R.max, 0),
     )(data[dataType])
 
-    console.log(yDomain, 'yDomain')
-
     const y2 = d3
       .scaleLinear()
       .domain([0, yDomain])

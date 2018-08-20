@@ -14,12 +14,13 @@ export default async function writeForViz() {
   const dataFiles = [
     {
       filename: 'episodes',
-      query: queries.allEpisodes(),
-      process: R.addIndex(R.map)(({ season, episode }, index) => ({
+      query: 'select * from episodes',
+      process: R.addIndex(R.map)(({ season, episode, length }, index) => ({
         season,
         episode,
         key: episodeKey(season, episode),
         index,
+        length,
       })),
     },
     {
@@ -208,9 +209,30 @@ export default async function writeForViz() {
         ),
       ),
     },
+    {
+      filename: 'wordConnections',
+      query: ['the monster', 'the others', 'dharma', 'oceanic', 'island'].map(
+        name => `
+          select season, episode, count(*) as count, '${name}' as word
+          from dialog
+          where line ilike '%${name}%' and type='dialog'
+          group by season, episode
+          order by season, episode;
+        `,
+      ),
+      process: R.pipe(
+        R.groupBy(r => r.word),
+        R.map(
+          R.map(rr => ({
+            ...rr,
+            count: +rr.count,
+          })),
+        ),
+      ),
+    },
   ]
 
-  await Promise.map([dataFiles[12]], async dataFile => {
+  await Promise.map([dataFiles[13]], async dataFile => {
     log('doing', dataFile.filename)
     const rows = await Promise.reduce(
       Array.isArray(dataFile.query) ? dataFile.query : [dataFile.query],

@@ -12,6 +12,7 @@ import { reducer as readingLevel } from './readingLevel'
 import { reducer as sceneTone } from './sceneTone'
 import { reducer as toneSelection } from './toneSelection'
 import { reducer as wordCount } from './wordCount'
+import { reducer as wordConnections } from './wordConnections'
 
 const rootReducer = combineReducers({
   charAppearance,
@@ -28,6 +29,7 @@ const rootReducer = combineReducers({
   sceneTone,
   toneSelection,
   wordCount,
+  wordConnections,
 })
 
 export default rootReducer

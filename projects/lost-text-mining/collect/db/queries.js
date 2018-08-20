@@ -10,10 +10,6 @@ export function episodeText(season, episode) {
   return `select text from episode_text where season=${season} and episode=${episode};`
 }
 
-export function allEpisodes() {
-  return 'select * from episodes;'
-}
-
 export function allScenes() {
   return 'select * from scene_text;'
 }
