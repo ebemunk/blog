@@ -6,7 +6,29 @@ import { seasonColor } from 'utils'
 
 import css from './WordConnections.css'
 
+const groups = [
+  ['the monster', 'the others', 'dharma', 'oceanic'],
+  ['island'],
+  ['hell', 'heaven'],
+  ['north', 'south', 'east', 'west'],
+  ['love', 'hate'],
+  ['kill', 'die'],
+  ['friend', 'enemy'],
+  ['father', 'mother'],
+]
+
 export default class WordConnections extends React.Component {
+  state = {
+    selected: groups.reduce((acc, cur) => [...acc, ...cur], []).reduce(
+      (acc, cur) => ({
+        ...acc,
+        [cur]: true,
+      }),
+      {},
+    ),
+    group: 0,
+  }
+
   render() {
     const { data, episodes, width } = this.props
 
@@ -41,20 +63,78 @@ export default class WordConnections extends React.Component {
       ])
       .range([1, 3])
 
-    console.log('arcs', arcs)
-    console.log('data', data['the monster'])
-
     const seasonAngles = R.pipe(
       R.groupBy(d => d.data.season),
       R.map(v => {
-        return [R.head(v).startAngle, R.last(v).endAngle]
+        return [R.head(v).startAngle + 0.2, R.last(v).endAngle - 0.2]
       }),
     )(arcs)
 
-    console.log('seasonAngles', seasonAngles)
+    const words = groups[this.state.group]
 
     return (
       <div className={css.wrap}>
+        <div className={css.legend}>
+          {words.map(key => (
+            <div
+              key={key}
+              style={{
+                color: wordColor(key),
+                opacity: this.state.selected[key] ? 1 : 0.2,
+              }}
+              onClick={() =>
+                this.setState({
+                  selected: {
+                    ...this.state.selected,
+                    [key]: this.state.selected[key] ? false : true,
+                  },
+                })
+              }
+            >
+              {key}
+            </div>
+          ))}
+          <div
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: '50%',
+              transform: 'translate(0, -50%)',
+            }}
+            onClick={() => {
+              const nextIndex =
+                this.state.group === 0
+                  ? groups.length - 1
+                  : this.state.group - 1
+
+              this.setState({
+                group: nextIndex,
+              })
+            }}
+          >
+            &lt;
+          </div>
+          <div
+            style={{
+              position: 'absolute',
+              right: 0,
+              top: '50%',
+              transform: 'translate(0, -50%)',
+            }}
+            onClick={() => {
+              const nextIndex =
+                this.state.group === groups.length - 1
+                  ? 0
+                  : this.state.group + 1
+
+              this.setState({
+                group: nextIndex,
+              })
+            }}
+          >
+            &gt;
+          </div>
+        </div>
         <svg width={width} height={width}>
           <g transform={`translate(${width / 2}, ${width / 2})`}>
             <g className={css.axis}>
@@ -70,55 +150,53 @@ export default class WordConnections extends React.Component {
               ))}
             </g>
             <g className={css.links}>
-              {Object.keys(data)
-                //.filter(d => d !== 'island')
-                .filter(d => d === 'oceanic')
-                .map((key, index) =>
-                  data[key].map(d => {
-                    const targetArc = arcs.find(
-                      dd =>
-                        dd.data.season === d.season &&
-                        dd.data.episode === d.episode,
-                    )
-                    const angle =
-                      (targetArc.startAngle + targetArc.endAngle) / 2
-                    const pi = Math.PI
+              {words.filter(d => this.state.selected[d]).map((key, index) =>
+                data[key].map(d => {
+                  const numSelected = words.filter(d => this.state.selected[d])
+                    .length
 
-                    let sourceAngle = 0
-                    if (angle > 0 && angle < pi / 2) {
-                      sourceAngle = pi / 4
-                    } else if (angle > pi / 2 && angle < pi) {
-                      sourceAngle = (pi / 2 + pi) / 2
-                    } else if (angle > pi && angle < 3 * pi / 2) {
-                      sourceAngle = (pi + 3 * pi / 2) / 2
-                    } else if (angle > 3 * pi / 2 && angle < 2 * pi) {
-                      sourceAngle = (3 * pi / 2 + 2 * pi) / 2
-                    } else {
-                      return null
-                    }
+                  const targetArc = arcs.find(
+                    dd =>
+                      dd.data.season === d.season &&
+                      dd.data.episode === d.episode,
+                  )
+                  const targetAngleScale = d3
+                    .scaleLinear()
+                    .domain([0, numSelected])
+                    .range([targetArc.startAngle, targetArc.endAngle])
+                  const angle =
+                    (targetAngleScale(index) + targetAngleScale(index + 1)) / 2
 
-                    return (
-                      <path
-                        key={`${d.season}-${d.episode}-${d.word}`}
-                        d={link({
-                          source: {
-                            angle: sourceAngle + index * 0.1,
-                            radius: 100,
-                          },
-                          target: {
-                            angle,
-                            radius: width / 2 - 25,
-                          },
-                        })}
-                        className={css.link}
-                        style={{
-                          stroke: wordColor(d.word),
-                          strokeWidth: linkThickness(d.count),
-                        }}
-                      />
-                    )
-                  }),
-                )}
+                  const sourceAngleScale = d3
+                    .scaleLinear()
+                    .domain([0, numSelected])
+                    .range(seasonAngles[d.season])
+
+                  const sourceAngle =
+                    (sourceAngleScale(index) + sourceAngleScale(index + 1)) / 2
+
+                  return (
+                    <path
+                      key={`${d.season}-${d.episode}-${d.word}`}
+                      d={link({
+                        source: {
+                          angle: sourceAngle,
+                          radius: 100,
+                        },
+                        target: {
+                          angle,
+                          radius: width / 2 - 25,
+                        },
+                      })}
+                      className={css.link}
+                      style={{
+                        stroke: wordColor(d.word),
+                        strokeWidth: linkThickness(d.count),
+                      }}
+                    />
+                  )
+                }),
+              )}
             </g>
           </g>
         </svg>

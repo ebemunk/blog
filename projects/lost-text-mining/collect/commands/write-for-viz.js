@@ -211,7 +211,35 @@ export default async function writeForViz() {
     },
     {
       filename: 'wordConnections',
-      query: ['the monster', 'the others', 'dharma', 'oceanic', 'island'].map(
+      query: [
+        'the monster',
+        'the others',
+        'dharma',
+        'oceanic',
+        //
+        'island',
+        //
+        'hell',
+        'heaven',
+        //
+        'north',
+        'south',
+        'east',
+        'west',
+        //
+        'love',
+        'hate',
+        //
+        'kill',
+        'die',
+        //
+        'friend',
+        'enemy',
+        //
+        'father',
+        'mother',
+        //
+      ].map(
         name => `
           select season, episode, count(*) as count, '${name}' as word
           from dialog
