@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-import { episodes, episodeSelection, charCooccurrence } from '../reducers'
+import { episodes, episodeSelection } from '../reducers'
 import { reducer as charAppearance } from './charAppearance'
 import { reducer as charSelection } from './charSelection'
 import { reducer as charWordFrequencies } from './charWordFrequencies'
@@ -13,6 +13,7 @@ import { reducer as sceneTone } from './sceneTone'
 import { reducer as toneSelection } from './toneSelection'
 import { reducer as wordCount } from './wordCount'
 import { reducer as wordConnections } from './wordConnections'
+import { reducer as charCooccurrence } from './charCooccurrence'
 
 const rootReducer = combineReducers({
   charAppearance,

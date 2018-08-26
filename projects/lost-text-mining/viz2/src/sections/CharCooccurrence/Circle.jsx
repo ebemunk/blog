@@ -6,7 +6,7 @@ import classnames from 'classnames'
 import images from '../CharSelector/images'
 import css from './Circle.css'
 
-export default class Circle extends React.Component {
+export default class Circle extends React.PureComponent {
   state = { show: false }
 
   render() {

@@ -1,11 +1,25 @@
-import { createSelector } from 'reselect'
+export const getCharCooccurrence = () => dispatch => {
+  const charCooccurrence = require('data/charCooccurrence.json')
+
+  dispatch({
+    type: 'data/charCooccurrence',
+    payload: charCooccurrence,
+  })
+}
+
+import { reducerFromObj } from '../util'
+
+export const reducer = reducerFromObj([], {
+  'data/charCooccurrence': (state, action) => action.payload,
+})
+
 import * as R from 'ramda'
-
-import { selectedEpisodeKeys } from 'store/selectors'
-
-const charCooccurrence = R.path(['charCooccurrence'])
+import { createSelector } from 'reselect'
+import { selectedEpisodeKeys } from '../selectors'
 
 const pad2 = str => str.toString().padStart(2, '0')
+
+export const charCooccurrence = R.path(['charCooccurrence'])
 
 export const selectedCharCooccurrence = createSelector(
   [charCooccurrence, selectedEpisodeKeys],

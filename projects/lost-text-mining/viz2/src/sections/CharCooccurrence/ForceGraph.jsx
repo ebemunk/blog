@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import Circle from './Circle'
 import css from './CharCooccurrence.css'
 
-export default class ForceGraph extends React.Component {
+export default class ForceGraph extends React.PureComponent {
   render() {
     const {
       transform,

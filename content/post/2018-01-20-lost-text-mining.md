@@ -61,6 +61,12 @@ One of the important takeaways from the above is that 593 characters (88% of all
 
 The above graph shows the "lines" per character, where a line is 1 piece of uninterrupted speech. The impactful 8 characters are seen here at the top, just `JACK` alone accounts for 10% of all spoken lines. This, I think also corresponds strongly with on-screen time (assuming they speak at about the same speed, not unreasonable). Only in S5 does `JACK` speak less than anyone, and in other seasons he's always at the top.
 
+To get a sense of how "popular" these 8 characters were, I tallied up how many scenes they all appear per episode, as well as how many times another character mentions them per episode.
+
+<div id="char-appearance" class="viz"></div>
+
+Jack i
+
 ## Personalities
 
 So far, all we've really done is some statistics on the text, which is cool and all, but I say let's grab our pickaxes and start some real mining. I had heard of and wanted to use the IBM Watson APIs[^watson], especially Personality Insights and Tone Analyzer. You can read more about each of these from the links, but in simple terms each processes the text to give .
@@ -110,7 +116,7 @@ Obviously flashbacks were an integral part of S1, and kept going until S4, where
 
 ## Tone
 
-Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nufnc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
 
 <div id="scene-tone" class="viz"></div>
 
@@ -133,14 +139,6 @@ Pellentesque at ex et dolor mattis scelerisque. Vestibulum aliquam, nulla vel po
 Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
 
 <div id="char-reading-level" class="viz"></div>
-
-Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
-
-## Character Popularity
-
-Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
-
-<div id="char-appearance" class="viz"></div>
 
 Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
 

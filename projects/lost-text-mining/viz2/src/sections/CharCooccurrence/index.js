@@ -1,10 +1,11 @@
 import { compose } from 'redux'
 import { connect } from 'react-redux'
-import * as R from 'ramda'
 import { hot } from 'react-hot-loader'
 
-import { selectedCharCooccurrence } from '../../selectors'
-import { getCharCooccurrence } from '../../actions'
+import {
+  selectedCharCooccurrence,
+  getCharCooccurrence,
+} from 'store/charCooccurrence'
 import fireActions from 'hoc/fireActions'
 import withEpSelector from 'hoc/withEpSelector'
 

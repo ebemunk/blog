@@ -135,10 +135,9 @@ export default class CharCooccurrence extends React.Component {
       R.reduce((acc, val) => acc.concat([val.source.id, val.target.id]), []),
       R.uniq,
     )(filteredLinks)
-    // return null
+
     return (
       <div className={style.wrap}>
-        {/* <div>Loading: {loading}</div> */}
         <svg height={500} width={960} className={style.svg}>
           <ForceGraph
             nodes={nodes}

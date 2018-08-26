@@ -15,12 +15,3 @@ export const episodeSelection = (state = [null, null], action) => {
       return state
   }
 }
-
-export const charCooccurrence = (state = [], action) => {
-  switch (action.type) {
-    case 'CHAR_COOCCURRENCE':
-      return action.payload
-    default:
-      return state
-  }
-}
