@@ -7,7 +7,7 @@ import css from './Season.css'
 export default function Season({ data, season }) {
   const total = data.reduce(
     (tot, ep) =>
-      tot + ep.flashbacks.reduce((subtotal, fb) => subtotal + fb.chars, 0),
+      tot + ep.flashes.reduce((subtotal, fb) => subtotal + fb.chars, 0),
     0,
   )
   const scale = d3
@@ -18,7 +18,7 @@ export default function Season({ data, season }) {
   let x = 0
   let acc = 0
   return data.map(episode => {
-    const eptotal = episode.flashbacks.reduce((tot, ep) => tot + ep.chars, 0)
+    const eptotal = episode.flashes.reduce((tot, ep) => tot + ep.chars, 0)
     const r = (
       <g key={`${episode.season}-${episode.episode}`}>
         <rect
@@ -44,7 +44,7 @@ export default function Season({ data, season }) {
           y2={30}
           className={css.episodeLine}
         />
-        {episode.flashbacks.map((ep, i) => {
+        {episode.flashes.map((ep, i) => {
           const ret = (
             <rect
               x={scale(x)}
@@ -55,7 +55,9 @@ export default function Season({ data, season }) {
               className={classnames(css.rect, {
                 [css.flashback]: ep.flashback,
                 [css.flashsideways]: ep.flashsideways,
-                [css.normal]: !ep.flashback && !ep.flashsideways,
+                [css.flashforward]: ep.flashforward,
+                [css.normal]:
+                  !ep.flashback && !ep.flashsideways && !ep.flashforward,
               })}
             />
           )

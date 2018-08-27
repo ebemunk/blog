@@ -57,48 +57,75 @@ export default async function writeForViz() {
     },
     {
       filename: 'flashes',
-      query: queries.flashbacksAndSideways(),
+      query: `
+        select
+          season,
+          episode,
+          array_to_json(array_agg(meta->'flashback' order by seq asc)) as flashback,
+          array_to_json(array_agg(meta->'flashsideways' order by seq asc)) as flashsideways,
+    			array_to_json(array_agg(meta->'flashforward' order by seq asc)) as flashforward,
+          array_agg(length(line)) as chars
+        from dialog
+        where type='dialog'
+        group by season, episode
+        order by season, episode
+      ;`,
       process: R.map(d => ({
         season: d.season,
         episode: d.episode,
-        flashbacks: R.transpose([d.flashback, d.flashsideways, d.chars]).reduce(
-          (acc, [flashback, flashsideways, chars]) => {
-            if (!acc.length) {
-              return [
-                {
-                  flashback,
-                  flashsideways,
-                  chars,
-                },
-              ]
-            }
-
-            if (R.last(acc).flashback != flashback) {
-              acc.push({
+        flashes: R.transpose([
+          d.flashback,
+          d.flashsideways,
+          d.flashforward,
+          d.chars,
+        ]).reduce((acc, [flashback, flashsideways, flashforward, chars]) => {
+          if (!acc.length) {
+            return [
+              {
                 flashback,
                 flashsideways,
+                flashforward,
                 chars,
-              })
-              return acc
-            }
+              },
+            ]
+          }
 
-            if (R.last(acc).flashsideways != flashsideways) {
-              acc.push({
-                flashback,
-                flashsideways,
-                chars,
-              })
-              return acc
-            }
-
-            acc[acc.length - 1] = {
-              ...R.last(acc),
-              chars: R.last(acc).chars + chars,
-            }
+          if (R.last(acc).flashback != flashback) {
+            acc.push({
+              flashback,
+              flashsideways,
+              flashforward,
+              chars,
+            })
             return acc
-          },
-          [],
-        ),
+          }
+
+          if (R.last(acc).flashsideways != flashsideways) {
+            acc.push({
+              flashback,
+              flashsideways,
+              flashforward,
+              chars,
+            })
+            return acc
+          }
+
+          if (R.last(acc).flashforward != flashforward) {
+            acc.push({
+              flashback,
+              flashsideways,
+              flashforward,
+              chars,
+            })
+            return acc
+          }
+
+          acc[acc.length - 1] = {
+            ...R.last(acc),
+            chars: R.last(acc).chars + chars,
+          }
+          return acc
+        }, []),
       })),
     },
     {
@@ -260,7 +287,7 @@ export default async function writeForViz() {
     },
   ]
 
-  await Promise.map([dataFiles[13]], async dataFile => {
+  await Promise.map([dataFiles[6]], async dataFile => {
     log('doing', dataFile.filename)
     const rows = await Promise.reduce(
       Array.isArray(dataFile.query) ? dataFile.query : [dataFile.query],

@@ -22,21 +22,6 @@ export function wordCount() {
   return 'select * from word_count;'
 }
 
-export function flashbacksAndSideways() {
-  return `
-		select
-			season,
-			episode,
-			array_to_json(array_agg(meta->'flashback' order by seq asc)) as flashback,
-			array_to_json(array_agg(meta->'flashsideways' order by seq asc)) as flashsideways,
-			array_agg(length(line)) as chars
-		from dialog
-		where type='dialog'
-		group by season, episode
-		order by season, episode
-	;`
-}
-
 export function linesPerChar() {
   return `
 		select season, episode, char_name, count(*) as lines from dialog

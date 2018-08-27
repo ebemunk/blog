@@ -108,11 +108,11 @@ I'm still fascinated by what this API can do, but have questioned whether it's a
 
 ## Flashbacks and Flashsideways
 
-LOST is kind of renowned for its liberal use of flashbacks, and the greatest invention of all time to fix plot holes: "flash-sideways". Below is a visualisation of every episode, where any scene that's a flashback or a flashsideways is colored in. "Scene" in this context refers to the scene in text, and not necessarily the cinematic technique.
+LOST is kind of renowned for its liberal use of flashbacks, flash-forwards and the greatest invention of all time to fix plot holes: "flash-sideways". Below is a visualisation of every episode, where any scene that's a "flash" is colored in. "Scene" in this context refers to the scene in text, and not necessarily the cinematic technique.
 
 <div id="flashbacks" class="viz"></div>
 
-Obviously flashbacks were an integral part of S1, and kept going until S4, where the frequency drops considerably. , chilled out a bit on S4 and S5, and finally completely lost it in the last season. I haven't analysed anything else so I can't really compare, but it seems there are a lot of them, crazy amounts!
+Obviously flashbacks were an integral part of S1, and kept going until the end of S3, where the flash-forwards started cropping up. S5 has the least "flashes" and S6 is full of flash-sideways(es?).
 
 ## Tone
 
