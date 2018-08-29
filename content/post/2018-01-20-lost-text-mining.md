@@ -140,15 +140,19 @@ Honestly to me this is more of a vanity/surface visualization, nevertheless ther
 
 ## Reading Level
 
-Pellentesque at ex et dolor mattis scelerisque. Vestibulum aliquam, nulla vel porttitor faucibus, sapien turpis feugiat augue, ac tincidunt purus sem nec nisl. Etiam quis ornare lectus.
+Reading level is something I often wondered about TV shows. My gut feeling was that it'd be somewhat low, to appeal to a bigger and wider demographic. textstat[^textstat] is a tool that runs text through a few "reading level" measurements, and reports back a value that corresponds to the school grade level of the text. Below are the results of running textstat on the text of every episode.
+
+[^textstat]: https://github.com/shivam5992/textstat
 
 <div id="episode-reading-level" class="viz"></div>
 
-Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+Most speech in the show is 2nd grade level, particularly S2, otherwise there are pretty frequent episodes with 5th grade level. S5-E1 is the most complex text with 8th grade level. This makes me think that the dialogue between characters are often short, practical and concrete, without much philosophizing or elaborate language.
+
+We can also see the reading level per character. I wanted to see if there was variation between characters in terms of reading level. Below is the reading level of the top 25 most speaking characters.
 
 <div id="char-reading-level" class="viz"></div>
 
-Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+`FARADAY` is the most complex speaker, with 7th grade level. Most of the heavy hitters, the big 8 if you will, have 3rd grade reading level which I'm thinking brings the episode averages down because they speak way more than other characters. I wonder if differences like this was apparent on the TV show, particularly `JACK` (6th grade) vs `SAWYER` or `KATE` (3rd grade).
 
 ## Word Connections f
 
@@ -167,7 +171,6 @@ http://lotrproject.com/statistics/books/sentimentanalysis
 http://lotrproject.com/statistics/books/chapters
 https://jezebel.com/every-single-person-on-lost-ranked-from-most-to-least-1546174780 bernard vs sawyer
 http://www.tylervigen.com/literature-statistics
-https://github.com/shivam5992/textstat
 http://www.neoformix.com/2013/NovelViews.html
 http://www.chrisharrison.net/index.php/Visualizations/Welcome
 
