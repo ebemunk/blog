@@ -16,7 +16,7 @@ export default function Episode({ scale, episode, start, total }) {
         className={css.episode}
       />
       <text x={x} y={25} dx="2px" dy="1rem" className={css.episodeLabel}>
-        E{episode.episode}
+        {episode.episode}
       </text>
       <line x1={x} x2={x} y1={25} y2={30} className={css.episodeLine} />
       <g transform={`translate(${x}, 0)`}>

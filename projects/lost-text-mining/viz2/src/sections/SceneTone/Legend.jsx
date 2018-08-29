@@ -2,12 +2,20 @@ import React from 'react'
 import classnames from 'classnames'
 
 import LegendKey from './LegendKey'
+import Toggle from 'components/Toggle'
 
 import css from './Legend.css'
 
-export function Legend({ selection, toggle, toggleAll, toggleNone }) {
+export function Legend({
+  selection,
+  toggle,
+  toggleAll,
+  toggleNone,
+  toggleScale,
+  scale,
+}) {
   return (
-    <div>
+    <div className={css.wrap}>
       <div className={css.buttons}>
         <button
           className={classnames('button', css.button)}
@@ -21,6 +29,12 @@ export function Legend({ selection, toggle, toggleAll, toggleNone }) {
         >
           None
         </button>
+        <Toggle
+          children="Scale Season Lengths"
+          onClick={() => toggleScale(!scale)}
+          className={css.toggle}
+          on={scale}
+        />
       </div>
       <div className={css.legend}>
         <div className={css.category}>

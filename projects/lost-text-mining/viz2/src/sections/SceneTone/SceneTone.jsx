@@ -1,15 +1,35 @@
 import React from 'react'
 import * as R from 'ramda'
+import * as d3 from 'd3'
 
 import Season from './Season'
 import Legend from './Legend'
 
 import css from './SceneTone.css'
 
-export default function SceneTone({ data }) {
+export function SceneTone({ data, scale, toggleScale }) {
+  const maxEp = R.pipe(
+    R.groupBy(d => `${d.season}`),
+    R.map(eps => {
+      return eps.reduce((sum, ep) => {
+        const lastScene = R.last(ep.scenes)
+        return sum + lastScene.start + lastScene.length
+      }, 0)
+    }),
+    R.values,
+    d3.max,
+  )(data)
+
+  const seasonScale = d3
+    .scaleLinear()
+    .domain([0, maxEp])
+    .range([0, 900])
+
+  console.log('scale')
+
   return (
     <React.Fragment>
-      <Legend />
+      <Legend toggleScale={toggleScale} scale={scale} />
       <div className={css.wrap}>
         <svg width={900} height={360} className={css.svg}>
           {R.range(1, 7).map(season => (
@@ -23,6 +43,7 @@ export default function SceneTone({ data }) {
               <Season
                 season={season}
                 data={data.filter(ep => ep.season === season)}
+                scale={scale ? seasonScale : () => 900}
               />
             </g>
           ))}
@@ -31,3 +52,7 @@ export default function SceneTone({ data }) {
     </React.Fragment>
   )
 }
+
+import { withState } from 'recompose'
+
+export default withState('scale', 'toggleScale', false)(SceneTone)

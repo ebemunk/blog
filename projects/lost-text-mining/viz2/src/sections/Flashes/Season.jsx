@@ -35,7 +35,7 @@ export default function Season({ data, season }) {
           dy="1rem"
           className={css.episodeLabel}
         >
-          E{episode.episode}
+          {episode.episode}
         </text>
         <line
           x1={scale(acc)}

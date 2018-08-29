@@ -7,7 +7,7 @@ import Episode from './Episode'
 
 import css from './Season.css'
 
-export default function Season({ data, season }) {
+export default function Season({ data, season, scale }) {
   const total = data.reduce(
     (tot, episode) =>
       tot +
@@ -24,7 +24,7 @@ export default function Season({ data, season }) {
         scale={d3
           .scaleLinear()
           .domain([0, total])
-          .range([0, 900])}
+          .range([0, scale(total)])}
         start={acc}
         episode={episode}
         total={eptotal}

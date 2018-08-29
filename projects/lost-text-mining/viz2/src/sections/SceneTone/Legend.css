@@ -1,6 +1,7 @@
 .legend {
   display: flex;
   justify-content: space-between;
+  flex-shrink: 0;
 }
 
 .category {
@@ -52,4 +53,15 @@
 .buttons {
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.toggle {
+  margin-left: 2rem;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
