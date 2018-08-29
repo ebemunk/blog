@@ -106,7 +106,7 @@ Consdering "everyone" (top 25 speakers), the average values are of a pretty uniq
 
 I'm still fascinated by what this API can do, but have questioned whether it's appropriate for works of fiction. I'd love to hear about any other patterns you see, and how much of this really aligns with the show from the fans.
 
-## Flashbacks and Flashsideways
+## Flashbacks, Flash-forwards and Flash-sideways
 
 LOST is kind of renowned for its liberal use of flashbacks, flash-forwards and the greatest invention of all time to fix plot holes: "flash-sideways". Below is a visualisation of every episode, where any scene that's a "flash" is colored in. "Scene" in this context refers to the scene in text, and not necessarily the cinematic technique.
 
@@ -116,19 +116,27 @@ Obviously flashbacks were an integral part of S1, and kept going until the end o
 
 ## Tone
 
-Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nufnc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+Watson API has this product called Tone Analyzer[^tone-analyzer] which makes an attempt at determining the "tone" of a piece of text. This is also often called "sentiment analysis" in some circles, but Tone Analyzer determines 4 emotional tones, and 3 language tones. You can hover over the legend on the chart below to learn more about the different tones.
+
+The graph below, similar to the flashbacks, shows the season laid out. In this case, I've analyzed every scene and the colors correspond to the different tones prominent on that scene. The opacity highlights the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.
+
+[^tone-analyzer]: link
 
 <div id="scene-tone" class="viz"></div>
 
-Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+Looking at emotion tones, Joy and Sadness are the big duo, very prominent throughout. One thing I noticed about Fear is that it generally occurs mid-to-late episode. S4-E5 has no Fear in it!
+
+It's kind of interesting to see that the majority of the writing shows tentative tone. There are some "Analytical" sections sprinkled throughout, and even less amounts of "Confident", but "Tentative" definitely dominates the show. It also kind of makes sense, since mysteries and "what ifs" really are a cornerstone of the show.
 
 ## Co-occurrence
 
-Pellentesque at ex et dolor mattis scelerisque. Vestibulum aliquam, nulla vel porttitor faucibus, sapien turpis feugiat augue, ac tincidunt purus sem nec nisl. Etiam quis ornare lectus.
+Looking at the connections between characters is perhaps best illustrated by a force-directed graph. The radius of the circles scale with the number of different connections a character has, and the closeness indicates the number of times two characters connect. In this case, we are looking at how many scenes do characters appear together. This means that characters with bigger radii appear more with different people, and those that appear often are placed closer together.
+
+Play around with the episode selector. It's a bit slow, but you'll be ok. Click on the characters to highlight only their connections.
 
 <div id="char-cooccurrence" class="viz"></div>
 
-Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+Honestly to me this is more of a vanity/surface visualization, nevertheless there are some cool things to see. The loneliest duo is `WIFE` and `RECORD` in all the show, appearing completely isolated from any other characters, followed by `YOUNG SAWYER`, `SAWYER'S FATHER` and `MARY`. I'm guessing these scenes probably were isolated flashbacks. In <a href="">S2</a> there's the funny "pentagram of evil" on the right, with `THUG CAPTAIN`, `THUG`, `THUG #2`, `PRIEST` and `YOUNG EKO`.
 
 ## Reading Level
 

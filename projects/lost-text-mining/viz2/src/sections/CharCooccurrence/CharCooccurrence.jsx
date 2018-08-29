@@ -46,7 +46,7 @@ export default class CharCooccurrence extends React.Component {
             links: payload.links,
             nodeSizeScale: d3
               .scaleLinear()
-              .range([5, 30])
+              .range([5, 20])
               .domain(d3.extent(payload.nodes.map(d => d.numLinksTo))),
             linkOpacityScale: d3
               .scaleLinear()
@@ -157,9 +157,8 @@ export default class CharCooccurrence extends React.Component {
             domRef={el => (this.nodesDom = el)}
           />
           <g>
-            {loading && <text>Loading: {loading}</text>}
             {loading && (
-              <rect width={960} height={500} fill="white" opacity="0.7" />
+              <rect width={960} height={500} fill="white" opacity="0.4" />
             )}
           </g>
         </svg>

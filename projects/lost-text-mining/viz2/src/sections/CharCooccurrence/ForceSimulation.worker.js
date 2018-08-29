@@ -11,11 +11,7 @@ onmessage = event => {
   const simulation = d3
     .forceSimulation(nodes)
     .force('charge', d3.forceManyBody().strength(-100))
-    .force(
-      'link',
-      d3.forceLink(links).id(d => d.id),
-      // .strength(0.5),
-    )
+    .force('link', d3.forceLink(links).id(d => d.id))
     .force('center', d3.forceCenter(960 / 2, 500 / 2))
     .force('y', d3.forceY().strength(0.2))
     .force('x', d3.forceX().strength(0.1))
@@ -34,7 +30,7 @@ onmessage = event => {
   ) {
     const pct = i / n
     if (pct - prev > 0.02) {
-      postMessage({ type: 'TICK', payload: i / n })
+      // postMessage({ type: 'TICK', payload: i / n })
       prev = pct
     }
     simulation.tick()
