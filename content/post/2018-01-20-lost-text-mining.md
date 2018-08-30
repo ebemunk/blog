@@ -120,7 +120,9 @@ Watson API has this product called Tone Analyzer[^tone-analyzer] which makes an 
 
 The graph below, similar to the flashbacks, shows the season laid out. In this case, I've analyzed every scene and the colors correspond to the different tones prominent on that scene. The opacity highlights the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.
 
-[^tone-analyzer]: link
+[^tone-analyzer]:
+
+  https://console.bluemix.net/docs/services/tone-analyzer/using-tone.html#using-the-general-purpose-endpoint
 
 <div id="scene-tone" class="viz"></div>
 
@@ -154,25 +156,24 @@ We can also see the reading level per character. I wanted to see if there was va
 
 `FARADAY` is the most complex speaker, with 7th grade level. Most of the heavy hitters, the big 8 if you will, have 3rd grade reading level which I'm thinking brings the episode averages down because they speak way more than other characters. I wonder if differences like this was apparent on the TV show, particularly `JACK` (6th grade) vs `SAWYER` or `KATE` (3rd grade).
 
-## Word Connections f
+## Word Connections
 
-Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+I saved the prettiest for last! I saw this visualization for "Les Miserables" by Neoformix[^neoformix] and had to try to recreate it for LOST. This one attempts to show which words occur in which episodes in a radial manner. You can get a sense of how prominent and often a word was used throughout the series. I've picked a couple of word groups, colored individually. The lines represent occurrences with thicker lines meaning more hits. Seasons are grouped individually so it's easier to see seasonal themes. Click on words to toggle them on or off, and use &lt; and &gt; buttons to cycle through groups of words.
 
-<div id="word-connections" class="viz"></div>
+[^neoformix]: http://www.neoformix.com/2013/NovelViews.html
 
-Nam pulvinar et felis at maximus. Vestibulum risus erat, laoreet vitae dolor et, pellentesque tincidunt odio. In sit amet nunc elementum purus faucibus facilisis eu eget dolor. Vivamus sed volutpat tellus.
+<div id="radial-word-connections" class="viz"></div>
 
-## Refs
+That's it, if you've made it this far, I thank you for reading along. Hope this was entertaining and a bit informative. I love hearing any patterns you find, observations or feedback, so please let me know in the comments.
 
-https://en.wikipedia.org/wiki/Big_Five_personality_traits
-https://console.bluemix.net/docs/services/personality-insights/science.html#science
-https://console.bluemix.net/docs/services/tone-analyzer/using-tone.html#using-the-general-purpose-endpoint
-http://lotrproject.com/statistics/books/sentimentanalysis
-http://lotrproject.com/statistics/books/chapters
-https://jezebel.com/every-single-person-on-lost-ranked-from-most-to-least-1546174780 bernard vs sawyer
-http://www.tylervigen.com/literature-statistics
-http://www.neoformix.com/2013/NovelViews.html
-http://www.chrisharrison.net/index.php/Visualizations/Welcome
+## Similar Reading
+
+Below is a list of similar analyses that you might like.
+
+- [An Interactive Analysis of Tolkien's Works](http://lotrproject.com/statistics/books/)
+- [Literature statistics](http://www.tylervigen.com/literature-statistics)
+- [Visualization of affect in movie scripts](https://hal.archives-ouvertes.fr/hal-01099668/document)
+- [Detecting Mixtures of Genres in Movie Dialogues](https://saravananthirumuruganathan.wordpress.com/2012/01/10/detecting-mixtures-of-genres-in-movie-dialogues/)
 
 <script src="http://localhost:9001/bundle.js"></script>
 <!-- <script src="bundle.js"></script> -->

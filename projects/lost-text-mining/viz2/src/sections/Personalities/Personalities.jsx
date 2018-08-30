@@ -46,7 +46,7 @@ export default class Personalities extends React.Component {
               <div
                 key={dimension.key}
                 className={css.dimension}
-                style={{ width: dimension.isNeeds ? width * 2 : width }}
+                style={{ width }}
               >
                 <div className={css.label}>{labels[dimension.key].label}</div>
                 <div className={css.dims}>

@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 body {
-  background: #282C34;
+  background: #282c34;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
   min-height: 100%;
@@ -36,6 +36,11 @@ a:hover {
   text-decoration: underline;
 }
 .button {
+  background: transparent;
+  color: #7cb34b;
+  border-color: #7cb34b;
+}
+.button:focus {
   background: transparent;
   color: #7cb34b;
   border-color: #7cb34b;
@@ -127,7 +132,7 @@ p {
 }
 .index h2 a:hover {
   text-decoration: none;
-  color: #C776DF;
+  color: #c776df;
 }
 .index .date-and-tags {
   margin-top: 2em;
@@ -136,8 +141,8 @@ p {
   margin: 2rem 0;
 }
 .index hr {
-  border-top-color: #9EABB3;
-  border-bottom: 1px solid #9EABB3;
+  border-top-color: #9eabb3;
+  border-bottom: 1px solid #9eabb3;
   height: 0.5rem;
   position: relative;
   overflow: visible;
@@ -148,7 +153,7 @@ p {
   top: -3rem;
   left: 50%;
   font-size: 4rem;
-  background: #282C34;
+  background: #282c34;
 }
 .single .date-and-tags {
   margin: 1.5em 0;

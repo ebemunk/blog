@@ -65,7 +65,7 @@ export class Facet extends React.Component {
                 width={width}
                 height={height}
                 className={css.rect}
-                fill={show && tooltips ? d3Color(color).brighter(2) : color}
+                fill={show && tooltips ? d3Color(color).brighter(1.25) : color}
               />
             )}
           </Reference>
