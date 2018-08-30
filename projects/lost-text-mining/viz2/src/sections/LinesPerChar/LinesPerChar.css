@@ -1,13 +1,6 @@
-@media (max-width: 700px) {
-  :global(#word-count) {
-    width: 700px;
-  }
-}
-
 .chart {
   display: flex;
   justify-content: center;
-  height: 425px;
   overflow-y: scroll;
   margin: 0 auto;
 }

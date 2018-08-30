@@ -13,12 +13,11 @@ import style from './LinesPerChar.css'
 export default class LinesPerChar extends React.Component {
   state = {
     dataType: 'total',
-    showAll: false,
   }
 
   render() {
     const { data } = this.props
-    const { dataType, showAll } = this.state
+    const { dataType } = this.state
 
     const sum = R.sum(data.map(d => d.value))
 
@@ -40,9 +39,9 @@ export default class LinesPerChar extends React.Component {
                   value:
                     dataType === 'percentage' ? d.value / sum * 100 : d.value,
                 }))
-                .slice(0, showAll ? -1 : 15)}
+                .slice(0, 15)}
               width={500}
-              height={25}
+              height={20}
               padding={{
                 top: 20,
                 left: 75,
@@ -54,7 +53,7 @@ export default class LinesPerChar extends React.Component {
               }}
               linearAxisProps={{
                 tickFormat: x =>
-                  dataType === 'percentage' ? format('.2s')(x) : x,
+                  dataType === 'percentage' ? format('.2s')(x) : format(',')(x),
               }}
               linearScaleProps={{
                 domain: dataType === 'percentage' ? [0, 50] : undefined,
@@ -71,12 +70,6 @@ export default class LinesPerChar extends React.Component {
             selected={dataType}
             onChange={v => this.setState({ dataType: v })}
           />
-          {/* <Toggle
-            children="Show All"
-            onClick={() => this.setState({ showAll: !showAll })}
-            className={style.all}
-            on={showAll}
-          /> */}
         </div>
       </React.Fragment>
     )

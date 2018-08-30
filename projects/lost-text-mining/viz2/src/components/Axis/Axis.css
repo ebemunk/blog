@@ -1,18 +1,18 @@
 :root {
-	--white: rgba(255, 255, 255, 0.6)
+  --white: rgba(255, 255, 255, 0.6);
 }
 
 .axis {
-	& text {
-		fill: var(--white);
-		font-size: 1.2rem;
-	}
+  & text {
+    fill: var(--white);
+    font-size: 1rem;
+  }
 
-	& line {
-		stroke: var(--white);
-	}
+  & line {
+    stroke: var(--white);
+  }
 
-	& :global .domain {
-		stroke: var(--white);
-	}
+  & :global .domain {
+    stroke: var(--white);
+  }
 }

@@ -55,6 +55,9 @@ a:hover {
   border-color: #89bb5d;
   color: rgba(255, 255, 255, 0.8);
 }
+.button[disabled]:hover {
+  background-color: #7cb34b;
+}
 header.site-header {
   height: 180px;
   max-height: 180px;

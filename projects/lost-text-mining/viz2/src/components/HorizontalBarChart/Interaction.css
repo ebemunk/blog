@@ -2,7 +2,7 @@
   fill: none;
   stroke-width: 2;
   stroke-dasharray: 5, 5;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 .yLine {
@@ -12,7 +12,7 @@
 
 .xLine {
   composes: line;
-  stroke: steelblue;
+  stroke: white;
 }
 
 .polygons path {
@@ -30,12 +30,12 @@
 
 .yVal {
   composes: val;
-  fill: steelblue;
+  fill: white;
   text-anchor: middle;
 }
 
 .xVal {
   composes: val;
-  fill: steelblue;
+  fill: white;
   text-anchor: middle;
 }

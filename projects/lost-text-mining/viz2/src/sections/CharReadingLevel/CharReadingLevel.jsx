@@ -17,7 +17,7 @@ export default function CharReadingLevel({ data }) {
               value: d.score,
             }))}
           width={500}
-          height={25}
+          height={20}
           padding={{
             top: 20,
             left: 75,

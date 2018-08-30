@@ -63,20 +63,19 @@ export default function CharSelector(props) {
           children="Add Group"
           className={classnames('button', css.addButton)}
         />
-        {charSelection.length === 1 && (
-          <button
-            onClick={() =>
-              select(
-                charSelection.length,
-                personalities
-                  .filter(p => !charSelection[0].includes(p.char_name))
-                  .map(p => p.char_name),
-              )
-            }
-            children="Add Everyone Else as Group"
-            className={classnames('button', css.addButton)}
-          />
-        )}
+        <button
+          onClick={() =>
+            select(
+              charSelection.length,
+              personalities
+                .filter(p => !charSelection[0].includes(p.char_name))
+                .map(p => p.char_name),
+            )
+          }
+          children="Add Everyone Else as Group"
+          className={classnames('button', css.addButton)}
+          disabled={charSelection.length !== 1 || !charSelection[0].length}
+        />
       </div>
     </div>
   )
