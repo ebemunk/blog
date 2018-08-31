@@ -50,82 +50,84 @@ export default class CharAppearance extends React.Component {
     // .curve(d3.curveBasis)
 
     return (
-      <React.Fragment>
-        <div className={css.legend}>
-          {MAIN_CHARS.map(charName => (
-            <div
-              key={charName}
-              className={classnames(css.legendItem, {
-                [css.highlighted]: highlighted === charName,
-              })}
-              onClick={() =>
-                this.setState({
-                  highlighted: charName === highlighted ? null : charName,
-                })
-              }
-            >
-              <div
-                style={{
-                  width: '2rem',
-                  height: '3px',
-                  backgroundColor: charColor(charName),
-                  marginRight: '5px',
-                }}
-              />
-              {charName}
-            </div>
-          ))}
-        </div>
-        <svg width={width} height={height}>
-          <g transform={`translate(${padding.left}, ${padding.top})`}>
+      <div className={css.wrap}>
+        <div className={css.center}>
+          <div className={css.legend}>
             {MAIN_CHARS.map(charName => (
-              <path
+              <div
                 key={charName}
-                className={classnames(css.line, {
+                className={classnames(css.legendItem, {
                   [css.highlighted]: highlighted === charName,
                 })}
-                d={line(
-                  d3.range(114).map(k => {
-                    const val = data[dataType][charName].find(
-                      vals =>
-                        vals.season === episodes[k].season &&
-                        vals.episode === episodes[k].episode,
-                    )
-                    return {
-                      x: k,
-                      y: val ? val.count : 0,
-                    }
-                  }),
-                )}
-                style={{
-                  stroke: charColor(charName),
-                  strokeWidth: 2,
-                }}
-              />
+                onClick={() =>
+                  this.setState({
+                    highlighted: charName === highlighted ? null : charName,
+                  })
+                }
+              >
+                <div
+                  style={{
+                    width: '2rem',
+                    height: '3px',
+                    backgroundColor: charColor(charName),
+                    marginRight: '5px',
+                  }}
+                />
+                {charName}
+              </div>
             ))}
-            <Axis
-              scale={x}
-              orientation="bottom"
-              transform={`translate(0, ${height -
-                padding.top -
-                padding.bottom})`}
-              tickValues={[0, 24, 47, 69, 82, 98]}
-              tickFormat={(d, i) => `Season ${i + 1}`}
-              className={css.xAxis}
-            />
-            <Axis scale={y2} orientation="left" />
-          </g>
-        </svg>
+          </div>
+          <svg width={width} height={height}>
+            <g transform={`translate(${padding.left}, ${padding.top})`}>
+              {MAIN_CHARS.map(charName => (
+                <path
+                  key={charName}
+                  className={classnames(css.line, {
+                    [css.highlighted]: highlighted === charName,
+                  })}
+                  d={line(
+                    d3.range(114).map(k => {
+                      const val = data[dataType][charName].find(
+                        vals =>
+                          vals.season === episodes[k].season &&
+                          vals.episode === episodes[k].episode,
+                      )
+                      return {
+                        x: k,
+                        y: val ? val.count : 0,
+                      }
+                    }),
+                  )}
+                  style={{
+                    stroke: charColor(charName),
+                    strokeWidth: 2,
+                  }}
+                />
+              ))}
+              <Axis
+                scale={x}
+                orientation="bottom"
+                transform={`translate(0, ${height -
+                  padding.top -
+                  padding.bottom})`}
+                tickValues={[0, 24, 47, 69, 82, 98]}
+                tickFormat={(d, i) => `Season ${i + 1}`}
+                className={css.xAxis}
+              />
+              <Axis scale={y2} orientation="left" />
+            </g>
+          </svg>
 
-        <ButtonGroup
-          options={[
-            { name: 'Appearances', value: 'appearances' },
-            { name: 'Mentions', value: 'mentions' },
-          ]}
-          onChange={dataType => this.setState({ dataType })}
-          selected={dataType}
-        />
-      </React.Fragment>
+          <ButtonGroup
+            options={[
+              { name: 'Appearances', value: 'appearances' },
+              { name: 'Mentions', value: 'mentions' },
+            ]}
+            onChange={dataType => this.setState({ dataType })}
+            selected={dataType}
+          />
+        </div>
+      </div>
     )
   }
 }

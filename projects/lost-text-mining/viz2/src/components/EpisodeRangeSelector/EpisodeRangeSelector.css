@@ -1,6 +1,6 @@
 .episodeSelector {
   user-select: none;
-	flex-shrink: 0;
+  flex-shrink: 0;
   margin-bottom: 0.5rem;
 }
 
@@ -36,12 +36,4 @@
     stroke: none;
     fill: none;
   }
-}
-
-.wrap {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }

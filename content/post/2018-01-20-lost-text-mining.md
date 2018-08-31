@@ -77,10 +77,8 @@ So far, all we've really done is some statistics on the text, which is cool and 
 
 Given a chunk of text, Watson will generate a "personality profile"[^personality-profile]. This profile contains the Big-5[^big5], Needs, Values and Consumption Preferences.
 
-[^personality-profile]:
-
-  https://console.bluemix.net/docs/services/personality-insights/science.html
-
+<!-- prettier-ignore -->
+[^personality-profile]: https://console.bluemix.net/docs/services/personality-insights/science.html
 [^big5]: https://en.wikipedia.org/wiki/Big_Five_personality_traits
 
 Even though the show mostly revolves around 8 characters, I want to include more of the text, so I picked the top 25 speakers in the show and fed their lines in. You can select a specific characters or just browse through with the buttons below.
@@ -120,9 +118,8 @@ Watson API has this product called Tone Analyzer[^tone-analyzer] which makes an 
 
 The graph below, similar to the flashbacks, shows the season laid out. In this case, I've analyzed every scene and the colors correspond to the different tones prominent on that scene. The opacity highlights the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.
 
-[^tone-analyzer]:
-
-  https://console.bluemix.net/docs/services/tone-analyzer/using-tone.html#using-the-general-purpose-endpoint
+<!-- prettier-ignore -->
+[^tone-analyzer]: https://console.bluemix.net/docs/services/tone-analyzer/using-tone.html#using-the-general-purpose-endpoint
 
 <div id="scene-tone" class="viz"></div>
 

@@ -7,7 +7,7 @@ import css from './Legend.css'
 
 export default function Legend({ data }) {
   return (
-    <React.Fragment>
+    <div className={css.responsive}>
       <div className={css.legend}>
         <div className={css.legendItem}>
           <div className={css.charLegend} />
@@ -29,6 +29,6 @@ export default function Legend({ data }) {
       >
         <CharWordHistogram data={data} />
       </Labels>
-    </React.Fragment>
+    </div>
   )
 }

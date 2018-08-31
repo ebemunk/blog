@@ -1,6 +1,7 @@
 import React from 'react'
 import { format } from 'd3'
 
+import EpisodeRangeSelector from 'components/EpisodeRangeSelector'
 import ButtonGroup from 'components/ButtonGroup'
 import BarViz from 'viz/BarViz'
 
@@ -21,23 +22,26 @@ export default class WordCount extends React.Component {
 
     return (
       <React.Fragment>
-        <BarViz
-          data={data}
-          xLabel="Episodes"
-          y0Label={
-            {
-              total: 'Number of words',
-              uniq: 'Number of unique words',
-              density: 'Percentage of unique words',
-            }[dataType]
-          }
-          linearScaleProps={{
-            domain: dataType === 'density' ? [0, 100] : undefined,
-          }}
-          linearAxisProps={{
-            tickFormat: format('.2s'),
-          }}
-        />
+        <div className={css.responsive}>
+          <EpisodeRangeSelector width={900} />
+          <BarViz
+            data={data}
+            xLabel="Episodes"
+            y0Label={
+              {
+                total: 'Number of words',
+                uniq: 'Number of unique words',
+                density: 'Percentage of unique words',
+              }[dataType]
+            }
+            linearScaleProps={{
+              domain: dataType === 'density' ? [0, 100] : undefined,
+            }}
+            linearAxisProps={{
+              tickFormat: format('.2s'),
+            }}
+          />
+        </div>
         <div className={css.buttons}>
           <ButtonGroup
             options={[

@@ -31,3 +31,15 @@
     text-anchor: start;
   }
 }
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: calc(800px - 24%)) {
+  .wrap {
+    display: flex;
+  }
+}
