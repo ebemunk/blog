@@ -74,7 +74,11 @@ export default function CharSelector(props) {
           }
           children="Add Everyone Else as Group"
           className={classnames('button', css.addButton)}
-          disabled={charSelection.length !== 1 || !charSelection[0].length}
+          disabled={
+            charSelection.length !== 1 ||
+            !charSelection[0].length ||
+            charSelection[0].length === 25
+          }
         />
       </div>
     </div>

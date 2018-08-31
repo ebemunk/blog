@@ -13,6 +13,9 @@ export default class Individual extends React.Component {
   render() {
     const { char } = this.state
     const { personalities } = this.props
+
+    if (!personalities.length) return null
+
     const profile = personalities.find(p => p.char_name === char)
 
     const consumptionPrefs = profile.profile.consumption_preferences
@@ -56,10 +59,21 @@ export default class Individual extends React.Component {
       .range(['white', 'red'])
 
     return (
-      <React.Fragment>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <button
-            style={{ flexBasis: '5rem' }}
+            style={{
+              flexBasis: '5rem',
+              borderTopRightRadius: 0,
+              borderBottomRightRadius: 0,
+              height: '36px',
+            }}
             className="button"
             onClick={() => {
               const next =
@@ -73,14 +87,19 @@ export default class Individual extends React.Component {
           >
             &lt; Prev
           </button>
-          <div style={{ width: '30%' }}>
+          <div style={{ width: '200px' }}>
             <Selector
               value={char}
               onChange={({ value }) => this.setState({ char: value })}
             />
           </div>
           <button
-            style={{ flexBasis: '5rem' }}
+            style={{
+              flexBasis: '5rem',
+              borderTopLeftRadius: 0,
+              borderBottomLeftRadius: 0,
+              height: '36px',
+            }}
             className="button"
             onClick={() => {
               this.setState({
@@ -95,11 +114,11 @@ export default class Individual extends React.Component {
             Next &gt;
           </button>
         </div>
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', width: '800px', flexShrink: 0 }}>
           <div
             style={{
               padding: '3rem',
-              flexShrink: 0,
+              flexBasis: '250px',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -109,7 +128,7 @@ export default class Individual extends React.Component {
             <div>{profile.char_name}</div>
             <div>{format(',')(profile.profile.word_count)} words analyzed</div>
           </div>
-          <div style={{ flexShrink: 1 }}>
+          <div style={{ flexBasis: '550px' }}>
             <table style={{ fontSize: '1.2rem' }}>
               <thead>
                 <tr>
@@ -120,31 +139,50 @@ export default class Individual extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {distinctTraits.map(t => (
-                  <tr key={t.name}>
-                    <td>{t.name}</td>
-                    <td>{pct(t.percentile)}</td>
-                    <td style={{ color: colorScale(t.deltaPop) }}>
-                      {pct(t.deltaPop)}
-                    </td>
-                    <td style={{ color: colorScale(t.delta) }}>
-                      {pct(t.delta)}
-                    </td>
-                  </tr>
-                ))}
+                {distinctTraits
+                  .sort((a, b) => {
+                    const order = [
+                      'Openness',
+                      'Conscientiousness',
+                      'Extraversion',
+                      'Agreeableness',
+                      'Emotional range',
+                    ]
+                    return order.indexOf(a.name) - order.indexOf(b.name)
+                  })
+                  .map(t => (
+                    <tr key={t.name}>
+                      <td>{t.name}</td>
+                      <td>{pct(t.percentile)}</td>
+                      <td style={{ color: colorScale(t.deltaPop) }}>
+                        {pct(t.deltaPop)}
+                      </td>
+                      <td style={{ color: colorScale(t.delta) }}>
+                        {pct(t.delta)}
+                      </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
           </div>
         </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            flexDirection: 'column',
+            width: '800px',
+            height: '350px',
+            flexShrink: 0,
+          }}
+        >
           {consumptionPrefs.map(cp => (
             <div
               key={cp.name}
               style={{
-                flexBasis: '25%',
-                fontSize: '1.2rem',
-                alignItems: 'center',
+                fontSize: '1.1rem',
                 display: 'flex',
+                alignItems: 'center',
                 flexDirection: 'column',
               }}
             >
@@ -157,7 +195,7 @@ export default class Individual extends React.Component {
             </div>
           ))}
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }

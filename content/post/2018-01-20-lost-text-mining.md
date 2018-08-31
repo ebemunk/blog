@@ -9,7 +9,7 @@ image = "img/visual-look.png"
 
 We're text mining the transcripts of the TV show LOST.
 
-I think most people have at least 1 tv show, from their childhood or latest binge, that you connect with. They certainly have to power to move you. I wondered how much the text contributes to that whole experience, and whether you would be able to "detect" it in some way, looking at the words that the characters used, removed from how their actors looked or sounded like. How much of the writing comes through, especially in this "mass production" mentality of similar entertainment media?
+I wondered how much the dialogue text contributes to a TV show, and whether you would be able to "detect" things in it, looking only at the words that the characters speak, removed from how their actors looked or sounded like. How much of the writing shows through and contributes, especially in this "mass production" mentality of similar entertainment media?
 
 This thought was the initial spark behind this post. It's taken so long to finish that I'm not even sure what kind of question I was trying to answer, you be the judge. In that process I saw some cool patterns that I want to share with you.
 
@@ -23,7 +23,7 @@ Now it might come as a surprise (coming from a guy who is writing a giant essay 
 
 All that to say is I am not some LOST connosieur, so take these visualisations at their face value and not as some objective judgement about your favorite LOST character or writer. I'm not an authority on LOST, or on text mining, just in it for the visualizations.
 
-So strap yourselves in for a disgustingly deep dive of this influential TV show, in what I should have titled "i've finally LOST it".
+So strap yourselves in for a disgustingly deep dive of this influential TV show, in what I should have titled "i've finally lost it".
 
 ## Meta
 
