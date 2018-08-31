@@ -42,12 +42,30 @@ export default class WordConnections extends React.Component {
       .arc()
       .innerRadius(width / 2 - 25)
       .outerRadius(width / 2)
+    const thickArc = d3
+      .arc()
+      .innerRadius(95)
+      .outerRadius(width / 2 - 25)
     const link = d3
       .linkRadial()
       .angle(d => d.angle)
       .radius(d => d.radius)
 
     const arcs = pie(episodes)
+    // const epArcs = d3
+    //   .pie()
+    //   .value(d => d.length)
+    //   .sort(null)(
+    //   R.pipe(
+    //     R.groupBy(d => d.season),
+    //     R.map(R.reduce((acc, f) => acc + f.length, 0)),
+    //     R.mapObjIndexed((v, k) => ({
+    //       season: k,
+    //       length: v,
+    //     })),
+    //     R.values,
+    //   )(episodes),
+    // )
 
     const wordColor = d3.scaleOrdinal(d3.schemeCategory10)
     const linkThickness = d3
@@ -77,6 +95,7 @@ export default class WordConnections extends React.Component {
         <div className={css.legend}>
           {words.map(key => (
             <div
+              className={css.word}
               key={key}
               style={{
                 color: wordColor(key),
@@ -95,6 +114,7 @@ export default class WordConnections extends React.Component {
             </div>
           ))}
           <div
+            className={css.arrow}
             style={{
               position: 'absolute',
               left: 0,
@@ -115,6 +135,7 @@ export default class WordConnections extends React.Component {
             &lt;
           </div>
           <div
+            className={css.arrow}
             style={{
               position: 'absolute',
               right: 0,
@@ -148,6 +169,17 @@ export default class WordConnections extends React.Component {
                   }}
                 />
               ))}
+              {/* {epArcs.map(d => (
+                <path
+                  key={`${d.data.season}`}
+                  d={thickArc(d)}
+                  className={css.thickArc}
+                  style={{
+                    stroke: seasonColor(d.data.season - 1),
+                    fill: seasonColor(d.data.season - 1),
+                  }}
+                />
+              ))} */}
             </g>
             <g className={css.links}>
               {words.filter(d => this.state.selected[d]).map((key, index) =>

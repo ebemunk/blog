@@ -1,13 +1,13 @@
 .flashback {
-  fill: red;
+  fill: #9934ad;
 }
 
 .flashsideways {
-  fill: green;
+  fill: #ffbe69;
 }
 
 .flashforward {
-  fill: yellow;
+  fill: #f96074;
 }
 
 .normal {

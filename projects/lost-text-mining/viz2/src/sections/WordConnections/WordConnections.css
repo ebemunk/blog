@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  user-select: none;
 }
 
 .arc {
@@ -33,4 +34,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #282c34;
+}
+
+.word {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.arrow {
+  font-size: 5rem;
+  color: slategray;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.thickArc {
+  opacity: 0.3;
+  stroke-dasharray: 5 5;
+  stroke-width: 2;
+  fill-opacity: 0.3;
 }
