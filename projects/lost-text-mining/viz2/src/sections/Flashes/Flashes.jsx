@@ -1,14 +1,41 @@
 import React from 'react'
 import * as R from 'ramda'
 import classnames from 'classnames'
+import * as d3 from 'd3'
+
+import Toggle from 'components/Toggle'
 
 import Season from './Season'
 
 import css from './Flashes.css'
 
-export default function Flashes({ data }) {
+export function Flashes({ data, toggleScale, scale }) {
+  const maxEp = R.pipe(
+    R.groupBy(d => `${d.season}`),
+    R.map(eps => {
+      return eps.reduce((sum, ep) => {
+        return sum + ep.flashes.reduce((sss, f) => sss + f.chars, 0)
+      }, 0)
+    }),
+    R.values,
+    d3.max,
+  )(data)
+
+  const seasonScale = d3
+    .scaleLinear()
+    .domain([0, maxEp])
+    .range([0, 900])
+
   return (
     <div className={css.wrap}>
+      <div className={css.legend}>
+        <Toggle
+          children="Scale Season Lengths"
+          onClick={() => toggleScale(!scale)}
+          className={css.toggle}
+          on={scale}
+        />
+      </div>
       <div className={css.legend}>
         {['Flashback', 'Flash-forward', 'Flash-sideways'].map(name => (
           <div className={css.key} key={name}>
@@ -32,6 +59,7 @@ export default function Flashes({ data }) {
             <Season
               season={season}
               data={data.filter(ep => ep.season === season)}
+              scale={scale ? seasonScale : () => 900}
             />
           </g>
         ))}
@@ -39,3 +67,7 @@ export default function Flashes({ data }) {
     </div>
   )
 }
+
+import { withState } from 'recompose'
+
+export default withState('scale', 'toggleScale', false)(Flashes)

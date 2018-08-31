@@ -4,16 +4,17 @@ import * as d3 from 'd3'
 
 import css from './Season.css'
 
-export default function Season({ data, season }) {
+export default function Season({ data, season, scale }) {
   const total = data.reduce(
     (tot, ep) =>
       tot + ep.flashes.reduce((subtotal, fb) => subtotal + fb.chars, 0),
     0,
   )
-  const scale = d3
+
+  const seasonScale = d3
     .scaleLinear()
     .domain([0, total])
-    .range([0, 900])
+    .range([0, scale(total)])
 
   let x = 0
   let acc = 0
@@ -22,14 +23,14 @@ export default function Season({ data, season }) {
     const r = (
       <g key={`${episode.season}-${episode.episode}`}>
         <rect
-          x={scale(acc)}
+          x={seasonScale(acc)}
           y={0}
           height={25}
-          width={scale(eptotal)}
+          width={seasonScale(eptotal)}
           className={css.episode}
         />
         <text
-          x={scale(acc)}
+          x={seasonScale(acc)}
           y={25}
           dx="2px"
           dy="1rem"
@@ -38,8 +39,8 @@ export default function Season({ data, season }) {
           {episode.episode}
         </text>
         <line
-          x1={scale(acc)}
-          x2={scale(acc)}
+          x1={seasonScale(acc)}
+          x2={seasonScale(acc)}
           y1={25}
           y2={30}
           className={css.episodeLine}
@@ -47,10 +48,10 @@ export default function Season({ data, season }) {
         {episode.flashes.map((ep, i) => {
           const ret = (
             <rect
-              x={scale(x)}
+              x={seasonScale(x)}
               y={0}
               height={25}
-              width={scale(ep.chars)}
+              width={seasonScale(ep.chars)}
               key={`${episode.season}-${episode.episode}-${i}`}
               className={classnames(css.rect, {
                 [css.flashback]: ep.flashback,

@@ -25,8 +25,6 @@ export function SceneTone({ data, scale, toggleScale }) {
     .domain([0, maxEp])
     .range([0, 900])
 
-  console.log('scale')
-
   return (
     <React.Fragment>
       <Legend toggleScale={toggleScale} scale={scale} />
