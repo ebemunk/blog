@@ -7,7 +7,6 @@ import {
   getCharCooccurrence,
 } from 'store/charCooccurrence'
 import fireActions from 'hoc/fireActions'
-import withEpSelector from 'hoc/withEpSelector'
 
 import CharCooccurrence from './CharCooccurrence'
 
@@ -22,5 +21,4 @@ export default compose(
     },
   ),
   fireActions(['getCharCooccurrence']),
-  withEpSelector(700),
 )(CharCooccurrence)

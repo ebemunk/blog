@@ -6,6 +6,7 @@ import HorizontalBarChart from 'components/HorizontalBarChart'
 import ButtonGroup from 'components/ButtonGroup'
 import Toggle from 'components/Toggle'
 import Labels from 'components/Labels'
+import EpisodeRangeSelector from 'components/EpisodeRangeSelector'
 import { toTitleCase } from 'utils'
 
 import style from './LinesPerChar.css'
@@ -24,6 +25,7 @@ export default class LinesPerChar extends React.Component {
     return (
       <React.Fragment>
         <div className={style.chart}>
+          <EpisodeRangeSelector width={700} />
           <Labels
             y0Label="Characters"
             x1Label={

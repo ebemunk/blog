@@ -5,6 +5,8 @@ import { schemeSet3 } from 'd3-scale-chromatic'
 import * as R from 'ramda'
 import classnames from 'classnames'
 
+import EpisodeRangeSelector from 'components/EpisodeRangeSelector'
+
 import ForceGraph from './ForceGraph'
 import Worker from './ForceSimulation.worker'
 import style from './CharCooccurrence.css'
@@ -138,6 +140,7 @@ export default class CharCooccurrence extends React.Component {
 
     return (
       <div className={style.wrap}>
+        <EpisodeRangeSelector width={960} />
         <svg height={500} width={960} className={style.svg}>
           <ForceGraph
             nodes={nodes}

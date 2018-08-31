@@ -2,7 +2,6 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { hot } from 'react-hot-loader'
 
-import withEpSelector from 'hoc/withEpSelector'
 import fireActions from 'hoc/fireActions'
 import {
   getReadingLevels,
@@ -21,5 +20,4 @@ export default compose(
     },
   ),
   fireActions(['getReadingLevels']),
-  withEpSelector(900),
 )(EpisodeReadingLevel)
