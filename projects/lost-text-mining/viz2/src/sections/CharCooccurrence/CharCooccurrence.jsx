@@ -9,7 +9,7 @@ import EpisodeRangeSelector from 'components/EpisodeRangeSelector'
 
 import ForceGraph from './ForceGraph'
 import Worker from './ForceSimulation.worker'
-import style from './CharCooccurrence.css'
+import css from './CharCooccurrence.css'
 import { color } from 'd3-color'
 
 export default class CharCooccurrence extends React.Component {
@@ -77,6 +77,7 @@ export default class CharCooccurrence extends React.Component {
               this.setState({
                 transform: `translate(${translate.join(',')}) scale(${scale})`,
                 loading: false,
+                highlight: false,
               })
             }
           },
@@ -139,9 +140,13 @@ export default class CharCooccurrence extends React.Component {
     )(filteredLinks)
 
     return (
-      <div className={style.wrap}>
+      <div className={css.wrap}>
         <EpisodeRangeSelector width={960} />
-        <svg height={500} width={960} className={style.svg}>
+        <svg
+          height={500}
+          width={960}
+          className={classnames(css.svg, { [css.loading]: loading })}
+        >
           <ForceGraph
             nodes={nodes}
             links={links}
@@ -159,11 +164,6 @@ export default class CharCooccurrence extends React.Component {
             }
             domRef={el => (this.nodesDom = el)}
           />
-          <g>
-            {loading && (
-              <rect width={960} height={500} fill="white" opacity="0.4" />
-            )}
-          </g>
         </svg>
       </div>
     )
