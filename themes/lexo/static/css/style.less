@@ -223,6 +223,20 @@ code {
   }
 }
 
+// footnote link
+a[href^="#fn:"],
+// Back to footnote link
+a[href^="#fnref:"] {
+  text-decoration: none;
+  font-family: monospace;
+}
+a[href^="#fn:"]:before {
+  content: "[";
+}
+a[href^="#fn:"]:after {
+  content: "]";
+}
+
 /**
  * Syntax highlighting styles
  */

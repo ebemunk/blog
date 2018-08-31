@@ -1,7 +1,7 @@
 +++
 date = "2018-01-20T02:47:00-07:00"
 draft = false
-title = "LOST it"
+title = "Text Mining LOST Transcripts"
 slug = "lost-text-mining"
 tags = ["LOST", "data visualization", "text mining"]
 image = "img/visual-look.png"
@@ -180,3 +180,16 @@ Below is a list of similar analyses that you might like.
   margin: 3rem 0;
 }
 </style>
+
+<script>
+// setTimeout(() =>
+//   littlefoot({
+//     buttonTemplate: `
+//     <div class="littlefoot-footnote__container">
+//   <span class="littlefoot-footnote__button littlefoot-footnote__button__ellipsis" id="<%= reference %>" data-footnote-id="<%= id %>" data-footnote-number="<%= number %>" alt="See Footnote <%= number %>" rel="footnote" data-littlefoot-footnote="<%= content %>">[<%= number %>]
+//   </span>
+// </div>
+//     `
+//   })
+// , 500)
+</script>

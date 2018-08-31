@@ -1017,7 +1017,7 @@ babel-plugin-transform-strict-mode@^6.24.1:
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
 
-babel-polyfill@^6.23.0:
+babel-polyfill@^6.23.0, babel-polyfill@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.26.0.tgz#379937abc67d7895970adc621f284cd966cf2153"
   dependencies:
@@ -2560,6 +2560,34 @@ dns-txt@^2.0.2:
   resolved "https://registry.yarnpkg.com/dns-txt/-/dns-txt-2.0.2.tgz#b91d806f5d27188e4ab3e7d107d881a1cc4642b6"
   dependencies:
     buffer-indexof "^1.0.0"
+
+dom-classlist@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/dom-classlist/-/dom-classlist-1.0.1.tgz#722814dc2f509d3d7d06f2533ba9ff48eeea59b9"
+
+dom-closest@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/dom-closest/-/dom-closest-0.2.0.tgz#ebd9f91d1bf22e8d6f477876bbcd3ec90216c0cf"
+  dependencies:
+    dom-matches ">=1.0.1"
+
+dom-delegate@^2.0.3:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/dom-delegate/-/dom-delegate-2.2.0.tgz#fcbe2e0de086f82bd03eaa2caaac51e4a87f2e6b"
+
+dom-matches@>=1.0.1, dom-matches@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/dom-matches/-/dom-matches-2.0.0.tgz#d2728b416a87533980eb089b848d253cf23a758c"
+
+dom-matches@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/dom-matches/-/dom-matches-1.0.1.tgz#fa7b57cd8287895bf40936b8d8544ba8e8b35a1f"
+
+dom-siblings@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/dom-siblings/-/dom-siblings-0.1.0.tgz#88025ffa0201f62cbede543066d7ef184c0ec1e9"
+  dependencies:
+    dom-matches "^1.0.1"
 
 dom-walk@^0.1.0:
   version "0.1.1"
@@ -4682,6 +4710,20 @@ listr@^0.14.1:
     rxjs "^6.1.0"
     strip-ansi "^3.0.1"
 
+littlefoot@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/littlefoot/-/littlefoot-1.0.6.tgz#844b44c9945601158e8326ffea6a2815adddbf3b"
+  dependencies:
+    babel-polyfill "^6.26.0"
+    dom-classlist "^1.0.1"
+    dom-closest "^0.2.0"
+    dom-delegate "^2.0.3"
+    dom-matches "^2.0.0"
+    dom-siblings "^0.1.0"
+    lodash.escape "^4.0.1"
+    lodash.template "^4.4.0"
+    lodash.throttle "^4.1.1"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -4732,6 +4774,10 @@ lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
 
+lodash.escape@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/lodash.escape/-/lodash.escape-4.0.1.tgz#c9044690c21e04294beaa517712fded1fa88de98"
+
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -4740,7 +4786,7 @@ lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
 
-lodash.template@^4.2.4:
+lodash.template@^4.2.4, lodash.template@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.template/-/lodash.template-4.4.0.tgz#e73a0385c8355591746e020b99679c690e68fba0"
   dependencies:
