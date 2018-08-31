@@ -222,7 +222,7 @@ export default async function writeForViz() {
       ].map(
         name => `
           select '${name}' as char_name, season, episode, count(*) from dialog
-          where line ilike '%${name.toLowerCase()}%' and type='dialog' and char_name != '${name}'
+          where line ~* '\\y${name.toLowerCase()}\\y' and type='dialog' and char_name != '${name}'
           group by season,episode;
         `,
       ),
@@ -287,22 +287,25 @@ export default async function writeForViz() {
     },
   ]
 
-  await Promise.map([dataFiles[6]], async dataFile => {
-    log('doing', dataFile.filename)
-    const rows = await Promise.reduce(
-      Array.isArray(dataFile.query) ? dataFile.query : [dataFile.query],
-      async (acc, query) => {
-        const { rows } = await pool.query(query)
-        return acc.concat(rows)
-      },
-      [],
-    )
-    const data = dataFile.process ? dataFile.process(rows) : rows
-    return writeFile(
-      `../viz2/src/data/${dataFile.filename}.json`,
-      prettyJson(data),
-    )
-  })
+  await Promise.map(
+    [dataFiles.find(f => f.filename === 'charMentions')],
+    async dataFile => {
+      log('doing', dataFile.filename)
+      const rows = await Promise.reduce(
+        Array.isArray(dataFile.query) ? dataFile.query : [dataFile.query],
+        async (acc, query) => {
+          const { rows } = await pool.query(query)
+          return acc.concat(rows)
+        },
+        [],
+      )
+      const data = dataFile.process ? dataFile.process(rows) : rows
+      return writeFile(
+        `../viz2/src/data/${dataFile.filename}.json`,
+        prettyJson(data),
+      )
+    },
+  )
 
   log('done')
 

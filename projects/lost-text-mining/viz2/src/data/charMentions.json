@@ -4,7 +4,7 @@
       "char_name": "JACK",
       "season": 1,
       "episode": 16,
-      "count": 2
+      "count": 1
     },
     {
       "char_name": "JACK",
@@ -22,7 +22,7 @@
       "char_name": "JACK",
       "season": 5,
       "episode": 5,
-      "count": 4
+      "count": 3
     },
     {
       "char_name": "JACK",
@@ -34,7 +34,7 @@
       "char_name": "JACK",
       "season": 1,
       "episode": 8,
-      "count": 7
+      "count": 6
     },
     {
       "char_name": "JACK",
@@ -52,7 +52,7 @@
       "char_name": "JACK",
       "season": 5,
       "episode": 6,
-      "count": 25
+      "count": 23
     },
     {
       "char_name": "JACK",
@@ -112,13 +112,13 @@
       "char_name": "JACK",
       "season": 6,
       "episode": 2,
-      "count": 6
+      "count": 5
     },
     {
       "char_name": "JACK",
       "season": 1,
       "episode": 3,
-      "count": 4
+      "count": 2
     },
     {
       "char_name": "JACK",
@@ -130,13 +130,13 @@
       "char_name": "JACK",
       "season": 2,
       "episode": 21,
-      "count": 5
+      "count": 4
     },
     {
       "char_name": "JACK",
       "season": 3,
       "episode": 19,
-      "count": 6
+      "count": 5
     },
     {
       "char_name": "JACK",
@@ -166,7 +166,7 @@
       "char_name": "JACK",
       "season": 1,
       "episode": 4,
-      "count": 6
+      "count": 5
     },
     {
       "char_name": "JACK",
@@ -190,7 +190,7 @@
       "char_name": "JACK",
       "season": 4,
       "episode": 6,
-      "count": 9
+      "count": 8
     },
     {
       "char_name": "JACK",
@@ -250,7 +250,7 @@
       "char_name": "JACK",
       "season": 1,
       "episode": 15,
-      "count": 11
+      "count": 10
     },
     {
       "char_name": "JACK",
@@ -280,7 +280,7 @@
       "char_name": "JACK",
       "season": 2,
       "episode": 13,
-      "count": 19
+      "count": 18
     },
     {
       "char_name": "JACK",
@@ -310,7 +310,7 @@
       "char_name": "JACK",
       "season": 1,
       "episode": 7,
-      "count": 21
+      "count": 20
     },
     {
       "char_name": "JACK",
@@ -358,19 +358,13 @@
       "char_name": "JACK",
       "season": 3,
       "episode": 3,
-      "count": 7
+      "count": 6
     },
     {
       "char_name": "JACK",
       "season": 1,
       "episode": 19,
       "count": 4
-    },
-    {
-      "char_name": "JACK",
-      "season": 1,
-      "episode": 2,
-      "count": 1
     },
     {
       "char_name": "JACK",
@@ -430,7 +424,7 @@
       "char_name": "JACK",
       "season": 1,
       "episode": 18,
-      "count": 5
+      "count": 4
     },
     {
       "char_name": "JACK",
@@ -442,7 +436,7 @@
       "char_name": "JACK",
       "season": 2,
       "episode": 4,
-      "count": 8
+      "count": 6
     },
     {
       "char_name": "JACK",
@@ -520,7 +514,7 @@
       "char_name": "JACK",
       "season": 1,
       "episode": 9,
-      "count": 9
+      "count": 6
     },
     {
       "char_name": "JACK",
@@ -610,7 +604,7 @@
       "char_name": "JACK",
       "season": 2,
       "episode": 11,
-      "count": 32
+      "count": 29
     }
   ],
   "SAWYER": [
@@ -1130,7 +1124,7 @@
       "char_name": "LOCKE",
       "season": 5,
       "episode": 7,
-      "count": 9
+      "count": 8
     },
     {
       "char_name": "LOCKE",
@@ -1142,7 +1136,7 @@
       "char_name": "LOCKE",
       "season": 3,
       "episode": 15,
-      "count": 3
+      "count": 2
     },
     {
       "char_name": "LOCKE",
@@ -1166,7 +1160,7 @@
       "char_name": "LOCKE",
       "season": 3,
       "episode": 14,
-      "count": 3
+      "count": 2
     },
     {
       "char_name": "LOCKE",
@@ -1194,6 +1188,18 @@
     },
     {
       "char_name": "LOCKE",
+      "season": 2,
+      "episode": 20,
+      "count": 2
+    },
+    {
+      "char_name": "LOCKE",
+      "season": 3,
+      "episode": 21,
+      "count": 1
+    },
+    {
+      "char_name": "LOCKE",
       "season": 1,
       "episode": 3,
       "count": 3
@@ -1214,7 +1220,7 @@
       "char_name": "LOCKE",
       "season": 4,
       "episode": 11,
-      "count": 9
+      "count": 8
     },
     {
       "char_name": "LOCKE",
@@ -1226,7 +1232,7 @@
       "char_name": "LOCKE",
       "season": 6,
       "episode": 7,
-      "count": 12
+      "count": 10
     },
     {
       "char_name": "LOCKE",
@@ -1244,7 +1250,7 @@
       "char_name": "LOCKE",
       "season": 2,
       "episode": 16,
-      "count": 5
+      "count": 4
     },
     {
       "char_name": "LOCKE",
@@ -1268,7 +1274,7 @@
       "char_name": "LOCKE",
       "season": 2,
       "episode": 11,
-      "count": 5
+      "count": 4
     },
     {
       "char_name": "LOCKE",
@@ -1298,7 +1304,7 @@
       "char_name": "LOCKE",
       "season": 5,
       "episode": 9,
-      "count": 2
+      "count": 1
     },
     {
       "char_name": "LOCKE",
@@ -1328,7 +1334,7 @@
       "char_name": "LOCKE",
       "season": 2,
       "episode": 1,
-      "count": 6
+      "count": 5
     },
     {
       "char_name": "LOCKE",
@@ -1380,12 +1386,6 @@
     },
     {
       "char_name": "LOCKE",
-      "season": 5,
-      "episode": 11,
-      "count": 1
-    },
-    {
-      "char_name": "LOCKE",
       "season": 1,
       "episode": 5,
       "count": 1
@@ -1400,7 +1400,7 @@
       "char_name": "LOCKE",
       "season": 3,
       "episode": 9,
-      "count": 2
+      "count": 1
     },
     {
       "char_name": "LOCKE",
@@ -1418,7 +1418,7 @@
       "char_name": "LOCKE",
       "season": 3,
       "episode": 22,
-      "count": 3
+      "count": 2
     },
     {
       "char_name": "LOCKE",
@@ -1442,7 +1442,7 @@
       "char_name": "LOCKE",
       "season": 5,
       "episode": 16,
-      "count": 5
+      "count": 4
     },
     {
       "char_name": "LOCKE",
@@ -1465,14 +1465,8 @@
     {
       "char_name": "LOCKE",
       "season": 1,
-      "episode": 2,
-      "count": 1
-    },
-    {
-      "char_name": "LOCKE",
-      "season": 1,
       "episode": 21,
-      "count": 11
+      "count": 10
     },
     {
       "char_name": "LOCKE",
@@ -1484,7 +1478,7 @@
       "char_name": "LOCKE",
       "season": 4,
       "episode": 4,
-      "count": 9
+      "count": 7
     },
     {
       "char_name": "LOCKE",
@@ -1520,13 +1514,13 @@
       "char_name": "LOCKE",
       "season": 5,
       "episode": 1,
-      "count": 6
+      "count": 5
     },
     {
       "char_name": "LOCKE",
       "season": 4,
       "episode": 3,
-      "count": 15
+      "count": 13
     },
     {
       "char_name": "LOCKE",
@@ -1538,7 +1532,7 @@
       "char_name": "LOCKE",
       "season": 2,
       "episode": 4,
-      "count": 4
+      "count": 3
     },
     {
       "char_name": "LOCKE",
@@ -1598,7 +1592,7 @@
       "char_name": "LOCKE",
       "season": 1,
       "episode": 9,
-      "count": 3
+      "count": 2
     },
     {
       "char_name": "LOCKE",
@@ -1610,36 +1604,6 @@
       "char_name": "LOCKE",
       "season": 2,
       "episode": 23,
-      "count": 3
-    },
-    {
-      "char_name": "LOCKE",
-      "season": 2,
-      "episode": 20,
-      "count": 3
-    },
-    {
-      "char_name": "LOCKE",
-      "season": 2,
-      "episode": 19,
-      "count": 2
-    },
-    {
-      "char_name": "LOCKE",
-      "season": 5,
-      "episode": 14,
-      "count": 1
-    },
-    {
-      "char_name": "LOCKE",
-      "season": 3,
-      "episode": 2,
-      "count": 1
-    },
-    {
-      "char_name": "LOCKE",
-      "season": 3,
-      "episode": 21,
       "count": 1
     }
   ],
@@ -1930,7 +1894,7 @@
       "char_name": "KATE",
       "season": 6,
       "episode": 11,
-      "count": 2
+      "count": 1
     },
     {
       "char_name": "KATE",
@@ -3444,37 +3408,25 @@
       "char_name": "BEN",
       "season": 4,
       "episode": 3,
-      "count": 7
-    },
-    {
-      "char_name": "BEN",
-      "season": 1,
-      "episode": 11,
-      "count": 1
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 4,
-      "count": 2
+      "count": 6
     },
     {
       "char_name": "BEN",
       "season": 5,
       "episode": 5,
-      "count": 3
+      "count": 2
     },
     {
       "char_name": "BEN",
       "season": 5,
       "episode": 7,
-      "count": 6
+      "count": 2
     },
     {
       "char_name": "BEN",
       "season": 6,
       "episode": 15,
-      "count": 8
+      "count": 4
     },
     {
       "char_name": "BEN",
@@ -3486,25 +3438,31 @@
       "char_name": "BEN",
       "season": 4,
       "episode": 9,
-      "count": 9
+      "count": 3
     },
     {
       "char_name": "BEN",
       "season": 5,
       "episode": 6,
-      "count": 6
+      "count": 5
     },
     {
       "char_name": "BEN",
       "season": 4,
       "episode": 13,
-      "count": 15
+      "count": 11
     },
     {
       "char_name": "BEN",
       "season": 5,
       "episode": 2,
       "count": 2
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 16,
+      "count": 3
     },
     {
       "char_name": "BEN",
@@ -3514,231 +3472,15 @@
     },
     {
       "char_name": "BEN",
-      "season": 4,
-      "episode": 10,
-      "count": 1
-    },
-    {
-      "char_name": "BEN",
-      "season": 6,
-      "episode": 6,
-      "count": 5
-    },
-    {
-      "char_name": "BEN",
       "season": 5,
-      "episode": 4,
-      "count": 4
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 5,
-      "count": 4
-    },
-    {
-      "char_name": "BEN",
-      "season": 4,
-      "episode": 12,
-      "count": 7
-    },
-    {
-      "char_name": "BEN",
-      "season": 4,
-      "episode": 8,
-      "count": 2
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 20,
-      "count": 19
-    },
-    {
-      "char_name": "BEN",
-      "season": 5,
-      "episode": 14,
-      "count": 2
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 2,
-      "count": 2
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 21,
-      "count": 6
-    },
-    {
-      "char_name": "BEN",
-      "season": 1,
-      "episode": 21,
-      "count": 1
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 19,
+      "episode": 11,
       "count": 14
     },
     {
       "char_name": "BEN",
-      "season": 4,
-      "episode": 4,
-      "count": 9
-    },
-    {
-      "char_name": "BEN",
       "season": 6,
-      "episode": 13,
-      "count": 1
-    },
-    {
-      "char_name": "BEN",
-      "season": 5,
-      "episode": 12,
-      "count": 17
-    },
-    {
-      "char_name": "BEN",
-      "season": 4,
-      "episode": 11,
-      "count": 2
-    },
-    {
-      "char_name": "BEN",
-      "season": 5,
-      "episode": 10,
-      "count": 6
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
       "episode": 6,
-      "count": 8
-    },
-    {
-      "char_name": "BEN",
-      "season": 5,
-      "episode": 1,
       "count": 5
-    },
-    {
-      "char_name": "BEN",
-      "season": 5,
-      "episode": 15,
-      "count": 5
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 16,
-      "count": 9
-    },
-    {
-      "char_name": "BEN",
-      "season": 4,
-      "episode": 2,
-      "count": 5
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 18,
-      "count": 1
-    },
-    {
-      "char_name": "BEN",
-      "season": 5,
-      "episode": 13,
-      "count": 4
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 11,
-      "count": 1
-    },
-    {
-      "char_name": "BEN",
-      "season": 6,
-      "episode": 1,
-      "count": 8
-    },
-    {
-      "char_name": "BEN",
-      "season": 4,
-      "episode": 6,
-      "count": 22
-    },
-    {
-      "char_name": "BEN",
-      "season": 5,
-      "episode": 9,
-      "count": 4
-    },
-    {
-      "char_name": "BEN",
-      "season": 6,
-      "episode": 10,
-      "count": 2
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 10,
-      "count": 1
-    },
-    {
-      "char_name": "BEN",
-      "season": 4,
-      "episode": 7,
-      "count": 2
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 1,
-      "count": 3
-    },
-    {
-      "char_name": "BEN",
-      "season": 6,
-      "episode": 11,
-      "count": 2
-    },
-    {
-      "char_name": "BEN",
-      "season": 1,
-      "episode": 15,
-      "count": 1
-    },
-    {
-      "char_name": "BEN",
-      "season": 3,
-      "episode": 12,
-      "count": 2
-    },
-    {
-      "char_name": "BEN",
-      "season": 5,
-      "episode": 3,
-      "count": 1
-    },
-    {
-      "char_name": "BEN",
-      "season": 6,
-      "episode": 16,
-      "count": 6
-    },
-    {
-      "char_name": "BEN",
-      "season": 5,
-      "episode": 11,
-      "count": 16
     },
     {
       "char_name": "BEN",
@@ -3754,21 +3496,177 @@
     },
     {
       "char_name": "BEN",
+      "season": 5,
+      "episode": 4,
+      "count": 4
+    },
+    {
+      "char_name": "BEN",
       "season": 3,
       "episode": 13,
       "count": 3
     },
     {
       "char_name": "BEN",
-      "season": 1,
-      "episode": 23,
+      "season": 3,
+      "episode": 5,
+      "count": 3
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 12,
+      "count": 7
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 8,
       "count": 1
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 20,
+      "count": 16
     },
     {
       "char_name": "BEN",
       "season": 5,
       "episode": 16,
-      "count": 9
+      "count": 8
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 14,
+      "count": 1
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 2,
+      "count": 1
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 21,
+      "count": 5
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 19,
+      "count": 14
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 4,
+      "count": 8
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 12,
+      "count": 11
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 11,
+      "count": 1
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 10,
+      "count": 3
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 6,
+      "count": 8
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 1,
+      "count": 2
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 15,
+      "count": 4
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 16,
+      "count": 8
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 2,
+      "count": 3
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 18,
+      "count": 1
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 13,
+      "count": 3
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 1,
+      "count": 7
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 6,
+      "count": 20
+    },
+    {
+      "char_name": "BEN",
+      "season": 5,
+      "episode": 9,
+      "count": 4
+    },
+    {
+      "char_name": "BEN",
+      "season": 4,
+      "episode": 7,
+      "count": 1
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 1,
+      "count": 3
+    },
+    {
+      "char_name": "BEN",
+      "season": 6,
+      "episode": 11,
+      "count": 1
+    },
+    {
+      "char_name": "BEN",
+      "season": 3,
+      "episode": 12,
+      "count": 2
     }
   ]
 }
