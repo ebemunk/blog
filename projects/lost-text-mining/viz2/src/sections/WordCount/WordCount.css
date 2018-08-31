@@ -9,11 +9,3 @@
   flex-direction: column;
   align-items: center;
 }
-
-@media screen and (max-width: 900px) {
-  .responsive {
-    align-items: flex-start;
-    overflow-x: scroll;
-    margin: 0 -12%;
-  }
-}

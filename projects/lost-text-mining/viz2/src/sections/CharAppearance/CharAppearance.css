@@ -20,6 +20,7 @@
   align-items: center;
   opacity: 0.7;
   cursor: pointer;
+  padding: 0 1rem;
 
   &.highlighted {
     opacity: 1;
@@ -36,10 +37,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-@media screen and (max-width: calc(800px - 24%)) {
-  .wrap {
-    display: flex;
-  }
 }

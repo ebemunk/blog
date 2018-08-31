@@ -18,7 +18,7 @@ export const SEASONS = [
   [98, 113],
 ]
 
-export const groupColor = d3.scaleOrdinal(d3.schemeCategory10)
+export const groupColor = d3.scaleOrdinal(d3.schemeCategory10.slice(1))
 
 export const toTitleCase = str =>
   str.replace(

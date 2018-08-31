@@ -3,3 +3,9 @@
   justify-content: center;
   margin-top: 2rem;
 }
+
+.responsive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

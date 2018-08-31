@@ -1,5 +1,6 @@
 import React from 'react'
 
+import EpisodeRangeSelector from 'components/EpisodeRangeSelector'
 import ButtonGroup from 'components/ButtonGroup'
 import BarViz from 'viz/BarViz'
 
@@ -20,17 +21,20 @@ export default class CountPerEpisode extends React.Component {
 
     return (
       <React.Fragment>
-        <BarViz
-          data={data}
-          xLabel="Episodes"
-          y0Label={
-            {
-              num_chars: 'Number of characters',
-              num_stagedirections: 'Number of stage directions',
-              num_scenes: 'Number of scenes',
-            }[dataType]
-          }
-        />
+        <div className={css.responsive}>
+          <EpisodeRangeSelector width={900} />
+          <BarViz
+            data={data}
+            xLabel="Episodes"
+            y0Label={
+              {
+                num_chars: 'Number of characters',
+                num_stagedirections: 'Number of stage directions',
+                num_scenes: 'Number of scenes',
+              }[dataType]
+            }
+          />
+        </div>
         <div className={css.buttons}>
           <ButtonGroup
             options={[

@@ -7,7 +7,6 @@ import {
   countsPerEpisodeSelection,
   getCountsPerEpisode,
 } from 'store/countsPerEpisode'
-import withEpSelector from 'hoc/withEpSelector'
 import fireActions from 'hoc/fireActions'
 
 export default compose(
@@ -21,5 +20,4 @@ export default compose(
     },
   ),
   fireActions(['getCountsPerEpisode']),
-  withEpSelector(900),
 )(CountPerEpisode)

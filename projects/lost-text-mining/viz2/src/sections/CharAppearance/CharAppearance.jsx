@@ -10,7 +10,7 @@ import { MAIN_CHARS } from 'utils'
 
 import css from './CharAppearance.css'
 
-export const charColor = d3.scaleOrdinal(d3.schemeCategory10)
+export const charColor = d3.scaleOrdinal(d3.schemeSet3)
 
 export default class CharAppearance extends React.Component {
   state = {
@@ -99,7 +99,8 @@ export default class CharAppearance extends React.Component {
                     }),
                   )}
                   style={{
-                    stroke: charColor(charName),
+                    stroke:
+                      highlighted === charName ? charColor(charName) : 'gray',
                     strokeWidth: 2,
                   }}
                 />
