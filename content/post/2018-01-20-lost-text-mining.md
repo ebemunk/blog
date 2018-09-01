@@ -1,7 +1,7 @@
 +++
 date = "2018-01-20T02:47:00-07:00"
 draft = false
-title = "Text Mining LOST Transcripts"
+title = "Text Mining LOST"
 slug = "lost-text-mining"
 tags = ["LOST", "data visualization", "text mining"]
 image = "img/visual-look.png"

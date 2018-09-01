@@ -1,4 +1,4 @@
-import { fromPairs } from 'lodash'
+import fromPairs from 'lodash/fromPairs'
 
 const images = [
   'ANA LUCIA',

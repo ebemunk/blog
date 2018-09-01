@@ -5,6 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack -p",
+    "build:profile": "webpack -p --profile --json > compilation-stats.json",
+    "analyse": "webpack-bundle-analyzer compilation-stats.json",
     "devbuild": "webpack",
     "dev": "webpack-dev-server",
     "test": "jest"
@@ -25,6 +27,7 @@
     "react-hot-loader": "^4.1.3",
     "style-loader": "^0.21.0",
     "webpack": "^4.8.2",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^2.1.3",
     "webpack-dev-server": "^3.1.4",
     "worker-loader": "^2.0.0"
