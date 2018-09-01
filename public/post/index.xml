@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Thinking Through the Party</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Mar 2016 11:18:33 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.ebemunk.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Text Mining LOST</title>
+      <link>https://blog.ebemunk.com/lost-text-mining/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.ebemunk.com/lost-text-mining/</guid>
+      <description>We&amp;rsquo;re text mining the transcripts of the TV show LOST, and visualizing them!
+I wondered how much the dialogue text contributes to a TV show, and whether you would be able to &amp;ldquo;detect&amp;rdquo; things in it, looking only at the words that the characters speak, removed from how their actors looked or sounded like. How much of the writing shows through and contributes, especially in this &amp;ldquo;mass production&amp;rdquo; mentality of similar entertainment media?</description>
+    </item>
     
     <item>
       <title>A Visual Look at 2 Million Chess Games</title>
