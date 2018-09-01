@@ -19,7 +19,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: dir('../../../static/lost-text-mining'),
-    publicPath: 'http://localhost:9001/',
+    // publicPath: 'http://localhost:9001/',
     globalObject: 'this',
   },
   devtool: 'source-map',
@@ -77,7 +77,10 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {},
+            options: {
+              name: '[hash].[ext]',
+              outputPath: 'images/',
+            },
           },
         ],
       },
