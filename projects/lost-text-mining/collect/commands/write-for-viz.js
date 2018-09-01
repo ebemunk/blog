@@ -142,19 +142,6 @@ export default async function writeForViz() {
         Object.values,
         R.map(scenes => {
           let start = 0
-          // return {
-          //   season: scenes[0].season,
-          //   episode: scenes[0].episode,
-          //   scenes: scenes.map(scene => {
-          //     const ret = {
-          //       start,
-          //       length: scene.length,
-          //       tones: scene.document_tone ? scene.document_tone.tones : [],
-          //     }
-          //     start += scene.length
-          //     return ret
-          //   }),
-          // }
           return {
             s: scenes[0].season,
             e: scenes[0].episode,
