@@ -90,6 +90,13 @@ function bindGlobal(select, removeGroup, charSelection) {
     for (let i = 0; i < charSelection.length; i++) removeGroup(i)
   }
 
+  window.charSelect_kateJackSawyer = e => {
+    e.preventDefault()
+    removeAll()
+    select(0, ['KATE'])
+    select(1, ['JACK'])
+    select(2, ['SAWYER'])
+  }
   window.charSelect_sunjin = e => {
     e.preventDefault()
     removeAll()

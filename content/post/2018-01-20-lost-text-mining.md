@@ -13,9 +13,9 @@ I wondered how much the dialogue text contributes to a TV show, and whether you 
 
 This thought was the initial spark behind this post. It's taken so long to finish that I'm not even sure what kind of question I was trying to answer, you be the judge. In that process I saw some cool patterns that I want to share with you.
 
-I retrieved and parsed the transcripts of LOST from Lostpedia[^1] and used many different tools to look at this data. All the technical info can be found at the last section, so please check that out if that interests you.
+I retrieved and parsed the transcripts of LOST from Lostpedia[^lostpedia] and used a few different tools to look at this data.
 
-[^1]: http://lostpedia.wikia.com/wiki/Portal:Transcripts
+[^lostpedia]: http://lostpedia.wikia.com/wiki/Portal:Transcripts
 
 One thing to keep in mind is that this analysis is on only the text that the characters speak. The transcriptions contain scene descriptions, stage directions, and other misc. comments. None of that text is included. So when I mention the "writing" of the show, I mean in the context of what the characters speak only, the dialogue lines. Of course there is a lot more to the writing than just the dialogue.
 
@@ -31,9 +31,9 @@ Before we get started, you'll notice that there is a bar with every season of th
 
 You'll notice some episodes are way longer than others. These episodes are combined together because some aired as 2-parter, others during the same day back-to-back. The ending episodes of every season, and start of season 6 was combined in the transcripts.
 
-Let's look at some general metrics first, the chart below shows the total number of words per episode, unique words, and density. Unique words are the count of words that occur at least once. Density is `unique/total*100` as a metric to describe what percentage of the text is unique. This tells us about the vocabulary of the show, also called "Vocabulary Density"[^2]
+Let's look at some general metrics first, the chart below shows the total number of words per episode, unique words, and density. Unique words are the count of words that occur at least once. Density is `unique/total*100` as a metric to describe what percentage of the text is unique. This tells us about the vocabulary of the show, also called "Vocabulary Density"[^vocabulary-density]
 
-[^2]: http://www.mine-control.com/zack/guttenberg/
+[^vocabulary-density]: http://www.mine-control.com/zack/guttenberg/
 
 <div id="word-count" class="viz"></div>
 
@@ -65,15 +65,16 @@ To get a sense of how "popular" these 8 characters were, I tallied up how many s
 
 <div id="char-appearance" class="viz"></div>
 
-Jack i
+The "spiky" nature of the lines in both appearances and mentions is curious. My impression is that every season had specific episodes that featured 1 character more prominently than others, and the spotlight rotated between them between episodes.
+
+I'm guessing `CHARLIE` dies after S3, but he keeps being mentioned by others for the rest of the show, appearing (flash-sideways?) in a few places in S5 and S6.
 
 ## Personalities
 
-So far, all we've really done is some statistics on the text, which is cool and all, but I say let's grab our pickaxes and start some real mining. I had heard of and wanted to use the IBM Watson APIs[^watson], especially Personality Insights and Tone Analyzer. You can read more about each of these from the links, but in simple terms each processes the text to give .
+So far, all we've really done is some statistics on the text, which is cool and all, but I say let's grab our pickaxes and start some real mining. I had heard of and wanted to use the IBM Watson APIs[^watson], especially Personality Insights[^personality-insights] and Tone Analyzer[^tone-analyzer] to see what they can do for this kind of data.
 
 [^watson]: https://www.ibm.com/watson/services/personality-insights/
 [^personality-insights]: https://www.ibm.com/watson/services/tone-analyzer/
-[^personality-insight2s]: https://www.ibm.com/watson/services/tone-analyzer/
 
 Given a chunk of text, Watson will generate a "personality profile"[^personality-profile]. This profile contains the Big-5[^big5], Needs, Values and Consumption Preferences.
 
@@ -93,7 +94,7 @@ While I think the Big-5, Needs and Values percentiles are useful, the Consumptio
 
 More than simply looking at individual characters though, I wanted to be able to compare random groups/populations together. This next visualisation shows the Big-5, all the individual traits, values and needs. You can pick a single character, or compare multiple and groups of characters. I really hope you take some time to play around with it, I found some comparisons very interesting.
 
-Here are some examples to get you started: <a href="" onclick="charSelect_menWomen(event)">men vs women</a>, <a href="" onclick="charSelect_sunjin(event)">`SUN` vs `JIN`</a>, <a href="" onclick="charSelect_everyone(event)">everyone</a>.
+Here are some examples to get you started: <a href="" onclick="charSelect_menWomen(event)">men vs women</a>, <a href="" onclick="charSelect_sunjin(event)">`SUN` vs `JIN`</a>, <a href="" onclick="charSelect_everyone(event)">everyone</a>, <a href="" onclick="charSelect_kateJackSawyer(event)">`KATE`, `JACK`, `SAWYER`</a>.
 
 <div id="personality-selector" class="viz"></div>
 <div id="personality" class="viz"></div>
@@ -114,7 +115,7 @@ Obviously flashbacks were an integral part of S1, and kept going until the end o
 
 ## Tone
 
-Watson API has this product called Tone Analyzer[^tone-analyzer] which makes an attempt at determining the "tone" of a piece of text. This is also often called "sentiment analysis" in some circles, but Tone Analyzer determines 4 emotional tones, and 3 language tones. You can hover over the legend on the chart below to learn more about the different tones.
+Watson API also has Tone Analyzer[^tone-analyzer] which makes an attempt at determining the "tone" of a piece of text. This is also often called "sentiment analysis" in some circles, but Tone Analyzer determines 4 emotional tones, and 3 language tones. You can hover over the legend on the chart below to learn more about the different tones.
 
 The graph below, similar to the flashbacks, shows the season laid out. In this case, I've analyzed every scene and the colors correspond to the different tones prominent on that scene. The opacity highlights the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.
 
@@ -129,7 +130,7 @@ It's kind of interesting to see that the majority of the writing shows tentative
 
 ## Co-occurrence
 
-Looking at the connections between characters is perhaps best illustrated by a force-directed graph. The radius of the circles scale with the number of different connections a character has, and the closeness indicates the number of times two characters connect. In this case, we are looking at how many scenes do characters appear together. This means that characters with bigger radii appear more with different people, and those that appear often are placed closer together.
+Looking at the connections between characters is perhaps best illustrated by a force-directed graph. The radius of the circles scale with the number of different connections a character has, and the closeness indicates the number of times two characters connect. In this case, we are looking at how many scenes two characters appear together. This means that characters with bigger radii appear more with different people, and those that appear often are placed closer together.
 
 Play around with the episode selector. It's a bit slow, but you'll be ok. Click on the characters to highlight only their connections.
 
@@ -157,7 +158,7 @@ We can also see the reading level per character. I wanted to see if there was va
 
 I saved the prettiest for last! I saw this visualization for "Les Miserables" by Neoformix[^neoformix] and had to try to recreate it for LOST. This one attempts to show which words occur in which episodes in a radial manner. You can get a sense of how prominent and often a word was used throughout the series. I've picked a couple of word groups, colored individually. The lines represent occurrences with thicker lines meaning more hits. Seasons are grouped individually so it's easier to see seasonal themes. Click on words to toggle them on or off, and use &lt; and &gt; buttons to cycle through groups of words.
 
-[^neoformix]: http://www.neoformix.com/2013/NovelViews.html
+[^neoformix]: okoddf http://www.neoformix.com/2013/NovelViews.html okefe,mv
 
 <div id="radial-word-connections" class="viz"></div>
 
@@ -180,16 +181,3 @@ Below is a list of similar analyses that you might like.
   margin: 3rem 0;
 }
 </style>
-
-<script>
-// setTimeout(() =>
-//   littlefoot({
-//     buttonTemplate: `
-//     <div class="littlefoot-footnote__container">
-//   <span class="littlefoot-footnote__button littlefoot-footnote__button__ellipsis" id="<%= reference %>" data-footnote-id="<%= id %>" data-footnote-number="<%= number %>" alt="See Footnote <%= number %>" rel="footnote" data-littlefoot-footnote="<%= content %>">[<%= number %>]
-//   </span>
-// </div>
-//     `
-//   })
-// , 500)
-</script>

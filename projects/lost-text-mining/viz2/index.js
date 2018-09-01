@@ -44,6 +44,3 @@ render(<CharReadingLevel />, '#char-reading-level')
 render(<EpisodeReadingLevel />, '#episode-reading-level')
 render(<CharAppearance />, '#char-appearance')
 render(<WordConnections />, '#radial-word-connections')
-
-var littlefoot = require('littlefoot').default
-window.littlefoot = littlefoot
