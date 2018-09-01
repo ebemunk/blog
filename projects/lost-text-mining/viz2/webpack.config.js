@@ -20,7 +20,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: dir('../../../static/lost-text-mining'),
-    publicPath: isProd ? undefined : 'http://localhost:9001/',
+    publicPath: isProd ? '' : 'http://localhost:9001/',
     globalObject: 'this',
   },
   devtool: 'source-map',

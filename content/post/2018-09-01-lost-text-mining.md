@@ -119,11 +119,7 @@ The other Watson API, Tone Analyzer[^tone-analyzer], makes an attempt at determi
 <!-- prettier-ignore -->
 [^tone-analyzer-science]: https://console.bluemix.net/docs/services/tone-analyzer/science.html#the-science-behind-the-service
 
-The graph below shows the tones detected in each scene. Color-coded segments show that the tone was detected, while the opacity indicates
-
-You can hover over the legend on the chart below to learn more about the different tones.
-
-The graph below is similar to the one above, but in this case, I've analyzed every scene in the show. The colors correspond to the different tones detected in that scene. The opacity highlights the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.
+The graph below shows the tones detected in each scene. Color-coded segments show that the tone was detected, while the opacity indicates the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.
 
 <!-- prettier-ignore -->
 [^tone-analyzer]: https://console.bluemix.net/docs/services/tone-analyzer/using-tone.html#using-the-general-purpose-endpoint
@@ -179,8 +175,8 @@ If you can't get enough, below is a list of similar analyses that you might like
 - [Visualization of affect in movie scripts](https://hal.archives-ouvertes.fr/hal-01099668/document)
 - [Detecting Mixtures of Genres in Movie Dialogues](https://saravananthirumuruganathan.wordpress.com/2012/01/10/detecting-mixtures-of-genres-in-movie-dialogues/)
 
-<script src="http://localhost:9001/bundle.js"></script>
-<!-- <script src="bundle.js"></script> -->
+<!-- <script src="http://localhost:9001/bundle.js"></script> -->
+<script src="bundle.js"></script>
 
 <style>
 .viz {

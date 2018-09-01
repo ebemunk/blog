@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack -p",
+    "build": "NODE_ENV=production webpack -p",
     "build:profile": "webpack -p --profile --json > compilation-stats.json",
     "analyse": "webpack-bundle-analyzer compilation-stats.json",
     "devbuild": "webpack",
