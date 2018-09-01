@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>LOST it</title>
-      <link>https://blog.ebemunk.com/lost-it/</link>
+      <title>Text Mining LOST</title>
+      <link>https://blog.ebemunk.com/lost-text-mining/</link>
       <pubDate>Sat, 20 Jan 2018 02:47:00 -0700</pubDate>
       
-      <guid>https://blog.ebemunk.com/lost-it/</guid>
-      <description> I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.
-Meta    window.loadData() window.renderTo(&#39;WordCount&#39;, &#39;#word-count&#39;)  </description>
+      <guid>https://blog.ebemunk.com/lost-text-mining/</guid>
+      <description>We&amp;rsquo;re text mining the transcripts of the TV show LOST.
+I wondered how much the dialogue text contributes to a TV show, and whether you would be able to &amp;ldquo;detect&amp;rdquo; things in it, looking only at the words that the characters speak, removed from how their actors looked or sounded like. How much of the writing shows through and contributes, especially in this &amp;ldquo;mass production&amp;rdquo; mentality of similar entertainment media?</description>
     </item>
     
   </channel>

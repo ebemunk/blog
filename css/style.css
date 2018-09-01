@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 body {
-  background: #282C34;
+  background: #282c34;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
   min-height: 100%;
@@ -40,6 +40,11 @@ a:hover {
   color: #7cb34b;
   border-color: #7cb34b;
 }
+.button:focus {
+  background: transparent;
+  color: #7cb34b;
+  border-color: #7cb34b;
+}
 .button:hover {
   background-color: #89bb5d;
   border-color: #7cb34b;
@@ -49,6 +54,9 @@ a:hover {
   background-color: #89bb5d;
   border-color: #89bb5d;
   color: rgba(255, 255, 255, 0.8);
+}
+.button[disabled]:hover {
+  background-color: #7cb34b;
 }
 header.site-header {
   height: 180px;
@@ -127,7 +135,7 @@ p {
 }
 .index h2 a:hover {
   text-decoration: none;
-  color: #C776DF;
+  color: #c776df;
 }
 .index .date-and-tags {
   margin-top: 2em;
@@ -136,8 +144,8 @@ p {
   margin: 2rem 0;
 }
 .index hr {
-  border-top-color: #9EABB3;
-  border-bottom: 1px solid #9EABB3;
+  border-top-color: #9eabb3;
+  border-bottom: 1px solid #9eabb3;
   height: 0.5rem;
   position: relative;
   overflow: visible;
@@ -148,7 +156,7 @@ p {
   top: -3rem;
   left: 50%;
   font-size: 4rem;
-  background: #282C34;
+  background: #282c34;
 }
 .single .date-and-tags {
   margin: 1.5em 0;
@@ -178,6 +186,17 @@ code {
   .toc {
     display: block !important;
   }
+}
+a[href^="#fn:"],
+a[href^="#fnref:"] {
+  text-decoration: none;
+  font-family: monospace;
+}
+a[href^="#fn:"]:before {
+  content: "[";
+}
+a[href^="#fn:"]:after {
+  content: "]";
 }
 /**
  * Syntax highlighting styles
