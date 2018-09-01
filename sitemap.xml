@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.ebemunk.com/lost-text-mining/</loc>
-    <lastmod>2018-01-20T02:47:00-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</loc>
     <lastmod>2016-03-02T11:18:33-07:00</lastmod>
   </url>
@@ -25,19 +20,13 @@
   
   <url>
     <loc>https://blog.ebemunk.com/tags/data-visualization/</loc>
-    <lastmod>2018-01-20T02:47:00-07:00</lastmod>
+    <lastmod>2016-03-02T11:18:33-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.ebemunk.com/tags/javascript/</loc>
     <lastmod>2016-01-21T04:56:00-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ebemunk.com/tags/lost/</loc>
-    <lastmod>2018-01-20T02:47:00-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -55,7 +44,7 @@
   
   <url>
     <loc>https://blog.ebemunk.com/post/</loc>
-    <lastmod>2018-01-20T02:47:00-07:00</lastmod>
+    <lastmod>2016-03-02T11:18:33-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -71,14 +60,8 @@
   </url>
   
   <url>
-    <loc>https://blog.ebemunk.com/tags/text-mining/</loc>
-    <lastmod>2018-01-20T02:47:00-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.ebemunk.com/</loc>
-    <lastmod>2018-01-20T02:47:00-07:00</lastmod>
+    <lastmod>2016-03-02T11:18:33-07:00</lastmod>
     <priority>0</priority>
   </url>
   
