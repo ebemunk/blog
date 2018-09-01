@@ -7,7 +7,7 @@ tags = ["LOST", "data visualization", "text mining"]
 image = "img/visual-look.png"
 +++
 
-We're text mining the transcripts of the TV show LOST.
+We're text mining the transcripts of the TV show LOST, and visualizing them!
 
 I wondered how much the dialogue text contributes to a TV show, and whether you would be able to "detect" things in it, looking only at the words that the characters speak, removed from how their actors looked or sounded like. How much of the writing shows through and contributes, especially in this "mass production" mentality of similar entertainment media?
 
@@ -49,7 +49,7 @@ When I say characters, I mean everything in the text that can have a spoken part
 
 The end of seasons 3 and 5 have way more characters speaking than any other by a large margin, and S6-E14 has only 8 characters that speak in it for the whole episode! Now in one sense, that seems very low, but the next graph shows how much impact even 1 character can have on the whole show.
 
-I find this next graph really interesting, because it shows very obviously how central characters are to the story. Firstly, there are **676** characters that appear throughout the show's lifetime. Below is a histogram of characters put in 500-word buckets. So you can see that 593 characters speak between 0-500 words throughout the whole show. These are the `THUG #2`s and `SECOND MAN`s of the show that set mood or provide information, but their existence is just a plot device.
+I find this next graph really interesting, because it shows very obviously how central some characters are to the story. Firstly, there are **676** characters that appear throughout the show's lifetime. Below is a histogram of characters put in 500-word buckets. So you can see that 593 characters speak between 0-500 words throughout the whole show. These are the `THUG #2`s and `SECOND MAN`s of the show that set mood or provide information, but their existence is just a plot device.
 
 On the histogram are two cumulative percentage lines, one for number of characters, and one for number of words. This tells us what percentage of these measures we've seen so far as we progress up to higher word counts. So, we can see what percentage of characters contribute to what percentage of the words spoken.
 
@@ -136,7 +136,7 @@ Play around with the episode selector. It's a bit slow, but you'll be ok. Click 
 
 <div id="char-cooccurrence" class="viz"></div>
 
-Honestly to me this is more of a vanity/surface visualization, nevertheless there are some cool things to see. The loneliest duo is `WIFE` and `RECORD` in all the show, appearing completely isolated from any other characters, followed by `YOUNG SAWYER`, `SAWYER'S FATHER` and `MARY`. I'm guessing these scenes probably were isolated flashbacks. In S2 there's the funny "pentagram of evil" on the right, with `THUG CAPTAIN`, `THUG`, `THUG #2`, `PRIEST` and `YOUNG EKO`.
+Honestly to me this is more of a vanity visualization, nevertheless there are some cool things to see. The loneliest duo is `WIFE` and `RECORD` in all the show, appearing completely isolated from any other characters, followed by `YOUNG SAWYER`, `SAWYER'S FATHER` and `MARY`. I'm guessing these scenes probably were isolated flashbacks. In S2 there's the funny "pentagram of evil" on the right, with `THUG CAPTAIN`, `THUG`, `THUG #2`, `PRIEST` and `YOUNG EKO`.
 
 ## Reading Level
 
@@ -166,7 +166,7 @@ That's it, if you've made it this far, I thank you for reading along. Hope this 
 
 ## Similar Reading
 
-Below is a list of similar analyses that you might like.
+If you can't get enough, below is a list of similar analyses that you might like, which this post was heavily inspired from.
 
 - [An Interactive Analysis of Tolkien's Works](http://lotrproject.com/statistics/books/)
 - [Literature statistics](http://www.tylervigen.com/literature-statistics)
