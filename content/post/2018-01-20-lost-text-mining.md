@@ -21,7 +21,7 @@ One thing to keep in mind is that this analysis is on only the text that the cha
 
 Now it might come as a surprise (coming from a guy who is writing a giant essay on LOST) that I've only seen the first season, back when it came out, and am not a fan of the show in particular. The decision to analyze this text was mostly because the transcripts of tv shows are rarely available publicly, and LOST was one of the only that I could find, that was also somewhat popular. I think I would want to analyze Westworld or Game of Thrones in the same manner, but who'd have thought it would be so hard to find transcripts online?
 
-All that to say is I am not some LOST connosieur, so take these visualisations at their face value and not as some objective judgement about your favorite LOST character or writer. I'm not an authority on LOST, or on text mining, just in it for the visualizations.
+All that to say is I am not a LOST connoisseur, so take these visualizations at their face value and not as some objective judgement about your favorite LOST character or writer. I'm not an authority on LOST, or on text mining, just in it for the visualizations.
 
 So strap yourselves in for a disgustingly deep dive of this influential TV show, in what I should have titled "i've finally lost it".
 
@@ -43,7 +43,7 @@ Simple stuff, nothing super interesting here, but it will provide some more cont
 
 ## Characters
 
-When I say characters, I mean everthing in the text that can have a spoken part. These vary from `JACK` and `DESMOND` to `AIRPORT ANNOUNCEMENT` and `THUG #2`. The graph below shows how many characters appeared in each episode, the number of stage directions, and the number of scenes. I will expand more on what I considered a "scene" later, but this is just to get a feel for it.
+When I say characters, I mean everything in the text that can have a spoken part. These vary from `JACK` and `DESMOND` to `AIRPORT ANNOUNCEMENT` and `THUG #2`. The graph below shows how many characters appeared in each episode, the number of stage directions, and the number of scenes. I will expand more on what I considered a "scene" later, but this is just to get a feel for it.
 
 <div id="char-per-episode" class="viz"></div>
 
@@ -82,7 +82,7 @@ Given a chunk of text, Watson will generate a "personality profile"[^personality
 [^personality-profile]: https://console.bluemix.net/docs/services/personality-insights/science.html
 [^big5]: https://en.wikipedia.org/wiki/Big_Five_personality_traits
 
-Even though the show mostly revolves around 8 characters, I want to include more of the text, so I picked the top 25 speakers in the show and fed their lines in. You can select a specific characters or just browse through with the buttons below.
+Even though the show mostly revolves around 8 characters, I want to include more of the text, so I picked the top 25 speakers in the show and fed their lines in. You can select a specific character or just browse through with the buttons below.
 
 I also added 2 columns, difference from population average and difference from 50th percentile. Since the values for the Big-5 are population percentiles, I wanted to see which (if any) characters are different. Difference from population average refers to the average values for all the other analyzed characters. Difference from 50th percentile refers to the difference from Watson's own sample population. Lets first look at the characters one by one and not worry about comparing these characters to each other.
 
@@ -99,9 +99,9 @@ Here are some examples to get you started: <a href="" onclick="charSelect_menWom
 <div id="personality-selector" class="viz"></div>
 <div id="personality" class="viz"></div>
 
-Men and women are very close in terms of personality, with minor differences in Openness and Conscienciousness. There is certainly a "gap" between `SUN` and `JIN` in terms of their personality. I wonder how this got reflected throughout the series.
+Men and women are very close in terms of personality, with minor differences in Openness and Conscientiousness. There is certainly a "gap" between `SUN` and `JIN` in terms of their personality. I wonder how this got reflected throughout the series.
 
-Consdering "everyone" (top 25 speakers), the average values are of a pretty unique "person". Very high Agreeableness, low Extraversion, and generally way above or below the sample population of Watson. An interesting point is that characters seem to be very similar in personality traits, I'm not sure if this is because Watson consistently overestimates these values for a TV show text (something it's probably not fully intended to do) or whether the writing and personalities really do not change that much across the characters, and that really the actors bring any perceived emotion to the light.
+Considering "everyone" (top 25 speakers), the average values are of a pretty unique "person". Very high Agreeableness, low Extraversion, and generally way above or below the sample population of Watson. An interesting point is that characters seem to be very similar in personality traits, I'm not sure if this is because Watson consistently overestimates these values for a TV show text (something it's probably not fully intended to do) or whether the writing and personalities really do not change that much across the characters, and that really the actors bring any perceived emotion to the light.
 
 I'm still fascinated by what this API can do, but have questioned whether it's appropriate for works of fiction. I'd love to hear about any other patterns you see, and how much of this really aligns with the show from the fans.
 
@@ -130,13 +130,13 @@ It's kind of interesting to see that the majority of the writing shows tentative
 
 ## Co-occurrence
 
-Looking at the connections between characters is perhaps best illustrated by a force-directed graph. The radius of the circles scale with the number of different connections a character has, and the closeness indicates the number of times two characters connect. In this case, we are looking at how many scenes two characters appear together. This means that characters with bigger radii appear more with different people, and those that appear often are placed closer together.
+Looking at the connections between characters is perhaps best illustrated by a force-directed graph. The radius of the circles scale with the number of different connections a character has, and the closeness indicates the number of times two characters connect. In this case, we are looking at how many scenes two characters appear together. This means that characters with bigger radii appear more with different people, and those that appear together often are placed closer together.
 
 Play around with the episode selector. It's a bit slow, but you'll be ok. Click on the characters to highlight only their connections.
 
 <div id="char-cooccurrence" class="viz"></div>
 
-Honestly to me this is more of a vanity/surface visualization, nevertheless there are some cool things to see. The loneliest duo is `WIFE` and `RECORD` in all the show, appearing completely isolated from any other characters, followed by `YOUNG SAWYER`, `SAWYER'S FATHER` and `MARY`. I'm guessing these scenes probably were isolated flashbacks. In <a href="">S2</a> there's the funny "pentagram of evil" on the right, with `THUG CAPTAIN`, `THUG`, `THUG #2`, `PRIEST` and `YOUNG EKO`.
+Honestly to me this is more of a vanity/surface visualization, nevertheless there are some cool things to see. The loneliest duo is `WIFE` and `RECORD` in all the show, appearing completely isolated from any other characters, followed by `YOUNG SAWYER`, `SAWYER'S FATHER` and `MARY`. I'm guessing these scenes probably were isolated flashbacks. In S2 there's the funny "pentagram of evil" on the right, with `THUG CAPTAIN`, `THUG`, `THUG #2`, `PRIEST` and `YOUNG EKO`.
 
 ## Reading Level
 
@@ -148,7 +148,7 @@ Reading level is something I often wondered about TV shows. My gut feeling was t
 
 Most speech in the show is 2nd grade level, particularly S2, otherwise there are pretty frequent episodes with 5th grade level. S5-E1 is the most complex text with 8th grade level. This makes me think that the dialogue between characters are often short, practical and concrete, without much philosophizing or elaborate language.
 
-We can also see the reading level per character. I wanted to see if there was variation between characters in terms of reading level. Below is the reading level of the top 25 most speaking characters.
+We can also see the reading level per character. I wanted to see if there was variation between characters in terms of reading level. Below is the reading level of the top 25 characters.
 
 <div id="char-reading-level" class="viz"></div>
 
@@ -156,9 +156,9 @@ We can also see the reading level per character. I wanted to see if there was va
 
 ## Word Connections
 
-I saved the prettiest for last! I saw this visualization for "Les Miserables" by Neoformix[^neoformix] and had to try to recreate it for LOST. This one attempts to show which words occur in which episodes in a radial manner. You can get a sense of how prominent and often a word was used throughout the series. I've picked a couple of word groups, colored individually. The lines represent occurrences with thicker lines meaning more hits. Seasons are grouped individually so it's easier to see seasonal themes. Click on words to toggle them on or off, and use &lt; and &gt; buttons to cycle through groups of words.
+I saved the prettiest for last! I saw this visualization for "Les Miserables" by Neoformix[^neoformix] and had to try to adapt it for LOST. This one attempts to show which words occur in which episodes in a radial manner. You can get a sense of how prominent and often a word was used throughout the series. I've picked a couple of word groups, colored individually. The lines represent occurrences with thicker lines meaning more hits. Seasons are colored the same so it's easier to see seasonal themes. Click on words to toggle them on or off, and use &lt; and &gt; buttons to cycle through groups of words.
 
-[^neoformix]: okoddf http://www.neoformix.com/2013/NovelViews.html okefe,mv
+[^neoformix]: http://www.neoformix.com/2013/NovelViews.html
 
 <div id="radial-word-connections" class="viz"></div>
 
@@ -173,8 +173,8 @@ Below is a list of similar analyses that you might like.
 - [Visualization of affect in movie scripts](https://hal.archives-ouvertes.fr/hal-01099668/document)
 - [Detecting Mixtures of Genres in Movie Dialogues](https://saravananthirumuruganathan.wordpress.com/2012/01/10/detecting-mixtures-of-genres-in-movie-dialogues/)
 
-<script src="http://localhost:9001/bundle.js"></script>
-<!-- <script src="bundle.js"></script> -->
+<!-- <script src="http://localhost:9001/bundle.js"></script> -->
+<script src="bundle.js"></script>
 
 <style>
 .viz {

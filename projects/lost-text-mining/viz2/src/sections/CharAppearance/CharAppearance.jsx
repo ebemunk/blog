@@ -5,6 +5,7 @@ import classnames from 'classnames'
 
 import Axis from 'components/Axis'
 import ButtonGroup from 'components/ButtonGroup'
+import Labels from 'components/Labels'
 
 import { MAIN_CHARS } from 'utils'
 
@@ -77,48 +78,57 @@ export default class CharAppearance extends React.Component {
               </div>
             ))}
           </div>
-          <svg width={width} height={height}>
-            <g transform={`translate(${padding.left}, ${padding.top})`}>
-              {MAIN_CHARS.map(charName => (
-                <path
-                  key={charName}
-                  className={classnames(css.line, {
-                    [css.highlighted]: highlighted === charName,
-                  })}
-                  d={line(
-                    d3.range(114).map(k => {
-                      const val = data[dataType][charName].find(
-                        vals =>
-                          vals.season === episodes[k].season &&
-                          vals.episode === episodes[k].episode,
-                      )
-                      return {
-                        x: k,
-                        y: val ? val.count : 0,
-                      }
-                    }),
-                  )}
-                  style={{
-                    stroke:
-                      highlighted === charName ? charColor(charName) : 'gray',
-                    strokeWidth: 2,
-                  }}
+          <Labels
+            y0Label={
+              {
+                appearances: 'Number of scenes appeared in',
+                mentions: 'Number of times mentioned by others',
+              }[dataType]
+            }
+            xLabel="Episodes"
+          >
+            <svg width={width} height={height}>
+              <g transform={`translate(${padding.left}, ${padding.top})`}>
+                {MAIN_CHARS.map(charName => (
+                  <path
+                    key={charName}
+                    className={classnames(css.line, {
+                      [css.highlighted]: highlighted === charName,
+                    })}
+                    d={line(
+                      d3.range(114).map(k => {
+                        const val = data[dataType][charName].find(
+                          vals =>
+                            vals.season === episodes[k].season &&
+                            vals.episode === episodes[k].episode,
+                        )
+                        return {
+                          x: k,
+                          y: val ? val.count : 0,
+                        }
+                      }),
+                    )}
+                    style={{
+                      stroke:
+                        highlighted === charName ? charColor(charName) : 'gray',
+                      strokeWidth: 2,
+                    }}
+                  />
+                ))}
+                <Axis
+                  scale={x}
+                  orientation="bottom"
+                  transform={`translate(0, ${height -
+                    padding.top -
+                    padding.bottom})`}
+                  tickValues={[0, 24, 47, 69, 82, 98]}
+                  tickFormat={(d, i) => `Season ${i + 1}`}
+                  className={css.xAxis}
                 />
-              ))}
-              <Axis
-                scale={x}
-                orientation="bottom"
-                transform={`translate(0, ${height -
-                  padding.top -
-                  padding.bottom})`}
-                tickValues={[0, 24, 47, 69, 82, 98]}
-                tickFormat={(d, i) => `Season ${i + 1}`}
-                className={css.xAxis}
-              />
-              <Axis scale={y2} orientation="left" />
-            </g>
-          </svg>
-
+                <Axis scale={y2} orientation="left" />
+              </g>
+            </svg>
+          </Labels>
           <ButtonGroup
             options={[
               { name: 'Appearances', value: 'appearances' },
@@ -126,6 +136,7 @@ export default class CharAppearance extends React.Component {
             ]}
             onChange={dataType => this.setState({ dataType })}
             selected={dataType}
+            style={{ marginTop: '2rem' }}
           />
         </div>
       </div>
