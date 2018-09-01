@@ -4,5 +4,7 @@
 
   & img {
     margin-right: 0.3rem;
+    width: 32px;
+    height: 32px;
   }
 }

@@ -17,7 +17,13 @@ create or replace view all_lines_by_char as
 ;
 
 create or replace view episodes as
-	select distinct season, episode
-		from dialog
+	select distinct season, episode, length(text)
+		from episode_text
 		order by season, episode asc
+;
+
+create or replace view chars as
+	select distinct char_name
+	from dialog
+	where char_name is not null
 ;

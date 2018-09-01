@@ -7,12 +7,12 @@
 
 .yLine {
   composes: line;
-  stroke: steelblue;
+  stroke: white;
 }
 
 .xLine {
   composes: line;
-  stroke: steelblue;
+  stroke: white;
 }
 
 .polygons path {
@@ -31,11 +31,11 @@
 
 .yVal {
   composes: val;
-  fill: steelblue;
+  fill: white;
 }
 
 .xVal {
   composes: val;
-  fill: steelblue;
+  fill: white;
   text-anchor: middle;
 }

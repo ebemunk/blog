@@ -1,10 +1,3 @@
--- total lines per char per episode per season
-select season, episode, char_name, count(*) as lines
-from dialog
-where type='dialog'
-group by season, episode, char_name
-order by season, episode, lines desc
-;
 
 -- char per episode per season
 select distinct season, episode, char_name from dialog
@@ -18,13 +11,3 @@ from dialog
 where type='dialog'
 group by season, episode, act, scene
 ;
-
-CREATE OR REPLACE VIEW public.wordsandchars AS
- SELECT dialog.season,
-    dialog.episode,
-    sum(array_length(regexp_split_to_array(dialog.line, '\s'::text), 1)) AS words,
-    sum(length(dialog.line)) AS chars
-   FROM dialog
-  WHERE dialog.type::text = 'dialog'::text
-  GROUP BY dialog.season, dialog.episode
-  ORDER BY dialog.season, dialog.episode;

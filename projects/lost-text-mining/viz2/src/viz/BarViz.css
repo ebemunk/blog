@@ -1,0 +1,22 @@
+.bandAxis {
+  & :global(.tick) text {
+    text-anchor: start;
+    transform: translateY(3px);
+  }
+}
+
+.midLabels .bandAxis {
+  & :global(.tick) text {
+    text-anchor: middle;
+  }
+}
+
+.linearAxis {
+  & :global(.tick) line {
+    opacity: 0.3;
+  }
+}
+
+.chart {
+  flex-shrink: 0;
+}

@@ -1,3 +1,9 @@
 .bar {
-	fill: steelblue;
+  fill: steelblue;
+}
+
+.linearAxis {
+  & :global(.tick) line {
+    opacity: 0.3;
+  }
 }

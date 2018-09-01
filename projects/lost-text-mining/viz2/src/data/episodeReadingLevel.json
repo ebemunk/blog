@@ -1,0 +1,572 @@
+[
+  {
+    "season": 1,
+    "episode": 1,
+    "score": 2
+  },
+  {
+    "season": 1,
+    "episode": 2,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 3,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 4,
+    "score": 2
+  },
+  {
+    "season": 1,
+    "episode": 5,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 6,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 7,
+    "score": 2
+  },
+  {
+    "season": 1,
+    "episode": 8,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 9,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 10,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 11,
+    "score": 3
+  },
+  {
+    "season": 1,
+    "episode": 12,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 13,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 14,
+    "score": 2
+  },
+  {
+    "season": 1,
+    "episode": 15,
+    "score": 2
+  },
+  {
+    "season": 1,
+    "episode": 16,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 17,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 18,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 19,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 20,
+    "score": 1
+  },
+  {
+    "season": 1,
+    "episode": 21,
+    "score": 6
+  },
+  {
+    "season": 1,
+    "episode": 22,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 23,
+    "score": 5
+  },
+  {
+    "season": 1,
+    "episode": 24,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 1,
+    "score": 5
+  },
+  {
+    "season": 2,
+    "episode": 2,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 3,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 4,
+    "score": 5
+  },
+  {
+    "season": 2,
+    "episode": 5,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 6,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 7,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 8,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 9,
+    "score": 3
+  },
+  {
+    "season": 2,
+    "episode": 10,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 11,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 12,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 13,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 14,
+    "score": 5
+  },
+  {
+    "season": 2,
+    "episode": 15,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 16,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 17,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 18,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 19,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 20,
+    "score": 2
+  },
+  {
+    "season": 2,
+    "episode": 21,
+    "score": 5
+  },
+  {
+    "season": 2,
+    "episode": 22,
+    "score": 1
+  },
+  {
+    "season": 2,
+    "episode": 23,
+    "score": 2
+  },
+  {
+    "season": 3,
+    "episode": 1,
+    "score": 2
+  },
+  {
+    "season": 3,
+    "episode": 2,
+    "score": 2
+  },
+  {
+    "season": 3,
+    "episode": 3,
+    "score": 5
+  },
+  {
+    "season": 3,
+    "episode": 4,
+    "score": 2
+  },
+  {
+    "season": 3,
+    "episode": 5,
+    "score": 2
+  },
+  {
+    "season": 3,
+    "episode": 6,
+    "score": 2
+  },
+  {
+    "season": 3,
+    "episode": 7,
+    "score": 2
+  },
+  {
+    "season": 3,
+    "episode": 8,
+    "score": 3
+  },
+  {
+    "season": 3,
+    "episode": 9,
+    "score": 5
+  },
+  {
+    "season": 3,
+    "episode": 10,
+    "score": 2
+  },
+  {
+    "season": 3,
+    "episode": 11,
+    "score": 5
+  },
+  {
+    "season": 3,
+    "episode": 12,
+    "score": 5
+  },
+  {
+    "season": 3,
+    "episode": 13,
+    "score": 5
+  },
+  {
+    "season": 3,
+    "episode": 14,
+    "score": 5
+  },
+  {
+    "season": 3,
+    "episode": 15,
+    "score": 2
+  },
+  {
+    "season": 3,
+    "episode": 16,
+    "score": 5
+  },
+  {
+    "season": 3,
+    "episode": 17,
+    "score": 5
+  },
+  {
+    "season": 3,
+    "episode": 18,
+    "score": 2
+  },
+  {
+    "season": 3,
+    "episode": 19,
+    "score": 5
+  },
+  {
+    "season": 3,
+    "episode": 20,
+    "score": 5
+  },
+  {
+    "season": 3,
+    "episode": 21,
+    "score": 6
+  },
+  {
+    "season": 3,
+    "episode": 22,
+    "score": 2
+  },
+  {
+    "season": 4,
+    "episode": 1,
+    "score": 6
+  },
+  {
+    "season": 4,
+    "episode": 2,
+    "score": 6
+  },
+  {
+    "season": 4,
+    "episode": 3,
+    "score": 5
+  },
+  {
+    "season": 4,
+    "episode": 4,
+    "score": 5
+  },
+  {
+    "season": 4,
+    "episode": 5,
+    "score": 3
+  },
+  {
+    "season": 4,
+    "episode": 6,
+    "score": 3
+  },
+  {
+    "season": 4,
+    "episode": 7,
+    "score": 5
+  },
+  {
+    "season": 4,
+    "episode": 8,
+    "score": 6
+  },
+  {
+    "season": 4,
+    "episode": 9,
+    "score": 5
+  },
+  {
+    "season": 4,
+    "episode": 10,
+    "score": 5
+  },
+  {
+    "season": 4,
+    "episode": 11,
+    "score": 5
+  },
+  {
+    "season": 4,
+    "episode": 12,
+    "score": 3
+  },
+  {
+    "season": 4,
+    "episode": 13,
+    "score": 5
+  },
+  {
+    "season": 5,
+    "episode": 1,
+    "score": 8
+  },
+  {
+    "season": 5,
+    "episode": 2,
+    "score": 2
+  },
+  {
+    "season": 5,
+    "episode": 3,
+    "score": 5
+  },
+  {
+    "season": 5,
+    "episode": 4,
+    "score": 5
+  },
+  {
+    "season": 5,
+    "episode": 5,
+    "score": 2
+  },
+  {
+    "season": 5,
+    "episode": 6,
+    "score": 3
+  },
+  {
+    "season": 5,
+    "episode": 7,
+    "score": 2
+  },
+  {
+    "season": 5,
+    "episode": 8,
+    "score": 3
+  },
+  {
+    "season": 5,
+    "episode": 9,
+    "score": 5
+  },
+  {
+    "season": 5,
+    "episode": 10,
+    "score": 5
+  },
+  {
+    "season": 5,
+    "episode": 11,
+    "score": 2
+  },
+  {
+    "season": 5,
+    "episode": 12,
+    "score": 2
+  },
+  {
+    "season": 5,
+    "episode": 13,
+    "score": 5
+  },
+  {
+    "season": 5,
+    "episode": 14,
+    "score": 5
+  },
+  {
+    "season": 5,
+    "episode": 15,
+    "score": 2
+  },
+  {
+    "season": 5,
+    "episode": 16,
+    "score": 2
+  },
+  {
+    "season": 6,
+    "episode": 1,
+    "score": 5
+  },
+  {
+    "season": 6,
+    "episode": 2,
+    "score": 5
+  },
+  {
+    "season": 6,
+    "episode": 3,
+    "score": 5
+  },
+  {
+    "season": 6,
+    "episode": 4,
+    "score": 2
+  },
+  {
+    "season": 6,
+    "episode": 5,
+    "score": 2
+  },
+  {
+    "season": 6,
+    "episode": 6,
+    "score": 4
+  },
+  {
+    "season": 6,
+    "episode": 7,
+    "score": 2
+  },
+  {
+    "season": 6,
+    "episode": 8,
+    "score": 2
+  },
+  {
+    "season": 6,
+    "episode": 9,
+    "score": 5
+  },
+  {
+    "season": 6,
+    "episode": 10,
+    "score": 5
+  },
+  {
+    "season": 6,
+    "episode": 11,
+    "score": 5
+  },
+  {
+    "season": 6,
+    "episode": 12,
+    "score": 2
+  },
+  {
+    "season": 6,
+    "episode": 13,
+    "score": 5
+  },
+  {
+    "season": 6,
+    "episode": 14,
+    "score": 6
+  },
+  {
+    "season": 6,
+    "episode": 15,
+    "score": 2
+  },
+  {
+    "season": 6,
+    "episode": 16,
+    "score": 2
+  }
+]

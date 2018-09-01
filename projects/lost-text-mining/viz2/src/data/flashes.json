@@ -2,1800 +2,2123 @@
   {
     "season": 1,
     "episode": 1,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4274
+        "flashforward": false,
+        "chars": 4085
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 754
+        "flashforward": false,
+        "chars": 375
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4885
+        "flashforward": false,
+        "chars": 5361
       }
     ]
   },
   {
     "season": 1,
     "episode": 2,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 271
+        "flashforward": false,
+        "chars": 434
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 637
+        "flashforward": false,
+        "chars": 771
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 10457
+        "flashforward": false,
+        "chars": 9636
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 297
+        "flashforward": false,
+        "chars": 524
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2594
+        "flashforward": false,
+        "chars": 2891
       }
     ]
   },
   {
     "season": 1,
     "episode": 3,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2743
+        "flashforward": false,
+        "chars": 2661
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1392
+        "flashforward": false,
+        "chars": 1329
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2443
+        "flashforward": false,
+        "chars": 3774
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 486
+        "flashforward": false,
+        "chars": 551
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 610
+        "flashforward": false,
+        "chars": 434
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 387
+        "flashforward": false,
+        "chars": 725
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2912
+        "flashforward": false,
+        "chars": 1792
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 339
+        "flashforward": false,
+        "chars": 18
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 324
+        "flashforward": false,
+        "chars": 199
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1692
+        "flashforward": false,
+        "chars": 1734
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 369
+        "flashforward": false,
+        "chars": 480
       }
     ]
   },
   {
     "season": 1,
     "episode": 4,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4621
+        "flashforward": false,
+        "chars": 3768
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 635
+        "flashforward": false,
+        "chars": 528
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3626
+        "flashforward": false,
+        "chars": 4262
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1351
+        "flashforward": false,
+        "chars": 1292
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1874
+        "flashforward": false,
+        "chars": 1647
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 683
+        "flashforward": false,
+        "chars": 1226
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 5398
+        "flashforward": false,
+        "chars": 5178
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 730
+        "flashforward": false,
+        "chars": 933
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 49
+        "flashforward": false,
+        "chars": 133
       }
     ]
   },
   {
     "season": 1,
     "episode": 5,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 20
+        "flashforward": false,
+        "chars": 104
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4081
+        "flashforward": false,
+        "chars": 4001
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 308
+        "flashforward": false,
+        "chars": 367
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 379
+        "flashforward": false,
+        "chars": 398
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1460
+        "flashforward": false,
+        "chars": 562
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 878
+        "flashforward": false,
+        "chars": 1126
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 669
+        "flashforward": false,
+        "chars": 611
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3382
+        "flashforward": false,
+        "chars": 4147
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 411
+        "flashforward": false,
+        "chars": 372
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2566
+        "flashforward": false,
+        "chars": 2466
       }
     ]
   },
   {
     "season": 1,
     "episode": 6,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 480
+        "flashforward": false,
+        "chars": 649
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 20
+        "flashforward": false,
+        "chars": 14
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2272
+        "flashforward": false,
+        "chars": 2279
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 351
+        "flashforward": false,
+        "chars": 368
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1665
+        "flashforward": false,
+        "chars": 1433
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 86
+        "flashforward": false,
+        "chars": 224
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1314
+        "flashforward": false,
+        "chars": 1363
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 324
+        "flashforward": false,
+        "chars": 239
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3733
+        "flashforward": false,
+        "chars": 3582
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 727
+        "flashforward": false,
+        "chars": 1091
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2606
+        "flashforward": false,
+        "chars": 2536
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 46
+        "flashforward": false,
+        "chars": 162
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 537
+        "flashforward": false,
+        "chars": 221
       }
     ]
   },
   {
     "season": 1,
     "episode": 7,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1332
+        "flashforward": false,
+        "chars": 1377
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 479
+        "flashforward": false,
+        "chars": 589
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3420
+        "flashforward": false,
+        "chars": 2678
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1009
+        "flashforward": false,
+        "chars": 711
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2785
+        "flashforward": false,
+        "chars": 3439
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 335
+        "flashforward": false,
+        "chars": 579
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4347
+        "flashforward": false,
+        "chars": 3396
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 931
+        "flashforward": false,
+        "chars": 840
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1586
+        "flashforward": false,
+        "chars": 1760
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 808
+        "flashforward": false,
+        "chars": 776
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1998
+        "flashforward": false,
+        "chars": 2885
       }
     ]
   },
   {
     "season": 1,
     "episode": 8,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 143
+        "flashforward": false,
+        "chars": 76
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 494
+        "flashforward": false,
+        "chars": 400
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2926
+        "flashforward": false,
+        "chars": 3027
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 442
+        "flashforward": false,
+        "chars": 435
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 8400
+        "flashforward": false,
+        "chars": 7167
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 164
+        "flashforward": false,
+        "chars": 373
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2087
+        "flashforward": false,
+        "chars": 1999
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 980
+        "flashforward": false,
+        "chars": 1446
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 969
+        "flashforward": false,
+        "chars": 1682
       }
     ]
   },
   {
     "season": 1,
     "episode": 9,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2270
+        "flashforward": false,
+        "chars": 2112
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 509
+        "flashforward": false,
+        "chars": 831
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1556
+        "flashforward": false,
+        "chars": 2049
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1277
+        "flashforward": false,
+        "chars": 539
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4347
+        "flashforward": false,
+        "chars": 4558
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 237
+        "flashforward": false,
+        "chars": 293
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1229
+        "flashforward": false,
+        "chars": 960
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 542
+        "flashforward": false,
+        "chars": 829
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1414
+        "flashforward": false,
+        "chars": 1198
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 716
+        "flashforward": false,
+        "chars": 711
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1670
+        "flashforward": false,
+        "chars": 1687
       }
     ]
   },
   {
     "season": 1,
     "episode": 10,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 749
+        "flashforward": false,
+        "chars": 1079
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1895
+        "flashforward": false,
+        "chars": 2172
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1077
+        "flashforward": false,
+        "chars": 772
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 759
+        "flashforward": false,
+        "chars": 1318
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1663
+        "flashforward": false,
+        "chars": 1604
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1871
+        "flashforward": false,
+        "chars": 1322
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3659
+        "flashforward": false,
+        "chars": 4167
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1440
+        "flashforward": false,
+        "chars": 1554
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3573
+        "flashforward": false,
+        "chars": 3079
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 869
+        "flashforward": false,
+        "chars": 497
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 845
+        "flashforward": false,
+        "chars": 850
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 123
+        "flashforward": false,
+        "chars": 157
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 272
+        "flashforward": false,
+        "chars": 100
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 308
+        "flashforward": false,
+        "chars": 245
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 965
+        "flashforward": false,
+        "chars": 1152
       }
     ]
   },
   {
     "season": 1,
     "episode": 11,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1887
+        "flashforward": false,
+        "chars": 1661
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 642
+        "flashforward": false,
+        "chars": 724
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 829
+        "flashforward": false,
+        "chars": 807
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1300
+        "flashforward": false,
+        "chars": 885
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4337
+        "flashforward": false,
+        "chars": 4401
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 631
+        "flashforward": false,
+        "chars": 962
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3776
+        "flashforward": false,
+        "chars": 3939
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 341
+        "flashforward": false,
+        "chars": 54
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1241
+        "flashforward": false,
+        "chars": 280
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 460
+        "flashforward": false,
+        "chars": 1348
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1198
+        "flashforward": false,
+        "chars": 1581
       }
     ]
   },
   {
     "season": 1,
     "episode": 12,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3375
+        "flashforward": false,
+        "chars": 2795
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 815
+        "flashforward": false,
+        "chars": 1257
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1886
+        "flashforward": false,
+        "chars": 2310
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 691
+        "flashforward": false,
+        "chars": 625
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3521
+        "flashforward": false,
+        "chars": 2829
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 432
+        "flashforward": false,
+        "chars": 595
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1795
+        "flashforward": false,
+        "chars": 2408
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1122
+        "flashforward": false,
+        "chars": 1397
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1686
+        "flashforward": false,
+        "chars": 1107
       }
     ]
   },
   {
     "season": 1,
     "episode": 13,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 499
+        "flashforward": false,
+        "chars": 697
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 481
+        "flashforward": false,
+        "chars": 856
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3599
+        "flashforward": false,
+        "chars": 2861
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 775
+        "flashforward": false,
+        "chars": 741
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1806
+        "flashforward": false,
+        "chars": 1565
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 590
+        "flashforward": false,
+        "chars": 752
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4331
+        "flashforward": false,
+        "chars": 4458
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 530
+        "flashforward": false,
+        "chars": 991
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3457
+        "flashforward": false,
+        "chars": 2806
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 632
+        "flashforward": false,
+        "chars": 819
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1148
+        "flashforward": false,
+        "chars": 1302
       }
     ]
   },
   {
     "season": 1,
     "episode": 14,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 950
+        "flashforward": false,
+        "chars": 795
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 598
+        "flashforward": false,
+        "chars": 769
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1760
+        "flashforward": false,
+        "chars": 1411
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 950
+        "flashforward": false,
+        "chars": 1143
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1715
+        "flashforward": false,
+        "chars": 1944
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1226
+        "flashforward": false,
+        "chars": 1169
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3923
+        "flashforward": false,
+        "chars": 3340
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1509
+        "flashforward": false,
+        "chars": 1933
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1279
+        "flashforward": false,
+        "chars": 1236
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 869
+        "flashforward": false,
+        "chars": 1259
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 28
+        "flashforward": false,
+        "chars": 48
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1943
+        "flashforward": false,
+        "chars": 1520
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 618
+        "flashforward": false,
+        "chars": 602
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 231
+        "flashforward": false,
+        "chars": 340
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2048
+        "flashforward": false,
+        "chars": 2138
       }
     ]
   },
   {
     "season": 1,
     "episode": 15,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2851
+        "flashforward": false,
+        "chars": 3123
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 453
+        "flashforward": false,
+        "chars": 618
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2305
+        "flashforward": false,
+        "chars": 3033
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 652
+        "flashforward": false,
+        "chars": 550
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1382
+        "flashforward": false,
+        "chars": 1189
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 792
+        "flashforward": false,
+        "chars": 296
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2464
+        "flashforward": false,
+        "chars": 2780
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1815
+        "flashforward": false,
+        "chars": 1114
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1685
+        "flashforward": false,
+        "chars": 1463
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 42
+        "flashforward": false,
+        "chars": 14
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1513
+        "flashforward": false,
+        "chars": 1341
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 353
+        "flashforward": false,
+        "chars": 347
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 125
+        "flashforward": false,
+        "chars": 564
       }
     ]
   },
   {
     "season": 1,
     "episode": 16,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 281
+        "flashforward": false,
+        "chars": 224
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 567
+        "flashforward": false,
+        "chars": 1028
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 814
+        "flashforward": false,
+        "chars": 1275
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2073
+        "flashforward": false,
+        "chars": 2194
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 425
+        "flashforward": false,
+        "chars": 203
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 5527
+        "flashforward": false,
+        "chars": 5786
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 466
+        "flashforward": false,
+        "chars": 1032
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3353
+        "flashforward": false,
+        "chars": 1972
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 244
+        "flashforward": false,
+        "chars": 444
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1497
+        "flashforward": false,
+        "chars": 1089
       }
     ]
   },
   {
     "season": 1,
     "episode": 17,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 406
+        "flashforward": false,
+        "chars": 297
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1105
+        "flashforward": false,
+        "chars": 1220
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 552
+        "flashforward": false,
+        "chars": 815
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3147
+        "flashforward": false,
+        "chars": 2698
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 196
+        "flashforward": false,
+        "chars": 438
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1967
+        "flashforward": false,
+        "chars": 2043
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 306
+        "flashforward": false,
+        "chars": 295
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3033
+        "flashforward": false,
+        "chars": 3064
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 556
+        "flashforward": false,
+        "chars": 865
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1290
+        "flashforward": false,
+        "chars": 823
       }
     ]
   },
   {
     "season": 1,
     "episode": 18,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1070
+        "flashforward": false,
+        "chars": 1489
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1274
+        "flashforward": false,
+        "chars": 926
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 767
+        "flashforward": false,
+        "chars": 985
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 383
+        "flashforward": false,
+        "chars": 443
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1876
+        "flashforward": false,
+        "chars": 1961
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1727
+        "flashforward": false,
+        "chars": 1287
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 85
+        "flashforward": false,
+        "chars": 112
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1042
+        "flashforward": false,
+        "chars": 761
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2462
+        "flashforward": false,
+        "chars": 2607
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 542
+        "flashforward": false,
+        "chars": 438
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2675
+        "flashforward": false,
+        "chars": 2329
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 105
+        "flashforward": false,
+        "chars": 338
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 6748
+        "flashforward": false,
+        "chars": 7080
       }
     ]
   },
   {
     "season": 1,
     "episode": 19,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 207
+        "flashforward": false,
+        "chars": 392
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 969
+        "flashforward": false,
+        "chars": 1076
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 535
+        "flashforward": false,
+        "chars": 123
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 7312
+        "flashforward": false,
+        "chars": 6731
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 114
+        "flashforward": false,
+        "chars": 169
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2467
+        "flashforward": false,
+        "chars": 3169
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 19
+        "flashforward": false,
+        "chars": 258
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 340
+        "flashforward": false,
+        "chars": 381
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 235
+        "flashforward": false,
+        "chars": 119
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2137
+        "flashforward": false,
+        "chars": 2066
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 629
+        "flashforward": false,
+        "chars": 613
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 580
+        "flashforward": false,
+        "chars": 447
       }
     ]
   },
   {
     "season": 1,
     "episode": 20,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 796
+        "flashforward": false,
+        "chars": 763
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 458
+        "flashforward": false,
+        "chars": 808
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2271
+        "flashforward": false,
+        "chars": 1459
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 82
+        "flashforward": false,
+        "chars": 55
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3043
+        "flashforward": false,
+        "chars": 2843
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1290
+        "flashforward": false,
+        "chars": 688
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4360
+        "flashforward": false,
+        "chars": 5400
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 651
+        "flashforward": false,
+        "chars": 650
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 891
+        "flashforward": false,
+        "chars": 1108
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 93
+        "flashforward": false,
+        "chars": 50
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 817
+        "flashforward": false,
+        "chars": 928
       }
     ]
   },
   {
     "season": 1,
     "episode": 21,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 231
+        "flashforward": false,
+        "chars": 8
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 401
+        "flashforward": false,
+        "chars": 826
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1792
+        "flashforward": false,
+        "chars": 1554
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 891
+        "flashforward": false,
+        "chars": 574
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3863
+        "flashforward": false,
+        "chars": 4516
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 559
+        "flashforward": false,
+        "chars": 615
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2549
+        "flashforward": false,
+        "chars": 2682
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 445
+        "flashforward": false,
+        "chars": 365
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2411
+        "flashforward": false,
+        "chars": 2391
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1334
+        "flashforward": false,
+        "chars": 806
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1261
+        "flashforward": false,
+        "chars": 1379
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 336
+        "flashforward": false,
+        "chars": 458
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 532
+        "flashforward": false,
+        "chars": 431
       }
     ]
   },
   {
     "season": 1,
     "episode": 22,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1773
+        "flashforward": false,
+        "chars": 1618
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 177
+        "flashforward": false,
+        "chars": 214
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3979
+        "flashforward": false,
+        "chars": 3996
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 881
+        "flashforward": false,
+        "chars": 549
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1738
+        "flashforward": false,
+        "chars": 2235
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 218
+        "flashforward": false,
+        "chars": 418
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3075
+        "flashforward": false,
+        "chars": 2739
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1161
+        "flashforward": false,
+        "chars": 986
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1721
+        "flashforward": false,
+        "chars": 1968
       }
     ]
   },
   {
     "season": 1,
     "episode": 23,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 616
+        "flashforward": false,
+        "chars": 865
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2483
+        "flashforward": false,
+        "chars": 2780
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1167
+        "flashforward": false,
+        "chars": 687
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 656
+        "flashforward": false,
+        "chars": 678
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 688
+        "flashforward": false,
+        "chars": 484
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 739
+        "flashforward": false,
+        "chars": 1569
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 311
+        "flashforward": false,
+        "chars": 683
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 5458
+        "flashforward": false,
+        "chars": 5409
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1241
+        "flashforward": false,
+        "chars": 693
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 711
+        "flashforward": false,
+        "chars": 972
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 429
+        "flashforward": false,
+        "chars": 349
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1036
+        "flashforward": false,
+        "chars": 366
       }
     ]
   },
   {
     "season": 1,
     "episode": 24,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3009
+        "flashforward": false,
+        "chars": 3035
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 223
+        "flashforward": false,
+        "chars": 284
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3811
+        "flashforward": false,
+        "chars": 4066
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 994
+        "flashforward": false,
+        "chars": 1142
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3377
+        "flashforward": false,
+        "chars": 3177
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 49
+        "flashforward": false,
+        "chars": 258
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 6169
+        "flashforward": false,
+        "chars": 5508
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1576
+        "flashforward": false,
+        "chars": 1196
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2299
+        "flashforward": false,
+        "chars": 2551
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 297
+        "flashforward": false,
+        "chars": 500
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4377
+        "flashforward": false,
+        "chars": 4464
       }
     ]
   },
   {
     "season": 2,
     "episode": 1,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1320
+        "flashforward": false,
+        "chars": 614
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1084
+        "flashforward": false,
+        "chars": 1264
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2902
+        "flashforward": false,
+        "chars": 3419
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 610
+        "flashforward": false,
+        "chars": 1035
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1558
+        "flashforward": false,
+        "chars": 1766
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 452
+        "flashforward": false,
+        "chars": 522
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1937
+        "flashforward": false,
+        "chars": 929
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 2487
+        "flashforward": false,
+        "chars": 1698
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 70
+        "flashforward": false,
+        "chars": 51
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 963
+        "flashforward": false,
+        "chars": 1976
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 265
+        "flashforward": false,
+        "chars": 374
       }
     ]
   },
   {
     "season": 2,
     "episode": 2,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 332
+        "flashforward": false,
+        "chars": 588
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 511
+        "flashforward": false,
+        "chars": 1196
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2034
+        "flashforward": false,
+        "chars": 1415
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1267
+        "flashforward": false,
+        "chars": 1805
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3138
+        "flashforward": false,
+        "chars": 2451
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1000
+        "flashforward": false,
+        "chars": 1066
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3201
+        "flashforward": false,
+        "chars": 2480
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 621
+        "flashforward": false,
+        "chars": 1140
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 246
+        "flashforward": false,
+        "chars": 209
       }
     ]
   },
   {
     "season": 2,
     "episode": 3,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 21
+        "flashforward": false,
+        "chars": 171
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 224
+        "flashforward": false,
+        "chars": 563
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2238
+        "flashforward": false,
+        "chars": 1687
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 65
+        "flashforward": false,
+        "chars": 167
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3245
+        "flashforward": false,
+        "chars": 4938
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 956
+        "flashforward": false,
+        "chars": 740
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2322
+        "flashforward": false,
+        "chars": 2679
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1164
+        "flashforward": false,
+        "chars": 332
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 5424
+        "flashforward": false,
+        "chars": 4382
       }
     ]
   },
   {
     "season": 2,
     "episode": 4,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1026
+        "flashforward": false,
+        "chars": 1434
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1020
+        "flashforward": false,
+        "chars": 777
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3060
+        "flashforward": false,
+        "chars": 2415
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 607
+        "flashforward": false,
+        "chars": 528
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3309
+        "flashforward": false,
+        "chars": 4119
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1047
+        "flashforward": false,
+        "chars": 840
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2610
+        "flashforward": false,
+        "chars": 1927
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 321
+        "flashforward": false,
+        "chars": 661
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 903
+        "flashforward": false,
+        "chars": 844
       },
       {
         "flashback": true,
         "flashsideways": false,
+        "flashforward": false,
+        "chars": 35
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 333
+      },
+      {
+        "flashback": true,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 118
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 58
+      },
+      {
+        "flashback": true,
+        "flashsideways": false,
+        "flashforward": false,
         "chars": 87
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 327
-      },
-      {
-        "flashback": true,
-        "flashsideways": false,
-        "chars": 4
-      },
-      {
-        "flashback": false,
-        "flashsideways": false,
-        "chars": 19
-      },
-      {
-        "flashback": true,
-        "flashsideways": false,
-        "chars": 42
-      },
-      {
-        "flashback": false,
-        "flashsideways": false,
-        "chars": 1131
+        "flashforward": false,
+        "chars": 1337
       }
     ]
   },
   {
     "season": 2,
     "episode": 5,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 315
+        "flashforward": false,
+        "chars": 233
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 312
+        "flashforward": false,
+        "chars": 413
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2127
+        "flashforward": false,
+        "chars": 2502
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 697
+        "flashforward": false,
+        "chars": 684
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2593
+        "flashforward": false,
+        "chars": 2456
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 267
+        "flashforward": false,
+        "chars": 46
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1604
+        "flashforward": false,
+        "chars": 999
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 121
+        "flashforward": false,
+        "chars": 234
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1429
+        "flashforward": false,
+        "chars": 1496
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 626
+        "flashforward": false,
+        "chars": 403
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1257
+        "flashforward": false,
+        "chars": 1973
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 287
+        "flashforward": false,
+        "chars": 196
       }
     ]
   },
   {
     "season": 2,
     "episode": 6,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2384
+        "flashforward": false,
+        "chars": 2153
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 326
+        "flashforward": false,
+        "chars": 269
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2246
+        "flashforward": false,
+        "chars": 2729
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 158
+        "flashforward": false,
+        "chars": 146
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2843
+        "flashforward": false,
+        "chars": 2911
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 679
+        "flashforward": false,
+        "chars": 587
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3227
+        "flashforward": false,
+        "chars": 3367
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 858
+        "flashforward": false,
+        "chars": 647
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 819
+        "flashforward": false,
+        "chars": 731
       }
     ]
   },
   {
     "season": 2,
     "episode": 7,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
+        "flashforward": false,
         "chars": 11159
       }
     ]
@@ -1803,2372 +2126,3011 @@
   {
     "season": 2,
     "episode": 8,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 739
+        "flashforward": false,
+        "chars": 448
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 892
+        "flashforward": false,
+        "chars": 715
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 789
+        "flashforward": false,
+        "chars": 882
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1219
+        "flashforward": false,
+        "chars": 1356
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1027
+        "flashforward": false,
+        "chars": 1183
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2387
+        "flashforward": false,
+        "chars": 2219
       },
       {
         "flashback": true,
         "flashsideways": false,
+        "flashforward": false,
+        "chars": 277
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 3720
+      },
+      {
+        "flashback": true,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 351
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
         "chars": 154
-      },
-      {
-        "flashback": false,
-        "flashsideways": false,
-        "chars": 3285
-      },
-      {
-        "flashback": true,
-        "flashsideways": false,
-        "chars": 149
-      },
-      {
-        "flashback": false,
-        "flashsideways": false,
-        "chars": 664
       }
     ]
   },
   {
     "season": 2,
     "episode": 9,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 415
+        "flashforward": false,
+        "chars": 296
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 346
+        "flashforward": false,
+        "chars": 381
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2517
+        "flashforward": false,
+        "chars": 2424
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 281
+        "flashforward": false,
+        "chars": 821
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1812
+        "flashforward": false,
+        "chars": 2914
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1172
+        "flashforward": false,
+        "chars": 323
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2110
+        "flashforward": false,
+        "chars": 2161
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1057
+        "flashforward": false,
+        "chars": 661
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3658
+        "flashforward": false,
+        "chars": 3387
       }
     ]
   },
   {
     "season": 2,
     "episode": 10,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 725
+        "flashforward": false,
+        "chars": 926
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1991
+        "flashforward": false,
+        "chars": 2528
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 368
+        "flashforward": false,
+        "chars": 434
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1763
+        "flashforward": false,
+        "chars": 1776
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1105
+        "flashforward": false,
+        "chars": 870
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1563
+        "flashforward": false,
+        "chars": 1334
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 875
+        "flashforward": false,
+        "chars": 815
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2162
+        "flashforward": false,
+        "chars": 2496
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1027
+        "flashforward": false,
+        "chars": 333
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 21
+        "flashforward": false,
+        "chars": 75
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 16
+        "flashforward": false,
+        "chars": 15
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 816
+        "flashforward": false,
+        "chars": 830
       }
     ]
   },
   {
     "season": 2,
     "episode": 11,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 697
+        "flashforward": false,
+        "chars": 942
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2476
+        "flashforward": false,
+        "chars": 2657
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 755
+        "flashforward": false,
+        "chars": 554
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2973
+        "flashforward": false,
+        "chars": 2364
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 467
+        "flashforward": false,
+        "chars": 781
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1353
+        "flashforward": false,
+        "chars": 1163
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 527
+        "flashforward": false,
+        "chars": 446
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3319
+        "flashforward": false,
+        "chars": 3560
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1182
+        "flashforward": false,
+        "chars": 880
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1367
+        "flashforward": false,
+        "chars": 1769
       }
     ]
   },
   {
     "season": 2,
     "episode": 12,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1656
+        "flashforward": false,
+        "chars": 1533
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 295
+        "flashforward": false,
+        "chars": 229
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3132
+        "flashforward": false,
+        "chars": 3404
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 825
+        "flashforward": false,
+        "chars": 1441
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3505
+        "flashforward": false,
+        "chars": 2470
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 909
+        "flashforward": false,
+        "chars": 817
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1544
+        "flashforward": false,
+        "chars": 1399
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 348
+        "flashforward": false,
+        "chars": 811
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2308
+        "flashforward": false,
+        "chars": 2418
       }
     ]
   },
   {
     "season": 2,
     "episode": 13,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1823
+        "flashforward": false,
+        "chars": 1387
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 791
+        "flashforward": false,
+        "chars": 959
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4536
+        "flashforward": false,
+        "chars": 4895
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 204
+        "flashforward": false,
+        "chars": 473
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3265
+        "flashforward": false,
+        "chars": 2190
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 866
+        "flashforward": false,
+        "chars": 1319
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1077
+        "flashforward": false,
+        "chars": 1081
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1288
+        "flashforward": false,
+        "chars": 1739
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1202
+        "flashforward": false,
+        "chars": 1113
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 952
+        "flashforward": false,
+        "chars": 994
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2379
+        "flashforward": false,
+        "chars": 1968
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 46
+        "flashforward": false,
+        "chars": 233
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 22
+        "flashforward": false,
+        "chars": 100
       }
     ]
   },
   {
     "season": 2,
     "episode": 14,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 509
+        "flashforward": false,
+        "chars": 985
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1229
+        "flashforward": false,
+        "chars": 1586
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1319
+        "flashforward": false,
+        "chars": 688
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2506
+        "flashforward": false,
+        "chars": 1965
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 159
+        "flashforward": false,
+        "chars": 265
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2682
+        "flashforward": false,
+        "chars": 2265
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 115
+        "flashforward": false,
+        "chars": 135
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 6733
+        "flashforward": false,
+        "chars": 7087
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 134
+        "flashforward": false,
+        "chars": 834
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 579
+        "flashforward": false,
+        "chars": 155
       }
     ]
   },
   {
     "season": 2,
     "episode": 15,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3770
+        "flashforward": false,
+        "chars": 3676
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 590
+        "flashforward": false,
+        "chars": 400
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2501
+        "flashforward": false,
+        "chars": 2146
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 678
+        "flashforward": false,
+        "chars": 740
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2200
+        "flashforward": false,
+        "chars": 2696
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 91
+        "flashforward": false,
+        "chars": 188
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1151
+        "flashforward": false,
+        "chars": 1155
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 724
+        "flashforward": false,
+        "chars": 847
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 189
+        "flashforward": false,
+        "chars": 191
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 723
+        "flashforward": false,
+        "chars": 837
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2768
+        "flashforward": false,
+        "chars": 2509
       }
     ]
   },
   {
     "season": 2,
     "episode": 16,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 647
+        "flashforward": false,
+        "chars": 602
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1670
+        "flashforward": false,
+        "chars": 2072
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 933
+        "flashforward": false,
+        "chars": 1154
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3212
+        "flashforward": false,
+        "chars": 2583
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 334
+        "flashforward": false,
+        "chars": 432
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3067
+        "flashforward": false,
+        "chars": 3282
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 822
+        "flashforward": false,
+        "chars": 634
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1893
+        "flashforward": false,
+        "chars": 1896
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 730
+        "flashforward": false,
+        "chars": 504
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1648
+        "flashforward": false,
+        "chars": 1797
       }
     ]
   },
   {
     "season": 2,
     "episode": 17,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 638
+        "flashforward": false,
+        "chars": 528
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1677
+        "flashforward": false,
+        "chars": 1801
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 44
+        "flashforward": false,
+        "chars": 96
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1670
+        "flashforward": false,
+        "chars": 1248
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 189
+        "flashforward": false,
+        "chars": 257
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2403
+        "flashforward": false,
+        "chars": 2365
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1282
+        "flashforward": false,
+        "chars": 919
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2093
+        "flashforward": false,
+        "chars": 2515
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 863
+        "flashforward": false,
+        "chars": 1441
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2456
+        "flashforward": false,
+        "chars": 2145
       }
     ]
   },
   {
     "season": 2,
     "episode": 18,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2153
+        "flashforward": false,
+        "chars": 2139
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 621
+        "flashforward": false,
+        "chars": 991
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3840
+        "flashforward": false,
+        "chars": 3802
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1925
+        "flashforward": false,
+        "chars": 1384
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3010
+        "flashforward": false,
+        "chars": 2343
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1054
+        "flashforward": false,
+        "chars": 930
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 6128
+        "flashforward": false,
+        "chars": 7664
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 908
+        "flashforward": false,
+        "chars": 386
       }
     ]
   },
   {
     "season": 2,
     "episode": 19,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1021
+        "flashforward": false,
+        "chars": 1017
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1761
+        "flashforward": false,
+        "chars": 752
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2051
+        "flashforward": false,
+        "chars": 1689
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 777
+        "flashforward": false,
+        "chars": 1184
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1281
+        "flashforward": false,
+        "chars": 2728
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1159
+        "flashforward": false,
+        "chars": 687
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4205
+        "flashforward": false,
+        "chars": 3865
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 753
+        "flashforward": false,
+        "chars": 696
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1647
+        "flashforward": false,
+        "chars": 1564
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 91
+        "flashforward": false,
+        "chars": 225
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 934
+        "flashforward": false,
+        "chars": 1273
       }
     ]
   },
   {
     "season": 2,
     "episode": 20,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 268
+        "flashforward": false,
+        "chars": 136
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 407
+        "flashforward": false,
+        "chars": 384
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1015
+        "flashforward": false,
+        "chars": 979
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1332
+        "flashforward": false,
+        "chars": 956
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1397
+        "flashforward": false,
+        "chars": 1826
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 256
+        "flashforward": false,
+        "chars": 301
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1490
+        "flashforward": false,
+        "chars": 1630
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 894
+        "flashforward": false,
+        "chars": 430
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 6216
+        "flashforward": false,
+        "chars": 6106
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 363
+        "flashforward": false,
+        "chars": 260
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 986
+        "flashforward": false,
+        "chars": 1616
       }
     ]
   },
   {
     "season": 2,
     "episode": 21,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2534
+        "flashforward": false,
+        "chars": 2228
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 304
+        "flashforward": false,
+        "chars": 517
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2583
+        "flashforward": false,
+        "chars": 2034
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 654
+        "flashforward": false,
+        "chars": 811
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2715
+        "flashforward": false,
+        "chars": 3016
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 459
+        "flashforward": false,
+        "chars": 750
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2518
+        "flashforward": false,
+        "chars": 1636
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 2806
+        "flashforward": false,
+        "chars": 2646
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 251
+        "flashforward": false,
+        "chars": 1186
       }
     ]
   },
   {
     "season": 2,
     "episode": 22,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 835
+        "flashforward": false,
+        "chars": 774
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 698
+        "flashforward": false,
+        "chars": 1271
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 251
+        "flashforward": false,
+        "chars": 248
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1894
+        "flashforward": false,
+        "chars": 2226
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1188
+        "flashforward": false,
+        "chars": 1439
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2860
+        "flashforward": false,
+        "chars": 1957
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1379
+        "flashforward": false,
+        "chars": 975
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2105
+        "flashforward": false,
+        "chars": 1827
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 2357
+        "flashforward": false,
+        "chars": 2709
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 870
+        "flashforward": false,
+        "chars": 1011
       }
     ]
   },
   {
     "season": 2,
     "episode": 23,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 584
+        "flashforward": false,
+        "chars": 335
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 95
+        "flashforward": false,
+        "chars": 90
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3794
+        "flashforward": false,
+        "chars": 3406
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 497
+        "flashforward": false,
+        "chars": 397
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2501
+        "flashforward": false,
+        "chars": 3178
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 910
+        "flashforward": false,
+        "chars": 991
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1383
+        "flashforward": false,
+        "chars": 1800
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1469
+        "flashforward": false,
+        "chars": 879
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3831
+        "flashforward": false,
+        "chars": 3432
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 398
+        "flashforward": false,
+        "chars": 487
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 451
+        "flashforward": false,
+        "chars": 461
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 485
+        "flashforward": false,
+        "chars": 619
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2362
+        "flashforward": false,
+        "chars": 2191
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 252
+        "flashforward": false,
+        "chars": 219
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1855
+        "flashforward": false,
+        "chars": 3261
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 511
+        "flashforward": false,
+        "chars": 142
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3718
+        "flashforward": false,
+        "chars": 3208
       }
     ]
   },
   {
     "season": 3,
     "episode": 1,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
+        "flashforward": false,
         "chars": 1426
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 451
+        "flashforward": false,
+        "chars": 703
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 996
+        "flashforward": false,
+        "chars": 1776
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 716
+        "flashforward": false,
+        "chars": 836
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2532
+        "flashforward": false,
+        "chars": 2016
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 78
+        "flashforward": false,
+        "chars": 79
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3847
+        "flashforward": false,
+        "chars": 2833
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 652
+        "flashforward": false,
+        "chars": 914
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 150
+        "flashforward": false,
+        "chars": 265
       }
     ]
   },
   {
     "season": 3,
     "episode": 2,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 196
+        "flashforward": false,
+        "chars": 189
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3418
+        "flashforward": false,
+        "chars": 1886
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 943
+        "flashforward": false,
+        "chars": 716
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 907
+        "flashforward": false,
+        "chars": 509
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 349
+        "flashforward": false,
+        "chars": 748
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1587
+        "flashforward": false,
+        "chars": 1520
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 812
+        "flashforward": false,
+        "chars": 1353
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 584
+        "flashforward": false,
+        "chars": 989
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 480
+        "flashforward": false,
+        "chars": 290
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 461
+        "flashforward": false,
+        "chars": 436
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 220
+        "flashforward": false,
+        "chars": 254
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1594
+        "flashforward": false,
+        "chars": 2661
       }
     ]
   },
   {
     "season": 3,
     "episode": 3,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 106
+        "flashforward": false,
+        "chars": 199
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1306
+        "flashforward": false,
+        "chars": 1474
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1522
+        "flashforward": false,
+        "chars": 1461
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 440
+        "flashforward": false,
+        "chars": 263
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2036
+        "flashforward": false,
+        "chars": 1569
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1043
+        "flashforward": false,
+        "chars": 1254
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1265
+        "flashforward": false,
+        "chars": 1176
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1299
+        "flashforward": false,
+        "chars": 1137
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1278
+        "flashforward": false,
+        "chars": 1722
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 828
+        "flashforward": false,
+        "chars": 1215
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2316
+        "flashforward": false,
+        "chars": 1969
       }
     ]
   },
   {
     "season": 3,
     "episode": 4,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2910
+        "flashforward": false,
+        "chars": 2665
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 368
+        "flashforward": false,
+        "chars": 366
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3264
+        "flashforward": false,
+        "chars": 3306
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 743
+        "flashforward": false,
+        "chars": 759
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3571
+        "flashforward": false,
+        "chars": 2793
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 84
+        "flashforward": false,
+        "chars": 139
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2626
+        "flashforward": false,
+        "chars": 3216
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 678
+        "flashforward": false,
+        "chars": 1392
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1075
+        "flashforward": false,
+        "chars": 683
       }
     ]
   },
   {
     "season": 3,
     "episode": 5,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 76
+        "flashforward": false,
+        "chars": 74
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3662
+        "flashforward": false,
+        "chars": 4103
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 612
+        "flashforward": false,
+        "chars": 311
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 897
+        "flashforward": false,
+        "chars": 827
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 733
+        "flashforward": false,
+        "chars": 736
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1708
+        "flashforward": false,
+        "chars": 1147
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 308
+        "flashforward": false,
+        "chars": 288
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1066
+        "flashforward": false,
+        "chars": 749
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 89
+        "flashforward": false,
+        "chars": 217
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1675
+        "flashforward": false,
+        "chars": 1745
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 620
+        "flashforward": false,
+        "chars": 440
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 718
+        "flashforward": false,
+        "chars": 1529
       }
     ]
   },
   {
     "season": 3,
     "episode": 6,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 371
+        "flashforward": false,
+        "chars": 632
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3831
+        "flashforward": false,
+        "chars": 3758
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 231
+        "flashforward": false,
+        "chars": 412
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1293
+        "flashforward": false,
+        "chars": 1914
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 800
+        "flashforward": false,
+        "chars": 484
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1989
+        "flashforward": false,
+        "chars": 1620
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 473
+        "flashforward": false,
+        "chars": 320
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4063
+        "flashforward": false,
+        "chars": 3911
       }
     ]
   },
   {
     "season": 3,
     "episode": 7,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 628
+        "flashforward": false,
+        "chars": 439
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1257
+        "flashforward": false,
+        "chars": 1151
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 853
+        "flashforward": false,
+        "chars": 761
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1986
+        "flashforward": false,
+        "chars": 2091
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 51
+        "flashforward": false,
+        "chars": 90
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1211
+        "flashforward": false,
+        "chars": 2040
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 947
+        "flashforward": false,
+        "chars": 809
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2232
+        "flashforward": false,
+        "chars": 2269
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 620
+        "flashforward": false,
+        "chars": 903
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3658
+        "flashforward": false,
+        "chars": 3331
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 123
+        "flashforward": false,
+        "chars": 37
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 555
+        "flashforward": false,
+        "chars": 314
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 704
+        "flashforward": false,
+        "chars": 611
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 69
+        "flashforward": false,
+        "chars": 48
       }
     ]
   },
   {
     "season": 3,
     "episode": 8,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4515
+        "flashforward": false,
+        "chars": 4453
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 83
+        "flashforward": false,
+        "chars": 164
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 12329
+        "flashforward": false,
+        "chars": 12310
       }
     ]
   },
   {
     "season": 3,
     "episode": 9,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1207
+        "flashforward": false,
+        "chars": 1065
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 424
+        "flashforward": false,
+        "chars": 613
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3162
+        "flashforward": false,
+        "chars": 2523
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1003
+        "flashforward": false,
+        "chars": 993
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 604
+        "flashforward": false,
+        "chars": 565
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 833
+        "flashforward": false,
+        "chars": 609
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2506
+        "flashforward": false,
+        "chars": 2875
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 907
+        "flashforward": false,
+        "chars": 1202
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 179
+        "flashforward": false,
+        "chars": 538
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 203
+        "flashforward": false,
+        "chars": 53
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1474
+        "flashforward": false,
+        "chars": 1464
       }
     ]
   },
   {
     "season": 3,
     "episode": 10,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1289
+        "flashforward": false,
+        "chars": 735
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 975
+        "flashforward": false,
+        "chars": 920
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 648
+        "flashforward": false,
+        "chars": 885
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3084
+        "flashforward": false,
+        "chars": 2807
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 746
+        "flashforward": false,
+        "chars": 861
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2460
+        "flashforward": false,
+        "chars": 2672
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1214
+        "flashforward": false,
+        "chars": 894
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1680
+        "flashforward": false,
+        "chars": 2317
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 378
+        "flashforward": false,
+        "chars": 356
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2326
+        "flashforward": false,
+        "chars": 2431
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 572
+        "flashforward": false,
+        "chars": 584
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2190
+        "flashforward": false,
+        "chars": 2100
       }
     ]
   },
   {
     "season": 3,
     "episode": 11,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2665
+        "flashforward": false,
+        "chars": 2722
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 27
+        "flashforward": false,
+        "chars": 17
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2342
+        "flashforward": false,
+        "chars": 3169
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 331
+        "flashforward": false,
+        "chars": 259
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2677
+        "flashforward": false,
+        "chars": 2547
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 501
+        "flashforward": false,
+        "chars": 377
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 343
+        "flashforward": false,
+        "chars": 358
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 842
+        "flashforward": false,
+        "chars": 1261
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 5302
+        "flashforward": false,
+        "chars": 4007
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 238
+        "flashforward": false,
+        "chars": 579
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 519
+        "flashforward": false,
+        "chars": 491
       }
     ]
   },
   {
     "season": 3,
     "episode": 12,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 31
+        "flashforward": false,
+        "chars": 51
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3191
+        "flashforward": false,
+        "chars": 4614
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1011
+        "flashforward": false,
+        "chars": 1374
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2107
+        "flashforward": false,
+        "chars": 1823
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1135
+        "flashforward": false,
+        "chars": 753
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3960
+        "flashforward": false,
+        "chars": 3889
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1854
+        "flashforward": false,
+        "chars": 1130
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1349
+        "flashforward": false,
+        "chars": 450
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 143
+        "flashforward": false,
+        "chars": 361
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1945
+        "flashforward": false,
+        "chars": 2281
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 63
+        "flashforward": false,
+        "chars": 79
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 314
+        "flashforward": false,
+        "chars": 298
       }
     ]
   },
   {
     "season": 3,
     "episode": 13,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 696
+        "flashforward": false,
+        "chars": 1138
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1020
+        "flashforward": false,
+        "chars": 1802
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 600
+        "flashforward": false,
+        "chars": 2001
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2971
+        "flashforward": false,
+        "chars": 3375
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1231
+        "flashforward": false,
+        "chars": 1531
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2291
+        "flashforward": false,
+        "chars": 1452
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 805
+        "flashforward": false,
+        "chars": 959
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4579
+        "flashforward": false,
+        "chars": 3860
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1546
+        "flashforward": false,
+        "chars": 727
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2642
+        "flashforward": false,
+        "chars": 1536
       }
     ]
   },
   {
     "season": 3,
     "episode": 14,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1379
+        "flashforward": false,
+        "chars": 1455
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1043
+        "flashforward": false,
+        "chars": 402
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1369
+        "flashforward": false,
+        "chars": 1096
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 730
+        "flashforward": false,
+        "chars": 468
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1000
+        "flashforward": false,
+        "chars": 676
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1718
+        "flashforward": false,
+        "chars": 2152
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 942
+        "flashforward": false,
+        "chars": 815
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 260
+        "flashforward": false,
+        "chars": 630
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 423
+        "flashforward": false,
+        "chars": 656
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1349
+        "flashforward": false,
+        "chars": 1580
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 340
+        "flashforward": false,
+        "chars": 299
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1192
+        "flashforward": false,
+        "chars": 1424
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 262
+        "flashforward": false,
+        "chars": 266
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1527
+        "flashforward": false,
+        "chars": 2101
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 430
+        "flashforward": false,
+        "chars": 361
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 946
+        "flashforward": false,
+        "chars": 893
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 563
+        "flashforward": false,
+        "chars": 509
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 866
+        "flashforward": false,
+        "chars": 626
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1312
+        "flashforward": false,
+        "chars": 1244
       }
     ]
   },
   {
     "season": 3,
     "episode": 15,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 50
+        "flashforward": false,
+        "chars": 35
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 135
+        "flashforward": false,
+        "chars": 174
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2825
+        "flashforward": false,
+        "chars": 2615
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 811
+        "flashforward": false,
+        "chars": 1086
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1927
+        "flashforward": false,
+        "chars": 1631
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 65
+        "flashforward": false,
+        "chars": 225
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3648
+        "flashforward": false,
+        "chars": 3678
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 383
+        "flashforward": false,
+        "chars": 659
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2701
+        "flashforward": false,
+        "chars": 2816
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 593
+        "flashforward": false,
+        "chars": 507
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 679
+        "flashforward": false,
+        "chars": 433
       }
     ]
   },
   {
     "season": 3,
     "episode": 16,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 460
+        "flashforward": false,
+        "chars": 341
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1229
+        "flashforward": false,
+        "chars": 1104
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1001
+        "flashforward": false,
+        "chars": 795
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1062
-      },
-      {
-        "flashback": false,
-        "flashsideways": false,
-        "chars": 1503
-      },
-      {
-        "flashback": true,
-        "flashsideways": false,
-        "chars": 12
-      },
-      {
-        "flashback": false,
-        "flashsideways": false,
-        "chars": 4341
-      },
-      {
-        "flashback": true,
-        "flashsideways": false,
-        "chars": 699
-      },
-      {
-        "flashback": false,
-        "flashsideways": false,
-        "chars": 2251
-      },
-      {
-        "flashback": true,
-        "flashsideways": false,
-        "chars": 322
-      },
-      {
-        "flashback": false,
-        "flashsideways": false,
-        "chars": 3154
-      },
-      {
-        "flashback": true,
-        "flashsideways": false,
+        "flashforward": false,
         "chars": 837
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1514
+      },
+      {
+        "flashback": true,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 117
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 4794
+      },
+      {
+        "flashback": true,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1355
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 2728
+      },
+      {
+        "flashback": true,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 190
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1686
+      },
+      {
+        "flashback": true,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1450
       }
     ]
   },
   {
     "season": 3,
     "episode": 17,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 944
+        "flashforward": false,
+        "chars": 1423
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 118
+        "flashforward": false,
+        "chars": 158
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3287
+        "flashforward": false,
+        "chars": 3793
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 835
+        "flashforward": false,
+        "chars": 580
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2821
+        "flashforward": false,
+        "chars": 3174
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 162
+        "flashforward": false,
+        "chars": 203
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3689
+        "flashforward": false,
+        "chars": 3744
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1140
+        "flashforward": false,
+        "chars": 790
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2338
+        "flashforward": false,
+        "chars": 1463
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 154
+        "flashforward": false,
+        "chars": 170
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1522
+        "flashforward": false,
+        "chars": 1585
       }
     ]
   },
   {
     "season": 3,
     "episode": 18,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 352
+        "flashforward": false,
+        "chars": 671
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1281
+        "flashforward": false,
+        "chars": 896
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1646
+        "flashforward": false,
+        "chars": 1211
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 682
+        "flashforward": false,
+        "chars": 773
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2936
+        "flashforward": false,
+        "chars": 2372
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 60
+        "flashforward": false,
+        "chars": 135
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 998
+        "flashforward": false,
+        "chars": 1068
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1013
+        "flashforward": false,
+        "chars": 997
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3481
+        "flashforward": false,
+        "chars": 3934
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 859
+        "flashforward": false,
+        "chars": 1166
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 307
+        "flashforward": false,
+        "chars": 334
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 129
+        "flashforward": false,
+        "chars": 225
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 747
+        "flashforward": false,
+        "chars": 773
       }
     ]
   },
   {
     "season": 3,
     "episode": 19,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4
+        "flashforward": false,
+        "chars": 34
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1100
+        "flashforward": false,
+        "chars": 664
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1124
+        "flashforward": false,
+        "chars": 1601
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1486
+        "flashforward": false,
+        "chars": 978
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4088
+        "flashforward": false,
+        "chars": 3491
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 875
+        "flashforward": false,
+        "chars": 1437
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2089
+        "flashforward": false,
+        "chars": 2019
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 736
+        "flashforward": false,
+        "chars": 853
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1359
+        "flashforward": false,
+        "chars": 1442
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 731
+        "flashforward": false,
+        "chars": 370
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3087
+        "flashforward": false,
+        "chars": 3828
       }
     ]
   },
   {
     "season": 3,
     "episode": 20,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1670
+        "flashforward": false,
+        "chars": 1489
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1923
+        "flashforward": false,
+        "chars": 1778
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 863
+        "flashforward": false,
+        "chars": 778
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2886
+        "flashforward": false,
+        "chars": 3586
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 460
+        "flashforward": false,
+        "chars": 295
       },
       {
         "flashback": false,
         "flashsideways": false,
+        "flashforward": false,
+        "chars": 1360
+      },
+      {
+        "flashback": true,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 138
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
         "chars": 1412
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 89
+        "flashforward": false,
+        "chars": 832
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1157
+        "flashforward": false,
+        "chars": 1846
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1183
+        "flashforward": false,
+        "chars": 267
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1823
-      },
-      {
-        "flashback": true,
-        "flashsideways": false,
-        "chars": 132
-      },
-      {
-        "flashback": false,
-        "flashsideways": false,
-        "chars": 1016
+        "flashforward": false,
+        "chars": 838
       }
     ]
   },
   {
     "season": 3,
     "episode": 21,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 883
+        "flashforward": false,
+        "chars": 1193
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 449
+        "flashforward": false,
+        "chars": 420
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2591
+        "flashforward": false,
+        "chars": 2265
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 767
+        "flashforward": false,
+        "chars": 590
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2612
+        "flashforward": false,
+        "chars": 2347
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1941
+        "flashforward": false,
+        "chars": 2359
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1753
+        "flashforward": false,
+        "chars": 900
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 460
+        "flashforward": false,
+        "chars": 338
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 496
+        "flashforward": false,
+        "chars": 775
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 839
+        "flashforward": false,
+        "chars": 865
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2163
+        "flashforward": false,
+        "chars": 2394
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 811
+        "flashforward": false,
+        "chars": 968
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 707
+        "flashforward": false,
+        "chars": 1067
       }
     ]
   },
   {
     "season": 3,
     "episode": 22,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 28402
+        "flashforward": true,
+        "chars": 359
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 3764
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 962
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 4666
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 700
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 4988
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 678
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1511
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 335
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 4079
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 783
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 4355
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 217
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1031
       }
     ]
   },
   {
     "season": 4,
     "episode": 1,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 13454
+        "flashforward": true,
+        "chars": 721
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 5807
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 1126
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 3605
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 1375
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1216
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 287
+        "flashforward": false,
+        "chars": 412
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1534
+        "flashforward": true,
+        "chars": 872
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 163
       }
     ]
   },
   {
     "season": 4,
     "episode": 2,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 496
+        "flashforward": false,
+        "chars": 288
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3911
+        "flashforward": false,
+        "chars": 4697
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 871
+        "flashforward": false,
+        "chars": 547
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2547
+        "flashforward": false,
+        "chars": 2891
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 640
+        "flashforward": false,
+        "chars": 748
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2465
+        "flashforward": false,
+        "chars": 2447
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 825
+        "flashforward": false,
+        "chars": 692
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 967
+        "flashforward": false,
+        "chars": 1147
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 996
+        "flashforward": false,
+        "chars": 771
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4514
+        "flashforward": false,
+        "chars": 4016
       }
     ]
   },
   {
     "season": 4,
     "episode": 3,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 16661
+        "flashforward": false,
+        "chars": 1350
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 981
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 4954
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 504
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 5216
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 1550
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1651
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 460
       }
     ]
   },
   {
     "season": 4,
     "episode": 4,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 18593
+        "flashforward": false,
+        "chars": 1553
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 189
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 3112
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 746
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 778
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 1374
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 5161
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 792
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 2590
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 560
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1741
       }
     ]
   },
   {
     "season": 4,
     "episode": 5,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
+        "flashforward": false,
         "chars": 20558
       }
     ]
@@ -4176,218 +5138,485 @@
   {
     "season": 4,
     "episode": 6,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 717
+        "flashforward": false,
+        "chars": 800
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1955
+        "flashforward": false,
+        "chars": 1801
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 667
+        "flashforward": false,
+        "chars": 979
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2026
+        "flashforward": false,
+        "chars": 2041
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 852
+        "flashforward": false,
+        "chars": 958
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2588
+        "flashforward": false,
+        "chars": 2476
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 702
+        "flashforward": false,
+        "chars": 520
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3208
+        "flashforward": false,
+        "chars": 2997
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 866
+        "flashforward": false,
+        "chars": 550
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2594
+        "flashforward": false,
+        "chars": 2443
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 245
+        "flashforward": false,
+        "chars": 725
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1231
+        "flashforward": false,
+        "chars": 1361
       }
     ]
   },
   {
     "season": 4,
     "episode": 7,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2154
+        "flashforward": false,
+        "chars": 1344
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 134
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 381
+        "flashforward": false,
+        "chars": 612
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2871
+        "flashforward": false,
+        "chars": 2566
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 89
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 629
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 519
+        "flashforward": false,
+        "chars": 387
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 5954
+        "flashforward": false,
+        "chars": 4559
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 436
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1707
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1306
+        "flashforward": false,
+        "chars": 698
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 665
+        "flashforward": true,
+        "chars": 666
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 23
       }
     ]
   },
   {
     "season": 4,
     "episode": 8,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 15703
+        "flashforward": false,
+        "chars": 15700
       }
     ]
   },
   {
     "season": 4,
     "episode": 9,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 13508
+        "flashforward": false,
+        "chars": 1452
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 994
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1639
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 428
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1203
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 637
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 2219
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 470
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 3278
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 1188
       }
     ]
   },
   {
     "season": 4,
     "episode": 10,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 15794
+        "flashforward": false,
+        "chars": 949
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 463
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 4266
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 464
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 6005
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 810
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 1177
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 1406
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 254
       }
     ]
   },
   {
     "season": 4,
     "episode": 11,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 350
+        "flashforward": false,
+        "chars": 369
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4072
+        "flashforward": false,
+        "chars": 4453
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 536
+        "flashforward": false,
+        "chars": 559
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4694
+        "flashforward": false,
+        "chars": 4852
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 94
+        "flashforward": false,
+        "chars": 224
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2361
+        "flashforward": false,
+        "chars": 2249
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1039
+        "flashforward": false,
+        "chars": 982
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2605
+        "flashforward": false,
+        "chars": 2063
       }
     ]
   },
   {
     "season": 4,
     "episode": 12,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 18289
+        "flashforward": true,
+        "chars": 419
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 4639
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 1593
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 2752
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 833
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 4976
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 91
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 2986
       }
     ]
   },
   {
     "season": 4,
     "episode": 13,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 24380
+        "flashforward": true,
+        "chars": 619
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 3162
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 694
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 9039
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 103
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 3964
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 857
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 2959
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 228
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 2755
       }
     ]
   },
   {
     "season": 5,
     "episode": 1,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
+        "flashforward": false,
         "chars": 16506
       }
     ]
@@ -4395,58 +5624,65 @@
   {
     "season": 5,
     "episode": 2,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1052
+        "flashforward": false,
+        "chars": 1322
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 17461
+        "flashforward": false,
+        "chars": 17191
       }
     ]
   },
   {
     "season": 5,
     "episode": 3,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 297
+        "flashforward": false,
+        "chars": 661
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 18512
+        "flashforward": false,
+        "chars": 18148
       }
     ]
   },
   {
     "season": 5,
     "episode": 4,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 522
+        "flashforward": false,
+        "chars": 432
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 16563
+        "flashforward": false,
+        "chars": 16653
       }
     ]
   },
   {
     "season": 5,
     "episode": 5,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
+        "flashforward": false,
         "chars": 12379
       }
     ]
@@ -4454,52 +5690,59 @@
   {
     "season": 5,
     "episode": 6,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1507
+        "flashforward": false,
+        "chars": 650
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 686
+        "flashforward": false,
+        "chars": 473
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 12166
+        "flashforward": false,
+        "chars": 13236
       }
     ]
   },
   {
     "season": 5,
     "episode": 7,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1446
+        "flashforward": false,
+        "chars": 2351
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 61
+        "flashforward": false,
+        "chars": 169
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 14774
+        "flashforward": false,
+        "chars": 13761
       }
     ]
   },
   {
     "season": 5,
     "episode": 8,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
+        "flashforward": false,
         "chars": 16682
       }
     ]
@@ -4507,10 +5750,11 @@
   {
     "season": 5,
     "episode": 9,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
+        "flashforward": false,
         "chars": 16679
       }
     ]
@@ -4518,300 +5762,365 @@
   {
     "season": 5,
     "episode": 10,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 339
+        "flashforward": false,
+        "chars": 551
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 488
+        "flashforward": false,
+        "chars": 414
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 35
+        "flashforward": false,
+        "chars": 21
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4782
+        "flashforward": false,
+        "chars": 5119
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 732
+        "flashforward": false,
+        "chars": 767
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 648
+        "flashforward": false,
+        "chars": 574
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 266
+        "flashforward": false,
+        "chars": 242
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3625
+        "flashforward": false,
+        "chars": 4153
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 789
+        "flashforward": false,
+        "chars": 772
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1379
+        "flashforward": false,
+        "chars": 1352
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 402
+        "flashforward": false,
+        "chars": 182
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1688
+        "flashforward": false,
+        "chars": 1026
       }
     ]
   },
   {
     "season": 5,
     "episode": 11,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1896
+        "flashforward": false,
+        "chars": 1574
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 368
+        "flashforward": false,
+        "chars": 759
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 10090
+        "flashforward": false,
+        "chars": 9369
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 510
+        "flashforward": false,
+        "chars": 621
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1234
+        "flashforward": false,
+        "chars": 1456
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 451
+        "flashforward": false,
+        "chars": 161
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3048
+        "flashforward": false,
+        "chars": 3070
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 531
+        "flashforward": false,
+        "chars": 844
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 950
+        "flashforward": false,
+        "chars": 1224
       }
     ]
   },
   {
     "season": 5,
     "episode": 12,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 471
+        "flashforward": false,
+        "chars": 275
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2436
+        "flashforward": false,
+        "chars": 1948
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 649
+        "flashforward": false,
+        "chars": 1277
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2396
+        "flashforward": false,
+        "chars": 2811
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 441
+        "flashforward": false,
+        "chars": 853
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2123
+        "flashforward": false,
+        "chars": 1378
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 356
+        "flashforward": false,
+        "chars": 424
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2403
+        "flashforward": false,
+        "chars": 2098
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 492
+        "flashforward": false,
+        "chars": 581
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1154
+        "flashforward": false,
+        "chars": 1290
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 211
+        "flashforward": false,
+        "chars": 220
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1961
+        "flashforward": false,
+        "chars": 1938
       }
     ]
   },
   {
     "season": 5,
     "episode": 13,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1370
+        "flashforward": false,
+        "chars": 1588
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1995
+        "flashforward": false,
+        "chars": 1823
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 790
+        "flashforward": false,
+        "chars": 746
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2963
+        "flashforward": false,
+        "chars": 3148
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 1292
+        "flashforward": false,
+        "chars": 1310
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2340
+        "flashforward": false,
+        "chars": 2693
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 959
+        "flashforward": false,
+        "chars": 1126
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 6463
+        "flashforward": false,
+        "chars": 2956
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 291
+        "flashforward": false,
+        "chars": 940
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1505
+        "flashforward": false,
+        "chars": 2648
+      },
+      {
+        "flashback": true,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 249
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 741
       }
     ]
   },
   {
     "season": 5,
     "episode": 14,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2649
+        "flashforward": false,
+        "chars": 1921
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 608
+        "flashforward": false,
+        "chars": 610
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2936
+        "flashforward": false,
+        "chars": 3207
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 506
+        "flashforward": false,
+        "chars": 299
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1871
+        "flashforward": false,
+        "chars": 2249
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 2265
+        "flashforward": false,
+        "chars": 2059
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2474
+        "flashforward": false,
+        "chars": 2012
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 813
+        "flashforward": false,
+        "chars": 1913
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 5303
+        "flashforward": false,
+        "chars": 5147
       }
     ]
   },
   {
     "season": 5,
     "episode": 15,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
+        "flashforward": false,
         "chars": 17121
       }
     ]
@@ -4819,1107 +6128,1326 @@
   {
     "season": 5,
     "episode": 16,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 8516
+        "flashforward": false,
+        "chars": 8127
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 591
+        "flashforward": false,
+        "chars": 550
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4039
+        "flashforward": false,
+        "chars": 4203
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 225
+        "flashforward": false,
+        "chars": 63
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 252
+        "flashforward": false,
+        "chars": 170
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 44
+        "flashforward": false,
+        "chars": 109
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 690
+        "flashforward": false,
+        "chars": 1029
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 61
+        "flashforward": false,
+        "chars": 100
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1105
+        "flashforward": false,
+        "chars": 1107
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 411
+        "flashforward": false,
+        "chars": 481
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2303
+        "flashforward": false,
+        "chars": 2242
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 464
+        "flashforward": false,
+        "chars": 465
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1641
+        "flashforward": false,
+        "chars": 2175
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 243
+        "flashforward": false,
+        "chars": 196
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 9066
+        "flashforward": false,
+        "chars": 8634
       }
     ]
   },
   {
     "season": 6,
     "episode": 1,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3300
+        "flashforward": false,
+        "chars": 3004
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1416
+        "flashforward": false,
+        "chars": 1079
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2076
+        "flashforward": false,
+        "chars": 1495
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 459
+        "flashforward": false,
+        "chars": 640
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2641
+        "flashforward": false,
+        "chars": 2312
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1667
+        "flashforward": false,
+        "chars": 1204
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1693
+        "flashforward": false,
+        "chars": 3111
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 393
+        "flashforward": false,
+        "chars": 211
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1436
+        "flashforward": false,
+        "chars": 373
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 410
+        "flashforward": false,
+        "chars": 798
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2917
+        "flashforward": false,
+        "chars": 735
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 390
+        "flashforward": false,
+        "chars": 145
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 791
+        "flashforward": false,
+        "chars": 3179
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 366
+        "flashforward": false,
+        "chars": 427
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2369
+        "flashforward": false,
+        "chars": 1105
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 662
+        "flashforward": false,
+        "chars": 461
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 682
+        "flashforward": false,
+        "chars": 1898
+      },
+      {
+        "flashback": false,
+        "flashsideways": true,
+        "flashforward": false,
+        "chars": 994
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": false,
+        "chars": 497
       }
     ]
   },
   {
     "season": 6,
     "episode": 2,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 727
+        "flashforward": false,
+        "chars": 829
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1102
+        "flashforward": false,
+        "chars": 1105
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1351
+        "flashforward": false,
+        "chars": 1787
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 498
+        "flashforward": false,
+        "chars": 188
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 789
+        "flashforward": false,
+        "chars": 987
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 715
+        "flashforward": false,
+        "chars": 651
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3564
+        "flashforward": false,
+        "chars": 3795
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 788
+        "flashforward": false,
+        "chars": 947
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 251
+        "flashforward": false,
+        "chars": 156
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 157
+        "flashforward": false,
+        "chars": 308
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2569
+        "flashforward": false,
+        "chars": 2296
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1316
+        "flashforward": false,
+        "chars": 1170
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1020
+        "flashforward": false,
+        "chars": 628
       }
     ]
   },
   {
     "season": 6,
     "episode": 3,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 301
+        "flashforward": false,
+        "chars": 166
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1230
+        "flashforward": false,
+        "chars": 1058
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 543
+        "flashforward": false,
+        "chars": 888
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1815
+        "flashforward": false,
+        "chars": 2113
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1339
+        "flashforward": false,
+        "chars": 1161
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1954
+        "flashforward": false,
+        "chars": 1917
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1266
+        "flashforward": false,
+        "chars": 1185
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 752
+        "flashforward": false,
+        "chars": 1019
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1476
+        "flashforward": false,
+        "chars": 1444
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 946
+        "flashforward": false,
+        "chars": 715
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 19
+        "flashforward": false,
+        "chars": 26
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2647
+        "flashforward": false,
+        "chars": 2596
       }
     ]
   },
   {
     "season": 6,
     "episode": 4,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 643
+        "flashforward": false,
+        "chars": 848
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 900
+        "flashforward": false,
+        "chars": 908
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 894
+        "flashforward": false,
+        "chars": 777
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3979
+        "flashforward": false,
+        "chars": 4000
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 984
+        "flashforward": false,
+        "chars": 1418
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2105
+        "flashforward": false,
+        "chars": 1850
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 66
+        "flashforward": false,
+        "chars": 147
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2264
+        "flashforward": false,
+        "chars": 1712
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 471
+        "flashforward": false,
+        "chars": 443
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1384
+        "flashforward": false,
+        "chars": 1097
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 541
+        "flashforward": false,
+        "chars": 1046
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1315
+        "flashforward": false,
+        "chars": 1300
       }
     ]
   },
   {
     "season": 6,
     "episode": 5,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1558
+        "flashforward": false,
+        "chars": 2109
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 884
+        "flashforward": false,
+        "chars": 487
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 264
+        "flashforward": false,
+        "chars": 637
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1493
+        "flashforward": false,
+        "chars": 1869
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 330
+        "flashforward": false,
+        "chars": 167
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2045
+        "flashforward": false,
+        "chars": 2360
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 343
+        "flashforward": false,
+        "chars": 350
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2183
+        "flashforward": false,
+        "chars": 1779
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 295
+        "flashforward": false,
+        "chars": 191
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3787
+        "flashforward": false,
+        "chars": 3233
       }
     ]
   },
   {
     "season": 6,
     "episode": 6,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 722
+        "flashforward": false,
+        "chars": 1199
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 930
+        "flashforward": false,
+        "chars": 750
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1684
+        "flashforward": false,
+        "chars": 2494
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1124
+        "flashforward": false,
+        "chars": 1402
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3243
+        "flashforward": false,
+        "chars": 2845
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1632
+        "flashforward": false,
+        "chars": 1452
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2697
+        "flashforward": false,
+        "chars": 2113
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1193
+        "flashforward": false,
+        "chars": 1038
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2839
+        "flashforward": false,
+        "chars": 2836
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 405
+        "flashforward": false,
+        "chars": 326
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 509
+        "flashforward": false,
+        "chars": 620
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1528
+        "flashforward": false,
+        "chars": 1417
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 143
+        "flashforward": false,
+        "chars": 157
       }
     ]
   },
   {
     "season": 6,
     "episode": 7,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 723
+        "flashforward": false,
+        "chars": 444
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1410
+        "flashforward": false,
+        "chars": 1396
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1482
+        "flashforward": false,
+        "chars": 1102
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1201
+        "flashforward": false,
+        "chars": 817
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1111
+        "flashforward": false,
+        "chars": 1613
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 439
+        "flashforward": false,
+        "chars": 523
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2242
+        "flashforward": false,
+        "chars": 2960
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 529
+        "flashforward": false,
+        "chars": 913
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3347
+        "flashforward": false,
+        "chars": 2454
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 245
+        "flashforward": false,
+        "chars": 166
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2547
+        "flashforward": false,
+        "chars": 2129
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 329
+        "flashforward": false,
+        "chars": 880
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 534
+        "flashforward": false,
+        "chars": 742
       }
     ]
   },
   {
     "season": 6,
     "episode": 8,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 303
+        "flashforward": false,
+        "chars": 375
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 279
+        "flashforward": false,
+        "chars": 191
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 396
+        "flashforward": false,
+        "chars": 384
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 788
+        "flashforward": false,
+        "chars": 1343
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 469
+        "flashforward": false,
+        "chars": 480
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 10169
+        "flashforward": false,
+        "chars": 9742
       },
       {
         "flashback": true,
         "flashsideways": false,
-        "chars": 833
+        "flashforward": false,
+        "chars": 722
       }
     ]
   },
   {
     "season": 6,
     "episode": 9,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 946
+        "flashforward": false,
+        "chars": 822
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 948
+        "flashforward": false,
+        "chars": 890
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1831
+        "flashforward": false,
+        "chars": 2308
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1394
+        "flashforward": false,
+        "chars": 685
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 383
+        "flashforward": false,
+        "chars": 402
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 759
+        "flashforward": false,
+        "chars": 1527
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2554
+        "flashforward": false,
+        "chars": 2042
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 802
+        "flashforward": false,
+        "chars": 580
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2778
+        "flashforward": false,
+        "chars": 2681
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 385
+        "flashforward": false,
+        "chars": 470
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 962
+        "flashforward": false,
+        "chars": 1910
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 286
+        "flashforward": false,
+        "chars": 128
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2254
+        "flashforward": false,
+        "chars": 1837
       }
     ]
   },
   {
     "season": 6,
     "episode": 10,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3538
+        "flashforward": false,
+        "chars": 2629
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 2485
+        "flashforward": false,
+        "chars": 2827
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 11937
+        "flashforward": false,
+        "chars": 12702
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 763
+        "flashforward": false,
+        "chars": 457
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 229
+        "flashforward": false,
+        "chars": 337
       }
     ]
   },
   {
     "season": 6,
     "episode": 11,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2787
+        "flashforward": false,
+        "chars": 1978
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1291
+        "flashforward": false,
+        "chars": 1626
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2109
+        "flashforward": false,
+        "chars": 2320
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1123
+        "flashforward": false,
+        "chars": 1546
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2638
+        "flashforward": false,
+        "chars": 1945
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 410
+        "flashforward": false,
+        "chars": 579
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4366
+        "flashforward": false,
+        "chars": 3824
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 700
+        "flashforward": false,
+        "chars": 793
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1208
+        "flashforward": false,
+        "chars": 1924
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 652
+        "flashforward": false,
+        "chars": 749
       }
     ]
   },
   {
     "season": 6,
     "episode": 12,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1360
+        "flashforward": false,
+        "chars": 1186
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 556
+        "flashforward": false,
+        "chars": 1068
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2407
+        "flashforward": false,
+        "chars": 1788
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1411
+        "flashforward": false,
+        "chars": 1439
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1100
+        "flashforward": false,
+        "chars": 794
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1652
+        "flashforward": false,
+        "chars": 1308
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1766
+        "flashforward": false,
+        "chars": 1637
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 592
+        "flashforward": false,
+        "chars": 783
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2397
+        "flashforward": false,
+        "chars": 2520
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 330
+        "flashforward": false,
+        "chars": 181
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2239
+        "flashforward": false,
+        "chars": 2292
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 405
+        "flashforward": false,
+        "chars": 609
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1507
+        "flashforward": false,
+        "chars": 2117
       }
     ]
   },
   {
     "season": 6,
     "episode": 13,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 645
+        "flashforward": false,
+        "chars": 1001
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 667
+        "flashforward": false,
+        "chars": 583
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 678
+        "flashforward": false,
+        "chars": 1307
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1627
+        "flashforward": false,
+        "chars": 2274
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 858
+        "flashforward": false,
+        "chars": 626
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1353
+        "flashforward": false,
+        "chars": 1317
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 407
+        "flashforward": false,
+        "chars": 513
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 8049
+        "flashforward": false,
+        "chars": 6994
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 797
+        "flashforward": false,
+        "chars": 605
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 458
+        "flashforward": false,
+        "chars": 319
       }
     ]
   },
   {
     "season": 6,
     "episode": 14,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 10111
+        "flashforward": false,
+        "chars": 9783
+      },
+      {
+        "flashback": false,
+        "flashsideways": false,
+        "flashforward": true,
+        "chars": 328
       }
     ]
   },
   {
     "season": 6,
     "episode": 15,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 105
+        "flashforward": false,
+        "chars": 56
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1344
+        "flashforward": false,
+        "chars": 1313
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 577
+        "flashforward": false,
+        "chars": 610
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2703
+        "flashforward": false,
+        "chars": 2451
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 604
+        "flashforward": false,
+        "chars": 395
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 4163
+        "flashforward": false,
+        "chars": 4053
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 847
+        "flashforward": false,
+        "chars": 705
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2031
+        "flashforward": false,
+        "chars": 2171
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 809
+        "flashforward": false,
+        "chars": 409
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1285
+        "flashforward": false,
+        "chars": 1838
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 538
+        "flashforward": false,
+        "chars": 244
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2078
+        "flashforward": false,
+        "chars": 2839
       }
     ]
   },
   {
     "season": 6,
     "episode": 16,
-    "flashbacks": [
+    "flashes": [
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 801
+        "flashforward": false,
+        "chars": 1360
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 938
+        "flashforward": false,
+        "chars": 1396
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 560
+        "flashforward": false,
+        "chars": 736
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2243
+        "flashforward": false,
+        "chars": 2226
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 574
+        "flashforward": false,
+        "chars": 406
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1390
+        "flashforward": false,
+        "chars": 968
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 610
+        "flashforward": false,
+        "chars": 648
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1728
+        "flashforward": false,
+        "chars": 1847
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1047
+        "flashforward": false,
+        "chars": 417
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 645
+        "flashforward": false,
+        "chars": 844
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1257
+        "flashforward": false,
+        "chars": 541
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1929
+        "flashforward": false,
+        "chars": 1107
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 310
+        "flashforward": false,
+        "chars": 202
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 938
+        "flashforward": false,
+        "chars": 1342
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 139
+        "flashforward": false,
+        "chars": 154
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 2595
+        "flashforward": false,
+        "chars": 2679
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1139
+        "flashforward": false,
+        "chars": 1055
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 115
+        "flashforward": false,
+        "chars": 130
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 250
+        "flashforward": false,
+        "chars": 515
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 1549
+        "flashforward": false,
+        "chars": 1681
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 950
+        "flashforward": false,
+        "chars": 1332
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 3151
+        "flashforward": false,
+        "chars": 3853
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 929
+        "flashforward": false,
+        "chars": 404
       },
       {
         "flashback": false,
         "flashsideways": false,
-        "chars": 325
+        "flashforward": false,
+        "chars": 440
       },
       {
         "flashback": false,
         "flashsideways": true,
-        "chars": 1897
+        "flashforward": false,
+        "chars": 1726
       }
     ]
   }

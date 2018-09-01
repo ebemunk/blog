@@ -1,26 +1,30 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
+import { Manager, Reference } from 'react-popper'
+import { color as d3Color } from 'd3'
 
+import Tooltips from './Tooltips'
 import labels from './labels'
 
-import style from './Facet.css'
+import css from './Facet.css'
 
 export class Facet extends React.Component {
   state = {
     hoverTimeout: null,
+    show: false,
   }
 
   mouseEnter = () => {
     const hoverTimeout = setTimeout(() => {
-      this.props.showPersonalityTooltip(this.props.trait_id)
+      this.setState({ show: true })
     }, 300)
     this.setState({ hoverTimeout })
   }
 
   mouseLeave = () => {
-    if (this.state.hoverTimeout) clearTimeout(this.state.hoverTimeout)
-    if (!this.props.tooltipShown) return
-    this.props.hidePersonalityTooltip()
-    this.setState({ hoverTimeout: null })
+    const { hoverTimeout } = this.state
+    if (hoverTimeout) clearTimeout(hoverTimeout)
+    this.setState({ show: false, hoverTimeout: null })
   }
 
   render() {
@@ -29,55 +33,77 @@ export class Facet extends React.Component {
       height,
       width,
       color,
-      showPersonalityTooltip,
-      hidePersonalityTooltip,
+      fullWidth,
+      paddingLeft,
+      points,
+      tooltips,
     } = this.props
 
-    const { low, high, label } = labels[trait_id]
+    const { show } = this.state
+
+    const { low, high, label, lowDesc, highDesc, desc } = labels[trait_id]
 
     return (
       <React.Fragment>
-        {low && (
-          <text dx={-5} dy={height / 2} className={style.low} children={low} />
-        )}
-        {high && (
+        <Manager>
+          {low && (
+            <text dx={-5} dy={height / 2} className={css.low} children={low} />
+          )}
+          {high && (
+            <text
+              x={width}
+              dx={5}
+              dy={height / 2}
+              className={css.high}
+              children={high}
+            />
+          )}
+          <Reference>
+            {({ ref }) => (
+              <rect
+                ref={ref}
+                width={width}
+                height={height}
+                className={css.rect}
+                fill={show && tooltips ? d3Color(color).brighter(1.25) : color}
+              />
+            )}
+          </Reference>
           <text
-            x={width}
-            dx={5}
+            x={width / 2}
             dy={height / 2}
-            className={style.high}
-            children={high}
+            className={css.label}
+            children={label.toUpperCase()}
           />
-        )}
-        <rect
-          id={trait_id}
-          width={width}
-          height={height}
-          className={style.rect}
-          fill={color}
-          onMouseEnter={this.mouseEnter}
-          onMouseLeave={this.mouseLeave}
-        />
-        <text
-          x={width / 2}
-          dy={height / 2}
-          className={style.label}
-          children={label.toUpperCase()}
-        />
+          <rect
+            width={fullWidth}
+            height={height}
+            x={-paddingLeft}
+            onMouseEnter={this.mouseEnter}
+            onMouseLeave={this.mouseLeave}
+            className={css.tooltipTrigger}
+          />
+          {show &&
+            tooltips &&
+            ReactDOM.createPortal(
+              <Tooltips
+                {...{
+                  low,
+                  lowDesc,
+                  high,
+                  highDesc,
+                  label,
+                  desc,
+                  points,
+                  trait_id,
+                }}
+              />,
+              document.querySelector('body'),
+            )}
+        </Manager>
       </React.Fragment>
     )
   }
 }
 
-import { connect } from 'react-redux'
-import { showPersonalityTooltip, hidePersonalityTooltip } from '../../actions'
-
-export default connect(
-  state => ({
-    tooltipShown: state.personalityTooltip.show,
-  }),
-  {
-    showPersonalityTooltip,
-    hidePersonalityTooltip,
-  },
-)(Facet)
+export default Facet

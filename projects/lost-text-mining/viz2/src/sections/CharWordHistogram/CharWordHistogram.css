@@ -4,6 +4,7 @@
 }
 
 .pctLine {
+  composes: line;
   stroke-dasharray: 5, 5;
   opacity: 0.7;
 }
@@ -65,10 +66,4 @@
   composes: val;
   fill: steelblue;
   text-anchor: end;
-}
-
-@media (max-width: 900px) {
-  :global(#char-word-histogram) {
-    width: 900px;
-  }
 }

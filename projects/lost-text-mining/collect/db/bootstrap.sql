@@ -29,10 +29,33 @@ create table tone (
 	sentences_tone json
 );
 
+drop table scene_tone;
+create table scene_tone (
+	season int,
+	episode int,
+	act int,
+	scene int,
+	length int,
+	document_tone json
+);
+
 drop table word_count;
 create table word_count (
 	season int,
 	episode int,
 	total int,
 	uniq int
+);
+
+drop table episode_readinglevel;
+create table episode_readinglevel (
+	season int,
+	episode int,
+	score int
+);
+
+drop table char_readinglevel;
+create table char_readinglevel (
+	char_name character varying,
+	score int
 );

@@ -1,0 +1,40 @@
+.line {
+  fill: none;
+  stroke: white;
+  opacity: 0.2;
+  transition: opacity 300ms;
+}
+
+.highlighted {
+  opacity: 1;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  cursor: pointer;
+  padding: 0 1rem;
+
+  &.highlighted {
+    opacity: 1;
+  }
+}
+
+.xAxis {
+  & :global(.tick) text {
+    text-anchor: start;
+  }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,46 @@
+.svg {
+  flex-shrink: 0;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+
+.seasonLabel {
+  fill: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+}
+
+.legend {
+  display: flex;
+}
+
+.box {
+  width: 2rem;
+  height: 2rem;
+  border-width: 2px;
+  margin-right: 1rem;
+}
+
+.flashback {
+  background-color: #9934ad;
+}
+
+.flashforward {
+  background-color: #f96074;
+}
+
+.flashsideways {
+  background-color: #ffbe69;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  align-items: flex-end;
+}

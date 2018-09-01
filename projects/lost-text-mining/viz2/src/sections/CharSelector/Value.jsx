@@ -5,9 +5,6 @@ import React from 'react'
 import images from './images'
 import style from './Value.css'
 
-console.log('haha', images);
-
-
 class Value extends React.Component {
   constructor(props) {
     super(props)
@@ -62,9 +59,12 @@ class Value extends React.Component {
     const { label, value } = this.props.value
     return (
       <div className={style.wrap} title={label}>
-        <div className={style.img} style={{
-          backgroundImage: `url(${images[value]})`,
-        }}/>
+        <div
+          className={style.img}
+          style={{
+            backgroundImage: `url(${images[value]})`,
+          }}
+        />
         <div className={style.value}>{this.props.children}</div>
         <div
           className={style.remove}

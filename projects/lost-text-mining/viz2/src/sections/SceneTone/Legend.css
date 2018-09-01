@@ -1,0 +1,67 @@
+.legend {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  border: 1px solid slategray;
+  border-radius: 5px;
+  padding: 1rem;
+  position: relative;
+}
+
+.catLabel {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.box {
+  height: 2rem;
+  width: 2rem;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.tone {
+  display: flex;
+  margin: 0 2rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.key {
+  margin-left: 1rem;
+  font-size: 1rem;
+  opacity: 0.5;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.button {
+  composes: button from 'components/ButtonGroup/ButtonGroup.css';
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.toggle {
+  margin-left: 2rem;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

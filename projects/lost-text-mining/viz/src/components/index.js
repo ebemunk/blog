@@ -1,6 +1,0 @@
-export BarChart from './BarChart.vue'
-export EpisodeSelector from './EpisodeSelector'
-export ForceGraph from './ForceGraph'
-export Loader from './Loader'
-export LengthChart from './LengthChart.vue'
-export Sunburst from './Sunburst'

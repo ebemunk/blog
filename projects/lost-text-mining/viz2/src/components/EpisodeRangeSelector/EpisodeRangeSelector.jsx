@@ -3,8 +3,8 @@ import * as d3 from 'd3'
 import * as R from 'ramda'
 import classnames from 'classnames'
 
-import { Brush } from '../../components'
-import { seasonColor, SEASONS } from '../../util'
+import Brush from '../Brush'
+import { seasonColor, SEASONS } from 'utils'
 
 import style from './EpisodeRangeSelector.css'
 
@@ -24,11 +24,16 @@ export default class EpisodeRangeSelector extends Component {
     isBrushing: false,
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.getEpisodes()
   }
 
-  componentWillReceiveProps({ episodes, width, selectEpisodes, selection }) {
+  static getDerivedStateFromProps({
+    episodes,
+    width,
+    selectEpisodes,
+    selection,
+  }) {
     const scale = d3
       .scalePoint()
       .domain(R.range(0, episodes.length))
@@ -51,11 +56,11 @@ export default class EpisodeRangeSelector extends Component {
       brushSelection = [null, null]
     }
 
-    this.setState({
+    return {
       scale,
       brushSelection,
       isBrushing,
-    })
+    }
   }
 
   onBrush = event => {
@@ -99,99 +104,97 @@ export default class EpisodeRangeSelector extends Component {
     const brushMaskId = `brushMask-${width}`
 
     return (
-      <div className={style.wrap}>
-        <svg
-          className={classnames({
-            [style.episodeSelector]: true,
-            [style.brushed]: isBrushing,
-          })}
-          width={width}
-          height={height + 15}
+      <svg
+        className={classnames({
+          [style.episodeSelector]: true,
+          [style.brushed]: isBrushing,
+        })}
+        width={width}
+        height={height + 15}
+      >
+        <defs>
+          <mask id={brushMaskId} x="0" y="0" width={width} height={height}>
+            <rect
+              y="0"
+              x="0"
+              width={brushSelection[0]}
+              height={height}
+              opacity="0.3"
+              fill="white"
+            />
+            <rect
+              y="0"
+              x={brushSelection[0]}
+              width={brushSelection[1] - brushSelection[0]}
+              height={height}
+              opacity="1"
+              fill="white"
+            />
+            <rect
+              y="0"
+              x={brushSelection[1]}
+              width={width - brushSelection[1]}
+              height={height}
+              opacity="0.3"
+              fill="white"
+            />
+          </mask>
+        </defs>
+        <g
+          className={style.seasons}
+          style={{
+            mask: isBrushing ? `url(#${brushMaskId})` : '',
+          }}
         >
-          <defs>
-            <mask id={brushMaskId} x="0" y="0" width={width} height={height}>
-              <rect
-                y="0"
-                x="0"
-                width={brushSelection[0]}
-                height={height}
-                opacity="0.3"
-                fill="white"
-              />
-              <rect
-                y="0"
-                x={brushSelection[0]}
-                width={brushSelection[1] - brushSelection[0]}
-                height={height}
-                opacity="1"
-                fill="white"
-              />
-              <rect
-                y="0"
-                x={brushSelection[1]}
-                width={width - brushSelection[1]}
-                height={height}
-                opacity="0.3"
-                fill="white"
-              />
-            </mask>
-          </defs>
-          <g
-            className={style.seasons}
-            style={{
-              mask: isBrushing ? `url(#${brushMaskId})` : '',
-            }}
-          >
-            {SEASONS.map(([start, end], i) => (
-              <rect
-                x={scale(start) - halfStep}
-                y={0}
-                width={scale(end) + halfStep - (scale(start) - halfStep)}
-                height={height}
-                fill={seasonColor(i)}
-                key={[start, end]}
-              />
-            ))}
-          </g>
-          <g className={style.seasonSelectors}>
-            {SEASONS.map(([start, end], i) => (
-              <text
-                x={scale(start) + (scale(end) - scale(start)) / 2}
-                y={height + 15}
-                fill={seasonColor(i)}
-                key={start}
-                onClick={() => selectEpisodes([start, end])}
-              >
-                Season {i + 1}
-              </text>
-            ))}
-          </g>
-          <g
-            className={style.episodes}
-            style={{
-              mask: isBrushing ? `url(#${brushMaskId})` : '',
-            }}
-          >
-            {episodes.map((episode, i) => (
-              <rect
-                x={scale(i) - 1.5}
-                y={5}
-                width={3}
-                height={height - 10}
-                key={i}
-              />
-            ))}
-          </g>
-          <Brush
-            className={style.brush}
-            extent={[[0, 0], [width, height]]}
-            handleSize={2}
-            onBrush={this.onBrush}
-            onBrushEnd={this.onBrushEnd}
-            selection={this.state.brushSelection}
-          />
-        </svg>
-      </div>
+          {SEASONS.map(([start, end], i) => (
+            <rect
+              x={scale(start) - halfStep}
+              y={0}
+              width={scale(end) + halfStep - (scale(start) - halfStep)}
+              height={height}
+              fill={seasonColor(i)}
+              key={[start, end]}
+            />
+          ))}
+        </g>
+        <g className={style.seasonSelectors}>
+          {SEASONS.map(([start, end], i) => (
+            <text
+              x={scale(start) + (scale(end) - scale(start)) / 2}
+              y={height + 15}
+              fill={seasonColor(i)}
+              key={start}
+              onClick={() => selectEpisodes([start, end])}
+            >
+              Season {i + 1}
+            </text>
+          ))}
+        </g>
+        <g
+          className={style.episodes}
+          style={{
+            mask: isBrushing ? `url(#${brushMaskId})` : '',
+          }}
+        >
+          {episodes.map((episode, i) => (
+            <rect
+              x={scale(i) - 1.5}
+              y={5}
+              width={3}
+              height={height - 10}
+              key={i}
+            />
+          ))}
+        </g>
+        <Brush
+          className={style.brush}
+          extent={[[0, 0], [width, height]]}
+          handleSize={2}
+          onBrush={this.onBrush}
+          onBrushEnd={this.onBrushEnd}
+          selection={this.state.brushSelection}
+        />
+      </svg>
     )
   }
 }

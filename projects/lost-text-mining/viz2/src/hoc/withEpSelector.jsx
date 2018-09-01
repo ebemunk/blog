@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { EpisodeRangeSelector } from '../components'
+import EpisodeRangeSelector from '../components/EpisodeRangeSelector'
 
 const withEpSelector = width => Component => props => (
   <React.Fragment>
