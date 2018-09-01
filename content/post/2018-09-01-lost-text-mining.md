@@ -2,6 +2,7 @@
 date = "2018-09-01T02:47:00-07:00"
 title = "Text Mining LOST"
 slug = "lost-text-mining"
+draft = false
 tags = ["LOST", "data visualization", "text mining"]
 +++
 
