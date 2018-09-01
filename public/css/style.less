@@ -50,23 +50,26 @@ a {
   color: @green;
   border-color: @green;
 
+  &:focus {
+    background: transparent;
+    color: @green;
+    border-color: @green;
+  }
+
   &:hover {
     background-color: lighten(@green, 5%);
     border-color: @green;
     color: @faded-white;
   }
 
-  &.active,
-  &:active {
+  &.active {
     background-color: lighten(@green, 5%);
     border-color: lighten(@green, 5%);
     color: @faded-white;
   }
 
-  &:focus {
-    background-color: lighten(@green, 5%);
-    border-color: lighten(@green, 5%);
-    color: @faded-white;
+  &[disabled]:hover {
+    background-color: fadein(@green, 20%);
   }
 }
 
@@ -218,6 +221,20 @@ code {
   .toc {
     display: block !important;
   }
+}
+
+// footnote link
+a[href^="#fn:"],
+// Back to footnote link
+a[href^="#fnref:"] {
+  text-decoration: none;
+  font-family: monospace;
+}
+a[href^="#fn:"]:before {
+  content: "[";
+}
+a[href^="#fn:"]:after {
+  content: "]";
 }
 
 /**

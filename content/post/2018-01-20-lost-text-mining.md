@@ -181,3 +181,25 @@ Below is a list of similar analyses that you might like.
   margin: 3rem 0;
 }
 </style>
+
+<div id="width-warning">You need at least 960px width to really enjoy this post, visualisations might not work out for you - sorry. Laptop or Tablet works best.</div>
+
+<style>
+  #width-warning {
+    display: none;
+  }
+
+  @media screen and (max-width: 959px) {
+    #width-warning {
+      font-size: 1rem;
+      text-align: center;
+      background-color: lightslategray;
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+</style>

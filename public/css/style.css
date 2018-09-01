@@ -40,21 +40,23 @@ a:hover {
   color: #7cb34b;
   border-color: #7cb34b;
 }
+.button:focus {
+  background: transparent;
+  color: #7cb34b;
+  border-color: #7cb34b;
+}
 .button:hover {
   background-color: #89bb5d;
   border-color: #7cb34b;
   color: rgba(255, 255, 255, 0.8);
 }
-.button.active,
-.button:active {
+.button.active {
   background-color: #89bb5d;
   border-color: #89bb5d;
   color: rgba(255, 255, 255, 0.8);
 }
-.button:focus {
-  background-color: #89bb5d;
-  border-color: #89bb5d;
-  color: rgba(255, 255, 255, 0.8);
+.button[disabled]:hover {
+  background-color: #7cb34b;
 }
 header.site-header {
   height: 180px;
@@ -184,6 +186,17 @@ code {
   .toc {
     display: block !important;
   }
+}
+a[href^="#fn:"],
+a[href^="#fnref:"] {
+  text-decoration: none;
+  font-family: monospace;
+}
+a[href^="#fn:"]:before {
+  content: "[";
+}
+a[href^="#fn:"]:after {
+  content: "]";
 }
 /**
  * Syntax highlighting styles
