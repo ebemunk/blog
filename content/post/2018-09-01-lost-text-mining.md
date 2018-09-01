@@ -1,10 +1,8 @@
 +++
-date = "2018-01-20T02:47:00-07:00"
-draft = false
+date = "2018-09-01T02:47:00-07:00"
 title = "Text Mining LOST"
 slug = "lost-text-mining"
 tags = ["LOST", "data visualization", "text mining"]
-image = "img/visual-look.png"
 +++
 
 We're text mining the transcripts of the TV show LOST, and visualizing them!
