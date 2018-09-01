@@ -3,6 +3,13 @@
   justify-content: center;
   position: relative;
   user-select: none;
+  min-width: 600px;
+}
+
+@media screen and (max-width: 600px) {
+  .wrap {
+    justify-content: flex-start;
+  }
 }
 
 .arc {

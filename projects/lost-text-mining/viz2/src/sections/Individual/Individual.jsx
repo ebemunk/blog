@@ -59,13 +59,7 @@ export default class Individual extends React.Component {
       .range(['white', 'red'])
 
     return (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
+      <div className={css.responsive}>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <button
             style={{

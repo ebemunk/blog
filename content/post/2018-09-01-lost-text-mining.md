@@ -54,7 +54,7 @@ On the histogram are two cumulative percentage lines, one for number of characte
 
 <div id="char-word-histogram" class="viz"></div>
 
-One of the important takeaways from the above is that 593 characters (88% of all characters in the show) contribute only 12% to the total words. In other words, almost all characters encountered are trivial ones. This is also further highlighted (if you look at the empty area between 11k-14.5k words) that 99% of the characters contribute about 51% to the total dialogue. This also means that only **8** characters contribute a crazy 49% to the writing. Half of the show is literally these 8 characters speaking! These 8 characters are `JACK`, `SAWYER`, `LOCKE`, `HURLEY`, `KATE`, `SAYID`, `BEN` and `CHARLIE`.
+One of the important takeaways from the above is that 593 characters (88% of all characters in the show) contribute only 12% to the total words. In other words, almost all characters encountered are trivial ones. If you look at the empty area between 11k-14.5k words, you can see that 99% of the characters contribute about 51% to the total dialogue. This means that only **8** characters contribute a crazy 49% to the writing. Half of the show is literally these 8 characters speaking! These 8 characters are `JACK`, `SAWYER`, `LOCKE`, `HURLEY`, `KATE`, `SAYID`, `BEN` and `CHARLIE`.
 
 <div id="lines-per-char" class="viz"></div>
 
@@ -66,7 +66,7 @@ To get a sense of how "popular" these 8 characters were, I tallied up how many s
 
 The "spiky" nature of the lines in both appearances and mentions is curious. My impression is that every season had specific episodes that featured 1 character more prominently than others, and the spotlight rotated between them between episodes.
 
-I'm guessing `CHARLIE` dies after S3, but he keeps being mentioned by others for the rest of the show, appearing (flash-sideways?) in a few places in S5 and S6.
+I'm guessing `CHARLIE` dies after S3, but keeps making reappearances (flash-sideways?) in a few places in S5 and S6. Other characters don't forget about him though, as he's mentioned occasionally after his death.
 
 ## Personalities
 
@@ -83,7 +83,7 @@ Given a chunk of text, Watson will generate a "personality profile"[^personality
 
 Even though the show mostly revolves around 8 characters, I want to include more of the text, so I picked the top 25 speakers in the show and fed their lines in. You can select a specific character or just browse through with the buttons below.
 
-I also added 2 columns, difference from population average and difference from 50th percentile. Since the values for the Big-5 are population percentiles, I wanted to see which (if any) characters are different. Difference from population average refers to the average values for all the other analyzed characters. Difference from 50th percentile refers to the difference from Watson's own sample population. Lets first look at the characters one by one and not worry about comparing these characters to each other.
+Since the values for the Big-5 are population percentiles, I wanted to see which (if any) characters are "different". Population average refers to the average values for all the other analyzed characters. Difference from 50th percentile refers to the difference from Watson's own sample population. Lets first look at the characters one by one and not worry about comparing these characters to each other just yet.
 
 <div id="individual" class="viz"></div>
 
@@ -114,9 +114,16 @@ Obviously flashbacks were an integral part of S1, and kept going until the end o
 
 ## Tone
 
-Watson API also has Tone Analyzer[^tone-analyzer] which makes an attempt at determining the "tone" of a piece of text. This is also often called "sentiment analysis" in some circles, but Tone Analyzer determines 4 emotional tones, and 3 language tones. You can hover over the legend on the chart below to learn more about the different tones.
+The other Watson API, Tone Analyzer[^tone-analyzer], makes an attempt at determining the "tone" of a piece of text. This is also often referred to as "sentiment analysis" in some circles, but Tone Analyzer determines 4 emotional tones, and 3 language tones[^tone-analyzer-science].
 
-The graph below, similar to the flashbacks, shows the season laid out. In this case, I've analyzed every scene and the colors correspond to the different tones prominent on that scene. The opacity highlights the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.
+<!-- prettier-ignore -->
+[^tone-analyzer-science]: https://console.bluemix.net/docs/services/tone-analyzer/science.html#the-science-behind-the-service
+
+The graph below shows the tones detected in each scene. Color-coded segments show that the tone was detected, while the opacity indicates
+
+You can hover over the legend on the chart below to learn more about the different tones.
+
+The graph below is similar to the one above, but in this case, I've analyzed every scene in the show. The colors correspond to the different tones detected in that scene. The opacity highlights the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.
 
 <!-- prettier-ignore -->
 [^tone-analyzer]: https://console.bluemix.net/docs/services/tone-analyzer/using-tone.html#using-the-general-purpose-endpoint
@@ -172,33 +179,11 @@ If you can't get enough, below is a list of similar analyses that you might like
 - [Visualization of affect in movie scripts](https://hal.archives-ouvertes.fr/hal-01099668/document)
 - [Detecting Mixtures of Genres in Movie Dialogues](https://saravananthirumuruganathan.wordpress.com/2012/01/10/detecting-mixtures-of-genres-in-movie-dialogues/)
 
-<!-- <script src="http://localhost:9001/bundle.js"></script> -->
-<script src="bundle.js"></script>
+<script src="http://localhost:9001/bundle.js"></script>
+<!-- <script src="bundle.js"></script> -->
 
 <style>
 .viz {
   margin: 3rem 0;
 }
-</style>
-
-<div id="width-warning">You need at least 960px width to really enjoy this post, visualisations might not work out for you - sorry. Laptop or Tablet works best.</div>
-
-<style>
-  #width-warning {
-    display: none;
-  }
-
-  @media screen and (max-width: 959px) {
-    #width-warning {
-      font-size: 1rem;
-      text-align: center;
-      background-color: lightslategray;
-      display: block;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 1rem;
-    }
-  }
 </style>

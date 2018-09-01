@@ -3,15 +3,11 @@ import React from 'react'
 import EpisodeRangeSelector from 'components/EpisodeRangeSelector'
 import BarViz from 'viz/BarViz'
 
+import css from './EpisodeReadingLevel.css'
+
 export default function EpisodeReadingLevel({ data }) {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
-    >
+    <div className={css.responsive}>
       <EpisodeRangeSelector width={900} />
       <BarViz
         data={data.map(d => ({

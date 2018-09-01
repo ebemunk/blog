@@ -21,7 +21,7 @@ export default class Personalities extends React.Component {
       .range([0, width - padding.left - padding.right])
 
     return (
-      <React.Fragment>
+      <div className={css.responsive}>
         <div className={css.toggle}>
           <Toggle
             children="Tooltips"
@@ -80,7 +80,7 @@ export default class Personalities extends React.Component {
               </div>
             ))}
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }

@@ -38,3 +38,9 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media screen and (max-width: 800px) {
+  .center {
+    align-items: flex-start;
+  }
+}

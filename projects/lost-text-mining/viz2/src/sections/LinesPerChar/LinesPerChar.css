@@ -14,3 +14,9 @@
 .all {
   margin-left: 2rem;
 }
+
+@media screen and (max-width: 700px) {
+  .chart {
+    align-items: flex-start;
+  }
+}

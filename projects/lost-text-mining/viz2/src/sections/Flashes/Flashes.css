@@ -44,3 +44,9 @@
   margin: 0 1rem;
   align-items: flex-end;
 }
+
+@media screen and (max-width: 900px) {
+  .wrap {
+    align-items: flex-start;
+  }
+}

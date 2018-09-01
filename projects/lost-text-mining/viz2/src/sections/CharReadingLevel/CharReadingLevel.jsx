@@ -4,9 +4,11 @@ import HorizontalBarChart from 'components/HorizontalBarChart'
 import Labels from 'components/Labels'
 import { toTitleCase } from 'utils'
 
+import css from './CharReadingLevel.css'
+
 export default function CharReadingLevel({ data }) {
   return (
-    <React.Fragment>
+    <div className={css.responsive}>
       <Labels y0Label="Character" x1Label="Reading Level (Grade)">
         <HorizontalBarChart
           data={data
@@ -32,6 +34,6 @@ export default function CharReadingLevel({ data }) {
           }}
         />
       </Labels>
-    </React.Fragment>
+    </div>
   )
 }

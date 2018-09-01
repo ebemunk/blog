@@ -7,9 +7,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const dir = R.partial(path.resolve, [__dirname])
 
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
-  // mode: 'development',
-  mode: 'production',
+  mode: isProd ? 'production' : 'development',
   entry: [
     //
     // 'react-hot-loader/patch',
@@ -19,7 +20,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: dir('../../../static/lost-text-mining'),
-    // publicPath: 'http://localhost:9001/',
+    publicPath: isProd ? undefined : 'http://localhost:9001/',
     globalObject: 'this',
   },
   devtool: 'source-map',
@@ -58,8 +59,9 @@ module.exports = {
             options: {
               importLoaders: 1,
               modules: true,
-              // localIdentName: '[path][name]__[local]--[hash:base64:5]'
-              localIdentName: '[name]__[local]-[hash:base64:5]',
+              localIdentName: isProd
+                ? '[hash:base64:7]'
+                : '[name]__[local]-[hash:base64:5]',
               context: __dirname,
             },
           },
