@@ -126,7 +126,7 @@ I wondered how much the dialogue text contributes to a TV show, and whether you 
 
 <div id="char-word-histogram" class="viz"></div>
 
-<p>One of the important takeaways from the above is that 593 characters (88% of all characters in the show) contribute only 12% to the total words. In other words, almost all characters encountered are trivial ones. This is also further highlighted (if you look at the empty area between 11k-14.5k words) that 99% of the characters contribute about 51% to the total dialogue. This also means that only <strong>8</strong> characters contribute a crazy 49% to the writing. Half of the show is literally these 8 characters speaking! These 8 characters are <code>JACK</code>, <code>SAWYER</code>, <code>LOCKE</code>, <code>HURLEY</code>, <code>KATE</code>, <code>SAYID</code>, <code>BEN</code> and <code>CHARLIE</code>.</p>
+<p>One of the important takeaways from the above is that 593 characters (88% of all characters in the show) contribute only 12% to the total words. In other words, almost all characters encountered are trivial ones. If you look at the empty area between 11k-14.5k words, you can see that 99% of the characters contribute about 51% to the total dialogue. This means that only <strong>8</strong> characters contribute a crazy 49% to the writing. Half of the show is literally these 8 characters speaking! These 8 characters are <code>JACK</code>, <code>SAWYER</code>, <code>LOCKE</code>, <code>HURLEY</code>, <code>KATE</code>, <code>SAYID</code>, <code>BEN</code> and <code>CHARLIE</code>.</p>
 
 <div id="lines-per-char" class="viz"></div>
 
@@ -138,7 +138,7 @@ I wondered how much the dialogue text contributes to a TV show, and whether you 
 
 <p>The &ldquo;spiky&rdquo; nature of the lines in both appearances and mentions is curious. My impression is that every season had specific episodes that featured 1 character more prominently than others, and the spotlight rotated between them between episodes.</p>
 
-<p>I&rsquo;m guessing <code>CHARLIE</code> dies after S3, but he keeps being mentioned by others for the rest of the show, appearing (flash-sideways?) in a few places in S5 and S6.</p>
+<p>I&rsquo;m guessing <code>CHARLIE</code> dies after S3, but keeps making reappearances (flash-sideways?) in a few places in S5 and S6. Other characters don&rsquo;t forget about him though, as he&rsquo;s mentioned occasionally after his death.</p>
 
 <h2 id="personalities">Personalities</h2>
 
@@ -150,7 +150,7 @@ I wondered how much the dialogue text contributes to a TV show, and whether you 
 
 <p>Even though the show mostly revolves around 8 characters, I want to include more of the text, so I picked the top 25 speakers in the show and fed their lines in. You can select a specific character or just browse through with the buttons below.</p>
 
-<p>I also added 2 columns, difference from population average and difference from 50th percentile. Since the values for the Big-5 are population percentiles, I wanted to see which (if any) characters are different. Difference from population average refers to the average values for all the other analyzed characters. Difference from 50th percentile refers to the difference from Watson&rsquo;s own sample population. Lets first look at the characters one by one and not worry about comparing these characters to each other.</p>
+<p>Since the values for the Big-5 are population percentiles, I wanted to see which (if any) characters are &ldquo;different&rdquo;. Population average refers to the average values for all the other analyzed characters. Difference from 50th percentile refers to the difference from Watson&rsquo;s own sample population. Lets first look at the characters one by one and not worry about comparing these characters to each other just yet.</p>
 
 <div id="individual" class="viz"></div>
 
@@ -181,9 +181,11 @@ I wondered how much the dialogue text contributes to a TV show, and whether you 
 
 <h2 id="tone">Tone</h2>
 
-<p>Watson API also has Tone Analyzer<sup class="footnote-ref" id="fnref:tone-analyzer"><a href="#fn:tone-analyzer">5</a></sup> which makes an attempt at determining the &ldquo;tone&rdquo; of a piece of text. This is also often called &ldquo;sentiment analysis&rdquo; in some circles, but Tone Analyzer determines 4 emotional tones, and 3 language tones. You can hover over the legend on the chart below to learn more about the different tones.</p>
+<p>The other Watson API, Tone Analyzer<sup class="footnote-ref" id="fnref:tone-analyzer"><a href="#fn:tone-analyzer">5</a></sup>, makes an attempt at determining the &ldquo;tone&rdquo; of a piece of text. This is also often referred to as &ldquo;sentiment analysis&rdquo; in some circles, but Tone Analyzer determines 4 emotional tones, and 3 language tones<sup class="footnote-ref" id="fnref:tone-analyzer-science"><a href="#fn:tone-analyzer-science">8</a></sup>.</p>
 
-<p>The graph below, similar to the flashbacks, shows the season laid out. In this case, I&rsquo;ve analyzed every scene and the colors correspond to the different tones prominent on that scene. The opacity highlights the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.</p>
+<!-- prettier-ignore -->
+
+<p>The graph below shows the tones detected in each scene. Color-coded segments show that the tone was detected, while the opacity indicates the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.</p>
 
 <!-- prettier-ignore -->
 
@@ -205,7 +207,7 @@ I wondered how much the dialogue text contributes to a TV show, and whether you 
 
 <h2 id="reading-level">Reading Level</h2>
 
-<p>Reading level is something I often wondered about TV shows. My gut feeling was that it&rsquo;d be somewhat low, to appeal to a bigger and wider demographic. textstat<sup class="footnote-ref" id="fnref:textstat"><a href="#fn:textstat">8</a></sup> is a tool that runs text through a few &ldquo;reading level&rdquo; measurements, and reports back a value that corresponds to the school grade level of the text. Below are the results of running textstat on the text of every episode.</p>
+<p>Reading level is something I often wondered about TV shows. My gut feeling was that it&rsquo;d be somewhat low, to appeal to a bigger and wider demographic. textstat<sup class="footnote-ref" id="fnref:textstat"><a href="#fn:textstat">9</a></sup> is a tool that runs text through a few &ldquo;reading level&rdquo; measurements, and reports back a value that corresponds to the school grade level of the text. Below are the results of running textstat on the text of every episode.</p>
 
 <div id="episode-reading-level" class="viz"></div>
 
@@ -219,7 +221,7 @@ I wondered how much the dialogue text contributes to a TV show, and whether you 
 
 <h2 id="word-connections">Word Connections</h2>
 
-<p>I saved the prettiest for last! I saw this visualization for &ldquo;Les Miserables&rdquo; by Neoformix<sup class="footnote-ref" id="fnref:neoformix"><a href="#fn:neoformix">9</a></sup> and had to try to adapt it for LOST. This one attempts to show which words occur in which episodes in a radial manner. You can get a sense of how prominent and often a word was used throughout the series. I&rsquo;ve picked a couple of word groups, colored individually. The lines represent occurrences with thicker lines meaning more hits. Seasons are colored the same so it&rsquo;s easier to see seasonal themes. Click on words to toggle them on or off, and use &lt; and &gt; buttons to cycle through groups of words.</p>
+<p>I saved the prettiest for last! I saw this visualization for &ldquo;Les Miserables&rdquo; by Neoformix<sup class="footnote-ref" id="fnref:neoformix"><a href="#fn:neoformix">10</a></sup> and had to try to adapt it for LOST. This one attempts to show which words occur in which episodes in a radial manner. You can get a sense of how prominent and often a word was used throughout the series. I&rsquo;ve picked a couple of word groups, colored individually. The lines represent occurrences with thicker lines meaning more hits. Seasons are colored the same so it&rsquo;s easier to see seasonal themes. Click on words to toggle them on or off, and use &lt; and &gt; buttons to cycle through groups of words.</p>
 
 <div id="radial-word-connections" class="viz"></div>
 
@@ -245,28 +247,6 @@ I wondered how much the dialogue text contributes to a TV show, and whether you 
   margin: 3rem 0;
 }
 </style>
-
-<div id="width-warning">You need at least 960px width to really enjoy this post, visualisations might not work out for you - sorry. Laptop or Tablet works best.</div>
-
-<style>
-  #width-warning {
-    display: none;
-  }
-
-  @media screen and (max-width: 959px) {
-    #width-warning {
-      font-size: 1rem;
-      text-align: center;
-      background-color: lightslategray;
-      display: block;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 1rem;
-    }
-  }
-</style>
 <div class="footnotes">
 
 <hr />
@@ -286,6 +266,8 @@ I wondered how much the dialogue text contributes to a TV show, and whether you 
  <a class="footnote-return" href="#fnref:personality-profile"><sup>[return]</sup></a></li>
 <li id="fn:big5"><a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits">https://en.wikipedia.org/wiki/Big_Five_personality_traits</a>
  <a class="footnote-return" href="#fnref:big5"><sup>[return]</sup></a></li>
+<li id="fn:tone-analyzer-science"><a href="https://console.bluemix.net/docs/services/tone-analyzer/science.html#the-science-behind-the-service">https://console.bluemix.net/docs/services/tone-analyzer/science.html#the-science-behind-the-service</a>
+ <a class="footnote-return" href="#fnref:tone-analyzer-science"><sup>[return]</sup></a></li>
 <li id="fn:textstat"><a href="https://github.com/shivam5992/textstat">https://github.com/shivam5992/textstat</a>
  <a class="footnote-return" href="#fnref:textstat"><sup>[return]</sup></a></li>
 <li id="fn:neoformix"><a href="http://www.neoformix.com/2013/NovelViews.html">http://www.neoformix.com/2013/NovelViews.html</a>
