@@ -4,6 +4,7 @@ draft = false
 title = "Text Mining LOST"
 slug = "lost-text-mining"
 tags = ["LOST", "data visualization", "text mining"]
+image = "img/lost-text-mining.png"
 +++
 
 We're text mining the transcripts of the TV show LOST, and visualizing them!
