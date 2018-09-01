@@ -53,7 +53,13 @@ export default async function writeForViz() {
     {
       filename: 'charCooccurrence',
       query: queries.charCooccurrence(),
-      process: R.identity,
+      process: R.map(row => ({
+        s: row.season,
+        e: row.episode,
+        f: row.from_char,
+        t: row.to_char,
+        v: +row.val,
+      })),
     },
     {
       filename: 'flashes',
@@ -136,14 +142,32 @@ export default async function writeForViz() {
         Object.values,
         R.map(scenes => {
           let start = 0
+          // return {
+          //   season: scenes[0].season,
+          //   episode: scenes[0].episode,
+          //   scenes: scenes.map(scene => {
+          //     const ret = {
+          //       start,
+          //       length: scene.length,
+          //       tones: scene.document_tone ? scene.document_tone.tones : [],
+          //     }
+          //     start += scene.length
+          //     return ret
+          //   }),
+          // }
           return {
-            season: scenes[0].season,
-            episode: scenes[0].episode,
-            scenes: scenes.map(scene => {
+            s: scenes[0].season,
+            e: scenes[0].episode,
+            c: scenes.map(scene => {
               const ret = {
-                start,
-                length: scene.length,
-                tones: scene.document_tone ? scene.document_tone.tones : [],
+                s: start,
+                l: scene.length,
+                t: scene.document_tone
+                  ? scene.document_tone.tones.map(tone => ({
+                      s: tone.score,
+                      i: tone.tone_id,
+                    }))
+                  : [],
               }
               start += scene.length
               return ret
@@ -288,7 +312,7 @@ export default async function writeForViz() {
   ]
 
   await Promise.map(
-    [dataFiles.find(f => f.filename === 'charMentions')],
+    [dataFiles.find(f => f.filename === 'sceneTone')],
     async dataFile => {
       log('doing', dataFile.filename)
       const rows = await Promise.reduce(

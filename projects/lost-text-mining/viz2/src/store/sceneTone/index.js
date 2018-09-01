@@ -3,7 +3,19 @@ export const getSceneTone = () => dispatch => {
 
   dispatch({
     type: 'data/sceneTone',
-    payload: sceneTone,
+    payload: sceneTone.map(scenes => ({
+      season: scenes.s,
+      episode: scenes.e,
+      scenes: scenes.c.map(scene => ({
+        start: scene.s,
+        length: scene.l,
+        tones: scene.t.map(tone => ({
+          score: tone.s,
+          tone_id: tone.i,
+          name: 'derp',
+        })),
+      })),
+    })),
   })
 }
 

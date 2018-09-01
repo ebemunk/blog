@@ -10,7 +10,14 @@ export const getCharCooccurrence = () => dispatch => {
 import { reducerFromObj } from '../util'
 
 export const reducer = reducerFromObj([], {
-  'data/charCooccurrence': (state, action) => action.payload,
+  'data/charCooccurrence': (state, action) =>
+    action.payload.map(d => ({
+      season: d.s,
+      episode: d.e,
+      from_char: d.f,
+      to_char: d.t,
+      val: d.v,
+    })),
 })
 
 import * as R from 'ramda'

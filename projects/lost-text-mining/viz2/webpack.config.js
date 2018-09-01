@@ -3,10 +3,13 @@ const path = require('path')
 const R = require('ramda')
 const webpack = require('webpack')
 
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
 const dir = R.partial(path.resolve, [__dirname])
 
 module.exports = {
-  mode: 'development',
+  // mode: 'development',
+  mode: 'production',
   entry: [
     //
     // 'react-hot-loader/patch',
@@ -90,5 +93,10 @@ module.exports = {
   optimization: {
     namedModules: true,
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new CleanWebpackPlugin(dir('../../../static/lost-text-mining'), {
+      allowExternal: true,
+    }),
+  ],
 }
