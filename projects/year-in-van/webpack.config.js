@@ -2,6 +2,7 @@ const path = require('path')
 
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const PostcssPresetEnv = require('postcss-preset-env')
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -11,6 +12,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: 'http://localhost:9001/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -49,13 +51,13 @@ module.exports = {
               localIdentName: '[name]__[local]',
             },
           },
-          // {
-          //   loader: 'postcss-loader',
-          //   options: {
-          //     ident: 'postcss',
-          //     plugins: [cssNext],
-          //   },
-          // },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [PostcssPresetEnv({ stage: 0 })],
+            },
+          },
         ],
       },
       {

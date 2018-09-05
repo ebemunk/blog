@@ -1,8 +1,9 @@
 .circle {
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
   opacity: 0.2;
+  margin-right: 0.5rem;
 }
 
 .selected {
@@ -10,16 +11,20 @@
 }
 
 .legend {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
+  position: absolute;
+  bottom: 20px;
   display: flex;
-  flex-direction: column;
 }
 
-.key {
-  color: white;
+.label {
+  color: lightslategray;
   display: flex;
   align-items: center;
+  margin: 0 1rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
 }

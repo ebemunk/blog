@@ -3,23 +3,20 @@ import classnames from 'classnames'
 
 import css from './Legend.css'
 
-const Legend = props => (
+const Legend = ({ keys, onClick, selection }) => (
   <div className={css.legend}>
-    {props.keys.map(([key, color]) => (
-      <div
-        className={css.key}
-        key={key}
-        onClick={() => props.onClick([key, color])}
-      >
+    {keys.map(({ label, color }) => (
+      <div className={css.label} key={label} onClick={() => onClick(label)}>
         <div
           className={classnames(css.circle, {
-            [css.selected]: props.selected[0] === key,
+            [css.selected]:
+              typeof selection[label] === 'undefined' ? true : selection[label],
           })}
           style={{
             backgroundColor: color,
           }}
         />
-        {key}
+        {label}
       </div>
     ))}
   </div>

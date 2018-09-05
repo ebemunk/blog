@@ -14,4 +14,5 @@ module.exports = {
     ],
     '@babel/react',
   ],
+  plugins: ['react-hot-loader/babel'],
 }

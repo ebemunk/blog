@@ -24,7 +24,7 @@ export const gmap = compose(
   withGoogleMap,
 )
 
-export const MapViz = ({ filter, color }) => (
+export const MapViz = ({ heatmaps, selection }) => (
   <GoogleMap
     defaultCenter={{
       lat: 49.2827291,
@@ -32,17 +32,29 @@ export const MapViz = ({ filter, color }) => (
     }}
     defaultZoom={12}
     mapTypeId="roadmap"
-    options={{ styles: mapStyles }}
+    options={{
+      styles: mapStyles,
+      clickableIcons: false,
+      disableDefaultUI: true,
+      zoomControl: true,
+    }}
   >
-    <HeatmapLayer
-      data={events
-        .filter(filter)
-        .map(d => new google.maps.LatLng(d.lat, d.lng))}
-      options={{
-        maxIntensity: 1,
-        gradient: ['transparent', color],
-      }}
-    />
+    {heatmaps.map(
+      hm =>
+        (typeof selection[hm.label] === 'undefined'
+          ? true
+          : selection[hm.label]) && (
+          <HeatmapLayer
+            key={hm.label}
+            data={hm.data.map(d => new google.maps.LatLng(d.lat, d.lng))}
+            options={{
+              maxIntensity: 1,
+              gradient: ['transparent', hm.color],
+              radius: 20,
+            }}
+          />
+        ),
+    )}
   </GoogleMap>
 )
 

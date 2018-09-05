@@ -2,9 +2,12 @@ import React from 'react'
 
 import { compose, withState } from 'recompose'
 import { zip } from 'ramda'
+import OverScroll from 'react-over-scroll'
 
 import Legend from './Legend'
 import MapViz from './MapViz'
+
+import css from './MapV.css'
 
 import events from './events.csv'
 
@@ -55,20 +58,96 @@ const tagColors = [
   'rgb(157,123,132)',
 ]
 
-export const MapV = props => (
-  <React.Fragment>
-    <MapViz
-      filter={d => d.tags.includes(props.selected[0])}
-      color={props.selected[1]}
-    />
-    <Legend
-      keys={zip(tags, tagColors)}
-      onClick={props.setSelection}
-      selected={props.selected}
-    />
-  </React.Fragment>
+const byName = name => d => d.name.match(new RegExp(`${name}`, 'ig'))
+
+const pages = [
+  [
+    { data: events.filter(byName('summer')), color: 'red', label: 'Summer' },
+    { data: events.filter(byName('fall')), color: 'yellow', label: 'Fall' },
+    { data: events.filter(byName('winter')), color: 'white', label: 'Winter' },
+    { data: events.filter(byName('spring')), color: 'green', label: 'Spring' },
+  ],
+  [
+    { data: events.filter(byName('east')), color: 'red', label: 'East' },
+    { data: events.filter(byName('west')), color: 'yellow', label: 'West' },
+    { data: events.filter(byName('north')), color: 'white', label: 'North' },
+    { data: events.filter(byName('south')), color: 'green', label: 'South' },
+  ],
+  [
+    { data: events.filter(byName('wine')), color: 'red', label: 'Wine' },
+    { data: events.filter(byName('beer')), color: 'yellow', label: 'Beer' },
+  ],
+  [
+    { data: events.filter(byName('love')), color: 'red', label: 'Love' },
+    { data: events.filter(byName('family')), color: 'yellow', label: 'Family' },
+  ],
+]
+
+export const MapV = ({ selection, setSelection }) => (
+  <OverScroll slides={pages.length} factor={1}>
+    {(page, progress) => {
+      const isOut =
+        (page === 0 && progress === 0) ||
+        (page === pages.length - 1 && progress === 100)
+      return (
+        <div className={css.wrap}>
+          <MapViz heatmaps={pages[page]} selection={selection} />
+          {!isOut && (
+            <div
+              style={{
+                position: 'fixed',
+                bottom: (progress / 100) * window.innerHeight,
+                width: '500px',
+                border: '3px solid red',
+              }}
+            >
+              halllow
+            </div>
+          )}
+          {!isOut && (
+            <div
+              style={{
+                position: 'fixed',
+                top: 0,
+                height: '25px',
+                width: '100vw',
+              }}
+            >
+              <div
+                style={{
+                  width: `${progress}%`,
+                  height: '100%',
+                  backgroundColor: 'blue',
+                }}
+              />
+            </div>
+          )}
+          <Legend
+            keys={pages[page]}
+            onClick={label => {
+              if (typeof selection[label] !== 'undefined') {
+                setSelection({
+                  ...selection,
+                  [label]: !selection[label],
+                })
+              } else {
+                setSelection({
+                  ...selection,
+                  [label]: false,
+                })
+              }
+            }}
+            selection={selection}
+          />
+        </div>
+      )
+    }}
+  </OverScroll>
 )
 
+import { hot } from 'react-hot-loader'
+
 export default compose(
-  withState('selected', 'setSelection', [tags[0], tagColors[0]]),
+  hot(module),
+  withState('selection', 'setSelection', {}),
 )(MapV)
