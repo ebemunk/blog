@@ -3,60 +3,12 @@ import React from 'react'
 import OverScroll from 'react-over-scroll'
 
 import Legend from './Legend'
-import HeatMap from './HeatMap'
+import Fokit from './Fokit'
 
 import css from './MapV.css'
 
 import events from './events.csv'
 
-const tags = [
-  'Activism',
-  'Attractions',
-  'Comedy',
-  'Concerts',
-  'Dance',
-  'Festivals',
-  'Film',
-  'Food & Drink',
-  'Forums & Talks',
-  'Fundraisers & Charity',
-  'Galleries',
-  'Holiday',
-  "Kids' Stuff",
-  'Literary/Books',
-  'Markets',
-  'Museums',
-  'Nightlife',
-  'Performing Arts',
-  'Sports',
-  'Theatre',
-  'Other',
-]
-
-const tagColors = [
-  'rgb(180,221,212)',
-  'rgb(2,83,29)',
-  'rgb(249,150,241)',
-  'rgb(81,226,88)',
-  'rgb(146,46,177)',
-  'rgb(160,214,111)',
-  'rgb(21,73,117)',
-  'rgb(5,207,192)',
-  'rgb(153,42,28)',
-  'rgb(106,144,18)',
-  'rgb(84,178,252)',
-  'rgb(87,68,155)',
-  'rgb(240,192,70)',
-  'rgb(99,61,48)',
-  'rgb(244,184,171)',
-  'rgb(226,28,122)',
-  'rgb(251,120,16)',
-  'rgb(106,139,123)',
-  'rgb(253,44,59)',
-  'rgb(157,123,132)',
-]
-
-import * as d3 from 'd3'
 import differenceInHours from 'date-fns/difference_in_hours'
 
 const byName = name => d => d.name.match(new RegExp(`${name}`, 'ig'))
@@ -130,7 +82,7 @@ export const MapV = ({ focus, setFocus }) => (
         (page === pages.length - 1 && progress === 100)
       return (
         <div className={css.wrap}>
-          <HeatMap heatmaps={pages[page]} focus={focus} />
+          <Fokit heatmaps={pages[page]} focus={focus} />
           {/* {!isOut && (
             <div
               style={{
@@ -177,5 +129,5 @@ import { compose, withState } from 'recompose'
 
 export default compose(
   hot(module),
-  withState('focus', 'setFocus', {}),
+  withState('focus', 'setFocus', null),
 )(MapV)

@@ -11,5 +11,7 @@ bababa
 
 <div id="root"></div>
 
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+
 <script src="http://localhost:9001/bundle.js"></script>
 <!-- <script src="bundle.js"></script> -->
