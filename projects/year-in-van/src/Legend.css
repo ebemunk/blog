@@ -12,8 +12,11 @@
 
 .legend {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   display: flex;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 3px;
+  user-select: none;
 }
 
 .label {

@@ -31,7 +31,7 @@ const HeatmapLayer = ({ data, color, focused }) => (
   </Layer>
 )
 
-const Fokit = ({ heatmaps, focus }) => (
+const Mapbox = ({ heatmaps, focus }) => (
   <Map
     style="mapbox://styles/mapbox/dark-v9"
     center={[-123.1207375, 49.2827291]}
@@ -62,4 +62,4 @@ const Fokit = ({ heatmaps, focus }) => (
 
 import { pure } from 'recompose'
 
-export default pure(Fokit)
+export default pure(Mapbox)
