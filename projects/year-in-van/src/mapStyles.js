@@ -1,4 +1,5 @@
-export default [
+export default //
+[
   {
     elementType: 'geometry',
     stylers: [
@@ -26,6 +27,14 @@ export default [
   {
     featureType: 'administrative.land_parcel',
     elementType: 'labels',
+    stylers: [
+      {
+        visibility: 'off',
+      },
+    ],
+  },
+  {
+    featureType: 'administrative.locality',
     stylers: [
       {
         visibility: 'off',

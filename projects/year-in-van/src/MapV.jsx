@@ -1,11 +1,9 @@
 import React from 'react'
 
-import { compose, withState } from 'recompose'
-import { zip } from 'ramda'
 import OverScroll from 'react-over-scroll'
 
 import Legend from './Legend'
-import MapViz from './MapViz'
+import HeatMap from './HeatMap'
 
 import css from './MapV.css'
 
@@ -58,7 +56,21 @@ const tagColors = [
   'rgb(157,123,132)',
 ]
 
+import * as d3 from 'd3'
+import differenceInHours from 'date-fns/difference_in_hours'
+
 const byName = name => d => d.name.match(new RegExp(`${name}`, 'ig'))
+
+const byDiffHours = d =>
+  differenceInHours(new Date(d.startdate), new Date(d.enddate)) < 4
+
+const evtz = events.filter(byDiffHours)
+
+const byStartHour = ([start, end]) => d => {
+  const hour = new Date(d.startdate).getHours()
+  // console.log({ sd: d.startdate, hour, start, end })
+  return hour >= start && hour < end
+}
 
 const pages = [
   [
@@ -81,9 +93,36 @@ const pages = [
     { data: events.filter(byName('love')), color: 'red', label: 'Love' },
     { data: events.filter(byName('family')), color: 'yellow', label: 'Family' },
   ],
+  [
+    {
+      data: evtz.filter(byStartHour([0, 4])),
+      color: 'red',
+      label: 'Late Night',
+    },
+    {
+      data: evtz.filter(byStartHour([4, 12])),
+      color: 'yellow',
+      label: 'Morning',
+    },
+    {
+      data: evtz.filter(byStartHour([12, 17])),
+      color: 'green',
+      label: 'Afternoon',
+    },
+    {
+      data: evtz.filter(byStartHour([17, 21])),
+      color: 'blue',
+      label: 'Evening',
+    },
+    {
+      data: evtz.filter(byStartHour([21, 24])),
+      color: 'white',
+      label: 'Night',
+    },
+  ],
 ]
 
-export const MapV = ({ selection, setSelection }) => (
+export const MapV = ({ focus, setFocus }) => (
   <OverScroll slides={pages.length} factor={1}>
     {(page, progress) => {
       const isOut =
@@ -91,8 +130,8 @@ export const MapV = ({ selection, setSelection }) => (
         (page === pages.length - 1 && progress === 100)
       return (
         <div className={css.wrap}>
-          <MapViz heatmaps={pages[page]} selection={selection} />
-          {!isOut && (
+          <HeatMap heatmaps={pages[page]} focus={focus} />
+          {/* {!isOut && (
             <div
               style={{
                 position: 'fixed',
@@ -103,7 +142,7 @@ export const MapV = ({ selection, setSelection }) => (
             >
               halllow
             </div>
-          )}
+          )} */}
           {!isOut && (
             <div
               style={{
@@ -124,20 +163,8 @@ export const MapV = ({ selection, setSelection }) => (
           )}
           <Legend
             keys={pages[page]}
-            onClick={label => {
-              if (typeof selection[label] !== 'undefined') {
-                setSelection({
-                  ...selection,
-                  [label]: !selection[label],
-                })
-              } else {
-                setSelection({
-                  ...selection,
-                  [label]: false,
-                })
-              }
-            }}
-            selection={selection}
+            onClick={label => setFocus(focus === label ? null : label)}
+            focus={focus}
           />
         </div>
       )
@@ -146,8 +173,9 @@ export const MapV = ({ selection, setSelection }) => (
 )
 
 import { hot } from 'react-hot-loader'
+import { compose, withState } from 'recompose'
 
 export default compose(
   hot(module),
-  withState('selection', 'setSelection', {}),
+  withState('focus', 'setFocus', {}),
 )(MapV)

@@ -1,12 +1,15 @@
 import React from 'react'
 import { compose, withProps } from 'recompose'
-import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps'
+import {
+  withScriptjs,
+  withGoogleMap,
+  GoogleMap,
+  OverlayView,
+} from 'react-google-maps'
 import HeatmapLayer from 'react-google-maps/lib/components/visualization/HeatmapLayer'
 
 import mapStyles from './mapStyles'
-import css from './MapViz.css'
-
-import events from './events.csv'
+import css from './HeatMap.css'
 
 export const gmap = compose(
   withProps({
@@ -24,7 +27,7 @@ export const gmap = compose(
   withGoogleMap,
 )
 
-export const MapViz = ({ heatmaps, selection }) => (
+export const HeatMap = ({ heatmaps, focus }) => (
   <GoogleMap
     defaultCenter={{
       lat: 49.2827291,
@@ -39,23 +42,29 @@ export const MapViz = ({ heatmaps, selection }) => (
       zoomControl: true,
     }}
   >
-    {heatmaps.map(
-      hm =>
-        (typeof selection[hm.label] === 'undefined'
-          ? true
-          : selection[hm.label]) && (
-          <HeatmapLayer
-            key={hm.label}
-            data={hm.data.map(d => new google.maps.LatLng(d.lat, d.lng))}
-            options={{
-              maxIntensity: 1,
-              gradient: ['transparent', hm.color],
-              radius: 20,
-            }}
-          />
-        ),
-    )}
+    {heatmaps.filter(hm => focus !== null && focus !== hm.label).map(hm => (
+      <HeatmapLayer
+        key={hm.label}
+        data={hm.data.map(d => new google.maps.LatLng(d.lat, d.lng))}
+        options={{
+          maxIntensity: 1,
+          gradient: ['transparent', 'rgba(122,122,122,0.3)'],
+          radius: 20,
+        }}
+      />
+    ))}
+    {heatmaps.filter(hm => focus === null || focus === hm.label).map(hm => (
+      <HeatmapLayer
+        key={`${hm.label}-focus`}
+        data={hm.data.map(d => new google.maps.LatLng(d.lat, d.lng))}
+        options={{
+          maxIntensity: 1,
+          gradient: ['transparent', hm.color],
+          radius: 20,
+        }}
+      />
+    ))}
   </GoogleMap>
 )
 
-export default gmap(MapViz)
+export default gmap(HeatMap)
