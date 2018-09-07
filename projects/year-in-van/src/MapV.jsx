@@ -4,7 +4,7 @@ import OverScroll from 'react-over-scroll'
 
 import Legend from './Legend'
 import Mapbox from './Mapbox'
-import pages from './pages'
+import pages from './pagesx'
 
 import css from './MapV.css'
 
@@ -41,7 +41,7 @@ const Text = ({ text, progress }) => (
   </div>
 )
 
-const Page = ({
+const Pagex = ({
   page: { heatmaps, text },
   setFocus,
   focus = null,
@@ -56,25 +56,30 @@ const Page = ({
   </div>
 )
 
+const pagess = pages.map(pure)
+
 export const MapV = ({ focus, setFocus }) => (
   <OverScroll slides={pages.length} factor={1}>
-    {(page, progress) => (
-      <Page
-        page={pages[page]}
-        isOut={
-          (page === 0 && progress === 0) ||
-          (page === pages.length - 1 && progress === 100)
-        }
-        progress={progress}
-        focus={focus[page]}
-        setFocus={label =>
-          setFocus({
-            ...focus,
-            [page]: focus[page] === label ? null : label,
-          })
-        }
-      />
-    )}
+    {(page, progress) => {
+      const Page = pagess[page]
+      return (
+        <Page
+          page={page}
+          isOut={
+            (page === 0 && progress === 0) ||
+            (page === pages.length - 1 && progress === 100)
+          }
+          progress={progress}
+          focus={focus[page]}
+          setFocus={label =>
+            setFocus({
+              ...focus,
+              [page]: focus[page] === label ? null : label,
+            })
+          }
+        />
+      )
+    }}
   </OverScroll>
 )
 

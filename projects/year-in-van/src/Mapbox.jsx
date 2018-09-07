@@ -4,7 +4,8 @@ import ReactMapboxGl, { Layer, Feature, ZoomControl } from 'react-mapbox-gl'
 const Map = ReactMapboxGl({
   accessToken:
     'pk.eyJ1Ijoic3Q2OSIsImEiOiJjamxweXVvdTMwZG82M3JrMHV3bHh2aG5rIn0.zDnkK2GJoxL8fuJ2lhL7-g',
-  scrollZoom: false,
+  // scrollZoom: false,
+  interactive: false,
 })
 
 const HeatmapLayer = ({ data, color, focused }) => (
