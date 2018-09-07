@@ -12,7 +12,15 @@ const HeatmapLayer = ({ data, color, focused }) => (
     type="heatmap"
     zoom={12}
     paint={{
-      'heatmap-radius': 20,
+      'heatmap-radius': [
+        'interpolate',
+        ['linear'],
+        ['literal', data.length / 7766],
+        0,
+        30,
+        1,
+        10,
+      ],
       'heatmap-color': [
         'interpolate',
         ['linear'],
@@ -22,7 +30,7 @@ const HeatmapLayer = ({ data, color, focused }) => (
         1,
         color,
       ],
-      'heatmap-opacity': focused ? 1 : 0.2,
+      'heatmap-opacity': focused ? 1 : 0.1,
     }}
   >
     {data.map((d, i) => (
@@ -30,6 +38,8 @@ const HeatmapLayer = ({ data, color, focused }) => (
     ))}
   </Layer>
 )
+
+import css from './Mapbox.css'
 
 const Mapbox = ({ heatmaps, focus }) => (
   <Map
@@ -40,16 +50,8 @@ const Mapbox = ({ heatmaps, focus }) => (
       width: '100vw',
     }}
   >
-    <ZoomControl />
-    {heatmaps.filter(hm => focus !== hm.label).map(hm => (
-      <HeatmapLayer
-        key={hm.label}
-        data={hm.data}
-        color={hm.color}
-        focused={focus === null || focus === hm.label}
-      />
-    ))}
-    {heatmaps.filter(hm => focus === hm.label).map(hm => (
+    <ZoomControl className={css.zoomControl} />
+    {heatmaps.map(hm => (
       <HeatmapLayer
         key={hm.label}
         data={hm.data}

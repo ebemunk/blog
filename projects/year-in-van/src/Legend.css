@@ -17,6 +17,10 @@
   background: rgba(0, 0, 0, 0.3);
   padding: 3px;
   user-select: none;
+  overflow: hidden;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .label {
@@ -26,6 +30,7 @@
   margin: 0 1rem;
   font-size: 1.4rem;
   cursor: pointer;
+  white-space: nowrap;
 
   &:hover {
     color: white;

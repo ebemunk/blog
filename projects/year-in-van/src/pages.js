@@ -7,7 +7,7 @@ const byName = name => d => d.name.match(new RegExp(`${name}`, 'ig'))
 const byDiffHours = d =>
   differenceInHours(new Date(d.startdate), new Date(d.enddate)) < 4
 
-const evtz = events.filter(byDiffHours)
+const evtz = events.filter(byDiffHours).filter(d => d.startdate === d.enddate)
 
 const byStartHour = ([start, end]) => d => {
   const hour = new Date(d.startdate).getHours()
@@ -37,11 +37,6 @@ export default [
   ],
   [
     {
-      data: evtz.filter(byStartHour([0, 4])),
-      color: 'red',
-      label: 'Late Night',
-    },
-    {
       data: evtz.filter(byStartHour([4, 12])),
       color: 'yellow',
       label: 'Morning',
@@ -61,8 +56,21 @@ export default [
       color: 'white',
       label: 'Night',
     },
+    {
+      data: evtz.filter(byStartHour([0, 4])),
+      color: 'red',
+      label: 'Late Night',
+    },
   ],
-  [{ data: events.filter(byName('dinner')), color: 'red', label: 'Dinner' }],
+  [
+    {
+      data: events.filter(byName('breakfast')),
+      color: 'yellow',
+      label: 'breakfast',
+    },
+    { data: events.filter(byName('lunch')), color: 'green', label: 'lunch' },
+    { data: events.filter(byName('dinner')), color: 'red', label: 'Dinner' },
+  ],
   [
     {
       data: events.filter(byName('indigenous')),
@@ -83,4 +91,5 @@ export default [
     { data: events.filter(byName('rock')), color: 'green', label: 'rock' },
   ],
   [{ data: events.filter(byName('live')), color: 'red', label: 'live' }],
+  [{ data: events, color: 'red', label: 'all' }],
 ]
