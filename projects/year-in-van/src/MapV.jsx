@@ -13,7 +13,7 @@ const ProgressBar = ({ progress }) => (
     style={{
       position: 'fixed',
       top: 0,
-      height: '5px',
+      height: '1rem',
       width: '100vw',
     }}
   >
@@ -27,37 +27,54 @@ const ProgressBar = ({ progress }) => (
   </div>
 )
 
+const Text = ({ text, progress }) => (
+  <div
+    style={{
+      position: 'fixed',
+      bottom: (progress / 100) * window.innerHeight,
+      width: '30rem',
+      fontSize: '1rem',
+      border: '3px solid red',
+    }}
+  >
+    {text}
+  </div>
+)
+
+const Page = ({
+  page: { heatmaps, text },
+  setFocus,
+  focus = null,
+  isOut,
+  progress,
+}) => (
+  <div className={css.wrap}>
+    <Mapbox heatmaps={heatmaps} focus={focus} />
+    {!isOut && <Text text={text} progress={progress} />}
+    {!isOut && <ProgressBar progress={progress} />}
+    <Legend keys={heatmaps} onClick={setFocus} focus={focus} />
+  </div>
+)
+
 export const MapV = ({ focus, setFocus }) => (
   <OverScroll slides={pages.length} factor={1}>
-    {(page, progress) => {
-      const isOut =
-        (page === 0 && progress === 0) ||
-        (page === pages.length - 1 && progress === 100)
-
-      return (
-        <div className={css.wrap}>
-          <Mapbox heatmaps={pages[page]} focus={focus} />
-          {/* {!isOut && (
-            <div
-              style={{
-                position: 'fixed',
-                bottom: (progress / 100) * window.innerHeight,
-                width: '500px',
-                border: '3px solid red',
-              }}
-            >
-              halllow
-            </div>
-          )} */}
-          {!isOut && <ProgressBar progress={progress} />}
-          <Legend
-            keys={pages[page]}
-            onClick={label => setFocus(focus === label ? null : label)}
-            focus={focus}
-          />
-        </div>
-      )
-    }}
+    {(page, progress) => (
+      <Page
+        page={pages[page]}
+        isOut={
+          (page === 0 && progress === 0) ||
+          (page === pages.length - 1 && progress === 100)
+        }
+        progress={progress}
+        focus={focus[page]}
+        setFocus={label =>
+          setFocus({
+            ...focus,
+            [page]: focus[page] === label ? null : label,
+          })
+        }
+      />
+    )}
   </OverScroll>
 )
 
@@ -66,6 +83,6 @@ import { compose, withState, pure } from 'recompose'
 
 export default compose(
   hot(module),
-  withState('focus', 'setFocus', null),
   pure,
+  withState('focus', 'setFocus', {}),
 )(MapV)
