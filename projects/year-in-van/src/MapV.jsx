@@ -46,6 +46,7 @@ const NavBtn = ({ children, disabled, anchor }) => (
 
 const Nav = ({ pageNum, slides }) => (
   <div className={css.nav}>
+    <NavBtn disabled={pageNum === 1} children="<<" anchor="map/1" />
     <NavBtn
       disabled={pageNum === 1}
       children="<"
@@ -56,17 +57,22 @@ const Nav = ({ pageNum, slides }) => (
       children=">"
       anchor={`map/${pageNum + 1}`}
     />
+    <NavBtn
+      disabled={pageNum === slides}
+      children=">>"
+      anchor={`map/${slides}`}
+    />
   </div>
 )
 
-export const MapV = ({ focus, setFocus }) => (
+export const MapV = ({ focus, setFocus, custom, setCustom }) => (
   <OverScroll slides={pages.length} factor={1} anchors="map">
     {(page, progress) => {
       const isOut =
         (page === 0 && progress === 0) ||
         (page === pages.length - 1 && progress === 100)
       const pago = pages[page]
-      const heatmaps = pago.heatmaps({ progress })
+      const heatmaps = pago.heatmaps({ progress, custom })
 
       return (
         <div className={css.wrap}>
@@ -84,6 +90,15 @@ export const MapV = ({ focus, setFocus }) => (
                 [page]: focus[page] === label ? null : label,
               })
             }
+            custom={custom}
+            setCustom={input => setCustom([...custom, input])}
+            rmCustom={input => {
+              const index = custom.indexOf(input)
+              return setCustom([
+                ...custom.slice(0, index),
+                ...custom.slice(index + 1),
+              ])
+            }}
           />
         </div>
       )

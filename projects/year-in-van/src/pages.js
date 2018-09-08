@@ -15,6 +15,16 @@ import {
 const colors3 = ['#0081bd', '#ef69b4', '#ffa600']
 const colors4 = ['#0081bd', '#b476cf', '#ff6886', '#ffa600']
 const colors5 = ['#0081bd', '#917cd4', '#ef69b4', '#ff716c', '#ffa600']
+const colors8 = [
+  '#003f5c',
+  '#2f4b7c',
+  '#665191',
+  '#a05195',
+  '#d45087',
+  '#f95d6a',
+  '#ff7c43',
+  '#ffa600',
+]
 
 export default [
   {
@@ -150,7 +160,12 @@ export default [
     ),
   },
   {
-    heatmaps: () => [],
+    heatmaps: ({ custom }) =>
+      custom.map((key, i) => ({
+        data: filterByName(key),
+        color: colors8[i % 8],
+        label: key,
+      })),
     children: props => (
       <InteractivePage {...props}>Now it's your turn!</InteractivePage>
     ),
