@@ -29,18 +29,33 @@ const scroll = id => {
   document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
 }
 
+import cn from 'classnames'
+
+const NavBtn = ({ children, disabled, anchor }) => (
+  <div
+    className={cn(css.navBtn, {
+      [css.disabled]: disabled,
+    })}
+    onClick={() => {
+      if (!disabled) scroll(anchor)
+    }}
+  >
+    {children}
+  </div>
+)
+
 const Nav = ({ pageNum, slides }) => (
   <div className={css.nav}>
-    {pageNum !== 1 && (
-      <div className={css.navBtn} onClick={() => scroll(`map/${pageNum - 1}`)}>
-        &lt;
-      </div>
-    )}
-    {pageNum !== slides && (
-      <div className={css.navBtn} onClick={() => scroll(`map/${pageNum + 1}`)}>
-        &gt;
-      </div>
-    )}
+    <NavBtn
+      disabled={pageNum === 1}
+      children="<"
+      anchor={`map/${pageNum - 1}`}
+    />
+    <NavBtn
+      disabled={pageNum === slides}
+      children=">"
+      anchor={`map/${pageNum + 1}`}
+    />
   </div>
 )
 
@@ -83,4 +98,5 @@ export default compose(
   hot(module),
   pure,
   withState('focus', 'setFocus', {}),
+  withState('custom', 'setCustom', []),
 )(MapV)

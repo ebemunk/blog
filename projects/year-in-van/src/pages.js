@@ -2,6 +2,7 @@ import React from 'react'
 import { format } from 'date-fns'
 
 import Page from './Page'
+import InteractivePage from './InteractivePage'
 
 import {
   filterByName,
@@ -14,20 +15,6 @@ import {
 const colors3 = ['#0081bd', '#ef69b4', '#ffa600']
 const colors4 = ['#0081bd', '#b476cf', '#ff6886', '#ffa600']
 const colors5 = ['#0081bd', '#917cd4', '#ef69b4', '#ff716c', '#ffa600']
-
-const Pagesx = ({
-  heatmaps,
-  progress,
-  isOut,
-  setFocus,
-  focus = null,
-  children = '',
-}) => (
-  <React.Fragment>
-    <Text text={children} progress={progress} />
-    <Legend keys={heatmaps} onClick={setFocus} focus={focus} />
-  </React.Fragment>
-)
 
 export default [
   {
@@ -164,6 +151,8 @@ export default [
   },
   {
     heatmaps: () => [],
-    children: props => <Page {...props}>Now it's your turn!</Page>,
+    children: props => (
+      <InteractivePage {...props}>Now it's your turn!</InteractivePage>
+    ),
   },
 ]
