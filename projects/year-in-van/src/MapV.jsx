@@ -26,7 +26,6 @@ const ProgressBar = ({ progress }) => (
 )
 
 const scroll = id => {
-  console.log('scrolin to', id)
   document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
 }
 

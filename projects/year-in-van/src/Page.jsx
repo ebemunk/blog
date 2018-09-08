@@ -2,17 +2,11 @@ import React from 'react'
 
 import Legend from './Legend'
 
+import css from './Page.css'
+
 const Text = ({ text, progress }) => (
-  <div
-    style={{
-      position: 'fixed',
-      bottom: (progress / 100) * window.innerHeight,
-      width: '30rem',
-      fontSize: '1rem',
-      border: '3px solid red',
-    }}
-  >
-    {text}
+  <div className={css.textWrap}>
+    <div className={css.text}>{text}</div>
   </div>
 )
 

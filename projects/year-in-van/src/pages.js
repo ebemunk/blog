@@ -3,7 +3,13 @@ import { format } from 'date-fns'
 
 import Page from './Page'
 
-import { filterByName, dateScale, byDate, filterByStartHour } from './data'
+import {
+  filterByName,
+  dateScale,
+  byDate,
+  filterByStartHour,
+  bySeason,
+} from './data'
 
 const colors3 = ['#0081bd', '#ef69b4', '#ffa600']
 const colors4 = ['#0081bd', '#b476cf', '#ff6886', '#ffa600']
@@ -31,7 +37,21 @@ export default [
       { data: filterByName('summer'), color: '#ff4700', label: 'summer' },
       { data: filterByName('fall'), color: '#ffc800', label: 'fall' },
     ],
-    children: props => <Page {...props} children="off" />,
+    children: props => (
+      <Page {...props}>
+        <h4>Four seasons of Vancouver</h4>
+        <p>Events where the name contains</p>
+      </Page>
+    ),
+  },
+  {
+    heatmaps: () => [
+      { data: bySeason['winter'], color: 'white', label: 'winter' },
+      { data: bySeason['spring'], color: '#50d000', label: 'spring' },
+      { data: bySeason['summer'], color: '#ff4700', label: 'summer' },
+      { data: bySeason['fall'], color: '#ffc800', label: 'fall' },
+    ],
+    children: props => <Page {...props}>actual 4 seasons</Page>,
   },
   {
     heatmaps: () => [
@@ -40,21 +60,23 @@ export default [
       { data: filterByName('east'), color: colors4[2], label: 'east' },
       { data: filterByName('west'), color: colors4[3], label: 'west' },
     ],
-    children: props => <Page {...props} children="off" />,
+    children: props => <Page {...props} children="direciton broo" />,
   },
   {
     heatmaps: () => [
       { data: filterByName('wine'), color: '#c50c37', label: 'wine' },
       { data: filterByName('beer'), color: '#ffc800', label: 'beer' },
     ],
-    children: props => <Page {...props} children="off" />,
+    children: props => <Page {...props} children="win vs beer gbvorbsoro" />,
   },
   {
     heatmaps: () => [
       { data: filterByName('love'), color: colors3[0], label: 'love' },
       { data: filterByName('family'), color: colors3[2], label: 'family' },
     ],
-    children: props => <Page {...props} children="off" />,
+    children: props => (
+      <Page {...props} children="not alewasm ututai xceclcuv" />
+    ),
   },
   {
     heatmaps: () => [
@@ -66,7 +88,7 @@ export default [
       { data: filterByName('lunch'), color: colors3[1], label: 'lunch' },
       { data: filterByName('dinner'), color: colors3[2], label: 'dinner' },
     ],
-    children: props => <Page {...props} children="off" />,
+    children: props => <Page {...props} children="food pls moreara" />,
   },
   {
     heatmaps: () => [
@@ -75,13 +97,13 @@ export default [
       { data: filterByName('pop'), color: colors4[1], label: 'pop' },
       { data: filterByName('blues'), color: colors4[0], label: 'blues' },
     ],
-    children: props => <Page {...props} children="off" />,
+    children: props => <Page {...props} children="jazzzzzzzz" />,
   },
   {
     heatmaps: () => [
       { data: filterByName('live'), color: colors4[0], label: 'live' },
     ],
-    children: props => <Page {...props} children="off" />,
+    children: props => <Page {...props} children="live events atmaeoao" />,
   },
   {
     heatmaps: () => [
@@ -91,13 +113,15 @@ export default [
         label: 'indigenous',
       },
     ],
-    children: props => <Page {...props} children="off" />,
+    children: props => <Page {...props} children="ianfeaidgnaign brorooo" />,
   },
   {
     heatmaps: () => [
       { data: filterByName('free'), color: colors4[0], label: 'free' },
     ],
-    children: props => <Page {...props} children="off" />,
+    children: props => (
+      <Page {...props} children="free bro come take gita brooo" />
+    ),
   },
   {
     heatmaps: () => [
@@ -119,7 +143,7 @@ export default [
         label: 'late night',
       },
     ],
-    children: props => <Page {...props} children="off" />,
+    children: props => <Page {...props} children="timer ofsdaty vroo" />,
   },
   {
     heatmaps: ({ progress }) => [
@@ -131,7 +155,7 @@ export default [
     ],
     children: props => (
       <Page {...props}>
-        From
+        elfaoelaogao From
         {dateScale
           .invertExtent(Math.floor(props.progress))
           .map(ms => format(ms, 'MMM Do, YY'))}

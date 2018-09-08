@@ -1,5 +1,5 @@
-import { memoizeWith, identity } from 'ramda'
-import { getTime, getHours } from 'date-fns'
+import { memoizeWith, identity, groupBy } from 'ramda'
+import { getTime, getHours, getMonth } from 'date-fns'
 
 import events from './events.csv'
 
@@ -30,3 +30,24 @@ export const byDate = events.reduce((acc, event) => {
   range(skey, ekey).map(key => acc[key].push(event))
   return acc
 }, range(0, 101).map(() => []))
+
+const seasons = [
+  'winter',
+  'winter',
+  'spring',
+  'spring',
+  'spring',
+  'summer',
+  'summer',
+  'summer',
+  'fall',
+  'fall',
+  'fall',
+  'winter',
+]
+
+export const bySeason = groupBy(event => seasons[getMonth(event.startdate)])(
+  events,
+)
+
+console.log('bysae', bySeason)

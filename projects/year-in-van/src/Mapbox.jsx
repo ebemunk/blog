@@ -19,9 +19,9 @@ const HeatmapLayer = pure(({ data, color, focused, maxLen }) => (
         ['linear'],
         ['literal', data.length / maxLen],
         0,
-        30,
-        1,
         10,
+        1,
+        30,
       ],
       'heatmap-color': [
         'interpolate',
