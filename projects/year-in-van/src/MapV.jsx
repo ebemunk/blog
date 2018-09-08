@@ -1,8 +1,6 @@
 import React from 'react'
-
 import OverScroll from 'react-over-scroll'
 
-import Legend from './Legend'
 import Mapbox from './Mapbox'
 import pages from './pagesx'
 
@@ -27,57 +25,32 @@ const ProgressBar = ({ progress }) => (
   </div>
 )
 
-const Text = ({ text, progress }) => (
-  <div
-    style={{
-      position: 'fixed',
-      bottom: (progress / 100) * window.innerHeight,
-      width: '30rem',
-      fontSize: '1rem',
-      border: '3px solid red',
-    }}
-  >
-    {text}
-  </div>
-)
-
-const Pagex = ({
-  page: { heatmaps, text },
-  setFocus,
-  focus = null,
-  isOut,
-  progress,
-}) => (
-  <div className={css.wrap}>
-    <Mapbox heatmaps={heatmaps} focus={focus} />
-    {!isOut && <Text text={text} progress={progress} />}
-    {!isOut && <ProgressBar progress={progress} />}
-    <Legend keys={heatmaps} onClick={setFocus} focus={focus} />
-  </div>
-)
-
-const pagess = pages.map(pure)
-
 export const MapV = ({ focus, setFocus }) => (
   <OverScroll slides={pages.length} factor={1}>
     {(page, progress) => {
-      const Page = pagess[page]
+      const isOut =
+        (page === 0 && progress === 0) ||
+        (page === pages.length - 1 && progress === 100)
+      const pago = pages[page]
+      const heatmaps = pago.heatmaps({ progress })
+
       return (
-        <Page
-          page={page}
-          isOut={
-            (page === 0 && progress === 0) ||
-            (page === pages.length - 1 && progress === 100)
-          }
-          progress={progress}
-          focus={focus[page]}
-          setFocus={label =>
-            setFocus({
-              ...focus,
-              [page]: focus[page] === label ? null : label,
-            })
-          }
-        />
+        <div className={css.wrap}>
+          <Mapbox heatmaps={heatmaps} focus={focus[page] || null} />
+          {!isOut && <ProgressBar progress={progress} />}
+          <pago.children
+            heatmaps={heatmaps}
+            isOut={isOut}
+            progress={progress}
+            focus={focus[page]}
+            setFocus={label =>
+              setFocus({
+                ...focus,
+                [page]: focus[page] === label ? null : label,
+              })
+            }
+          />
+        </div>
       )
     }}
   </OverScroll>

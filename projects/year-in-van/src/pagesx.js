@@ -1,59 +1,15 @@
 import React from 'react'
+import { format } from 'date-fns'
 
-import differenceInHours from 'date-fns/difference_in_hours'
+import Page from './Page'
 
-import events from './events.csv'
+import { filterByName, dateScale, byDate, filterByStartHour } from './data'
 
-import Legend from './Legend'
-import Mapbox from './Mapbox'
-const byName = name => d => d.name.match(new RegExp(`${name}`, 'ig'))
+const colors3 = ['#0081bd', '#ef69b4', '#ffa600']
+const colors4 = ['#0081bd', '#b476cf', '#ff6886', '#ffa600']
+const colors5 = ['#0081bd', '#917cd4', '#ef69b4', '#ff716c', '#ffa600']
 
-const byDiffHours = d =>
-  differenceInHours(new Date(d.startdate), new Date(d.enddate)) < 4
-
-const evtz = events.filter(byDiffHours).filter(d => d.startdate === d.enddate)
-
-const byStartHour = ([start, end]) => d => {
-  const hour = new Date(d.startdate).getHours()
-  return hour >= start && hour < end
-}
-
-import css from './MapV.css'
-
-const ProgressBar = ({ progress }) => (
-  <div
-    style={{
-      position: 'fixed',
-      top: 0,
-      height: '1rem',
-      width: '100vw',
-    }}
-  >
-    <div
-      style={{
-        width: `${progress}%`,
-        height: '100%',
-        backgroundColor: 'red',
-      }}
-    />
-  </div>
-)
-
-const Text = ({ text, progress }) => (
-  <div
-    style={{
-      position: 'fixed',
-      bottom: (progress / 100) * window.innerHeight,
-      width: '30rem',
-      fontSize: '1rem',
-      border: '3px solid red',
-    }}
-  >
-    {text}
-  </div>
-)
-
-const Bage = ({
+const Pagesx = ({
   heatmaps,
   progress,
   isOut,
@@ -61,60 +17,129 @@ const Bage = ({
   focus = null,
   children = '',
 }) => (
-  <div className={css.wrap}>
-    <Mapbox heatmaps={heatmaps} focus={focus} />
-    {!isOut && <Text text={children} progress={progress} />}
-    {!isOut && <ProgressBar progress={progress} />}
+  <React.Fragment>
+    <Text text={children} progress={progress} />
     <Legend keys={heatmaps} onClick={setFocus} focus={focus} />
-  </div>
+  </React.Fragment>
 )
 
-import { memoizeWith, identity } from 'ramda'
-
-const filterByName = memoizeWith(identity, name => events.filter(byName(name)))
-
-import { scaleQuantize, extent, range } from 'd3'
-import { format, isBefore, isAfter } from 'date-fns'
-
-const timeScale = scaleQuantize()
-  .range(range(0, 101))
-  .domain(extent(events, event => new Date(event.startdate).getTime()))
-
-const byDate = events.reduce((acc, event) => {
-  const skey = timeScale(new Date(event.startdate).getTime())
-  const ekey = timeScale(new Date(event.enddate).getTime())
-  range(skey, ekey).map(key => acc[key].push(event))
-  return acc
-}, range(0, 101).map(i => []))
-
-console.log('wut', byDate)
-
 export default [
-  props => (
-    <Bage
-      heatmaps={[
-        { data: filterByName('winter'), color: 'white', label: 'winter' },
-        { data: filterByName('spring'), color: 'green', label: 'spring' },
-        { data: filterByName('summer'), color: 'red', label: 'summer' },
-        { data: filterByName('fall'), color: 'yellow', label: 'fall' },
-      ]}
-      {...props}
-    />
-  ),
-  ({ page, progress, ...other }) => {
-    return (
-      <Bage
-        heatmaps={[
-          { data: byDate[Math.floor(progress)], color: 'red', label: 'live' },
-        ]}
-        progress={progress}
-        {...other}
-      >
+  {
+    heatmaps: () => [
+      { data: filterByName('winter'), color: 'white', label: 'winter' },
+      { data: filterByName('spring'), color: '#50d000', label: 'spring' },
+      { data: filterByName('summer'), color: '#ff4700', label: 'summer' },
+      { data: filterByName('fall'), color: '#ffc800', label: 'fall' },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: () => [
+      { data: filterByName('north'), color: colors4[0], label: 'north' },
+      { data: filterByName('south'), color: colors4[1], label: 'south' },
+      { data: filterByName('east'), color: colors4[2], label: 'east' },
+      { data: filterByName('west'), color: colors4[3], label: 'west' },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: () => [
+      { data: filterByName('wine'), color: '#c50c37', label: 'wine' },
+      { data: filterByName('beer'), color: '#ffc800', label: 'beer' },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: () => [
+      { data: filterByName('love'), color: colors3[0], label: 'love' },
+      { data: filterByName('family'), color: colors3[2], label: 'family' },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: () => [
+      {
+        data: filterByName('breakfast'),
+        color: colors3[0],
+        label: 'breakfast',
+      },
+      { data: filterByName('lunch'), color: colors3[1], label: 'lunch' },
+      { data: filterByName('dinner'), color: colors3[2], label: 'dinner' },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: () => [
+      { data: filterByName('flamenco'), color: colors4[3], label: 'flamenco' },
+      { data: filterByName('jazz'), color: colors4[2], label: 'jazz' },
+      { data: filterByName('pop'), color: colors4[1], label: 'pop' },
+      { data: filterByName('blues'), color: colors4[0], label: 'blues' },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: () => [
+      { data: filterByName('live'), color: colors4[0], label: 'live' },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: () => [
+      {
+        data: filterByName('indigenous'),
+        color: colors4[0],
+        label: 'indigenous',
+      },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: () => [
+      { data: filterByName('free'), color: colors4[0], label: 'free' },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: () => [
+      { data: filterByStartHour(4, 12), color: colors5[0], label: 'morning' },
+      {
+        data: filterByStartHour(12, 17),
+        color: colors5[1],
+        label: 'afternoon',
+      },
+      {
+        data: filterByStartHour(17, 21),
+        color: colors5[2],
+        label: 'evening',
+      },
+      { data: filterByStartHour(21, 24), color: colors5[3], label: 'night' },
+      {
+        data: filterByStartHour(0, 4),
+        color: colors5[4],
+        label: 'late night',
+      },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: ({ progress }) => [
+      {
+        data: byDate[Math.floor(progress)],
+        color: colors4[3],
+        label: 'live',
+      },
+    ],
+    children: props => (
+      <Page {...props}>
         From
-        {timeScale
-          .invertExtent(Math.floor(progress))
+        {dateScale
+          .invertExtent(Math.floor(props.progress))
           .map(ms => format(ms, 'MMM Do, YY'))}
-      </Bage>
-    )
+      </Page>
+    ),
+  },
+  {
+    heatmaps: () => [],
+    children: props => <Page {...props}>Now it's your turn!</Page>,
   },
 ]

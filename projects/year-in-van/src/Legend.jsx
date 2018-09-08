@@ -5,7 +5,7 @@ import css from './Legend.css'
 
 const Legend = ({ keys, onClick, focus }) => (
   <div className={css.legend}>
-    {keys.map(({ label, color }) => (
+    {keys.map(({ label, color, data }) => (
       <div className={css.label} key={label} onClick={() => onClick(label)}>
         <div
           className={classnames(css.circle, {
@@ -15,7 +15,7 @@ const Legend = ({ keys, onClick, focus }) => (
             backgroundColor: color,
           }}
         />
-        {label}
+        {label} {data.length}
       </div>
     ))}
   </div>
