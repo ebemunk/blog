@@ -55,7 +55,16 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
-              plugins: [PostcssPresetEnv({ stage: 0 })],
+              plugins: [
+                PostcssPresetEnv({
+                  stage: 0,
+                  features: {
+                    'color-mod-function': {
+                      unresolved: 'warn',
+                    },
+                  },
+                }),
+              ],
             },
           },
         ],

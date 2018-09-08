@@ -4,3 +4,32 @@
   flex-direction: column;
   position: relative;
 }
+
+.nav {
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  justify-content: center;
+
+  & :first-child {
+    border-right: 1px solid color-mod(red shade(30%));
+  }
+  & :last-child {
+    border-left: 1px solid color-mod(red shade(30%));
+  }
+}
+
+.navBtn {
+  background: red;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 3rem;
+  cursor: pointer;
+
+  &:hover {
+    background: color-mod(red tint(30%));
+  }
+}

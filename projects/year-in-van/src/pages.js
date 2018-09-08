@@ -1,141 +1,145 @@
-import differenceInHours from 'date-fns/difference_in_hours'
+import React from 'react'
+import { format } from 'date-fns'
 
-import events from './events.csv'
+import Page from './Page'
 
-const byName = name => d => d.name.match(new RegExp(`${name}`, 'ig'))
+import { filterByName, dateScale, byDate, filterByStartHour } from './data'
 
-const byDiffHours = d =>
-  differenceInHours(new Date(d.startdate), new Date(d.enddate)) < 4
+const colors3 = ['#0081bd', '#ef69b4', '#ffa600']
+const colors4 = ['#0081bd', '#b476cf', '#ff6886', '#ffa600']
+const colors5 = ['#0081bd', '#917cd4', '#ef69b4', '#ff716c', '#ffa600']
 
-const evtz = events.filter(byDiffHours).filter(d => d.startdate === d.enddate)
-
-const byStartHour = ([start, end]) => d => {
-  const hour = new Date(d.startdate).getHours()
-  return hour >= start && hour < end
-}
+const Pagesx = ({
+  heatmaps,
+  progress,
+  isOut,
+  setFocus,
+  focus = null,
+  children = '',
+}) => (
+  <React.Fragment>
+    <Text text={children} progress={progress} />
+    <Legend keys={heatmaps} onClick={setFocus} focus={focus} />
+  </React.Fragment>
+)
 
 export default [
   {
-    heatmaps: [
-      { data: events.filter(byName('summer')), color: 'red', label: 'Summer' },
-      { data: events.filter(byName('fall')), color: 'yellow', label: 'Fall' },
-      {
-        data: events.filter(byName('winter')),
-        color: 'white',
-        label: 'Winter',
-      },
-      {
-        data: events.filter(byName('spring')),
-        color: 'green',
-        label: 'Spring',
-      },
+    heatmaps: () => [
+      { data: filterByName('winter'), color: 'white', label: 'winter' },
+      { data: filterByName('spring'), color: '#50d000', label: 'spring' },
+      { data: filterByName('summer'), color: '#ff4700', label: 'summer' },
+      { data: filterByName('fall'), color: '#ffc800', label: 'fall' },
     ],
-    text: 'lol',
+    children: props => <Page {...props} children="off" />,
   },
   {
-    heatmaps: [
-      { data: events.filter(byName('east')), color: 'red', label: 'East' },
-      { data: events.filter(byName('west')), color: 'yellow', label: 'West' },
-      { data: events.filter(byName('north')), color: 'white', label: 'North' },
-      { data: events.filter(byName('south')), color: 'green', label: 'South' },
+    heatmaps: () => [
+      { data: filterByName('north'), color: colors4[0], label: 'north' },
+      { data: filterByName('south'), color: colors4[1], label: 'south' },
+      { data: filterByName('east'), color: colors4[2], label: 'east' },
+      { data: filterByName('west'), color: colors4[3], label: 'west' },
     ],
-    text: 'lol',
+    children: props => <Page {...props} children="off" />,
   },
   {
-    heatmaps: [
-      { data: events.filter(byName('wine')), color: 'red', label: 'Wine' },
-      { data: events.filter(byName('beer')), color: 'yellow', label: 'Beer' },
+    heatmaps: () => [
+      { data: filterByName('wine'), color: '#c50c37', label: 'wine' },
+      { data: filterByName('beer'), color: '#ffc800', label: 'beer' },
     ],
-    text: 'lol',
+    children: props => <Page {...props} children="off" />,
   },
   {
-    heatmaps: [
-      { data: events.filter(byName('love')), color: 'red', label: 'Love' },
-      {
-        data: events.filter(byName('family')),
-        color: 'yellow',
-        label: 'Family',
-      },
+    heatmaps: () => [
+      { data: filterByName('love'), color: colors3[0], label: 'love' },
+      { data: filterByName('family'), color: colors3[2], label: 'family' },
     ],
-    text: 'lol',
+    children: props => <Page {...props} children="off" />,
   },
   {
-    heatmaps: [
+    heatmaps: () => [
       {
-        data: evtz.filter(byStartHour([4, 12])),
-        color: 'yellow',
-        label: 'Morning',
-      },
-      {
-        data: evtz.filter(byStartHour([12, 17])),
-        color: 'green',
-        label: 'Afternoon',
-      },
-      {
-        data: evtz.filter(byStartHour([17, 21])),
-        color: 'blue',
-        label: 'Evening',
-      },
-      {
-        data: evtz.filter(byStartHour([21, 24])),
-        color: 'white',
-        label: 'Night',
-      },
-      {
-        data: evtz.filter(byStartHour([0, 4])),
-        color: 'red',
-        label: 'Late Night',
-      },
-    ],
-    text: 'lol',
-  },
-  {
-    heatmaps: [
-      {
-        data: events.filter(byName('breakfast')),
-        color: 'yellow',
+        data: filterByName('breakfast'),
+        color: colors3[0],
         label: 'breakfast',
       },
-      { data: events.filter(byName('lunch')), color: 'green', label: 'lunch' },
-      { data: events.filter(byName('dinner')), color: 'red', label: 'Dinner' },
+      { data: filterByName('lunch'), color: colors3[1], label: 'lunch' },
+      { data: filterByName('dinner'), color: colors3[2], label: 'dinner' },
     ],
-    text: 'lol',
+    children: props => <Page {...props} children="off" />,
   },
   {
-    heatmaps: [
+    heatmaps: () => [
+      { data: filterByName('flamenco'), color: colors4[3], label: 'flamenco' },
+      { data: filterByName('jazz'), color: colors4[2], label: 'jazz' },
+      { data: filterByName('pop'), color: colors4[1], label: 'pop' },
+      { data: filterByName('blues'), color: colors4[0], label: 'blues' },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: () => [
+      { data: filterByName('live'), color: colors4[0], label: 'live' },
+    ],
+    children: props => <Page {...props} children="off" />,
+  },
+  {
+    heatmaps: () => [
       {
-        data: events.filter(byName('indigenous')),
-        color: 'red',
-        label: 'Indigenous',
+        data: filterByName('indigenous'),
+        color: colors4[0],
+        label: 'indigenous',
       },
     ],
-    text: 'lol',
+    children: props => <Page {...props} children="off" />,
   },
   {
-    heatmaps: [
-      { data: events.filter(byName('free')), color: 'red', label: 'Free' },
+    heatmaps: () => [
+      { data: filterByName('free'), color: colors4[0], label: 'free' },
     ],
-    text: 'lol',
+    children: props => <Page {...props} children="off" />,
   },
   {
-    heatmaps: [
+    heatmaps: () => [
+      { data: filterByStartHour(4, 12), color: colors5[0], label: 'morning' },
       {
-        data: events.filter(byName('flamenco')),
-        color: 'red',
-        label: 'flamenco',
+        data: filterByStartHour(12, 17),
+        color: colors5[1],
+        label: 'afternoon',
       },
-      { data: events.filter(byName('jazz')), color: 'yellow', label: 'jazz' },
-      { data: events.filter(byName('pop')), color: 'white', label: 'pop' },
-      { data: events.filter(byName('blues')), color: 'green', label: 'blues' },
-      { data: events.filter(byName('rock')), color: 'green', label: 'rock' },
+      {
+        data: filterByStartHour(17, 21),
+        color: colors5[2],
+        label: 'evening',
+      },
+      { data: filterByStartHour(21, 24), color: colors5[3], label: 'night' },
+      {
+        data: filterByStartHour(0, 4),
+        color: colors5[4],
+        label: 'late night',
+      },
     ],
-    text: 'lol',
+    children: props => <Page {...props} children="off" />,
   },
   {
-    heatmaps: [
-      { data: events.filter(byName('live')), color: 'red', label: 'live' },
+    heatmaps: ({ progress }) => [
+      {
+        data: byDate[Math.floor(progress)],
+        color: colors4[3],
+        label: 'live',
+      },
     ],
-    text: 'lol',
+    children: props => (
+      <Page {...props}>
+        From
+        {dateScale
+          .invertExtent(Math.floor(props.progress))
+          .map(ms => format(ms, 'MMM Do, YY'))}
+      </Page>
+    ),
   },
-  { heatmaps: [{ data: events, color: 'red', label: 'all' }], text: 'lol' },
+  {
+    heatmaps: () => [],
+    children: props => <Page {...props}>Now it's your turn!</Page>,
+  },
 ]

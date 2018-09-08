@@ -41,8 +41,6 @@ const HeatmapLayer = pure(({ data, color, focused, maxLen }) => (
   </Layer>
 ))
 
-import { max } from 'd3'
-
 import css from './Mapbox.css'
 
 const Mapbox = ({ heatmaps, focus }) => {

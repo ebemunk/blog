@@ -2,7 +2,7 @@ import React from 'react'
 import OverScroll from 'react-over-scroll'
 
 import Mapbox from './Mapbox'
-import pages from './pagesx'
+import pages from './pages'
 
 import css from './MapV.css'
 
@@ -25,8 +25,28 @@ const ProgressBar = ({ progress }) => (
   </div>
 )
 
+const scroll = id => {
+  console.log('scrolin to', id)
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+}
+
+const Nav = ({ pageNum, slides }) => (
+  <div className={css.nav}>
+    {pageNum !== 1 && (
+      <div className={css.navBtn} onClick={() => scroll(`map/${pageNum - 1}`)}>
+        &lt;
+      </div>
+    )}
+    {pageNum !== slides && (
+      <div className={css.navBtn} onClick={() => scroll(`map/${pageNum + 1}`)}>
+        &gt;
+      </div>
+    )}
+  </div>
+)
+
 export const MapV = ({ focus, setFocus }) => (
-  <OverScroll slides={pages.length} factor={1}>
+  <OverScroll slides={pages.length} factor={1} anchors="map">
     {(page, progress) => {
       const isOut =
         (page === 0 && progress === 0) ||
@@ -38,6 +58,7 @@ export const MapV = ({ focus, setFocus }) => (
         <div className={css.wrap}>
           <Mapbox heatmaps={heatmaps} focus={focus[page] || null} />
           {!isOut && <ProgressBar progress={progress} />}
+          <Nav pageNum={page + 1} slides={pages.length} />
           <pago.children
             heatmaps={heatmaps}
             isOut={isOut}

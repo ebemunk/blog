@@ -9,21 +9,14 @@ export const filterByName = memoizeWith(identity, name =>
   events.filter(byName(name)),
 )
 
-// const durationLessThan = d =>
-//   differenceInHours(d.startdate, d.enddate) < 4
-
-// const evtz = events.filter(byDiffHours).filter(d => d.startdate === d.enddate)
-
 const byStartHour = ([start, end]) => d => {
   const hour = getHours(d.startdate)
   return hour >= start && hour < end
 }
 
-export const filterByStartHour = memoizeWith(identity, (start, end) => {
-  console.log('runin', start, end)
-
-  return events.filter(byStartHour([start, end]))
-})
+export const filterByStartHour = memoizeWith(identity, (start, end) =>
+  events.filter(byStartHour([start, end])),
+)
 
 import { scaleQuantize, extent, range } from 'd3'
 
