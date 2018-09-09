@@ -16,15 +16,27 @@ const colors3 = ['#0081bd', '#ef69b4', '#ffa600']
 const colors4 = ['#0081bd', '#b476cf', '#ff6886', '#ffa600']
 const colors5 = ['#0081bd', '#917cd4', '#ef69b4', '#ff716c', '#ffa600']
 const colors8 = [
-  '#003f5c',
-  '#2f4b7c',
-  '#665191',
-  '#a05195',
-  '#d45087',
-  '#f95d6a',
-  '#ff7c43',
+  '#0081bd',
   '#ffa600',
+  '#5f80d0',
+  '#ff8548',
+  '#a079d3',
+  '#ff6d77',
+  '#d86ec3',
+  '#ff66a2',
 ]
+
+const CustomPresetLink = props => (
+  <a
+    href=""
+    onClick={e => {
+      e.preventDefault()
+      props.customPreset(props.array)
+    }}
+  >
+    {props.array.join(', ')}
+  </a>
+)
 
 export default [
   {
@@ -219,10 +231,43 @@ export default [
       <InteractivePage {...props}>
         <h4>Now it's your turn</h4>
         <p>
-          Explore events by name, add and remove as you want. You can copy/share
-          the url to your setup by clicking <a>here</a>
-          !. Try <a>yoga, </a>
+          Explore events by name, add and remove as you want. Try:{' '}
+          <CustomPresetLink
+            array={['ubc', 'sfu']}
+            customPreset={props.customPreset}
+          />
+          , or{' '}
+          <CustomPresetLink
+            array={['duo', 'trio', 'quartet']}
+            customPreset={props.customPreset}
+          />
+          , or{' '}
+          <CustomPresetLink
+            array={['theatre', 'cinema']}
+            customPreset={props.customPreset}
+          />
+          .
         </p>
+        {props.custom.length > 0 && (
+          <p style={{ marginTop: '1rem' }}>
+            You can use the following url to share this custom heatmap.
+            <input
+              value={
+                window.location.href.replace(window.location.hash, '') +
+                '#list=' +
+                props.custom.join(',')
+              }
+              readOnly
+              style={{
+                fontSize: '1rem',
+                color: 'white',
+                height: '3rem',
+                margin: '0',
+              }}
+              onClick={e => e.target.select()}
+            />
+          </p>
+        )}
       </InteractivePage>
     ),
   },

@@ -95,6 +95,7 @@ export const MapV = ({ focus, setFocus, custom, setCustom }) => (
             setCustom={input => {
               if (custom.indexOf(input) === -1) setCustom([...custom, input])
             }}
+            customPreset={setCustom}
             rmCustom={input => {
               const index = custom.indexOf(input)
               return setCustom([
@@ -110,11 +111,19 @@ export const MapV = ({ focus, setFocus, custom, setCustom }) => (
 )
 
 import { hot } from 'react-hot-loader'
-import { compose, withState, pure } from 'recompose'
+import { compose, withState, pure, lifecycle } from 'recompose'
 
 export default compose(
   hot(module),
   pure,
   withState('focus', 'setFocus', {}),
   withState('custom', 'setCustom', []),
+  lifecycle({
+    componentDidMount() {
+      const shareableUrl = window.location.hash.match(/list=([a-z,]+)/)
+      if (!shareableUrl || !shareableUrl[1]) return
+      this.props.setCustom(shareableUrl[1].split(','))
+      setTimeout(() => document.getElementById('map/11').scrollIntoView(), 400)
+    },
+  }),
 )(MapV)
