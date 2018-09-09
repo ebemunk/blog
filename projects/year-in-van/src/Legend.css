@@ -14,7 +14,7 @@
   position: absolute;
   bottom: 30px;
   display: flex;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   padding: 3px;
   user-select: none;
   overflow: hidden;
@@ -65,15 +65,10 @@ button.addBtn {
   line-height: 0;
 }
 
-button.remove {
-  background-color: unset;
-  border-color: lightslategray;
-  color: lightslategray;
-  margin-left: 1rem;
-  margin-bottom: 0;
-  font-size: 2rem;
-  width: 4rem;
-  padding: 0;
-  height: 3rem;
-  line-height: 0;
+.remove {
+  margin-left: 0.5rem;
+
+  &:hover {
+    color: red;
+  }
 }

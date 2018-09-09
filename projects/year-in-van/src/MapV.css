@@ -12,10 +12,10 @@
   justify-content: center;
 
   & :first-child {
-    border-right: 1px solid color-mod(red shade(30%));
+    border-left: none;
   }
   & :last-child {
-    border-left: 1px solid color-mod(red shade(30%));
+    border-right: none;
   }
 }
 
@@ -24,10 +24,12 @@
   color: white;
   width: 3rem;
   height: 3rem;
-  font-weight: bold;
-  text-align: center;
-  line-height: 3rem;
   cursor: pointer;
+  border-left: 1px solid color-mod(red shade(30%));
+  border-right: 1px solid color-mod(red shade(30%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background: color-mod(red tint(30%));
@@ -37,5 +39,6 @@
   &.disabled:hover {
     background: color-mod(red saturation(30%));
     cursor: not-allowed;
+    color: slategray;
   }
 }

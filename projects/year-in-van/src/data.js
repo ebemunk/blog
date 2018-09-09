@@ -3,7 +3,7 @@ import { getTime, getHours, getMonth } from 'date-fns'
 
 import events from './events.csv'
 
-const byName = name => d => d.name.match(new RegExp(`${name}`, 'ig'))
+const byName = name => d => d.name.match(new RegExp(`\\b${name}\\b`, 'ig'))
 
 export const filterByName = memoizeWith(identity, name =>
   events.filter(byName(name)),

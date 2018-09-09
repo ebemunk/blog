@@ -5,6 +5,7 @@ import { compose, withState } from 'recompose'
 import css from './Page.css'
 
 import cssx from './Legend.css'
+import { Add, Remove } from './components/icons'
 
 const Legend = compose(
   //
@@ -22,15 +23,13 @@ const Legend = compose(
           }}
         />
         {label} {data.length}{' '}
-        <button
+        <Remove
           className={cssx.remove}
           onClick={e => {
             e.stopPropagation()
             rmCustom(label)
           }}
-        >
-          x
-        </button>
+        />
       </div>
     ))}
     <div
@@ -66,7 +65,7 @@ const Legend = compose(
           setInput('')
         }}
       >
-        +
+        <Add />
       </button>
     </div>
   </div>

@@ -29,6 +29,20 @@ const colors8 = [
 export default [
   {
     heatmaps: () => [
+      { data: bySeason['winter'], color: 'white', label: 'winter' },
+      { data: bySeason['spring'], color: '#50d000', label: 'spring' },
+      { data: bySeason['summer'], color: '#ff4700', label: 'summer' },
+      { data: bySeason['fall'], color: '#ffc800', label: 'fall' },
+    ],
+    children: props => (
+      <Page {...props}>
+        <h4>Four Seasons of Vancouver</h4>
+        <p>Events grouped by the season they started in.</p>
+      </Page>
+    ),
+  },
+  {
+    heatmaps: () => [
       { data: filterByName('winter'), color: 'white', label: 'winter' },
       { data: filterByName('spring'), color: '#50d000', label: 'spring' },
       { data: filterByName('summer'), color: '#ff4700', label: 'summer' },
@@ -36,19 +50,10 @@ export default [
     ],
     children: props => (
       <Page {...props}>
-        <h4>Four seasons of Vancouver</h4>
-        <p>Events where the name contains</p>
+        <h4>Four Seasons of Vancouver</h4>
+        <p>Events where the name contains the season.</p>
       </Page>
     ),
-  },
-  {
-    heatmaps: () => [
-      { data: bySeason['winter'], color: 'white', label: 'winter' },
-      { data: bySeason['spring'], color: '#50d000', label: 'spring' },
-      { data: bySeason['summer'], color: '#ff4700', label: 'summer' },
-      { data: bySeason['fall'], color: '#ffc800', label: 'fall' },
-    ],
-    children: props => <Page {...props}>actual 4 seasons</Page>,
   },
   {
     heatmaps: () => [
@@ -57,22 +62,26 @@ export default [
       { data: filterByName('east'), color: colors4[2], label: 'east' },
       { data: filterByName('west'), color: colors4[3], label: 'west' },
     ],
-    children: props => <Page {...props} children="direciton broo" />,
+    children: props => (
+      <Page {...props}>
+        <h4>Cardinal Directions</h4>
+        <p>Events where the name contains a cardinal direction.</p>
+      </Page>
+    ),
   },
   {
     heatmaps: () => [
       { data: filterByName('wine'), color: '#c50c37', label: 'wine' },
       { data: filterByName('beer'), color: '#ffc800', label: 'beer' },
     ],
-    children: props => <Page {...props} children="win vs beer gbvorbsoro" />,
-  },
-  {
-    heatmaps: () => [
-      { data: filterByName('love'), color: colors3[0], label: 'love' },
-      { data: filterByName('family'), color: colors3[2], label: 'family' },
-    ],
     children: props => (
-      <Page {...props} children="not alewasm ututai xceclcuv" />
+      <Page {...props}>
+        <h4>Wine vs Beer</h4>
+        <p>
+          Events where the name contains wine or beer. Cambie Street seems to be
+          the boundary between wine and beer events.
+        </p>
+      </Page>
     ),
   },
   {
@@ -85,7 +94,16 @@ export default [
       { data: filterByName('lunch'), color: colors3[1], label: 'lunch' },
       { data: filterByName('dinner'), color: colors3[2], label: 'dinner' },
     ],
-    children: props => <Page {...props} children="food pls moreara" />,
+    children: props => (
+      <Page {...props}>
+        <h4>Meals</h4>
+        <p>
+          Events where the name contains a reference to breakfast, lunch or
+          dinner. There were twice as many dinner events than the other 2
+          combined.
+        </p>
+      </Page>
+    ),
   },
   {
     heatmaps: () => [
@@ -94,13 +112,16 @@ export default [
       { data: filterByName('pop'), color: colors4[1], label: 'pop' },
       { data: filterByName('blues'), color: colors4[0], label: 'blues' },
     ],
-    children: props => <Page {...props} children="jazzzzzzzz" />,
-  },
-  {
-    heatmaps: () => [
-      { data: filterByName('live'), color: colors4[0], label: 'live' },
-    ],
-    children: props => <Page {...props} children="live events atmaeoao" />,
+    children: props => (
+      <Page {...props}>
+        <h4>Music Genres</h4>
+        <p>
+          Events where the name contains a (select few) music genre. Flamenco is
+          overrepresented because of regular events in that same location.
+          Around Granville Strip is definitely a hot spot for events.
+        </p>
+      </Page>
+    ),
   },
   {
     heatmaps: () => [
@@ -110,14 +131,25 @@ export default [
         label: 'indigenous',
       },
     ],
-    children: props => <Page {...props} children="ianfeaidgnaign brorooo" />,
+    children: props => (
+      <Page {...props}>
+        <h4>Indigenous</h4>
+        <p>Events where the name contains "indigenous".</p>
+      </Page>
+    ),
   },
   {
     heatmaps: () => [
       { data: filterByName('free'), color: colors4[0], label: 'free' },
     ],
     children: props => (
-      <Page {...props} children="free bro come take gita brooo" />
+      <Page {...props}>
+        <h4>Free Stuff</h4>
+        <p>
+          Events where the name contains "free". Very concentrated clusters
+          indicative of recurring events.
+        </p>
+      </Page>
     ),
   },
   {
@@ -140,7 +172,16 @@ export default [
         label: 'late night',
       },
     ],
-    children: props => <Page {...props} children="timer ofsdaty vroo" />,
+    children: props => (
+      <Page {...props}>
+        <h4>Time of Day</h4>
+        <p>
+          Events grouped by starting hours: Morning: 4am-12pm, Afternoon:
+          12pm-5pm, Evening: 5pm-9pm, Night: 9pm-12am, Late Night: 12am-4am.
+          Definitely an "evening" kind of city.
+        </p>
+      </Page>
+    ),
   },
   {
     heatmaps: ({ progress }) => [
@@ -150,14 +191,22 @@ export default [
         label: 'live',
       },
     ],
-    children: props => (
-      <Page {...props}>
-        elfaoelaogao From
-        {dateScale
-          .invertExtent(Math.floor(props.progress))
-          .map(ms => format(ms, 'MMM Do, YY'))}
-      </Page>
-    ),
+    children: props => {
+      const [start, end] = dateScale.invertExtent(Math.floor(props.progress))
+      return (
+        <Page {...props}>
+          <h4>A Year of Events</h4>
+          <p>
+            Mapping out all events by start date. Scroll down to go through 2018
+            slowly.
+          </p>
+          <p>
+            Showing events that started between {format(start, 'MMM Do')}-
+            {format(end, 'Do')}
+          </p>
+        </Page>
+      )
+    },
   },
   {
     heatmaps: ({ custom }) =>
@@ -167,7 +216,14 @@ export default [
         label: key,
       })),
     children: props => (
-      <InteractivePage {...props}>Now it's your turn!</InteractivePage>
+      <InteractivePage {...props}>
+        <h4>Now it's your turn</h4>
+        <p>
+          Explore events by name, add and remove as you want. You can copy/share
+          the url to your setup by clicking <a>here</a>
+          !. Try <a>yoga, </a>
+        </p>
+      </InteractivePage>
     ),
   },
 ]

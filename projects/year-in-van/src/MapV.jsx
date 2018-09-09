@@ -30,6 +30,7 @@ const scroll = id => {
 }
 
 import cn from 'classnames'
+import { Rewind, Back, Forward, Fastforward } from './components/icons'
 
 const NavBtn = ({ children, disabled, anchor }) => (
   <div
@@ -46,20 +47,20 @@ const NavBtn = ({ children, disabled, anchor }) => (
 
 const Nav = ({ pageNum, slides }) => (
   <div className={css.nav}>
-    <NavBtn disabled={pageNum === 1} children="<<" anchor="map/1" />
+    <NavBtn disabled={pageNum === 1} children={<Rewind />} anchor="map/1" />
     <NavBtn
       disabled={pageNum === 1}
-      children="<"
+      children={<Back />}
       anchor={`map/${pageNum - 1}`}
     />
     <NavBtn
       disabled={pageNum === slides}
-      children=">"
+      children={<Forward />}
       anchor={`map/${pageNum + 1}`}
     />
     <NavBtn
       disabled={pageNum === slides}
-      children=">>"
+      children={<Fastforward />}
       anchor={`map/${slides}`}
     />
   </div>
@@ -91,7 +92,9 @@ export const MapV = ({ focus, setFocus, custom, setCustom }) => (
               })
             }
             custom={custom}
-            setCustom={input => setCustom([...custom, input])}
+            setCustom={input => {
+              if (custom.indexOf(input) === -1) setCustom([...custom, input])
+            }}
             rmCustom={input => {
               const index = custom.indexOf(input)
               return setCustom([

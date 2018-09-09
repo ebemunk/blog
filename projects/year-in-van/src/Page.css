@@ -11,14 +11,16 @@
   width: 30rem;
   font-size: 1.3rem;
   border: 1px solid black;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   padding: 1rem;
 
   & h4 {
     font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
 
   & p {
     font-size: 1.3rem;
+    margin: 0;
   }
 }

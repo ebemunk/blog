@@ -9,37 +9,40 @@ const Map = ReactMapboxGl({
 })
 import { pure } from 'recompose'
 
-const HeatmapLayer = pure(({ data, color, focused, maxLen }) => (
-  <Layer
-    type="heatmap"
-    zoom={12}
-    paint={{
-      'heatmap-radius': [
-        'interpolate',
-        ['linear'],
-        ['literal', data.length / maxLen],
-        0,
-        10,
-        1,
-        30,
-      ],
-      'heatmap-color': [
-        'interpolate',
-        ['linear'],
-        ['heatmap-density'],
-        0,
-        'transparent',
-        1,
-        color,
-      ],
-      'heatmap-opacity': focused ? 1 : 0.1,
-    }}
-  >
-    {data.map((d, i) => (
-      <Feature key={i} coordinates={[d.lng, d.lat]} />
-    ))}
-  </Layer>
-))
+const HeatmapLayer = pure(
+  ({ data, color, focused, maxLen }) =>
+    data.length && (
+      <Layer
+        type="heatmap"
+        zoom={12}
+        paint={{
+          'heatmap-radius': [
+            'interpolate',
+            ['linear'],
+            ['literal', data.length / maxLen],
+            0,
+            10,
+            1,
+            30,
+          ],
+          'heatmap-color': [
+            'interpolate',
+            ['linear'],
+            ['heatmap-density'],
+            0,
+            'transparent',
+            1,
+            color,
+          ],
+          'heatmap-opacity': focused ? 1 : 0.1,
+        }}
+      >
+        {data.map((d, i) => (
+          <Feature key={i} coordinates={[d.lng, d.lat]} />
+        ))}
+      </Layer>
+    ),
+)
 
 import css from './Mapbox.css'
 
