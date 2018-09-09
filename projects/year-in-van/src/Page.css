@@ -29,5 +29,7 @@
   .text {
     left: 0;
     top: 5rem;
+    width: 100%;
+    max-width: 100%;
   }
 }
