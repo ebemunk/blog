@@ -252,11 +252,11 @@ export default [
           <p style={{ marginTop: '1rem' }}>
             You can use the following url to share this custom heatmap.
             <input
-              value={
+              value={encodeURI(
                 window.location.href.replace(window.location.hash, '') +
-                '#list=' +
-                props.custom.join(',')
-              }
+                  '#list=' +
+                  props.custom.join(','),
+              )}
               readOnly
               style={{
                 fontSize: '1rem',

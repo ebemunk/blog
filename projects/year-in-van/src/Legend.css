@@ -50,19 +50,16 @@ input.add {
   margin-left: 1rem;
   font-size: 1.4rem;
   border-bottom: 1px solid lightslategray;
+  width: 15rem;
 }
 
-button.addBtn {
-  background-color: unset;
-  border-color: lightslategray;
-  color: lightslategray;
-  margin-left: 1rem;
-  margin-bottom: 0;
-  font-size: 2rem;
-  width: 4rem;
-  padding: 0;
-  height: 3rem;
-  line-height: 0;
+.addBtn {
+  margin-left: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
 }
 
 .remove {

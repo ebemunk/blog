@@ -8,7 +8,7 @@
   position: absolute;
   left: 10rem;
   top: 10rem;
-  width: 30rem;
+  max-width: 30rem;
   font-size: 1.3rem;
   border: 1px solid black;
   background: rgba(0, 0, 0, 0.5);
@@ -22,5 +22,12 @@
   & p {
     font-size: 1.3rem;
     margin: 0;
+  }
+}
+
+@media (width < 50rem) {
+  .text {
+    left: 0;
+    top: 5rem;
   }
 }

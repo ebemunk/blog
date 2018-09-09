@@ -6,7 +6,7 @@ import {
   faFastBackward,
   faStepForward,
   faFastForward,
-  faPlus,
+  faPlusSquare,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -23,7 +23,7 @@ export const Fastforward = props => (
   <FontAwesomeIcon icon={faFastForward} {...props} />
 )
 
-export const Add = props => <FontAwesomeIcon icon={faPlus} {...props} />
+export const Add = props => <FontAwesomeIcon icon={faPlusSquare} {...props} />
 export const Remove = props => (
   <FontAwesomeIcon icon={faTimesCircle} {...props} />
 )

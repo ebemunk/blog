@@ -15,7 +15,8 @@ const Legend = ({ keys, onClick, focus }) => (
             backgroundColor: color,
           }}
         />
-        {label} {data.length}
+        <span>{label}</span>
+        <span style={{ marginLeft: '2px' }}>({data.length})</span>
       </div>
     ))}
   </div>

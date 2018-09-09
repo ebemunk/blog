@@ -120,7 +120,8 @@ export default compose(
   withState('custom', 'setCustom', []),
   lifecycle({
     componentDidMount() {
-      const shareableUrl = window.location.hash.match(/list=([a-z,]+)/)
+      const decoded = decodeURIComponent(window.location.hash)
+      const shareableUrl = decoded.match(/list=([a-z, ]+)/)
       if (!shareableUrl || !shareableUrl[1]) return
       this.props.setCustom(shareableUrl[1].split(','))
       setTimeout(() => document.getElementById('map/11').scrollIntoView(), 400)

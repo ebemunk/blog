@@ -22,7 +22,8 @@ const Legend = compose(
             backgroundColor: color,
           }}
         />
-        {label} {data.length}{' '}
+        <span>{label}</span>
+        <span style={{ marginLeft: '2px' }}>({data.length})</span>
         <Remove
           className={cssx.remove}
           onClick={e => {
@@ -41,32 +42,28 @@ const Legend = compose(
         alignItems: 'center',
       }}
     >
-      <div
-        className={cssx.circle}
-        style={{ backgroundColor: 'white', flex: '0 0  auto' }}
-      />
       <span>name contains:</span>{' '}
       <input
-        placeholder="Type something"
+        placeholder="Type something + Enter"
         className={cssx.add}
         value={input}
         onChange={evt => setInput(evt.target.value)}
         onKeyPress={e => {
           if (e.key === 'Enter') {
-            setCustom(input)
+            if (!input.length) return
+            setCustom(input.toLowerCase())
             setInput('')
           }
         }}
       />
-      <button
+      <Add
         className={cssx.addBtn}
         onClick={() => {
-          setCustom(input)
+          if (!input.length) return
+          setCustom(input.toLowerCase())
           setInput('')
         }}
-      >
-        <Add />
-      </button>
+      />
     </div>
   </div>
 ))
