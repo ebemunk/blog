@@ -39,7 +39,13 @@ export class List extends React.Component {
                 <Avatar
                   className={style.image}
                   alt={event.name}
-                  src={event.image ? last(event.image) : null}
+                  src={
+                    event.image
+                      ? Array.isArray(event.image)
+                        ? last(event.image)
+                        : event.image
+                      : null
+                  }
                   children={
                     !event.image ? <Icon children="event_note" /> : null
                   }
