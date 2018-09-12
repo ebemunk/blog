@@ -1,3 +1,20 @@
+/* events:
+select
+id,
+details->'name' as name,
+details->>'startDate' as startDate,
+details->>'endDate' as endDate,
+evt->'tags' as tags,
+geo->'results'->0->'geometry'->'location'->>'lat' as lat,
+geo->'results'->0->'geometry'->'location'->>'lng' as lng
+from events
+where geo != 'false'
+and details->>'startDate' > '2017-12-31'
+and details->>'startDate' < '2019-01-01'
+order by startDate
+;
+*/
+
 import { memoizeWith, identity, groupBy } from 'ramda'
 import { getTime, getHours, getMonth } from 'date-fns'
 
@@ -49,5 +66,3 @@ const seasons = [
 export const bySeason = groupBy(event => seasons[getMonth(event.startdate)])(
   events,
 )
-
-console.log('bysae', bySeason)
