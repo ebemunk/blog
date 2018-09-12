@@ -16,6 +16,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+      roots: path.resolve(__dirname, 'src/roots/'),
+    },
   },
   devtool: 'source-map',
   devServer: {

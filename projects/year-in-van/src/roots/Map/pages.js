@@ -10,7 +10,7 @@ import {
   byDate,
   filterByStartHour,
   bySeason,
-} from './data/events'
+} from '../../data/events'
 
 const colors3 = ['#0081bd', '#ef69b4', '#ffa600']
 const colors4 = ['#0081bd', '#b476cf', '#ff6886', '#ffa600']

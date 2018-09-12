@@ -7,9 +7,11 @@ tags = ["data visualization"]
 image = "img/lost-text-mining.png"
 +++
 
-bababa
+Lorem
 
-<div id="root"></div>
+<div id="map"></div>
+
+Lorem
 
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
 

@@ -5,7 +5,7 @@ import { compose, withState } from 'recompose'
 import css from './Page.css'
 
 import cssx from './Legend.css'
-import { Add, Remove } from './components/icons'
+import { Add, Remove } from 'components/icons'
 
 const Legend = compose(
   //

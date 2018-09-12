@@ -30,7 +30,7 @@ const scroll = id => {
 }
 
 import cn from 'classnames'
-import { Rewind, Back, Forward, Fastforward } from './components/icons'
+import { Rewind, Back, Forward, Fastforward } from 'components/icons'
 
 const NavBtn = ({ children, disabled, anchor }) => (
   <div
