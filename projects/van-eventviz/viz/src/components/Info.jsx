@@ -19,7 +19,11 @@ export default function Info(props) {
         <div className={style.head}>
           {event.image && (
             <div className={style.image}>
-              <img src={last(event.image)} />
+              <img
+                src={
+                  Array.isArray(event.images) ? last(event.image) : event.image
+                }
+              />
             </div>
           )}
           <div
