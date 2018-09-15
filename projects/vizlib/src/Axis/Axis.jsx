@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import * as d3 from 'd3'
 import classnames from 'classnames'
 
@@ -13,19 +13,19 @@ const AXIS_TYPE = {
 }
 
 export default class Axis extends Component {
-  // static propTypes = {
-  //   orientation: PropTypes.oneOf(['top', 'bottom', 'left', 'right']).isRequired,
-  //   scale: PropTypes.func.isRequired,
-  //   ticks: PropTypes.any,
-  //   tickArguments: PropTypes.any,
-  //   tickValues: PropTypes.array,
-  //   tickFormat: PropTypes.func,
-  //   tickSize: PropTypes.number,
-  //   tickSizeInner: PropTypes.number,
-  //   tickSizeOuter: PropTypes.number,
-  //   tickPadding: PropTypes.number,
-  //   transitionDuration: PropTypes.number,
-  // }
+  static propTypes = {
+    orientation: PropTypes.oneOf(['top', 'bottom', 'left', 'right']).isRequired,
+    scale: PropTypes.func.isRequired,
+    ticks: PropTypes.any,
+    tickArguments: PropTypes.any,
+    tickValues: PropTypes.array,
+    tickFormat: PropTypes.func,
+    tickSize: PropTypes.number,
+    tickSizeInner: PropTypes.number,
+    tickSizeOuter: PropTypes.number,
+    tickPadding: PropTypes.number,
+    transitionDuration: PropTypes.number,
+  }
 
   static defaultProps = {
     ticks: null,

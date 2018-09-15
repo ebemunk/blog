@@ -1,17 +1,131 @@
-import React, { Component } from 'react'
-import * as d3 from 'd3'
+import React from 'react'
+import { scaleLinear, scaleBand, extent } from 'd3'
 import classnames from 'classnames'
+import PropTypes from 'prop-types'
 
 import Axis from '../Axis'
 import Interaction from './Interaction'
-import VerticalBars from './Vertical'
+import VerticalBars from './VerticalBars'
+import HorizontalBars from './HorizontalBars'
 
 import style from './BarChart.css'
 
-export default class BarChart extends Component {
+export default class BarChart extends React.PureComponent {
+  state = {
+    linearScale: scaleLinear(),
+    bandScale: scaleBand(),
+    chartHeight: 0,
+    chartWidth: 0,
+  }
+
+  static getDerivedStateFromProps({
+    data,
+    width,
+    height,
+    padding,
+    horizontal,
+  }) {
+    const chartHeight = height - padding.top - padding.bottom
+    const chartWidth = width - padding.left - padding.right
+
+    const linearRange = horizontal ? [0, chartWidth] : [chartHeight, 0]
+    const linearScale = scaleLinear()
+      .range(linearRange)
+      .domain(extent(data, d => d.value))
+      .nice()
+
+    const bandRange = horizontal ? [0, chartHeight] : [0, chartWidth]
+    const bandScale = scaleBand()
+      .range(bandRange)
+      .padding(0.1)
+      .domain(data.map(d => d.key))
+
+    return {
+      linearScale,
+      bandScale,
+      chartHeight,
+      chartWidth,
+    }
+  }
+
+  render() {
+    const {
+      className,
+      width,
+      height,
+      padding,
+      data,
+      linearAxisProps,
+      bandAxisProps,
+      interactionProps,
+      barStyle,
+      horizontal,
+    } = this.props
+
+    const { linearScale, bandScale, chartHeight } = this.state
+
+    // const voro = d3
+    //   .voronoi()
+    //   .x(d => bandScale(d.key) + bandScale.bandwidth() / 2)
+    //   .y(d => 0)
+    //   .extent([[0, 0], [chartWidth, chartHeight]])
+
+    return (
+      <svg width={width} height={height} className={className}>
+        <g transform={`translate(${padding.left}, ${padding.top})`}>
+          <Axis
+            orientation={horizontal ? 'top' : 'left'}
+            scale={linearScale}
+            // tickSize={-width + padding.right + padding.left}
+            {...linearAxisProps}
+            className={classnames(style.linearAxis, linearAxisProps.className)}
+          />
+          <Axis
+            orientation={horizontal ? 'left' : 'bottom'}
+            scale={bandScale}
+            // tickSize={3}
+            // transform={`translate(0, ${chartHeight})`}
+            {...bandAxisProps}
+            className={classnames(style.bandAxis, bandAxisProps.className)}
+          />
+          {!horizontal && (
+            <VerticalBars
+              data={data}
+              linearScale={linearScale}
+              bandScale={bandScale}
+              barStyle={barStyle}
+            />
+          )}
+          {horizontal && (
+            <HorizontalBars
+              data={data}
+              linearScale={linearScale}
+              bandScale={bandScale}
+              barStyle={barStyle}
+            />
+          )}
+          {/* <Interaction
+            polygons={voro.polygons(data)}
+            scales={{ x: bandScale, y: linearScale }}
+            width={chartWidth}
+            height={chartHeight}
+            xTickFormat={bandAxisProps.tickFormat}
+            yTickFormat={linearAxisProps.tickFormat}
+            bandwidth={bandScale.bandwidth()}
+            {...interactionProps}
+          /> */}
+        </g>
+      </svg>
+    )
+  }
+
+  static propTypes = {
+    width: PropTypes.number.isRequired,
+  }
+
   static defaultProps = {
-    width: 480,
-    height: 500,
+    width: 600,
+    height: 400,
     padding: {
       top: 0,
       right: 0,
@@ -31,154 +145,6 @@ export default class BarChart extends Component {
     bandAxisProps: {
       tickFormat: x => x,
     },
-    linearScaleProps: {},
-  }
-
-  state = {
-    linearScale: d3.scaleLinear(),
-    bandScale: d3.scaleBand(),
-  }
-
-  static getDerivedStateFromProps({
-    data,
-    width,
-    height,
-    padding,
-    linearScaleProps,
-  }) {
-    const linearDomain = linearScaleProps.domain
-      ? linearScaleProps.domain
-      : [0, d3.max(data, d => d.value)]
-
-    console.log('off', data, linearDomain)
-
-    const linearScale = d3
-      .scaleLinear()
-      .range([height - padding.top - padding.bottom, 0])
-      .domain(linearDomain)
-
-    const bandScale = d3
-      .scaleBand()
-      .range([0, width - padding.right - padding.left])
-      .padding(0.1)
-      .domain(data.map(d => d.key))
-
-    return {
-      linearScale,
-      bandScale,
-    }
-  }
-
-  render() {
-    const {
-      className,
-      width,
-      height,
-      padding,
-      data,
-      linearAxisProps,
-      bandAxisProps,
-      interactionProps,
-      barStyle,
-    } = this.props
-
-    const { linearScale, bandScale } = this.state
-
-    const chartWidth = width - padding.left - padding.right
-    const chartHeight = height - padding.top - padding.bottom
-
-    const voro = d3
-      .voronoi()
-      .x(d => bandScale(d.key) + bandScale.bandwidth() / 2)
-      .y(d => 0)
-      .extent([[0, 0], [chartWidth, chartHeight]])
-
-    return (
-      <svg width={width} height={height} className={className}>
-        <g transform={`translate(${padding.left}, ${padding.top})`}>
-          <Axis
-            orientation="left"
-            scale={linearScale}
-            tickSize={-width + padding.right + padding.left}
-            {...linearAxisProps}
-            className={classnames(style.linearAxis, linearAxisProps.className)}
-          />
-          <Axis
-            orientation="bottom"
-            scale={bandScale}
-            tickSize={3}
-            transform={`translate(0, ${height - padding.top - padding.bottom})`}
-            {...bandAxisProps}
-            className={classnames(style.bandAxis, bandAxisProps.className)}
-          />
-          <VerticalBars
-            data={data}
-            height={height - padding.top - padding.bottom}
-            linearScale={linearScale}
-            bandScale={bandScale}
-            barStyle={barStyle}
-          />
-          {/* <NodeGroup
-            data={data}
-            keyAccessor={d => d.key}
-            start={() => ({
-              y: height - padding.top - padding.bottom,
-              height: 0,
-            })}
-            enter={d => ({
-              y: [linearScale(d.value)],
-              height: [
-                height - padding.top - padding.bottom - linearScale(d.value),
-              ],
-            })}
-            update={d => ({
-              y: [linearScale(d.value)],
-              height: [
-                height - padding.top - padding.bottom - linearScale(d.value),
-              ],
-            })}
-            leave={d => ({
-              y: [height - padding.top - padding.bottom],
-              height: [0],
-            })}
-          >
-            {nodeData => {
-              return (
-                <g>
-                  {nodeData.map(node => {
-                    const {
-                      key,
-                      data: { value },
-                    } = node
-                    const { y, height } = node.state
-                    return (
-                      <rect
-                        x={bandScale(key)}
-                        y={y}
-                        width={bandScale.bandwidth()}
-                        height={height}
-                        className={style.bar}
-                        key={key}
-                        style={barStyle({ key, value })}
-                      />
-                    )
-                  })}
-                </g>
-              )
-            }}
-          </NodeGroup> */}
-          <Interaction
-            polygons={voro.polygons(data)}
-            scales={{ x: bandScale, y: linearScale }}
-            width={chartWidth}
-            height={chartHeight}
-            xTickFormat={bandAxisProps.tickFormat}
-            yTickFormat={linearAxisProps.tickFormat}
-            bandwidth={bandScale.bandwidth()}
-            {...interactionProps}
-          />
-        </g>
-      </svg>
-    )
+    horizontal: false,
   }
 }
