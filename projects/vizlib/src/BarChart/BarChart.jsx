@@ -29,9 +29,10 @@ export default class BarChart extends React.PureComponent {
     const chartWidth = width - padding.left - padding.right
 
     const linearRange = horizontal ? [0, chartWidth] : [chartHeight, 0]
+    const linearExtent = extent(data, d => d.value)
     const linearScale = scaleLinear()
       .range(linearRange)
-      .domain(extent(data, d => d.value))
+      .domain([Math.min(0, linearExtent[0]), linearExtent[1]])
       .nice()
 
     const bandRange = horizontal ? [0, chartHeight] : [0, chartWidth]
@@ -76,15 +77,13 @@ export default class BarChart extends React.PureComponent {
           <Axis
             orientation={horizontal ? 'top' : 'left'}
             scale={linearScale}
-            // tickSize={-width + padding.right + padding.left}
             {...linearAxisProps}
             className={classnames(style.linearAxis, linearAxisProps.className)}
           />
           <Axis
             orientation={horizontal ? 'left' : 'bottom'}
             scale={bandScale}
-            // tickSize={3}
-            // transform={`translate(0, ${chartHeight})`}
+            transform={`translate(0, ${horizontal ? 0 : chartHeight})`}
             {...bandAxisProps}
             className={classnames(style.bandAxis, bandAxisProps.className)}
           />
