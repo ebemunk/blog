@@ -9,20 +9,10 @@ export default class HorizontalBars extends React.PureComponent {
 
     const origin = linearScale(0)
 
-    const transition = d => {
-      const val = linearScale(d.value)
-      if (d.value < 0) {
-        return {
-          x: [val],
-          width: [origin - val],
-        }
-      } else {
-        return {
-          x: [origin],
-          width: [val - origin],
-        }
-      }
-    }
+    const transition = d => ({
+      x: [linearScale(Math.min(0, d.value))],
+      width: [Math.abs(linearScale(d.value) - origin)],
+    })
 
     return (
       <NodeGroup

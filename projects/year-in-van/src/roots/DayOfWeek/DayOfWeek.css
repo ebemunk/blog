@@ -1,0 +1,29 @@
+.horizontal {
+  color: white;
+
+  & :global(.tick) {
+    & text {
+      fill: white;
+    }
+
+    & line {
+      stroke: white;
+    }
+  }
+
+  & :global(.domain) {
+    stroke: white;
+  }
+}
+
+.linearAxis {
+  & :global(.tick) line {
+    stroke-dasharray: 0.5, 10;
+    stroke-width: 1;
+    stroke-linecap: round;
+  }
+
+  & :global(.domain) {
+    stroke: none;
+  }
+}

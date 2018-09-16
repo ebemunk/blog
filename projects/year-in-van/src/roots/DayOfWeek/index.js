@@ -7,6 +7,8 @@ import places from 'data/places'
 
 import { BarChart, Labels } from 'vizlib'
 
+import css from './DayOfWeek.css'
+
 const DayOfWeek = ({}) => (
   <div>
     <Labels y0Label="Number of events" xLabel="Day of Week">
@@ -72,11 +74,12 @@ const DayOfWeek = ({}) => (
       }}
     />
     <BarChart
+      className={css.horizontal}
       width={750}
-      height={300}
+      height={550}
       padding={{
-        top: 10,
-        left: 30,
+        top: 20,
+        left: 175,
         right: 15,
         bottom: 30,
       }}
@@ -84,6 +87,14 @@ const DayOfWeek = ({}) => (
         key: row.name,
         value: row.count,
       }))}
+      horizontal
+      bandAxisProps={{
+        tickSize: 0,
+      }}
+      linearAxisProps={{
+        tickSize: -500,
+        className: css.linearAxis,
+      }}
     />
   </div>
 )

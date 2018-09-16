@@ -2,7 +2,7 @@ import { pipe, map, evolve } from 'ramda'
 
 /*
 
-select count(*) as count, details->'location'->'name' as name from events
+select count(*) as count, details->'location'->>'name' as name from events
 where
 details->>'startDate' > '2017-12-31'
 and details->>'startDate' < '2019-01-01'

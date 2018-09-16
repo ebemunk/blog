@@ -9,20 +9,10 @@ export default class VerticalBars extends React.PureComponent {
 
     const origin = linearScale(0)
 
-    const transition = d => {
-      const val = linearScale(d.value)
-      if (d.value < 0) {
-        return {
-          y: [origin],
-          height: [val - origin],
-        }
-      } else {
-        return {
-          y: [val],
-          height: [origin - val],
-        }
-      }
-    }
+    const transition = d => ({
+      y: [linearScale(Math.max(0, d.value))],
+      height: [Math.abs(linearScale(d.value) - origin)],
+    })
 
     return (
       <NodeGroup
