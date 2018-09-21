@@ -1254,7 +1254,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ":root {\n  --black: black;\n}\n\n.Axis__axis text {\n    fill: black;\n    fill: var(--black);\n    font-size: 1em;\n  }\n\n.Axis__axis line {\n    stroke: black;\n    stroke: var(--black);\n  }\n\n.Axis__axis .domain {\n    stroke: black;\n    stroke: var(--black);\n  }\n", ""]);
+exports.push([module.i, ":root {\n  --black: black;\n}\n\n.Axis__axis text {\n    fill: black;\n    fill: var(--black);\n    font-size: 1em;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n  }\n\n.Axis__axis line {\n    stroke: black;\n    stroke: var(--black);\n  }\n\n.Axis__axis .domain {\n    stroke: black;\n    stroke: var(--black);\n  }\n", ""]);
 
 // exports
 exports.locals = {
@@ -1323,7 +1323,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".Labels__labels {\n  display: flex;\n  flex-direction: column;\n}\n\n.Labels__yLabels {\n  display: flex;\n  justify-content: center\n}\n\n.Labels__yLabels div {\n    flex-shrink: 0;\n  }\n\n.Labels__label {\n  font-size: 1.2rem;\n  white-space: nowrap;\n  position: relative;\n}\n\n.Labels__rotatedLabel {\n  -webkit-transform: rotate(-90deg) translateX(-50%);\n          transform: rotate(-90deg) translateX(-50%);\n  -webkit-transform-origin: 0 0;\n          transform-origin: 0 0;\n  top: 50%;\n  left: 0;\n  position: absolute;\n}\n\n.Labels__xLabelWrap {\n  display: flex;\n  justify-content: center;\n}\n\n.Labels__xLabel {\n}\n\n.Labels__yLabelWrap {\n  position: relative;\n  width: 2rem;\n}\n", ""]);
+exports.push([module.i, ".Labels__labels {\n  display: flex;\n  flex-direction: column;\n}\n\n.Labels__yLabels {\n  display: flex;\n  justify-content: center\n}\n\n.Labels__yLabels div {\n    flex-shrink: 0;\n  }\n\n.Labels__label {\n  font-size: 1em;\n  font-family: sans-serif;\n  white-space: nowrap;\n  position: relative;\n}\n\n.Labels__rotatedLabel {\n  -webkit-transform: rotate(-90deg) translateX(-50%);\n          transform: rotate(-90deg) translateX(-50%);\n  -webkit-transform-origin: 0 0;\n          transform-origin: 0 0;\n  top: 50%;\n  left: 0;\n  position: absolute;\n}\n\n.Labels__xLabelWrap {\n  display: flex;\n  justify-content: center;\n}\n\n.Labels__xLabel {\n}\n\n.Labels__yLabelWrap {\n  position: relative;\n  width: 2em;\n}\n\n.Labels__wrap {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n\n.Labels__title {\n  font-size: 1.2em;\n  font-weight: bold;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -1333,7 +1333,9 @@ exports.locals = {
 	"rotatedLabel": "Labels__rotatedLabel Labels__label",
 	"xLabelWrap": "Labels__xLabelWrap",
 	"xLabel": "Labels__xLabel Labels__label",
-	"yLabelWrap": "Labels__yLabelWrap"
+	"yLabelWrap": "Labels__yLabelWrap",
+	"wrap": "Labels__wrap",
+	"title": "Labels__title"
 };
 
 /***/ }),
@@ -34204,7 +34206,22 @@ class BarChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.PureComponen
 }
 
 _defineProperty(BarChart, "propTypes", {
-  width: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number.isRequired
+  width: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
+  height: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
+  padding: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.shape({
+    top: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number.isRequired,
+    right: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number.isRequired,
+    bottom: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number.isRequired,
+    left: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number.isRequired
+  }),
+  data: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.shape({
+    key: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string.isRequired,
+    value: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number.isRequired
+  })).isRequired,
+  barStyle: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
+  linearAxisProps: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  bandAxisProps: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  horizontal: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool
 });
 
 _defineProperty(BarChart, "defaultProps", {
@@ -34216,19 +34233,7 @@ _defineProperty(BarChart, "defaultProps", {
     bottom: 0,
     left: 0
   },
-  data: [{
-    key: 'JACK',
-    value: 134
-  }, {
-    key: 'KATE',
-    value: 1121
-  }, {
-    key: 'QAYT',
-    value: 821
-  }, {
-    key: 'JACQUEAUIAZXAUQX',
-    value: 314
-  }],
+  data: [],
   barStyle: () => {},
   linearAxisProps: {
     tickFormat: x => x
@@ -34572,41 +34577,74 @@ if(false) {}
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Labels_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Labels.css */ "./src/Labels/Labels.css");
-/* harmony import */ var _Labels_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Labels_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Labels_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Labels.css */ "./src/Labels/Labels.css");
+/* harmony import */ var _Labels_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Labels_css__WEBPACK_IMPORTED_MODULE_4__);
+
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
-const Labels = ({
-  y0Label,
-  y1Label,
-  xLabel,
-  x1Label,
-  children
-}) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-  className: _Labels_css__WEBPACK_IMPORTED_MODULE_1___default.a.labels
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-  className: _Labels_css__WEBPACK_IMPORTED_MODULE_1___default.a.xLabelWrap
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-  className: _Labels_css__WEBPACK_IMPORTED_MODULE_1___default.a.xLabel
-}, x1Label)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-  className: _Labels_css__WEBPACK_IMPORTED_MODULE_1___default.a.yLabels
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-  className: _Labels_css__WEBPACK_IMPORTED_MODULE_1___default.a.yLabelWrap
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-  className: _Labels_css__WEBPACK_IMPORTED_MODULE_1___default.a.rotatedLabel
-}, y0Label)), children, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-  className: _Labels_css__WEBPACK_IMPORTED_MODULE_1___default.a.yLabelWrap
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-  className: _Labels_css__WEBPACK_IMPORTED_MODULE_1___default.a.rotatedLabel
-}, y1Label))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-  className: _Labels_css__WEBPACK_IMPORTED_MODULE_1___default.a.xLabelWrap
-}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-  className: _Labels_css__WEBPACK_IMPORTED_MODULE_1___default.a.xLabel
-}, xLabel)));
 
+
+
+const Labels = (_ref) => {
+  let left = _ref.left,
+      right = _ref.right,
+      bottom = _ref.bottom,
+      top = _ref.top,
+      children = _ref.children,
+      title = _ref.title,
+      className = _ref.className,
+      otherProps = _objectWithoutProperties(_ref, ["left", "right", "bottom", "top", "children", "title", "className"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", _extends({
+    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(_Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.wrap, className)
+  }, otherProps), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: _Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.title
+  }, title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: _Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.labels
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: _Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.xLabelWrap
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: _Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.xLabel
+  }, top)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: _Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.yLabels
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: _Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.yLabelWrap
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: _Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.rotatedLabel
+  }, left)), children, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: _Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.yLabelWrap
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: _Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.rotatedLabel
+  }, right))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: _Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.xLabelWrap
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: _Labels_css__WEBPACK_IMPORTED_MODULE_4___default.a.xLabel
+  }, bottom))));
+};
+
+Labels.propTypes = {
+  left: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.node,
+  right: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.node,
+  bottom: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.node,
+  top: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.node,
+  children: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.node,
+  title: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.node
+};
 /* harmony default export */ __webpack_exports__["default"] = (Labels);
 
 /***/ }),

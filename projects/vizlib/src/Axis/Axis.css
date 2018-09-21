@@ -6,6 +6,7 @@
   & text {
     fill: var(--black);
     font-size: 1em;
+    user-select: none;
   }
 
   & line {

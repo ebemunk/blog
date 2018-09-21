@@ -119,7 +119,24 @@ export default class BarChart extends React.PureComponent {
   }
 
   static propTypes = {
-    width: PropTypes.number.isRequired,
+    width: PropTypes.number,
+    height: PropTypes.number,
+    padding: PropTypes.shape({
+      top: PropTypes.number.isRequired,
+      right: PropTypes.number.isRequired,
+      bottom: PropTypes.number.isRequired,
+      left: PropTypes.number.isRequired,
+    }),
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.string.isRequired,
+        value: PropTypes.number.isRequired,
+      }),
+    ).isRequired,
+    barStyle: PropTypes.func,
+    linearAxisProps: PropTypes.object,
+    bandAxisProps: PropTypes.object,
+    horizontal: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -131,12 +148,7 @@ export default class BarChart extends React.PureComponent {
       bottom: 0,
       left: 0,
     },
-    data: [
-      { key: 'JACK', value: 134 },
-      { key: 'KATE', value: 1121 },
-      { key: 'QAYT', value: 821 },
-      { key: 'JACQUEAUIAZXAUQX', value: 314 },
-    ],
+    data: [],
     barStyle: () => {},
     linearAxisProps: {
       tickFormat: x => x,

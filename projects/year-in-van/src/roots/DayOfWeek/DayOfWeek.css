@@ -1,4 +1,10 @@
-.horizontal {
+.labels {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.white {
+  flex: 0 0 auto;
   color: white;
 
   & :global(.tick) {
@@ -18,12 +24,17 @@
 
 .linearAxis {
   & :global(.tick) line {
-    stroke-dasharray: 0.5, 10;
-    stroke-width: 1;
+    stroke-dasharray: 0, 7;
+    stroke-width: 2px;
     stroke-linecap: round;
+    stroke: rgba(255, 255, 255, 0.5);
   }
 
   & :global(.domain) {
     stroke: none;
   }
+}
+
+.split2 {
+  display: flex;
 }

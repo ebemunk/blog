@@ -1,25 +1,48 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 import css from './Labels.css'
 
-const Labels = ({ y0Label, y1Label, xLabel, x1Label, children }) => (
-  <div className={css.labels}>
-    <div className={css.xLabelWrap}>
-      <span className={css.xLabel}>{x1Label}</span>
-    </div>
-    <div className={css.yLabels}>
-      <div className={css.yLabelWrap}>
-        <span className={css.rotatedLabel}>{y0Label}</span>
+const Labels = ({
+  left,
+  right,
+  bottom,
+  top,
+  children,
+  title,
+  className,
+  ...otherProps
+}) => (
+  <div className={classnames(css.wrap, className)} {...otherProps}>
+    <div className={css.title}>{title}</div>
+    <div className={css.labels}>
+      <div className={css.xLabelWrap}>
+        <span className={css.xLabel}>{top}</span>
       </div>
-      {children}
-      <div className={css.yLabelWrap}>
-        <span className={css.rotatedLabel}>{y1Label}</span>
+      <div className={css.yLabels}>
+        <div className={css.yLabelWrap}>
+          <span className={css.rotatedLabel}>{left}</span>
+        </div>
+        {children}
+        <div className={css.yLabelWrap}>
+          <span className={css.rotatedLabel}>{right}</span>
+        </div>
       </div>
-    </div>
-    <div className={css.xLabelWrap}>
-      <span className={css.xLabel}>{xLabel}</span>
+      <div className={css.xLabelWrap}>
+        <span className={css.xLabel}>{bottom}</span>
+      </div>
     </div>
   </div>
 )
+
+Labels.propTypes = {
+  left: PropTypes.node,
+  right: PropTypes.node,
+  bottom: PropTypes.node,
+  top: PropTypes.node,
+  children: PropTypes.node,
+  title: PropTypes.node,
+}
 
 export default Labels
