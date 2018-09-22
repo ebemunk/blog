@@ -61,6 +61,7 @@ export default class BarChart extends React.PureComponent {
       interactionProps,
       barStyle,
       horizontal,
+      ...otherProps
     } = this.props
 
     const { linearScale, bandScale, chartHeight } = this.state
@@ -72,7 +73,7 @@ export default class BarChart extends React.PureComponent {
     //   .extent([[0, 0], [chartWidth, chartHeight]])
 
     return (
-      <svg width={width} height={height} className={className}>
+      <svg width={width} height={height} className={className} {...otherProps}>
         <g transform={`translate(${padding.left}, ${padding.top})`}>
           <Axis
             orientation={horizontal ? 'top' : 'left'}

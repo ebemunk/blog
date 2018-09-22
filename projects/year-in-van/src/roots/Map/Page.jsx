@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { BarChart } from 'vizlib'
+
 import Legend from './Legend'
 
 import css from './Page.css'
@@ -21,6 +23,19 @@ const Page = ({
   <React.Fragment>
     <Text text={children} progress={progress} />
     <Legend keys={heatmaps} onClick={setFocus} focus={focus} />
+    <BarChart
+      data={heatmaps.map(hm => ({
+        key: hm.label,
+        value: hm.data.length,
+      }))}
+      width={75}
+      height={150}
+      style={{
+        position: 'absolute',
+        bottom: '30px',
+        left: '10%',
+      }}
+    />
   </React.Fragment>
 )
 
