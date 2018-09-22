@@ -34,15 +34,7 @@ const DayOfWeek = ({}) => (
           }))}
           bandAxisProps={{
             tickFormat: d =>
-              [
-                'Monday',
-                'Tuesday',
-                'Wednesday',
-                'Thursday',
-                'Friday',
-                'Saturday',
-                'Sunday',
-              ][d - 1],
+              ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][d - 1],
           }}
           linearAxisProps={{
             tickFormat: format(','),
