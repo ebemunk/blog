@@ -34092,20 +34092,28 @@ if(false) {}
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BarChart; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Axis__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Axis */ "./src/Axis/index.js");
-/* harmony import */ var _Interaction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Interaction */ "./src/BarChart/Interaction.jsx");
-/* harmony import */ var _VerticalBars__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./VerticalBars */ "./src/BarChart/VerticalBars.jsx");
-/* harmony import */ var _HorizontalBars__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./HorizontalBars */ "./src/BarChart/HorizontalBars.jsx");
-/* harmony import */ var _BarChart_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./BarChart.css */ "./src/BarChart/BarChart.css");
-/* harmony import */ var _BarChart_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_BarChart_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Axis__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Axis */ "./src/Axis/index.js");
+/* harmony import */ var _Interaction__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Interaction */ "./src/BarChart/Interaction.jsx");
+/* harmony import */ var _VerticalBars__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./VerticalBars */ "./src/BarChart/VerticalBars.jsx");
+/* harmony import */ var _HorizontalBars__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./HorizontalBars */ "./src/BarChart/HorizontalBars.jsx");
+/* harmony import */ var _BarChart_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./BarChart.css */ "./src/BarChart/BarChart.css");
+/* harmony import */ var _BarChart_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_BarChart_css__WEBPACK_IMPORTED_MODULE_9__);
+
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -34118,13 +34126,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-class BarChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.PureComponent {
+class BarChart extends react__WEBPACK_IMPORTED_MODULE_1___default.a.PureComponent {
   constructor(...args) {
     super(...args);
 
     _defineProperty(this, "state", {
-      linearScale: Object(d3__WEBPACK_IMPORTED_MODULE_1__["scaleLinear"])(),
-      bandScale: Object(d3__WEBPACK_IMPORTED_MODULE_1__["scaleBand"])(),
+      linearScale: Object(d3__WEBPACK_IMPORTED_MODULE_2__["scaleLinear"])(),
+      bandScale: Object(d3__WEBPACK_IMPORTED_MODULE_2__["scaleBand"])(),
       chartHeight: 0,
       chartWidth: 0
     });
@@ -34140,10 +34148,10 @@ class BarChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.PureComponen
     const chartHeight = height - padding.top - padding.bottom;
     const chartWidth = width - padding.left - padding.right;
     const linearRange = horizontal ? [0, chartWidth] : [chartHeight, 0];
-    const linearExtent = Object(d3__WEBPACK_IMPORTED_MODULE_1__["extent"])(data, d => d.value);
-    const linearScale = Object(d3__WEBPACK_IMPORTED_MODULE_1__["scaleLinear"])().range(linearRange).domain([Math.min(0, linearExtent[0]), linearExtent[1]]).nice();
+    const linearExtent = Object(d3__WEBPACK_IMPORTED_MODULE_2__["extent"])(data, d => d.value);
+    const linearScale = Object(d3__WEBPACK_IMPORTED_MODULE_2__["scaleLinear"])().range(linearRange).domain([Math.min(0, linearExtent[0]), linearExtent[1]]).nice();
     const bandRange = horizontal ? [0, chartHeight] : [0, chartWidth];
-    const bandScale = Object(d3__WEBPACK_IMPORTED_MODULE_1__["scaleBand"])().range(bandRange).padding(0.1).domain(data.map(d => d.key));
+    const bandScale = Object(d3__WEBPACK_IMPORTED_MODULE_2__["scaleBand"])().range(bandRange).padding(0.1).domain(data.map(d => d.key));
     return {
       linearScale,
       bandScale,
@@ -34163,7 +34171,10 @@ class BarChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.PureComponen
           bandAxisProps = _this$props.bandAxisProps,
           interactionProps = _this$props.interactionProps,
           barStyle = _this$props.barStyle,
-          horizontal = _this$props.horizontal;
+          horizontal = _this$props.horizontal,
+          children = _this$props.children,
+          otherProps = _objectWithoutProperties(_this$props, ["className", "width", "height", "padding", "data", "linearAxisProps", "bandAxisProps", "interactionProps", "barStyle", "horizontal", "children"]);
+
     const _this$state = this.state,
           linearScale = _this$state.linearScale,
           bandScale = _this$state.bandScale,
@@ -34173,55 +34184,56 @@ class BarChart extends react__WEBPACK_IMPORTED_MODULE_0___default.a.PureComponen
     //   .y(d => 0)
     //   .extent([[0, 0], [chartWidth, chartHeight]])
 
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", _extends({
       width: width,
       height: height,
       className: className
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    }, otherProps), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", {
       transform: `translate(${padding.left}, ${padding.top})`
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Axis__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Axis__WEBPACK_IMPORTED_MODULE_5__["default"], _extends({
       orientation: horizontal ? 'top' : 'left',
       scale: linearScale
     }, linearAxisProps, {
-      className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_BarChart_css__WEBPACK_IMPORTED_MODULE_8___default.a.linearAxis, linearAxisProps.className)
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Axis__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(_BarChart_css__WEBPACK_IMPORTED_MODULE_9___default.a.linearAxis, linearAxisProps.className)
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Axis__WEBPACK_IMPORTED_MODULE_5__["default"], _extends({
       orientation: horizontal ? 'left' : 'bottom',
       scale: bandScale,
       transform: `translate(0, ${horizontal ? 0 : chartHeight})`
     }, bandAxisProps, {
-      className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_BarChart_css__WEBPACK_IMPORTED_MODULE_8___default.a.bandAxis, bandAxisProps.className)
-    })), !horizontal && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_VerticalBars__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(_BarChart_css__WEBPACK_IMPORTED_MODULE_9___default.a.bandAxis, bandAxisProps.className)
+    })), !horizontal && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_VerticalBars__WEBPACK_IMPORTED_MODULE_7__["default"], {
       data: data,
       linearScale: linearScale,
       bandScale: bandScale,
       barStyle: barStyle
-    }), horizontal && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HorizontalBars__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    }), horizontal && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_HorizontalBars__WEBPACK_IMPORTED_MODULE_8__["default"], {
       data: data,
       linearScale: linearScale,
       bandScale: bandScale,
       barStyle: barStyle
-    })));
+    }), children && children(this.state)));
   }
 
 }
 
 _defineProperty(BarChart, "propTypes", {
-  width: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
-  height: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
-  padding: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.shape({
-    top: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number.isRequired,
-    right: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number.isRequired,
-    bottom: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number.isRequired,
-    left: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number.isRequired
+  width: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+  height: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+  padding: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.shape({
+    top: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number.isRequired,
+    right: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number.isRequired,
+    bottom: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number.isRequired,
+    left: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number.isRequired
   }),
-  data: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.shape({
-    key: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string.isRequired,
-    value: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number.isRequired
+  data: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.shape({
+    key: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string.isRequired,
+    value: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number.isRequired
   })).isRequired,
-  barStyle: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
-  linearAxisProps: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  bandAxisProps: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  horizontal: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool
+  barStyle: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+  linearAxisProps: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  bandAxisProps: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  horizontal: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
+  children: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.node
 });
 
 _defineProperty(BarChart, "defaultProps", {
@@ -34241,7 +34253,8 @@ _defineProperty(BarChart, "defaultProps", {
   bandAxisProps: {
     tickFormat: x => x
   },
-  horizontal: false
+  horizontal: false,
+  children: null
 });
 
 /***/ }),

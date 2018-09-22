@@ -33,3 +33,22 @@
     max-width: 100%;
   }
 }
+
+.whiteAxis {
+  flex: 0 0 auto;
+  color: white;
+
+  & :global(.tick) {
+    & text {
+      fill: white;
+    }
+
+    & line {
+      stroke: white;
+    }
+  }
+
+  & :global(.domain) {
+    stroke: white;
+  }
+}

@@ -61,6 +61,7 @@ export default class BarChart extends React.PureComponent {
       interactionProps,
       barStyle,
       horizontal,
+      children,
       ...otherProps
     } = this.props
 
@@ -104,6 +105,7 @@ export default class BarChart extends React.PureComponent {
               barStyle={barStyle}
             />
           )}
+          {children && children(this.state)}
           {/* <Interaction
             polygons={voro.polygons(data)}
             scales={{ x: bandScale, y: linearScale }}
@@ -138,6 +140,7 @@ export default class BarChart extends React.PureComponent {
     linearAxisProps: PropTypes.object,
     bandAxisProps: PropTypes.object,
     horizontal: PropTypes.bool,
+    children: PropTypes.node,
   }
 
   static defaultProps = {
@@ -158,5 +161,6 @@ export default class BarChart extends React.PureComponent {
       tickFormat: x => x,
     },
     horizontal: false,
+    children: null,
   }
 }

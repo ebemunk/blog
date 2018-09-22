@@ -144,7 +144,7 @@ export default [
       },
     ],
     children: props => (
-      <Page {...props}>
+      <Page {...props} noBarChart>
         <h4>Indigenous</h4>
         <p>Events where the name contains "indigenous".</p>
       </Page>
@@ -155,7 +155,7 @@ export default [
       { data: filterByName('free'), color: colors4[0], label: 'free' },
     ],
     children: props => (
-      <Page {...props}>
+      <Page {...props} noBarChart>
         <h4>Free Stuff</h4>
         <p>
           Events where the name contains "free". Very concentrated clusters
@@ -206,7 +206,7 @@ export default [
     children: props => {
       const [start, end] = dateScale.invertExtent(Math.floor(props.progress))
       return (
-        <Page {...props}>
+        <Page {...props} noBarChart>
           <h4>A Year of Events</h4>
           <p>
             Mapping out all events by start date. Scroll down to go through 2018

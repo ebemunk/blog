@@ -1,6 +1,9 @@
 import React from 'react'
 import classnames from 'classnames'
 import { compose, withState } from 'recompose'
+import { max, format } from 'd3'
+
+import { BarChart } from 'vizlib'
 
 import css from './Page.css'
 
@@ -94,6 +97,40 @@ const InteractivePage = ({
       setCustom={setCustom}
       rmCustom={rmCustom}
     />
+    {heatmaps.length && (
+      <BarChart
+        className={css.whiteAxis}
+        data={heatmaps.map(hm => ({
+          key: hm.label,
+          value: hm.data.length,
+        }))}
+        width={50}
+        height={100}
+        style={{
+          position: 'absolute',
+          bottom: '30px',
+          left: '-50px',
+          pointerEvents: 'none',
+        }}
+        padding={{
+          left: 20,
+          right: 0,
+          bottom: 0,
+          top: 10,
+        }}
+        barStyle={hm => ({
+          fill: heatmaps.find(e => e.label === hm.key).color,
+        })}
+        linearAxisProps={{
+          tickValues: [max(heatmaps.map(hm => hm.data.length))],
+          tickSize: 3,
+          tickFormat: format('.2~s'),
+          style: {
+            fontSize: '8px',
+          },
+        }}
+      />
+    )}
   </React.Fragment>
 )
 
