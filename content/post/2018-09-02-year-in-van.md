@@ -30,11 +30,9 @@ There's an interesting ramp-up effect to Saturday, when most events start off. I
 
 ## Locations
 
-This chart shows the top locations that events take place in.
+This chart shows the top locations that events take place in. Some were surprising to see, others not so much.
 
 <div id="places"></div>
-
-Bla bla
 
 ## Technical Details
 

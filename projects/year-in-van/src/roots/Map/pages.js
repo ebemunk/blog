@@ -67,7 +67,7 @@ export default [
       <Page {...props}>
         <h4>Four Seasons of Vancouver</h4>
         <p>
-          Events where the event name contains the season. Although less event
+          Events where the event name contains the season. Although fewer events
           start in the summer than in spring, more events refer to "Summer" in
           their name.
         </p>
