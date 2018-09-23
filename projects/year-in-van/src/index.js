@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 import MapViz from 'roots/Map/MapV'
 import DayOfWeek from 'roots/DayOfWeek'
+import Places from 'roots/Places'
 
 import './index.css'
 
@@ -11,3 +12,4 @@ const render = (component, selector) =>
 
 render(<MapViz />, '#map')
 render(<DayOfWeek />, '#day-of-week')
+render(<Places />, '#places')

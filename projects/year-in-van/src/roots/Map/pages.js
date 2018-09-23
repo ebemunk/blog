@@ -49,7 +49,10 @@ export default [
     children: props => (
       <Page {...props}>
         <h4>Four Seasons of Vancouver</h4>
-        <p>Events grouped by the season they started in.</p>
+        <p>
+          Events grouped by the season they started in. Springtime is when
+          things really start heating up!
+        </p>
       </Page>
     ),
   },
@@ -63,7 +66,11 @@ export default [
     children: props => (
       <Page {...props}>
         <h4>Four Seasons of Vancouver</h4>
-        <p>Events where the name contains the season.</p>
+        <p>
+          Events where the event name contains the season. Although less event
+          start in the summer than in spring, more events refer to "Summer" in
+          their name.
+        </p>
       </Page>
     ),
   },
@@ -77,7 +84,11 @@ export default [
     children: props => (
       <Page {...props}>
         <h4>Cardinal Directions</h4>
-        <p>Events where the name contains a cardinal direction.</p>
+        <p>
+          Events where the name contains a cardinal direction.{' '}
+          <em>North Van</em>, <em>West-end</em> and <em>East Van</em> definitely
+          show up in event names.
+        </p>
       </Page>
     ),
   },
@@ -90,8 +101,8 @@ export default [
       <Page {...props}>
         <h4>Wine vs Beer</h4>
         <p>
-          Events where the name contains wine or beer. Cambie Street seems to be
-          the boundary between wine and beer events.
+          Events where the name contains "wine" or "beer". Cambie Street seems
+          to be the boundary between wine and beer events, a clean split.
         </p>
       </Page>
     ),
@@ -111,8 +122,8 @@ export default [
         <h4>Meals</h4>
         <p>
           Events where the name contains a reference to breakfast, lunch or
-          dinner. There were twice as many dinner events than the other 2
-          combined.
+          dinner. Gastown and Commercial stand out by the abundance of dinner
+          events.
         </p>
       </Page>
     ),
@@ -146,7 +157,10 @@ export default [
     children: props => (
       <Page {...props} noBarChart>
         <h4>Indigenous</h4>
-        <p>Events where the name contains "indigenous".</p>
+        <p>
+          Events where the name contains "indigenous". UBC MOA, Stanley Park
+          Pavillion and the VPL downtown are good places to check out.
+        </p>
       </Page>
     ),
   },
@@ -188,9 +202,11 @@ export default [
       <Page {...props}>
         <h4>Time of Day</h4>
         <p>
-          Events grouped by starting hours: Morning: 4am-12pm, Afternoon:
-          12pm-5pm, Evening: 5pm-9pm, Night: 9pm-12am, Late Night: 12am-4am.
-          Definitely an "evening" kind of city.
+          Events grouped by starting hours: <strong>Morning:</strong> 4am-12pm,{' '}
+          <strong>Afternoon:</strong>
+          12pm-5pm, <strong>Evening:</strong> 5pm-9pm, <strong>Night:</strong>{' '}
+          9pm-12am, <strong>Late Night:</strong> 12am-4am. Definitely an evening
+          kind of city...
         </p>
       </Page>
     ),
@@ -213,8 +229,11 @@ export default [
             slowly.
           </p>
           <p>
-            Showing events that started between {format(start, 'MMM Do')}-
-            {format(end, 'Do')}
+            Showing events that started between:
+            <br />
+            <em>
+              {format(start, 'MMM Do')}-{format(end, 'Do')}
+            </em>
           </p>
         </Page>
       )
@@ -250,7 +269,7 @@ export default [
         </p>
         {props.custom.length > 0 && (
           <p style={{ marginTop: '1rem' }}>
-            You can use the following url to share this custom heatmap.
+            You can use the following URL to share this custom heatmap.
             <input
               value={encodeURI(
                 window.location.href.replace(window.location.hash, '') +
