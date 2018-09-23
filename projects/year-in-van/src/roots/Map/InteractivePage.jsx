@@ -2,6 +2,7 @@ import React from 'react'
 import classnames from 'classnames'
 import { compose, withState } from 'recompose'
 import { max, format } from 'd3'
+import { get } from 'lodash'
 
 import { BarChart } from 'vizlib'
 
@@ -97,7 +98,7 @@ const InteractivePage = ({
       setCustom={setCustom}
       rmCustom={rmCustom}
     />
-    {heatmaps.length && (
+    {heatmaps.length > 0 && (
       <BarChart
         className={css.whiteAxis}
         data={heatmaps.map(hm => ({
@@ -119,7 +120,7 @@ const InteractivePage = ({
           top: 10,
         }}
         barStyle={hm => ({
-          fill: heatmaps.find(e => e.label === hm.key).color,
+          fill: (heatmaps.find(e => e.label === hm.key) || {}).color,
         })}
         linearAxisProps={{
           tickValues: [max(heatmaps.map(hm => hm.data.length))],

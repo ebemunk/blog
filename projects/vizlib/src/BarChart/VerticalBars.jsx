@@ -12,6 +12,7 @@ export default class VerticalBars extends React.PureComponent {
     const transition = d => ({
       y: [linearScale(Math.max(0, d.value))],
       height: [Math.abs(linearScale(d.value) - origin)],
+      width: [bandScale.bandwidth()],
     })
 
     return (
@@ -21,13 +22,17 @@ export default class VerticalBars extends React.PureComponent {
         start={() => ({
           y: origin,
           height: 0,
+          width: bandScale.bandwidth(),
         })}
         enter={transition}
         update={transition}
-        leave={() => ({
-          y: [origin],
-          height: [0],
-        })}
+        // leave={() => ({
+        //   y: [origin],
+        //   height: [0],
+        //   timing: {
+        //     duration: 5000,
+        //   },
+        // })}
       >
         {nodeData => {
           return (
@@ -36,13 +41,13 @@ export default class VerticalBars extends React.PureComponent {
                 const {
                   key,
                   data: { value },
-                  state: { y, height },
+                  state: { y, height, width },
                 } = node
                 return (
                   <rect
                     x={bandScale(key)}
                     y={y}
-                    width={bandScale.bandwidth()}
+                    width={width}
                     height={height}
                     className={style.bar}
                     key={key}

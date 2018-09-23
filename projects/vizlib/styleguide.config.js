@@ -1,3 +1,7 @@
 module.exports = {
-  components: 'src/**/index.js',
+  components: [
+    'src/Axis/Axis.jsx',
+    'src/BarChart/BarChart.jsx',
+    'src/Labels/Labels.jsx',
+  ],
 }

@@ -34491,7 +34491,8 @@ class VerticalBars extends react__WEBPACK_IMPORTED_MODULE_0___default.a.PureComp
 
     const transition = d => ({
       y: [linearScale(Math.max(0, d.value))],
-      height: [Math.abs(linearScale(d.value) - origin)]
+      height: [Math.abs(linearScale(d.value) - origin)],
+      width: [bandScale.bandwidth()]
     });
 
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_move__WEBPACK_IMPORTED_MODULE_1__["NodeGroup"], {
@@ -34499,25 +34500,30 @@ class VerticalBars extends react__WEBPACK_IMPORTED_MODULE_0___default.a.PureComp
       keyAccessor: d => d.key,
       start: () => ({
         y: origin,
-        height: 0
+        height: 0,
+        width: bandScale.bandwidth()
       }),
       enter: transition,
-      update: transition,
-      leave: () => ({
-        y: [origin],
-        height: [0]
-      })
+      update: transition // leave={() => ({
+      //   y: [origin],
+      //   height: [0],
+      //   timing: {
+      //     duration: 5000,
+      //   },
+      // })}
+
     }, nodeData => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", null, nodeData.map(node => {
         const key = node.key,
               value = node.data.value,
               _node$state = node.state,
               y = _node$state.y,
-              height = _node$state.height;
+              height = _node$state.height,
+              width = _node$state.width;
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
           x: bandScale(key),
           y: y,
-          width: bandScale.bandwidth(),
+          width: width,
           height: height,
           className: _BarChart_css__WEBPACK_IMPORTED_MODULE_2___default.a.bar,
           key: key,
@@ -34544,10 +34550,9 @@ class VerticalBars extends react__WEBPACK_IMPORTED_MODULE_0___default.a.PureComp
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _BarChart__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BarChart */ "./src/BarChart/BarChart.jsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _BarChart__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+// export default from './BarChart'
 
-
-
+/* harmony default export */ __webpack_exports__["default"] = (_BarChart__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /***/ }),
 

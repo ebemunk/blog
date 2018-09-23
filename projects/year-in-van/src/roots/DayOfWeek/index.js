@@ -11,9 +11,9 @@ import css from './DayOfWeek.css'
 
 const DayOfWeek = ({}) => (
   <div>
-    <div className="">
+    <div className={css.split2}>
       <Labels
-        title="Events by Start Time"
+        title="Starting Day"
         left="Number of events"
         bottom="Day of Week"
         className={css.labels}
@@ -39,19 +39,19 @@ const DayOfWeek = ({}) => (
           linearAxisProps={{
             tickFormat: format(','),
             className: css.linearAxis,
-            tickSize: -450 + 35 + 10,
+            tickSize: -316 + 35 + 10,
           }}
         />
       </Labels>
       <Labels
-        title="Events by Start Time"
+        title="Starting Month"
         left="Number of events"
         bottom="Month"
         className={css.labels}
       >
         <BarChart
           className={css.white}
-          width={450}
+          width={316}
           height={300}
           padding={{
             top: 10,
@@ -83,41 +83,43 @@ const DayOfWeek = ({}) => (
           linearAxisProps={{
             tickFormat: format(','),
             className: css.linearAxis,
-            tickSize: -450 + 35 + 10,
+            tickSize: -316 + 35 + 10,
           }}
         />
       </Labels>
     </div>
-    <Labels
-      title="Events by Location"
-      left="Location Name"
-      top="Number of events"
-      className={css.labels}
-    >
-      <BarChart
-        className={css.white}
-        width={750}
-        height={550}
-        padding={{
-          top: 20,
-          left: 250,
-          right: 15,
-          bottom: 30,
-        }}
-        data={places.map(row => ({
-          key: row.name,
-          value: row.count,
-        }))}
-        horizontal
-        bandAxisProps={{
-          tickSize: 0,
-        }}
-        linearAxisProps={{
-          tickSize: -550 + 20 + 30,
-          className: css.linearAxis,
-        }}
-      />
-    </Labels>
+    <div className={css.locs}>
+      <Labels
+        title="Events by Location"
+        left="Location Name"
+        top="Number of events"
+        className={css.labels}
+      >
+        <BarChart
+          className={css.white}
+          width={750}
+          height={550}
+          padding={{
+            top: 20,
+            left: 250,
+            right: 15,
+            bottom: 30,
+          }}
+          data={places.map(row => ({
+            key: row.name,
+            value: row.count,
+          }))}
+          horizontal
+          bandAxisProps={{
+            tickSize: 0,
+          }}
+          linearAxisProps={{
+            tickSize: -550 + 20 + 30,
+            className: css.linearAxis,
+          }}
+        />
+      </Labels>
+    </div>
   </div>
 )
 

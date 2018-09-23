@@ -37,4 +37,21 @@
 
 .split2 {
   display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 750px) {
+  .split2 {
+    flex-wrap: wrap;
+  }
+}
+
+.locs {
+  composes: split2;
+}
+
+@media screen and (max-width: 750px) {
+  .locs {
+    justify-content: flex-start;
+  }
 }
