@@ -4,7 +4,7 @@ draft = false
 title = "One Year in Vancouver: Visualizing Events"
 slug = "one-year-in-van"
 tags = ["data visualization", "maps", "vancouver", "georgia straight"]
-image = "img/lost-text-mining.png"
+image = "img/year-in-van.png"
 +++
 
 We're looking at the year of 2018 in Vancouver through the lens of event listings on the Georgia Straight Events [^gse] page. I find their list extremely useful and use it all the time to find cool things to do, and notice a great deal of events happening all over the city. I have collected all the events over the course of 2018 and wanted to make a "map of the city" from this data.
