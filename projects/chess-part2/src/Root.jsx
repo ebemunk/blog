@@ -1,56 +1,69 @@
 import React from 'react'
 
-import * as R from 'ramda'
+import { LineSeries, VerticalBarSeries } from 'react-vis'
 
-import datar from '/Users/ebemunk/proj/go/src/github.com/ebemunk/pgnstats/data/data.json'
-const data = datar.BranchingFactor.map((v, k) => ({
-  x: k,
-  y: v,
-}))
-
-const gl = datar.GameLengths.map((v, k) => ({
-  x: k,
-  y: v,
-}))
-
-const mc = datar.MaterialCount.map((v, k) => ({
-  x: k,
-  y: v,
-}))
-
-const md = datar.MaterialDiff.map((v, k) => ({
-  x: k,
-  y: v,
-}))
-
-import Bar from './components/Bar'
+import Plot from './components/Bar'
 import ChessBoard from './components/ChessBoard'
+import BoardViz from './components/BoardViz'
+
+import data from './data'
+
+console.log('data', data)
 
 const Report = ({}) => (
   <div>
     <div>
       <h4>BranchingFactor</h4>
-      <Bar height={400} width={1500} data={data} />
+      <Plot height={400} width={1500} data={data.BranchingFactor}>
+        <LineSeries
+          data={data.BranchingFactor.filter((d, i) => i % 2 === 0)}
+          color="lightslategray"
+          style={{ strokeDasharray: '5 5' }}
+        />
+        <LineSeries
+          data={data.BranchingFactor.filter((d, i) => i % 2 === 1)}
+          color="black"
+          style={{ strokeDasharray: '5 5' }}
+        />
+        <LineSeries data={data.BranchingFactor} />
+      </Plot>
     </div>
     <div>
       <h4>GameLengths</h4>
-      <Bar height={400} width={1500} data={gl} />
+      <Plot height={400} width={1500} data={data.GameLengths} xType="ordinal">
+        <VerticalBarSeries data={data.GameLengths} stroke="white" />
+      </Plot>
     </div>
     <div>
       <h4>MaterialCount</h4>
-      <Bar height={400} width={1500} data={mc} />
+      <Plot height={400} width={1500} data={data.MaterialCount}>
+        <LineSeries data={data.MaterialCount} />
+      </Plot>
     </div>
     <div>
       <h4>MaterialDiff</h4>
-      <Bar height={400} width={1500} data={md} />
+      <Plot height={400} width={1500} data={data.MaterialDiff}>
+        <LineSeries data={data.MaterialDiff} />
+      </Plot>
     </div>
     <div>
-      <h4>Heatmap</h4>
-      <ChessBoard
-        width={496}
-        data={datar.Heatmaps.CaptureSquares.map(d => d.All.W + d.All.B)}
-      />
+      <h4>GameEndMaterialCount</h4>
+      <Plot height={400} width={1500} data={data.GameEndMaterialCount}>
+        <VerticalBarSeries stroke="white" data={data.GameEndMaterialCount} />
+      </Plot>
     </div>
+    <div>
+      <h4>GameEndMaterialDiff</h4>
+      <Plot height={400} width={1500} data={data.GameEndMaterialDiff}>
+        <VerticalBarSeries stroke="white" data={data.GameEndMaterialDiff} />
+      </Plot>
+    </div>
+    {Object.keys(data.Heatmaps).map(key => (
+      <div key={key}>
+        <h4>{key}</h4>
+        <BoardViz data={data.Heatmaps[key]} />
+      </div>
+    ))}
   </div>
 )
 

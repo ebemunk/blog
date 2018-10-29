@@ -10,12 +10,13 @@ import {
   LineSeries,
 } from 'react-vis'
 
-const Bar = ({
+const Plot = ({
   data,
   crosshair,
   setCrosshair,
   remember,
   setRemember,
+  children,
   ...otherProps
 }) => (
   <XYPlot
@@ -39,15 +40,24 @@ const Bar = ({
     />
     <VerticalGridLines />
     <HorizontalGridLines />
-    <XAxis tickLabelAngle={-90} />
+    {/* <XAxis tickLabelAngle={-90} /> */}
+    <XAxis />
     <YAxis />
-    <LineSeries
+    {React.Children.map(children, child => {
+      if (!child) return null
+      return React.cloneElement(child, {
+        onNearestX: val => {
+          if (!remember) setCrosshair([val])
+        },
+      })
+    })}
+    {/* <VerticalBarSeries
       data={data}
       onNearestX={val => {
         if (!remember) setCrosshair([val])
       }}
-    />
-    {/* <VerticalBarSeries
+    /> */}
+    {/* <LineSeries
       data={data}
       onNearestX={val => {
         if (!remember) setCrosshair([val])
@@ -62,4 +72,4 @@ export default compose(
   pure,
   withState('crosshair', 'setCrosshair', []),
   withState('remember', 'setRemember', false),
-)(Bar)
+)(Plot)
