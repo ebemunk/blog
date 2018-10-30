@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { LineSeries, VerticalBarSeries } from 'react-vis'
+import { LineSeries, VerticalBarSeries, Sunburst } from 'react-vis'
 
 import Plot from './components/Bar'
 import ChessBoard from './components/ChessBoard'
@@ -64,6 +64,16 @@ const Report = ({}) => (
         <BoardViz data={data.Heatmaps[key]} />
       </div>
     ))}
+    <div>
+      <h4>Openings</h4>
+      <Sunburst
+        hideRootNode
+        // colorType="literal"
+        data={data.Openings}
+        height={500}
+        width={500}
+      />
+    </div>
   </div>
 )
 
