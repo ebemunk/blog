@@ -58,13 +58,25 @@ const Report = ({}) => (
         <VerticalBarSeries stroke="white" data={data.GameEndMaterialDiff} />
       </Plot>
     </div>
+    <div>
+      <h4>Years</h4>
+      <Plot height={400} width={1500} data={data.Years}>
+        <VerticalBarSeries stroke="white" data={data.Years} />
+      </Plot>
+    </div>
+    <div>
+      <h4>Ratings</h4>
+      <Plot height={400} width={1500} data={data.Ratings}>
+        <VerticalBarSeries data={data.Ratings} />
+      </Plot>
+    </div>
     {Object.keys(data.Heatmaps).map(key => (
       <div key={key}>
-        <h4>{key}</h4>
+        <h3>{key}</h3>
         <BoardViz data={data.Heatmaps[key]} />
       </div>
     ))}
-    <div>
+    {/* <div>
       <h4>Openings</h4>
       <Sunburst
         hideRootNode
@@ -73,7 +85,7 @@ const Report = ({}) => (
         height={500}
         width={500}
       />
-    </div>
+    </div>*/}
   </div>
 )
 

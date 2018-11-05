@@ -1,12 +1,16 @@
 import { addIndex, map, evolve, mapObjIndexed, pipe, values } from 'ramda'
 
-import data from '/Users/ebemunk/proj/go/src/github.com/ebemunk/pgnstats/data/data.json'
+import data from '/Users/ebemunk/proj/go/src/github.com/ebemunk/pgnstats/data/mb.json'
 
 const mapIndexed = addIndex(map)
 const mapToXY = mapIndexed((v, k) => ({
   x: k,
   y: v,
 }))
+const mapObjToXY = pipe(
+  mapObjIndexed((y, x) => ({ x, y })),
+  values,
+)
 
 export default evolve({
   Heatmaps: heatmaps =>
@@ -64,6 +68,8 @@ export default evolve({
   MaterialDiff: mapToXY,
   GameEndMaterialCount: mapToXY,
   GameEndMaterialDiff: mapToXY,
+  Ratings: mapObjToXY,
+  Years: mapObjToXY,
 })({
   //
   ...data,
