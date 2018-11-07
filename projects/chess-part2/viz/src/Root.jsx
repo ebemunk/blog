@@ -10,9 +10,31 @@ import data from './data'
 
 console.log('data', data)
 
+const pup = [
+  { name: 'white wins P up', y: 1336, x: 'win' },
+  { name: 'white loses P up', y: 903, x: 'lose' },
+  { name: 'white draws P up', y: 815, x: 'draw' },
+  { name: 'black wins P up', y: 1213, x: 'win' },
+  { name: 'black loses P up', y: 1134, x: 'lose' },
+  { name: 'black draws P up', y: 853, x: 'draw' },
+]
+
 const Report = ({}) => (
   <div>
     <div>
+      <h4>Pawn up</h4>
+      <Plot
+        height={300}
+        width={600}
+        data={pup.slice(0, 3)}
+        xType="ordinal"
+        margin={{}}
+      >
+        <VerticalBarSeries data={pup.slice(0, 3)} />
+        <VerticalBarSeries data={pup.slice(3)} />
+      </Plot>
+    </div>
+    {/* <div>
       <h4>BranchingFactor</h4>
       <Plot height={400} width={1500} data={data.BranchingFactor}>
         <LineSeries
@@ -69,13 +91,13 @@ const Report = ({}) => (
       <Plot height={400} width={1500} data={data.Ratings}>
         <VerticalBarSeries data={data.Ratings} />
       </Plot>
-    </div>
-    {Object.keys(data.Heatmaps).map(key => (
+    </div> */}
+    {/* {Object.keys(data.Heatmaps).map(key => (
       <div key={key}>
         <h3>{key}</h3>
         <BoardViz data={data.Heatmaps[key]} />
       </div>
-    ))}
+    ))} */}
     {/* <div>
       <h4>Openings</h4>
       <Sunburst
