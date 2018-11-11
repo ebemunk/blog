@@ -1,0 +1,19 @@
+:root {
+  --black: black;
+}
+
+.axis {
+  & text {
+    fill: var(--black);
+    font-size: 1em;
+    user-select: none;
+  }
+
+  & line {
+    stroke: var(--black);
+  }
+
+  & :global .domain {
+    stroke: var(--black);
+  }
+}
