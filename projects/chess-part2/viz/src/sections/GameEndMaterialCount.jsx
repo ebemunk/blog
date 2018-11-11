@@ -15,11 +15,11 @@ const seasonColor = scaleOrdinal([
   '#ffa600',
 ])
 
-const GameEndMaterialDiff = ({ abs, setAbs, ply, setPly }) => {
-  const vdata = data.GameEndMaterialDiff.map(d => ({
+const GameEndMaterialCount = ({ abs, setAbs, ply, setPly }) => {
+  const vdata = data.GameEndMaterialCount.map(d => ({
     x: d.x,
     y: abs ? Math.abs(d.y) : d.y,
-  })).slice(0, ply ? 200 : data.GameEndMaterialDiff.length)
+  })).slice(0, ply ? 200 : data.GameEndMaterialCount.length)
 
   return (
     <div>
@@ -39,7 +39,7 @@ const GameEndMaterialDiff = ({ abs, setAbs, ply, setPly }) => {
           title: 'Ply (half-move)',
         }}
         yAxis={{
-          title: 'Average Material Difference (pawns)',
+          title: 'Average Material Count (pawns)',
         }}
         crosshairProps={{
           titleFormat: d => ({
@@ -48,7 +48,7 @@ const GameEndMaterialDiff = ({ abs, setAbs, ply, setPly }) => {
           }),
           itemsFormat: d => [
             {
-              title: 'Avg. Diff.',
+              title: 'Avg. Count.',
               value: format('.3')(d[0].y),
             },
           ],
@@ -70,4 +70,4 @@ export default compose(
   pure,
   withState('abs', 'setAbs', true),
   withState('ply', 'setPly', true),
-)(GameEndMaterialDiff)
+)(GameEndMaterialCount)

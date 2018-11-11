@@ -24,7 +24,7 @@ const seasonColor = scaleOrdinal([
   '#ffa600',
 ])
 
-const Histogram = ({
+const Plot = ({
   data,
   crosshair = [],
   setCrosshair,
@@ -33,6 +33,7 @@ const Histogram = ({
   xAxis = {},
   yAxis = {},
   crosshairProps = {},
+  children,
   ...otherProps
 }) => (
   <div
@@ -45,7 +46,7 @@ const Histogram = ({
       onMouseLeave={() => {
         if (!remember) setCrosshair([])
       }}
-      onClick={() => (remember ? setRemember(false) : setRemember(true))}
+      onClick={() => setRemember(!remember)}
       style={{
         flexShrink: 0,
       }}
@@ -55,23 +56,22 @@ const Histogram = ({
       <Crosshair values={crosshair} {...crosshairProps} />
       <VerticalGridLines style={{ stroke: white30 }} />
       <HorizontalGridLines style={{ stroke: white30 }} />
-      <VerticalBarSeries
-        data={data}
-        onNearestX={d => {
-          if (remember) return
-          setCrosshair([d])
-        }}
-        color={seasonColor(0)}
-        stroke="#282c34"
-      />
+      {React.Children.map(children, child => {
+        if (!child) return null
+        return React.cloneElement(child, {
+          onNearestX: (val, { index }) => {
+            if (!remember) setCrosshair([val])
+          },
+        })
+      })}
       <XAxis
         style={{
           title: {
-            fill: white80,
-            fontSize: '1.5rem',
+            fill: white100,
+            fontSize: '1.25rem',
           },
           ticks: {
-            fill: white60,
+            fill: white80,
           },
           line: {
             strokeWidth: 1,
@@ -82,11 +82,11 @@ const Histogram = ({
       <YAxis
         style={{
           title: {
-            fill: white80,
-            fontSize: '1.5rem',
+            fill: white100,
+            fontSize: '1.25rem',
           },
           ticks: {
-            fill: white60,
+            fill: white80,
           },
           line: {
             strokeWidth: 1,
@@ -104,4 +104,4 @@ export default compose(
   pure,
   withState('crosshair', 'setCrosshair', []),
   withState('remember', 'setRemember', false),
-)(Histogram)
+)(Plot)

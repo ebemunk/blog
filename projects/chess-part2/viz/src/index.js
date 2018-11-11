@@ -7,5 +7,9 @@ const render = (component, selector) =>
   ReactDOM.render(component, document.querySelector(selector))
 
 import GameEndMaterialDiff from './sections/GameEndMaterialDiff'
+import GameEndMaterialCount from './sections/GameEndMaterialCount'
+import BranchingFactor from './sections/BranchingFactor'
 
-render(<GameEndMaterialDiff />, '#game-end-material-diff')
+render(<GameEndMaterialDiff />, '#GameEndMaterialDiff')
+render(<GameEndMaterialCount />, '#GameEndMaterialCount')
+render(<BranchingFactor />, '#BranchingFactor')
