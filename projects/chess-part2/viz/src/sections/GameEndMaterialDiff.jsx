@@ -1,19 +1,10 @@
 import React from 'react'
 import { format } from 'd3-format'
 import { VerticalBarSeries } from 'react-vis'
-import { scaleOrdinal } from 'd3-scale'
 
 import data from '../data'
+import { colorScale } from '../util'
 import Plot from '../components/Plot'
-
-const seasonColor = scaleOrdinal([
-  '#0081bd',
-  '#7a7ed3',
-  '#ce70c7',
-  '#ff669a',
-  '#ff7a5b',
-  '#ffa600',
-])
 
 const GameEndMaterialDiff = ({ abs, setAbs, ply, setPly }) => {
   const vdata = data.GameEndMaterialDiff.map(d => ({
@@ -56,7 +47,7 @@ const GameEndMaterialDiff = ({ abs, setAbs, ply, setPly }) => {
       >
         <VerticalBarSeries
           data={vdata}
-          color={seasonColor(0)}
+          color={colorScale(0)}
           stroke="#282c34"
         />
       </Plot>

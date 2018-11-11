@@ -1,27 +1,33 @@
 import React from 'react'
-import { LineSeries } from 'react-vis'
+import { LineSeries, MarkSeries } from 'react-vis'
 import { format } from 'd3-format'
 
-import Plot from '../components/Plot'
-
 import data from '../data'
+import { colorScale } from '../util'
+import Plot from '../components/Plot'
 
 const BranchingFactor = ({ ply, setPly }) => {
   const vdata = data.BranchingFactor.slice(
     0,
-    ply ? 200 : data.BranchingFactor.length,
+    ply ? 150 : data.BranchingFactor.length,
   )
 
   return (
     <div>
       <label>
         <input type="checkbox" onChange={() => setPly(!ply)} checked={ply} />
-        Only &lt; 200 ply
+        Only &lt; 150 ply
       </label>
       <Plot
         height={400}
         width={1500}
         data={vdata}
+        xAxis={{
+          title: 'Ply (half-move)',
+        }}
+        yAxis={{
+          title: 'Branching Factor',
+        }}
         crosshairProps={{
           titleFormat: d => ({
             title: 'Ply',
@@ -29,23 +35,23 @@ const BranchingFactor = ({ ply, setPly }) => {
           }),
           itemsFormat: d => [
             {
-              title: 'Average # Legal Moves',
+              title: 'Branching Factor',
               value: format('.3')(d[0].y),
             },
           ],
         }}
       >
-        <LineSeries
+        <LineSeries data={vdata} color={colorScale(0)} />
+        <MarkSeries
           data={vdata.filter((d, i) => i % 2 === 0)}
+          size={2}
           color="white"
-          style={{ strokeDasharray: '5 5' }}
         />
-        <LineSeries
+        <MarkSeries
           data={vdata.filter((d, i) => i % 2 === 1)}
-          color="black"
-          style={{ strokeDasharray: '5 5' }}
+          size={2}
+          color="#777"
         />
-        <LineSeries data={vdata} />
       </Plot>
     </div>
   )

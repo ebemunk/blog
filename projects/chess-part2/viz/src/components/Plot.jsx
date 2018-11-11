@@ -6,7 +6,7 @@ import {
   XAxis,
   YAxis,
   Crosshair,
-  VerticalBarSeries,
+  MarkSeries,
 } from 'react-vis'
 import { scaleOrdinal } from 'd3-scale'
 
@@ -26,6 +26,7 @@ const seasonColor = scaleOrdinal([
 
 const Plot = ({
   data,
+  crosshairSeries,
   crosshair = [],
   setCrosshair,
   remember = false,
@@ -53,17 +54,26 @@ const Plot = ({
       animation
       {...otherProps}
     >
-      <Crosshair values={crosshair} {...crosshairProps} />
+      <Crosshair
+        values={crosshair}
+        style={{
+          line: {
+            background: 'white',
+          },
+        }}
+        {...crosshairProps}
+      />
       <VerticalGridLines style={{ stroke: white30 }} />
       <HorizontalGridLines style={{ stroke: white30 }} />
-      {React.Children.map(children, child => {
-        if (!child) return null
-        return React.cloneElement(child, {
-          onNearestX: (val, { index }) => {
-            if (!remember) setCrosshair([val])
-          },
-        })
-      })}
+      {children}
+      <MarkSeries
+        size={0}
+        data={data}
+        color="red"
+        onNearestX={(val, { index }) => {
+          if (!remember) setCrosshair([val])
+        }}
+      />
       <XAxis
         style={{
           title: {

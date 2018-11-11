@@ -1,32 +1,19 @@
 import React from 'react'
 import { format } from 'd3-format'
 import { VerticalBarSeries } from 'react-vis'
-import { scaleOrdinal } from 'd3-scale'
 
 import data from '../data'
+import { colorScale } from '../util'
 import Plot from '../components/Plot'
 
-const seasonColor = scaleOrdinal([
-  '#0081bd',
-  '#7a7ed3',
-  '#ce70c7',
-  '#ff669a',
-  '#ff7a5b',
-  '#ffa600',
-])
-
-const GameEndMaterialCount = ({ abs, setAbs, ply, setPly }) => {
-  const vdata = data.GameEndMaterialCount.map(d => ({
-    x: d.x,
-    y: abs ? Math.abs(d.y) : d.y,
-  })).slice(0, ply ? 200 : data.GameEndMaterialCount.length)
+const GameEndMaterialCount = ({ ply, setPly }) => {
+  const vdata = data.GameEndMaterialCount.slice(
+    0,
+    ply ? 200 : data.GameEndMaterialCount.length,
+  )
 
   return (
     <div>
-      <label>
-        <input type="checkbox" onChange={() => setAbs(!abs)} checked={abs} />
-        Absolute Diff
-      </label>
       <label>
         <input type="checkbox" onChange={() => setPly(!ply)} checked={ply} />
         Only &lt; 200 ply
@@ -56,7 +43,7 @@ const GameEndMaterialCount = ({ abs, setAbs, ply, setPly }) => {
       >
         <VerticalBarSeries
           data={vdata}
-          color={seasonColor(0)}
+          color={colorScale(0)}
           stroke="#282c34"
         />
       </Plot>

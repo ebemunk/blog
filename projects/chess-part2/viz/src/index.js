@@ -13,3 +13,8 @@ import BranchingFactor from './sections/BranchingFactor'
 render(<GameEndMaterialDiff />, '#GameEndMaterialDiff')
 render(<GameEndMaterialCount />, '#GameEndMaterialCount')
 render(<BranchingFactor />, '#BranchingFactor')
+
+// render(
+//   <BoardViz data={data.Heatmaps.MateDeliverySquares} />,
+//   '#MateDeliverySquares',
+// )
