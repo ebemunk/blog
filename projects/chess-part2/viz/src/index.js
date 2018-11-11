@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Root from './Root'
-
 import 'react-vis/dist/style.css'
 
 const render = (component, selector) =>
   ReactDOM.render(component, document.querySelector(selector))
 
-render(<Root />, '#root')
+import GameEndMaterialDiff from './sections/GameEndMaterialDiff'
+
+render(<GameEndMaterialDiff />, '#game-end-material-diff')

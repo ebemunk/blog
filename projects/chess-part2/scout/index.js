@@ -1,78 +1,80 @@
 const { exec } = require("child_process");
+const { writeFile } = require("fs");
 const { promisify } = require("util");
+const Promise = require("bluebird");
 
 const execAsync = promisify(exec);
+const writeFileAsync = promisify(writeFile);
 
 const scoutfish = `/Users/ebemunk/proj/scoutfish/src/scoutfish`;
 // const file = "./test.scout";
 const file = "./twic1247.scout";
+
+const imbalanceResult = imbalance => {
+  const reverse = imbalance
+    .split("")
+    .reverse()
+    .join("");
+
+  return {
+    name: imbalance,
+    white: [
+      {
+        name: "win",
+        arg: {
+          imbalance: imbalance,
+          result: "1-0"
+        }
+      },
+      {
+        name: "lose",
+        arg: {
+          imbalance: imbalance,
+          result: "0-1"
+        }
+      },
+      {
+        name: "draw",
+        arg: {
+          imbalance: imbalance,
+          result: "1/2-1/2"
+        }
+      }
+    ],
+    black: [
+      {
+        name: "win",
+        arg: {
+          imbalance: reverse,
+          result: "0-1"
+        }
+      },
+      {
+        name: "lose",
+        arg: {
+          imbalance: reverse,
+          result: "1-0"
+        }
+      },
+      {
+        name: "draw",
+        arg: {
+          imbalance: reverse,
+          result: "1/2-1/2"
+        }
+      }
+    ]
+  };
+};
+
 const queries = [
-  // {
-  //   name: "castle w ks",
-  //   arg: {
-  //     "white-move": "O-O"
-  //   }
-  // },
-  // {
-  //   name: "castle w qs",
-  //   arg: {
-  //     "white-move": "O-O-O"
-  //   }
-  // },
-  // {
-  //   name: "castle b ks",
-  //   arg: {
-  //     "black-move": "O-O"
-  //   }
-  // },
-  // {
-  //   name: "castle b qs",
-  //   arg: {
-  //     "black-move": "O-O-O"
-  //   }
-  // }
-  {
-    name: "white wins P up",
-    arg: {
-      imbalance: "Pv",
-      result: "1-0"
-    }
-  },
-  {
-    name: "white loses P up",
-    arg: {
-      imbalance: "Pv",
-      result: "0-1"
-    }
-  },
-  {
-    name: "white draws P up",
-    arg: {
-      imbalance: "Pv",
-      result: "1/2-1/2"
-    }
-  },
-  {
-    name: "black wins P up",
-    arg: {
-      imbalance: "vP",
-      result: "0-1"
-    }
-  },
-  {
-    name: "black loses P up",
-    arg: {
-      imbalance: "vP",
-      result: "1-0"
-    }
-  },
-  {
-    name: "black draws P up",
-    arg: {
-      imbalance: "vP",
-      result: "1/2-1/2"
-    }
-  }
+  imbalanceResult("Pv"),
+  imbalanceResult("PPv"),
+  imbalanceResult("PPPv"),
+  imbalanceResult("Nv"),
+  imbalanceResult("Bv"),
+  imbalanceResult("Rv"),
+  imbalanceResult("Qv")
 ];
 
 const makeArg = arg => `'${JSON.stringify(arg)}'`;
@@ -81,22 +83,18 @@ const doSearch = query =>
   execAsync(`${scoutfish} scout ${file} ${makeArg(query.arg)}`)
     .then(r => JSON.parse(r.stdout))
     .then(r => ({
-      name: query.name,
-      count: r["match count"]
+      x: query.name,
+      y: r["match count"]
     }));
 
-// const multiSearch = args =>
-//   Promise.all(args.map(doSearch)).then(results =>
-//     results.reduce((acc, r) => ({
-//       name: acc.name += ` ${r.name}`,
-//       count: acc.count += r.count,
-//       total:
-//     }), {
-//       name: "",
-//       count: 0,
-//       total: 0
-//     })
-//   );
+const multi = queries => Promise.all(queries.map(doSearch));
+
+const multiSearch = args =>
+  Promise.props({
+    name: args.name,
+    white: multi(args.white),
+    black: multi(args.black)
+  });
 
 async function main() {
   const total = await execAsync(
@@ -106,17 +104,23 @@ async function main() {
     .then(r => r["match count"]);
 
   const results = await Promise.all(
-    queries.map(q =>
-      doSearch(q).then(r => ({
-        ...r,
-        total: total,
-        pct: +(r.count / total).toFixed(2)
-      }))
-    )
+    queries.map(multiSearch)
+    // queries.map(q =>
+    //   doSearch(q).then(r => ({
+    //     ...r,
+    //     total: total,
+    //     pct: +(r.count / total).toFixed(2)
+    //   }))
+    // )
   );
-  results.forEach(r => {
-    console.log(r);
-  });
+  // results.forEach(r => {
+  //   console.log(r);
+  // });
+  console.log(results);
+  await writeFileAsync(
+    "../viz/src/keks.json",
+    JSON.stringify(results, null, 2)
+  );
 }
 
 main();

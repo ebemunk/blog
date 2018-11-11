@@ -1915,7 +1915,7 @@ d3-force@1:
     d3-quadtree "1"
     d3-timer "1"
 
-d3-format@1, d3-format@^1.2.0:
+d3-format@1, d3-format@^1.2.0, d3-format@^1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/d3-format/-/d3-format-1.3.2.tgz#6a96b5e31bcb98122a30863f7d92365c00603562"
   integrity sha512-Z18Dprj96ExragQ0DeGi+SYPQ7pPfRMtUXtsg/ChVIKNBCzjO8XYJvRTC1usblx52lqge56V5ect+frYTQc8WQ==
@@ -1981,7 +1981,7 @@ d3-scale-chromatic@1:
     d3-color "1"
     d3-interpolate "1"
 
-d3-scale@2:
+d3-scale@2, d3-scale@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/d3-scale/-/d3-scale-2.1.2.tgz#4e932b7b60182aee9073ede8764c98423e5f9a94"
   integrity sha512-bESpd64ylaKzCDzvULcmHKZTlzA/6DGSVwx7QSDj/EnX9cpSevsdiwdHFYI9ouo9tNBbV3v5xztHS2uFeOzh8Q==
@@ -4970,10 +4970,10 @@ react-popper@^1.0.2:
     typed-styles "^0.0.5"
     warning "^3.0.0"
 
-react-vis@^1.11.2:
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/react-vis/-/react-vis-1.11.2.tgz#706a56a78723a15a0b6f5823f8a33ade3d41d35d"
-  integrity sha512-9OAhIxPq7+QDVKOwZqUgjfNOxNVYRU9Uuo2PV2ANPjTdCV07uh1wkOcw5+GLb+0PvFzEjKDumynmku1V4kgNbg==
+react-vis@^1.11.4:
+  version "1.11.4"
+  resolved "https://registry.yarnpkg.com/react-vis/-/react-vis-1.11.4.tgz#f5d662d3439d45fd0f1f1186f725bf19b9b3a718"
+  integrity sha512-C/Uw0GKjN+Hriov6UD5HF6YaVqSq4j944z7IQZ/0pELtroHDowuyuxVc0myfT7G0SAoYwuvlIgNjxVi41l7bpQ==
   dependencies:
     d3-array "^1.2.0"
     d3-collection "^1.0.3"

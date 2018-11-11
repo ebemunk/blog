@@ -29,15 +29,7 @@ const Plot = ({
     onClick={() => (remember ? setRemember(false) : setRemember(true))}
     {...otherProps}
   >
-    <Crosshair
-      values={crosshair}
-      itemsFormat={d =>
-        d.map(dd => ({
-          title: 'y',
-          value: dd.y,
-        }))
-      }
-    />
+    <Crosshair values={crosshair} />
     <VerticalGridLines />
     <HorizontalGridLines />
     {/* <XAxis tickLabelAngle={-90} /> */}
@@ -46,23 +38,11 @@ const Plot = ({
     {React.Children.map(children, child => {
       if (!child) return null
       return React.cloneElement(child, {
-        onNearestX: val => {
-          if (!remember) setCrosshair([val])
+        onNearestX: (val, { index }) => {
+          setCrosshair([data.white[index], data.black[index]])
         },
       })
     })}
-    {/* <VerticalBarSeries
-      data={data}
-      onNearestX={val => {
-        if (!remember) setCrosshair([val])
-      }}
-    /> */}
-    {/* <LineSeries
-      data={data}
-      onNearestX={val => {
-        if (!remember) setCrosshair([val])
-      }}
-    /> */}
   </XYPlot>
 )
 
