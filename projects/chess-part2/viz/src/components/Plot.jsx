@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   XYPlot,
+  FlexibleWidthXYPlot,
   VerticalGridLines,
   HorizontalGridLines,
   XAxis,
@@ -15,15 +16,6 @@ const white60 = 'rgba(255,255,255,0.6)'
 const white80 = 'rgba(255,255,255,0.8)'
 const white100 = 'rgba(255,255,255,1)'
 
-const seasonColor = scaleOrdinal([
-  '#0081bd',
-  '#7a7ed3',
-  '#ce70c7',
-  '#ff669a',
-  '#ff7a5b',
-  '#ffa600',
-])
-
 const Plot = ({
   data,
   crosshairSeries,
@@ -35,76 +27,82 @@ const Plot = ({
   yAxis = {},
   crosshairProps = {},
   children,
+  width,
   ...otherProps
 }) => (
   <div
-    style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    }}
   >
-    <XYPlot
-      height={250}
-      width={250}
-      margin={{ bottom: 100 }}
-      onMouseLeave={() => {
-        if (!remember) setCrosshair([])
-      }}
-      onClick={() => setRemember(!remember)}
-      style={{
-        flexShrink: 0,
-      }}
-      animation
-      {...otherProps}
-    >
-      <Crosshair
-        values={crosshair}
+    <div style={{ width: width ? width : '100vw' }}>
+      <FlexibleWidthXYPlot
+        margin={{ bottom: 100 }}
+        onMouseLeave={() => {
+          if (!remember) setCrosshair([])
+        }}
+        onClick={() => setRemember(!remember)}
         style={{
-          line: {
-            background: 'white',
-          },
+          flexShrink: 0,
         }}
-        {...crosshairProps}
-      />
-      <VerticalGridLines style={{ stroke: white30 }} />
-      <HorizontalGridLines style={{ stroke: white30 }} />
-      {children}
-      <MarkSeries
-        size={0}
-        data={data}
-        color="red"
-        onNearestX={(val, { index }) => {
-          if (!remember) setCrosshair([val])
-        }}
-      />
-      <XAxis
-        style={{
-          title: {
-            fill: white100,
-            fontSize: '1.25rem',
-          },
-          ticks: {
-            fill: white80,
-          },
-          line: {
-            strokeWidth: 1,
-          },
-        }}
-        {...xAxis}
-      />
-      <YAxis
-        style={{
-          title: {
-            fill: white100,
-            fontSize: '1.25rem',
-          },
-          ticks: {
-            fill: white80,
-          },
-          line: {
-            strokeWidth: 1,
-          },
-        }}
-        {...yAxis}
-      />
-    </XYPlot>
+        animation
+        {...otherProps}
+      >
+        <Crosshair
+          values={crosshair}
+          style={{
+            line: {
+              background: 'white',
+            },
+          }}
+          {...crosshairProps}
+        />
+        <VerticalGridLines style={{ stroke: white30 }} />
+        <HorizontalGridLines style={{ stroke: white30 }} />
+        {children}
+        <MarkSeries
+          size={0}
+          data={data}
+          color="transparent"
+          onNearestX={(val, { index }) => {
+            if (!remember) setCrosshair([val, val])
+          }}
+          animation={false}
+        />
+        <XAxis
+          style={{
+            title: {
+              fill: white100,
+              fontSize: '1.25rem',
+            },
+            ticks: {
+              fill: white80,
+            },
+            line: {
+              strokeWidth: 1,
+            },
+          }}
+          {...xAxis}
+        />
+        <YAxis
+          style={{
+            title: {
+              fill: white100,
+              fontSize: '1.25rem',
+            },
+            ticks: {
+              fill: white80,
+            },
+            line: {
+              strokeWidth: 1,
+            },
+          }}
+          {...yAxis}
+        />
+      </FlexibleWidthXYPlot>
+    </div>
   </div>
 )
 

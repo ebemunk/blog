@@ -25,7 +25,6 @@ const GameEndMaterialDiff = ({ abs, setAbs, ply, setPly }) => {
       <Plot
         data={vdata}
         height={400}
-        width={1500}
         xAxis={{
           title: 'Ply (half-move)',
         }}

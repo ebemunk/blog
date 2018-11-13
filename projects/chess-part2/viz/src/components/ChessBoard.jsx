@@ -12,45 +12,47 @@ const Square = compose(
   withState('toggle', 'setToggle', false),
 )(
   //
-  ({ width, data, length, black, tooltip, setTooltip, toggle, setToggle }) => (
+  ({
+    name,
+    x,
+    y,
+    width,
+    data,
+    opacity,
+    black,
+    tooltip,
+    setTooltip,
+    toggle,
+    setToggle,
+  }) => (
     <Manager tag={false}>
       <Reference>
         {({ ref }) => (
-          <div
+          <g
             ref={ref}
-            style={{
-              width,
-              height: width,
-              // backgroundColor: black ? 'black' : 'white',
-              // backgroundColor: 'black',
-              background: black
-                ? `repeating-linear-gradient(45deg, #888, #888 1px, white 1px, white 4px)`
-                : 'white',
-              // position: 'relative',
-              // display: 'flex',
-              // alignItems: 'center',
-              // justifyContent: 'center',
-            }}
             onMouseEnter={() => !toggle && setTooltip(true)}
             onMouseOut={() => !toggle && setTooltip(false)}
-            onClick={() => setToggle(!toggle)}
+            // onClick={() => setToggle(!toggle)}
           >
-            <div
+            <rect
+              x={x}
+              y={y}
+              width={width}
+              height={width}
+              fill="white"
               style={{
-                pointerEvents: 'none',
-                // width: length,
-                // height: length,
-                width: width,
-                height: width,
-                opacity: length,
-                backgroundColor: 'steelblue',
-                // position: 'absolute',
-                // left: '50%',
-                // top: '50%',
-                // transform: 'translate(-50%, -50%)',
+                mask: black ? 'url(#mask-stripe)' : '',
               }}
             />
-          </div>
+            <rect
+              x={x}
+              y={y}
+              width={width}
+              height={width}
+              fill="steelblue"
+              opacity={opacity}
+            />
+          </g>
         )}
       </Reference>
       {tooltip &&
@@ -61,9 +63,14 @@ const Square = compose(
                 ref={ref}
                 data-placement={placement}
                 style={{ ...style, pointerEvents: 'none' }}
-                className={css.popper}
+                className={`${css.popper} rv-crosshair__inner__content`}
               >
-                <div>{format(',')(data)}</div>
+                <div>
+                  <div>
+                    <strong>Square: {name}</strong>
+                  </div>
+                  <div>Count: {format(',')(data)}</div>
+                </div>
                 <div
                   ref={arrowProps.ref}
                   style={arrowProps.style}
@@ -79,37 +86,66 @@ const Square = compose(
 )
 
 const ChessBoard = ({ width, data }) => {
-  // const scale = scaleSqrt()
   const scale = scaleLinear()
     .range([0, 1])
-    // .range([0, width / 8])
     .domain(extent(data))
 
   return (
-    <div
-      style={{
-        width,
-        height: width,
-        display: 'flex',
-        flexWrap: 'wrap',
-        border: '1px solid black',
-      }}
-    >
-      {data.map((d, i) => {
-        const x = i % 8
-        const y = Math.floor(i / 8)
-        const black = (x + y) % 2 === 1
-        return (
-          <Square
-            key={i}
-            length={scale(d)}
-            data={d}
-            black={black}
-            width={width / 8}
-          />
-        )
-      })}
+    <div style={{}}>
+      <svg width={width} height={width}>
+        <defs>
+          <pattern
+            id="pattern-stripe"
+            width="4"
+            height="4"
+            patternUnits="userSpaceOnUse"
+            patternTransform="rotate(45)"
+          >
+            <rect
+              width="3"
+              height="4"
+              transform="translate(0,0)"
+              fill="white"
+            />
+          </pattern>
+          <mask id="mask-stripe">
+            <rect
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              fill="url(#pattern-stripe)"
+            />
+          </mask>
+        </defs>
+
+        {data.map((d, i) => {
+          const file = i % 8
+          const rank = Math.floor(i / 8)
+          const black = (file + rank) % 2 === 1
+          const sqWidth = width / 8
+
+          return (
+            <Square
+              name={'abcdefgh'[file] + '12345678'[7 - rank]}
+              x={file * sqWidth}
+              y={rank * sqWidth}
+              width={sqWidth}
+              black={black}
+              key={i}
+              opacity={scale(d)}
+              data={d}
+            />
+          )
+        })}
+      </svg>
     </div>
   )
 }
-export default ChessBoard
+
+import { hot } from 'react-hot-loader'
+
+export default compose(
+  hot(module),
+  pure,
+)(ChessBoard)

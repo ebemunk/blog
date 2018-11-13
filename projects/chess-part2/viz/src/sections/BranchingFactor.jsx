@@ -20,7 +20,6 @@ const BranchingFactor = ({ ply, setPly }) => {
       </label>
       <Plot
         height={400}
-        width={1500}
         data={vdata}
         xAxis={{
           title: 'Ply (half-move)',

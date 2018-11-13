@@ -21,7 +21,6 @@ const GameEndMaterialCount = ({ ply, setPly }) => {
       <Plot
         data={vdata}
         height={400}
-        width={1500}
         xAxis={{
           title: 'Ply (half-move)',
         }}
@@ -35,7 +34,7 @@ const GameEndMaterialCount = ({ ply, setPly }) => {
           }),
           itemsFormat: d => [
             {
-              title: 'Avg. Count.',
+              title: 'Avg. Count',
               value: format('.3')(d[0].y),
             },
           ],

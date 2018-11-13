@@ -1,4 +1,5 @@
 import { addIndex, map, evolve, mapObjIndexed, pipe, values } from 'ramda'
+import { histogram } from 'd3-array'
 
 import data from '/Users/ebemunk/proj/go/src/github.com/ebemunk/pgnstats/data/mb.json'
 
@@ -8,7 +9,7 @@ const mapToXY = mapIndexed((v, k) => ({
   y: v,
 }))
 const mapObjToXY = pipe(
-  mapObjIndexed((y, x) => ({ x, y })),
+  mapObjIndexed((y, x) => ({ x: +x, y })),
   values,
 )
 
@@ -68,7 +69,21 @@ export default evolve({
   MaterialDiff: mapToXY,
   GameEndMaterialCount: mapToXY,
   GameEndMaterialDiff: mapToXY,
-  Ratings: mapObjToXY,
+  Ratings: ratings => {
+    const d = mapObjToXY(ratings)
+    const sam = []
+    d.forEach(d => {
+      for (let i = 0; i < d.y; i++) sam.push(d.x)
+    })
+    const hist = histogram()
+    const bins = hist(sam)
+    return bins.map(bin => ({
+      x0: bin.x0,
+      x: bin.x1,
+      y0: 0,
+      y: bin.length,
+    }))
+  },
   Years: mapObjToXY,
 })({
   //

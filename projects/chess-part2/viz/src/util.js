@@ -8,3 +8,5 @@ export const colorScale = scaleOrdinal([
   '#ff7a5b',
   '#ffa600',
 ])
+
+export const whiteblack = scaleOrdinal(['white', '#777'])
