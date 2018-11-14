@@ -9,6 +9,7 @@ import ChessBoard from './Chessboard'
 import { whiteblack } from '../util'
 
 import { hot } from 'react-hot-loader'
+import ButtonGroup from './ButtonGroup'
 
 const BoardViz = compose(
   //
@@ -79,12 +80,14 @@ const BoardViz = compose(
           <VerticalBarSeries
             data={data.byPiece[0].filter(d => filter.includes(d.x))}
             color={whiteblack(0)}
+            barWidth={filter.length < 2 ? 0.2 : 0.8}
           />
         )}
         {(color === 'All' || color === 'Black') && (
           <VerticalBarSeries
             data={data.byPiece[1].filter(d => filter.includes(d.x))}
             color={whiteblack(1)}
+            barWidth={filter.length < 2 ? 0.2 : 0.8}
           />
         )}
       </Plot>
@@ -138,11 +141,15 @@ const Toggle = compose(
     style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
   >
     <div>
-      {['All', 'White', 'Black'].map(k => (
-        <button key={k} onClick={() => setColor(k)}>
-          {k}
-        </button>
-      ))}
+      <ButtonGroup
+        options={[
+          { name: 'All', value: 'All' },
+          { name: 'White', value: 'White' },
+          { name: 'Black', value: 'Black' },
+        ]}
+        onChange={v => setColor(v)}
+        selected={color}
+      />
     </div>
     <BoardViz data={data} color={color} filter={filter} />
   </div>

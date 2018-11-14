@@ -21,6 +21,7 @@ const Ratings = ({}) => {
         }}
         yAxis={{
           title: 'Count',
+          tickFormat: d => format('.2s')(d),
         }}
         crosshairProps={{
           titleFormat: d => ({

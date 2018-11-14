@@ -42,3 +42,21 @@ render(
 )
 
 render(<BoardViz data={data.Heatmaps.FirstBlood} />, '#FirstBlood')
+
+import Scouts from './sections/Scout'
+
+render(<Scouts filter={['Pv', 'PPv', 'PPPv']} />, '#imbaP')
+
+render(<Scouts filter={['Nv', 'Bv', 'Rv', 'Qv']} />, '#imbaPiece')
+
+render(<Scouts filter={['NvP', 'NvPP', 'NvPPP', 'NvPPPP']} />, '#imbaN')
+
+render(<Scouts filter={['BvP', 'BvPP', 'BvPPP', 'BvPPPP']} />, '#imbaB')
+
+render(<Scouts filter={['NvB', 'NvR', 'NvQ', 'BvR', 'BvQ']} />, '#imbaMinor')
+
+render(<Scouts filter={['RvN', 'RvB', 'RvPPP']} />, '#imbaExchange')
+
+render(<Scouts filter={['NBvR', 'NNvR', 'BBvR']} />, '#imba2mr')
+
+render(<Scouts filter={['QvR', 'QvRR']} />, '#imbaMajor')
