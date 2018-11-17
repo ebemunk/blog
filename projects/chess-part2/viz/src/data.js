@@ -1,7 +1,7 @@
 import { addIndex, map, evolve, mapObjIndexed, pipe, values } from 'ramda'
 import { histogram } from 'd3-array'
 
-import data from '/Users/ebemunk/proj/go/src/github.com/ebemunk/pgnstats/data/mb.json'
+import data from '/Users/ebemunk/proj/go/src/github.com/ebemunk/pgnstats/data/data.json'
 
 const mapIndexed = addIndex(map)
 const mapToXY = mapIndexed((v, k) => ({

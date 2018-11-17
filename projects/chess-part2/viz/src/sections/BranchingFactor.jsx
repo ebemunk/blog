@@ -3,7 +3,7 @@ import { LineSeries, MarkSeries } from 'react-vis'
 import { format } from 'd3-format'
 
 import data from '../data'
-import { colorScale } from '../util'
+import { colorScale, whiteblack } from '../util'
 import Plot from '../components/Plot'
 
 const BranchingFactor = ({ ply, setPly }) => {
@@ -44,12 +44,12 @@ const BranchingFactor = ({ ply, setPly }) => {
         <MarkSeries
           data={vdata.filter((d, i) => i % 2 === 0)}
           size={2}
-          color="white"
+          color={whiteblack(0)}
         />
         <MarkSeries
           data={vdata.filter((d, i) => i % 2 === 1)}
           size={2}
-          color="#777"
+          color={whiteblack(1)}
         />
       </Plot>
     </div>

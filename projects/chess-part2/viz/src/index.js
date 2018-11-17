@@ -10,11 +10,13 @@ import GameEndMaterialDiff from './sections/GameEndMaterialDiff'
 import GameEndMaterialCount from './sections/GameEndMaterialCount'
 import BranchingFactor from './sections/BranchingFactor'
 import Ratings from './sections/Ratings'
+import Years from './sections/Years'
 
 render(<GameEndMaterialDiff />, '#GameEndMaterialDiff')
 render(<GameEndMaterialCount />, '#GameEndMaterialCount')
 render(<BranchingFactor />, '#BranchingFactor')
 render(<Ratings />, '#Ratings')
+render(<Years />, '#Years')
 
 import BoardViz from './components/BoardViz'
 import data from './data'
@@ -60,3 +62,7 @@ render(<Scouts filter={['RvN', 'RvB', 'RvPPP']} />, '#imbaExchange')
 render(<Scouts filter={['NBvR', 'NNvR', 'BBvR']} />, '#imba2mr')
 
 render(<Scouts filter={['QvR', 'QvRR']} />, '#imbaMajor')
+
+import PawnPaths from './sections/PawnPaths'
+
+render(<PawnPaths />, '#PawnPaths')

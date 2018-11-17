@@ -7,8 +7,6 @@ import { whiteblack } from '../util'
 
 import datax from '../keks.json'
 
-console.log('data', datax)
-
 const Scout = ({ data }) => (
   <div
     style={{
