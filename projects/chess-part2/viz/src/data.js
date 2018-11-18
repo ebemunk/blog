@@ -85,6 +85,10 @@ export default evolve({
     }))
   },
   Years: mapObjToXY,
+  Positions: pipe(
+    mapObjIndexed((y, x) => ({ x, y })),
+    values,
+  ),
 })({
   //
   ...data,

@@ -19,6 +19,7 @@ const Years = ({}) => {
           title: 'Count',
           tickFormat: d => format('.2s')(d),
         }}
+        xType="ordinal"
         crosshairProps={{
           titleFormat: d => ({
             title: 'Year',

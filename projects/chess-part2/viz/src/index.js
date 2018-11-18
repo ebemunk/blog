@@ -66,3 +66,7 @@ render(<Scouts filter={['QvR', 'QvRR']} />, '#imbaMajor')
 import PawnPaths from './sections/PawnPaths'
 
 render(<PawnPaths />, '#PawnPaths')
+
+import Positions from './sections/Positions'
+
+render(<Positions />, '#Positions')
