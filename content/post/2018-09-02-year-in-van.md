@@ -1,6 +1,6 @@
 +++
 date = "2018-09-01"
-draft = false
+draft = true
 title = "One Year in Vancouver: Visualizing Events"
 slug = "one-year-in-van"
 tags = ["data visualization", "maps", "vancouver", "georgia straight"]
@@ -30,7 +30,7 @@ There's an interesting ramp-up effect to Saturday, when most events start off. I
 
 ## Locations
 
-This chart shows the top locations that events take place in. Some were surprising to see, others not so much.
+This chart shows the top locations that events take place in. Some were surprising to see (The Art of Loving!), others not so much.
 
 <div id="places"></div>
 
