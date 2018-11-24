@@ -71,9 +71,16 @@ export default async function details(args, opts) {
           row,
           deets,
         })
-        address = await getPlace(deets[0])
-        // await update(deets[0], false, row.id)
-        // return false
+        try {
+          address = await getPlace(deets[0])
+        } catch (e) {
+          log.verbose({
+            type: 'error geocoding',
+            address: address,
+            error: e.message.substr(0, 25),
+          })
+          return false
+        }
       }
 
       let geo
