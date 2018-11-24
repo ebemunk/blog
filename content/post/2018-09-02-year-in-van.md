@@ -1,6 +1,6 @@
 +++
 date = "2018-09-01"
-draft = false
+draft = true
 title = "One Year in Vancouver: Visualizing Events"
 slug = "one-year-in-van"
 tags = ["data visualization", "maps", "vancouver", "georgia straight"]
