@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.ebemunk.com/one-year-in-van/</loc>
-    <lastmod>2018-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.ebemunk.com/lost-text-mining/</loc>
     <lastmod>2018-09-01T00:00:00+00:00</lastmod>
   </url>
@@ -35,12 +30,6 @@
   </url>
   
   <url>
-    <loc>https://blog.ebemunk.com/tags/georgia-straight/</loc>
-    <lastmod>2018-09-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.ebemunk.com/tags/javascript/</loc>
     <lastmod>2016-01-21T04:56:00-07:00</lastmod>
     <priority>0</priority>
@@ -48,12 +37,6 @@
   
   <url>
     <loc>https://blog.ebemunk.com/tags/lost/</loc>
-    <lastmod>2018-09-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ebemunk.com/tags/maps/</loc>
     <lastmod>2018-09-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -95,12 +78,6 @@
   
   <url>
     <loc>https://blog.ebemunk.com/</loc>
-    <lastmod>2018-09-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.ebemunk.com/tags/vancouver/</loc>
     <lastmod>2018-09-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
