@@ -1,35 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Data Visualization on Thinking Through the Party</title>
-    <link>https://blog.ebemunk.com/tags/data-visualization/</link>
-    <description>Recent content in Data Visualization on Thinking Through the Party</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.ebemunk.com/tags/data-visualization/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Text Mining LOST</title>
-      <link>https://blog.ebemunk.com/lost-text-mining/</link>
-      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.ebemunk.com/lost-text-mining/</guid>
-      <description>We&amp;rsquo;re text mining the transcripts of the TV show LOST, and visualizing them!
-I wondered how much the dialogue text contributes to a TV show, and whether you would be able to &amp;ldquo;detect&amp;rdquo; things in it, looking only at the words that the characters speak, removed from how their actors looked or sounded like. How much of the writing shows through and contributes, especially in this &amp;ldquo;mass production&amp;rdquo; mentality of similar entertainment media?</description>
-    </item>
-    
-    <item>
-      <title>A Visual Look at 2 Million Chess Games</title>
-      <link>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link>
-      <pubDate>Wed, 02 Mar 2016 11:18:33 -0700</pubDate>
-      
-      <guid>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid>
-      <description>I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.
-We&amp;rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Visualization on Thinking Through the Party</title><link>https://blog.ebemunk.com/tags/data-visualization/</link><description>Recent content in Data Visualization on Thinking Through the Party</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.ebemunk.com/tags/data-visualization/index.xml" rel="self" type="application/rss+xml"/><item><title>Text Mining LOST</title><link>https://blog.ebemunk.com/lost-text-mining/</link><pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate><guid>https://blog.ebemunk.com/lost-text-mining/</guid><description>We&amp;rsquo;re text mining the transcripts of the TV show LOST, and visualizing them!
+I wondered how much the dialogue text contributes to a TV show, and whether you would be able to &amp;ldquo;detect&amp;rdquo; things in it, looking only at the words that the characters speak, removed from how their actors looked or sounded like. How much of the writing shows through and contributes, especially in this &amp;ldquo;mass production&amp;rdquo; mentality of similar entertainment media?</description></item><item><title>A Visual Look at 2 Million Chess Games</title><link>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link><pubDate>Wed, 02 Mar 2016 11:18:33 -0700</pubDate><guid>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid><description>I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.
+We&amp;rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games.</description></item></channel></rss>
