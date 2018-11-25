@@ -118,9 +118,6 @@ article.article ul {
   margin: 0 auto 1.3rem auto;
   list-style-type: square;
 }
-article.article code {
-  margin: 0 0.2rem;
-}
 .disqus {
   max-width: 40rem;
   margin: 0 auto;
@@ -156,5 +153,5 @@ article.article code {
 .article-list .item .summary {
   max-width: 30rem;
   line-height: 1.68rem;
-  padding: 0 0.3rem;
+  padding: 0 0 0 1rem;
 }

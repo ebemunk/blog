@@ -373,4 +373,5 @@ p {
   top: 50.5%;
   left: 50.25%;
   transform: translate(-50%, -50%);
+  width: 175px;
 }
