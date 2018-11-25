@@ -1,34 +1,23 @@
 {{ partial "header.html" . }}
 
-<div class="container single">
-	<div class="row">
-		<div class="column">
-			<article class="article">
-				<h1>{{ .Title }}</h1>
-				<section class="toc">
-					<header>Table Of Contents</header>
-					<div>{{ .TableOfContents }}</div>
-				</section>
-				<div class="date-and-tags">
-					<time title='{{ $.Date.Format "2006-01-02 @ 15:04pm"}}'>{{ $.Date.Format "2 January 2006" }}</time>
-					on {{ partial "tags.html" . }}
-				</div>
-				{{ .Content }}
-			</article>
-		</div>
-	</div>
-	<div class="row">
-		<div class="column share">
-			<h5>Share this post</h5>
-			<p><small>I'm pretty sure you know how to share things on social media, so I'll spare you the 50 different obnoxious buttons. If you liked this, feel free to share anywhere, it helps me out.</small></p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="column">
-			{{ template "_internal/disqus.html" . }}
-		</div>
-	</div>
+<h1>{{ .Title }}</h1>
+
+<div class="tags-and-date">
+	<time title='{{ $.Date.Format "2006-01-02 @ 15:04pm"}}'>{{ $.Date.Format "2 January 2006" }}</time>
+	{{ partial "tags.html" . }}
 </div>
 
+<article class="article">
+	{{ .Content }}
+</article>
+
+<div class="share">
+	<h4>Share this post</h4>
+	<p>I'm pretty sure you know how to share things on social media, so I'll spare you the 50 different obnoxious buttons. If you liked this, feel free to share anywhere, it helps me out.</p>
+</div>
+
+<div class="disqus">
+	{{ template "_internal/disqus.html" . }}
+</div>
 
 {{ partial "footer.html" . }}

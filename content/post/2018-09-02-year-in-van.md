@@ -44,8 +44,8 @@ The visualizations were made with React, Mapbox, and d3. [Here](https://github.c
 
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
 
-<!-- <script src="http://localhost:9001/bundle.js"></script> -->
-<script src="bundle.js"></script>
+<script src="http://localhost:9001/bundle.js"></script>
+<!-- <script src="bundle.js"></script> -->
 
 <style>
 #map {

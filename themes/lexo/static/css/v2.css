@@ -1,0 +1,160 @@
+html {
+  height: 100%;
+}
+body {
+  background: #282c34;
+  color: white;
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+header.site-header {
+  height: 180px;
+  background: url("../img/wildpianoparty.png");
+  background-position: 50% -20px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 85%;
+  border-bottom: 4px solid black;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-family: "Marcellus SC";
+  color: #c13422;
+}
+header.site-header:hover {
+  background-color: #333842;
+}
+footer.site-footer {
+  height: 7em;
+  border-top: 4px solid black;
+  background: url("../img/wildpianoparty.png");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 85%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+footer.site-footer:hover {
+  background-color: #333842;
+}
+footer.site-footer p {
+  margin: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+footer.site-footer p:first-child {
+  margin-right: 50rem;
+}
+h1 {
+  color: #d19a66;
+  margin: 1.5rem auto;
+  font-size: 3rem;
+  font-weight: 300;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #d19a66;
+  margin: 1.3rem auto;
+  max-width: 40rem;
+}
+a,
+a:visited,
+a:active {
+  color: white;
+  text-decoration: underline solid #7cb34b;
+  transition: color 400ms;
+}
+a:hover,
+a:visited:hover,
+a:active:hover {
+  color: #7cb34b;
+}
+blockquote {
+  box-sizing: border-box;
+  max-width: 40rem;
+  margin: 0 auto;
+  border-left: 3px solid white;
+  padding-left: 2rem;
+  font-style: italic;
+}
+.tags-and-date {
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1.68rem;
+  font-size: 0.75rem;
+  color: #d9d9d9;
+}
+article.article p,
+.share p {
+  max-width: 40rem;
+  margin: 0 auto 1.3rem auto;
+  font-size: 1rem;
+  line-height: 1.68rem;
+}
+article.article ul {
+  max-width: 40rem;
+  margin: 0 auto 1.3rem auto;
+  list-style-type: square;
+}
+article.article code {
+  margin: 0 0.2rem;
+}
+.disqus {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.article-list .item h1 {
+  max-width: 40rem;
+  font-size: 2rem;
+}
+.article-list .item h1 a {
+  text-decoration: none;
+  color: #d19a66;
+  transition: color;
+}
+.article-list .item h1 a:hover {
+  color: #c776df;
+}
+.article-list .item .split2 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.article-list .item .image {
+  max-width: 10rem;
+}
+.article-list .item .image img {
+  width: 100%;
+}
+.article-list .item .summary {
+  max-width: 30rem;
+  line-height: 1.68rem;
+  padding: 0 0.3rem;
+}
