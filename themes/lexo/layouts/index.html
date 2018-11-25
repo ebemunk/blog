@@ -4,10 +4,13 @@
 	{{ range $key, $val := where .Paginator.Pages "Params.hidden" "ne" "true" }}
 		<article class="item">
 			<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-
+			<div class="tags-and-date">
+				<time title='{{ $val.Date.Format "2006-01-02 @ 15:04pm"}}'>{{ $val.Date.Format "2 January 2006" }}</time>
+				{{ partial "tags.html" . }}
+			</div>
 			<div class="split2">
 				<div class="image">
-					<img src="{{ .Params.image }}" />
+					<img src="/{{ .Params.image }}" />
 				</div>
 				<div class="summary">
 					{{ if .Params.summary }}
@@ -17,10 +20,6 @@
 					{{ end }}
 				</div>
 			</div>
-			<!-- <div class="date-and-tags">
-				<time title='{{ .Date.Format "2006-01-02 @ 15:04pm"}}'>{{ .Date.Format "2 January 2006" }}</time>
-				on {{ partial "tags.html" . }}
-			</div> -->
 		</article>
 
 		{{ if ne $key 2 }}

@@ -50,6 +50,7 @@ footer.site-footer {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  margin-top: 2rem;
 }
 footer.site-footer:hover {
   background-color: #333842;
@@ -58,7 +59,7 @@ footer.site-footer p {
   margin: 1rem;
   font-size: 0.8rem;
   font-weight: bold;
-  color: white;
+  color: #9eabb3;
 }
 h1 {
   color: #d19a66;
@@ -144,6 +145,10 @@ article.article .footnotes hr {
 .article-list .item h1 a:hover {
   color: #c776df;
 }
+.article-list .item .tags-and-date {
+  text-align: left;
+  margin: -1rem auto 1rem auto;
+}
 .article-list .item .split2 {
   display: -ms-flexbox;
   display: flex;
@@ -164,4 +169,22 @@ article.article .footnotes hr {
   max-width: 30rem;
   line-height: 1.68rem;
   padding: 0 0 0 1rem;
+}
+.article-list hr {
+  border: none;
+  border-top-color: #9eabb3;
+  border-bottom: 1px solid #9eabb3;
+  height: 0.312rem;
+  position: relative;
+  overflow: visible;
+  margin: 2rem 0;
+}
+.article-list hr:after {
+  content: "❦";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  background: #282c34;
 }

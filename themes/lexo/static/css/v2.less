@@ -61,6 +61,7 @@ footer.site-footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 
   &:hover {
     background-color: @light-grey;
@@ -70,7 +71,7 @@ footer.site-footer {
     margin: 1rem;
     font-size: 0.8rem;
     font-weight: bold;
-    color: @white;
+    color: @faded-gray;
   }
 }
 
@@ -180,6 +181,11 @@ article.article {
       }
     }
 
+    .tags-and-date {
+      text-align: left;
+      margin: -1rem auto 1rem auto;
+    }
+
     .split2 {
       display: flex;
       justify-content: center;
@@ -201,6 +207,26 @@ article.article {
       max-width: 30rem;
       line-height: 1.68rem;
       padding: 0 0 0 1rem;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top-color: @faded-gray;
+    border-bottom: 1px solid @faded-gray;
+    height: 0.312rem;
+    position: relative;
+    overflow: visible;
+    margin: 2rem 0;
+
+    &:after {
+      content: "❦";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.5rem;
+      background: @dark-grey;
     }
   }
 }
