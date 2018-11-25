@@ -71,10 +71,6 @@ footer.site-footer {
     font-size: 0.8rem;
     font-weight: bold;
     color: @white;
-
-    &:first-child {
-      margin-right: 50rem;
-    }
   }
 }
 
@@ -137,6 +133,22 @@ article.article {
     max-width: @maxwidth;
     margin: 0 auto 1.3rem auto;
     list-style-type: square;
+  }
+
+  .footnotes {
+    max-width: @maxwidth;
+    margin: 0 auto;
+    font-size: 0.625rem;
+    color: @faded-gray;
+    line-height: 1rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    hr {
+      border: 0.5px solid @faded-gray;
+    }
   }
 }
 

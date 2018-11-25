@@ -123,7 +123,7 @@ export default class Individual extends React.Component {
             <div>{format(',')(profile.profile.word_count)} words analyzed</div>
           </div>
           <div style={{ flexBasis: '550px' }}>
-            <table style={{ fontSize: '1.2rem' }}>
+            <table style={{ fontSize: '0.75rem' }}>
               <thead>
                 <tr>
                   <th>Trait</th>
@@ -174,7 +174,7 @@ export default class Individual extends React.Component {
             <div
               key={cp.name}
               style={{
-                fontSize: '1.1rem',
+                fontSize: '0.687rem',
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'column',

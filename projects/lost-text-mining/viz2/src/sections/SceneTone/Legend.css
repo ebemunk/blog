@@ -1,6 +1,6 @@
 .legend {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-shrink: 0;
 }
 
@@ -9,36 +9,36 @@
   justify-content: center;
   border: 1px solid slategray;
   border-radius: 5px;
-  padding: 1rem;
+  padding: 0.625rem;
   position: relative;
 }
 
 .catLabel {
   position: absolute;
-  top: -2rem;
+  top: -1.25rem;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .box {
-  height: 2rem;
-  width: 2rem;
+  height: 1.25rem;
+  width: 1.25rem;
   border-width: 2px;
   border-style: solid;
 }
 
 .tone {
   display: flex;
-  margin: 0 2rem;
+  margin: 0 1.25rem;
   align-items: center;
   cursor: pointer;
 }
 
 .key {
-  margin-left: 1rem;
-  font-size: 1rem;
+  margin-left: 0.625rem;
+  font-size: 0.625rem;
   opacity: 0.5;
 
   &.selected {
@@ -53,11 +53,11 @@
 .buttons {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .toggle {
-  margin-left: 2rem;
+  margin-left: 1.25rem;
 }
 
 .wrap {

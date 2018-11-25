@@ -60,9 +60,6 @@ footer.site-footer p {
   font-weight: bold;
   color: white;
 }
-footer.site-footer p:first-child {
-  margin-right: 50rem;
-}
 h1 {
   color: #d19a66;
   margin: 1.5rem auto;
@@ -117,6 +114,19 @@ article.article ul {
   max-width: 40rem;
   margin: 0 auto 1.3rem auto;
   list-style-type: square;
+}
+article.article .footnotes {
+  max-width: 40rem;
+  margin: 0 auto;
+  font-size: 0.625rem;
+  color: #9eabb3;
+  line-height: 1rem;
+}
+article.article .footnotes a {
+  text-decoration: none;
+}
+article.article .footnotes hr {
+  border: 0.5px solid #9eabb3;
 }
 .disqus {
   max-width: 40rem;

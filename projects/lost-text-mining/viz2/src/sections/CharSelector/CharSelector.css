@@ -1,12 +1,12 @@
 .selector {
-  padding: 1rem;
+  padding: 10px;
   display: flex;
   align-items: center;
-  height: 7rem;
+  height: 70px;
 
   & :global(.Select-multi-value-wrapper) {
-    width: 15rem;
-    height: 5.5rem;
+    width: 150px;
+    height: 55px;
     overflow-y: scroll;
     display: flex;
     flex-wrap: wrap;
@@ -16,32 +16,32 @@
     border-left: none;
     border-right: none;
     border-radius: 0;
-    height: 5.5rem;
+    height: 55px;
     display: flex;
   }
 
   & :global(.Select-value) {
     font-size: 1.2rem;
-    height: 2.2rem;
-    margin: 0.1rem;
+    height: 22px;
+    margin: 1px;
   }
 
   & :global(.Select-input) {
     font-size: 1.2rem;
-    height: 2.2rem;
-    margin: 0.1rem;
+    height: 22px;
+    margin: 1px;
 
     & input {
       padding: 0;
       margin: 0;
-      height: 2.2rem;
+      height: 22px;
     }
   }
 }
 
 .color {
-  width: 1rem;
-  height: 5.5rem;
+  width: 10px;
+  height: 55px;
   border: 1px solid;
 }
 
@@ -55,19 +55,14 @@
   z-index: 2;
 }
 
-.removeButton {
+.button {
   composes: button from 'components/ButtonGroup/ButtonGroup.css';
-  height: 5.5rem;
+  height: 55px;
+  width: 20px;
   padding: 0;
-
-  & button {
-    height: 5.5rem;
-    width: 2rem;
-    padding: 0;
-    margin: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
+  margin: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .addButton {

@@ -9,19 +9,11 @@ image = "img/lost-text-mining.png"
 
 We're text mining the transcripts of the TV show LOST, and visualizing them!
 
-I wondered how much the dialogue text contributes to a TV show, and whether you would be able to "detect" things in it, looking only at the words that the characters speak, removed from how their actors looked or sounded like. How much of the writing shows through and contributes, especially in this "mass production" mentality of similar entertainment media?
-
-This thought was the initial spark behind this post. It's taken so long to finish that I'm not even sure what kind of question I was trying to answer, you be the judge. In that process I saw some cool patterns that I want to share with you.
-
 I retrieved and parsed the transcripts of LOST from Lostpedia[^lostpedia] and used a few different tools to look at this data.
 
 [^lostpedia]: http://lostpedia.wikia.com/wiki/Portal:Transcripts
 
-One thing to keep in mind is that this analysis is on only the text that the characters speak. The transcriptions contain scene descriptions, stage directions, and other misc. comments. None of that text is included. So when I mention the "writing" of the show, I mean in the context of what the characters speak only, the dialogue lines. Of course there is a lot more to the writing than just the dialogue.
-
-Now it might come as a surprise (coming from a guy who is writing a giant essay on LOST) that I've only seen the first season, back when it came out, and am not a fan of the show in particular. The decision to analyze this text was mostly because the transcripts of tv shows are rarely available publicly, and LOST was one of the only that I could find, that was also somewhat popular. I think I would want to analyze Westworld or Game of Thrones in the same manner, but who'd have thought it would be so hard to find transcripts online?
-
-All that to say is I am not a LOST connoisseur, so take these visualizations at their face value and not as some objective judgement about your favorite LOST character or writer. I'm not an authority on LOST, or on text mining, just in it for the visualizations.
+One thing to keep in mind is that this analysis is on only the text that the characters speak. I'm not a big LOST connoisseur, so take these visualizations at their face value and not as some objective judgement about your favorite LOST character or writer. I'm not an authority on LOST, or on text mining.
 
 So strap yourselves in for a disgustingly deep dive of this influential TV show, in what I should have titled "i've finally lost it".
 
@@ -38,8 +30,6 @@ Let's look at some general metrics first, the chart below shows the total number
 <div id="word-count" class="viz"></div>
 
 S3-E2 is the episode with the highest density, at 28%. The average is somewhere around 23%. There also seems to be a typical slump in word count towards mid-season. Funny enough S1-E1, maybe the most gripping episode for the viewers was also one of the shortest, in terms of word count.
-
-Simple stuff, nothing super interesting here, but it will provide some more context for things that are coming up.
 
 ## Characters
 
@@ -82,17 +72,7 @@ Given a chunk of text, Watson will generate a "personality profile"[^personality
 [^personality-profile]: https://console.bluemix.net/docs/services/personality-insights/science.html
 [^big5]: https://en.wikipedia.org/wiki/Big_Five_personality_traits
 
-Even though the show mostly revolves around 8 characters, I want to include more of the text, so I picked the top 25 speakers in the show and fed their lines in. You can select a specific character or just browse through with the buttons below.
-
-Since the values for the Big-5 are population percentiles, I wanted to see which (if any) characters are "different". Population average refers to the average values for all the other analyzed characters. Difference from 50th percentile refers to the difference from Watson's own sample population. Lets first look at the characters one by one and not worry about comparing these characters to each other just yet.
-
-<div id="individual" class="viz"></div>
-
-Some interesting tidbits: most characters place high in Agreeableness and low on Extraversion. `WALT`, `EKO` and `ANA LUCIA` stand out in terms of their difference to population average. `ANA LUCIA` is likely to read financial investment books and volunteer for social causes, `FARADAY` is likely to consider starting a business in next few years, most are likely to read entertainment magazines and prefer safety when buying automobiles.
-
-While I think the Big-5, Needs and Values percentiles are useful, the Consumption Preferences section seems to be somewhat tacked on to make such services useful and palatable to corporations. Not sure if any of it applies to any of the characters, but I found it kind of funny, in a morbid "this kind of online profiling changes the fate of nations" kind of way.
-
-More than simply looking at individual characters though, I wanted to be able to compare random groups/populations together. This next visualisation shows the Big-5, all the individual traits, values and needs. You can pick a single character, or compare multiple and groups of characters. I really hope you take some time to play around with it, I found some comparisons very interesting.
+I wanted to be able to compare random groups/populations together. This next visualisation shows the Big-5, all the individual traits, values and needs. You can pick a single character, or compare multiple and groups of characters. I really hope you take some time to play around with it, I found some comparisons very interesting.
 
 Here are some examples to get you started: <a href="" onclick="charSelect_menWomen(event)">men vs women</a>, <a href="" onclick="charSelect_sunjin(event)">`SUN` vs `JIN`</a>, <a href="" onclick="charSelect_everyone(event)">everyone</a>, <a href="" onclick="charSelect_kateJackSawyer(event)">`KATE`, `JACK`, `SAWYER`</a>.
 
