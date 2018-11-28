@@ -37,10 +37,10 @@
     "ramda": "^0.25.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-jss": "^8.6.1",
     "react-mapbox-gl": "^3.9.2",
     "react-over-scroll": "^1.1.1",
     "react-scrollama": "^0.3.2",
+    "react-waypoint": "^8.1.0",
     "recompose": "^0.30.0"
   }
 }

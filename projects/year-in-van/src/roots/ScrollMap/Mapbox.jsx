@@ -1,10 +1,9 @@
 import React from 'react'
-import ReactMapboxGl, { Layer, Feature, ZoomControl } from 'react-mapbox-gl'
+import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl'
 
 const Map = ReactMapboxGl({
   accessToken:
     'pk.eyJ1Ijoic3Q2OSIsImEiOiJjamxweXVvdTMwZG82M3JrMHV3bHh2aG5rIn0.zDnkK2GJoxL8fuJ2lhL7-g',
-  // scrollZoom: false,
   interactive: false,
 })
 
@@ -45,18 +44,9 @@ const HeatmapLayer = compose(pure)(
     ),
 )
 
-import injectSheet from 'react-jss'
+import css from './Mapbox.css'
 
-const Mapbox = compose(
-  pure,
-  injectSheet({
-    zoomControl: {
-      '& button': {
-        all: 'unset',
-      },
-    },
-  }),
-)(({ heatmaps = [], focus = null, classes = {} }) => {
+const Mapbox = ({ heatmaps = [], focus = null }) => {
   const maxLen = heatmaps.reduce((sum, v) => sum + v.data.length, 0)
   return (
     <Map
@@ -67,10 +57,9 @@ const Mapbox = compose(
         width: '100vw',
       }}
     >
-      <ZoomControl className={classes.zoomControl} />
-      {heatmaps.map(hm => (
+      {heatmaps.map((hm, i) => (
         <HeatmapLayer
-          key={hm.label}
+          key={i}
           data={hm.data}
           color={hm.color}
           focused={focus === null || focus === hm.label}
@@ -79,11 +68,8 @@ const Mapbox = compose(
       ))}
     </Map>
   )
-})
+}
 
 import { hot } from 'react-hot-loader'
 
-export default compose(
-  pure,
-  hot(module),
-)(Mapbox)
+export default compose(hot(module))(Mapbox)

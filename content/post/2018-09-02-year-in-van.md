@@ -7,12 +7,9 @@ image = "img/year-in-van.png"
 hidden = true
 +++
 
-We're looking at the year of 2018 in Vancouver through the lens of event listings on the Georgia Straight Events [^gse] page. I find their list extremely useful and use it all the time to find cool things to do, and notice a great deal of events happening all over the city. I have collected all the events over the course of 2018 and wanted to make a "map of the city" from this data.
+We're looking at the year of 2018 in Vancouver through the lens of event listings on the [Georgia Straight Events](https://www.straight.com/listings/events) page. I find their list extremely useful and use it all the time to find cool things to do, and notice a great deal of events happening all over the city. I have collected all the events over the course of 2018 and wanted to make a "map of the city" from this data.
 
-<!-- prettier-ignore -->
-[^gse]: Georgia Straight Events Calendar: https://www.straight.com/listings/events
-
-This visualization is somewhat unconventional, keep scrolling down to navigate between sets of data. You can also use the buttons to navigate between them. What we're looking at are heatmaps of events, which are coming from the postings on Georgia Straight. Click on the legend to focus on a single item, and click again to unfocus.
+Keep scrolling down to navigate between sets of data. What we're looking at are heatmaps of events, which are coming from the postings on Georgia Straight. Click on the legend to focus on a single item, and click again to unfocus.
 
 Even though this will work OK for devices smaller than tablets, I'd recommend viewing it in larger screens for best experience.
 
