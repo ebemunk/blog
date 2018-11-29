@@ -4,6 +4,8 @@ import Mapbox from './Mapbox'
 import Waypoints from './Waypoints'
 import Legend from './Legend'
 
+import cloneDeep from 'lodash/cloneDeep'
+
 class MainApp extends PureComponent {
   state = {
     heatmaps: [],
@@ -41,10 +43,13 @@ class MainApp extends PureComponent {
           style={{
             zIndex: 2,
             alignSelf: 'flex-start',
+            pointerEvents: 'none',
           }}
         >
           <Waypoints
-            setHeatmaps={hm => this.setState({ heatmaps: hm })}
+            setHeatmaps={hm => {
+              this.setState({ heatmaps: hm })
+            }}
             setFocus={f => this.setState({ focus: f })}
           />
         </div>

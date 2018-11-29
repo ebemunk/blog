@@ -1,37 +1,12 @@
 import React from 'react'
-import Waypoint from 'react-waypoint'
-import { format } from 'date-fns'
 
-import {
-  filterByName,
-  dateScale,
-  byDate,
-  filterByStartHour,
-  bySeason,
-} from '../../data/events'
+import Waypoint from './Waypoint'
+import TimerHeatmap from './TimerHeatmap'
 
-const colors3 = ['#0081bd', '#ef69b4', '#ffa600']
-const colors4 = ['#0081bd', '#b476cf', '#ff6886', '#ffa600']
-const colors5 = ['#0081bd', '#917cd4', '#ef69b4', '#ff716c', '#ffa600']
-const colors8 = [
-  '#0081bd',
-  '#ffa600',
-  '#5f80d0',
-  '#ff8548',
-  '#a079d3',
-  '#ff6d77',
-  '#d86ec3',
-  '#ff66a2',
-]
+import { filterByName, filterByStartHour, bySeason } from '../../data/events'
+import { colors3, colors4, colors5 } from './colors'
 
 import css from './Waypoints.css'
-
-const WP = props => (
-  <React.Fragment>
-    {/* <div style={{ border: '1px dashed red' }} /> */}
-    <Waypoint bottomOffset="30%" topOffset="20%" {...props} />
-  </React.Fragment>
-)
 
 const wpData = {
   fourSeasons: [
@@ -41,7 +16,7 @@ const wpData = {
     { data: bySeason['fall'], color: '#ffc800', label: 'fall' },
   ],
   fourSeasonsByName: [
-    { data: filterByName('winter'), color: 'white', label: 'winter' },
+    { data: filterByName('winter'), color: 'white', label: 'wintzer' },
     { data: filterByName('spring'), color: '#50d000', label: 'spring' },
     { data: filterByName('summer'), color: '#ff4700', label: 'summer' },
     { data: filterByName('fall'), color: '#ffc800', label: 'fall' },
@@ -122,67 +97,14 @@ const wpData = {
   ],
 }
 
-class TimerHeatmap extends React.Component {
-  state = {
-    timer: null,
-    progress: 0,
-  }
-
-  render() {
-    const [start, end] = dateScale.invertExtent(Math.floor(this.state.progress))
-
-    return (
-      <div className={css.step}>
-        <WP
-          onEnter={() => {
-            const removeTimer = setInterval(() => {
-              console.log('interval')
-              this.setState({
-                progress:
-                  this.state.progress > 99 ? 0 : this.state.progress + 1,
-              })
-              this.props.setHeatmaps([
-                {
-                  data: byDate[Math.floor(this.state.progress)],
-                  color: colors4[3],
-                  label: 'live',
-                },
-              ])
-            }, 150)
-            this.setState({
-              timer: removeTimer,
-            })
-          }}
-          onLeave={() => {
-            if (this.state.timer) clearInterval(this.state.timer)
-            this.setState({ timer: null })
-          }}
-        />
-        <h4>A Year of Events</h4>
-        <p>
-          Mapping out all events by start date. Scroll down to go through 2018
-          slowly.
-        </p>
-        <p>
-          Showing events that started between:
-          <br />
-          <em>
-            {format(start, 'MMM Do')}-{format(end, 'Do')}
-          </em>
-        </p>
-      </div>
-    )
-  }
-}
-
 const Waypoints = ({ setHeatmaps, setFocus }) => (
   <div
     style={{
       marginTop: 'calc(-20rem - 50vh)',
     }}
   >
-    <div className={css.step}>
-      <WP
+    {/* <div className={css.step}>
+      <Waypoint
         onEnter={() =>
           setHeatmaps([
             {
@@ -195,10 +117,10 @@ const Waypoints = ({ setHeatmaps, setFocus }) => (
       />
       <h4>2018 in Vancouver</h4>
       <p>All events in the data set</p>
-    </div>
+    </div> */}
 
     <div className={css.step}>
-      <WP onEnter={() => setHeatmaps(wpData.fourSeasons)} />
+      <Waypoint onEnter={() => setHeatmaps(wpData.fourSeasons)} />
       <h4>Four Seasons of Vancouver</h4>
       <p>
         Events grouped by the season they started in. Springtime is when things
@@ -207,18 +129,8 @@ const Waypoints = ({ setHeatmaps, setFocus }) => (
     </div>
 
     <div className={css.step}>
-      <WP onEnter={() => setHeatmaps(wpData.fourSeasonsByName)} />
+      <Waypoint onEnter={() => setHeatmaps(wpData.fourSeasonsByName)} />
       <p>Events where the event name contains the season.</p>
-    </div>
-
-    <div className={css.step}>
-      <WP
-        onEnter={() => {
-          setHeatmaps(wpData.fourSeasonsByName)
-          setFocus('summer')
-        }}
-        onLeave={() => setFocus(null)}
-      />
       <p>
         Although fewer events start in the summer than in spring, more events
         refer to "Summer" in their name.
@@ -226,7 +138,7 @@ const Waypoints = ({ setHeatmaps, setFocus }) => (
     </div>
 
     <div className={css.step}>
-      <WP onEnter={() => setHeatmaps(wpData.cardinalDirections)} />
+      <Waypoint onEnter={() => setHeatmaps(wpData.cardinalDirections)} />
       <h4>Cardinal Directions</h4>
       <p>
         Events where the name contains a cardinal direction. <em>North Van</em>,{' '}
@@ -236,7 +148,7 @@ const Waypoints = ({ setHeatmaps, setFocus }) => (
     </div>
 
     <div className={css.step}>
-      <WP onEnter={() => setHeatmaps(wpData.wineBeer)} />
+      <Waypoint onEnter={() => setHeatmaps(wpData.wineBeer)} />
       <h4>Wine vs Beer</h4>
       <p>
         Events where the name contains "wine" or "beer". Cambie Street seems to
@@ -245,7 +157,7 @@ const Waypoints = ({ setHeatmaps, setFocus }) => (
     </div>
 
     <div className={css.step}>
-      <WP onEnter={() => setHeatmaps(wpData.meals)} />
+      <Waypoint onEnter={() => setHeatmaps(wpData.meals)} />
       <h4>Meals</h4>
       <p>
         Events where the name contains a reference to breakfast, lunch or
@@ -255,7 +167,16 @@ const Waypoints = ({ setHeatmaps, setFocus }) => (
     </div>
 
     <div className={css.step}>
-      <WP onEnter={() => setHeatmaps(wpData.musicGenres)} />
+      <Waypoint onEnter={() => setHeatmaps(wpData.indigenous)} />
+      <h4>Indigenous</h4>
+      <p>
+        Events where the name contains "indigenous". UBC MOA, Stanley Park
+        Pavillion and the VPL downtown are good places to check out.
+      </p>
+    </div>
+
+    <div className={css.step}>
+      <Waypoint onEnter={() => setHeatmaps(wpData.musicGenres)} />
       <h4>Music Genres</h4>
       <p>
         Events where the name contains a (select few) music genre. Flamenco is
@@ -265,16 +186,7 @@ const Waypoints = ({ setHeatmaps, setFocus }) => (
     </div>
 
     <div className={css.step}>
-      <WP onEnter={() => setHeatmaps(wpData.indigenous)} />
-      <h4>Indigenous</h4>
-      <p>
-        Events where the name contains "indigenous". UBC MOA, Stanley Park
-        Pavillion and the VPL downtown are good places to check out.
-      </p>
-    </div>
-
-    <div className={css.step}>
-      <WP onEnter={() => setHeatmaps(wpData.free)} />
+      <Waypoint onEnter={() => setHeatmaps(wpData.free)} />
       <h4>Free Stuff</h4>
       <p>
         Events where the name contains "free". Very concentrated clusters
@@ -283,7 +195,7 @@ const Waypoints = ({ setHeatmaps, setFocus }) => (
     </div>
 
     <div className={css.step}>
-      <WP onEnter={() => setHeatmaps(wpData.timeOfDay)} />
+      <Waypoint onEnter={() => setHeatmaps(wpData.timeOfDay)} />
       <h4>Time of Day</h4>
       <p>
         Events grouped by starting hours: <strong>Morning:</strong> 4am-12pm,{' '}
