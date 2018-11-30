@@ -9,7 +9,8 @@ const Legend = ({ keys, onClick, focus }) => (
       <div className={css.label} key={label} onClick={() => onClick(label)}>
         <div
           className={classnames(css.circle, {
-            [css.selected]: focus === null || focus === label,
+            [css.selected]:
+              focus === null || focus === label || focus === undefined,
           })}
           style={{
             backgroundColor: color,

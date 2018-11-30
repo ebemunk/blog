@@ -6,14 +6,17 @@ import Legend from './Legend'
 
 import cloneDeep from 'lodash/cloneDeep'
 
+const getFocusKey = heatmaps => heatmaps.map(hm => hm.label).join(',')
+
 class MainApp extends PureComponent {
   state = {
     heatmaps: [],
-    focus: null,
+    focus: {},
   }
 
   render() {
     const { heatmaps, focus } = this.state
+    const focusKey = getFocusKey(heatmaps)
 
     return (
       <div
@@ -32,11 +35,16 @@ class MainApp extends PureComponent {
             <Legend
               keys={heatmaps}
               onClick={f => {
-                this.setState({ focus: f === focus ? null : f })
+                this.setState(state => ({
+                  focus: {
+                    ...state.focus,
+                    [focusKey]: f === state.focus[focusKey] ? null : f,
+                  },
+                }))
               }}
-              focus={focus}
+              focus={focus[focusKey]}
             />
-            <Mapbox heatmaps={heatmaps} focus={focus} />
+            <Mapbox heatmaps={heatmaps} focus={focus[focusKey]} />
           </div>
         </div>
         <div
