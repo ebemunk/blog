@@ -198,11 +198,15 @@ const Waypoints = ({ setHeatmaps, setFocus }) => (
       <Waypoint onEnter={() => setHeatmaps(wpData.timeOfDay)} />
       <h4>Time of Day</h4>
       <p>
-        Events grouped by starting hours: <strong>Morning:</strong> 4am-12pm,{' '}
-        <strong>Afternoon:</strong>
-        12pm-5pm, <strong>Evening:</strong> 5pm-9pm, <strong>Night:</strong>{' '}
-        9pm-12am, <strong>Late Night:</strong> 12am-4am. Definitely an evening
-        kind of city...
+        Events grouped by starting hours:
+        <ul>
+          <li>Morning: 4am-12pm</li>
+          <li>Afternoon: 12pm-5pm</li>
+          <li>Evening: 5pm-9pm</li>
+          <li>Night: 9pm-12am</li>
+          <li>Late Night: 12am-4am</li>
+        </ul>
+        Definitely an evening kind of city...
       </p>
     </div>
 

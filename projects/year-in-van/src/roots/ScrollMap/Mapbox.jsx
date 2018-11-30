@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl'
+import ReactMapboxGl, { Layer, Feature, ZoomControl } from 'react-mapbox-gl'
 
 const Map = ReactMapboxGl({
   accessToken:
@@ -10,7 +10,6 @@ const Map = ReactMapboxGl({
 const HeatmapLayer = ({ data, color, focused, maxLen }) => (
   <Layer
     type="heatmap"
-    zoom={12}
     paint={{
       'heatmap-radius': [
         'interpolate',
@@ -32,7 +31,6 @@ const HeatmapLayer = ({ data, color, focused, maxLen }) => (
       ],
       'heatmap-opacity': focused ? 1 : 0.1,
     }}
-    id={0}
   >
     {data.map((d, i) => (
       <Feature key={i} coordinates={[d.lng, d.lat]} />
@@ -48,11 +46,13 @@ const Mapbox = ({ heatmaps = [], focus = null }) => {
     <Map
       style="mapbox://styles/mapbox/dark-v9"
       center={[-123.1207375, 49.2827291]}
+      zoom={[10]}
       containerStyle={{
         height: '100vh',
         width: '100vw',
       }}
     >
+      {/* <ZoomControl className={css.zoomControl} /> */}
       {heatmaps.map((hm, i) => (
         <HeatmapLayer
           key={i}

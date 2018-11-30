@@ -1,3 +1,4 @@
-:global(.mapboxgl-ctrl) {
+:global(.mapboxgl-ctrl),
+.zoomControl {
   transform: translate3d(0, 0, 0);
 }
