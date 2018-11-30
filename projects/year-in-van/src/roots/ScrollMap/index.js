@@ -3,8 +3,7 @@ import React, { PureComponent } from 'react'
 import Mapbox from './Mapbox'
 import Waypoints from './Waypoints'
 import Legend from './Legend'
-
-import cloneDeep from 'lodash/cloneDeep'
+import Bars from './Bars'
 
 const getFocusKey = heatmaps => heatmaps.map(hm => hm.label).join(',')
 
@@ -45,6 +44,7 @@ class MainApp extends PureComponent {
               focus={focus[focusKey]}
             />
             <Mapbox heatmaps={heatmaps} focus={focus[focusKey]} />
+            {heatmaps.length > 1 && <Bars heatmaps={heatmaps} />}
           </div>
         </div>
         <div

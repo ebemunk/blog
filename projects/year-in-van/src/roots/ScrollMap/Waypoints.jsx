@@ -16,7 +16,7 @@ const wpData = {
     { data: bySeason['fall'], color: '#ffc800', label: 'fall' },
   ],
   fourSeasonsByName: [
-    { data: filterByName('winter'), color: 'white', label: 'wintzer' },
+    { data: filterByName('winter'), color: 'white', label: 'winter' },
     { data: filterByName('spring'), color: '#50d000', label: 'spring' },
     { data: filterByName('summer'), color: '#ff4700', label: 'summer' },
     { data: filterByName('fall'), color: '#ffc800', label: 'fall' },
@@ -197,17 +197,25 @@ const Waypoints = ({ setHeatmaps, setFocus }) => (
     <div className={css.step}>
       <Waypoint onEnter={() => setHeatmaps(wpData.timeOfDay)} />
       <h4>Time of Day</h4>
-      <p>
-        Events grouped by starting hours:
-        <ul>
-          <li>Morning: 4am-12pm</li>
-          <li>Afternoon: 12pm-5pm</li>
-          <li>Evening: 5pm-9pm</li>
-          <li>Night: 9pm-12am</li>
-          <li>Late Night: 12am-4am</li>
-        </ul>
-        Definitely an evening kind of city...
-      </p>
+      <p>Events grouped by starting hours:</p>
+      <ul style={{ marginBottom: 0, fontSize: '0.85rem' }}>
+        <li>
+          <strong>Morning</strong>: 4am-12pm
+        </li>
+        <li>
+          <strong>Afternoon</strong>: 12pm-5pm
+        </li>
+        <li>
+          <strong>Evening</strong>: 5pm-9pm
+        </li>
+        <li>
+          <strong>Night</strong>: 9pm-12am
+        </li>
+        <li>
+          <strong>Late Night</strong>: 12am-4am
+        </li>
+      </ul>
+      <p>Definitely an evening kind of city...</p>
     </div>
 
     <TimerHeatmap setHeatmaps={setHeatmaps} />
