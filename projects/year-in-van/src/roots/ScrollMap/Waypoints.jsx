@@ -2,6 +2,7 @@ import React from 'react'
 
 import Waypoint from './Waypoint'
 import TimerHeatmap from './TimerHeatmap'
+import CustomHeatmap from './CustomHeatmap'
 
 import { filterByName, filterByStartHour, bySeason } from '../../data/events'
 import { colors3, colors4, colors5 } from './colors'
@@ -97,7 +98,14 @@ const wpData = {
   ],
 }
 
-const Waypoints = ({ setHeatmaps, setFocus }) => (
+const Waypoints = ({
+  //
+  setHeatmaps,
+  setFocus,
+  setCustom,
+  setCustomKeys,
+  customKeys,
+}) => (
   <div
     style={{
       marginTop: 'calc(-20rem - 50vh)',
@@ -219,6 +227,13 @@ const Waypoints = ({ setHeatmaps, setFocus }) => (
     </div>
 
     <TimerHeatmap setHeatmaps={setHeatmaps} />
+
+    <CustomHeatmap
+      setCustom={setCustom}
+      setHeatmaps={setHeatmaps}
+      setCustomKeys={setCustomKeys}
+      customKeys={customKeys}
+    />
   </div>
 )
 

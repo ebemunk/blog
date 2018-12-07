@@ -11,3 +11,6 @@ export const colors8 = [
   '#d86ec3',
   '#ff66a2',
 ]
+
+import { scaleOrdinal } from 'd3-scale'
+export const colorScale = () => scaleOrdinal().range(colors8)
