@@ -1,5 +1,7 @@
 import React from 'react'
-import { max, format } from 'd3'
+import { format } from 'd3-format'
+import { max } from 'd3-array'
+
 import { BarChart } from 'vizlib'
 
 import css from './Bars.css'

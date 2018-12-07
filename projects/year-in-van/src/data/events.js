@@ -35,7 +35,8 @@ export const filterByStartHour = memoizeWith(identity, (start, end) =>
   events.filter(byStartHour([start, end])),
 )
 
-import { scaleQuantize, extent, range } from 'd3'
+import { scaleQuantize } from 'd3-scale'
+import { extent, range } from 'd3-array'
 
 export const dateScale = scaleQuantize()
   .range(range(0, 101))

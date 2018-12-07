@@ -1,5 +1,5 @@
 import React from 'react'
-import { format } from 'd3'
+import { format } from 'd3-format'
 
 import dow from 'data/dow'
 import month from 'data/month'
