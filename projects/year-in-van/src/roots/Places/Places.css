@@ -1,0 +1,13 @@
+.table {
+  font-size: 0.85rem;
+
+  & caption {
+    font-weight: bold;
+  }
+
+  & th {
+    text-align: left;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+}

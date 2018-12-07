@@ -25,7 +25,7 @@ There's an interesting ramp-up effect to Saturday, when most events start off. I
 
 ## Locations
 
-This chart shows the top locations that events take place in. Some were surprising to see (The Art of Loving!), others not so much.
+The chart below shows the top locations that events take place in. Some are surprising to see, like The Art of Loving. Others are expected, like Vancity Theatre which seems to post about every movie, and Rickshaw Theatre which is always a good time.
 
 <div id="places"></div>
 

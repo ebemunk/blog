@@ -1,45 +1,64 @@
 import React from 'react'
+import { scaleLinear } from 'd3-scale'
+import { max } from 'd3-array'
 
 import places from 'data/places'
 
-import { BarChart, Labels } from 'vizlib'
-
 import css from '../DayOfWeek/DayOfWeek.css'
+import placescss from './Places.css'
 
-const Places = ({}) => (
-  <div className={css.locs}>
-    <Labels
-      title="Events by Location"
-      left="Location Name"
-      top="Number of events"
-      className={css.labels}
-    >
-      <BarChart
-        className={css.white}
-        width={750}
-        height={550}
-        padding={{
-          top: 20,
-          left: 250,
-          right: 15,
-          bottom: 30,
+const Places = ({}) => {
+  const scale = scaleLinear()
+    .domain([0, max(places.map(p => p.count))])
+    .range([0, 100])
+
+  return (
+    <div className={css.locs}>
+      <table
+        className={placescss.table}
+        style={{
+          maxWidth: '45rem',
+          margin: '0 0.625rem',
         }}
-        data={places.map(row => ({
-          key: row.name,
-          value: row.count,
-        }))}
-        horizontal
-        bandAxisProps={{
-          tickSize: 0,
-        }}
-        linearAxisProps={{
-          tickSize: -550 + 20 + 30,
-          className: css.linearAxis,
-        }}
-      />
-    </Labels>
-  </div>
-)
+      >
+        <caption>Events by Location</caption>
+        <tbody>
+          {places.map(row => (
+            <tr key={row.name}>
+              <td
+                style={{
+                  maxWidth: '10rem',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textAlign: 'right',
+                }}
+                title={row.name}
+              >
+                {row.name}
+              </td>
+              <td style={{ width: '15rem' }}>
+                <div
+                  style={{
+                    backgroundColor: '#0081bd',
+                    width: scale(row.count) + '%',
+                    height: '1rem',
+                    color: 'white',
+                    fontSize: '0.75rem',
+                    lineHeight: '1rem',
+                    textAlign: 'right',
+                  }}
+                >
+                  {row.count}&nbsp;
+                </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
 
 import { compose } from 'recompose'
 import { hot } from 'react-hot-loader'

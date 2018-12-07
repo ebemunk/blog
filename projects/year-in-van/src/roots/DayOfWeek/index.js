@@ -39,6 +39,7 @@ const DayOfWeek = ({}) => (
           className: css.linearAxis,
           tickSize: -316 + 35 + 10,
         }}
+        barStyle={() => ({ fill: '#0081bd' })}
       />
     </Labels>
     <Labels
@@ -83,6 +84,7 @@ const DayOfWeek = ({}) => (
           className: css.linearAxis,
           tickSize: -316 + 35 + 10,
         }}
+        barStyle={() => ({ fill: '#0081bd' })}
       />
     </Labels>
   </div>
