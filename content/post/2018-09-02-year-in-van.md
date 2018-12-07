@@ -23,6 +23,8 @@ The events contain information about their start and end dates. Looking at varia
 
 There's an interesting ramp-up effect to Saturday, when most events start off. I think this combined with the sharp decline on Sunday says something about how Vancouverites make use of their weekend: Saturdays for fun stuff, Sundays to chill.
 
+The kind of "double peak" histogram of the monthly breakdown shows spring and autumn is the most active seasons.
+
 ## Locations
 
 The chart below shows the top locations that events take place in (>60 events). Some are surprising to see, like The Art of Loving. Others are expected, like Vancity Theatre which seems to post about every movie, and Rickshaw Theatre which is always a good time.
