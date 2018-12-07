@@ -13,6 +13,7 @@ class TimerHeatmap extends React.Component {
     interval: null,
     progress: 0,
     timeout: 150,
+    active: false,
   }
 
   setup = () => {
@@ -44,7 +45,12 @@ class TimerHeatmap extends React.Component {
     const [start, end] = dateScale.invertExtent(Math.floor(progress))
 
     return (
-      <div className={css.step}>
+      <div
+        className={css.step}
+        style={{
+          opacity: interval ? 1 : 0.2,
+        }}
+      >
         <Waypoint
           onEnter={this.setup}
           onLeave={() => {

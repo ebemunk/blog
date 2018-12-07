@@ -98,6 +98,32 @@ const wpData = {
   ],
 }
 
+class StatefulWaypoint extends React.PureComponent {
+  state = {
+    active: false,
+  }
+
+  render() {
+    const { children, onEnter } = this.props
+    const { active } = this.state
+
+    return (
+      <div className={css.step} style={{ opacity: active ? 1 : 0.2 }}>
+        <Waypoint
+          onEnter={() => {
+            this.setState({ active: true })
+            onEnter()
+          }}
+          onLeave={() => {
+            this.setState({ active: false })
+          }}
+        />
+        {children}
+      </div>
+    )
+  }
+}
+
 const Waypoints = ({
   //
   setHeatmaps,
@@ -111,99 +137,74 @@ const Waypoints = ({
       marginTop: 'calc(-20rem - 50vh)',
     }}
   >
-    {/* <div className={css.step}>
-      <Waypoint
-        onEnter={() =>
-          setHeatmaps([
-            {
-              data: filterByName(''),
-              color: colors4[0],
-              label: 'all',
-            },
-          ])
-        }
-      />
-      <h4>2018 in Vancouver</h4>
-      <p>All events in the data set</p>
-    </div> */}
-
-    <div className={css.step}>
-      <Waypoint onEnter={() => setHeatmaps(wpData.fourSeasons)} />
+    <StatefulWaypoint onEnter={() => setHeatmaps(wpData.fourSeasons)}>
       <h4>Four Seasons of Vancouver</h4>
       <p>
         Events grouped by the season they started in. Springtime is when things
         really start heating up!
       </p>
-    </div>
+    </StatefulWaypoint>
 
-    <div className={css.step}>
-      <Waypoint onEnter={() => setHeatmaps(wpData.fourSeasonsByName)} />
+    <StatefulWaypoint onEnter={() => setHeatmaps(wpData.fourSeasonsByName)}>
       <p>Events where the event name contains the season.</p>
       <p>
         Although fewer events start in the summer than in spring, more events
         refer to "Summer" in their name.
       </p>
-    </div>
+    </StatefulWaypoint>
 
-    <div className={css.step}>
-      <Waypoint onEnter={() => setHeatmaps(wpData.cardinalDirections)} />
+    <StatefulWaypoint onEnter={() => setHeatmaps(wpData.cardinalDirections)}>
       <h4>Cardinal Directions</h4>
       <p>
         Events where the name contains a cardinal direction. <em>North Van</em>,{' '}
         <em>West-end</em> and <em>East Van</em> definitely show up in event
         names.
       </p>
-    </div>
+    </StatefulWaypoint>
 
-    <div className={css.step}>
-      <Waypoint onEnter={() => setHeatmaps(wpData.wineBeer)} />
+    <StatefulWaypoint onEnter={() => setHeatmaps(wpData.wineBeer)}>
       <h4>Wine vs Beer</h4>
       <p>
         Events where the name contains "wine" or "beer". Cambie Street seems to
         be the boundary between wine and beer events, a clean split.
       </p>
-    </div>
+    </StatefulWaypoint>
 
-    <div className={css.step}>
-      <Waypoint onEnter={() => setHeatmaps(wpData.meals)} />
+    <StatefulWaypoint onEnter={() => setHeatmaps(wpData.meals)}>
       <h4>Meals</h4>
       <p>
         Events where the name contains a reference to breakfast, lunch or
         dinner. Gastown and Commercial stand out by the abundance of dinner
         events.
       </p>
-    </div>
+    </StatefulWaypoint>
 
-    <div className={css.step}>
-      <Waypoint onEnter={() => setHeatmaps(wpData.indigenous)} />
+    <StatefulWaypoint onEnter={() => setHeatmaps(wpData.indigenous)}>
       <h4>Indigenous</h4>
       <p>
         Events where the name contains "indigenous". UBC MOA, Stanley Park
         Pavillion and the VPL downtown are good places to check out.
       </p>
-    </div>
+    </StatefulWaypoint>
 
-    <div className={css.step}>
-      <Waypoint onEnter={() => setHeatmaps(wpData.musicGenres)} />
+    <StatefulWaypoint onEnter={() => setHeatmaps(wpData.musicGenres)}>
       <h4>Music Genres</h4>
       <p>
         Events where the name contains a (select few) music genre. Flamenco is
         overrepresented because of regular events in that same location. Around
         Granville Strip is definitely a hot spot for events.
       </p>
-    </div>
+    </StatefulWaypoint>
 
-    <div className={css.step}>
-      <Waypoint onEnter={() => setHeatmaps(wpData.free)} />
+    <StatefulWaypoint onEnter={() => setHeatmaps(wpData.free)}>
       <h4>Free Stuff</h4>
       <p>
         Events where the name contains "free". Very concentrated clusters
         indicative of recurring events.
       </p>
-    </div>
+    </StatefulWaypoint>
 
-    <div className={css.step}>
-      <Waypoint onEnter={() => setHeatmaps(wpData.timeOfDay)} />
+    <StatefulWaypoint onEnter={() => setHeatmaps(wpData.timeOfDay)}>
       <h4>Time of Day</h4>
       <p>Events grouped by starting hours:</p>
       <ul style={{ marginBottom: 0, fontSize: '0.85rem' }}>
@@ -224,7 +225,7 @@ const Waypoints = ({
         </li>
       </ul>
       <p>Definitely an evening kind of city...</p>
-    </div>
+    </StatefulWaypoint>
 
     <TimerHeatmap setHeatmaps={setHeatmaps} />
 

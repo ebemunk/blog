@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 
 import Mapbox from './Mapbox'
 import Waypoints from './Waypoints'
-import Legend from './Legendd'
+import Legend from './Legend'
 import Bars from './Bars'
 
 import { filterByName } from '../../data/events'

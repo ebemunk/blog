@@ -20,27 +20,31 @@ const CustomPresetLink = ({ array, setCustomKeys }) => (
 )
 
 class CustomHeatmap extends React.Component {
-  state = {}
+  state = {
+    active: false,
+  }
 
   render() {
-    const {} = this.state
+    const { active } = this.state
     const { setCustom, setHeatmaps, setCustomKeys, customKeys } = this.props
 
     return (
       <div
         className={css.step}
-        style={{ pointerEvents: 'all' }}
+        style={{ pointerEvents: 'all', opacity: active ? 1 : 0.2 }}
         id="custom-heatmap"
       >
         <Waypoint
           onEnter={() => {
             setCustom(true)
             // setHeatmaps([])
+            this.setState({ active: true })
           }}
           onLeave={({ currentPosition, previousPosition }) => {
             if (previousPosition === 'inside' && currentPosition === 'below') {
               setCustom(false)
             }
+            this.setState({ active: false })
           }}
         />
         <h4>Now it's your turn</h4>
