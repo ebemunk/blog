@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import MapViz from 'roots/Map/MapV'
 import DayOfWeek from 'roots/DayOfWeek'
 import Places from 'roots/Places'
 import ScrollMap from 'roots/ScrollMap'

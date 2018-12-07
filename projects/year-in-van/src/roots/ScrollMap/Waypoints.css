@@ -2,7 +2,7 @@
   padding: 1rem;
   background: rgba(255, 255, 255, 0.2);
   max-width: 20rem;
-  margin: 20rem 0;
+  margin: 30vh 0;
 }
 
 :global(.article) .step {

@@ -34,7 +34,7 @@ class MainApp extends PureComponent {
       () => {
         setTimeout(() => {
           document.getElementById('custom-heatmap').scrollIntoView()
-          window.scrollBy(0, -320)
+          window.scrollBy(0, -window.innerHeight / 2)
         }, 500)
       },
     )

@@ -40,13 +40,15 @@ const HeatmapLayer = ({ data, color, focused, maxLen }) => (
 
 import css from './Mapbox.css'
 
+const vanCenter = [-123.1207375, 49.2827291]
+const offsetCenter = [-123.1607375, 49.2827291]
+
 const Mapbox = ({ heatmaps = [], focus = null }) => {
   const maxLen = heatmaps.reduce((sum, v) => sum + v.data.length, 0)
   return (
     <Map
       style="mapbox://styles/mapbox/dark-v9"
-      // center={[-123.1207375, 49.2827291]}
-      center={[-123.1607375, 49.2827291]}
+      center={window.innerWidth > 400 ? offsetCenter : vanCenter}
       zoom={window.innerWidth < 900 ? [10] : [11]}
       containerStyle={{
         height: '100vh',

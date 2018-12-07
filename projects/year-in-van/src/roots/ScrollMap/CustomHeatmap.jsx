@@ -30,7 +30,11 @@ class CustomHeatmap extends React.Component {
     return (
       <div
         className={css.step}
-        style={{ pointerEvents: 'all', opacity: active ? 1 : 0.2 }}
+        style={{
+          pointerEvents: 'all',
+          opacity: active ? 1 : 0.2,
+          marginBottom: '45vh',
+        }}
         id="custom-heatmap"
       >
         <Waypoint
@@ -65,19 +69,21 @@ class CustomHeatmap extends React.Component {
           />
           .
         </p>
-        <p style={{ marginTop: '1rem' }}>
-          You can use the following URL to share this custom heatmap.
-          <input
-            value={encodeURI(
-              window.location.href.replace(window.location.hash, '') +
-                '#list=' +
-                customKeys.join(','),
-            )}
-            readOnly
-            onClick={e => e.target.select()}
-            className={inputcss.input}
-          />
-        </p>
+        {customKeys.length > 0 && (
+          <p style={{ marginTop: '1rem' }}>
+            You can use the following URL to share this custom heatmap.
+            <input
+              value={encodeURI(
+                window.location.href.replace(window.location.hash, '') +
+                  '#list=' +
+                  customKeys.join(','),
+              )}
+              readOnly
+              onClick={e => e.target.select()}
+              className={inputcss.input}
+            />
+          </p>
+        )}
       </div>
     )
   }

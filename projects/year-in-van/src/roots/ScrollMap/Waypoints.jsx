@@ -134,7 +134,7 @@ const Waypoints = ({
 }) => (
   <div
     style={{
-      marginTop: 'calc(-20rem - 50vh)',
+      marginTop: 'calc(-80vh)',
     }}
   >
     <StatefulWaypoint onEnter={() => setHeatmaps(wpData.fourSeasons)}>
