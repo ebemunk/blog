@@ -4,8 +4,6 @@ import { format } from 'd3'
 import dow from 'data/dow'
 import month from 'data/month'
 
-console.log('wa', month)
-
 import { BarChart, Labels } from 'vizlib'
 
 import css from './DayOfWeek.css'

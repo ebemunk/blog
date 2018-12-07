@@ -1,6 +1,7 @@
 .labels {
   color: white;
-  font-size: 1.1rem;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .white {
@@ -40,7 +41,7 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 40rem) {
   .split2 {
     flex-wrap: wrap;
   }
@@ -52,7 +53,7 @@
   align-items: center;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 40rem) {
   .locs {
     align-items: flex-start;
   }
