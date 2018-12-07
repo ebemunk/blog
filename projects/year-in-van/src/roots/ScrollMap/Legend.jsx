@@ -2,8 +2,10 @@ import React from 'react'
 import classnames from 'classnames'
 import { compose, withState } from 'recompose'
 
-import css from './Legend.css'
 import { Add, Remove } from 'components/icons'
+
+import css from './Legend.css'
+import inputcss from '../../components/Input.css'
 
 const Legend = compose(
   //
@@ -54,10 +56,10 @@ const Legend = compose(
             alignItems: 'center',
           }}
         >
-          <span>name contains:</span>{' '}
+          <span>name contains:</span>
           <input
             placeholder="Type something + Enter"
-            className={css.add}
+            className={classnames(css.add, inputcss.input)}
             value={input}
             onChange={evt => setInput(evt.target.value)}
             onKeyPress={e => {

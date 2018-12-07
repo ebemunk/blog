@@ -1,10 +1,9 @@
 import React from 'react'
 
-import { dateScale, byDate } from '../../data/events'
 import Waypoint from './Waypoint'
-import { colors4 } from './colors'
 
 import css from './Waypoints.css'
+import inputcss from '../../components/Input.css'
 
 const CustomPresetLink = ({ array, setCustomKeys }) => (
   <a
@@ -75,8 +74,8 @@ class CustomHeatmap extends React.Component {
                 customKeys.join(','),
             )}
             readOnly
-            style={{}}
             onClick={e => e.target.select()}
+            className={inputcss.input}
           />
         </p>
       </div>
