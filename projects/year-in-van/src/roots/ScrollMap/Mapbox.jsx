@@ -45,7 +45,8 @@ const Mapbox = ({ heatmaps = [], focus = null }) => {
   return (
     <Map
       style="mapbox://styles/mapbox/dark-v9"
-      center={[-123.1207375, 49.2827291]}
+      // center={[-123.1207375, 49.2827291]}
+      center={[-123.1607375, 49.2827291]}
       zoom={window.innerWidth < 900 ? [10] : [11]}
       containerStyle={{
         height: '100vh',

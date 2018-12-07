@@ -157,8 +157,8 @@ const Waypoints = ({
       <h4>Cardinal Directions</h4>
       <p>
         Events where the name contains a cardinal direction. <em>North Van</em>,{' '}
-        <em>West-end</em> and <em>East Van</em> definitely show up in event
-        names.
+        <em>West-end</em>, <em>New West</em> and <em>East Van</em> definitely
+        show up in event names.
       </p>
     </StatefulWaypoint>
 

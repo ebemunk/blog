@@ -59,10 +59,7 @@ class TimerHeatmap extends React.Component {
           }}
         />
         <h4>A Year of Events</h4>
-        <p>
-          Mapping out all events by start date. Scroll down to go through 2018
-          slowly.
-        </p>
+        <p>Mapping out all events by start date throughout the year.</p>
         <p>
           Showing events that started between:
           <br />
