@@ -18,8 +18,7 @@ const Bars = ({ heatmaps }) => (
     style={{
       position: 'absolute',
       right: '1rem',
-      // top: '4rem',
-      bottom: '2rem',
+      bottom: window.innerWidth > 450 ? '2rem' : '4rem',
       pointerEvents: 'none',
       transform: 'translate3d(0,0,0)',
     }}

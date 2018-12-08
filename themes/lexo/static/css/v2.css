@@ -147,6 +147,7 @@ article.article .footnotes hr {
   width: 100%;
   max-width: 40rem;
   margin: 0 auto;
+  padding: 0;
 }
 .article-list .item h1 {
   max-width: 40rem;
