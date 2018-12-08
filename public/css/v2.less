@@ -32,7 +32,6 @@ header.site-header {
   background-position: 50% -20px;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 85%;
   border-bottom: 4px solid black;
   justify-content: center;
   align-items: center;
@@ -41,6 +40,7 @@ header.site-header {
   line-height: 3rem;
   font-family: "Marcellus SC";
   color: darken(@orange, 12%);
+  text-align: center;
 
   &:hover {
     background-color: @light-grey;
@@ -55,7 +55,6 @@ footer.site-footer {
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 85%;
 
   display: flex;
   flex-direction: row;
@@ -80,6 +79,7 @@ h1 {
   margin: 1.5rem auto;
   font-size: 3rem;
   font-weight: 300;
+  text-align: center;
 }
 
 h2,
@@ -120,6 +120,20 @@ blockquote {
   margin-bottom: 1.68rem;
   font-size: 0.75rem;
   color: darken(@white, 15%);
+}
+
+@media screen and (max-width: 40rem) {
+  article.article p,
+  article.article h2,
+  article.article h3,
+  article.article h4,
+  article.article h5,
+  article.article h6,
+  .share,
+  .disqus,
+  .article-list {
+    padding: 0 0.625rem;
+  }
 }
 
 article.article {
@@ -170,6 +184,7 @@ article.article {
     h1 {
       max-width: @maxwidth;
       font-size: 2rem;
+      text-align: left;
 
       a {
         text-decoration: none;
