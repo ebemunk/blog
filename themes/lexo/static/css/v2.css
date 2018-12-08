@@ -151,6 +151,7 @@ article.article .footnotes hr {
 .article-list .item h1 {
   max-width: 40rem;
   font-size: 2rem;
+  text-align: left;
 }
 .article-list .item h1 a {
   text-decoration: none;
