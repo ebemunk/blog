@@ -48,7 +48,7 @@ export default function CharSelector(props) {
           />
           <div className={css.removeButton}>
             <button
-              className="button"
+              className={css.button}
               onClick={() => removeGroup(i)}
               disabled={charSelection.length === 1}
               children="×"

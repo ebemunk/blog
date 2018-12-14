@@ -2,7 +2,7 @@ import { pipe, map, evolve } from 'ramda'
 
 /*
 
-select extract(month from (details->>'startDate')::date) as dow, count(*)::int as count from events
+select extract(month from (details->>'startDate')::date) as month, count(*)::int as count from events
 where details->>'startDate' is not null
 and details->>'startDate' > '2017-12-31'
 and details->>'startDate' < '2019-01-01'

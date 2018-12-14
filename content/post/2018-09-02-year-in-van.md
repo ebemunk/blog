@@ -1,20 +1,15 @@
 +++
 date = "2018-09-01"
-draft = false
 title = "One Year in Vancouver: Visualizing Events"
 slug = "one-year-in-van"
 tags = ["data visualization", "maps", "vancouver", "georgia straight"]
 image = "img/year-in-van.png"
+hidden = true
 +++
 
-We're looking at the year of 2018 in Vancouver through the lens of event listings on the Georgia Straight Events [^gse] page. I find their list extremely useful and use it all the time to find cool things to do, and notice a great deal of events happening all over the city. I have collected all the events over the course of 2018 and wanted to make a "map of the city" from this data.
+We're looking at the year of 2018 in Vancouver through the lens of event listings on the [Georgia Straight Events](https://www.straight.com/listings/events) page. I find their list extremely useful and use it all the time to find cool things to do, and notice a great deal of events happening all over the city. I collected all the events over the course of 2018 and wanted to make a "map of the city" from this data.
 
-<!-- prettier-ignore -->
-[^gse]: Georgia Straight Events Calendar: https://www.straight.com/listings/events
-
-This visualization is somewhat unconventional, keep scrolling down to navigate between sets of data. You can also use the buttons to navigate between them. What we're looking at are heatmaps of events, which are coming from the postings on Georgia Straight. Click on the legend to focus on a single item, and click again to unfocus.
-
-Even though this will work OK for devices smaller than tablets, I'd recommend viewing it in larger screens for best experience.
+Keep scrolling down to navigate between sets of data. What we're looking at are heatmaps of events, which are coming from the postings on Georgia Straight. Click on the legend to focus on a single item, and click again to unfocus.
 
 <div id="map"></div>
 
@@ -30,7 +25,7 @@ There's an interesting ramp-up effect to Saturday, when most events start off. I
 
 ## Locations
 
-This chart shows the top locations that events take place in. Some were surprising to see, others not so much.
+The chart below shows the top locations that events take place in (>60 events). Some are surprising to see, like The Art of Loving. Others are expected, like Vancity Theatre which seems to post about every movie, and Rickshaw Theatre which is always a good time.
 
 <div id="places"></div>
 
@@ -44,8 +39,8 @@ The visualizations were made with React, Mapbox, and d3. [Here](https://github.c
 
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
 
-<script src="http://localhost:9001/bundle.js"></script>
-<!-- <script src="bundle.js"></script> -->
+<!-- <script src="http://localhost:9001/bundle.js"></script> -->
+<script src="bundle.js"></script>
 
 <style>
 #map {

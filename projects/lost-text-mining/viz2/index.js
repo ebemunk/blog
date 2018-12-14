@@ -33,7 +33,7 @@ const render = (component, selector) =>
 render(<WordCount />, '#word-count')
 render(<CountPerEpisode />, '#char-per-episode')
 render(<CharWordHistogram />, '#char-word-histogram')
-render(<Individual />, '#individual')
+// render(<Individual />, '#individual')
 render(<CharSelector />, '#personality-selector')
 render(<Personalities />, '#personality')
 render(<LinesPerChar />, '#lines-per-char')

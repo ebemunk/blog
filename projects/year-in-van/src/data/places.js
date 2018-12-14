@@ -7,7 +7,7 @@ where
 details->>'startDate' > '2017-12-31'
 and details->>'startDate' < '2019-01-01'
 group by 2
-having count(*) > 40
+having count(*) > 60
 order by 1 desc
 ;
 

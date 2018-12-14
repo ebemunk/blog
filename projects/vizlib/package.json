@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --json > stats.json",
     "dev": "styleguidist server",
     "docs": "styleguidist build"
   },

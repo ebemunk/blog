@@ -1,6 +1,7 @@
 <div class="tags">
+	<em>on:</em>
 	{{ range $index, $tag := .Params.tags -}}
 		{{ if gt $index 0 }},{{ end }}
-		<a href="tags/{{ . | urlize }}">{{ . }}</a>
+		<a href="/tags/{{ . | urlize }}">{{ . }}</a>
 	{{- end }}
 </div>

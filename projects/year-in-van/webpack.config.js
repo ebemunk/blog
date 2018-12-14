@@ -1,7 +1,6 @@
 const path = require('path')
 
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const PostcssPresetEnv = require('postcss-preset-env')
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -11,7 +10,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../../static/one-year-in-van'),
     publicPath: 'http://localhost:9001/',
   },
   resolve: {
@@ -32,9 +31,6 @@ module.exports = {
     },
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'),
-    }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
@@ -54,7 +50,7 @@ module.exports = {
             options: {
               importLoaders: 1,
               modules: true,
-              localIdentName: '[name]__[local]',
+              localIdentName: '[name]__[local]-[hash:base64:2]',
             },
           },
           {
