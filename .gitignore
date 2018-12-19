@@ -1,3 +1,6 @@
 **/.DS_STORE
 **/.vscode/
 **/node_modules/
+*.pgn
+*.scout
+scoutfish
