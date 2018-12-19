@@ -48,7 +48,7 @@ export default async function details(args, opts) {
           error: e.message.substr(0, 25),
           row,
         })
-        if(e.is404) {
+        if (e.is404) {
           await update(false, undefined, row.id)
         }
         return false
@@ -63,7 +63,7 @@ export default async function details(args, opts) {
         return false
       }
 
-      const address = R.path(['location', 'address'])(deets[0])
+      let address = R.path(['location', 'address'])(deets[0])
 
       if (!address) {
         log.verbose({
@@ -71,8 +71,16 @@ export default async function details(args, opts) {
           row,
           deets,
         })
-        await update(deets[0], false, row.id)
-        return false
+        try {
+          address = await getPlace(deets[0])
+        } catch (e) {
+          log.verbose({
+            type: 'error geocoding',
+            address: address,
+            error: e.message.substr(0, 25),
+          })
+          return false
+        }
       }
 
       let geo
@@ -132,6 +140,29 @@ export async function geocode(address) {
     )
   }
   return data
+}
+
+export async function getPlace(row) {
+  const name = R.path(['location', 'name'])(row)
+  if (!name) throw new Error('findplacefromtext no details.location.name found')
+  const params = {
+    key: process.env.GOOGLE_API_KEY,
+    inputtype: 'textquery',
+    fields: 'formatted_address',
+    locationbias: '49.2827291,-123.1207375',
+    input: name,
+  }
+  const { data } = await axios.get(
+    `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?${qs(
+      params,
+    )}`,
+  )
+  if (data.status !== 'OK') {
+    throw new Error(
+      `findplacefromtext status not OK: ${data.status}: ${data.error_message}`,
+    )
+  }
+  return R.path(['candidates', '0', 'formatted_address'])(data)
 }
 
 export async function updatePool(pool, details, geo, id) {

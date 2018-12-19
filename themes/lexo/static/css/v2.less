@@ -1,0 +1,253 @@
+// out: v2.css, autoprefixer: last 2 versions
+
+@dark-grey: #282c34;
+@light-grey: lighten(@dark-grey, 5%);
+@yellow: #d19a66;
+@orange: #de5442;
+@purple: #c776df;
+@green: #7cb34b;
+@faded-white: rgba(255, 255, 255, 0.8);
+@faded-gray: #9eabb3;
+@white: white;
+
+@maxwidth: 40rem;
+
+html {
+  height: 100%;
+}
+
+body {
+  background: @dark-grey;
+  color: @white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+
+header.site-header {
+  height: 180px;
+  background: url("../img/wildpianoparty.png");
+  background-position: 50% -20px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-bottom: 4px solid black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-family: "Marcellus SC";
+  color: darken(@orange, 12%);
+  text-align: center;
+
+  &:hover {
+    background-color: @light-grey;
+  }
+}
+
+footer.site-footer {
+  height: 7em;
+  border-top: 4px solid black;
+
+  background: url("../img/wildpianoparty.png");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+
+  &:hover {
+    background-color: @light-grey;
+  }
+
+  p {
+    margin: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: @faded-gray;
+  }
+}
+
+h1 {
+  color: @yellow;
+  margin: 1.5rem auto;
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: @yellow;
+  margin: 1.3rem auto;
+  max-width: @maxwidth;
+}
+
+a,
+a:visited,
+a:active {
+  color: @white;
+  text-decoration: underline solid @green;
+  transition: color 400ms;
+
+  &:hover {
+    color: @green;
+  }
+}
+
+blockquote {
+  box-sizing: border-box;
+  max-width: @maxwidth;
+  margin: 0 auto;
+  border-left: 3px solid @white;
+  padding-left: 2rem;
+  font-style: italic;
+}
+
+.tags-and-date {
+  max-width: @maxwidth;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1.68rem;
+  font-size: 0.75rem;
+  color: darken(@white, 15%);
+}
+
+@media screen and (max-width: 40rem) {
+  article.article p,
+  article.article h2,
+  article.article h3,
+  article.article h4,
+  article.article h5,
+  article.article h6,
+  .share,
+  .disqus,
+  .article-list {
+    padding: 0 0.625rem;
+  }
+}
+
+article.article {
+  p {
+    max-width: @maxwidth;
+    margin: 0 auto 1.3rem auto;
+    font-size: 1rem;
+    line-height: 1.68rem;
+  }
+
+  ul {
+    max-width: @maxwidth;
+    margin: 0 auto 1.3rem auto;
+    list-style-type: square;
+  }
+
+  .footnotes {
+    max-width: @maxwidth;
+    margin: 0 auto;
+    font-size: 0.625rem;
+    color: @faded-gray;
+    line-height: 1rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    hr {
+      border: 0.5px solid @faded-gray;
+    }
+  }
+}
+
+.share {
+  p {
+    &:extend(article.article p);
+  }
+}
+
+.disqus {
+  width: 100%;
+  max-width: @maxwidth;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.article-list {
+  .item {
+    h1 {
+      max-width: @maxwidth;
+      font-size: 2rem;
+      text-align: left;
+
+      a {
+        text-decoration: none;
+        color: @yellow;
+        transition: color;
+
+        &:hover {
+          color: @purple;
+        }
+      }
+    }
+
+    .tags-and-date {
+      text-align: left;
+      margin: -1rem auto 1rem auto;
+    }
+
+    .split2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      max-width: @maxwidth;
+      margin: 0 auto;
+    }
+
+    .image {
+      max-width: 10rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .summary {
+      max-width: 30rem;
+      line-height: 1.68rem;
+      padding: 0 0 0 1rem;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top-color: @faded-gray;
+    border-bottom: 1px solid @faded-gray;
+    height: 0.312rem;
+    position: relative;
+    overflow: visible;
+    margin: 2rem 0;
+
+    &:after {
+      content: "❦";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.5rem;
+      background: @dark-grey;
+    }
+
+    &:last-of-type {
+      display: none;
+    }
+  }
+}

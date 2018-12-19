@@ -1,6 +1,6 @@
 .title {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
 }
 
 .centered {
@@ -25,7 +25,8 @@
 }
 
 .tooltip {
-  font-size: 1rem;
+  font-size: 0.625rem;
+
   & .wide {
     max-width: 250px;
   }

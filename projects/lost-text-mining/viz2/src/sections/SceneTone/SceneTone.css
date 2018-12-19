@@ -9,7 +9,7 @@
 
 .seasonLabel {
   fill: rgba(255, 255, 255, 0.6);
-  font-size: 1rem;
+  font-size: 0.625rem;
 }
 
 @media screen and (max-width: 900px) {

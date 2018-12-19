@@ -1,0 +1,55 @@
+.labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.yLabels {
+  display: flex;
+  justify-content: center;
+
+  & div {
+    flex-shrink: 0;
+  }
+}
+
+.label {
+  font-size: 1em;
+  font-family: sans-serif;
+  white-space: nowrap;
+  position: relative;
+}
+
+.rotatedLabel {
+  composes: label;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: 0 0;
+  top: 50%;
+  left: 0;
+  position: absolute;
+}
+
+.xLabelWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.xLabel {
+  composes: label;
+}
+
+.yLabelWrap {
+  position: relative;
+  width: 2em;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: bold;
+}

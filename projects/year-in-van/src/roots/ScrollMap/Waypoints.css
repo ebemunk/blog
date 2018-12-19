@@ -1,0 +1,17 @@
+.step {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  max-width: 20rem;
+  margin: 30vh 0;
+}
+
+:global(.article) .step {
+  & h4 {
+    margin: 0.5rem 0;
+  }
+
+  & p {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+  }
+}

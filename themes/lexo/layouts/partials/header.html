@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 		<meta name="referrer" content="origin" />
 		<!-- facebook -->
 		<meta property="og:url" content="{{ .Permalink }}">
@@ -30,9 +30,9 @@
 
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 		<link rel='stylesheet' href="//fonts.googleapis.com/css?family=Marcellus+SC">
-		<!-- <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css"> -->
-		<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
-		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+		<!-- <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css"> -->
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/v2.css">
 
 		{{ if eq .URL "/" }}
 			<title>{{ .Title }}</title>
@@ -43,6 +43,6 @@
 		{{ .Hugo.Generator }}
 	</head>
 	<body>
-		<header class="container site-header">
+		<header class="site-header">
 			{{ .Site.Title }}
 		</header>

@@ -1,0 +1,60 @@
+.labels {
+  color: white;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.white {
+  flex: 0 0 auto;
+  color: white;
+
+  & :global(.tick) {
+    & text {
+      fill: white;
+    }
+
+    & line {
+      stroke: white;
+    }
+  }
+
+  & :global(.domain) {
+    stroke: white;
+  }
+}
+
+.linearAxis {
+  & :global(.tick) line {
+    stroke-dasharray: 0, 7;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke: rgba(255, 255, 255, 0.5);
+  }
+
+  & :global(.domain) {
+    stroke: none;
+  }
+}
+
+.split2 {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 40rem) {
+  .split2 {
+    flex-wrap: wrap;
+  }
+}
+
+.locs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 40rem) {
+  .locs {
+    align-items: flex-start;
+  }
+}

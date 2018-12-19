@@ -22,14 +22,6 @@ export default class Personalities extends React.Component {
 
     return (
       <div className={css.responsive}>
-        <div className={css.toggle}>
-          <Toggle
-            children="Tooltips"
-            onClick={() => this.setState({ tooltips: !tooltips })}
-            className={css.all}
-            on={tooltips}
-          />
-        </div>
         <div className={css.dimensions}>
           {dimensions
             .map(dim => ({

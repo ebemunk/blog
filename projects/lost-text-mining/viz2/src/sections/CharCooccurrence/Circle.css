@@ -18,7 +18,7 @@
 .tooltip {
   background: rgba(0, 0, 0, 0.8);
   padding: 0.2rem;
-  font-size: 1.3rem;
+  font-size: 0.75rem;
   border: 1px solid slategray;
   border-radius: 0.5rem;
   pointer-events: none;
