@@ -174,7 +174,7 @@ const Waypoints = ({
       <h4>Meals</h4>
       <p>
         Events where the name contains a reference to breakfast, lunch or
-        dinner. Gastown and Commercial stand out by the abundance of dinner
+        dinner. Gastown and along Main St. stand out by the abundance of dinner
         events.
       </p>
     </StatefulWaypoint>
