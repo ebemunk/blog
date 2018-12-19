@@ -75,7 +75,7 @@ const Plot = ({
           style={{
             title: {
               fill: white100,
-              fontSize: '1.25rem',
+              fontSize: '0.75rem',
             },
             ticks: {
               fill: white80,
@@ -90,7 +90,7 @@ const Plot = ({
           style={{
             title: {
               fill: white100,
-              fontSize: '1.25rem',
+              fontSize: '0.75rem',
             },
             ticks: {
               fill: white80,

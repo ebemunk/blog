@@ -4,16 +4,21 @@ import { colorScale } from '../util'
 import Board from '../components/Chess/Board'
 import data from '../data'
 
-import { Paths } from '../components/Chess/CB'
+import Paths from '../components/Chess/Paths'
 import Square from '../components/Chess/Square'
 import Piece from '../components/Chess/Piece'
 
+import css from './Section.css'
+
 const PawnPaths = ({ show, setShow, width = 500 }) => (
-  <div>
+  <div className={css.viz}>
     <Board width={width} data={data.Trax[show]}>
       {'abcdefgh'.split('').map(file => (
         <React.Fragment key={file}>
-          <g onClick={() => setShow(file + '2')}>
+          <g
+            onClick={() => setShow(file + '2')}
+            className={css.clickableSquare}
+          >
             <Piece
               type="P"
               square={file + '2'}

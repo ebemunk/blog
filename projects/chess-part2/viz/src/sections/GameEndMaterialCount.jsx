@@ -1,32 +1,38 @@
 import React from 'react'
 import { format } from 'd3-format'
-import { VerticalBarSeries } from 'react-vis'
+import { VerticalBarSeries, LineSeries } from 'react-vis'
 
 import data from '../data'
 import { colorScale } from '../util'
 import Plot from '../components/Plot'
+import Toggle from '../components/Toggle'
+
+import css from './Section.css'
 
 const GameEndMaterialCount = ({ ply, setPly }) => {
   const vdata = data.GameEndMaterialCount.slice(
     0,
-    ply ? 200 : data.GameEndMaterialCount.length,
+    ply ? 150 : data.GameEndMaterialCount.length,
   )
 
   return (
-    <div>
-      <label>
-        <input type="checkbox" onChange={() => setPly(!ply)} checked={ply} />
-        Only &lt; 200 ply
-      </label>
+    <div className={css.viz}>
+      <Toggle
+        onChange={() => setPly(!ply)}
+        checked={ply}
+        label="Only < 150 ply"
+      />
       <Plot
         data={vdata}
         height={400}
+        margin={{ bottom: 25 }}
         xAxis={{
           title: 'Ply (half-move)',
         }}
         yAxis={{
           title: 'Average Material Count (pawns)',
         }}
+        yDomain={[0, 80]}
         crosshairProps={{
           titleFormat: d => ({
             title: 'Ply',
@@ -51,9 +57,10 @@ const GameEndMaterialCount = ({ ply, setPly }) => {
 }
 
 import { compose, pure, withState } from 'recompose'
+import { hot } from 'react-hot-loader'
 
 export default compose(
+  hot(module),
   pure,
-  withState('abs', 'setAbs', true),
   withState('ply', 'setPly', true),
 )(GameEndMaterialCount)

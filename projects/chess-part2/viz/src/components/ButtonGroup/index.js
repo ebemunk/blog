@@ -11,7 +11,7 @@ export default function ButtonGroup({ options, onChange, selected, ...other }) {
           children={opt.name}
           onClick={() => onChange(opt.value)}
           className={classnames('button', css.groupedButton, {
-            active: opt.value === selected,
+            [css.active]: opt.value === selected,
           })}
           key={opt.value}
         />

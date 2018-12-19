@@ -12,9 +12,9 @@ import BranchingFactor from './sections/BranchingFactor'
 import Ratings from './sections/Ratings'
 import Years from './sections/Years'
 
+render(<BranchingFactor />, '#BranchingFactor')
 render(<GameEndMaterialDiff />, '#GameEndMaterialDiff')
 render(<GameEndMaterialCount />, '#GameEndMaterialCount')
-render(<BranchingFactor />, '#BranchingFactor')
 render(<Ratings />, '#Ratings')
 render(<Years />, '#Years')
 

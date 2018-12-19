@@ -5,6 +5,8 @@ import { format } from 'd3-format'
 import Plot from '../components/Plot'
 import { whiteblack } from '../util'
 
+import css from './Section.css'
+
 import datax from '../keks.json'
 
 const Scout = ({ data }) => (
@@ -13,7 +15,16 @@ const Scout = ({ data }) => (
       flexBasis: '20%',
     }}
   >
-    <h4>{data.name}</h4>
+    <strong
+      style={{
+        textAlign: 'center',
+        width: '100%',
+        display: 'block',
+        marginLeft: '15px',
+      }}
+    >
+      {data.name}
+    </strong>
     <Plot
       height={200}
       width={300}
@@ -24,9 +35,9 @@ const Scout = ({ data }) => (
         black: data.black[i].y,
       }))}
       xType="ordinal"
-      margin={{}}
+      margin={{ bottom: 25 }}
       xAxis={{
-        title: 'Piece',
+        title: 'Result',
       }}
       yAxis={{
         title: 'Count',
@@ -57,13 +68,7 @@ const Scout = ({ data }) => (
 )
 
 const Scouts = ({ filter = [] }) => (
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    }}
-  >
+  <div className={css.viz}>
     <div
       style={{
         display: 'flex',

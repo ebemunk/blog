@@ -39,9 +39,12 @@ export const Paths = compose(pure)(
           // strokeWidth={scale(data[k])}
           strokeWidth={5}
           strokeLinecap="round"
+          pointerEvents="none"
           key={k}
         />
       )
     })
   },
 )
+
+export default Paths

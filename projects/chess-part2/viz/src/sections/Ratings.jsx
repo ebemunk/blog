@@ -6,9 +6,11 @@ import data from '../data'
 import { colorScale } from '../util'
 import Plot from '../components/Plot'
 
+import css from './Section.css'
+
 const Ratings = ({}) => {
   return (
-    <div>
+    <div className={css.viz}>
       <Plot
         data={data.Ratings.map(d => ({
           ...d,
@@ -19,6 +21,7 @@ const Ratings = ({}) => {
         xAxis={{
           title: 'ELO Rating',
         }}
+        margin={{ bottom: 25 }}
         yAxis={{
           title: 'Count',
           tickFormat: d => format('.2s')(d),

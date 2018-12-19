@@ -1,8 +1,16 @@
 .button {
   font-size: 0.8rem;
-  height: 2.8rem;
-  line-height: 2.8rem;
-  padding: 0 1.5rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  background: lightslategray;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.active {
+    background: red;
+  }
 }
 
 .groupedButton {

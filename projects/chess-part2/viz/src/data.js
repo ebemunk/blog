@@ -68,6 +68,7 @@ export default evolve({
   MaterialCount: mapToXY,
   MaterialDiff: mapToXY,
   GameEndMaterialCount: mapToXY,
+  MaterialCount: mapToXY,
   GameEndMaterialDiff: mapToXY,
   Ratings: ratings => {
     const d = mapObjToXY(ratings)
