@@ -75,6 +75,7 @@ const Scouts = ({ filter = [] }) => (
         flexWrap: 'wrap',
         width: '100vw',
         justifyContent: 'space-evenly',
+        overflow: 'hidden',
       }}
     >
       {datax

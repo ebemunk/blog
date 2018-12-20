@@ -121,7 +121,21 @@ const BoardViz = compose(
               width={240}
               data={data.heatmap.map(d => {
                 if (piece === 'All') {
-                  return Object.keys(d).reduce((sum, k) => sum + d[k], 0)
+                  return Object.keys(d).reduce((sum, k) => {
+                    if (color === 'All') {
+                      return sum + d[k]
+                    }
+
+                    if (color === 'White' && k.toUpperCase() === k) {
+                      return sum + d[k]
+                    }
+
+                    if (color === 'Black' && k.toLowerCase() === k) {
+                      return sum + d[k]
+                    }
+
+                    return sum
+                  }, 0)
                 }
                 const w = get(d, piece, 0)
                 const b = get(d, piece.toLowerCase(), 0)
