@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <div class="article-list">
-	{{ range $key, $val := where .Paginator.Pages "Params.hidden" "ne" "true" }}
+	{{ range $key, $val := where .Paginator.Pages "Params.hidden" "ne" true }}
 		<article class="item">
 			<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 			<div class="tags-and-date">
@@ -22,11 +22,7 @@
 			</div>
 		</article>
 
-		{{ if ne $key 10 }}
-			<hr>
-		{{ else }}
-		{{ end }}
-
+		<hr>
 	{{ end }}
 </div>
 
