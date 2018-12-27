@@ -49,7 +49,7 @@ const Ratings = ({}) => {
   )
 }
 
-import { compose, pure, withState } from 'recompose'
+import { compose, pure } from 'recompose'
 import { hot } from 'react-hot-loader'
 
 export default compose(

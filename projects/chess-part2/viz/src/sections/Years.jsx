@@ -1,30 +1,35 @@
 import React from 'react'
 import { format } from 'd3-format'
-import { VerticalBarSeries } from 'react-vis'
+import { VerticalRectSeries } from 'react-vis'
 
 import data from '../data'
 import { colorScale } from '../util'
 import Plot from '../components/Plot'
 
+import css from './Section.css'
+
 const Years = ({}) => {
   return (
-    <div>
+    <div className={css.viz}>
       <Plot
-        data={data.Years}
+        data={data.Years.map(d => ({
+          ...d,
+          x: d.x - (d.x - d.x0) / 2,
+          x1: d.x,
+        }))}
         height={400}
         xAxis={{
           title: 'Year',
         }}
+        margin={{ bottom: 25 }}
         yAxis={{
           title: 'Count',
           tickFormat: d => format('.2s')(d),
         }}
-        margin={{ bottom: 25 }}
-        xType="ordinal"
         crosshairProps={{
           titleFormat: d => ({
             title: 'Year',
-            value: `${d[0].x}`,
+            value: `${d[0].x0} - ${d[0].x1}`,
           }),
           itemsFormat: d => [
             {
@@ -34,7 +39,7 @@ const Years = ({}) => {
           ],
         }}
       >
-        <VerticalBarSeries
+        <VerticalRectSeries
           data={data.Years}
           stroke="#282c34"
           color={colorScale(0)}
@@ -44,7 +49,7 @@ const Years = ({}) => {
   )
 }
 
-import { compose, pure, withState } from 'recompose'
+import { compose, pure } from 'recompose'
 import { hot } from 'react-hot-loader'
 
 export default compose(

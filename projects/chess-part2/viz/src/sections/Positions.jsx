@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { range, max } from 'd3-array'
 import { scaleLinear } from 'd3-scale'
+import { format } from 'd3-format'
 import { Manager, Reference, Popper } from 'react-popper'
 
 import data from '../data'
@@ -57,7 +58,7 @@ const PositionName = compose(
             >
               <div>
                 <Board width={150}>
-                  {fenToArr(d.x).map(
+                  {fenToArr(d.fen).map(
                     (piece, i) =>
                       !!piece && (
                         <Piece
@@ -83,12 +84,7 @@ const PositionName = compose(
   </Manager>
 ))
 
-const Positions = ({}) => {
-  const datz = data.Positions.slice()
-    .filter(d => +d.x[d.x.length - 1] > 5)
-    .sort((a, b) => b.y - a.y)
-    .slice(0, 30)
-
+const Positions = ({ datz }) => {
   const scale = scaleLinear()
     .domain([0, max(datz, d => d.y)])
     .range([0, 100])
@@ -105,7 +101,7 @@ const Positions = ({}) => {
       >
         <tbody>
           {datz.map(d => (
-            <tr key={d.x}>
+            <tr key={d.fen}>
               <td
                 style={{
                   maxWidth: '25rem',
@@ -130,7 +126,7 @@ const Positions = ({}) => {
                     textAlign: 'right',
                   }}
                 >
-                  {d.y}&nbsp;
+                  {format('.3s')(d.y)}&nbsp;
                 </div>
               </td>
             </tr>
@@ -141,9 +137,16 @@ const Positions = ({}) => {
   )
 }
 
+const Pos = ({}) =>
+  [0, 5, 10].map(fullmove => (
+    <Positions
+      datz={data.Positions.filter(d => d.fullmove > fullmove).slice(0, 10)}
+    />
+  ))
+
 import { hot } from 'react-hot-loader'
 
 export default compose(
   hot(module),
   pure,
-)(Positions)
+)(Pos)
