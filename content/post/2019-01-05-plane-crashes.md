@@ -1,5 +1,5 @@
 +++
-date = "2018-12-18"
+date = "2018-12-19"
 title = "Plane Crashes"
 slug = "plane-crashes"
 tags = ["data visualization"]
