@@ -93,28 +93,25 @@ const openings = require('./openings/openings')
 
 const getOpeningName = fen => {
   const opening = openings[openingsFen[fen]]
-  return opening ? `${opening.eco} - ${opening.name}` : fen
+  // return opening ? `${opening.eco} - ${opening.name}` : '[position]'
+  return opening ? `${opening.name}` : '[unknown position]'
 }
 
-const transformPositions = pipe(
-  mapObjIndexed((y, x) => ({ x, y })),
-  values,
-  sort((a, b) => b.y - a.y),
-  drop(1),
-  // filter(d => {
-  //   const fok = d.x.match(/.+ \d+ (\d+)/)
-  //   if (!fok) console.log('wa', fok, d.x)
-
-  //   return +fok[1] > 5
-  // }),
-  // take(50),
-  map(d => ({
-    fullmove: d.x.match(/.+ \d+ (\d+)/)[1],
-    fen: d.x,
-    x: getOpeningName(d.x),
-    y: d.y,
-  })),
-)
+const transformPositions = (fullmove = 0) =>
+  pipe(
+    mapObjIndexed((y, x) => ({ x, y })),
+    values,
+    sort((a, b) => b.y - a.y),
+    drop(1),
+    map(d => ({
+      fullmove: d.x.match(/.+ \d+ (\d+)/)[1],
+      fen: d.x,
+      x: getOpeningName(d.x),
+      y: d.y,
+    })),
+    filter(d => d.fullmove > fullmove),
+    take(10),
+  )
 
 module.exports = {
   mapIndexed,

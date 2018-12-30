@@ -20,5 +20,9 @@ module.exports = evolve({
   GameEndMaterialDiff: mapToXY,
   Ratings: transformHistogram(),
   Years: transformHistogram(100),
-  Positions: transformPositions,
+  Positions: pos => [
+    transformPositions(0)(pos),
+    transformPositions(5)(pos),
+    transformPositions(11)(pos),
+  ],
 })(data)

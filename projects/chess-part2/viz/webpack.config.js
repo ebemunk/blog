@@ -1,7 +1,6 @@
 const path = require('path')
 
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const PostcssPresetEnv = require('postcss-preset-env')
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -11,14 +10,15 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(
+      __dirname,
+      '../../../static/visual-look-at-2-million-chess-games-part-2',
+    ),
     publicPath: 'http://localhost:9001/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    alias: {
-      components: path.resolve(__dirname, 'src/components/'),
-    },
+    alias: {},
   },
   devtool: 'source-map',
   devServer: {
@@ -29,9 +29,6 @@ module.exports = {
     },
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'),
-    }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],

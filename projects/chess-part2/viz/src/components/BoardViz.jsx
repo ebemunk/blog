@@ -1,7 +1,7 @@
 import React from 'react'
 import { VerticalBarSeries } from 'react-vis'
 import { compose, pure, withState } from 'recompose'
-import { get } from 'lodash'
+import get from 'lodash/get'
 import { format } from 'd3-format'
 
 import Plot from './Plot'
@@ -32,6 +32,7 @@ const BoardViz = compose(
         <h5
           style={{
             margin: 0,
+            marginBottom: '0.5rem',
           }}
         >
           by piece
@@ -103,6 +104,7 @@ const BoardViz = compose(
             <h5
               style={{
                 margin: 0,
+                marginBottom: '0.5rem',
               }}
             >
               {
@@ -119,6 +121,9 @@ const BoardViz = compose(
             </h5>
             <ChessBoard
               width={240}
+              style={{
+                marginBottom: '0.5rem',
+              }}
               data={data.heatmap.map(d => {
                 if (piece === 'All') {
                   return Object.keys(d).reduce((sum, k) => {

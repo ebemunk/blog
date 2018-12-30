@@ -27,6 +27,7 @@ const GameEndMaterialDiff = ({ abs, setAbs, ply, setPly }) => {
           onChange={() => setPly(!ply)}
           checked={ply}
           label="Only < 150 ply"
+          style={{ marginLeft: '1rem' }}
         />
       </div>
       <Plot

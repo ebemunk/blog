@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { extent, scaleLinear, scaleSqrt, format } from 'd3'
+import { format } from 'd3-format'
+import { extent } from 'd3-array'
+import { scaleLinear } from 'd3-scale'
 import { Manager, Reference, Popper } from 'react-popper'
 import { compose, pure, withState } from 'recompose'
 
@@ -85,13 +87,13 @@ const Square = compose(
   ),
 )
 
-const ChessBoard = ({ width, data }) => {
+const ChessBoard = ({ width, data, style }) => {
   const scale = scaleLinear()
     .range([0, 1])
     .domain(extent(data))
 
   return (
-    <div style={{}}>
+    <div style={style}>
       <svg width={width} height={width}>
         <defs>
           <pattern

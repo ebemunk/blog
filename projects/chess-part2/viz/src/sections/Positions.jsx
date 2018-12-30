@@ -41,6 +41,9 @@ const PositionName = compose(
           ref={ref}
           onMouseEnter={() => setTooltip(true)}
           onMouseOut={() => setTooltip(false)}
+          onClick={e => {
+            e.preventDefault()
+          }}
         >
           {d.x}
         </a>
@@ -84,14 +87,20 @@ const PositionName = compose(
   </Manager>
 ))
 
-const Positions = ({ datz }) => {
+const Positions = ({ datz, caption }) => {
   const scale = scaleLinear()
     .domain([0, max(datz, d => d.y)])
     .range([0, 100])
 
   return (
     <div
-      style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column',
+        flexBasis: '33%',
+        marginBottom: '1.5rem',
+      }}
     >
       <table
         style={{
@@ -99,6 +108,13 @@ const Positions = ({ datz }) => {
           margin: '0 0.625rem',
         }}
       >
+        <caption
+          style={{
+            fontWeight: 'bold',
+          }}
+        >
+          {caption}
+        </caption>
         <tbody>
           {datz.map(d => (
             <tr key={d.fen}>
@@ -110,7 +126,6 @@ const Positions = ({ datz }) => {
                   overflow: 'hidden',
                   textAlign: 'right',
                 }}
-                title={d.x}
               >
                 <PositionName d={d} />
               </td>
@@ -137,12 +152,20 @@ const Positions = ({ datz }) => {
   )
 }
 
-const Pos = ({}) =>
-  [0, 5, 10].map(fullmove => (
-    <Positions
-      datz={data.Positions.filter(d => d.fullmove > fullmove).slice(0, 10)}
-    />
-  ))
+const Pos = ({}) => (
+  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    {data.Positions.map((datz, i) => (
+      <div key={i}>
+        <Positions
+          datz={datz}
+          caption={
+            { 0: 'All Positions', 1: '6+ Full Moves', 2: '12+ Full Moves' }[i]
+          }
+        />
+      </div>
+    ))}
+  </div>
+)
 
 import { hot } from 'react-hot-loader'
 
