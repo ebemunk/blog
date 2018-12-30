@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bluebird": "^3.5.3"
+  },
+  "name": "scout",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
