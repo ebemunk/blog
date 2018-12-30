@@ -1,0 +1,32 @@
+.button {
+  font-size: 0.8rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  background: #b3b3b3;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.active {
+    background: steelblue;
+  }
+}
+
+.groupedButton {
+  composes: button;
+  border-radius: 0;
+}
+
+.wrapper {
+  & .button:first-of-type {
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+  }
+
+  & .button:last-of-type {
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+  }
+}

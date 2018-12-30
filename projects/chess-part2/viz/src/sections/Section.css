@@ -1,0 +1,12 @@
+.viz {
+  margin-bottom: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clickableSquare {
+  &:hover {
+    cursor: pointer;
+  }
+}
