@@ -208,3 +208,16 @@ article.article .footnotes hr {
 .article-list hr:last-of-type {
   display: none;
 }
+.see-also .see-also-items {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.see-also .see-also-items .suggestion {
+  max-width: 18rem;
+}
+.see-also .see-also-items .suggestion img {
+  width: 16rem;
+  height: 16rem;
+}
