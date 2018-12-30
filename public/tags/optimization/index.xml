@@ -1,25 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Optimization on Thinking Through the Party</title>
-    <link>https://blog.ebemunk.com/tags/optimization/</link>
-    <description>Recent content in Optimization on Thinking Through the Party</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jan 2016 04:56:00 -0700</lastBuildDate>
-    
-	<atom:link href="https://blog.ebemunk.com/tags/optimization/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Optimizing Particle Background Performance with Quadtrees</title>
-      <link>https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</link>
-      <pubDate>Thu, 21 Jan 2016 04:56:00 -0700</pubDate>
-      
-      <guid>https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</guid>
-      <description>I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, Particleground and particles.js. Before jumping in and copy/pasting sample code, I figured I&amp;rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance.
-So - okay, simple enough, 100% width/height canvas at the background, put out some randomly placed dots, then link the dots depending on the distance.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Optimization on Thinking Through the Party</title><link>https://blog.ebemunk.com/tags/optimization/</link><description>Recent content in Optimization on Thinking Through the Party</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 21 Jan 2016 04:56:00 -0700</lastBuildDate><atom:link href="https://blog.ebemunk.com/tags/optimization/index.xml" rel="self" type="application/rss+xml"/><item><title>Optimizing Particle Background Performance with Quadtrees</title><link>https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</link><pubDate>Thu, 21 Jan 2016 04:56:00 -0700</pubDate><guid>https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</guid><description>I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, Particleground and particles.js. Before jumping in and copy/pasting sample code, I figured I&amp;rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance.
+So - okay, simple enough, 100% width/height canvas at the background, put out some randomly placed dots, then link the dots depending on the distance.</description></item></channel></rss>
