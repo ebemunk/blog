@@ -1,14 +1,8 @@
 import { default as cli } from 'commander'
 
 import { default as packageJson } from '../package.json'
-// import {
-// 	scrape,
-// 	parse,
-// 	writeDb,
-// 	personality,
-// 	tone,
-// 	writeForViz
-// } from './commands'
+import scrapePages from './commands/scrapePages'
+import scrapeRecords from './commands/scrapeRecords'
 
 cli.version(packageJson.version)
 
@@ -19,10 +13,14 @@ cli
     cli.help()
   })
 
-// cli
-// .command('scrape')
-// .description('scrape episode html')
-// .option('-c, --concurrency <num>', 'promise concurrency', Infinity)
-// .action(scrape)
+cli
+  .command('scrapePages')
+  .description('scrape pages')
+  .action(scrapePages)
+
+cli
+  .command('scrapeRecords')
+  .description('scrape records')
+  .action(scrapeRecords)
 
 cli.parse(process.argv)
