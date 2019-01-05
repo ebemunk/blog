@@ -5,7 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "babel-node src/index.js"
+    "start": "babel-node src/index.js",
+    "test": "jest"
   },
   "dependencies": {
     "@babel/core": "^7.2.2",
@@ -13,10 +14,12 @@
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.2.3",
     "axios": "^0.18.0",
+    "babel-jest": "^23.6.0",
     "bluebird": "^3.5.3",
     "chalk": "^2.4.1",
     "cheerio": "^1.0.0-rc.2",
     "commander": "^2.19.0",
+    "jest": "^23.6.0",
     "progress": "^2.0.3",
     "ramda": "^0.26.1"
   }
