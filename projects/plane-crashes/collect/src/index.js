@@ -4,6 +4,8 @@ import { default as packageJson } from '../package.json'
 import scrapePages from './commands/scrapePages'
 import scrapeRecords from './commands/scrapeRecords'
 import parse from './commands/parse'
+import writeDB from './commands/writeDB'
+import parseDB from './commands/parseDB'
 
 cli.version(packageJson.version)
 
@@ -28,5 +30,15 @@ cli
   .command('parse')
   .description('parse records')
   .action(parse)
+
+cli
+  .command('writeDB')
+  .description('write records to db')
+  .action(writeDB)
+
+cli
+  .command('parseDB')
+  .description('parse records from db')
+  .action(parseDB)
 
 cli.parse(process.argv)

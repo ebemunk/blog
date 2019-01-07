@@ -30,3 +30,17 @@ export async function download(url, path) {
   const { data } = await axios.get(url)
   return writeFile(path, data)
 }
+
+export function insertObj(obj, table = 'crashes') {
+  const cols = Object.keys(obj).join(',')
+  const valOrder = Object.keys(obj)
+    .map((v, i) => `$${i + 1}`)
+    .join(',')
+  const sql = `
+		INSERT INTO ${table}
+		(${cols})
+		VALUES
+		(${valOrder})
+	`
+  return [sql, Object.values(obj)]
+}

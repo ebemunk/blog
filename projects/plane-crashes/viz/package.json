@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
+    "d3-shape": "^1.2.2",
     "ramda": "^0.26.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

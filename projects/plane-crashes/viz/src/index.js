@@ -6,6 +6,10 @@ import 'react-vis/dist/style.css'
 const render = (component, selector) =>
   ReactDOM.render(component, document.querySelector(selector))
 
-import A from './A'
+import Years from './viz/Years'
+import Phase from './viz/Phase'
+import DamageMatrix from './viz/DamageMatrix'
 
-render(<A />, '#hi')
+render(<Years />, '#years')
+render(<Phase />, '#phase')
+render(<DamageMatrix />, '#damage-matrix')
