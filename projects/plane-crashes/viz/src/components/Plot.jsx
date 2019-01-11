@@ -42,7 +42,7 @@ const Plot = ({
         animation
         {...otherProps}
       >
-        {/* <Crosshair
+        <Crosshair
           values={crosshair}
           style={{
             line: {
@@ -50,7 +50,7 @@ const Plot = ({
             },
           }}
           {...crosshairProps}
-        /> */}
+        />
         <VerticalGridLines style={{ stroke: white30 }} />
         <HorizontalGridLines style={{ stroke: white30 }} />
         {children}

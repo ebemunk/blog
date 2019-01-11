@@ -19,5 +19,13 @@ fagaega
 
 <div id="damage-matrix"></div>
 
+vaegae
+
+<div id="fat-hist"></div>
+
+aegega
+
+<div id="nature"></div>
+
 <script src="http://localhost:9001/bundle.js"></script>
 <!-- <script src="bundle.js"></script> -->

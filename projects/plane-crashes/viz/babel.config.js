@@ -9,5 +9,8 @@ module.exports = {
     ],
     '@babel/react',
   ],
-  plugins: ['react-hot-loader/babel'],
+  plugins: [
+    'react-hot-loader/babel',
+    '@babel/plugin-proposal-class-properties',
+  ],
 }
