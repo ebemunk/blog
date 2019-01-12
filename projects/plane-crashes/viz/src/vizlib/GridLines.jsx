@@ -1,5 +1,5 @@
 import React from 'react'
-import { Spring } from 'react-spring'
+import { Spring, animated } from 'react-spring'
 
 import { PlotContext } from './Plot'
 
@@ -13,6 +13,7 @@ export default function GridLines({ scale, ticks, orientation, ...props }) {
           {scale.ticks(ticks).map(tick => (
             <Spring
               key={tick}
+              native
               to={{
                 x1: vertical ? scale(tick) + 0.5 : 0,
                 y1: vertical ? 0 : scale(tick) + 0.5,
@@ -21,7 +22,7 @@ export default function GridLines({ scale, ticks, orientation, ...props }) {
               }}
             >
               {spring => (
-                <line
+                <animated.line
                   x1={spring.x1}
                   y1={spring.y1}
                   x2={spring.x2}
