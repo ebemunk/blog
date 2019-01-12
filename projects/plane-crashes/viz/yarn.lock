@@ -4056,6 +4056,13 @@ react-motion@^0.5.2:
     prop-types "^15.5.8"
     raf "^3.1.0"
 
+react-spring@^7.2.8:
+  version "7.2.8"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-7.2.8.tgz#a1f49653393332bf84431a898993eda2f3212e42"
+  integrity sha512-wgK0eXjWR5yT12kAd0b6CXF73qcoisTJF7vt8qw/IZmeYcPm/GA3zGV5MQ8R2hicbVwc5oV6FGFPSbkAFJ6pdA==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 react-vis@^1.11.5:
   version "1.11.5"
   resolved "https://registry.yarnpkg.com/react-vis/-/react-vis-1.11.5.tgz#d2aa4931fd125ba2eafb7216a3e63e825360d261"

@@ -57,6 +57,7 @@ export default class Axis extends React.PureComponent {
       scale,
       ticks,
       tickSize,
+      tickPadding,
       tickFormat,
       tickValues,
       transitionDuration,
@@ -66,6 +67,7 @@ export default class Axis extends React.PureComponent {
       .scale(scale)
       .ticks(ticks)
       .tickSize(tickSize)
+      .tickPadding(tickPadding)
       .tickFormat(tickFormat)
       .tickValues(tickValues)
 
