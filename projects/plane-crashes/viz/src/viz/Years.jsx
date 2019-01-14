@@ -1,9 +1,7 @@
 import React from 'react'
-import { LineSeries as LS } from 'react-vis'
-
-import Pulot from '../components/Plot'
-import { colors, colors8 } from '../colors'
-import datar from '../data/years-fat-crash.csv'
+import { colors8 } from '../colors'
+// import datar from '../data/years-fat-crash.csv'
+import datar from '../data/years-no-military.csv'
 
 import FlexPlot from '../vizlib/FlexPlot'
 import Line from '../vizlib/Line'
@@ -13,13 +11,16 @@ import GridLines from '../vizlib/GridLines'
 import { scaleLinear } from 'd3-scale'
 import { extent, max } from 'd3-array'
 
-// const data = datar.filter(d => d.year > 1937 && d.year < 1947)
+// const data = datar.filter(d => d.year > 1937 && d.year < 1948)
 const data = datar
 
-const Years = ({}) => (
+import dara from '../data/years-military.csv'
+
+const Years = ({ linedata, setLinedata }) => (
   <div>
+    <button onClick={() => setLinedata(!linedata)}>set {linedata}</button>
     <FlexPlot
-      height={300}
+      height={400}
       margin={{ left: 40, right: 15, top: 30, bottom: 30 }}
     >
       {({ margin, chartHeight, chartWidth }) => {
@@ -28,7 +29,7 @@ const Years = ({}) => (
           .range([0, chartWidth])
 
         const yScale = scaleLinear()
-          .domain([0, max(data.map(d => +d.total))])
+          .domain([0, 3000])
           .range([chartHeight, 0])
 
         console.log('iner render')
@@ -80,6 +81,27 @@ const Years = ({}) => (
                 strokeWidth: '3',
               }}
             />
+            <Line
+              data={dara.map(d => [xScale(d.year), yScale(d.crashes)])}
+              style={{
+                stroke: 'yellow',
+                strokeWidth: '3',
+              }}
+            />
+            <Line
+              data={dara.map(d => [xScale(d.year), yScale(d.total)])}
+              style={{
+                stroke: 'red',
+                strokeWidth: '3',
+              }}
+            />
+            <rect
+              x={xScale(1939)}
+              y={0}
+              width={xScale(1945) - xScale(1939)}
+              height={chartHeight}
+              style={{ fill: 'rgba(255,255,255, 0.1)' }}
+            />
             <line
               x1={xScale(1939)}
               y1={0}
@@ -106,48 +128,19 @@ const Years = ({}) => (
               r={3}
               cx={xScale(2001)}
               cy={yScale(data.find(d => +d.year === 2001).ground)}
-              style={{ fill: 'green' }}
+              style={{ fill: 'red' }}
             />
           </React.Fragment>
         )
       }}
     </FlexPlot>
-    <Pulot
-      height={400}
-      data={data.map(d => ({
-        x: d.year,
-        y: +d.total,
-      }))}
-    >
-      <LS
-        data={data.map(d => ({
-          x: d.year,
-          y: d.total,
-        }))}
-        stroke={colors[0]}
-        strokeWidth={3}
-      />
-      <LS
-        data={data.map(d => ({
-          x: d.year,
-          y: d.crashes,
-        }))}
-        stroke={colors[1]}
-        strokeWidth={3}
-      />
-      <LS
-        data={data.map(d => ({
-          x: d.year,
-          y: d.ground,
-        }))}
-        stroke={colors[2]}
-        strokeWidth={3}
-      />
-    </Pulot>
   </div>
 )
 
 import { hot } from 'react-hot-loader'
-import { compose } from 'recompose'
+import { compose, withState } from 'recompose'
 
-export default compose(hot(module))(Years)
+export default compose(
+  hot(module),
+  withState('linedata', 'setLinedata', false),
+)(Years)
