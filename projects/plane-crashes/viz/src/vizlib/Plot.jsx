@@ -6,12 +6,17 @@ export default class Plot extends React.Component {
   render() {
     const { children, margin, width, height } = this.props
 
+    const chartWidth = width - margin.left - margin.right
+    const chartHeight = height - margin.top - margin.bottom
+
+    if (chartWidth <= 0 || chartHeight <= 0) return null
+
     return (
       <PlotContext.Provider
         value={{
           transform: `translate(${margin.left}, ${margin.top})`,
-          chartWidth: width - margin.left - margin.right,
-          chartHeight: height - margin.top - margin.bottom,
+          chartWidth,
+          chartHeight,
           margin,
         }}
       >

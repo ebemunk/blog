@@ -32,9 +32,7 @@ export default class FlexPlot extends React.Component {
 
     return (
       <div ref={this.ref}>
-        {width && height && (
-          <Plot width={width} height={height} {...this.props} />
-        )}
+        <Plot width={width} height={height} {...this.props} />
       </div>
     )
   }
