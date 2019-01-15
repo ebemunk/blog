@@ -7,23 +7,23 @@ image = "img/year-in-van.png"
 hidden = false
 +++
 
-hello
+years
 
 <div id="years"></div>
 
-gaegaeg
+phase
 
 <div id="phase"></div>
 
-fagaega
+damage-matrix
 
 <div id="damage-matrix"></div>
 
-vaegae
+fat-hist
 
 <div id="fat-hist"></div>
 
-aegega
+nature
 
 <div id="nature"></div>
 

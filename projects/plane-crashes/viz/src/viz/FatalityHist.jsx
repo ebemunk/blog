@@ -8,6 +8,7 @@ import FlexPlot from '../vizlib/FlexPlot'
 import GridLines from '../vizlib/GridLines'
 import Axis from '../vizlib/Axis'
 import Voronoi from '../vizlib/Voronoi'
+import Rects from '../vizlib/Rects'
 
 import data from '../data/fatality-histogram.csv'
 
@@ -51,18 +52,16 @@ const FatalityHist = () => (
               style={{ stroke: 'rgba(255,255,255,0.3)' }}
               ticks={5}
             />
-            {bins.map(bin => (
-              <rect
-                key={bin}
-                x={xScale(bin.x0)}
-                y={yScale(bin.length)}
-                width={xScale(bin.x1) - xScale(bin.x0)}
-                height={chartHeight - yScale(bin.length)}
-                style={{
-                  fill: colors8(0),
-                }}
-              />
-            ))}
+            <Rects
+              data={bins}
+              x={d => xScale(d.x0)}
+              y={d => yScale(d.length)}
+              width={d => xScale(d.x1) - xScale(d.x0)}
+              height={d => chartHeight - yScale(d.length)}
+              style={{
+                fill: colors8(0),
+              }}
+            />
             <Voronoi
               points={binMids}
               onMouseEnter={(e, point) => {

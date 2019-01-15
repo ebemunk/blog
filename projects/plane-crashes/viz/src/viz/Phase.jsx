@@ -5,7 +5,7 @@ import { extent } from 'd3-array'
 import FlexPlot from '../vizlib/FlexPlot'
 import Axis from '../vizlib/Axis'
 import GridLines from '../vizlib/GridLines'
-import Bars from '../vizlib/Bars'
+import Rects from '../vizlib/Rects'
 
 import { colors8 } from '../colors'
 import data from '../data/phase.csv'
@@ -35,11 +35,12 @@ const Phase = ({}) => (
               transform={`translate(0, ${chartHeight})`}
             />
             <GridLines scale={yScale} orientation="horizontal" />
-            <Bars
+            <Rects
               data={data.map(d => [xScale(d.phase), yScale(+d.count)])}
-              bandwidth={xScale.bandwidth()}
+              width={xScale.bandwidth()}
+              height={d => chartHeight - d[1]}
               style={{
-                fill: colors8(0),
+                fill: colors8(1),
               }}
             />
           </React.Fragment>
