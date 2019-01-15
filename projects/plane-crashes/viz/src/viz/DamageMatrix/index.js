@@ -3,7 +3,7 @@ import { VerticalBarSeries, RadialChart } from 'react-vis'
 import { pie } from 'd3-shape'
 
 import Heatmap from './Heatmap'
-import Plot from '../../components/Plot'
+import Pulot from '../../components/Plot'
 import { colors, colors8 } from '../../colors'
 
 import damage from '../../data/damage.csv'
@@ -29,7 +29,7 @@ const Damage = () => (
       radius={150}
       padAngle={0.05}
     />
-    <Plot
+    <Pulot
       height={400}
       data={damage.map(d => ({
         x: d.damage,
@@ -44,7 +44,7 @@ const Damage = () => (
         }))}
         color={colors[4]}
       />
-    </Plot>
+    </Pulot>
   </div>
 )
 
@@ -71,7 +71,7 @@ const Fate = () => (
       radius={150}
       padAngle={0.05}
     />
-    <Plot
+    <Pulot
       height={400}
       data={fate.map(d => ({
         x: d.fate,
@@ -86,7 +86,7 @@ const Fate = () => (
         }))}
         color={colors[4]}
       />
-    </Plot>
+    </Pulot>
   </div>
 )
 

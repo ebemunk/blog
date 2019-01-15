@@ -3,6 +3,7 @@ import { VerticalBarSeries } from 'react-vis'
 
 import Plot from '../components/Plot'
 import { colors } from '../colors'
+
 import data from '../data/nature.csv'
 
 const Nature = ({}) => (

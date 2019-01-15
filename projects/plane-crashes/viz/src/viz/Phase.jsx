@@ -40,7 +40,7 @@ const Phase = ({}) => (
               width={xScale.bandwidth()}
               height={d => chartHeight - d[1]}
               style={{
-                fill: colors8(1),
+                fill: colors8(0),
               }}
             />
           </React.Fragment>
