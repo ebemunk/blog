@@ -7,8 +7,8 @@ import { colors8 } from '../colors'
 import FlexPlot from '../vizlib/FlexPlot'
 import GridLines from '../vizlib/GridLines'
 import Axis from '../vizlib/Axis'
-import Voronoi from '../vizlib/Voronoi'
 import Rects from '../vizlib/Rects'
+import Voronoi from '../vizlib/Voronoi'
 import Hint from '../vizlib/Hint'
 
 import data from '../data/fatality-histogram.csv'
@@ -77,7 +77,16 @@ const FatalityHist = ({ hint, setHint }) => (
             />
             {hint && (
               <Hint x1={hint.x} y1={0} x2={hint.x} y2={chartHeight}>
-                Derp {hint.data}
+                <div
+                  style={{
+                    padding: '0.5rem',
+                    backgroundColor: 'rgba(0,0,0,0.3)',
+                    border: '1px solid rgba(255,255,255,0.3)',
+                    borderRadius: '0.5rem',
+                  }}
+                >
+                  Derp {hint.data}
+                </div>
               </Hint>
             )}
           </React.Fragment>
