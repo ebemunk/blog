@@ -1,9 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { voronoi } from 'd3-voronoi'
 
 import { PlotContext } from './Plot'
 
-const Voronoi = ({ points, style, showPolygons, onMouseEnter, ...props }) => {
+const Voronoi = ({
+  points,
+  style = {},
+  showPolygons = false,
+  onMouseEnter = () => {},
+  ...props
+}) => {
   return (
     <PlotContext.Consumer>
       {({ chartWidth, chartHeight, margin }) => {
@@ -36,6 +43,13 @@ const Voronoi = ({ points, style, showPolygons, onMouseEnter, ...props }) => {
       }}
     </PlotContext.Consumer>
   )
+}
+
+Voronoi.propTypes = {
+  points: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
+  style: PropTypes.object,
+  showPolygons: PropTypes.bool,
+  onMouseEnter: PropTypes.func,
 }
 
 export default Voronoi
