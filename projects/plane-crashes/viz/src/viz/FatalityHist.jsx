@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { histogram, extent, max } from 'd3-array'
 import { scaleLinear, scalePow } from 'd3-scale'
 
@@ -64,7 +63,7 @@ const FatalityHist = ({ hint, setHint }) => (
               points={bins.map(bin => {
                 return [(xScale(bin.x0) + xScale(bin.x1)) / 2, 0]
               })}
-              onMouseEnter={(e, point) => {
+              onMouseMove={(e, point) => {
                 const x = xScale.invert(point.x)
                 const d = bins.find(bin => x >= bin.x0 && x < bin.x1)
                 setHint({

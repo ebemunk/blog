@@ -9,6 +9,7 @@ const Voronoi = ({
   style = {},
   showPolygons = false,
   onMouseEnter = () => {},
+  onMouseMove = () => {},
   ...props
 }) => {
   return (
@@ -35,6 +36,12 @@ const Voronoi = ({
                     y: e.clientY - margin.top,
                   })
                 }
+                onMouseMove={e =>
+                  onMouseMove(e, {
+                    x: e.clientX - margin.left,
+                    y: e.clientY - margin.top,
+                  })
+                }
                 {...props}
               />
             ))}
@@ -50,6 +57,7 @@ Voronoi.propTypes = {
   style: PropTypes.object,
   showPolygons: PropTypes.bool,
   onMouseEnter: PropTypes.func,
+  onMouseMove: PropTypes.func,
 }
 
 export default Voronoi
