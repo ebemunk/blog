@@ -30,9 +30,14 @@ export default class FlexPlot extends React.Component {
   render() {
     const { width, height } = this.state
 
+    const definedProps = Object.keys(this.props).reduce((props, key) => {
+      if (this.props[key]) props[key] = this.props[key]
+      return props
+    }, {})
+
     return (
       <div ref={this.ref}>
-        <Plot width={width} height={height} {...this.props} />
+        <Plot width={width} height={height} {...definedProps} />
       </div>
     )
   }

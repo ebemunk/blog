@@ -40,10 +40,10 @@ const Years = ({ linedata, setLinedata }) => (
               scale={xScale}
               orientation="bottom"
               transform={`translate(0, ${chartHeight})`}
-              ticks={20}
+              tickArguments={[20]}
               tickFormat={d => d}
             />
-            <Axis scale={yScale} orientation="left" ticks={5} />
+            <Axis scale={yScale} orientation="left" tickArguments={[5]} />
             <GridLines
               scale={xScale}
               ticks={20}

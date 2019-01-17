@@ -3,14 +3,6 @@ import { Spring, animated } from 'react-spring'
 
 import { PlotContext } from './Plot'
 
-function center(scale) {
-  var offset = Math.max(0, scale.bandwidth() - 1) / 2 // Adjust for 0.5px offset.
-  if (scale.round()) offset = Math.round(offset)
-  return function(d) {
-    return +scale(d) + offset
-  }
-}
-
 export default function GridLines({
   scale,
   ticks,

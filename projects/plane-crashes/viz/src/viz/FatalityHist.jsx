@@ -11,8 +11,6 @@ import Rects from '../vizlib/Rects'
 import Voronoi from '../vizlib/Voronoi'
 import Hint from '../vizlib/Hint'
 
-import Axos from '../vizlib/Axos/Axis'
-
 import data from '../data/fatality-histogram.csv'
 
 const hist = histogram()
@@ -33,30 +31,6 @@ const FatalityHist = ({ hint, setHint }) => (
 
         return (
           <React.Fragment>
-            <Axos orientation="left" scale={yScale} />
-            <Axos
-              orientation="right"
-              scale={yScale}
-              transform={`translate(${chartWidth}, 0)`}
-            />
-            <Axos
-              orientation="top"
-              scale={yScale}
-              transform="translate(100, 10)"
-            />
-            <Axos
-              orientation="bottom"
-              scale={yScale}
-              transform={`translate(100, ${chartHeight})`}
-            />
-
-            {/* <Axis
-              scale={xScale}
-              orientation="bottom"
-              transform={`translate(0, ${chartHeight})`}
-              ticks={20}
-            />
-            <Axis scale={yScale} orientation="left" ticks={5} />
             <GridLines
               scale={xScale}
               orientation="vertical"
@@ -107,7 +81,20 @@ const FatalityHist = ({ hint, setHint }) => (
                   Derp {hint.data}
                 </div>
               </Hint>
-            )} */}
+            )}
+            <Axis
+              orientation="left"
+              scale={yScale}
+              tickArguments={[5]}
+              title="Frequency"
+            />
+            <Axis
+              orientation="bottom"
+              scale={xScale}
+              transform={`translate(0, ${chartHeight})`}
+              tickArguments={[20]}
+              title="Fatalities"
+            />
           </React.Fragment>
         )
       }}
