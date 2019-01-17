@@ -28,10 +28,6 @@ const FatalityHist = () => (
           .domain([0, max(bins, d => d.length)])
           .range([chartHeight, 0])
 
-        const binMids = bins.map(bin => {
-          return [(xScale(bin.x0) + xScale(bin.x1)) / 2, 0]
-        })
-
         return (
           <React.Fragment>
             <Axis
@@ -63,9 +59,13 @@ const FatalityHist = () => (
               }}
             />
             <Voronoi
-              points={binMids}
+              points={bins.map(bin => {
+                return [(xScale(bin.x0) + xScale(bin.x1)) / 2, 0]
+              })}
               onMouseEnter={(e, point) => {
-                console.log('enter', e, point)
+                console.log('onMouseEnter', point)
+                const d = xScale.invert(point.x)
+                console.log('wut', d)
               }}
             />
           </React.Fragment>
