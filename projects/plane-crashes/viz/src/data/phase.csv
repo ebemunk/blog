@@ -1,11 +1,11 @@
-"phase","count"
-Standing (STD),1519
-Taxi (TXI),395
-Takeoff (TOF),1898
-Initial climb (ICL),1057
-En route (ENR),5280
-Maneuvering (MNV),357
-Approach (APR),2524
-Landing (LDG),4148
-Pushback / towing (PBT),56
-Unknown (UNK),4573
+"phase","count","avg"
+En route (ENR),5280,11.6107737512242899
+Unknown (UNK),4573,3.0703844071467244
+Landing (LDG),4148,1.2802256851155293
+Approach (APR),2524,14.2173563680192849
+Takeoff (TOF),1898,3.4684343434343434
+Standing (STD),1519,0.20741862225586676760
+Initial climb (ICL),1057,10.5169082125603865
+Taxi (TXI),395,1.5143678160919540
+Maneuvering (MNV),357,3.2428571428571429
+Pushback / towing (PBT),56,0.14814814814814814815

@@ -79,10 +79,18 @@ const Axis = ({
       />
       {title && (
         <text
-          x={topOrBottom ? range1 : tickSizeOuter}
+          x={
+            topOrBottom
+              ? range1
+              : orientation === 'left'
+              ? tickSizeOuter
+              : -tickSizeOuter
+          }
           y={topOrBottom ? -tickSizeOuter : 0}
           fill="currentColor"
-          textAnchor={topOrBottom ? 'end' : 'start'}
+          textAnchor={
+            topOrBottom ? 'end' : orientation === 'right' ? 'end' : 'start'
+          }
           alignmentBaseline={leftOrRight ? 'hanging' : 'baseline'}
           style={{ fontSize: '0.75rem' }}
         >

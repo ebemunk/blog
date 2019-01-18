@@ -32,7 +32,7 @@ const Damage = () => (
     />
     <Bar
       data={damage.map(d => [d.damage, +d.count])}
-      width={450}
+      width={350}
       height={250}
     />
   </div>
@@ -61,7 +61,7 @@ const Fate = () => (
       radius={150}
       padAngle={0.05}
     />
-    <Bar data={fate.map(d => [d.fate, +d.count])} />
+    <Bar data={fate.map(d => [d.fate, +d.count])} width={350} height={250} />
   </div>
 )
 
