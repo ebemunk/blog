@@ -1,5 +1,5 @@
 import React from 'react'
-import { Spring } from 'react-spring'
+import { Spring, animated } from 'react-spring'
 
 const translateX = x => `translate(${x + 0.5}, 0)`
 const translateY = y => `translate(0, ${y + 0.5})`
@@ -99,23 +99,24 @@ const Axis = ({
       )}
       {ticks.map(tick => (
         <Spring
+          native
           key={tick}
           to={{ opacity: 1, transform: transform(position(tick)) }}
           from={{ opacity: 0, transform: 'translate(0, 0)' }}
         >
           {spring => (
-            <g
+            <animated.g
               className="tick"
               opacity={spring.opacity}
               transform={spring.transform}
             >
-              <line
+              <animated.line
                 stroke="currentColor"
                 {...{
                   [`${x}2`]: k * tickSizeInner,
                 }}
               />
-              <text
+              <animated.text
                 fill="currentColor"
                 dy={
                   orientation === 'top'
@@ -129,8 +130,8 @@ const Axis = ({
                 }}
               >
                 {format(tick)}
-              </text>
-            </g>
+              </animated.text>
+            </animated.g>
           )}
         </Spring>
       ))}

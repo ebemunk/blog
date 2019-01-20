@@ -27,12 +27,14 @@ export default class Line extends React.Component {
         native
         to={{
           strokeDasharray: `${totalLength} ${totalLength}`,
+          d: lineGenerator(data),
         }}
       >
         {spring => (
           <animated.path
             ref={this.ref}
-            d={lineGenerator(data)}
+            // d={lineGenerator(data)}
+            d={spring.d}
             style={{
               fill: 'none',
               // strokeDasharray: spring.strokeDasharray,
