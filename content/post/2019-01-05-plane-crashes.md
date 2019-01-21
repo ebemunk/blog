@@ -11,10 +11,6 @@ hidden = false
 
 Crashes over the years.
 
-(WW2 increased plane crashes)
-
-(9/11 attacks - spike in ground fatalities)
-
 <div id="years"></div>
 
 ## Phasew

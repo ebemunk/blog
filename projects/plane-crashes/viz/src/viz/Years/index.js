@@ -1,204 +1,75 @@
 import React from 'react'
-import { scaleLinear } from 'd3-scale'
-import { extent } from 'd3-array'
+import Waypoint from 'react-waypoint'
 
-import FlexPlot from '../../vizlib/FlexPlot'
-import Line from '../../vizlib/Line'
-import Axis from '../../vizlib/Axis'
-import GridLines from '../../vizlib/GridLines'
-import Legend from '../../vizlib/Legend'
-import { colors8 } from '../../vizlib/colors'
+import Chart from './Chart'
 
-import yearsNMRaw from '../../data/years-nm.csv'
-import yearsRaw from '../../data/years.csv'
-
-import Highlight from './Highlight'
-import PointOut from './PointOut'
-
-const Years = ({ linedata, setLinedata }) => (
-  <div
-    style={{
-      display: 'flex',
-    }}
-  >
+const WP = ({ children, active, style, ...rest }) => (
+  <Waypoint topOffset="20%" bottomOffset="80%" {...rest}>
     <div
       style={{
-        flexBasis: '25%',
+        margin: '5rem 0',
+        padding: '3rem',
+        border: '1px solid gray',
+        background: 'red',
+        opacity: active ? 1 : 0.3,
+        ...style,
       }}
     >
-      <button onClick={() => setLinedata((linedata + 1) % 6)}>
-        set {linedata}
-      </button>
+      {children}
     </div>
+  </Waypoint>
+)
+
+const Years = ({ stage, setStage }) => (
+  <React.Fragment>
     <div
       style={{
-        position: 'relative',
-        flexBasis: '75%',
+        display: 'flex',
+        border: '3px dashed white',
       }}
     >
-      <Legend
+      <div
         style={{
-          position: 'absolute',
-          right: '1rem',
-          top: '1rem',
+          flexBasis: '25%',
         }}
-        data={[
-          { color: colors8(0), title: 'Fatalities' },
-          { color: colors8(1), title: 'Crashes' },
-          { color: colors8(2), title: 'Ground Fatalities' },
-        ]}
-      />
-      <FlexPlot
-        height={400}
-        margin={{ left: 40, right: 15, top: 30, bottom: 30 }}
       >
-        {({ chartHeight, chartWidth }) => {
-          const data = linedata < 3 ? yearsNMRaw : yearsRaw
-
-          const xScale = scaleLinear()
-            .domain(extent(data.map(d => d.year)))
-            .range([0, chartWidth])
-
-          const yScale = scaleLinear()
-            .domain([0, 3200])
-            .range([chartHeight, 0])
-
-          return (
-            <React.Fragment>
-              <Axis
-                scale={xScale}
-                orientation="bottom"
-                transform={`translate(0, ${chartHeight})`}
-                tickArguments={[20]}
-                tickFormat={d => d}
-              />
-              <Axis scale={yScale} orientation="left" tickArguments={[5]} />
-              <GridLines
-                scale={xScale}
-                ticks={20}
-                style={{
-                  stroke: 'gray',
-                }}
-                orientation="vertical"
-              />
-              <GridLines
-                scale={yScale}
-                ticks={5}
-                style={{
-                  stroke: 'gray',
-                }}
-                orientation="horizontal"
-              />
-
-              <Line
-                data={data.map(d => [xScale(d.year), yScale(+d.total)])}
-                style={{
-                  stroke: colors8(0),
-                  strokeWidth: 3,
-                }}
-              />
-              <Line
-                data={data.map(d => [xScale(d.year), yScale(+d.crashes)])}
-                style={{
-                  stroke: colors8(1),
-                  strokeWidth: 3,
-                }}
-              />
-              <Line
-                data={data.map(d => [xScale(d.year), yScale(+d.ground)])}
-                style={{
-                  stroke: colors8(2),
-                  strokeWidth: 3,
-                }}
-              />
-
-              <Line
-                data={yearsNMRaw.map(d => [xScale(d.year), yScale(+d.total)])}
-                style={{
-                  stroke: colors8(0),
-                  strokeWidth: 1,
-                  strokeDasharray: '3 3',
-                }}
-              />
-              <Line
-                data={yearsNMRaw.map(d => [xScale(d.year), yScale(+d.crashes)])}
-                style={{
-                  stroke: colors8(1),
-                  strokeWidth: 1,
-                  strokeDasharray: '3 3',
-                }}
-              />
-              <Line
-                data={yearsNMRaw.map(d => [xScale(d.year), yScale(+d.ground)])}
-                style={{
-                  stroke: colors8(2),
-                  strokeWidth: 1,
-                  strokeDasharray: '3 3',
-                }}
-              />
-
-              {linedata >= 4 && (
-                <Highlight
-                  start={xScale(1939)}
-                  end={xScale(1945)}
-                  chartHeight={chartHeight}
-                  title="World War 2"
-                />
-              )}
-
-              {linedata >= 5 && (
-                <Highlight
-                  start={xScale(1955)}
-                  end={xScale(1975)}
-                  chartHeight={chartHeight}
-                  title="Vietnam War"
-                />
-              )}
-
-              <defs>
-                <marker
-                  id="end"
-                  viewBox="0 -5 10 10"
-                  markerWidth="6"
-                  markerHeight="6"
-                  orient="auto"
-                >
-                  <path
-                    d="M0,-5L10,0L0,5"
-                    style={{
-                      fill: 'white',
-                    }}
-                  />
-                </marker>
-              </defs>
-
-              {linedata >= 1 && (
-                <PointOut
-                  x={xScale(1985)}
-                  y={yScale(data.find(d => +d.year === 1985).total)}
-                  dx={20}
-                  dy={-32}
-                  color={colors8(0)}
-                  title="1985: Worst year in aviation history"
-                />
-              )}
-
-              {linedata >= 2 && (
-                <PointOut
-                  x={xScale(2001)}
-                  y={yScale(data.find(d => +d.year === 2001).ground)}
-                  dx={20}
-                  dy={30}
-                  color={colors8(2)}
-                  title="2001: 9/11 Attacks"
-                />
-              )}
-            </React.Fragment>
-          )
+        <WP onEnter={() => setStage(0)} active={stage === 0}>
+          Fatalities, Ground Fatalities and crashes per year.
+        </WP>
+        <WP onEnter={() => setStage(1)} active={stage === 1}>
+          1985 was the worst year in aviation history. Wiki
+        </WP>
+        <WP onEnter={() => setStage(2)} active={stage === 2}>
+          Spike in ground fatalities in 2001 due to 9/11 attacks.
+        </WP>
+        <WP onEnter={() => setStage(3)} active={stage === 3}>
+          When Military missions are considered, there's a big increase in all
+          measures.
+        </WP>
+        <WP onEnter={() => setStage(4)} active={stage === 4}>
+          Notice the big spike during World War 2, and the sudden decrease
+          immediately following.
+        </WP>
+        <WP
+          onEnter={() => setStage(5)}
+          active={stage === 5}
+          style={{ marginBottom: '20rem' }}
+        >
+          Vietnam War caused a steady increase.
+        </WP>
+      </div>
+      <div
+        style={{
+          flexBasis: '75%',
+          position: 'sticky',
+          alignSelf: 'flex-start',
+          top: 0,
         }}
-      </FlexPlot>
+      >
+        <Chart stage={stage} />
+      </div>
     </div>
-  </div>
+  </React.Fragment>
 )
 
 import { hot } from 'react-hot-loader'
@@ -206,5 +77,5 @@ import { compose, withState } from 'recompose'
 
 export default compose(
   hot(module),
-  withState('linedata', 'setLinedata', 0),
+  withState('stage', 'setStage', 0),
 )(Years)
