@@ -3,6 +3,8 @@ import React from 'react'
 export const PlotContext = React.createContext({})
 
 export default class Plot extends React.Component {
+  svgRef = React.createRef()
+
   render() {
     const { children, margin, width, height } = this.props
 
@@ -18,9 +20,13 @@ export default class Plot extends React.Component {
           chartWidth,
           chartHeight,
           margin,
+          getBoundingClientRect: () =>
+            this.svgRef.current
+              ? this.svgRef.current.getBoundingClientRect()
+              : {},
         }}
       >
-        <svg width={width} height={height}>
+        <svg width={width} height={height} ref={this.svgRef}>
           <g transform={`translate(${margin.left}, ${margin.top})`}>
             <PlotContext.Consumer>
               {context => children(context)}

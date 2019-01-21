@@ -9,12 +9,13 @@ const Rects = ({
   width = d => d,
   height = d => d,
   className = '',
+  keys,
   ...props
 }) => (
   <g className={className}>
     {data.map((d, i) => (
       <Spring
-        key={i}
+        key={keys ? keys(d) : i}
         native
         to={{
           x: x instanceof Function ? x(d) : x,
@@ -50,6 +51,7 @@ Rects.propTypes = {
   width: PropTypes.oneOfType([PropTypes.func, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.func, PropTypes.number]),
   className: PropTypes.string,
+  keys: PropTypes.func,
 }
 
 export default Rects

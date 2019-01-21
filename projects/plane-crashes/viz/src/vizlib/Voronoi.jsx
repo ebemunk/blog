@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { voronoi } from 'd3-voronoi'
+import debounce from 'lodash/debounce'
 
 import { PlotContext } from './Plot'
 
@@ -10,11 +11,11 @@ const Voronoi = ({
   showPolygons = false,
   onMouseEnter = () => {},
   onMouseMove = () => {},
-  ...props
+  ...rest
 }) => {
   return (
     <PlotContext.Consumer>
-      {({ chartWidth, chartHeight, margin }) => {
+      {({ chartWidth, chartHeight, margin, getBoundingClientRect }) => {
         const polygons = voronoi()
           .extent([[0, 0], [chartWidth, chartHeight]])(points)
           .polygons()
@@ -30,19 +31,23 @@ const Voronoi = ({
                   stroke: showPolygons ? 'black' : 'none',
                   ...style,
                 }}
-                onMouseEnter={e =>
+                onMouseEnter={e => {
+                  const bbox = getBoundingClientRect()
+                  // const bbox = { left: 765, top: 36.84375 }
                   onMouseEnter(e, {
-                    x: e.clientX - margin.left,
-                    y: e.clientY - margin.top,
+                    x: e.clientX - bbox.left - margin.left,
+                    y: e.clientY - bbox.top - margin.top,
                   })
-                }
-                onMouseMove={e =>
+                }}
+                onMouseMove={e => {
+                  const bbox = getBoundingClientRect()
+                  // const bbox = { left: 765, top: 36.84375 }
                   onMouseMove(e, {
-                    x: e.clientX - margin.left,
-                    y: e.clientY - margin.top,
+                    x: e.clientX - bbox.left - margin.left,
+                    y: e.clientY - bbox.top - margin.top,
                   })
-                }
-                {...props}
+                }}
+                {...rest}
               />
             ))}
           </g>

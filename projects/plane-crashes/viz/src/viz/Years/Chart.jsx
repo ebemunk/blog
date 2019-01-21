@@ -49,8 +49,6 @@ const Chart = ({ stage }) => (
           .domain([0, 3200])
           .range([chartHeight, 0])
 
-        console.log('faef', yScale(data.find(d => +d.year === 1985).total))
-
         return (
           <React.Fragment>
             <Axis

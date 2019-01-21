@@ -23,6 +23,8 @@ Which phase is most dangerous?
 
 Which phase causes most fatalities (Phase vs Average fatalities)
 
+[Flight Phase Taxonomy](https://www.skybrary.aero/index.php/Flight_Phase_Taxonomy)
+
 <div id="phase"></div>
 
 ## Damage Matrixx

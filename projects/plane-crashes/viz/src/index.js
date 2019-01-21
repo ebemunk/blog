@@ -14,6 +14,6 @@ import Nature from './viz/Nature'
 
 render(<Years />, '#years')
 render(<Phase />, '#phase')
-render(<DamageMatrix />, '#damage-matrix')
-render(<FatalityHist />, '#fat-hist')
-render(<Nature />, '#nature')
+// render(<DamageMatrix />, '#damage-matrix')
+// render(<FatalityHist />, '#fat-hist')
+// render(<Nature />, '#nature')
