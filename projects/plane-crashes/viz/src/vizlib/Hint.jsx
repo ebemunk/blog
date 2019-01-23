@@ -10,6 +10,8 @@ const Hint = ({
   y2,
   placement = 'right-start',
   children = null,
+  refStyle = {},
+  hintStyle = {},
 }) => (
   <Manager>
     <Reference>
@@ -20,14 +22,19 @@ const Hint = ({
           y1={y1}
           x2={x2}
           y2={y2}
-          style={{ stroke: 'red', pointerEvents: 'none' }}
+          style={{ stroke: 'red', pointerEvents: 'none', ...refStyle }}
         />
       )}
     </Reference>
     {ReactDOM.createPortal(
       <Popper placement={placement}>
         {({ ref, style, placement }) => (
-          <div ref={ref} style={style} data-placement={placement} key={x1}>
+          <div
+            ref={ref}
+            style={{ ...style, ...hintStyle }}
+            data-placement={placement}
+            key={x1}
+          >
             {children}
           </div>
         )}

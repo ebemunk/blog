@@ -48,6 +48,7 @@ const Chart = ({ stage }) => (
         const yScale = scaleLinear()
           .domain([0, 3200])
           .range([chartHeight, 0])
+          .nice()
 
         return (
           <React.Fragment>

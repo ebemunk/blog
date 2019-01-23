@@ -13,15 +13,7 @@ Crashes over the years.
 
 <div id="years"></div>
 
-## Phasew
-
-What phase of flight has the most crashes?
-
-Which phase is safest?
-
-Which phase is most dangerous?
-
-Which phase causes most fatalities (Phase vs Average fatalities)
+## Phases
 
 [Flight Phase Taxonomy](https://www.skybrary.aero/index.php/Flight_Phase_Taxonomy)
 
