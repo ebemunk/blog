@@ -5,10 +5,11 @@ const Waypoint = ({ children, active, style, ...rest }) => (
   <ReactWaypoint topOffset="20%" bottomOffset="80%" {...rest}>
     <div
       style={{
-        margin: '5rem 0',
-        padding: '3rem',
+        margin: '8rem 1.5rem',
+        padding: '2rem',
         border: '1px solid gray',
-        background: 'red',
+        borderRadius: '5px',
+        background: 'rgba(255,255,255,0.1)',
         opacity: active ? 1 : 0.3,
         ...style,
       }}

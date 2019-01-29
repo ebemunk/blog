@@ -1,12 +1,15 @@
 import React from 'react'
 import { scaleLinear } from 'd3-scale'
 import { extent } from 'd3-array'
+import { format } from 'd3-format'
 
 import FlexPlot from '../../vizlib/FlexPlot'
 import Line from '../../vizlib/Line'
 import Axis from '../../vizlib/Axis'
 import GridLines from '../../vizlib/GridLines'
 import Legend from '../../vizlib/Legend'
+import Voronoi from '../../vizlib/Voronoi'
+import Hint from '../../vizlib/Hint'
 import { colors8 } from '../../vizlib/colors'
 
 import yearsNMRaw from '../../data/years-nm.csv'
@@ -15,7 +18,9 @@ import yearsRaw from '../../data/years.csv'
 import Highlight from './Highlight'
 import PointOut from './PointOut'
 
-const Chart = ({ stage }) => (
+const formatCount = format(',')
+
+const Chart = ({ stage, hint, setHint }) => (
   <div
     style={{
       position: 'relative',
@@ -35,7 +40,6 @@ const Chart = ({ stage }) => (
     />
     <FlexPlot
       height={500}
-      // height={window.innerHeight}
       margin={{ left: 40, right: 15, top: 30, bottom: 30 }}
     >
       {({ chartHeight, chartWidth }) => {
@@ -176,6 +180,46 @@ const Chart = ({ stage }) => (
               title="2001: 9/11 Attacks"
               show={stage >= 2}
             />
+
+            <Voronoi
+              points={data.map(d => [xScale(d.year), 0])}
+              onMouseMove={(e, point) => {
+                const x = Math.round(xScale.invert(point.x))
+                const d = data.find(d => +d.year === x)
+                setHint({
+                  x: xScale(x),
+                  data: d,
+                })
+              }}
+              onMouseLeave={() => {
+                setHint(null)
+              }}
+            />
+
+            {hint && (
+              <Hint x1={hint.x} y1={0} x2={hint.x} y2={chartHeight}>
+                <div
+                  style={{
+                    padding: '0.5rem',
+                    backgroundColor: 'rgba(0,0,0,0.3)',
+                    border: '1px solid rgba(255,255,255,0.3)',
+                    borderRadius: '0.5rem',
+                    margin: '0 0.5rem',
+                    fontSize: '0.75rem',
+                    pointerEvents: 'none',
+                  }}
+                >
+                  Year: <strong>{hint.data.year}</strong>
+                  <br />
+                  Crashes: <strong>{formatCount(hint.data.crashes)}</strong>
+                  <br />
+                  Fatalities: <strong>{formatCount(hint.data.total)}</strong>
+                  <br />
+                  Ground Fatalities:{' '}
+                  <strong>{formatCount(hint.data.ground)}</strong>
+                </div>
+              </Hint>
+            )}
           </React.Fragment>
         )
       }}
@@ -183,4 +227,6 @@ const Chart = ({ stage }) => (
   </div>
 )
 
-export default Chart
+import { compose, withState } from 'recompose'
+
+export default compose(withState('hint', 'setHint', null))(Chart)

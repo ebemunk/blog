@@ -16,6 +16,26 @@ import data from '../data/fatality-histogram.csv'
 const hist = histogram()
 const bins = hist(data.map(d => +d.passenger_fat + d.crew_fat))
 
+const lolz = data.reduce(
+  (acc, d) => {
+    const tot = +d.passenger_fat + d.crew_fat
+    if (tot > 0) {
+      acc.onep++
+    } else {
+      acc.none++
+    }
+    return acc
+  },
+  {
+    none: 0,
+    onep: 0,
+  },
+)
+
+const totla = lolz.none + lolz.onep
+
+console.log('haha', lolz, (lolz.none / totla) * 100, (lolz.onep / totla) * 100)
+
 const FatalityHist = ({ hint, setHint }) => (
   <div>
     <FlexPlot height={300} margin={{ bottom: 20, left: 50, top: 0, right: 20 }}>

@@ -9,7 +9,7 @@ const Years = ({ stage, setStage }) => (
     <div
       style={{
         display: 'flex',
-        border: '3px dashed white',
+        // border: '3px dashed white',
       }}
     >
       <div
@@ -37,7 +37,7 @@ const Years = ({ stage, setStage }) => (
         <Waypoint
           onEnter={() => setStage(5)}
           active={stage === 5}
-          style={{ marginBottom: '20rem' }}
+          style={{ margin: '8rem 1.5rem 20rem 1.5rem' }}
         >
           Vietnam War caused a steady increase.
         </Waypoint>

@@ -33,7 +33,6 @@ const Voronoi = ({
                 }}
                 onMouseEnter={e => {
                   const bbox = getBoundingClientRect()
-                  // const bbox = { left: 765, top: 36.84375 }
                   onMouseEnter(e, {
                     x: e.clientX - bbox.left - margin.left,
                     y: e.clientY - bbox.top - margin.top,
@@ -41,7 +40,6 @@ const Voronoi = ({
                 }}
                 onMouseMove={e => {
                   const bbox = getBoundingClientRect()
-                  // const bbox = { left: 765, top: 36.84375 }
                   onMouseMove(e, {
                     x: e.clientX - bbox.left - margin.left,
                     y: e.clientY - bbox.top - margin.top,

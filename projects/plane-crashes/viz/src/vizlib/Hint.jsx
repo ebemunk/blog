@@ -22,7 +22,7 @@ const Hint = ({
           y1={y1}
           x2={x2}
           y2={y2}
-          style={{ stroke: 'red', pointerEvents: 'none', ...refStyle }}
+          style={{ stroke: 'white', pointerEvents: 'none', ...refStyle }}
         />
       )}
     </Reference>

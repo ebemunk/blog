@@ -8,16 +8,16 @@ import Rects from '../../vizlib/Rects'
 
 import data from '../../data/damage-fate.csv'
 
-const scale = scalePow()
-  .exponent(0.5)
-  .domain(extent(data.map(d => +d.count)))
-  .range(['transparent', 'red'])
-
-const Heatmap = ({}) => (
-  <div>
+const Matrix = ({}) => (
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+    }}
+  >
     <Plot
-      width={500}
-      height={220}
+      width={650}
+      height={320}
       margin={{
         left: 200,
         right: 0,
@@ -67,4 +67,4 @@ const Heatmap = ({}) => (
 import { hot } from 'react-hot-loader'
 import { compose } from 'recompose'
 
-export default compose(hot(module))(Heatmap)
+export default compose(hot(module))(Matrix)

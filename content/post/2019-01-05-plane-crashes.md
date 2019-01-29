@@ -11,25 +11,26 @@ hidden = false
 
 Crashes over the years.
 
-<div id="years"></div>
+<div id="viz-years"></div>
 
 ## Phases
 
 [Flight Phase Taxonomy](https://www.skybrary.aero/index.php/Flight_Phase_Taxonomy)
 
-<div id="phase"></div>
+<div id="viz-phase"></div>
 
 ## Damage Matrixx
 
 What is the damage on the airplane after crashes?
-
 What is the fate of the airplane after a crash?
+
+<div id="viz-damage-fate"></div>
 
 How does damage and fate of the airplane correlate?
 
 Which phase causes most damage (Phase vs Damage)
 
-<div id="damage-matrix"></div>
+<div id="viz-damage-matrix"></div>
 
 ## Histogram of Fatalities
 

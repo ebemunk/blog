@@ -8,12 +8,16 @@ const render = (component, selector) =>
 
 import Years from './viz/Years'
 import Phase from './viz/Phase'
-import DamageMatrix from './viz/DamageMatrix'
+import { Damage, Matrix } from './viz/DamageMatrix'
 import FatalityHist from './viz/FatalityHist'
 import Nature from './viz/Nature'
 
-render(<Years />, '#years')
-render(<Phase />, '#phase')
-// render(<DamageMatrix />, '#damage-matrix')
-// render(<FatalityHist />, '#fat-hist')
-// render(<Nature />, '#nature')
+render(<Years />, '#viz-years')
+
+render(<Phase />, '#viz-phase')
+
+render(<Damage />, '#viz-damage-fate')
+render(<Matrix />, '#viz-damage-matrix')
+
+render(<FatalityHist />, '#fat-hist')
+render(<Nature />, '#nature')
