@@ -14,7 +14,30 @@ import { colors8 } from '../../vizlib/colors'
 
 import PhaseDiagram from './PhaseDiagram'
 
-const Bar = ({ data, hint, setHint }) => (
+const isHighlighted = (stage, d) => {
+  switch (stage) {
+    case 0:
+      return true
+    case 1:
+      return ['En route (ENR)', 'Approach (APR)', 'Landing (LDG)'].includes(
+        d[2],
+      )
+    case 2:
+      return [
+        'Standing (STD)',
+        'Taxi (TXI)',
+        'Pushback / towing (PBT)',
+      ].includes(d[2])
+    case 3:
+      return ['En route (ENR)', 'Approach (APR)'].includes(d[2])
+    case 4:
+      return ['Landing (LDG)'].includes(d[2])
+    case 5:
+      return ['Maneuvering (MNV)'].includes(d[2])
+  }
+}
+
+const Bar = ({ data, hint, setHint, stage }) => (
   <FlexPlot
     height={400}
     margin={{
@@ -49,9 +72,11 @@ const Bar = ({ data, hint, setHint }) => (
             width={xScale.bandwidth()}
             height={d => chartHeight - d[1]}
             keys={d => d[2]}
-            style={{
+            style={d => ({
               fill: colors8(0),
-            }}
+              opacity: isHighlighted(stage, d) ? 1 : 0.3,
+              transition: 'opacity 300ms',
+            })}
           />
           <Line
             data={data.map(d => [

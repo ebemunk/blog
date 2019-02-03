@@ -26,9 +26,12 @@ const Phase = ({ hint, setHint, stage, setStage, forceHint, setForceHint }) => (
   <div style={{ display: 'flex', border: '3px dashed white' }}>
     <div style={{ flexBasis: '50%' }}>
       <Waypoint onEnter={() => setStage(0)} active={stage === 0}>
-        Number of crashes increases as a flight enters later stages.
+        Phases
       </Waypoint>
       <Waypoint onEnter={() => setStage(1)} active={stage === 1}>
+        Number of crashes increases as a flight enters later stages.
+      </Waypoint>
+      <Waypoint onEnter={() => setStage(2)} active={stage === 2}>
         Safest phases of flights, obviously, is when the plane is stationary or
         moving on the ground: Standing, Taxi and Pushback.
       </Waypoint>
@@ -42,7 +45,11 @@ const Phase = ({ hint, setHint, stage, setStage, forceHint, setForceHint }) => (
         has way lower average fatalities. Crashing during Landing might be the
         "best case".
       </Waypoint>
-      <Waypoint onEnter={() => setStage(5)} active={stage === 5}>
+      <Waypoint
+        onEnter={() => setStage(5)}
+        active={stage === 5}
+        style={{ marginBottom: '20rem' }}
+      >
         Maneuvering is the phase for demonstration flights when the plane is
         low-flying.
       </Waypoint>
@@ -55,7 +62,7 @@ const Phase = ({ hint, setHint, stage, setStage, forceHint, setForceHint }) => (
         alignSelf: 'flex-start',
       }}
     >
-      <Bar data={data} hint={hint} setHint={setHint} />
+      <Bar data={data} hint={hint} setHint={setHint} stage={stage} />
     </div>
   </div>
 )

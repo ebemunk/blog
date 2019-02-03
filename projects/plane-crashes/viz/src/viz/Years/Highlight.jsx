@@ -40,7 +40,7 @@ const Highlight = ({ start, end, chartHeight, title, show }) => (
                 x2={spring.start}
                 y2={chartHeight}
                 style={{
-                  stroke: 'red',
+                  stroke: 'steelblue',
                   strokeWidth: 1,
                   strokeDasharray: '3 3',
                 }}
@@ -51,7 +51,7 @@ const Highlight = ({ start, end, chartHeight, title, show }) => (
                 x2={spring.end}
                 y2={chartHeight}
                 style={{
-                  stroke: 'red',
+                  stroke: 'steelblue',
                   strokeWidth: 1,
                   strokeDasharray: '3 3',
                 }}
