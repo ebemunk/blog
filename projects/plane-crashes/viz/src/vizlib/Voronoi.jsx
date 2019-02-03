@@ -9,6 +9,7 @@ const Voronoi = ({
   points,
   style = {},
   showPolygons = false,
+  showPoints = false,
   onMouseEnter = () => {},
   onMouseMove = () => {},
   ...rest
@@ -48,6 +49,16 @@ const Voronoi = ({
                 {...rest}
               />
             ))}
+            {showPoints &&
+              points.map(p => (
+                <circle
+                  key={p}
+                  cx={p[0]}
+                  cy={p[1]}
+                  r={3}
+                  style={{ fill: 'red' }}
+                />
+              ))}
           </g>
         )
       }}

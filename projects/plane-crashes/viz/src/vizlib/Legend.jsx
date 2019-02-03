@@ -23,6 +23,8 @@ const Legend = ({ data = [], style, ...rest }) => (
           style={{
             height: '1rem',
             width: '1rem',
+            minHeight: '1rem',
+            minWidth: '1rem',
             marginRight: '0.3rem',
             background: d.color,
           }}

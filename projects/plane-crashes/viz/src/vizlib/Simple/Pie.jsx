@@ -41,7 +41,7 @@ const Pie = ({ data, hint, setHint }) => (
 
         const arcs = pie()
           .value(d => d[1])
-          .padAngle(0.04)(data.sort((a, b) => a[1] - b[1]))
+          .padAngle(0.01)(data.sort((a, b) => a[1] - b[1]))
 
         const total = data.reduce((tot, d) => tot + d[1], 0)
 
