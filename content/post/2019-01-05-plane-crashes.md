@@ -28,15 +28,11 @@ What is the fate of the airplane after a crash?
 
 How does damage and fate of the airplane correlate?
 
-Which phase causes most damage (Phase vs Damage)
-
 <div id="viz-damage-matrix"></div>
 
 ## Histogram of Fatalities
 
 What is the most common number of fatalities in a crash?
-
-(make separate bar for 0 to highlight safety)
 
 <div id="fat-hist"></div>
 

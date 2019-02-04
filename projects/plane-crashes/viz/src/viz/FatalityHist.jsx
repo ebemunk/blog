@@ -119,6 +119,26 @@ const FatalityHist = ({ hint, setHint }) => (
         )
       }}
     </FlexPlot>
+
+    <div
+      style={{
+        display: 'flex',
+        height: '100px',
+      }}
+    >
+      <div
+        style={{
+          background: 'red',
+          width: `${(lolz.none / totla) * 100}%`,
+        }}
+      />
+      <div
+        style={{
+          background: 'green',
+          width: `${(lolz.onep / totla) * 100}%`,
+        }}
+      />
+    </div>
   </div>
 )
 
