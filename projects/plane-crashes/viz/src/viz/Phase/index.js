@@ -47,6 +47,9 @@ const Phase = ({ hint, setHint, stage, setStage, forceHint, setForceHint }) => (
       </Waypoint>
       <Waypoint
         onEnter={() => setStage(5)}
+        onLeave={({ currentPosition }) => {
+          if (currentPosition === 'above') setStage(0)
+        }}
         active={stage === 5}
         style={{ marginBottom: '20rem' }}
       >

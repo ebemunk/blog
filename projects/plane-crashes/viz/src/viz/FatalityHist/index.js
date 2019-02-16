@@ -1,17 +1,19 @@
 import React from 'react'
 import { histogram, extent, max } from 'd3-array'
 import { scaleLinear, scalePow } from 'd3-scale'
+import { format } from 'd3-format'
 
-import { colors8 } from '../colors'
+import { colors8 } from '../../colors'
 
-import FlexPlot from '../vizlib/FlexPlot'
-import GridLines from '../vizlib/GridLines'
-import Axis from '../vizlib/Axis'
-import Rects from '../vizlib/Rects'
-import Voronoi from '../vizlib/Voronoi'
-import Hint from '../vizlib/Hint'
+import FlexPlot from '../../vizlib/FlexPlot'
+import GridLines from '../../vizlib/GridLines'
+import Axis from '../../vizlib/Axis'
+import Rects from '../../vizlib/Rects'
+import Voronoi from '../../vizlib/Voronoi'
+import Hint from '../../vizlib/Hint'
+import Tooltip from '../../vizlib/Tooltip'
 
-import data from '../data/fatality-histogram.csv'
+import data from '../../data/fatality-histogram.csv'
 
 const hist = histogram()
 const bins = hist(data.map(d => +d.passenger_fat + d.crew_fat))
@@ -33,8 +35,6 @@ const lolz = data.reduce(
 )
 
 const totla = lolz.none + lolz.onep
-
-console.log('haha', lolz, (lolz.none / totla) * 100, (lolz.onep / totla) * 100)
 
 const FatalityHist = ({ hint, setHint }) => (
   <div>
@@ -81,7 +81,7 @@ const FatalityHist = ({ hint, setHint }) => (
                 const d = bins.find(bin => x >= bin.x0 && x < bin.x1)
                 setHint({
                   x: (xScale(d.x0) + xScale(d.x1)) / 2,
-                  data: d.length,
+                  d,
                 })
               }}
               onMouseLeave={() => {
@@ -90,16 +90,14 @@ const FatalityHist = ({ hint, setHint }) => (
             />
             {hint && (
               <Hint x1={hint.x} y1={0} x2={hint.x} y2={chartHeight}>
-                <div
-                  style={{
-                    padding: '0.5rem',
-                    backgroundColor: 'rgba(0,0,0,0.3)',
-                    border: '1px solid rgba(255,255,255,0.3)',
-                    borderRadius: '0.5rem',
-                  }}
-                >
-                  Derp {hint.data}
-                </div>
+                <Tooltip>
+                  Fatalities:{' '}
+                  <strong>
+                    {hint.d.x0}-{hint.d.x1}
+                  </strong>
+                  <br />
+                  Frequency: <strong>{format(',')(hint.d.length)}</strong>
+                </Tooltip>
               </Hint>
             )}
             <Axis
@@ -123,21 +121,35 @@ const FatalityHist = ({ hint, setHint }) => (
     <div
       style={{
         display: 'flex',
-        height: '100px',
+        height: '80px',
       }}
     >
       <div
         style={{
-          background: 'red',
+          background: 'green',
           width: `${(lolz.none / totla) * 100}%`,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
         }}
-      />
+      >
+        <div>No fatalities</div>
+        <strong>{format('.4p')(lolz.none / totla)}</strong>
+      </div>
       <div
         style={{
-          background: 'green',
+          background: 'red',
           width: `${(lolz.onep / totla) * 100}%`,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
         }}
-      />
+      >
+        <div>At least 1 fatality</div>
+        <strong>{format('.4p')(lolz.onep / totla)}</strong>
+      </div>
     </div>
   </div>
 )

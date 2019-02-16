@@ -1,12 +1,26 @@
 import React from 'react'
 import { scalePow, scaleBand } from 'd3-scale'
-import { extent } from 'd3-array'
+import { extent, ticks } from 'd3-array'
 
 import Plot from '../../vizlib/Plot'
 import Axis from '../../vizlib/Axis'
 import Rects from '../../vizlib/Rects'
+import Legend from '../../vizlib/Legend'
 
 import data from '../../data/damage-fate.csv'
+
+const dataExtent = extent(data.map(d => +d.count))
+const colorScale = scalePow()
+  .exponent(0.5)
+  .domain(dataExtent)
+  .range(['transparent', 'red'])
+
+// const getLegendData = ({ extent: [min, max], items }) => {
+//   return range(0, items + 1).map(step => {
+//     const k = min + ((max - min) / items) * step
+//     return k
+//   })
+// }
 
 const Matrix = ({}) => (
   <div
@@ -34,11 +48,6 @@ const Matrix = ({}) => (
           .domain([...new Set(data.map(d => d.fate))])
           .range([chartHeight, 0])
 
-        const colorScale = scalePow()
-          .exponent(0.5)
-          .domain(extent(data.map(d => +d.count)))
-          .range(['transparent', 'red'])
-
         return (
           <React.Fragment>
             <Axis
@@ -61,6 +70,16 @@ const Matrix = ({}) => (
         )
       }}
     </Plot>
+    <Legend
+      data={ticks(dataExtent[0], dataExtent[1], 5).map(d => ({
+        title: d,
+        color: colorScale(d),
+      }))}
+      style={{
+        background: 'transparent',
+        border: 'none',
+      }}
+    />
   </div>
 )
 
