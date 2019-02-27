@@ -31,7 +31,7 @@ const Hint = ({
         {({ ref, style, placement }) => (
           <div
             ref={ref}
-            style={{ ...style, ...hintStyle }}
+            style={{ ...style, pointerEvents: 'none', ...hintStyle }}
             data-placement={placement}
             key={x1}
           >

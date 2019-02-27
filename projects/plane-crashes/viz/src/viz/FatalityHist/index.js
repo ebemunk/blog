@@ -13,14 +13,19 @@ import Voronoi from '../../vizlib/Voronoi'
 import Hint from '../../vizlib/Hint'
 import Tooltip from '../../vizlib/Tooltip'
 
-import data from '../../data/fatality-histogram.csv'
+import PointOut from '../Years/PointOut'
 
-const hist = histogram()
-const bins = hist(data.map(d => +d.passenger_fat + d.crew_fat))
+import data from '../../data/fatality-histogram.csv'
+import classs from '../../data/classification.csv'
+
+console.log('wawa', classs)
+
+const hist = histogram().thresholds(26)
+const bins = hist(data.map(d => +d.passenger_fat + +d.crew_fat))
 
 const lolz = data.reduce(
   (acc, d) => {
-    const tot = +d.passenger_fat + d.crew_fat
+    const tot = +d.passenger_fat + +d.crew_fat
     if (tot > 0) {
       acc.onep++
     } else {
@@ -38,14 +43,14 @@ const totla = lolz.none + lolz.onep
 
 const FatalityHist = ({ hint, setHint }) => (
   <div>
-    <FlexPlot height={300} margin={{ bottom: 20, left: 50, top: 0, right: 20 }}>
+    <FlexPlot height={300} margin={{ bottom: 20, left: 50, top: 5, right: 20 }}>
       {({ chartHeight, chartWidth }) => {
         const xScale = scaleLinear()
-          .domain(extent(data.map(d => +d.passenger_fat + d.crew_fat)))
+          .domain(extent(data.map(d => +d.passenger_fat + +d.crew_fat)))
           .range([0, chartWidth])
 
         const yScale = scalePow()
-          .exponent(0.5)
+          .exponent(0.3)
           .domain([0, max(bins, d => d.length)])
           .range([chartHeight, 0])
 
@@ -55,6 +60,7 @@ const FatalityHist = ({ hint, setHint }) => (
               scale={xScale}
               orientation="vertical"
               style={{ stroke: 'rgba(255,255,255,0.3)' }}
+              ticks={20}
             />
             <GridLines
               scale={yScale}
@@ -112,6 +118,16 @@ const FatalityHist = ({ hint, setHint }) => (
               transform={`translate(0, ${chartHeight})`}
               tickArguments={[20]}
               title="Fatalities"
+            />
+
+            <PointOut
+              x={xScale(510)}
+              y={yScale(1)}
+              dx={-90}
+              dy={-32}
+              color={colors8(0)}
+              title="Worst crash in history"
+              show
             />
           </React.Fragment>
         )

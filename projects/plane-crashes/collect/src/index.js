@@ -6,6 +6,7 @@ import scrapeRecords from './commands/scrapeRecords'
 import parse from './commands/parse'
 import writeDB from './commands/writeDB'
 import parseDB from './commands/parseDB'
+import writeViz from './commands/writeViz'
 
 cli.version(packageJson.version)
 
@@ -40,5 +41,10 @@ cli
   .command('parseDB')
   .description('parse records from db')
   .action(parseDB)
+
+cli
+  .command('writeViz')
+  .description('write viz data')
+  .action(writeViz)
 
 cli.parse(process.argv)
