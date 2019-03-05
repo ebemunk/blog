@@ -58,6 +58,8 @@ Most common crash operators in Military flights?
 
 Most common crash operation in non-Military flights?
 
+<div id="operator-by-year"></div>
+
 ## Misc
 
 What's the distribution of crew size (crew size histogram for crashes)

@@ -41,10 +41,14 @@ const Voronoi = ({
                 }}
                 onMouseMove={e => {
                   const bbox = getBoundingClientRect()
-                  onMouseMove(e, {
-                    x: e.clientX - bbox.left - margin.left,
-                    y: e.clientY - bbox.top - margin.top,
-                  })
+                  onMouseMove(
+                    e,
+                    {
+                      x: e.clientX - bbox.left - margin.left,
+                      y: e.clientY - bbox.top - margin.top,
+                    },
+                    polygon,
+                  )
                 }}
                 {...rest}
               />

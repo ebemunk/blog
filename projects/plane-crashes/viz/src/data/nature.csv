@@ -1,26 +1,25 @@
-"count","nature"
-7630,Military
-3729,Domestic Scheduled Passenger
-2243,Unknown
-1941,Cargo
-1308,International Scheduled Passenger
-783,-
-748,Domestic Non Scheduled Passenger
-628,Ferry/positioning
-447,Executive
-406,Training
-311,Int'l Non Scheduled Passenger
-268,Passenger
-223,Test
-178,Private
-172,Illegal Flight
-161,Agricultural
-144,Scheduled Passenger
-102,Survey/research
-83,Ambulance
-81,Fire fighting
-69,Parachuting
-47,Demonstration
-42,Non Scheduled Passenger
-39,Official state flight
-23,"Aerial Work (Calibration, Photo)"
+nature,count,avg_fat
+Military,7630,6.5270475776667391
+Domestic Scheduled Passenger,3729,11.9091397849462366
+Unknown,2243,0.59416261292564280751
+Cargo,1941,2.0529045643153527
+International Scheduled Passenger,1308,17.1817484662576687
+Domestic Non Scheduled Passenger,748,9.9465240641711230
+Ferry/positioning,628,1.5900321543408360
+Executive,447,2.1722595078299776
+Training,406,1.8706467661691542
+Int'l Non Scheduled Passenger,311,27.1736334405144695
+Passenger,268,2.9236641221374046
+Test,223,2.3333333333333333
+Private,178,1.4044943820224719
+Illegal Flight,172,1.3461538461538462
+Agricultural,161,1.0129032258064516
+Scheduled Passenger,144,0.24305555555555555556
+Survey/research,102,2.4200000000000000
+Ambulance,83,1.8313253012048193
+Fire fighting,81,1.5875000000000000
+Parachuting,69,1.5942028985507246
+Demonstration,47,4.6382978723404255
+Non Scheduled Passenger,42,1.3571428571428571
+Official state flight,39,9.3076923076923077
+"Aerial Work (Calibration, Photo)",23,2.3913043478260870

@@ -10,7 +10,11 @@ const writeCSV = data => {
   const cols = Object.keys(data[0])
   const ret = [
     cols.join(','),
-    ...data.map(d => Object.values(d).join(',')),
+    ...data.map(d =>
+      Object.values(d)
+        .map(v => (v && v.match && v.match(',') && v[0] !== '"' ? `"${v}"` : v))
+        .join(','),
+    ),
   ].join('\n')
   return ret
 }
@@ -105,11 +109,13 @@ export default async function writeForViz() {
       filename: 'nature',
       query: `
         select
+          raw->>'Nature' as nature,
           count(*) as count,
-          raw->>'Nature' as nature
+          avg((parsed->'fatalities'->'Total'->>'fatalities')::int) as avg_fat
         from crashes
-        group by 2
-        order by 1 desc
+        where length(raw->>'Nature') > 2
+        group by 1
+        order by 2 desc
       `,
       writer: writeCSV,
     },
@@ -129,12 +135,27 @@ export default async function writeForViz() {
     {
       filename: 'classification',
       query: `
-        select classification, count(*)
+        select trim('"' FROM classification) as classification, count(*)
         from (
           select json_array_elements(raw->'Classification')::text as classification from crashes
         ) t
         group by 1
         order by 2 desc
+      `,
+      process: R.identity,
+      writer: writeCSV,
+    },
+    {
+      filename: 'operator-by-year',
+      query: `
+        select
+          count(*),
+          (parsed->'date'->>'year')::int as year,
+          raw->>'Operator' as operator
+        from crashes
+        where (parsed->'date'->>'year')::int is not null and raw->>'Operator' != ''
+        group by 2, 3
+        order by 2, 3 desc;
       `,
       process: R.identity,
       writer: writeCSV,

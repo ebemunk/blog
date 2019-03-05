@@ -11,6 +11,7 @@ import Phase from './viz/Phase'
 import { Damage, Matrix } from './viz/DamageMatrix'
 import FatalityHist from './viz/FatalityHist'
 import Nature from './viz/Nature'
+import OperatorByYear from './viz/OperatorByYear'
 
 render(<Years />, '#viz-years')
 
@@ -20,4 +21,7 @@ render(<Damage />, '#viz-damage-fate')
 render(<Matrix />, '#viz-damage-matrix')
 
 render(<FatalityHist />, '#fat-hist')
+
 render(<Nature />, '#nature')
+
+render(<OperatorByYear />, '#operator-by-year')

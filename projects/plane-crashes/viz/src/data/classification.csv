@@ -1,72 +1,72 @@
 classification,count
-"Loss of control",2048
-"Runway excursion",1662
-"Controlled Flight Into Terrain (CFIT) - Mountain",1003
-"Hijack",811
-"Forced landing outside airport",774
-"Forced landing on runway",413
-"Controlled Flight Into Terrain (CFIT) - Ground",342
-"Destroyed on ground",298
-"Ditching",284
-"Hijacker(s) overpowered by occupants",232
-"Mid air collision",228
-"All engine powerloss",222
-"Icing",196
-"Wheel(s) up landing",184
-"Missing",147
-"Ground collision",138
-"Fuel starvation",137
-"Shot down from the ground",125
-"Plane stormed",124
-"Low visibility",114
-"Wing failure",114
-"VFR flight in IMC",112
-"Controlled Flight Into Terrain (CFIT) - Water",99
-"Bird strike",80
-"Windshear/downdraft",79
-"Turbulence",76
-"Sabotage",73
-"Tailstrike",70
-"Centre of Gravity outside limits",70
-"Overloaded",69
-"Cause undetermined",59
-"Runway incursion",56
-"Uncontained engine failure",54
-"Shot down by aircraft",53
-"Engine separation",48
+Loss of control,2048
+Runway excursion,1662
+Controlled Flight Into Terrain (CFIT) - Mountain,1003
+Hijack,811
+Forced landing outside airport,774
+Forced landing on runway,413
+Controlled Flight Into Terrain (CFIT) - Ground,342
+Destroyed on ground,298
+Ditching,284
+Hijacker(s) overpowered by occupants,232
+Mid air collision,228
+All engine powerloss,222
+Icing,196
+Wheel(s) up landing,184
+Missing,147
+Ground collision,138
+Fuel starvation,137
+Shot down from the ground,125
+Plane stormed,124
+Wing failure,114
+Low visibility,114
+VFR flight in IMC,112
+Controlled Flight Into Terrain (CFIT) - Water,99
+Bird strike,80
+Windshear/downdraft,79
+Turbulence,76
+Sabotage,73
+Centre of Gravity outside limits,70
+Tailstrike,70
+Overloaded,69
+Cause undetermined,59
+Runway incursion,56
+Uncontained engine failure,54
+Shot down by aircraft,53
+Engine separation,48
+Locked rudders/ailerons/gustlock,43
 "Flightcrew member's alcohol, drug usage",43
-"Locked rudders/ailerons/gustlock",43
-"Flightcrew  un(der)qualified",42
-"Insufficient rest / fatigue",40
-"Loss of situational awareness",39
-"Hijacker(s) escaped",38
-"Wrong takeoff configuration (flaps/trim)",35
-"Navigational error",33
-"Wrong installation of parts",32
-"Prop/turbine blade separation",31
-"Tail failure",31
-"Fuselage failure",30
-"Fire during refuelling",27
-"Thunderstorm",25
-"Lightningstrike",24
-"Distraction in cockpit",22
-"Cargo fire/smoke",20
-"Fuel contamination",20
-"Loss of control (presumed)",19
-"Flightcrew incapacitation",16
-"Shutdown of wrong engine",14
-"Cargo door failure",12
-"Premature gear retraction on take-off",10
-"Landing or takeoff on wrong runway",9
-"Simulated engine failure",8
-"Near miss",7
-"Failure to follow AD and SB's",7
-"Navigational beacons inoperative",6
-"Passenger door failure",6
-"Precipitation-induced flame-out",5
-"Language/communication problems",4
-"Improper flap/slat usage",4
-"Flightcrew's failure to monitor instruments",3
-"Flightcrew member's mental condition",2
-"Sandstorm",2
-"Explosive decompression",1
+Flightcrew  un(der)qualified,42
+Insufficient rest / fatigue,40
+Loss of situational awareness,39
+Hijacker(s) escaped,38
+Wrong takeoff configuration (flaps/trim),35
+Navigational error,33
+Wrong installation of parts,32
+Prop/turbine blade separation,31
+Tail failure,31
+Fuselage failure,30
+Fire during refuelling,27
+Thunderstorm,25
+Lightningstrike,24
+Distraction in cockpit,22
+Cargo fire/smoke,20
+Fuel contamination,20
+Loss of control (presumed),19
+Flightcrew incapacitation,16
+Shutdown of wrong engine,14
+Cargo door failure,12
+Premature gear retraction on take-off,10
+Landing or takeoff on wrong runway,9
+Simulated engine failure,8
+Near miss,7
+Failure to follow AD and SB's,7
+Passenger door failure,6
+Navigational beacons inoperative,6
+Precipitation-induced flame-out,5
+Language/communication problems,4
+Improper flap/slat usage,4
+Flightcrew's failure to monitor instruments,3
+Sandstorm,2
+Flightcrew member's mental condition,2
+Explosive decompression,1
