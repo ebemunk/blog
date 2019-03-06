@@ -64,6 +64,7 @@ export default async function writeForViz() {
           count(*) as count,
           avg((parsed->'fatalities'->'Total'->>'fatalities')::int)
         from crashes
+        where raw->>'Phase' != '(CMB)'
         group by 1
         order by 2 desc
       `,
