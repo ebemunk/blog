@@ -23,6 +23,9 @@ export default async function parse(opts) {
     } catch (err) {
       log('errored out', file, err)
       console.log()
+      return {
+        error: file,
+      }
     }
   })
 

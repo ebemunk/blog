@@ -13,6 +13,9 @@ export default async function writeDB(opts) {
   await pool.query('truncate crashes')
 
   await Promise.map(data, async d => {
+    if (d.error) {
+      return
+    }
     await pool.query(...insertObj({ id: d.id, raw: d }))
   })
 
