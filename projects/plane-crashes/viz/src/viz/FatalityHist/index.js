@@ -16,9 +16,6 @@ import Tooltip from '../../vizlib/Tooltip'
 import PointOut from '../Years/PointOut'
 
 import data from '../../data/fatality-histogram.csv'
-import classs from '../../data/classification.csv'
-
-console.log('wawa', classs)
 
 const hist = histogram().thresholds(26)
 const bins = hist(data.map(d => +d.passenger_fat + +d.crew_fat))
