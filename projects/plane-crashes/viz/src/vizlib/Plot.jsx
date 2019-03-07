@@ -6,7 +6,7 @@ export default class Plot extends React.Component {
   svgRef = React.createRef()
 
   render() {
-    const { children, margin, width, height } = this.props
+    const { children, margin, width, height, ...rest } = this.props
 
     const chartWidth = width - margin.left - margin.right
     const chartHeight = height - margin.top - margin.bottom
@@ -26,7 +26,7 @@ export default class Plot extends React.Component {
               : {},
         }}
       >
-        <svg width={width} height={height} ref={this.svgRef}>
+        <svg width={width} height={height} ref={this.svgRef} {...rest}>
           <g transform={`translate(${margin.left}, ${margin.top})`}>
             <PlotContext.Consumer>
               {context => children(context)}

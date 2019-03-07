@@ -2,7 +2,7 @@ import React from 'react'
 import { line } from 'd3-shape'
 import { Spring, animated } from 'react-spring'
 
-export default class Line extends React.Component {
+export default class Line extends React.PureComponent {
   ref = React.createRef()
 
   state = {
@@ -17,10 +17,11 @@ export default class Line extends React.Component {
 
   render() {
     const { totalLength } = this.state
-    const { data, x, y, style, ...props } = this.props
+    const { data, x, y, style, curve, ...props } = this.props
     const lineGenerator = line()
     if (x) lineGenerator.x(x)
     if (y) lineGenerator.y(y)
+    if (curve) lineGenerator.curve(curve)
 
     return (
       <Spring

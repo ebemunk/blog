@@ -148,25 +148,60 @@ export default async function writeForViz() {
     },
     {
       filename: 'operator-by-year',
-      query: `
+      query: [
+        `
         select
           count(*),
           (parsed->'date'->>'year')::int as year,
-          raw->>'Operator' as operator
+          raw->>'Operator' as operator,
+          'mil' as nature
         from crashes
-        where (parsed->'date'->>'year')::int is not null and raw->>'Operator' != ''
+        where
+        	(parsed->'date'->>'year')::int is not null
+        	and raw->>'Operator' != ''
+        	and raw->>'Nature' = 'Military'
         group by 2, 3
         order by 2, 3 desc;
       `,
-      process: R.identity,
-      writer: writeCSV,
+        `
+      select
+        count(*),
+        (parsed->'date'->>'year')::int as year,
+        raw->>'Operator' as operator
+      from crashes
+      where
+        (parsed->'date'->>'year')::int is not null
+        and raw->>'Operator' != ''
+        and raw->>'Nature' != 'Military'
+      group by 2, 3
+      order by 2, 3 desc;
+    `,
+      ],
+      process: rows => {
+        const [mil, nonmil] = R.splitWhen(d => !d.nature)(rows)
+        const transform = R.pipe(
+          R.map(d => ({ ...d, count: +d.count })),
+          R.groupBy(d => d.operator),
+          R.toPairs,
+          R.filter(
+            ([key, arr]) => arr.reduce((tot, v) => tot + v.count, 0) > 30,
+          ),
+          R.map(d => [d[0], R.map(R.omit(['nature', 'operator']))(d[1])]),
+        )
+
+        return {
+          military: transform(mil),
+          nonmilitary: transform(nonmil),
+        }
+      },
+      // writer: writeCSV,
     },
   ]
 
   await Promise.map(
-    // [dataFiles.find(f => f.filename === 'sceneTone')],
+    [dataFiles.find(f => f.filename === 'operator-by-year')],
     // [dataFiles[0]],
-    dataFiles,
+    // dataFiles,
     async dataFile => {
       log('doing', dataFile.filename)
       const rows = await Promise.reduce(

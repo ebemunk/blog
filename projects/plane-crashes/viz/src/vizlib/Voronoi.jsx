@@ -78,4 +78,6 @@ Voronoi.propTypes = {
   onMouseMove: PropTypes.func,
 }
 
-export default Voronoi
+import { compose, pure } from 'recompose'
+
+export default compose(pure)(Voronoi)

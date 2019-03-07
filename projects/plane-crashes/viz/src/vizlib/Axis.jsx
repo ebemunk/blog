@@ -139,4 +139,6 @@ const Axis = ({
   )
 }
 
-export default Axis
+import { compose, pure } from 'recompose'
+
+export default compose(pure)(Axis)
