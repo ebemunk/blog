@@ -2,24 +2,24 @@
 date = "2019-01-01"
 title = "Plane Crashes"
 slug = "plane-crashes"
-tags = ["data visualization"]
+tags = ["data visualization", "plane crashes"]
 image = "img/year-in-van.png"
 hidden = false
 +++
 
-## Yearsa
+## Years
 
 Crashes over the years.
 
 <div id="viz-years"></div>
 
-## Phases
+## Flight Phases
 
 [Flight Phase Taxonomy](https://www.skybrary.aero/index.php/Flight_Phase_Taxonomy)
 
 <div id="viz-phase"></div>
 
-## Damage Matrixx
+## Damage and Fate
 
 What is the damage on the airplane after crashes?
 What is the fate of the airplane after a crash?
@@ -34,15 +34,13 @@ How does damage and fate of the airplane correlate?
 
 What is the most common number of fatalities in a crash?
 
-<div id="fat-hist"></div>
+<div id="viz-fat-hist"></div>
 
 ## Naturez
 
-For what purpose are the planes flying when crashed?
+For what purpose were the planes flying when crashed? Which Nature has the highest average fatalities?
 
-Which Nature has the highest average fatalities? (Nature vs Avg Fatalities)
-
-<div id="nature"></div>
+<div id="viz-nature"></div>
 
 ## Classificationz
 
@@ -52,13 +50,11 @@ What are the most common combination of classifications?
 
 How are classifications related to one other (force-directed by common appearance)?
 
-## Operatorz
+## Operators
 
-Most common crash operators in Military flights?
+What are the trends in crash operators through the years, by military or nonmilitary intent?
 
-Most common crash operation in non-Military flights?
-
-<div id="operator-by-year"></div>
+<div id="viz-operator-by-year"></div>
 
 ## Misc
 

@@ -20,8 +20,8 @@ render(<Phase />, '#viz-phase')
 render(<Damage />, '#viz-damage-fate')
 render(<Matrix />, '#viz-damage-matrix')
 
-render(<FatalityHist />, '#fat-hist')
+render(<FatalityHist />, '#viz-fat-hist')
 
-render(<Nature />, '#nature')
+render(<Nature />, '#viz-nature')
 
-render(<OperatorByYear />, '#operator-by-year')
+render(<OperatorByYear />, '#viz-operator-by-year')
