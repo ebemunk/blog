@@ -68,6 +68,8 @@ How long does it take in general for a plane to crash since its first flight? (c
 
 Type of planes involved in crashes
 
+<div id="viz-plane-type"></div>
+
 Type of plane vs damage/fate
 
 Most common words in Narrative (word cloud)

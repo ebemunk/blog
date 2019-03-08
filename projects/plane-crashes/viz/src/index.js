@@ -25,3 +25,7 @@ render(<FatalityHist />, '#viz-fat-hist')
 render(<Nature />, '#viz-nature')
 
 render(<OperatorByYear />, '#viz-operator-by-year')
+
+import PlaneType from './viz/PlaneType'
+
+render(<PlaneType />, '#viz-plane-type')
