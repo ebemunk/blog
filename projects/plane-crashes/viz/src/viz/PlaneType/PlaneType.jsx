@@ -13,6 +13,7 @@ const dd = pipe(
     return arr
   }),
   // filter(d => d.total > 150),
+  filter(d => d.total === 5661),
 )(data)
 
 console.log('aaa', dd, Object.keys(dd).length)
@@ -38,7 +39,7 @@ import { forceSimulation, forceX, forceY, forceCollide } from 'd3-force'
 const dodge = (data, radius, x) => {
   const radius2 = radius ** 2
   const circles = data
-    .map(d => ({ x: x(d.x), data: d }))
+    .map(d => ({ x: x(d.count), ...d }))
     .sort((a, b) => a.x - b.x)
   const epsilon = 1e-3
   let head = null,
@@ -94,29 +95,29 @@ const PlaneType = ({}) => (
           .reduce((acc, key) => {
             return acc.concat(
               dd[key].map(d => ({
-                x: +d.count,
-                y: d.type,
+                count: +d.count,
+                type: d.type,
                 group: key,
               })),
             )
           }, [])
-          .filter(d => d.x > 1)
+          .filter(d => d.count > 1)
 
         // const xScale = scaleLog()
         const xScale = scaleLinear()
-          .domain(extent(dots, d => d.x))
+          .domain(extent(dots, d => d.count))
           .range([0, chartWidth])
         // .nice()
 
-        // const simul = forceSimulation(dots)
-        //   .force('x', forceX(d => xScale(d.x)).strength(1))
-        //   .force('y', forceY(chartHeight / 2))
-        //   .force('collide', forceCollide(2))
-        //   .stop()
+        const simul = forceSimulation(dots, d => d.count)
+          .force('x', forceX(d => xScale(d.count)).strength(1))
+          .force('y', forceY(chartHeight / 2))
+          .force('collide', forceCollide(4))
+          .stop()
 
-        // for (let i = 0; i < 3000; i++) simul.tick()
+        for (let i = 0; i < 120; i++) simul.tick()
 
-        dots = dodge(dots, 5, xScale)
+        //dots = dodge(dots, 5, xScale)
 
         console.log('after', dots)
 
@@ -132,16 +133,17 @@ const PlaneType = ({}) => (
                 <circle
                   cx={d.x}
                   // cy={chartHeight - 2 - d.y}
-                  cy={chartHeight / 2 + d.y}
+                  // cy={chartHeight / 2 + d.y}
+                  cy={d.y}
                   r={2}
-                  key={d.data.y}
+                  key={d.type}
                   style={{
-                    fill: colors8(d.data.y),
+                    fill: colors8(d.group),
                     stroke: 'black',
                     strokeWidth: 1,
                   }}
                 >
-                  <title>{d.data.y}</title>
+                  <title>{d.type}</title>
                 </circle>
               ))}
             </g>

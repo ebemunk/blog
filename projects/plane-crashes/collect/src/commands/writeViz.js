@@ -114,10 +114,28 @@ export default async function writeForViz() {
           count(*) as count,
           avg((parsed->'fatalities'->'Total'->>'fatalities')::int) as avg_fat
         from crashes
-        where length(raw->>'Nature') > 2
         group by 1
         order by 2 desc
       `,
+      process: R.pipe(
+        R.reduce((acc, d) => {
+          if (d.nature === '-') {
+            d.nature = 'Unknown'
+          }
+
+          const match = acc.find(a => a.nature === d.nature)
+          if (match) {
+            const tot1 = d.avg_fat * d.count
+            const tot2 = match.avg_fat * match.count
+            const tot = +match.count + +d.count
+            match.count = tot
+            match.avg_fat = (tot1 + tot2) / tot
+            return acc
+          }
+
+          return [...acc, d]
+        }, []),
+      ),
       writer: writeCSV,
     },
     {
@@ -199,7 +217,7 @@ export default async function writeForViz() {
   ]
 
   await Promise.map(
-    [dataFiles.find(f => f.filename === 'operator-by-year')],
+    [dataFiles.find(f => f.filename === 'nature')],
     // [dataFiles[0]],
     // dataFiles,
     async dataFile => {
