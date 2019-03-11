@@ -214,10 +214,61 @@ export default async function writeForViz() {
       },
       // writer: writeCSV,
     },
+    {
+      filename: 'classification-links',
+      query: `
+        select
+          raw->>'Classification' as classifications,
+          count(*) as count
+        from crashes
+        where JSON_ARRAY_LENGTH(raw->'Classification') > 1
+        group by 1
+        order by 2 desc
+      `,
+      process: rows => {
+        const links = rows.reduce((acc, d) => {
+          const classifications = JSON.parse(d.classifications).sort()
+          while (classifications.length > 1) {
+            const source = classifications.pop()
+            classifications.forEach(target => {
+              const mi = acc.findIndex(
+                ad => ad.source === source && ad.target === target,
+              )
+              if (mi > -1) {
+                acc[mi].count += +d.count
+              } else {
+                acc.push({
+                  source,
+                  target,
+                  count: +d.count,
+                })
+              }
+            })
+          }
+          return acc
+        }, [])
+
+        const nodes = [
+          ...new Set([
+            ...links.map(l => l.source),
+            ...links.map(l => l.target),
+          ]),
+        ].map(node => ({
+          id: node,
+          links: links.filter(l => l.source === node || l.target === node)
+            .length,
+        }))
+
+        return {
+          links,
+          nodes,
+        }
+      },
+    },
   ]
 
   await Promise.map(
-    [dataFiles.find(f => f.filename === 'nature')],
+    [dataFiles.find(f => f.filename === 'classification-links')],
     // [dataFiles[0]],
     // dataFiles,
     async dataFile => {

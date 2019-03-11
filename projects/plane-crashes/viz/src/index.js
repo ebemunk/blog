@@ -29,3 +29,7 @@ render(<OperatorByYear />, '#viz-operator-by-year')
 import PlaneType from './viz/PlaneType'
 
 render(<PlaneType />, '#viz-plane-type')
+
+import Force from './viz/Classification/Force'
+
+render(<Force />, '#viz-classifications-force')

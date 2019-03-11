@@ -50,6 +50,8 @@ What are the most common combination of classifications?
 
 How are classifications related to one other (force-directed by common appearance)?
 
+<div id="viz-classifications-force"></div>
+
 ## Operators
 
 What are the trends in crash operators through the years, by military or nonmilitary intent?
