@@ -50,21 +50,25 @@ export default async function scrape(args, opts) {
 export async function parsePage(page) {
   const { data } = await axios.get(`${eventsUrl}?page=${page}`)
   const $ = cheerio.load(data)
-  return $('.teaser--summary')
+  return $('article.cf.event')
     .map((i, el) => {
       const $el = $(el)
       const find = e => $el.find(e)
       return {
-        date: find('.date-plate').text(),
-        image: find('figure a img').attr('src'),
+        date: find('.date-tag')
+          .text()
+          .trim(),
+        image: find('.card--rounded a img').attr('src'),
         title: find('.title a').text(),
         url: baseUrl + find('.title a').attr('href'),
         id: find('.title a')
           .attr('href')
           .split('/')
           .pop(),
-        venue: find('.event--venue').text(),
-        tags: find('.venue--tags a')
+        venue: find('.event--venue')
+          .text()
+          .trim(),
+        tags: find('.event--tags a')
           .map((i, tag) => $(tag).text())
           .toArray(),
       }
