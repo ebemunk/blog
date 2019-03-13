@@ -265,10 +265,23 @@ export default async function writeForViz() {
         }
       },
     },
+    {
+      filename: 'classifications',
+      query: `
+        select trim('"' FROM classification) as classification, count(*) as count
+        from (
+          select json_array_elements(raw->'Classification')::text as classification from crashes
+        ) t
+        group by 1
+        order by 2 desc;
+      `,
+      process: R.identity,
+      writer: writeCSV,
+    },
   ]
 
   await Promise.map(
-    [dataFiles.find(f => f.filename === 'classification-links')],
+    [dataFiles.find(f => f.filename === 'classifications')],
     // [dataFiles[0]],
     // dataFiles,
     async dataFile => {
