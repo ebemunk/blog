@@ -18,7 +18,7 @@ const Force = ({ hint, setHint }) => (
         display: 'flex',
       }}
     >
-      <div style={{ flexBasis: '50%' }}>
+      <div style={{ flexBasis: '40%' }}>
         <FlexPlot
           height={400}
           margin={{ top: 0, bottom: 0, left: 0, right: 0 }}
@@ -87,7 +87,7 @@ const Force = ({ hint, setHint }) => (
           }}
         </FlexPlot>
       </div>
-      <div style={{ flexBasis: '50%' }}>
+      <div style={{ flexBasis: '60%' }}>
         <Bar hint={hint ? hint.id : null} />
       </div>
     </div>
