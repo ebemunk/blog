@@ -10,8 +10,11 @@ import { colors8 } from '../../vizlib/colors'
 import rawData from '../../data/classifications.csv'
 import { nodes, links } from '../../data/classification-links.json'
 
-const Bar = ({ hint }) => (
-  <FlexPlot height={400} margin={{ left: 225, top: 30, bottom: 0, right: 20 }}>
+const Bar = ({ hint, height }) => (
+  <FlexPlot
+    height={height}
+    margin={{ left: 225, top: 30, bottom: 0, right: 20 }}
+  >
     {({ chartHeight, chartWidth }) => {
       const lookup = hint
         ? [
@@ -48,13 +51,14 @@ const Bar = ({ hint }) => (
       return (
         <React.Fragment>
           <Rects
-            data={data.map(d => [+d.count, y(d.classification)])}
+            data={data.map(d => [+d.count, d.classification])}
             height={y.bandwidth()}
             x={0}
+            y={d => y(d[1])}
             width={d => x(d[0])}
-            style={{
-              fill: colors8(0),
-            }}
+            style={d => ({
+              fill: colors8(d[1]),
+            })}
           />
           <Axis
             orientation="left"

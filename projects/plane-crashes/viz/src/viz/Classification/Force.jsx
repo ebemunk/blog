@@ -4,6 +4,7 @@ import { extent } from 'd3-array'
 import { memoizeWith, identity } from 'ramda'
 
 import FlexPlot from '../../vizlib/FlexPlot'
+import { colors8, colorScale } from '../../vizlib/colors'
 
 import Interaction from './Interaction'
 import Bar from './Bar'
@@ -18,7 +19,10 @@ const Force = ({ hint, setHint }) => (
         display: 'flex',
       }}
     >
-      <div style={{ flexBasis: '40%' }}>
+      <div style={{ flexBasis: '50%' }}>
+        <div style={{ textAlign: 'center' }}>
+          How are classifications related to one another?
+        </div>
         <FlexPlot
           height={400}
           margin={{ top: 0, bottom: 0, left: 0, right: 0 }}
@@ -32,6 +36,8 @@ const Force = ({ hint, setHint }) => (
             const opacity = scaleLinear()
               .domain(extent(links.map(d => d.count)))
               .range([0.1, 1])
+
+            const color = colorScale(nodes.length)
 
             console.log('foce render')
 
@@ -66,11 +72,10 @@ const Force = ({ hint, setHint }) => (
                       <circle
                         r={radius(node.links)}
                         style={{
-                          fill: 'red',
+                          fill: !hint ? colors8(node.id) : 'gray',
                           opacity: hint ? 0.5 : 1,
                         }}
                       />
-                      <title>{node.id}</title>
                     </g>
                   ))}
                 </g>
@@ -82,13 +87,40 @@ const Force = ({ hint, setHint }) => (
                   hint={hint}
                   setHint={setHint}
                 />
+                <g>
+                  {nodes
+                    .filter(d => !hint || (hint && hint.id !== d.id))
+                    .filter(d => d.links > 13)
+                    .map(node => (
+                      <text
+                        key={node.id}
+                        x={node.x}
+                        y={node.y}
+                        style={{
+                          fontSize: '10px',
+                          fill: 'white',
+                          textAnchor: 'middle',
+                          textShadow: 'black 0 0 4px',
+                          pointerEvents: 'none',
+                        }}
+                      >
+                        {node.id}
+                      </text>
+                    ))}
+                </g>
               </React.Fragment>
             )
           }}
         </FlexPlot>
       </div>
-      <div style={{ flexBasis: '60%' }}>
-        <Bar hint={hint ? hint.id : null} />
+      <div style={{ flexBasis: '50%' }}>
+        <div style={{ textAlign: 'center' }}>
+          {!hint
+            ? 'Classifications for all crashes'
+            : `Appears together with: "${hint.id}"`}
+          <small style={{ marginLeft: '0.5rem' }}>(top 20)</small>
+        </div>
+        <Bar hint={hint ? hint.id : null} height={400} />
       </div>
     </div>
   </React.Fragment>

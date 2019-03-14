@@ -6,11 +6,18 @@ import { extent } from 'd3-array'
 
 import Tooltip from '../../vizlib/Tooltip'
 import Voronoi from '../../vizlib/Voronoi'
+import { colors8 } from '../../vizlib/colors'
 
 const Interaction = ({ nodes, hint, setHint, r, links }) => {
   const shownLinks = hint
     ? links.filter(d => d.source.id === hint.id || d.target.id === hint.id)
     : []
+
+  const linkNodes = [
+    ...new Set(
+      shownLinks.reduce((acc, d) => [...acc, d.source.id, d.target.id], []),
+    ),
+  ]
 
   const opacity = scaleLinear()
     .domain(extent(shownLinks.map(d => d.count)))
@@ -54,6 +61,23 @@ const Interaction = ({ nodes, hint, setHint, r, links }) => {
           />
         ))}
 
+      {hint &&
+        linkNodes
+          .map(d => nodes.find(dd => dd.id === d))
+          .map(d => (
+            <circle
+              key={d.id}
+              cx={d.x}
+              cy={d.y}
+              r={r(d.links)}
+              style={{
+                fill: colors8(d.id),
+                pointerEvents: 'none',
+                opacity: 0.7,
+              }}
+            />
+          ))}
+
       {hint && (
         <Manager>
           <Reference>
@@ -64,7 +88,7 @@ const Interaction = ({ nodes, hint, setHint, r, links }) => {
                 cy={hint.y}
                 r={hint.r}
                 style={{
-                  fill: 'orange',
+                  fill: colors8(hint.id),
                   pointerEvents: 'none',
                 }}
               />

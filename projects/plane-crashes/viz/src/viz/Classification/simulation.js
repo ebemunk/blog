@@ -7,20 +7,13 @@ import {
   forceX,
   forceRadial,
 } from 'd3-force'
-import { scaleLinear } from 'd3-scale'
+import { scaleLinear, scaleSqrt } from 'd3-scale'
 import { extent } from 'd3-array'
 
 import data from '../../data/classification-links.json'
 
 const getNodes = () => data.nodes.map(d => ({ ...d }))
 const getLinks = () => data.links.map(d => ({ ...d }))
-
-console.log(
-  'fifi',
-  getNodes()
-    .map(d => d.links)
-    .sort((a, b) => b - a),
-)
 
 export default function runSimulation({ chartWidth, chartHeight }) {
   const nodes = getNodes()

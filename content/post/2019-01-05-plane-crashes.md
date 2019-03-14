@@ -42,13 +42,9 @@ For what purpose were the planes flying when crashed? Which Nature has the highe
 
 <div id="viz-nature"></div>
 
-## Classificationz
+## Classifications
 
-What are the most common classifications for crashes?
-
-What are the most common combination of classifications?
-
-How are classifications related to one other (force-directed by common appearance)?
+Classifications blurb.
 
 <div id="viz-classifications-force"></div>
 

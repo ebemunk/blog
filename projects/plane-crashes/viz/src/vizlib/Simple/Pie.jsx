@@ -32,10 +32,10 @@ const Pie = ({ data, hint, setHint }) => (
         transform: 'translate(-50%, -50%)',
       }}
     />
-    <FlexPlot height={450} width={450}>
+    <FlexPlot height={350} width={350}>
       {({ chartHeight, chartWidth }) => {
         const arcGenerator = arc()
-          .innerRadius(150)
+          .innerRadius(125)
           .outerRadius(chartWidth / 2)
           .cornerRadius(5)
 
