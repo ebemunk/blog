@@ -278,12 +278,77 @@ export default async function writeForViz() {
       process: R.identity,
       writer: writeCSV,
     },
+    {
+      filename: 'maker',
+      query: `
+        select
+          split_part(raw->>'Type', ' ', 1) as maker,
+          parsed->'date'->>'year' as year,
+          count(*) as count
+        from crashes
+        where raw->>'Nature' != 'Military'
+        group by 1, 2
+      `,
+      process: R.pipe(
+        R.groupBy(d => d.maker),
+        R.map(d =>
+          d.reduce(
+            (acc, d) => {
+              acc.years[+d.year - 1919] = +d.count
+              return {
+                maker: d.maker,
+                total: acc.total + +d.count,
+                years: acc.years,
+              }
+            },
+            {
+              maker: '',
+              total: 0,
+              years: R.range(1919, 2020).map(y => 0),
+            },
+          ),
+        ),
+        R.values,
+      ),
+    },
+    {
+      filename: 'maker-mil',
+      query: `
+        select
+          split_part(raw->>'Type', ' ', 1) as maker,
+          parsed->'date'->>'year' as year,
+          count(*) as count
+        from crashes
+        group by 1, 2
+      `,
+      process: R.pipe(
+        R.groupBy(d => d.maker),
+        R.map(d =>
+          d.reduce(
+            (acc, d) => {
+              acc.years[+d.year - 1919] = +d.count
+              return {
+                maker: d.maker,
+                total: acc.total + +d.count,
+                years: acc.years,
+              }
+            },
+            {
+              maker: '',
+              total: 0,
+              years: R.range(1919, 2020).map(y => 0),
+            },
+          ),
+        ),
+        R.values,
+      ),
+    },
   ]
 
   await Promise.map(
-    [dataFiles.find(f => f.filename === 'classifications')],
+    // [dataFiles.find(f => f.filename === 'maker')],
     // [dataFiles[0]],
-    // dataFiles,
+    dataFiles,
     async dataFile => {
       log('doing', dataFile.filename)
       const rows = await Promise.reduce(

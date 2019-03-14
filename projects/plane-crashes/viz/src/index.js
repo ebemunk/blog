@@ -33,3 +33,7 @@ render(<PlaneType />, '#viz-plane-type')
 import Force from './viz/Classification/Force'
 
 render(<Force />, '#viz-classifications-force')
+
+import Maker from './viz/Makers'
+
+render(<Maker />, '#viz-maker')

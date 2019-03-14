@@ -68,6 +68,8 @@ Type of planes involved in crashes
 
 <div id="viz-plane-type"></div>
 
+<div id="viz-maker"></div>
+
 Type of plane vs damage/fate
 
 Most common words in Narrative (word cloud)

@@ -97,7 +97,7 @@ const Axis = ({
           {title}
         </text>
       )}
-      {ticks.map(tick => (
+      {/* {ticks.map(tick => (
         <Spring
           native
           key={tick}
@@ -134,7 +134,7 @@ const Axis = ({
             </animated.g>
           )}
         </Spring>
-      ))}
+      ))} */}
     </g>
   )
 }
