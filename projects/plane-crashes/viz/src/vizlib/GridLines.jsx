@@ -1,5 +1,5 @@
 import React from 'react'
-import { Spring, animated } from 'react-spring'
+import { Spring, animated } from 'react-spring/renderprops'
 
 import { PlotContext } from './Plot'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Spring, animated } from 'react-spring'
+import { Spring, animated } from 'react-spring/renderprops'
 
 const Plane = ({ xScale, yScale, phase = 'En route (ENR)' }) => {
   const planeTranslate = {

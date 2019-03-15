@@ -1,5 +1,5 @@
 import React from 'react'
-import { Transition, animated } from 'react-spring'
+import { Transition, animated } from 'react-spring/renderprops'
 
 const PointOut = ({ x, y, dx, dy, title, color, show }) => {
   const source = { x, y }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { line } from 'd3-shape'
-import { Spring, animated } from 'react-spring'
+import { Spring, animated } from 'react-spring/renderprops'
 
 export default class Line extends React.PureComponent {
   ref = React.createRef()
