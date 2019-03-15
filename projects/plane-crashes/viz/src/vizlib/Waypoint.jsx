@@ -19,4 +19,4 @@ const Waypoint = ({ children, active, style, ...rest }) => (
   </ReactWaypoint>
 )
 
-export default Waypoint
+export default React.memo(Waypoint)

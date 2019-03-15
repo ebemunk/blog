@@ -1,7 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { useContext } from 'react'
 import { voronoi } from 'd3-voronoi'
-import debounce from 'lodash/debounce'
 
 import { PlotContext } from './Plot'
 
@@ -14,65 +12,63 @@ const Voronoi = ({
   onMouseMove = () => {},
   ...rest
 }) => {
-  return (
-    <PlotContext.Consumer>
-      {({ chartWidth, chartHeight, margin, getBoundingClientRect }) => {
-        const polygons = voronoi()
-          .extent([[0, 0], [chartWidth, chartHeight]])(points)
-          .polygons()
+  const {
+    //
+    chartWidth,
+    chartHeight,
+    margin,
+    getBoundingClientRect,
+  } = useContext(PlotContext)
 
-        return (
-          <g>
-            {polygons.map(polygon => (
-              <path
-                key={polygon}
-                d={`M${polygon.join('L')}Z`}
-                style={{
-                  fill: 'transparent',
-                  stroke: showPolygons ? 'black' : 'none',
-                  ...style,
-                }}
-                onMouseEnter={e => {
-                  const bbox = getBoundingClientRect()
-                  onMouseEnter(
-                    e,
-                    {
-                      x: e.clientX - bbox.left - margin.left,
-                      y: e.clientY - bbox.top - margin.top,
-                    },
-                    polygon,
-                  )
-                }}
-                onMouseMove={e => {
-                  const bbox = getBoundingClientRect()
-                  onMouseMove(
-                    e,
-                    {
-                      x: e.clientX - bbox.left - margin.left,
-                      y: e.clientY - bbox.top - margin.top,
-                    },
-                    polygon,
-                  )
-                }}
-                {...rest}
-              />
-            ))}
-            {showPoints &&
-              points.map(p => (
-                <circle
-                  key={p}
-                  cx={p[0]}
-                  cy={p[1]}
-                  r={3}
-                  style={{ fill: 'red' }}
-                />
-              ))}
-          </g>
-        )
-      }}
-    </PlotContext.Consumer>
+  const polygons = voronoi()
+    .extent([[0, 0], [chartWidth, chartHeight]])(points)
+    .polygons()
+
+  return (
+    <g>
+      {polygons.map(polygon => (
+        <path
+          key={polygon}
+          d={`M${polygon.join('L')}Z`}
+          style={{
+            fill: 'transparent',
+            stroke: showPolygons ? 'black' : 'none',
+            ...style,
+          }}
+          onMouseEnter={e => {
+            const bbox = getBoundingClientRect()
+            onMouseEnter(
+              e,
+              {
+                x: e.clientX - bbox.left - margin.left,
+                y: e.clientY - bbox.top - margin.top,
+              },
+              polygon,
+            )
+          }}
+          onMouseMove={e => {
+            const bbox = getBoundingClientRect()
+            onMouseMove(
+              e,
+              {
+                x: e.clientX - bbox.left - margin.left,
+                y: e.clientY - bbox.top - margin.top,
+              },
+              polygon,
+            )
+          }}
+          {...rest}
+        />
+      ))}
+      {showPoints &&
+        points.map(p => (
+          <circle key={p} cx={p[0]} cy={p[1]} r={3} style={{ fill: 'red' }} />
+        ))}
+    </g>
   )
 }
+
+import PropTypes from 'prop-types'
 
 Voronoi.propTypes = {
   points: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
@@ -82,6 +78,4 @@ Voronoi.propTypes = {
   onMouseMove: PropTypes.func,
 }
 
-import { compose, pure } from 'recompose'
-
-export default compose(pure)(Voronoi)
+export default React.memo(Voronoi)

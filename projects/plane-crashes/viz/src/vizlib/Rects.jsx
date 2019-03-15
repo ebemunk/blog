@@ -1,5 +1,5 @@
 import React from 'react'
-import { Spring, animated } from 'react-spring/renderprops'
+import { useSprings, animated } from 'react-spring'
 
 const Rects = ({
   data = [],
@@ -11,35 +11,35 @@ const Rects = ({
   className = '',
   keys,
   ...props
-}) => (
-  <g className={className}>
-    {data.map((d, i) => (
-      <Spring
-        key={keys ? keys(d) : i}
-        native
-        to={{
-          x: x instanceof Function ? x(d) : x,
-          width: width instanceof Function ? width(d) : width,
-          y: y instanceof Function ? y(d) : y,
-          height: height instanceof Function ? height(d) : height,
-        }}
-      >
-        {spring => (
-          <animated.rect
-            x={spring.x}
-            width={spring.width}
-            y={spring.y}
-            height={spring.height}
-            {...props}
-            style={{
-              ...(style instanceof Function ? style(d) : style),
-            }}
-          />
-        )}
-      </Spring>
-    ))}
-  </g>
-)
+}) => {
+  const springs = useSprings(
+    data.length,
+    data.map(d => ({
+      x: x instanceof Function ? x(d) : x,
+      width: width instanceof Function ? width(d) : width,
+      y: y instanceof Function ? y(d) : y,
+      height: height instanceof Function ? height(d) : height,
+    })),
+  )
+
+  return (
+    <g className={className}>
+      {data.map((d, i) => (
+        <animated.rect
+          key={keys ? keys(d) : i}
+          x={springs[i].x}
+          width={springs[i].width}
+          y={springs[i].y}
+          height={springs[i].height}
+          {...props}
+          style={{
+            ...(style instanceof Function ? style(d) : style),
+          }}
+        />
+      ))}
+    </g>
+  )
+}
 
 import PropTypes from 'prop-types'
 
@@ -54,4 +54,4 @@ Rects.propTypes = {
   keys: PropTypes.func,
 }
 
-export default Rects
+export default React.memo(Rects)
