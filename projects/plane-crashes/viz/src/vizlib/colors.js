@@ -43,8 +43,6 @@ function makeColors(num) {
   return data.map(d => hsl(d.h, d.s, d.l))
 }
 
-console.log('geagea', makeColors(34))
-
 export const colorScalex = num => scaleOrdinal(makeColors(num))
 
 export const colorScalexx = num => {

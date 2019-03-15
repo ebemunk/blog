@@ -53,4 +53,4 @@ Hint.propTypes = {
   children: PropTypes.node,
 }
 
-export default Hint
+export default React.memo(Hint)

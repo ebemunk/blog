@@ -2,9 +2,10 @@ import React from 'react'
 import { scaleLinear } from 'd3-scale'
 import { extent } from 'd3-array'
 import { format } from 'd3-format'
+import { line } from 'd3-shape'
 
 import FlexPlot from '../../vizlib/FlexPlot'
-import Line from '../../vizlib/Line'
+import Path from '../../vizlib/Path'
 import Axis from '../../vizlib/Axis'
 import GridLines from '../../vizlib/GridLines'
 import Legend from '../../vizlib/Legend'
@@ -81,50 +82,62 @@ const Chart = ({ stage, hint, setHint }) => (
               orientation="horizontal"
             />
 
-            <Line
+            <Path
+              generator={line()}
               data={data.map(d => [xScale(d.year), yScale(+d.total)])}
               style={{
                 stroke: colors8(0),
                 strokeWidth: 3,
+                fill: 'none',
               }}
             />
-            <Line
+            <Path
+              generator={line()}
               data={data.map(d => [xScale(d.year), yScale(+d.crashes)])}
               style={{
                 stroke: colors8(1),
                 strokeWidth: 3,
+                fill: 'none',
               }}
             />
-            <Line
+            <Path
+              generator={line()}
               data={data.map(d => [xScale(d.year), yScale(+d.ground)])}
               style={{
                 stroke: colors8(2),
                 strokeWidth: 3,
+                fill: 'none',
               }}
             />
 
-            <Line
+            <Path
+              generator={line()}
               data={yearsNMRaw.map(d => [xScale(d.year), yScale(+d.total)])}
               style={{
                 stroke: colors8(0),
                 strokeWidth: 1,
                 strokeDasharray: '3 3',
+                fill: 'none',
               }}
             />
-            <Line
+            <Path
+              generator={line()}
               data={yearsNMRaw.map(d => [xScale(d.year), yScale(+d.crashes)])}
               style={{
                 stroke: colors8(1),
                 strokeWidth: 1,
                 strokeDasharray: '3 3',
+                fill: 'none',
               }}
             />
-            <Line
+            <Path
+              generator={line()}
               data={yearsNMRaw.map(d => [xScale(d.year), yScale(+d.ground)])}
               style={{
                 stroke: colors8(2),
                 strokeWidth: 1,
                 strokeDasharray: '3 3',
+                fill: 'none',
               }}
             />
 

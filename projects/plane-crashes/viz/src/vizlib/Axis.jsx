@@ -135,48 +135,8 @@ const Axis = ({
           </animated.text>
         </animated.g>
       ))}
-      {/* {ticks.map(tick => (
-        <Spring
-          native
-          key={tick}
-          to={{ opacity: 1, transform: transform(position(tick)) }}
-          from={{ opacity: 0, transform: 'translate(0, 0)' }}
-        >
-          {spring => (
-            <animated.g
-              className="tick"
-              opacity={spring.opacity}
-              transform={spring.transform}
-            >
-              <animated.line
-                stroke="currentColor"
-                {...{
-                  [`${x}2`]: k * tickSizeInner,
-                }}
-              />
-              <animated.text
-                fill="currentColor"
-                dy={
-                  orientation === 'top'
-                    ? '0em'
-                    : orientation === 'bottom'
-                    ? '0.71em'
-                    : '0.32em'
-                }
-                {...{
-                  [x]: k * spacing,
-                }}
-              >
-                {format(tick)}
-              </animated.text>
-            </animated.g>
-          )}
-        </Spring>
-      ))} */}
     </g>
   )
 }
 
-import { compose, pure } from 'recompose'
-
-export default compose(pure)(Axis)
+export default React.memo(Axis)

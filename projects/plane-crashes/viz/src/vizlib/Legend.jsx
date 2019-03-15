@@ -35,4 +35,4 @@ const Legend = ({ data = [], style, ...rest }) => (
   </div>
 )
 
-export default Legend
+export default React.memo(Legend)

@@ -1,14 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Popper } from 'react-popper'
 import { scaleLinear, scalePow } from 'd3-scale'
 import { curveMonotoneX } from 'd3-shape'
-import { Popper } from 'react-popper'
+import { line } from 'd3-shape'
 
 import data from '../data/operator-by-year.json'
 const allData = [...data.military, ...data.nonmilitary]
 
 import FlexPlot from '../vizlib/FlexPlot'
-import Line from '../vizlib/Line'
+import Path from '../vizlib/Path'
 import Axis from '../vizlib/Axis'
 import GridLines from '../vizlib/GridLines'
 import Voronoi from '../vizlib/Voronoi'
@@ -28,13 +29,14 @@ const Perfz = compose(withState('hl', 'setHl', {}))(
     return (
       <React.Fragment>
         {hint && highlighted && (
-          <Line
+          <Path
             key={highlighted[0]}
+            generator={line().curve(curve)}
             data={highlighted[1].map(d => [xScale(d.year), yScale(+d.count)])}
-            curve={curve}
             style={{
               stroke: hlIsMil ? 'red' : colors8(0),
               strokeWidth: 3,
+              fill: 'none',
             }}
           />
         )}
@@ -125,15 +127,16 @@ const OperatorByYear = ({ hint, setHint }) => (
 
             <g>
               {data.military.map(([key, arr]) => (
-                <Line
+                <Path
                   key={key}
+                  generator={line().curve(curve)}
                   data={arr.map(d => [xScale(d.year), yScale(+d.count)])}
-                  curve={curve}
                   style={{
                     stroke: !hint ? 'red' : 'gray',
                     strokeWidth: 2,
                     mixBlendMode: !hint ? 'screen' : '',
                     opacity: !hint ? 1 : 0.2,
+                    fill: 'none',
                   }}
                 />
               ))}
@@ -141,15 +144,16 @@ const OperatorByYear = ({ hint, setHint }) => (
 
             <g>
               {data.nonmilitary.map(([key, arr]) => (
-                <Line
+                <Path
                   key={key}
+                  generator={line().curve(curve)}
                   data={arr.map(d => [xScale(d.year), yScale(+d.count)])}
-                  curve={curve}
                   style={{
                     stroke: !hint ? colors8(0) : 'gray',
                     strokeWidth: 2,
                     mixBlendMode: !hint ? 'screen' : '',
                     opacity: !hint ? 1 : 0.2,
+                    fill: 'none',
                   }}
                 />
               ))}

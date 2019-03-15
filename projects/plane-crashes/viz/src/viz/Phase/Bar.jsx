@@ -2,13 +2,14 @@ import React from 'react'
 import { scaleLinear, scaleBand } from 'd3-scale'
 import { extent } from 'd3-array'
 import { format } from 'd3-format'
+import { line } from 'd3-shape'
 
 import FlexPlot from '../../vizlib/FlexPlot'
-import Line from '../../vizlib/Line'
 import Rects from '../../vizlib/Rects'
 import Voronoi from '../../vizlib/Voronoi'
 import Axis from '../../vizlib/Axis'
 import Hint from '../../vizlib/Hint'
+import Path from '../../vizlib/Path'
 import { scaleBandInvert } from '../../vizlib/util'
 import { colors8 } from '../../vizlib/colors'
 
@@ -78,7 +79,8 @@ const Bar = ({ data, hint, setHint, stage }) => (
               transition: 'opacity 300ms',
             })}
           />
-          <Line
+          <Path
+            generator={line()}
             data={data.map(d => [
               xScale(d[0]) + xScale.bandwidth() / 2,
               y2Scale(d[2]),
@@ -86,6 +88,7 @@ const Bar = ({ data, hint, setHint, stage }) => (
             style={{
               stroke: colors8(7),
               strokeWidth: 1,
+              fill: 'none',
             }}
           />
           {data.map(d => (
