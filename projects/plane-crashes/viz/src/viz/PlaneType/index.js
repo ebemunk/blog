@@ -46,6 +46,8 @@ const Fok = ({}) => (
       margin={{ left: 50, right: 50, top: 10, bottom: 20 }}
     >
       {({ chartHeight, chartWidth }) => {
+        console.log('AFAFAAFA')
+
         const x = scaleBand()
           .domain(fak.map(d => d.key))
           .range([0, chartWidth])

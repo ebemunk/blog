@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import 'react-vis/dist/style.css'
-
 const render = (component, selector) =>
   ReactDOM.render(component, document.querySelector(selector))
 
@@ -26,9 +24,9 @@ render(<Nature />, '#viz-nature')
 
 render(<OperatorByYear />, '#viz-operator-by-year')
 
-// import PlaneType from './viz/PlaneType'
+import PlaneType from './viz/PlaneType'
 
-// render(<PlaneType />, '#viz-plane-type')
+render(<PlaneType />, '#viz-plane-type')
 
 import Force from './viz/Classification/Force'
 

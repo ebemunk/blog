@@ -103,6 +103,8 @@ const PlaneType = ({}) => (
           }, [])
           .filter(d => d.count > 1)
 
+        console.log('planetete')
+
         // const xScale = scaleLog()
         const xScale = scaleLinear()
           .domain(extent(dots, d => d.count))
