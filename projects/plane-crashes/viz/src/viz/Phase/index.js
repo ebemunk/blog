@@ -70,7 +70,7 @@ const Phase = () => {
       >
         <div style={{ marginTop: '0.5rem' }}>
           <div>
-            <strong>Crashes and Average Fatalities for Flight Phases</strong>
+            <strong>Which flight phases are the most dangerous?</strong>
           </div>
           <div style={{ fontSize: '0.8rem' }}>Mouseover to see details</div>
         </div>

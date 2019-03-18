@@ -3,7 +3,7 @@ import React from 'react'
 import damage from '../../data/damage.csv'
 import fate from '../../data/fate.csv'
 
-import Pie from '../../vizlib/Simple/Pie'
+import Pie from './Pie'
 
 const Damage = ({}) => (
   <div
@@ -12,13 +12,30 @@ const Damage = ({}) => (
       justifyContent: 'center',
     }}
   >
-    <Pie data={damage.map(d => [d.damage, +d.count])} />
+    <div>
+      <div style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
+        <strong>What's the damage on the airplane after a crash?</strong>
+        <div style={{ fontSize: '0.8rem' }}>
+          For crashes where data is available
+        </div>
+      </div>
+      <Pie data={damage.map(d => [d.damage, +d.count])} />
+    </div>
+
     <div style={{ flexBasis: '4rem' }} />
-    <Pie data={fate.map(d => [d.fate, +d.count])} />
+
+    <div>
+      <div style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
+        <strong>What's the fate of the airplane after a crash?</strong>
+        <div style={{ fontSize: '0.8rem' }}>
+          For crashes where data is available
+        </div>
+      </div>
+      <Pie data={fate.map(d => [d.fate, +d.count])} />
+    </div>
   </div>
 )
 
 import { hot } from 'react-hot-loader'
-import { compose } from 'recompose'
 
-export default compose(hot(module))(Damage)
+export default hot(module)(Damage)

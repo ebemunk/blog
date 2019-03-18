@@ -21,12 +21,9 @@ Crashes over the years.
 
 ## Damage and Fate
 
-What is the damage on the airplane after crashes?
-What is the fate of the airplane after a crash?
+Damage and fate blurb
 
 <div id="viz-damage-fate"></div>
-
-How does damage and fate of the airplane correlate?
 
 <div id="viz-damage-matrix"></div>
 
