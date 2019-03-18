@@ -72,6 +72,8 @@ Type of planes involved in crashes
 
 Type of plane vs damage/fate
 
+<div id="viz-plane-age"></div>
+
 Most common words in Narrative (word cloud)
 
 Most common words in Probable Cause (word cloud)

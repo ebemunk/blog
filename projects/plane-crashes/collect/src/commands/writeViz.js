@@ -343,6 +343,26 @@ export default async function writeForViz() {
         R.values,
       ),
     },
+    {
+      filename: 'plane-age',
+      query: `
+        select
+          split_part(raw->>'Type', ' ', 1) as type,
+          array_agg((parsed->'date'->>'year')::int - left(raw->>'First flight', 4)::int) as ages,
+          cardinality(array_agg((parsed->'date'->>'year')::int - left(raw->>'First flight', 4)::int)) as len
+        from crashes
+        where raw->>'First flight' != ''
+        group by 1
+        order by 3 desc
+      `,
+      process: R.pipe(
+        R.filter(d => d.len > 50),
+        R.map(d => ({
+          type: d.type,
+          ages: d.ages,
+        })),
+      ),
+    },
   ]
 
   await Promise.map(

@@ -24,10 +24,6 @@ render(<Nature />, '#viz-nature')
 
 render(<OperatorByYear />, '#viz-operator-by-year')
 
-import PlaneType from './viz/PlaneType'
-
-render(<PlaneType />, '#viz-plane-type')
-
 import Force from './viz/Classification/Force'
 
 render(<Force />, '#viz-classifications-force')
@@ -35,6 +31,10 @@ render(<Force />, '#viz-classifications-force')
 import Maker from './viz/Makers'
 
 render(<Maker />, '#viz-maker')
+
+import PlaneAge from './viz/PlaneAge'
+
+render(<PlaneAge />, '#viz-plane-age')
 
 //
 ;(function() {
