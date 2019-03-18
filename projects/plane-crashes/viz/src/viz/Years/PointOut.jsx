@@ -1,69 +1,94 @@
-import React from 'react'
-import { Transition, animated } from 'react-spring/renderprops'
+import React, { useRef, useState } from 'react'
+import { useTransition, animated } from 'react-spring'
 
-const PointOut = ({ x, y, dx, dy, title, color, show }) => {
+const PointOut = ({ x, y, dx, dy, title, color, show, textAnchor }) => {
+  const textRef = useRef(null)
   const source = { x, y }
-  const target = { x: x + dx - 5, y: y + dy }
   const r = Math.sqrt(dx * dx + dy * dy)
 
-  return (
-    <Transition
-      native
-      items={show}
-      from={{
-        opacity: 0,
-      }}
-      leave={{
-        opacity: 0,
-      }}
-      enter={{
+  const transitions = useTransition(show, null, {
+    from: { opacity: 0 },
+    enter: () => {
+      const bbox = textRef.current
+        ? textRef.current.getBBox()
+        : { x: 0, y: 0, width: 0, height: 0 }
+
+      return {
+        opacity: 1,
         x,
         y,
-        d: `M${source.x},${source.y}A${r},${r} 0 0,1 ${target.x},${target.y}`,
-        opacity: 1,
-      }}
-      update={{
-        x,
-        y,
-        d: `M${source.x},${source.y}A${r},${r} 0 0,1 ${target.x},${target.y}`,
-        opacity: 1,
-      }}
-    >
-      {show =>
-        !show
-          ? () => null
-          : spring => (
-              <animated.g style={{ opacity: spring.opacity }}>
-                <animated.path
-                  d={spring.d}
-                  style={{
-                    fill: 'none',
-                    stroke: 'white',
-                    strokeWidth: 1,
-                    strokeDasharray: '3 3',
-                  }}
-                  markerEnd="url(#end)"
-                />
-                <animated.circle
-                  r={5}
-                  cx={spring.x}
-                  cy={spring.y}
-                  style={{ fill: color, stroke: '#282c34', strokeWidth: 3 }}
-                />
-                <animated.text
-                  x={spring.x}
-                  y={spring.y}
-                  dx={dx}
-                  dy={dy}
-                  alignmentBaseline="middle"
-                  style={{ fill: 'white', fontSize: '0.75rem' }}
-                >
-                  {title}
-                </animated.text>
-              </animated.g>
-            )
+        tx: bbox.x + bbox.width / 2,
+        ty: bbox.y + bbox.height / 2,
+        // d: target
+        //   ? `M${source.x},${source.y}A${r},${r} 0 0,1 ${target.x},${target.y}`
+        //   : '',
       }
-    </Transition>
+    },
+    update: () => {
+      const bbox = textRef.current
+        ? textRef.current.getBBox()
+        : { x: 0, y: 0, width: 0, height: 0 }
+
+      console.log('update', bbox.x + bbox.width / 2, bbox.y + bbox.height / 2)
+
+      return {
+        x,
+        y,
+        tx: bbox.x + bbox.width / 2,
+        ty: bbox.y + bbox.height / 2,
+        // d: target
+        //   ? `M${source.x},${source.y}A${r},${r} 0 0,1 ${target.x},${target.y}`
+        //   : '',
+      }
+    },
+    leave: { opacity: 0 },
+  })
+
+  return transitions.map(
+    ({ item, props, key }) =>
+      item && (
+        <animated.g key={key} style={{ opacity: props.opacity }}>
+          {/* <animated.path
+            d={props.d}
+            style={{
+              fill: 'none',
+              stroke: 'white',
+              strokeWidth: 1,
+              strokeDasharray: '3 3',
+            }}
+            markerEnd="url(#end)"
+          /> */}
+          {textRef.current && (
+            <animated.line
+              x1={source.x}
+              y1={source.y}
+              x2={props.tx}
+              y2={props.ty}
+              style={{
+                fill: 'none',
+                stroke: 'white',
+              }}
+            />
+          )}
+          <animated.circle
+            r={5}
+            cx={props.x}
+            cy={props.y}
+            style={{ fill: color, stroke: '#282c34', strokeWidth: 3 }}
+          />
+          <animated.text
+            ref={textRef}
+            x={props.x}
+            y={props.y}
+            dx={dx}
+            dy={dy}
+            alignmentBaseline="middle"
+            style={{ fill: 'white', fontSize: '0.75rem', textAnchor }}
+          >
+            {title}
+          </animated.text>
+        </animated.g>
+      ),
   )
 }
 

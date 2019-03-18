@@ -1,7 +1,6 @@
 import React from 'react'
 import { scaleLinear } from 'd3-scale'
 import { extent } from 'd3-array'
-import { format } from 'd3-format'
 import { line } from 'd3-shape'
 
 import FlexPlot from '../../vizlib/FlexPlot'
@@ -9,8 +8,6 @@ import Path from '../../vizlib/Path'
 import Axis from '../../vizlib/Axis'
 import GridLines from '../../vizlib/GridLines'
 import Legend from '../../vizlib/Legend'
-import Voronoi from '../../vizlib/Voronoi'
-import Hint from '../../vizlib/Hint'
 import { colors8 } from '../../vizlib/colors'
 
 import yearsNMRaw from '../../data/years-nm.csv'
@@ -18,10 +15,9 @@ import yearsRaw from '../../data/years.csv'
 
 import Highlight from './Highlight'
 import PointOut from './PointOut'
+import Interaction from './Interaction'
 
-const formatCount = format(',')
-
-const Chart = ({ stage, hint, setHint }) => (
+const Chart = ({ stage }) => (
   <div
     style={{
       position: 'relative',
@@ -56,7 +52,7 @@ const Chart = ({ stage, hint, setHint }) => (
           .nice()
 
         return (
-          <React.Fragment>
+          <>
             <Axis
               scale={xScale}
               orientation="bottom"
@@ -65,6 +61,7 @@ const Chart = ({ stage, hint, setHint }) => (
               tickFormat={d => d}
             />
             <Axis scale={yScale} orientation="left" tickArguments={[5]} />
+
             <GridLines
               scale={xScale}
               ticks={20}
@@ -141,29 +138,13 @@ const Chart = ({ stage, hint, setHint }) => (
               }}
             />
 
-            <Highlight
-              start={xScale(1939)}
-              end={xScale(1945)}
-              chartHeight={chartHeight}
-              title="World War 2"
-              show={stage >= 4}
-            />
-
-            <Highlight
-              start={xScale(1955)}
-              end={xScale(1975)}
-              chartHeight={chartHeight}
-              title="Vietnam War"
-              show={stage >= 5}
-            />
-
             <defs>
               <marker
                 id="end"
                 viewBox="0 -5 10 10"
                 markerWidth="6"
                 markerHeight="6"
-                orient="auto"
+                orient="auto-start-reverse"
               >
                 <path
                   d="M0,-5L10,0L0,5"
@@ -175,15 +156,15 @@ const Chart = ({ stage, hint, setHint }) => (
             </defs>
 
             <PointOut
-              x={xScale(1985)}
-              y={yScale(data.find(d => +d.year === 1985).total)}
-              dx={20}
+              x={xScale(1972)}
+              y={yScale(data.find(d => +d.year === 1972).total)}
+              dx={-20}
               dy={-32}
               color={colors8(0)}
-              title="1985: Worst year in aviation history"
+              title="1972: Worst year in aviation history"
               show={stage >= 1}
+              textAnchor="end"
             />
-
             <PointOut
               x={xScale(2001)}
               y={yScale(data.find(d => +d.year === 2001).ground)}
@@ -194,52 +175,27 @@ const Chart = ({ stage, hint, setHint }) => (
               show={stage >= 2}
             />
 
-            <Voronoi
-              points={data.map(d => [xScale(d.year), 0])}
-              onMouseMove={(e, point) => {
-                const x = Math.round(xScale.invert(point.x))
-                const d = data.find(d => +d.year === x)
-                setHint({
-                  x: xScale(x),
-                  data: d,
-                })
-              }}
-              onMouseLeave={() => {
-                setHint(null)
-              }}
+            <Highlight
+              start={xScale(1939)}
+              end={xScale(1946)}
+              chartHeight={chartHeight}
+              title="WW2"
+              show={stage >= 4}
+            />
+            <Highlight
+              start={xScale(1955)}
+              end={xScale(1975)}
+              chartHeight={chartHeight}
+              title="Vietnam War"
+              show={stage >= 5}
             />
 
-            {hint && (
-              <Hint x1={hint.x} y1={0} x2={hint.x} y2={chartHeight}>
-                <div
-                  style={{
-                    padding: '0.5rem',
-                    backgroundColor: 'rgba(0,0,0,0.3)',
-                    border: '1px solid rgba(255,255,255,0.3)',
-                    borderRadius: '0.5rem',
-                    margin: '0 0.5rem',
-                    fontSize: '0.75rem',
-                    pointerEvents: 'none',
-                  }}
-                >
-                  Year: <strong>{hint.data.year}</strong>
-                  <br />
-                  Crashes: <strong>{formatCount(hint.data.crashes)}</strong>
-                  <br />
-                  Fatalities: <strong>{formatCount(hint.data.total)}</strong>
-                  <br />
-                  Ground Fatalities:{' '}
-                  <strong>{formatCount(hint.data.ground)}</strong>
-                </div>
-              </Hint>
-            )}
-          </React.Fragment>
+            <Interaction xScale={xScale} data={data} />
+          </>
         )
       }}
     </FlexPlot>
   </div>
 )
 
-import { compose, withState } from 'recompose'
-
-export default compose(withState('hint', 'setHint', null))(Chart)
+export default React.memo(Chart)
