@@ -1,5 +1,5 @@
 import React from 'react'
-import { Spring, animated } from 'react-spring/renderprops'
+import { useSpring, animated } from 'react-spring'
 
 const Plane = ({ xScale, yScale, phase = 'En route (ENR)' }) => {
   const planeTranslate = {
@@ -55,33 +55,27 @@ const Plane = ({ xScale, yScale, phase = 'En route (ENR)' }) => {
     'Unknown (UNK)': 0,
   }
 
+  const { transform } = useSpring({
+    to: {
+      transform: `translate(${planeTranslate[phase][0]}, ${
+        planeTranslate[phase][1]
+      }) rotate(${planeRotation[phase]})`,
+    },
+  })
+
   return (
-    <Spring
-      to={{
-        x: planeTranslate[phase][0],
-        y: planeTranslate[phase][1],
-        rot: planeRotation[phase],
-      }}
-    >
-      {spring => (
-        <animated.g
-          transform={`translate(${spring.x}, ${spring.y}) rotate(${
-            spring.rot
-          })`}
-        >
-          <animated.path
-            d="M395 390 c-16 -4 -66 -24 -109 -44 -44 -20 -81 -34 -84 -31 -3 3 -1 5 4 5 6 0 19 6 29 14 17 12 14 15 -40 31 -96 28 -146 -13 -65 -53 l40 -20 -37 -15 c-35 -14 -40 -14 -71 5 -61 37 -81 -2 -39 -77 28 -49 59 -55 143 -26 32 11 60 18 61 17 2 -1 -2 -30 -8 -65 -6 -34 -9 -65 -6 -68 4 -3 17 -3 31 1 19 5 34 27 69 100 44 92 47 95 108 128 72 38 91 61 69 82 -20 18 -59 25 -95 16z"
-            style={{
-              fill: 'green',
-              stroke: '#282c34',
-              strokeWidth: 20,
-              transform: `translate(-25px,12px) rotate(22deg) scale(0.075,-0.075)`,
-            }}
-          />
-        </animated.g>
-      )}
-    </Spring>
+    <animated.g transform={transform}>
+      <animated.path
+        d="M395 390 c-16 -4 -66 -24 -109 -44 -44 -20 -81 -34 -84 -31 -3 3 -1 5 4 5 6 0 19 6 29 14 17 12 14 15 -40 31 -96 28 -146 -13 -65 -53 l40 -20 -37 -15 c-35 -14 -40 -14 -71 5 -61 37 -81 -2 -39 -77 28 -49 59 -55 143 -26 32 11 60 18 61 17 2 -1 -2 -30 -8 -65 -6 -34 -9 -65 -6 -68 4 -3 17 -3 31 1 19 5 34 27 69 100 44 92 47 95 108 128 72 38 91 61 69 82 -20 18 -59 25 -95 16z"
+        style={{
+          fill: 'gray',
+          stroke: '#282c34',
+          strokeWidth: 10,
+          transform: `translate(-25px,12px) rotate(22deg) scale(0.075,-0.075)`,
+        }}
+      />
+    </animated.g>
   )
 }
 
-export default Plane
+export default React.memo(Plane)

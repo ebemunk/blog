@@ -1,19 +1,15 @@
 import React from 'react'
 import { scaleLinear, scaleBand } from 'd3-scale'
 import { extent } from 'd3-array'
-import { format } from 'd3-format'
 import { line } from 'd3-shape'
 
 import FlexPlot from '../../vizlib/FlexPlot'
 import Rects from '../../vizlib/Rects'
-import Voronoi from '../../vizlib/Voronoi'
 import Axis from '../../vizlib/Axis'
-import Hint from '../../vizlib/Hint'
 import Path from '../../vizlib/Path'
-import { scaleBandInvert } from '../../vizlib/util'
 import { colors8 } from '../../vizlib/colors'
 
-import PhaseDiagram from './PhaseDiagram'
+import Interaction from './Interaction'
 
 const isHighlighted = (stage, d) => {
   switch (stage) {
@@ -38,7 +34,7 @@ const isHighlighted = (stage, d) => {
   }
 }
 
-const Bar = ({ data, hint, setHint, stage }) => (
+const Bar = ({ data, stage }) => (
   <FlexPlot
     height={400}
     margin={{
@@ -54,8 +50,6 @@ const Bar = ({ data, hint, setHint, stage }) => (
         .range([0, chartWidth])
         .padding(0.2)
 
-      const invertXScale = scaleBandInvert(xScale)
-
       const yScale = scaleLinear()
         .domain(extent(data.map(d => d[1])))
         .range([chartHeight, 0])
@@ -67,7 +61,7 @@ const Bar = ({ data, hint, setHint, stage }) => (
         .nice()
 
       return (
-        <React.Fragment>
+        <>
           <Rects
             data={data.map(d => [xScale(d[0]), yScale(d[1]), d[0]])}
             width={xScale.bandwidth()}
@@ -79,6 +73,7 @@ const Bar = ({ data, hint, setHint, stage }) => (
               transition: 'opacity 300ms',
             })}
           />
+
           <Path
             generator={line()}
             data={data.map(d => [
@@ -86,11 +81,12 @@ const Bar = ({ data, hint, setHint, stage }) => (
               y2Scale(d[2]),
             ])}
             style={{
-              stroke: colors8(7),
+              stroke: colors8(5),
               strokeWidth: 1,
               fill: 'none',
             }}
           />
+
           {data.map(d => (
             <circle
               key={d}
@@ -98,26 +94,11 @@ const Bar = ({ data, hint, setHint, stage }) => (
               cx={xScale(d[0]) + xScale.bandwidth() / 2}
               cy={y2Scale(d[2])}
               style={{
-                fill: colors8(7),
+                fill: colors8(5),
               }}
             />
           ))}
-          <Voronoi
-            points={data.map(d => {
-              return [xScale(d[0]) + xScale.bandwidth() / 2, 0]
-            })}
-            onMouseMove={(e, point) => {
-              const x = invertXScale(point.x)
-              const d = data.find(datum => datum[0] === x)
-              setHint({
-                x: xScale(x) + xScale.bandwidth() / 2,
-                data: d,
-              })
-            }}
-            onMouseLeave={() => {
-              setHint(null)
-            }}
-          />
+
           <Axis
             orientation="left"
             scale={yScale}
@@ -138,40 +119,12 @@ const Bar = ({ data, hint, setHint, stage }) => (
             tickFormat={d => d.match(/\(([A-Z]+)\)/)[1]}
             title="Phase"
           />
-          {hint && (
-            <Hint
-              x1={hint.x}
-              y1={0}
-              x2={hint.x}
-              y2={chartHeight}
-              hintStyle={{
-                pointerEvents: 'none',
-              }}
-            >
-              <div
-                style={{
-                  padding: '0.5rem',
-                  backgroundColor: 'rgba(0,0,0,0.3)',
-                  border: '1px solid rgba(255,255,255,0.3)',
-                  borderRadius: '0.5rem',
-                  margin: '0 0.5rem',
-                  fontSize: '0.75rem',
-                }}
-              >
-                Phase: <strong>{hint.data[0]}</strong>
-                <br />
-                Crashes: <strong>{format(',')(hint.data[1])}</strong>
-                <br />
-                Avg. Fatalities: <strong>{format('.2f')(hint.data[2])}</strong>
-              </div>
-            </Hint>
-          )}
 
-          <PhaseDiagram xScale={xScale} hint={hint} />
-        </React.Fragment>
+          <Interaction xScale={xScale} data={data} />
+        </>
       )
     }}
   </FlexPlot>
 )
 
-export default Bar
+export default React.memo(Bar)
