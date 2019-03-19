@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import Waypoint from '../../vizlib/Waypoint'
+import ChartTitle from '../../vizlib/ChartTitle'
 
 import Bar from './Bar'
 
@@ -68,12 +69,10 @@ const Phase = () => {
           alignSelf: 'flex-start',
         }}
       >
-        <div style={{ marginTop: '0.5rem' }}>
-          <div>
-            <strong>Which flight phases are the most dangerous?</strong>
-          </div>
-          <div style={{ fontSize: '0.8rem' }}>Mouseover to see details</div>
-        </div>
+        <ChartTitle
+          title="Which flight phases are the most dangerous?"
+          subtitle="Mouseover to see details"
+        />
         <Bar data={data} stage={stage} />
       </div>
     </div>

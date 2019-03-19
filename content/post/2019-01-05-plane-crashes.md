@@ -29,13 +29,13 @@ Damage and fate blurb
 
 ## Histogram of Fatalities
 
-What is the most common number of fatalities in a crash?
+Fatalities blurb
 
 <div id="viz-fat-hist"></div>
 
 ## Naturez
 
-For what purpose were the planes flying when crashed? Which Nature has the highest average fatalities?
+Nature blurb
 
 <div id="viz-nature"></div>
 

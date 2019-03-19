@@ -3,6 +3,18 @@ import { hsl } from 'd3-color'
 import { interpolateSinebow } from 'd3-scale-chromatic'
 import { range } from 'd3-array'
 
+export const get8 = () =>
+  scaleOrdinal([
+    '#0081bd',
+    '#5f80d0',
+    '#a079d3',
+    '#d86ec3',
+    '#ff66a2',
+    '#ff6d77',
+    '#ff8548',
+    '#ffa600',
+  ]).domain(range(8))
+
 export const colors8 = scaleOrdinal([
   '#0081bd',
   '#5f80d0',

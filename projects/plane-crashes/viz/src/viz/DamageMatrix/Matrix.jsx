@@ -6,6 +6,7 @@ import Plot from '../../vizlib/Plot'
 import Axis from '../../vizlib/Axis'
 import Rects from '../../vizlib/Rects'
 import Legend from '../../vizlib/Legend'
+import ChartTitle from '../../vizlib/ChartTitle'
 
 import data from '../../data/damage-fate.csv'
 
@@ -20,12 +21,11 @@ const Matrix = ({}) => (
     <div
       style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}
     >
-      <div style={{ marginBottom: '0.5rem', width: 650 }}>
-        <strong>What's the most common fate for a plane after a crash?</strong>
-        <div style={{ fontSize: '0.8rem' }}>
-          Number of Damage-Fate occurences for crashes
-        </div>
-      </div>
+      <ChartTitle
+        title="What's the most common fate for a given damage to the plane?"
+        subtitle="Number of Damage-Fate occurences for crashes."
+        style={{ width: 650, marginBottom: '0.5rem', marginTop: 0 }}
+      />
     </div>
     <div
       style={{

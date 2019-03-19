@@ -1,7 +1,17 @@
 import React, { useRef, useState } from 'react'
 import { useTransition, animated } from 'react-spring'
 
-const PointOut = ({ x, y, dx, dy, title, color, show, textAnchor }) => {
+const PointOut = ({
+  x,
+  y,
+  dx,
+  dy,
+  title,
+  color,
+  show,
+  textAnchor,
+  style = {},
+}) => {
   const textRef = useRef(null)
   const source = { x, y }
   const r = Math.sqrt(dx * dx + dy * dy)
@@ -74,7 +84,7 @@ const PointOut = ({ x, y, dx, dy, title, color, show, textAnchor }) => {
             r={5}
             cx={props.x}
             cy={props.y}
-            style={{ fill: color, stroke: '#282c34', strokeWidth: 3 }}
+            style={{ fill: color, stroke: '#282c34', strokeWidth: 3, ...style }}
           />
           <animated.text
             ref={textRef}

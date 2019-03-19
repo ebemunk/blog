@@ -3,6 +3,8 @@ import React from 'react'
 import damage from '../../data/damage.csv'
 import fate from '../../data/fate.csv'
 
+import ChartTitle from '../../vizlib/ChartTitle'
+
 import Pie from './Pie'
 
 const Damage = ({}) => (
@@ -13,24 +15,22 @@ const Damage = ({}) => (
     }}
   >
     <div>
-      <div style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
-        <strong>What's the damage on the airplane after a crash?</strong>
-        <div style={{ fontSize: '0.8rem' }}>
-          For crashes where data is available
-        </div>
-      </div>
+      <ChartTitle
+        title="What's the damage on the airplane after a crash?"
+        subtitle="For crashes where data is available"
+        style={{ textAlign: 'center', marginBottom: '0.5rem', marginTop: 0 }}
+      />
       <Pie data={damage.map(d => [d.damage, +d.count])} />
     </div>
 
     <div style={{ flexBasis: '4rem' }} />
 
     <div>
-      <div style={{ textAlign: 'center', marginBottom: '0.5rem' }}>
-        <strong>What's the fate of the airplane after a crash?</strong>
-        <div style={{ fontSize: '0.8rem' }}>
-          For crashes where data is available
-        </div>
-      </div>
+      <ChartTitle
+        title="What's the fate of the airplane after a crash?"
+        subtitle="For crashes where data is available"
+        style={{ textAlign: 'center', marginBottom: '0.5rem', marginTop: 0 }}
+      />
       <Pie data={fate.map(d => [d.fate, +d.count])} />
     </div>
   </div>

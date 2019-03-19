@@ -37,7 +37,7 @@ const Chart = ({ stage }) => (
     />
     <FlexPlot
       height={500}
-      margin={{ left: 40, right: 15, top: 30, bottom: 30 }}
+      margin={{ left: 40, right: 15, top: 15, bottom: 30 }}
     >
       {({ chartHeight, chartWidth }) => {
         const data = stage < 3 ? yearsNMRaw : yearsRaw

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import Waypoint from '../../vizlib/Waypoint'
+import ChartTitle from '../../vizlib/ChartTitle'
 
 import Chart from './Chart'
 
@@ -60,12 +61,10 @@ const Years = () => {
             top: 0,
           }}
         >
-          <div style={{ marginTop: '0.5rem' }}>
-            <div>
-              <strong>Crashes and Fatalities between 1919-2019</strong>
-            </div>
-            <div style={{ fontSize: '0.8rem' }}>Mouseover to see details</div>
-          </div>
+          <ChartTitle
+            title="Crashes and Fatalities between 1919-2019"
+            subtitle="Mouseover to see details"
+          />
           <Chart stage={stage} />
         </div>
       </div>
