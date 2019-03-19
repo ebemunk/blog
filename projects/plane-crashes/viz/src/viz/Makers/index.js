@@ -10,18 +10,24 @@ import { area as d3Area, curveBasis } from 'd3-shape'
 import FlexPlot from '../../vizlib/FlexPlot'
 import Axis from '../../vizlib/Axis'
 import Path from '../../vizlib/Path'
+import ChartTitle from '../../vizlib/ChartTitle'
 
 const Maker = () => {
   const [military, setMilitary] = useState(false)
 
   return (
-    <React.Fragment>
+    <>
+      <ChartTitle
+        title="Crashes by manufacturer"
+        subtitle="Showing top 20 manufacturers with highest number of crashes (not ordered). Douglas and Curtiss were big WW2 wartime manufacturers."
+        style={{ marginLeft: 100 }}
+      />
       <div>
         <label
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            cursor: 'pointer',
+            marginLeft: 100,
+            fontSize: '0.8rem',
           }}
         >
           <input
@@ -34,7 +40,7 @@ const Maker = () => {
       </div>
       <FlexPlot
         height={500}
-        margin={{ top: 40, bottom: 20, left: 100, right: 20 }}
+        margin={{ top: 40, bottom: 20, left: 100, right: 100 }}
       >
         {({ chartHeight, chartWidth }) => {
           const data = [
@@ -81,7 +87,7 @@ const Maker = () => {
           const line = area.lineY1()
 
           return (
-            <React.Fragment>
+            <>
               {data.map(d => (
                 <g key={d.maker} transform={`translate(0, ${y(d.maker)})`}>
                   <Path
@@ -105,20 +111,22 @@ const Maker = () => {
                 scale={x}
                 transform={`translate(0, ${chartHeight})`}
                 orientation="bottom"
+                tickFormat={d => d}
               />
               <Axis scale={y} orientation="left" />
-            </React.Fragment>
+              <Axis
+                scale={y}
+                orientation="right"
+                transform={`translate(${chartWidth}, 0)`}
+              />
+            </>
           )
         }}
       </FlexPlot>
-    </React.Fragment>
+    </>
   )
 }
 
-import { compose } from 'recompose'
 import { hot } from 'react-hot-loader'
 
-export default compose(
-  hot(module),
-  React.memo,
-)(Maker)
+export default hot(module)(Maker)

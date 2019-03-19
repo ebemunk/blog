@@ -47,9 +47,15 @@ Classifications blurb.
 
 ## Operators
 
-What are the trends in crash operators through the years, by military or nonmilitary intent?
+Operators blurb.
 
 <div id="viz-operator-by-year"></div>
+
+## Manufacturer
+
+Manufacturer blurb.
+
+<div id="viz-maker"></div>
 
 ## Misc
 
@@ -62,10 +68,6 @@ Chance of fatalities among passengers in Military/non-Military crashes
 How long does it take in general for a plane to crash since its first flight? (crash date - first flight)
 
 Type of planes involved in crashes
-
-<div id="viz-plane-type"></div>
-
-<div id="viz-maker"></div>
 
 Type of plane vs damage/fate
 
