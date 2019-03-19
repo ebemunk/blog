@@ -20,13 +20,13 @@ const Maker = () => {
       <ChartTitle
         title="Crashes by manufacturer"
         subtitle="Showing top 20 manufacturers with highest number of crashes (not ordered). Douglas and Curtiss were big WW2 wartime manufacturers."
-        style={{ marginLeft: 100 }}
+        style={{ marginLeft: 30 }}
       />
       <div>
         <label
           style={{
             cursor: 'pointer',
-            marginLeft: 100,
+            marginLeft: 30,
             fontSize: '0.8rem',
           }}
         >

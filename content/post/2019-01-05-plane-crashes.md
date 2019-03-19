@@ -57,25 +57,11 @@ Manufacturer blurb.
 
 <div id="viz-maker"></div>
 
-## Misc
+## Plane Age
 
-What's the distribution of crew size (crew size histogram for crashes)
-
-Chance of fatalities among crew in Military/non-Military crashes
-
-Chance of fatalities among passengers in Military/non-Military crashes
-
-How long does it take in general for a plane to crash since its first flight? (crash date - first flight)
-
-Type of planes involved in crashes
-
-Type of plane vs damage/fate
+Age blurb.
 
 <div id="viz-plane-age"></div>
-
-Most common words in Narrative (word cloud)
-
-Most common words in Probable Cause (word cloud)
 
 ## GEO
 
