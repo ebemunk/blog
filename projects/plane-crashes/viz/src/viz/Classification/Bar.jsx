@@ -5,12 +5,11 @@ import { range, max } from 'd3-array'
 import FlexPlot from '../../vizlib/FlexPlot'
 import Axis from '../../vizlib/Axis'
 import Rects from '../../vizlib/Rects'
-import { colors8 } from '../../vizlib/colors'
 
 import rawData from '../../data/classifications.csv'
-import { nodes, links } from '../../data/classification-links.json'
+import { links } from '../../data/classification-links.json'
 
-const Bar = ({ hint, height }) => (
+const Bar = ({ hint, height, color }) => (
   <FlexPlot
     height={height}
     margin={{ left: 225, top: 30, bottom: 0, right: 20 }}
@@ -49,7 +48,7 @@ const Bar = ({ hint, height }) => (
         .padding(0.2)
 
       return (
-        <React.Fragment>
+        <>
           <Rects
             data={data.map(d => [+d.count, d.classification])}
             height={y.bandwidth()}
@@ -57,7 +56,7 @@ const Bar = ({ hint, height }) => (
             y={d => y(d[1])}
             width={d => x(d[0])}
             style={d => ({
-              fill: colors8(d[1]),
+              fill: color(d[1]),
             })}
           />
           <Axis
@@ -66,7 +65,7 @@ const Bar = ({ hint, height }) => (
             tickFormat={d => (d.match(/x\-/) ? '' : d)}
           />
           <Axis orientation="top" scale={x} />
-        </React.Fragment>
+        </>
       )
     }}
   </FlexPlot>

@@ -6,9 +6,8 @@ import { extent } from 'd3-array'
 
 import Tooltip from '../../vizlib/Tooltip'
 import Voronoi from '../../vizlib/Voronoi'
-import { colors8 } from '../../vizlib/colors'
 
-const Interaction = ({ nodes, hint, setHint, r, links }) => {
+const Interaction = ({ nodes, hint, setHint, r, links, color }) => {
   const shownLinks = hint
     ? links.filter(d => d.source.id === hint.id || d.target.id === hint.id)
     : []
@@ -24,7 +23,7 @@ const Interaction = ({ nodes, hint, setHint, r, links }) => {
     .range([0.5, 1])
 
   return (
-    <React.Fragment>
+    <>
       <Voronoi
         points={nodes.map(d => {
           const arr = [d.x, d.y]
@@ -71,7 +70,7 @@ const Interaction = ({ nodes, hint, setHint, r, links }) => {
               cy={d.y}
               r={r(d.links)}
               style={{
-                fill: colors8(d.id),
+                fill: color(d.id),
                 pointerEvents: 'none',
                 opacity: 0.7,
               }}
@@ -88,7 +87,7 @@ const Interaction = ({ nodes, hint, setHint, r, links }) => {
                 cy={hint.y}
                 r={hint.r}
                 style={{
-                  fill: colors8(hint.id),
+                  fill: color(hint.id),
                   pointerEvents: 'none',
                 }}
               />
@@ -111,7 +110,7 @@ const Interaction = ({ nodes, hint, setHint, r, links }) => {
           )}
         </Manager>
       )}
-    </React.Fragment>
+    </>
   )
 }
 

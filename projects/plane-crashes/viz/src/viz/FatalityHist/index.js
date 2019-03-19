@@ -36,7 +36,7 @@ const FatalityHist = () => (
     </div>
     <ChartTitle
       title="Histogram of Fatalities"
-      subtitle="Number of fatalities binned in ranges of 20. Mouseover for details. Notice the power scale on the x axis."
+      subtitle="Number of fatalities binned in ranges of 20. Mouseover for details. Notice the power scale on the y axis."
       style={{
         marginLeft: '0.5rem',
       }}
