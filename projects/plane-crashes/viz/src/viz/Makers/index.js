@@ -113,11 +113,16 @@ const Maker = () => {
                 orientation="bottom"
                 tickFormat={d => d}
               />
-              <Axis scale={y} orientation="left" />
+              <Axis
+                scale={y}
+                orientation="left"
+                tickFormat={d => (d === 'de' ? 'de Havilland' : d)}
+              />
               <Axis
                 scale={y}
                 orientation="right"
                 transform={`translate(${chartWidth}, 0)`}
+                tickFormat={d => (d === 'de' ? 'de Havilland' : d)}
               />
             </>
           )

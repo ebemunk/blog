@@ -19,21 +19,13 @@ Crashes over the years.
 
 <div id="viz-phase"></div>
 
-## Damage and Fate
-
-Damage and fate blurb
-
-<div id="viz-damage-fate"></div>
-
-<div id="viz-damage-matrix"></div>
-
-## Histogram of Fatalities
+## Fatalities
 
 Fatalities blurb
 
 <div id="viz-fat-hist"></div>
 
-## Naturez
+## Nature
 
 Nature blurb
 
@@ -45,13 +37,21 @@ Classifications blurb.
 
 <div id="viz-classifications-force"></div>
 
+## Damage and Fate
+
+Damage and fate blurb
+
+<div id="viz-damage-fate"></div>
+
+<div id="viz-damage-matrix"></div>
+
 ## Operators
 
 Operators blurb.
 
 <div id="viz-operator-by-year"></div>
 
-## Manufacturer
+## Manufacturers
 
 Manufacturer blurb.
 
