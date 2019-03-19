@@ -3,7 +3,7 @@ import { format } from 'd3-format'
 
 import data from '../../data/fatality-histogram.csv'
 
-import { get8 } from '../../vizlib/colors'
+import { blueRed } from '../../vizlib/colors'
 import ChartTitle from '../../vizlib/ChartTitle'
 
 const fatalities = data.reduce(
@@ -23,7 +23,7 @@ const fatalities = data.reduce(
 )
 const total = fatalities.none + fatalities.onep
 const numFormat = format('.4p')
-const color = get8()
+const color = blueRed()
 
 const Survival = ({}) => {
   return (
@@ -54,7 +54,7 @@ const Survival = ({}) => {
         </div>
         <div
           style={{
-            background: '#e43034',
+            background: color(1),
             width: `${(fatalities.onep / total) * 100}%`,
             display: 'flex',
             justifyContent: 'center',
