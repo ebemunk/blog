@@ -80,7 +80,7 @@ const FatalityHist = () => (
               scale={xScale}
               transform={`translate(0, ${chartHeight})`}
               tickArguments={[20]}
-              title="Fatalities"
+              // title="Fatalities"
             />
 
             <PointOut

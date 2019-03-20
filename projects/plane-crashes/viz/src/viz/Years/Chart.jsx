@@ -168,8 +168,8 @@ const Chart = ({ stage }) => (
             <PointOut
               x={xScale(2001)}
               y={yScale(data.find(d => +d.year === 2001).ground)}
-              dx={20}
-              dy={30}
+              dx={-100}
+              dy={-15}
               color={colors8(2)}
               title="2001: 9/11 Attacks"
               show={stage >= 2}

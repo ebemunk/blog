@@ -12,73 +12,74 @@ const PointOut = ({
   textAnchor,
   style = {},
 }) => {
+  const [re, setRe] = useState(false)
   const textRef = useRef(null)
-  const source = { x, y }
-  const r = Math.sqrt(dx * dx + dy * dy)
+
+  const bbox = textRef.current
+    ? textRef.current.getBBox()
+    : { x, y, width: 0, height: 0 }
+
+  const updater = () => {
+    const tx = bbox.x + bbox.width / 2
+    const ty = bbox.y - y > 0 ? bbox.y - 5 : bbox.y + bbox.height + 5
+    const r = Math.sqrt((tx - x) * (tx - x) + (ty - y) * (ty - y)) / 2
+    const mx = tx - x > 0 ? tx + (tx - x) / 2 - r : tx + (x - tx) / 2 - r
+    const my = ty - y > 0 ? ty + (ty - y) / 2 - r : ty + (y - ty) / 2 + r
+
+    return {
+      opacity: 1,
+      x,
+      y,
+      tx,
+      ty,
+      mx,
+      my,
+      d: `M${x} ${y} Q ${mx} ${my} ${tx} ${ty}`,
+    }
+  }
 
   const transitions = useTransition(show, null, {
     from: { opacity: 0 },
-    enter: () => {
-      const bbox = textRef.current
-        ? textRef.current.getBBox()
-        : { x: 0, y: 0, width: 0, height: 0 }
-
-      return {
-        opacity: 1,
-        x,
-        y,
-        tx: bbox.x + bbox.width / 2,
-        ty: bbox.y + bbox.height / 2,
-        // d: target
-        //   ? `M${source.x},${source.y}A${r},${r} 0 0,1 ${target.x},${target.y}`
-        //   : '',
-      }
-    },
-    update: () => {
-      const bbox = textRef.current
-        ? textRef.current.getBBox()
-        : { x: 0, y: 0, width: 0, height: 0 }
-
-      console.log('update', bbox.x + bbox.width / 2, bbox.y + bbox.height / 2)
-
-      return {
-        x,
-        y,
-        tx: bbox.x + bbox.width / 2,
-        ty: bbox.y + bbox.height / 2,
-        // d: target
-        //   ? `M${source.x},${source.y}A${r},${r} 0 0,1 ${target.x},${target.y}`
-        //   : '',
-      }
-    },
+    enter: updater,
+    update: updater,
     leave: { opacity: 0 },
+    onFrame: () => setRe(!re),
   })
 
   return transitions.map(
     ({ item, props, key }) =>
       item && (
         <animated.g key={key} style={{ opacity: props.opacity }}>
-          {/* <animated.path
-            d={props.d}
-            style={{
-              fill: 'none',
-              stroke: 'white',
-              strokeWidth: 1,
-              strokeDasharray: '3 3',
-            }}
-            markerEnd="url(#end)"
-          /> */}
           {textRef.current && (
-            <animated.line
-              x1={source.x}
-              y1={source.y}
-              x2={props.tx}
-              y2={props.ty}
-              style={{
-                fill: 'none',
-                stroke: 'white',
-              }}
-            />
+            <>
+              <animated.path
+                d={props.d}
+                style={{
+                  fill: 'none',
+                  stroke: 'white',
+                  strokeWidth: 1,
+                  strokeDasharray: '3 3',
+                }}
+                markerEnd="url(#end)"
+              />
+
+              {/* <animated.line
+                x1={props.x}
+                y1={props.y}
+                x2={props.tx}
+                y2={props.ty}
+                style={{
+                  fill: 'none',
+                  stroke: 'red',
+                }}
+              /> */}
+              {/* <animated.circle
+                r={3}
+                cx={props.mx}
+                cy={props.my}
+                style={{ fill: 'green', stroke: 'white' }}
+              /> */}
+            </>
           )}
           <animated.circle
             r={5}
@@ -102,4 +103,4 @@ const PointOut = ({
   )
 }
 
-export default PointOut
+export default React.memo(PointOut)
