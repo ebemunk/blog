@@ -2,7 +2,7 @@ import React from 'react'
 import { histogram, extent, max } from 'd3-array'
 import { scaleLinear, scalePow } from 'd3-scale'
 
-import { colors8, get8 } from '../../vizlib/colors'
+import { colors8 } from '../../vizlib/colors'
 
 import FlexPlot from '../../vizlib/FlexPlot'
 import GridLines from '../../vizlib/GridLines'
@@ -19,21 +19,8 @@ import data from '../../data/fatality-histogram.csv'
 const hist = histogram().thresholds(26)
 const bins = hist(data.map(d => +d.passenger_fat + +d.crew_fat))
 
-const c = get8()
-
 const FatalityHist = () => (
   <div>
-    <div style={{ display: 'flex' }}>
-      {[0, 1, 2, 3, 4, 5, 6, 7].map(i => (
-        <div
-          style={{
-            width: 20,
-            height: 20,
-            background: c(i),
-          }}
-        />
-      ))}
-    </div>
     <ChartTitle
       title="Histogram of Fatalities"
       subtitle="Number of fatalities binned in ranges of 20. Mouseover for details. Notice the power scale on the y axis."

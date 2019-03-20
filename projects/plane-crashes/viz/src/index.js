@@ -36,6 +36,10 @@ import PlaneAge from './viz/PlaneAge'
 
 render(<PlaneAge />, '#viz-plane-age')
 
+import FatalityAvgs from './viz/FatalityAvgs'
+
+render(<FatalityAvgs />, '#viz-fat-avg')
+
 //
 ;(function() {
   var script = document.createElement('script')

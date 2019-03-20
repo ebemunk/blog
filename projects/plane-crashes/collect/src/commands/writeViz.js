@@ -363,6 +363,27 @@ export default async function writeForViz() {
         })),
       ),
     },
+    {
+      filename: 'fatality-averages',
+      query: `
+      select
+        parsed->'date'->>'year' as year,
+          avg((parsed->'fatalities'->'Total'->>'occupants')::int) as occupants,
+          avg((parsed->'fatalities'->'Total'->>'fatalities')::int) as fatalities,
+          avg(
+            (parsed->'fatalities'->'Total'->>'fatalities')::int / (parsed->'fatalities'->'Total'->>'occupants')::int
+          ) as chance
+        from crashes
+        where
+          parsed->'date'->>'year' is not null
+          and (parsed->'fatalities'->'Total'->>'occupants') is not null
+          and (parsed->'fatalities'->'Total'->>'fatalities') is not null
+          and (parsed->'fatalities'->'Total'->>'occupants')::int > 0
+        group by 1
+        order by 1
+      `,
+      writer: writeCSV,
+    },
   ]
 
   await Promise.map(

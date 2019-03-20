@@ -25,6 +25,10 @@ Fatalities blurb
 
 <div id="viz-fat-hist"></div>
 
+bilibili
+
+<div id="viz-fat-avg"></div>
+
 ## Nature
 
 Nature blurb
