@@ -66,7 +66,7 @@ const Maker = () => {
             'Swearingen',
           ].map(k => (military ? rawDataMil : rawData).find(d => d.maker === k))
 
-          const overlap = military ? 8 : 4
+          const overlap = military ? 4 : 4
           const x = scaleLinear()
             .domain([1919, 2019])
             .range([0, chartWidth])
