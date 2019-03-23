@@ -7,6 +7,7 @@ import parse from './commands/parse'
 import writeDB from './commands/writeDB'
 import parseDB from './commands/parseDB'
 import writeViz from './commands/writeViz'
+import geo from './commands/geo'
 
 cli.version(packageJson.version)
 
@@ -46,5 +47,10 @@ cli
   .command('writeViz')
   .description('write viz data')
   .action(writeViz)
+
+cli
+  .command('geo')
+  .description('write viz data')
+  .action(geo)
 
 cli.parse(process.argv)

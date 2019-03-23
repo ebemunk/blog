@@ -6,3 +6,10 @@ create table crashes (
 	raw json default '{}'::json,
 	parsed json default '{}'::json
 );
+
+drop table locations;
+create table locations (
+	location character varying,
+	search character varying,
+	geo json default '{}'::json
+);
