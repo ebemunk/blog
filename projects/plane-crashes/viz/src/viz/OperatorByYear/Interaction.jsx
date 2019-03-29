@@ -85,6 +85,16 @@ const Interaction = ({ xScale, yScale, hint }) => {
             ),
           [],
         )}
+        onMouseEnter={(e, point, polygon) => {
+          setHl({
+            key: polygon.data.key,
+            year: polygon.data.year,
+            count: polygon.data.count,
+            x: polygon.data[0],
+            y: polygon.data[1],
+            mouse: { x: e.clientX, y: e.clientY },
+          })
+        }}
         onMouseMove={(e, point, polygon) => {
           setHl({
             key: polygon.data.key,

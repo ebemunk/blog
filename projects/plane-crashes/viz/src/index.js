@@ -40,6 +40,16 @@ import FatalityAvgs from './viz/FatalityAvgs'
 
 render(<FatalityAvgs />, '#viz-fat-avg')
 
+import 'mapbox-gl/dist/mapbox-gl.css'
+
+import CrashesHeatmap from './viz/CrashesHeatmap'
+
+render(<CrashesHeatmap />, '#map-crashes-heatmap')
+
+import DepartureArcs from './viz/DepartureArcs'
+
+render(<DepartureArcs />, '#map-departure-arcs')
+
 //
 ;(function() {
   var script = document.createElement('script')

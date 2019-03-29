@@ -69,5 +69,11 @@ Age blurb.
 
 ## GEO
 
+<div id="map-crashes-heatmap"></div>
+
+blurbb
+
+<div id="map-departure-arcs"></div>
+
 <script src="http://localhost:9001/bundle.js"></script>
 <!-- <script src="bundle.js"></script> -->
