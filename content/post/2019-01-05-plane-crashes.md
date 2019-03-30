@@ -1,7 +1,7 @@
 +++
 date = "2019-01-01"
 title = "Plane Crashes"
-slug = "plane-crashes"
+slug = "century-of-plane-crashes"
 tags = ["data visualization", "plane crashes"]
 image = "img/year-in-van.png"
 hidden = false
