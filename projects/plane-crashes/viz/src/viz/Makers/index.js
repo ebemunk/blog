@@ -1,16 +1,35 @@
 import React, { useState } from 'react'
-
-import rawData from '../../data/maker.json'
-import rawDataMil from '../../data/maker-mil.json'
+import { useSpring, animated } from 'react-spring'
 
 import { scalePoint, scaleLinear } from 'd3-scale'
 import { max } from 'd3-array'
-import { area as d3Area, curveBasis } from 'd3-shape'
+import { area as d3Area, curveMonotoneX } from 'd3-shape'
 
 import FlexPlot from '../../vizlib/FlexPlot'
 import Axis from '../../vizlib/Axis'
 import Path from '../../vizlib/Path'
 import ChartTitle from '../../vizlib/ChartTitle'
+
+import rawData from '../../data/maker.json'
+import rawDataMil from '../../data/maker-mil.json'
+
+const Max = ({ x, y, maxD }) => {
+  const props = useSpring({
+    transform: `translate(${x}, ${y})`,
+  })
+  return (
+    <animated.g transform={props.transform}>
+      <animated.circle r={3} style={{ fill: 'white' }} />
+      <animated.text
+        style={{ fill: 'white', fontSize: '0.75rem' }}
+        dx={5}
+        dy={3}
+      >
+        {maxD.value}
+      </animated.text>
+    </animated.g>
+  )
+}
 
 const Maker = () => {
   const [military, setMilitary] = useState(false)
@@ -82,9 +101,20 @@ const Maker = () => {
             .x((d, i) => x(i + 1919))
             .y0(0)
             .y1(d => z(d))
-            .curve(curveBasis)
+            .curve(curveMonotoneX)
 
           const line = area.lineY1()
+
+          const maxD = data
+            .map(d =>
+              d.years.map((dd, i) => ({
+                year: i + 1919,
+                value: dd,
+                maker: d.maker,
+              })),
+            )
+            .reduce((acc, v) => acc.concat(v), [])
+            .sort((a, b) => b.value - a.value)[0]
 
           return (
             <>
@@ -107,6 +137,11 @@ const Maker = () => {
                   />
                 </g>
               ))}
+              <Max
+                x={x(maxD.year)}
+                y={y(maxD.maker) + z(maxD.value)}
+                maxD={maxD}
+              />
               <Axis
                 scale={x}
                 transform={`translate(0, ${chartHeight})`}
