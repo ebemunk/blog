@@ -5,7 +5,7 @@ import { pipe, groupBy, map, values, filter, flatten, unnest } from 'ramda'
 import { multiPoint } from '@turf/helpers'
 import bbox from '@turf/bbox'
 
-import data from './data.csv'
+import data from '../../data/departure-arcs-geo.csv'
 
 const groupedData = groupBy(d => d.dep)(data)
 
@@ -16,7 +16,7 @@ const departures = pipe(
     name: d[0].dep,
   })),
   values,
-  // filter(d => d.count >= 10),
+  filter(d => d.count >= 10),
 )(groupedData)
 
 const arcs = pipe(
@@ -167,6 +167,7 @@ const DepartureArcs = ({}) => {
 
             setHide(true)
             setDep(closest)
+            setHover(null)
             const points = multiPoint(
               pipe(
                 groupBy(d => d.crash),

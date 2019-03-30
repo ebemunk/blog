@@ -17,7 +17,7 @@ import Interaction from './Interaction'
 const color = blueRed()
 
 const OperatorByYear = () => {
-  const [hint, setHint] = useState({})
+  const [hint, setHint] = useState(false)
 
   return (
     <>

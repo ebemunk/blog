@@ -384,6 +384,45 @@ export default async function writeForViz() {
       `,
       writer: writeCSV,
     },
+    {
+      filename: 'crashes-geo',
+      query: `
+        select
+          l.geo->'results'->0->'geometry'->'location'->>'lat' as loc_lat,
+          l.geo->'results'->0->'geometry'->'location'->>'lng' as loc_lng,
+          count(*) as count
+        from crashes
+        left join locations l on l.location = crashes.raw->>'Location'
+        where l.geo->>'results' != '[]'
+        group by 1,2
+        order by 3 desc;
+      `,
+      writer: writeCSV,
+    },
+    {
+      filename: 'departure-arcs-geo',
+      query: `
+        select
+          a.location as dep,
+          a.geo->'results'->0->'geometry'->'location'->>'lat' as dep_lat,
+          a.geo->'results'->0->'geometry'->'location'->>'lng' as dep_lng,
+          b.location as dest,
+          b.geo->'results'->0->'geometry'->'location'->>'lat' as dest_lat,
+          b.geo->'results'->0->'geometry'->'location'->>'lng' as dest_lng,
+          c.location as crash,
+          c.geo->'results'->0->'geometry'->'location'->>'lat' as crash_lat,
+          c.geo->'results'->0->'geometry'->'location'->>'lng' as crash_lng
+        from crashes
+        left join locations a on a.location = crashes.raw->>'Departure airport'
+        left join locations b on b.location = crashes.raw->>'Destination airport'
+        left join locations c on c.location = crashes.raw->>'Location'
+        where
+          a.geo->>'results' != '[]'
+          and b.geo->>'results' != '[]'
+          and c.geo->>'results' != '[]'
+      `,
+      writer: writeCSV,
+    },
   ]
 
   await Promise.map(

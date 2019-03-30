@@ -1,194 +1,17 @@
 import React, { useRef, useState } from 'react'
 import { InteractiveMap } from 'react-map-gl'
 
-import data from '../../data/lol.csv'
+import {
+  source,
+  bermudaFill,
+  bermudaStroke,
+  heatmap,
+  scatter,
+} from './mapElements'
 
-const Wot = ({}) => {
+const CrashesHeatmap = ({}) => {
   const mapRef = useRef(null)
   const [viewState, setViewState] = useState({})
-
-  const doShit = () => {
-    const map = mapRef.current.getMap()
-
-    map.addLayer(
-      {
-        id: 'maine',
-        type: 'fill',
-        source: {
-          type: 'geojson',
-          data: {
-            type: 'Feature',
-            geometry: {
-              type: 'Polygon',
-              coordinates: [
-                [
-                  [-64.73, 32.31],
-                  [-80.19, 25.76],
-                  [-66.09, 18.43],
-                  [-64.73, 32.31],
-                ],
-              ],
-            },
-          },
-        },
-        layout: {},
-        paint: {
-          'fill-color': '#088',
-          'fill-opacity': 0.4,
-        },
-      },
-      'waterway-label',
-    )
-
-    map.addLayer(
-      {
-        id: 'maine-1',
-        type: 'line',
-        source: {
-          type: 'geojson',
-          data: {
-            type: 'Feature',
-            geometry: {
-              type: 'Polygon',
-              coordinates: [
-                [
-                  [-64.73, 32.31],
-                  [-80.19, 25.76],
-                  [-66.09, 18.43],
-                  [-64.73, 32.31],
-                ],
-              ],
-            },
-          },
-        },
-        layout: {},
-        paint: {
-          'line-color': '#ff0000',
-          'line-opacity': 1,
-          'line-width': 2,
-        },
-      },
-      'waterway-label',
-    )
-
-    map.addSource('earthquakes', {
-      type: 'geojson',
-      data: {
-        type: 'FeatureCollection',
-        features: data.map(d => ({
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: [+d.loc_lng, +d.loc_lat],
-          },
-          properties: {
-            count: +d.count,
-          },
-        })),
-      },
-    })
-
-    map.addLayer(
-      {
-        id: 'earthquakes-heat',
-        type: 'heatmap',
-        source: 'earthquakes',
-        maxzoom: 9,
-        paint: {
-          // Increase the heatmap weight based on frequency and property magnitude
-          'heatmap-weight': [
-            'interpolate',
-            ['linear'],
-            ['get', 'count'],
-            0,
-            0,
-            6,
-            1,
-          ],
-          // Increase the heatmap color weight weight by zoom level
-          // heatmap-intensity is a multiplier on top of heatmap-weight
-          'heatmap-intensity': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            0,
-            1,
-            9,
-            3,
-          ],
-          // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
-          // Begin color ramp at 0-stop with a 0-transparancy color
-          // to create a blur-like effect.
-          'heatmap-color': [
-            'interpolate',
-            ['linear'],
-            ['heatmap-density'],
-            0,
-            'rgba(33,102,172,0)',
-            0.2,
-            'rgb(103,169,207)',
-            0.4,
-            'rgb(209,229,240)',
-            0.6,
-            'rgb(253,219,199)',
-            0.8,
-            'rgb(239,138,98)',
-            1,
-            'rgb(178,24,43)',
-          ],
-          // Adjust the heatmap radius by zoom level
-          'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 0, 2, 9, 20],
-          // Transition from heatmap to circle layer by zoom level
-          'heatmap-opacity': ['interpolate', ['linear'], ['zoom'], 7, 1, 9, 0],
-        },
-      },
-      'waterway-label',
-    )
-
-    map.addLayer(
-      {
-        id: 'earthquakes-point',
-        type: 'circle',
-        source: 'earthquakes',
-        minzoom: 7,
-        paint: {
-          // Size circle radius by earthquake magnitude and zoom level
-          'circle-radius': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            7,
-            ['interpolate', ['linear'], ['get', 'count'], 1, 1, 6, 4],
-            16,
-            ['interpolate', ['linear'], ['get', 'count'], 1, 5, 6, 50],
-          ],
-          // Color circle by earthquake magnitude
-          'circle-color': [
-            'interpolate',
-            ['linear'],
-            ['get', 'count'],
-            1,
-            'rgba(33,102,172,0)',
-            2,
-            'rgb(103,169,207)',
-            3,
-            'rgb(209,229,240)',
-            4,
-            'rgb(253,219,199)',
-            5,
-            'rgb(239,138,98)',
-            6,
-            'rgb(178,24,43)',
-          ],
-          'circle-stroke-color': 'white',
-          'circle-stroke-width': 1,
-          // Transition from heatmap to circle layer by zoom level
-          'circle-opacity': ['interpolate', ['linear'], ['zoom'], 7, 0, 8, 1],
-        },
-      },
-      'waterway-label',
-    )
-  }
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -196,18 +19,25 @@ const Wot = ({}) => {
         ref={mapRef}
         mapboxApiAccessToken="pk.eyJ1Ijoic3Q2OSIsImEiOiJjanRsNnI0bGMzM2NkNDZtdW0xN3MwcWd0In0.2nwEI3cmp93NxcdGGG1F7g"
         mapStyle="mapbox://styles/mapbox/dark-v10"
-        width={'90vw'}
-        height={'100vh'}
-        onLoad={doShit}
+        width="90vw"
+        height="90vh"
         onViewStateChange={({ viewState }) => setViewState(viewState)}
         viewState={viewState}
         zoom={0.5}
         minZoom={0.5}
+        onLoad={() => {
+          const map = mapRef.current.getMap()
+
+          map.addSource('crashes', source)
+          map.addLayer(bermudaFill, 'waterway-label')
+          map.addLayer(bermudaStroke, 'waterway-label')
+          map.addLayer(heatmap, 'waterway-label')
+          map.addLayer(scatter, 'waterway-label')
+        }}
       />
     </div>
   )
 }
 
 import { hot } from 'react-hot-loader'
-export default hot(module)(Wot)
-// export default Wot
+export default hot(module)(CrashesHeatmap)

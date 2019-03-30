@@ -47,9 +47,9 @@ export default async function geo(args, opts) {
         .trim()
 
       try {
-        geo = await geocode(search)
+        geo = await geocodeGoogle(search)
       } catch (e) {
-        console.log(`error for ${row.airport} -- ${search}`)
+        console.log(`error for ${row.location} -- ${search}`)
         console.log(e.message)
         console.log('------')
         return false
@@ -74,10 +74,21 @@ export async function geocode(address) {
   const { data } = await axios.get(
     `https://geocoder.api.here.com/6.2/geocode.json?${qs(params)}`,
   )
-  // if (data.status !== 'OK') {
-  //   throw new Error(
-  //     `geocode status not OK: ${data.status}: ${data.error_message}`,
-  //   )
-  // }
+  return data
+}
+
+export async function geocodeGoogle(address) {
+  const params = {
+    address,
+    key: process.env.GOOGLE_API_KEY,
+  }
+  const { data } = await axios.get(
+    `https://maps.googleapis.com/maps/api/geocode/json?${qs(params)}`,
+  )
+  if (data.status !== 'OK') {
+    throw new Error(
+      `geocode status not OK: ${data.status}: ${data.error_message}`,
+    )
+  }
   return data
 }
