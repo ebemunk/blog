@@ -67,11 +67,13 @@ Age blurb.
 
 <div id="viz-plane-age"></div>
 
-## GEO
+## Geodata
+
+Crashes map blurb
 
 <div id="map-crashes-heatmap"></div>
 
-blurbb
+Departure arcs blurb
 
 <div id="map-departure-arcs"></div>
 
