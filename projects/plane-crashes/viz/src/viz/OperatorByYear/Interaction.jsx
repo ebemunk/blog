@@ -96,6 +96,7 @@ const Interaction = ({ xScale, yScale, hint }) => {
           })
         }}
         onMouseMove={(e, point, polygon) => {
+          if (hl && hl.key === polygon.data.key) return
           setHl({
             key: polygon.data.key,
             year: polygon.data.year,

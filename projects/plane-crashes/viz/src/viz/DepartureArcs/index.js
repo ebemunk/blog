@@ -216,7 +216,7 @@ const DepartureArcs = ({}) => {
             mapboxApiAccessToken="pk.eyJ1Ijoic3Q2OSIsImEiOiJjanRsNnI0bGMzM2NkNDZtdW0xN3MwcWd0In0.2nwEI3cmp93NxcdGGG1F7g"
             ref={mapRef}
           />
-          {hover && (
+          {/* {hover && (
             <div
               style={{
                 position: 'absolute',
@@ -229,8 +229,8 @@ const DepartureArcs = ({}) => {
             >
               {hover.object.name} = {hover.object.count}
             </div>
-          )}
-          <div
+          )} */}
+          {/* <div
             style={{
               position: 'absolute',
               right: 0,
@@ -240,7 +240,7 @@ const DepartureArcs = ({}) => {
             }}
           >
             <strong>{dep ? dep.object.name : 'gae'}</strong>
-          </div>
+          </div> */}
         </DeckGL>
       </div>
     </div>
