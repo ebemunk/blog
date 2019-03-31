@@ -20,6 +20,7 @@
     "chalk": "^2.4.1",
     "cheerio": "^1.0.0-rc.2",
     "commander": "^2.19.0",
+    "d3-array": "^2.0.3",
     "dotenv": "^6.2.0",
     "iconv-lite": "^0.4.24",
     "jest": "^23.6.0",

@@ -10,7 +10,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../../static/xxx'),
+    path: path.resolve(__dirname, '../../../static/plane-crashes'),
     publicPath: 'http://localhost:9001/',
   },
   resolve: {

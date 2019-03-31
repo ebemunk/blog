@@ -1,26 +1,11 @@
 import React from 'react'
 import { format } from 'd3-format'
 
-import data from '../../data/fatality-histogram.csv'
+import { fatalities } from '../../data/fatality-histogram.json'
 
 import { blueRed } from '../../vizlib/colors'
 import ChartTitle from '../../vizlib/ChartTitle'
 
-const fatalities = data.reduce(
-  (acc, d) => {
-    const tot = +d.passenger_fat + +d.crew_fat
-    if (tot > 0) {
-      acc.onep++
-    } else {
-      acc.none++
-    }
-    return acc
-  },
-  {
-    none: 0,
-    onep: 0,
-  },
-)
 const total = fatalities.none + fatalities.onep
 const numFormat = format('.4p')
 const color = blueRed()
@@ -70,4 +55,6 @@ const Survival = ({}) => {
   )
 }
 
-export default React.memo(Survival)
+import { hot } from 'react-hot-loader'
+
+export default hot(module)(Survival)

@@ -1,10 +1,10 @@
 +++
 date = "2019-01-01"
-title = "Plane Crashes"
+title = "One Century of Plane Crashes"
 slug = "century-of-plane-crashes"
 tags = ["data visualization", "plane crashes"]
 image = "img/year-in-van.png"
-hidden = false
+hidden = true
 +++
 
 ## Years
@@ -77,5 +77,5 @@ Departure arcs blurb
 
 <div id="map-departure-arcs"></div>
 
-<script src="http://localhost:9001/bundle.js"></script>
-<!-- <script src="bundle.js"></script> -->
+<!-- <script src="http://localhost:9001/bundle.js"></script> -->
+<script src="/plane-crashes/bundle.js"></script>

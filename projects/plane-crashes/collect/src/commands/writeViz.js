@@ -1,5 +1,6 @@
 import * as R from 'ramda'
 import Promise from 'bluebird'
+import { histogram, extent, max } from 'd3-array'
 
 import { getPool } from '../db'
 import { logger, writeFile, prettyJson } from '../util'
@@ -149,7 +150,31 @@ export default async function writeForViz() {
           (parsed->'fatalities'->>'Ground')::int as ground
         from crashes
       `,
-      writer: writeCSV,
+      process: rows => ({
+        bins: histogram()
+          .thresholds(26)(rows.map(d => +d.passenger_fat + +d.crew_fat))
+          .map(d => ({
+            x0: d.x0,
+            x1: d.x1,
+            length: d.length,
+          })),
+        extent: extent(rows.map(d => +d.passenger_fat + +d.crew_fat)),
+        fatalities: rows.reduce(
+          (acc, d) => {
+            const tot = +d.passenger_fat + +d.crew_fat
+            if (tot > 0) {
+              acc.onep++
+            } else {
+              acc.none++
+            }
+            return acc
+          },
+          {
+            none: 0,
+            onep: 0,
+          },
+        ),
+      }),
     },
     {
       filename: 'classification',
@@ -406,9 +431,6 @@ export default async function writeForViz() {
           a.location as dep,
           a.geo->'results'->0->'geometry'->'location'->>'lat' as dep_lat,
           a.geo->'results'->0->'geometry'->'location'->>'lng' as dep_lng,
-          b.location as dest,
-          b.geo->'results'->0->'geometry'->'location'->>'lat' as dest_lat,
-          b.geo->'results'->0->'geometry'->'location'->>'lng' as dest_lng,
           c.location as crash,
           c.geo->'results'->0->'geometry'->'location'->>'lat' as crash_lat,
           c.geo->'results'->0->'geometry'->'location'->>'lng' as crash_lng

@@ -1,5 +1,5 @@
 import React from 'react'
-import { histogram, extent, max } from 'd3-array'
+import { max } from 'd3-array'
 import { scaleLinear, scalePow } from 'd3-scale'
 
 import { colors8 } from '../../vizlib/colors'
@@ -14,10 +14,7 @@ import PointOut from '../Years/PointOut'
 import Interaction from './Interaction'
 import Survival from './Survival'
 
-import data from '../../data/fatality-histogram.csv'
-
-const hist = histogram().thresholds(26)
-const bins = hist(data.map(d => +d.passenger_fat + +d.crew_fat))
+import { extent, bins } from '../../data/fatality-histogram.json'
 
 const FatalityHist = () => (
   <div>
@@ -34,7 +31,7 @@ const FatalityHist = () => (
     >
       {({ chartHeight, chartWidth }) => {
         const xScale = scaleLinear()
-          .domain(extent(data.map(d => +d.passenger_fat + +d.crew_fat)))
+          .domain(extent)
           .range([0, chartWidth])
 
         const yScale = scalePow()
@@ -103,9 +100,5 @@ const FatalityHist = () => (
 )
 
 import { hot } from 'react-hot-loader'
-import { compose } from 'recompose'
 
-export default compose(
-  hot(module),
-  React.memo,
-)(FatalityHist)
+export default hot(module)(FatalityHist)
