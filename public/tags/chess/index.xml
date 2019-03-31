@@ -1,35 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Chess on Thinking Through the Party</title>
-    <link>https://blog.ebemunk.com/tags/chess/</link>
-    <description>Recent content in Chess on Thinking Through the Party</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 29 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.ebemunk.com/tags/chess/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Visual Look at 2 Million Chess Games: Part 2</title>
-      <link>https://blog.ebemunk.com/visual-look-at-2-million-chess-games-part-2/</link>
-      <pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.ebemunk.com/visual-look-at-2-million-chess-games-part-2/</guid>
-      <description>We&amp;rsquo;re looking deeper into the amazing MillionBase database with over two million chess games to see what else we can learn about the data specifically, and possibly about chess in general. I have analyzed some of this data in Part 1. If you haven&amp;rsquo;t seen that, feel free to give it a read.
-This post will focus on other aspects of the data, and I have drawn from some reader suggestions from the previous post.</description>
-    </item>
-    
-    <item>
-      <title>A Visual Look at 2 Million Chess Games</title>
-      <link>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link>
-      <pubDate>Wed, 02 Mar 2016 11:18:33 -0700</pubDate>
-      
-      <guid>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid>
-      <description>I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.
-We&amp;rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chess on Thinking Through the Party</title><link>https://blog.ebemunk.com/tags/chess/</link><description>Recent content in Chess on Thinking Through the Party</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 29 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.ebemunk.com/tags/chess/index.xml" rel="self" type="application/rss+xml"/><item><title>Visual Look at 2 Million Chess Games: Part 2</title><link>https://blog.ebemunk.com/visual-look-at-2-million-chess-games-part-2/</link><pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate><guid>https://blog.ebemunk.com/visual-look-at-2-million-chess-games-part-2/</guid><description>We&amp;rsquo;re looking deeper into the amazing MillionBase database with over two million chess games to see what else we can learn about the data specifically, and possibly about chess in general. I have analyzed some of this data in Part 1. If you haven&amp;rsquo;t seen that, feel free to give it a read.
+This post will focus on other aspects of the data, and I have drawn from some reader suggestions from the previous post.</description></item><item><title>A Visual Look at 2 Million Chess Games</title><link>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link><pubDate>Wed, 02 Mar 2016 11:18:33 -0700</pubDate><guid>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid><description>I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.
+We&amp;rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games.</description></item></channel></rss>
