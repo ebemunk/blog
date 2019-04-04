@@ -1,6 +1,6 @@
 import React from 'react'
 import { scaleBand, scaleLinear } from 'd3-scale'
-import { extent } from 'd3-array'
+import { max } from 'd3-array'
 
 import FlexPlot from '../FlexPlot'
 import Axis from '../Axis'
@@ -32,7 +32,7 @@ const Bar = ({
       const invertXScale = scaleBandInvert(xScale)
 
       const yScale = scaleLinear()
-        .domain(extent(data.map(d => d[1])))
+        .domain([0, max(data, d => d[1])])
         .range([chartHeight, 0])
 
       return (

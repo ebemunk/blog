@@ -29,6 +29,9 @@ const Interaction = ({ xScale, data }) => {
         onMouseMove={(e, point) => {
           const x = Math.round(xScale.invert(point.x))
           const d = data.find(d => +d.year === x)
+
+          if (hint && d.year === hint.data.year) return
+
           setHint({
             x: xScale(x),
             data: d,

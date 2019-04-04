@@ -7,9 +7,9 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   mode: isProd ? 'production' : 'development',
-  entry: './src/index.js',
+  entry: { main: './src/index.js', static: './src/static.js' },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, '../../../static/plane-crashes'),
     publicPath: 'http://localhost:9001/',
   },

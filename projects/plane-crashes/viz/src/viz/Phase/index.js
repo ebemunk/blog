@@ -5,24 +5,6 @@ import ChartTitle from '../../vizlib/ChartTitle'
 
 import Bar from './Bar'
 
-import rawData from '../../data/phase.csv'
-
-const data = [
-  'Standing (STD)',
-  'Taxi (TXI)',
-  'Takeoff (TOF)',
-  'Initial climb (ICL)',
-  'En route (ENR)',
-  'Approach (APR)',
-  'Landing (LDG)',
-  'Pushback / towing (PBT)',
-  'Maneuvering (MNV)',
-  'Unknown (UNK)',
-].map(phase => {
-  const d = rawData.find(dd => dd.phase === phase)
-  return [d.phase, +d.count, +d.avg]
-})
-
 const Phase = () => {
   const [stage, setStage] = useState(0)
 
@@ -73,7 +55,7 @@ const Phase = () => {
           title="Which flight phases are the most dangerous?"
           subtitle="Mouseover to see details"
         />
-        <Bar data={data} stage={stage} />
+        <Bar stage={stage} />
       </div>
     </div>
   )

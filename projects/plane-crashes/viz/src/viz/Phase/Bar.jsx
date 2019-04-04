@@ -11,6 +11,24 @@ import { colors8 } from '../../vizlib/colors'
 
 import Interaction from './Interaction'
 
+import rawData from '../../data/phase.csv'
+
+const data = [
+  'Standing (STD)',
+  'Taxi (TXI)',
+  'Takeoff (TOF)',
+  'Initial climb (ICL)',
+  'En route (ENR)',
+  'Approach (APR)',
+  'Landing (LDG)',
+  'Pushback / towing (PBT)',
+  'Maneuvering (MNV)',
+  'Unknown (UNK)',
+].map(phase => {
+  const d = rawData.find(dd => dd.phase === phase)
+  return [d.phase, +d.count, +d.avg]
+})
+
 const isHighlighted = (stage, d) => {
   switch (stage) {
     case 0:
@@ -34,7 +52,7 @@ const isHighlighted = (stage, d) => {
   }
 }
 
-const Bar = ({ data, stage }) => (
+const Bar = ({ stage }) => (
   <FlexPlot
     height={400}
     margin={{
