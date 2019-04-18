@@ -11,7 +11,7 @@ import {
   scatter,
 } from './mapElements'
 
-const CrashesHeatmap = ({}) => {
+const CrashesHeatmap = ({ subtitle, zoom }) => {
   const mapRef = useRef(null)
   const [viewState, setViewState] = useState({})
 
@@ -19,7 +19,10 @@ const CrashesHeatmap = ({}) => {
     <>
       <ChartTitle
         title="Are crashes clustered around certain locations?"
-        subtitle="Heatmap of crashes where geodata is available. Locations are approximate. Also drawn is the Bermuda Triangle. Zoom in to see individual points."
+        subtitle={
+          subtitle ||
+          'Heatmap of crashes where geodata is available. Locations are approximate. Also drawn is the Bermuda Triangle. Zoom in to see individual points.'
+        }
         style={{
           marginLeft: '5vw',
           marginBottom: '0.5rem',
@@ -40,7 +43,7 @@ const CrashesHeatmap = ({}) => {
           height="90vh"
           onViewStateChange={({ viewState }) => setViewState(viewState)}
           viewState={viewState}
-          zoom={0.5}
+          zoom={zoom || 0.5}
           minZoom={0.5}
           onLoad={() => {
             const map = mapRef.current.getMap()

@@ -23,7 +23,7 @@ const OperatorByYear = () => {
     <>
       <ChartTitle
         title="Crashes by operator through the century"
-        subtitle="Colored by military and non-military intent. Notice the power scale on the y axis. Mouseover to highlight."
+        subtitle="Colored by military and non-military intent. Notice the power scale on the y axis."
         style={{
           marginLeft: '0.5rem',
           marginBottom: '0.5rem',

@@ -1,10 +1,10 @@
 +++
-date = "2019-01-01"
+date = "2019-01-03"
 title = "One Century of Plane Crashes"
 slug = "century-of-plane-crashes"
 tags = ["data visualization", "plane crashes"]
 image = "img/year-in-van.png"
-hidden = true
+hidden = false
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

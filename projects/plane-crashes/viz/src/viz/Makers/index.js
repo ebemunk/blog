@@ -31,7 +31,7 @@ const Max = ({ x, y, maxD }) => {
   )
 }
 
-const Maker = () => {
+const Maker = ({ noInteraction }) => {
   const [military, setMilitary] = useState(false)
 
   return (
@@ -41,22 +41,24 @@ const Maker = () => {
         subtitle="Showing top 20 manufacturers with highest number of crashes (not ordered). Douglas and Curtiss were big WW2 wartime manufacturers."
         style={{ marginLeft: 30 }}
       />
-      <div>
-        <label
-          style={{
-            cursor: 'pointer',
-            marginLeft: 30,
-            fontSize: '0.8rem',
-          }}
-        >
-          <input
-            type="checkbox"
-            onChange={() => setMilitary(!military)}
-            checked={military}
-          />
-          Include Military Flights
-        </label>
-      </div>
+      {!noInteraction && (
+        <div>
+          <label
+            style={{
+              cursor: 'pointer',
+              marginLeft: 30,
+              fontSize: '0.8rem',
+            }}
+          >
+            <input
+              type="checkbox"
+              onChange={() => setMilitary(!military)}
+              checked={military}
+            />
+            Include Military Flights
+          </label>
+        </div>
+      )}
       <FlexPlot
         height={500}
         margin={{ top: 40, bottom: 20, left: 100, right: 100 }}

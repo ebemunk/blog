@@ -24,7 +24,7 @@ const PlaneAge = () => {
     <>
       <ChartTitle
         title="How long before planes crash?"
-        subtitle="Distribution of the years between a plane's first flight and when it crashes, grouped by manufacturer. Red line shows the average. (via Kernel Density Estimation)"
+        subtitle="Distribution of the years between a plane's first flight and when it crashes, grouped by manufacturer. Red line shows the average."
         style={{
           marginLeft: 30,
         }}

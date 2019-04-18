@@ -15,7 +15,7 @@ const getSimulation = memoizeWith(identity, runSimulation)
 
 const color = get8()
 
-const Force = () => {
+const Force = ({ subtitle }) => {
   const [hint, setHint] = useState(null)
 
   return (
@@ -28,7 +28,10 @@ const Force = () => {
         <div style={{ flexBasis: '50%' }}>
           <ChartTitle
             title="How are classifications related to one another?"
-            subtitle="Radius shows number of links, link opacity shows commonality. Mouseover to highlight related items."
+            subtitle={
+              subtitle ||
+              'Radius shows number of links, link opacity shows commonality. Mouseover to highlight related items.'
+            }
             style={{
               textAlign: 'center',
             }}
