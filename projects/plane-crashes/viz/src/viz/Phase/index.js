@@ -51,10 +51,7 @@ const Phase = () => {
           alignSelf: 'flex-start',
         }}
       >
-        <ChartTitle
-          title="Which flight phases are the most dangerous?"
-          subtitle="Mouseover to see details"
-        />
+        <ChartTitle title="Which flight phases are the most dangerous?" />
         <Bar stage={stage} />
       </div>
     </div>

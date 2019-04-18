@@ -17,7 +17,6 @@ const Damage = ({}) => (
     <div>
       <ChartTitle
         title="What's the damage on the airplane after a crash?"
-        subtitle="For crashes where data is available"
         style={{ textAlign: 'center', marginBottom: '0.5rem', marginTop: 0 }}
       />
       <Pie data={damage.map(d => [d.damage, +d.count])} />
@@ -28,7 +27,6 @@ const Damage = ({}) => (
     <div>
       <ChartTitle
         title="What's the fate of the airplane after a crash?"
-        subtitle="For crashes where data is available"
         style={{ textAlign: 'center', marginBottom: '0.5rem', marginTop: 0 }}
       />
       <Pie data={fate.map(d => [d.fate, +d.count])} />

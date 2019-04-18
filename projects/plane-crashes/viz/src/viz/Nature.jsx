@@ -33,6 +33,7 @@ const Nature = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        marginBottom: '1.3rem',
       }}
     >
       <div>

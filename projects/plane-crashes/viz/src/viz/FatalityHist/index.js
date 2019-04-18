@@ -17,10 +17,10 @@ import Survival from './Survival'
 import { extent, bins } from '../../data/fatality-histogram.json'
 
 const FatalityHist = () => (
-  <div>
+  <div style={{ marginBottom: '1.3rem' }}>
     <ChartTitle
       title="Histogram of Fatalities"
-      subtitle="Number of fatalities binned in ranges of 20. Mouseover for details. Notice the power scale on the y axis."
+      subtitle="Number of fatalities binned in ranges of 20. Notice the power scale on the y axis."
       style={{
         marginLeft: '0.5rem',
       }}

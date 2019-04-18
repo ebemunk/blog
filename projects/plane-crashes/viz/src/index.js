@@ -50,8 +50,7 @@ import DepartureArcs from './viz/DepartureArcs'
 
 render(<DepartureArcs />, '#map-departure-arcs')
 
-//
-;(function() {
+window.showFps = function() {
   var script = document.createElement('script')
   script.onload = function() {
     var stats = new Stats()
@@ -63,4 +62,4 @@ render(<DepartureArcs />, '#map-departure-arcs')
   }
   script.src = '//rawgit.com/mrdoob/stats.js/master/build/stats.min.js'
   document.head.appendChild(script)
-})()
+}

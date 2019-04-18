@@ -146,7 +146,7 @@ const FatalityAvgs = () => {
       <div style={{ flexBasis: '50%' }}>
         <ChartTitle
           title="Average occupants and fatalities"
-          subtitle="While average occupants steadily increase, average fatalities steadily decrease throughout the years, especially after 1974. Mouseover for details."
+          subtitle="While average occupants steadily increase, average fatalities steadily decrease throughout the years, especially after 1974."
           style={{
             marginLeft: '0.5rem',
             marginBottom: '0.5rem',
@@ -161,7 +161,6 @@ const FatalityAvgs = () => {
             <>
               Fatalities per occupants expressed as a percentage. Chance
               declines over the years, with sharp decreases after 1945 and 1966.
-              Mouseover for details.
             </>
           }
           style={{

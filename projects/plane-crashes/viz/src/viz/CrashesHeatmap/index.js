@@ -25,7 +25,13 @@ const CrashesHeatmap = ({}) => {
           marginBottom: '0.5rem',
         }}
       />
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          marginBottom: '1.3rem',
+        }}
+      >
         <InteractiveMap
           ref={mapRef}
           mapboxApiAccessToken="pk.eyJ1Ijoic3Q2OSIsImEiOiJjanRsNnI0bGMzM2NkNDZtdW0xN3MwcWd0In0.2nwEI3cmp93NxcdGGG1F7g"

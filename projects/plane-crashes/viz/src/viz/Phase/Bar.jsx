@@ -7,6 +7,7 @@ import FlexPlot from '../../vizlib/FlexPlot'
 import Rects from '../../vizlib/Rects'
 import Axis from '../../vizlib/Axis'
 import Path from '../../vizlib/Path'
+import Legend from '../../vizlib/Legend'
 import { colors8 } from '../../vizlib/colors'
 
 import Interaction from './Interaction'
@@ -53,96 +54,109 @@ const isHighlighted = (stage, d) => {
 }
 
 const Bar = ({ stage }) => (
-  <FlexPlot
-    height={400}
-    margin={{
-      top: 10,
-      left: 35,
-      right: 35,
-      bottom: 125,
-    }}
-  >
-    {({ chartHeight, chartWidth }) => {
-      const xScale = scaleBand()
-        .domain([...new Set(data.map(d => d[0]))])
-        .range([0, chartWidth])
-        .padding(0.2)
+  <div style={{ position: 'relative' }}>
+    <Legend
+      style={{
+        position: 'absolute',
+        left: '2.5rem',
+        top: '1.5rem',
+      }}
+      data={[
+        { color: colors8(0), title: 'Crashes' },
+        { color: colors8(5), title: 'Avg. Fatalities' },
+      ]}
+    />
+    <FlexPlot
+      height={400}
+      margin={{
+        top: 10,
+        left: 35,
+        right: 35,
+        bottom: 125,
+      }}
+    >
+      {({ chartHeight, chartWidth }) => {
+        const xScale = scaleBand()
+          .domain([...new Set(data.map(d => d[0]))])
+          .range([0, chartWidth])
+          .padding(0.2)
 
-      const yScale = scaleLinear()
-        .domain(extent(data.map(d => d[1])))
-        .range([chartHeight, 0])
-        .nice()
+        const yScale = scaleLinear()
+          .domain(extent(data.map(d => d[1])))
+          .range([chartHeight, 0])
+          .nice()
 
-      const y2Scale = scaleLinear()
-        .domain(extent(data.map(d => d[2])))
-        .range([chartHeight, 0])
-        .nice()
+        const y2Scale = scaleLinear()
+          .domain(extent(data.map(d => d[2])))
+          .range([chartHeight, 0])
+          .nice()
 
-      return (
-        <>
-          <Rects
-            data={data.map(d => [xScale(d[0]), yScale(d[1]), d[0]])}
-            width={xScale.bandwidth()}
-            height={d => chartHeight - d[1]}
-            keys={d => d[2]}
-            style={d => ({
-              fill: colors8(0),
-              opacity: isHighlighted(stage, d) ? 1 : 0.3,
-              transition: 'opacity 300ms',
-            })}
-          />
+        return (
+          <>
+            <Rects
+              data={data.map(d => [xScale(d[0]), yScale(d[1]), d[0]])}
+              width={xScale.bandwidth()}
+              height={d => chartHeight - d[1]}
+              keys={d => d[2]}
+              style={d => ({
+                fill: colors8(0),
+                opacity: isHighlighted(stage, d) ? 1 : 0.3,
+                transition: 'opacity 300ms',
+              })}
+            />
 
-          <Path
-            generator={line()}
-            data={data.map(d => [
-              xScale(d[0]) + xScale.bandwidth() / 2,
-              y2Scale(d[2]),
-            ])}
-            style={{
-              stroke: colors8(5),
-              strokeWidth: 1,
-              fill: 'none',
-            }}
-          />
-
-          {data.map(d => (
-            <circle
-              key={d}
-              r={3}
-              cx={xScale(d[0]) + xScale.bandwidth() / 2}
-              cy={y2Scale(d[2])}
+            <Path
+              generator={line()}
+              data={data.map(d => [
+                xScale(d[0]) + xScale.bandwidth() / 2,
+                y2Scale(d[2]),
+              ])}
               style={{
-                fill: colors8(5),
+                stroke: colors8(5),
+                strokeWidth: 1,
+                fill: 'none',
               }}
             />
-          ))}
 
-          <Axis
-            orientation="left"
-            scale={yScale}
-            title="Crashes"
-            tickArguments={[5]}
-          />
-          <Axis
-            orientation="right"
-            scale={y2Scale}
-            transform={`translate(${chartWidth}, 0)`}
-            title="Avg. Fatalities"
-            tickArguments={[8]}
-          />
-          <Axis
-            orientation="bottom"
-            scale={xScale}
-            transform={`translate(0, ${chartHeight})`}
-            tickFormat={d => d.match(/\(([A-Z]+)\)/)[1]}
-            title="Phase"
-          />
+            {data.map(d => (
+              <circle
+                key={d}
+                r={3}
+                cx={xScale(d[0]) + xScale.bandwidth() / 2}
+                cy={y2Scale(d[2])}
+                style={{
+                  fill: colors8(5),
+                }}
+              />
+            ))}
 
-          <Interaction xScale={xScale} data={data} />
-        </>
-      )
-    }}
-  </FlexPlot>
+            <Axis
+              orientation="left"
+              scale={yScale}
+              title="Crashes"
+              tickArguments={[5]}
+            />
+            <Axis
+              orientation="right"
+              scale={y2Scale}
+              transform={`translate(${chartWidth}, 0)`}
+              title="Avg. Fatalities"
+              tickArguments={[8]}
+            />
+            <Axis
+              orientation="bottom"
+              scale={xScale}
+              transform={`translate(0, ${chartHeight})`}
+              tickFormat={d => d.match(/\(([A-Z]+)\)/)[1]}
+              title="Phase"
+            />
+
+            <Interaction xScale={xScale} data={data} />
+          </>
+        )
+      }}
+    </FlexPlot>
+  </div>
 )
 
 export default React.memo(Bar)
