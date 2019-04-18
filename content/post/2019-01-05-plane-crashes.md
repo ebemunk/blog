@@ -3,7 +3,7 @@ date = "2019-01-03"
 title = "One Century of Plane Crashes"
 slug = "century-of-plane-crashes"
 tags = ["data visualization", "plane crashes"]
-image = "img/year-in-van.png"
+image = "img/plane-crashes.png"
 hidden = false
 +++
 
@@ -91,9 +91,15 @@ Finally here's a map of all departure locations. Click on the dots to focus and 
 
 <div id="map-departure-arcs"></div>
 
+## Technical Details
+
+I gathered the data from [ASN Aviation Safety Database](http://aviation-safety.net/database/) and put it in a PostgreSQL database. This database contains **22,000** records of plane crashes with varying richness of data, most of it presented in the graphs above. I made the visualizations with React and d3, which I increasingly find to be a great way of producing interactive viz. You can see the project code [here]().
+
+Don't forget - this data contains only crashes! This is important when thinking about percentages and relative scalar values. "Operator X crashed more than Y, so they must be careless" kind of thinking would not be appropriate, as we don't know how many successful flights took place.
+
 ## Outro
 
-blabla
+I hope this gave you a new perspective on aviation and flight safety. If you're into the history, statistics or trivia, I would love to hear from you in the comments. What else can you determine from these visualizations? What else does this make you wonder about? I welcome any discussion and thoughts you have.
 
 <script src="http://localhost:9001/main.js"></script>
 <!-- <script src="/plane-crashes/main.js"></script> -->
