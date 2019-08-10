@@ -22,7 +22,7 @@ const Matrix = ({}) => (
       style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}
     >
       <ChartTitle
-        title="What's the most common fate for a given damage to the plane?"
+        title="What's the most common fate for a given level of damage to the plane?"
         subtitle="Number of Damage-Fate occurences for crashes."
         style={{ width: 650, marginBottom: '0.5rem', marginTop: 0 }}
       />

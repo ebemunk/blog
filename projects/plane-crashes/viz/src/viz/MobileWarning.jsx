@@ -18,24 +18,24 @@ export default function MobileWarning() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '1rem',
         fontSize: '1rem',
+        textAlign: 'center',
       }}
     >
       <p>
-        This interactive visualization is not designed for browsers with less
-        than 768px width. It will look weird on smaller screens.
+        I noticed that you might be on a mobile device. This interactive
+        visualization is not designed for browsers with less than 768px width.
       </p>
       <p>
-        There is a static image available, which would suit mobile devices
-        better.
+        There is a static image with all the visualizations available, which
+        would suit mobile devices better.
       </p>
       <a href="/plane-crashes/STATIC.png" style={{ fontSize: '1.3rem' }}>
         Take me to the image
       </a>
       <span>or</span>
       <a href="#" onClick={() => setOpen(false)} style={{ fontSize: '1.3rem' }}>
-        Go Away
+        Dismiss
       </a>
     </div>
   )
