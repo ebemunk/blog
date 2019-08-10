@@ -216,8 +216,19 @@ article.article .footnotes hr {
 }
 .see-also .see-also-items .suggestion {
   max-width: 18rem;
+  margin: 1rem;
+  text-align: center;
 }
 .see-also .see-also-items .suggestion img {
   width: 16rem;
   height: 16rem;
+  display: block;
+}
+.see-also .see-also-items .suggestion a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }

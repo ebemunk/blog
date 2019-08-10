@@ -1,6 +1,8 @@
 **/.DS_STORE
 **/.vscode/
 **/node_modules/
+**/yarn-error.log
+**/.env
 *.pgn
 *.scout
 scoutfish

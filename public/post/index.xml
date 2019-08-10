@@ -1,6 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Thinking Through the Party</title><link>https://blog.ebemunk.com/post/</link><description>Recent content in Posts on Thinking Through the Party</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 29 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.ebemunk.com/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Visual Look at 2 Million Chess Games: Part 2</title><link>https://blog.ebemunk.com/visual-look-at-2-million-chess-games-part-2/</link><pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate><guid>https://blog.ebemunk.com/visual-look-at-2-million-chess-games-part-2/</guid><description>We&amp;rsquo;re looking deeper into the amazing MillionBase database with over two million chess games to see what else we can learn about the data specifically, and possibly about chess in general. I have analyzed some of this data in Part 1. If you haven&amp;rsquo;t seen that, feel free to give it a read.
-This post will focus on other aspects of the data, and I have drawn from some reader suggestions from the previous post.</description></item><item><title>One Year in Vancouver: Visualizing Events</title><link>https://blog.ebemunk.com/one-year-in-van/</link><pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate><guid>https://blog.ebemunk.com/one-year-in-van/</guid><description>We&amp;rsquo;re looking at the year of 2018 in Vancouver through the lens of event listings on the Georgia Straight Events page. I find their list extremely useful and use it all the time to find cool things to do, and notice a great deal of events happening all over the city. I collected all the events over the course of 2018 and wanted to make a &amp;ldquo;map of the city&amp;rdquo; from this data.</description></item><item><title>Text Mining LOST</title><link>https://blog.ebemunk.com/lost-text-mining/</link><pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate><guid>https://blog.ebemunk.com/lost-text-mining/</guid><description>We&amp;rsquo;re text mining the transcripts of the TV show LOST, and visualizing them!
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Thinking Through the Party</title>
+    <link>https://blog.ebemunk.com/post/</link>
+    <description>Recent content in Posts on Thinking Through the Party</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.ebemunk.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>One Century of Plane Crashes</title>
+      <link>https://blog.ebemunk.com/century-of-plane-crashes/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.ebemunk.com/century-of-plane-crashes/</guid>
+      <description>A data exploration of 100 years of plane crash data. I discovered the ASN Aviation Safety Database some time ago, and knew almost instantly that I would have to dig deep on this one. The earliest crash is from August 2nd, 1919 and the latest record I got are from August 1st, 2019. There are approximately 22 thousand crash records.
+Planes and aviation represent a great chunk of our progress in technology and manufacturing, as well as bringing the world closer to us, with novel means of not just travel, but other endeavors like war and scientific research.</description>
+    </item>
+    
+    <item>
+      <title>Visual Look at 2 Million Chess Games: Part 2</title>
+      <link>https://blog.ebemunk.com/visual-look-at-2-million-chess-games-part-2/</link>
+      <pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.ebemunk.com/visual-look-at-2-million-chess-games-part-2/</guid>
+      <description>We&amp;rsquo;re looking deeper into the amazing MillionBase database with over two million chess games to see what else we can learn about the data specifically, and possibly about chess in general. I have analyzed some of this data in Part 1. If you haven&amp;rsquo;t seen that, feel free to give it a read.
+This post will focus on other aspects of the data, and I have drawn from some reader suggestions from the previous post.</description>
+    </item>
+    
+    <item>
+      <title>One Year in Vancouver: Visualizing Events</title>
+      <link>https://blog.ebemunk.com/one-year-in-van/</link>
+      <pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.ebemunk.com/one-year-in-van/</guid>
+      <description>We&amp;rsquo;re looking at the year of 2018 in Vancouver through the lens of event listings on the Georgia Straight Events page. I find their list extremely useful and use it all the time to find cool things to do, and notice a great deal of events happening all over the city. I collected all the events over the course of 2018 and wanted to make a &amp;ldquo;map of the city&amp;rdquo; from this data.</description>
+    </item>
+    
+    <item>
+      <title>Text Mining LOST</title>
+      <link>https://blog.ebemunk.com/lost-text-mining/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.ebemunk.com/lost-text-mining/</guid>
+      <description>We&amp;rsquo;re text mining the transcripts of the TV show LOST, and visualizing them!
 I retrieved and parsed the transcripts of LOST from Lostpedia1 and used a few different tools to look at this data.
-One thing to keep in mind is that this analysis is on only the text that the characters speak. I&amp;rsquo;m not a big LOST connoisseur, so take these visualizations at their face value and not as some objective judgement about your favorite LOST character or writer.</description></item><item><title>A Visual Look at 2 Million Chess Games</title><link>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link><pubDate>Wed, 02 Mar 2016 11:18:33 -0700</pubDate><guid>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid><description>I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.
-We&amp;rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games.</description></item><item><title>Optimizing Particle Background Performance with Quadtrees</title><link>https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</link><pubDate>Thu, 21 Jan 2016 04:56:00 -0700</pubDate><guid>https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</guid><description>I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, Particleground and particles.js. Before jumping in and copy/pasting sample code, I figured I&amp;rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance.
-So - okay, simple enough, 100% width/height canvas at the background, put out some randomly placed dots, then link the dots depending on the distance.</description></item></channel></rss>
+One thing to keep in mind is that this analysis is on only the text that the characters speak. I&amp;rsquo;m not a big LOST connoisseur, so take these visualizations at their face value and not as some objective judgement about your favorite LOST character or writer.</description>
+    </item>
+    
+    <item>
+      <title>A Visual Look at 2 Million Chess Games</title>
+      <link>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link>
+      <pubDate>Wed, 02 Mar 2016 11:18:33 -0700</pubDate>
+      
+      <guid>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid>
+      <description>I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.
+We&amp;rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games.</description>
+    </item>
+    
+    <item>
+      <title>Optimizing Particle Background Performance with Quadtrees</title>
+      <link>https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</link>
+      <pubDate>Thu, 21 Jan 2016 04:56:00 -0700</pubDate>
+      
+      <guid>https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/</guid>
+      <description>I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, Particleground and particles.js. Before jumping in and copy/pasting sample code, I figured I&amp;rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance.
+So - okay, simple enough, 100% width/height canvas at the background, put out some randomly placed dots, then link the dots depending on the distance.</description>
+    </item>
+    
+  </channel>
+</rss>
