@@ -8,11 +8,11 @@ hidden = false
 related = ["2016-02-27-chess-2mil.md", "2018-09-01-lost-text-mining.md"]
 +++
 
-A data exploration of 100 years of plane crash data. I discovered the [ASN Aviation Safety Database](http://aviation-safety.net/database/) some time ago, and knew almost instantly that I would have to dig deep on this one. The earliest crash is from August 2nd, 1919 and the latest record I got are from August 1st, 2019. There are approximately 22 thousand crash records.
+A data exploration of 100 years of plane crash data. I discovered the [ASN Aviation Safety Database](http://aviation-safety.net/database/) some time ago, and knew almost instantly that I would have to dig deep on this one. The earliest crash is from August 2nd, 1919 and the latest record I have is from August 1st, 2019. There are approximately 22 thousand crash records.
 
 Planes and aviation represent a great chunk of our progress in technology and manufacturing, as well as bringing the world closer to us, with novel means of not just travel, but other endeavors like war and scientific research.
 
-What can I find among the crashes? Working on this project was quite eye opening for me, and I hope it gives you something to think about as well. Lets go.
+What can I find among the crashes? Working on this project was quite eye opening for me, and I hope it gives you something to think about as well. Let's go.
 
 ## One Century of Aviation Safety
 
