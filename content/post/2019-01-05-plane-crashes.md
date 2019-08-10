@@ -108,8 +108,8 @@ I hope this gave you a new perspective on aviation and flight safety. If you're 
 
 <div id="mobile-warning"></div>
 
-<script src="http://localhost:9001/main.js"></script>
-<!-- <script src="/plane-crashes/main.js"></script> -->
+<!-- <script src="http://localhost:9001/main.js"></script> -->
+<script src="/plane-crashes/main.js"></script>
 
 <style>
   @media screen and (max-width: 750px) {
