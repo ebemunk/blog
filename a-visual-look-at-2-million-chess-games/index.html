@@ -1,11 +1,337 @@
-<!doctype html><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=referrer content=origin><meta property=og:url content=https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/><meta property=og:type content=website><meta property=og:title content="A Visual Look at 2 Million Chess Games"><meta property=og:site_name content="Thinking Through the Party"><meta name=twitter:card content=summary><meta name=twitter:url content=https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/><meta name=twitter:title content="A Visual Look at 2 Million Chess Games"><meta name=twitter:creator content=@ebemunk><meta name=description content="I wanted to do something like this for a long time, and finally I think it&rsquo;s at a point where I can release this into the wild.
-We&rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games."><meta property=og:description content="I wanted to do something like this for a long time, and finally I think it&rsquo;s at a point where I can release this into the wild.
-We&rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games."><meta property=article:published_time content=2016-02-28T05:38:00-07:00><meta property=article:modified_time content=2016-03-02T11:18:33-0700><meta property=article:author content=ebemunk><meta name=twitter:description content="I wanted to do something like this for a long time, and finally I think it&rsquo;s at a point where I can release this into the wild.
-We&rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games."><meta property=og:image content=https://blog.ebemunk.com/img/visual-look.png><meta name=twitter:image content=https://blog.ebemunk.com/img/visual-look.png><link rel=stylesheet href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"><link rel=stylesheet href="//fonts.googleapis.com/css?family=Marcellus+SC"><link rel=stylesheet href=https://blog.ebemunk.com/css/v2.css><title>A Visual Look at 2 Million Chess Games - Thinking Through the Party</title><meta name=generator content="Hugo 0.44"><header class=site-header>Thinking Through the Party</header><h1>A Visual Look at 2 Million Chess Games</h1><div class=tags-and-date><time title="2016-03-02 @ 11:18am">2 March 2016</time><div class=tags><em>on:</em>
-<a href=/tags/chess>chess</a>,
-<a href=/tags/data-visualization>data visualization</a></div></div><article class=article><p>I wanted to do something like this for a long time, and finally I think it&rsquo;s at a point where I can release this into the wild.<p>We&rsquo;ll take a look at more than 2 million games, taken from the <a href=http://www.top-5000.nl/pgn.htm>MillionBase</a> PGN database. I ignored any Chess960 games contained, but in total there are <strong>2,197,113 games</strong>. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games. It was the biggest collection of games I could find, spanning games from 1801 up to 2013, and players with ratings between 215 (wow!) to 2861 (I wonder who that is?). So I think it&rsquo;s a pretty good representation of chess games all around.<p>I also wanted to show off some of the software I wrote for this purpose, checkout the last section for links to those.<h2 id=meta>Meta</h2><p>Lets start with some general numbers. White wins a bit more often than Black, 39% to 30%, with the rest being draws. It&rsquo;s not very surprising, although I would have expected the difference to be less. There are also some negligible amount of unfinished games, and I couldn&rsquo;t discern what happened to those.<div id=wins-combined><div id=wins class=donut><span class=caption>Wins</span></div></div><p>This generally seems to agree with all the other statistics out there. Nothing crazy going on here.<h2 id=openings>Openings</h2><p>Like many other amateur players, I tend place more importance on openings than I probably should. That being said, I was really excited about seeing the opening tendencies and popular moves. Below is a visualization of the first 5 moves (10-ply) from every game.<div id=op-combined><span class=caption>Openings Tree</span><div id=openingsg class=cdv-openings></div><div id=board></div><span id=op-name></span><span id=op-percentage></span></div><p>Right from the first move, I see that e4 dominates by a large margin (48%), followed by d4 (34%). I would have expected the gap between these two most-popular moves to be smaller, but given the time range of this database, it seems reasonable. I will focus on some of my favorite openings and an insight I found to be quite interesting.<p>Of course, among e4 openings, the beloved (and my favorite reply as Black) Sicilian (c5) is the most common reply, even more than e5. 2. Nf3 is by far the most played as White, aside from some respectable chunks from Alapin and Closed Sicilian. Interestingly, Black&rsquo;s second move seems to be a very critical crossroads of how the game will play out.<p>It&rsquo;s clear that after Black&rsquo;s second move, the next couple moves in the opening phase are almost set in stone. I believe this is because the Sicilian has a great deal of opening theory behind it, and people very rarely deviate from mainlines (perhaps because it&rsquo;s rather sharp, and gets complicated very quickly).<p>The three big choices are 2.. d6, Nc6 or e6. e6 and Nc6 almost invariably lead to a similar position, but Black chooses to delay his Queen&rsquo;s Knight&rsquo;s development for more flexibility in the case of e6 (more on that later).<p>When 2.. d6 is played, the game almost always follows the pawn exchange line, and ends up in Najdorf (58% of the time!). The Sicilian Dragon (one of my favorite variations in the Sicilian) also gets a respectable 20% chance of occurring.<p>I knew because of the huge theory behind it, almost all moves in the Sicilian lines are very decisive in how the game will play out, but seeing the critical junctions visually really emphasizes this point.<p>Other notable openings are Ruy Lopez, with French and Caro-Kann getting a nice chunk. What I found weird was that there were more French games than there were Queen&rsquo;s Gambit. As a beginner everyone focuses on this classical line, yet it seems a bit under-represented here.<p>The Indian Defense is the most popular against d4, often resulting in King&rsquo;s Indian, or Nimzo/Bogo Indian variations.<p>Regarding uncommon openings, like English (c4) or Reti (Nf3), it&rsquo;s worth noting that while the main variations are usually followed pretty strictly in other systems, these openings show a lot more variation, and there are less obvious/dominant moves that were followed. If you&rsquo;re a player that doesn&rsquo;t like to get into theoretical arguments with your opponent, such openings might be a better fit for you.<h2 id=castling>Castling</h2><div class=castling><div id=white-castling class=donut><span class=caption>White Castling</span></div><div id=black-castling class=donut><span class=caption>Black Castling</span></div><div id=castling-side class=donut><span class=caption>Castling Side</span></div></div><p>Both colors seem to castle kingside about 80% of the time. What was surprising to me was that Black was more likely to castle queenside, but White was more likely to not castle at all!<p>Another unexpected result for me was the castling side. I would have expected to see a lot more opposite-side castling, yet it&rsquo;s at a relatively low 10%, and its almost twice as likely that one side won&rsquo;t castle. Not sure what to make of this result, but definitely interesting to see.<h2 id=endings>Endings</h2><p>I wanted to collect some stats about the game endings, but this little project got a bit out of hand and so I&rsquo;ll defer the piece-type endings to a later date. I did however get some interesting stats on games ending with check or checkmate. The results aren&rsquo;t that shocking, but still cute to see.<p>There are more than 50 thousand games that end in mate! Obviously this is minuscule compared to the size of the database, but I wonder if the players really didn&rsquo;t see it coming, or just &ldquo;allowed&rdquo; their opponent to finish what might have been a nice combination?<div class=ending><div id=ending-check class=donut><span class=caption>Games ending with Check</span></div><div id=ending-mate class=donut><span class=caption>Games ending with Checkmate</span></div></div><p>Games ending on a check makes me think that either it was a draw-by-perpetual scenario, or that one side had that &ldquo;Oh shit!&rdquo; moment, perhaps a double attack by a queen or a knight fork.<h2 id=game-length>Game Length</h2><p>To get a sense of how long the games took, I plotted them as a simple histogram, number of plies vs number of games.<div id=game-lengths class=histogram><span class=caption>Game Length Frequencies</span></div><p>So, this graph is perhaps too skewed because of some ridiculously long games. The 2 longest games are <em>really</em> long, and I wonder how long the players had to be at the chess board. You can seriously pass out from dehydration!<p>The <a href=http://chesstempo.com/gamedb/game/3242097>longest game</a>, with a whopping <strong>228 moves</strong> was played in 2012, and after such an arduous struggle, it ended in a draw. Kinda anti-climactic if you ask me. Guess what the result was for the second longest game, at a measly 227 moves? That was a draw too! So perhaps its wise to not push your luck move after move hoping your opponent will give up and just agree on the draw about 100 moves earlier. Interestingly, the longest game was also one that ended with a check (and also featured my current favorite variation, the Sicilian Accelerated Dragon).<p>Instead of having a super-skewed graph, I think I can sacrifice 6,474 (0.3%) of the games and focus on the ones with at most 100 moves (or 200-ply).<div id=game-lengths-200 class=histogram><span class=caption>Game Length Frequencies (max 200-ply)</span></div><p>At first glance my reaction was: <em>&ldquo;Uh oh, this histogram looks dangerously like a <a href=http://asq.org/learn-about-quality/data-collection-analysis-tools/overview/histogram2.html>comb distribution</a>&ldquo;</em>, making me question whether my statistics-gathering was faulty. Although, there isn&rsquo;t anything that would cause a rounding/collection error. Upon closer look though, you can see that the peaks are higher on odd-numbered plies. This means that Black is more likely to end any given game (whether win, lose or draw). Otherwise, ignoring the peaks, it looks like a good old normal distribution with a mean somewhere around 70-ply.<p>We shouldn&rsquo;t ignore the peaks though! And seriously, what&rsquo;s up with those peaks? The largest peak is on ply 81 (Black&rsquo;s 40th move), and there is a second peak on ply 120 (White&rsquo;s 60th move), and a tiny but noticeable peak at ply 160. Hmmm, I wonder if this has anything to do with the classical time controls?<blockquote><p>120 minutes for 40 moves, followed by 60 minutes for 20 moves, followed by 15 minutes for the rest of the game, with a 30-second increment starting on move 61</blockquote><p>Perhaps it&rsquo;s a result of players pushing to make the time-control, only to realize they&rsquo;ve messed up their position? Or straight up running out of time? I think the peaks correspond to the standard time controls too closely to be a coincidence.<h2 id=heatmaps>Heatmaps</h2><p>Heatmaps are one of my favorite visualizations to show multiple games on the board. They give insight on what moves occured with frequencies and you get a greater sense of the whole board.<p>Below is the heatmap visualization, which I hope you&rsquo;ll take some time to play around. There are 4 categories:<ul><li><em>Square Utilization:</em> the squares that a piece moves to<li><em>Move Squares:</em> squares that a piece moved from<li><em>Capture Squares:</em> squares where a capture occurred<li><em>Checking Squares:</em> squares where the move resulted in a check</ul><div id=hm-combined><div id=heatmap class=cdv-heatmap></div><select id=heatmap-selector>
-<option value=squareUtilization>Square Utilization
-<option value=moveSquares>Move Squares
-<option value=captureSquares>Capture Squares
-<option value=checkSquares>Checking Squares</select><div id=piece-selectors-w></div><div id=piece-selectors-b></div></div><p>Square utilization shows that White tries to be more aggressive and keep its inherent initiative alive. Comparing <a href class=hms data-hm=squareUtilization data-pc=wb>White Bishops</a> versus <a href class=hms data-hm=squareUtilization data-pc=bb>Black Bishops</a>, we see White positions them more actively and closer to the center (d3, e3, b5, c4, f4, g5) whereas Black more often prefers more passive but controlling squares (d7, e7, g7) and is more likely to fianchetto his bishops. This might be an interesting artifact of the hypermodern school that had so much impact on Black&rsquo;s defense.<p><a href class=hms data-hm=squareUtilization data-pc=wn>White Knights</a> are also almost always placed on c3 and f3, but <a href class=hms data-hm=squareUtilization data-pc=bn>Black Knights</a>, especially the Queen&rsquo;s Knight likes keeping it flexible and utilize d7 much more than White does for d2.<p>The <a href class=hms data-hm=moveSquares data-pc=wall>Move Squares</a> are mirrored on both sides almost perfectly. I wonder if this says something about how people think when playing with White vs Black pieces.<p><a href class=hms data-hm=captureSquares data-pc=wall>Bloodiest squares</a> without a doubt are the d4 and d5 squares, boasting over 6 million capturing moves, about 15% more than any other square.<p>The long range of Bishops are also highlighted in captures, whereas <a href class=hms data-hm=captureSquares data-pc=wb>Bishops</a> capture more around the center, the <a href class=hms data-hm=captureSquares data-pc=wn>Knights</a> are very much focused on the key central squares.<p><a href class=hms data-hm=captureSquares data-pc=wr>Rooks</a> come out as being the most versatile in their bloodthirst, their capture squares span a much greater area than any other piece (even the <a href class=hms data-hm=captureSquares data-pc=wq>Queens</a>)<p>Finally, one very unexpected thing for me was that both <a href class=hms data-hm=checkSquares data-pc=wp>White Pawns</a> and <a href class=hms data-hm=checkSquares data-pc=bp>Black Pawns</a> deliver checks much more on the kingside. I supposed there would be some bias, as the kings prefer castling kingside and then in the endgame support those pawns easier, but its still astonishing to see how much of a bias there is.<h2 id=material-count-and-exchange-tendencies>Material Count and Exchange Tendencies</h2><p>We can see the exchange tendencies of players as the game goes on by plotting the average material count. The material on the board is counted using the standard valuations (Pawn: 1, Knight/Bishop: 3, Rook: 5, Queen: 9).<div id=material-count><span class=caption>Average Material Count per Ply</span></div><p>Surprisingly pleasant graph! The decay is definitely quite expected, as the game goes on and pieces get exchanged. The line pretty much settles somewhere between 12-13, which is about 3 pawns + 1 minor piece each. After about 150 moves (300-ply) things start going a bit wild, I suppose from promotions and blunders, which are much easier to make in the endgame.<p>As for exchange tendencies, we see that after about 30 moves in, the material on the board is halved. There is a very nice comparison of exchange tendencies per player on <a href=http://chess-db.com/public/research/game_statistics.html>Chess-DB&rsquo;s Game Statistics</a> page.<p>Another statistic I was interested in is the average material difference during the game. I wasn&rsquo;t sure what I was expecting to see, but it&rsquo;s definitely a nice one.<div id=material-diff><span class=caption>Average Material Difference per Ply</span></div><p>Wow, what a graph! Values after 250-ply get a bit crazy as promotions and blunders take place, but look at that first section!<div id=material-diff-200><span class=caption>Average Material Difference per Ply (max 250-ply)</span></div><p>Perhaps the best metaphor for a game of chess, the ultimate back and forth between White and Black for control and material dominance. It&rsquo;s surprisingly balanced all the way up until 120 moves, with White having a slight but probably negligible pull.<h2 id=abstract-art>Abstract art</h2><p>I leave you with a rendition of the pieces journeys throughout the game. I think it looks very pretty. Click on the pieces to explore its moves. Every thin strand of line represents 25,000 moves.<div id=paths-combined><div class=cdv-move-paths id=movepaths></div><div id=board2></div></div><h2 id=closing-words>Closing words</h2><p>I hope it was pleasant and maybe even useful or instructive to see so many games analyzed visually. Keep in mind this isn&rsquo;t meant to be a super scientifically rigorous analysis! Let me know of any other interesting patterns or insights you see in the comments.<p>For more technical details, you might be interested in checking out <a href=https://ebemunk.github.io/chess-dataviz/>chess-dataviz</a> for some of the visualizations, it&rsquo;s quite easy to use. The numbers were gathered by <a href=https://github.com/ebemunk/pgnstats>pgnstats</a>, so check that out if you would like to extract such statistics for your own PGN databases.<p><script src=chess/js.js></script><link rel=stylesheet href=chess/css.css></article><div class=share><h4>Share this post</h4><p>I'm pretty sure you know how to share things on social media, so I'll spare you the 50 different obnoxious buttons. If you liked this, feel free to share anywhere, it helps me out.</div><div class=disqus><div id=disqus_thread></div><script>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
-var d=document,s=d.createElement('script');s.async=true;s.src='//'+"ebemunk"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><footer class="container site-footer"><p>Thinking Through the Party &copy; 2018<p>Powered by <a href=http://gohugo.io target=_blank rel=nofollow>Hugo</a></footer><script>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-212741-11','auto');ga('send','pageview');}</script>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<meta name="referrer" content="origin" />
+		
+		<meta property="og:url" content="https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="A Visual Look at 2 Million Chess Games">
+		<meta property="og:site_name" content="Thinking Through the Party">
+		
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:url" content="https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/">
+		<meta name="twitter:title" content="A Visual Look at 2 Million Chess Games">
+		<meta name="twitter:creator" content="@ebemunk">
+		
+			<meta name="description" content="I wanted to do something like this for a long time, and finally I think it&rsquo;s at a point where I can release this into the wild.
+We&rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games.">
+			<meta property="og:description" content="I wanted to do something like this for a long time, and finally I think it&rsquo;s at a point where I can release this into the wild.
+We&rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games.">
+			<meta property="article:published_time" content="2016-02-28T05:38:00-07:00">
+			<meta property="article:modified_time" content="2016-03-02T11:18:33-0700">
+			<meta property="article:author" content="ebemunk">
+			<meta name="twitter:description" content="I wanted to do something like this for a long time, and finally I think it&rsquo;s at a point where I can release this into the wild.
+We&rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games.">
+			
+				<meta property="og:image" content="https://blog.ebemunk.com/img/visual-look.png">
+				<meta name="twitter:image" content="https://blog.ebemunk.com/img/visual-look.png">
+			
+		
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+		<link rel='stylesheet' href="//fonts.googleapis.com/css?family=Marcellus+SC">
+		
+		<link rel="stylesheet" href="https://blog.ebemunk.com/css/v2.css">
+
+		
+			<title>A Visual Look at 2 Million Chess Games - Thinking Through the Party</title>
+		
+
+		<meta name="generator" content="Hugo 0.55.2" />
+	</head>
+	<body>
+		<header class="site-header">
+			Thinking Through the Party
+		</header>
+
+
+<h1>A Visual Look at 2 Million Chess Games</h1>
+
+<div class="tags-and-date">
+	<time title='2016-03-02 @ 11:18am'>2 March 2016</time>
+	<div class="tags">
+	<em>on:</em>
+	
+		<a href="/tags/chess">chess</a>,
+		<a href="/tags/data-visualization">data visualization</a>
+</div>
+
+</div>
+
+<article class="article">
+	
+
+<p>I wanted to do something like this for a long time, and finally I think it&rsquo;s at a point where I can release this into the wild.</p>
+
+<p>We&rsquo;ll take a look at more than 2 million games, taken from the <a href="http://www.top-5000.nl/pgn.htm">MillionBase</a> PGN database. I ignored any Chess960 games contained, but in total there are <strong>2,197,113 games</strong>. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games. It was the biggest collection of games I could find, spanning games from 1801 up to 2013, and players with ratings between 215 (wow!) to 2861 (I wonder who that is?). So I think it&rsquo;s a pretty good representation of chess games all around.</p>
+
+<p>I also wanted to show off some of the software I wrote for this purpose, checkout the last section for links to those.</p>
+
+<h2 id="meta">Meta</h2>
+
+<p>Lets start with some general numbers. White wins a bit more often than Black, 39% to 30%, with the rest being draws. It&rsquo;s not very surprising, although I would have expected the difference to be less. There are also some negligible amount of unfinished games, and I couldn&rsquo;t discern what happened to those.</p>
+
+<div id="wins-combined">
+    <div id="wins" class="donut">
+        <span class="caption">Wins</span>
+    </div>
+</div>
+
+<p>This generally seems to agree with all the other statistics out there. Nothing crazy going on here.</p>
+
+<h2 id="openings">Openings</h2>
+
+<p>Like many other amateur players, I tend place more importance on openings than I probably should. That being said, I was really excited about seeing the opening tendencies and popular moves. Below is a visualization of the first 5 moves (10-ply) from every game.</p>
+
+<div id="op-combined">
+    <span class="caption">Openings Tree</span>
+    <div id="openingsg" class="cdv-openings"></div>
+    <div id="board"></div>
+    <span id="op-name"></span>
+    <span id="op-percentage"></span>
+</div>
+
+<p>Right from the first move, I see that e4 dominates by a large margin (48%), followed by d4 (34%). I would have expected the gap between these two most-popular moves to be smaller, but given the time range of this database, it seems reasonable. I will focus on some of my favorite openings and an insight I found to be quite interesting.</p>
+
+<p>Of course, among e4 openings, the beloved (and my favorite reply as Black) Sicilian (c5) is the most common reply, even more than e5. 2. Nf3 is by far the most played as White, aside from some respectable chunks from Alapin and Closed Sicilian. Interestingly, Black&rsquo;s second move seems to be a very critical crossroads of how the game will play out.</p>
+
+<p>It&rsquo;s clear that after Black&rsquo;s second move, the next couple moves in the opening phase are almost set in stone. I believe this is because the Sicilian has a great deal of opening theory behind it, and people very rarely deviate from mainlines (perhaps because it&rsquo;s rather sharp, and gets complicated very quickly).</p>
+
+<p>The three big choices are 2.. d6, Nc6 or e6. e6 and Nc6 almost invariably lead to a similar position, but Black chooses to delay his Queen&rsquo;s Knight&rsquo;s development for more flexibility in the case of e6 (more on that later).</p>
+
+<p>When 2.. d6 is played, the game almost always follows the pawn exchange line, and ends up in Najdorf (58% of the time!). The Sicilian Dragon (one of my favorite variations in the Sicilian) also gets a respectable 20% chance of occurring.</p>
+
+<p>I knew because of the huge theory behind it, almost all moves in the Sicilian lines are very decisive in how the game will play out, but seeing the critical junctions visually really emphasizes this point.</p>
+
+<p>Other notable openings are Ruy Lopez, with French and Caro-Kann getting a nice chunk. What I found weird was that there were more French games than there were Queen&rsquo;s Gambit. As a beginner everyone focuses on this classical line, yet it seems a bit under-represented here.</p>
+
+<p>The Indian Defense is the most popular against d4, often resulting in King&rsquo;s Indian, or Nimzo/Bogo Indian variations.</p>
+
+<p>Regarding uncommon openings, like English (c4) or Reti (Nf3), it&rsquo;s worth noting that while the main variations are usually followed pretty strictly in other systems, these openings show a lot more variation, and there are less obvious/dominant moves that were followed. If you&rsquo;re a player that doesn&rsquo;t like to get into theoretical arguments with your opponent, such openings might be a better fit for you.</p>
+
+<h2 id="castling">Castling</h2>
+
+<div class="castling">
+    <div id="white-castling" class="donut">
+        <span class="caption">White Castling</span>
+    </div>
+    <div id="black-castling" class="donut">
+        <span class="caption">Black Castling</span>
+    </div>
+    <div id="castling-side" class="donut">
+        <span class="caption">Castling Side</span>
+    </div>
+</div>
+
+<p>Both colors seem to castle kingside about 80% of the time. What was surprising to me was that Black was more likely to castle queenside, but White was more likely to not castle at all!</p>
+
+<p>Another unexpected result for me was the castling side. I would have expected to see a lot more opposite-side castling, yet it&rsquo;s at a relatively low 10%, and its almost twice as likely that one side won&rsquo;t castle. Not sure what to make of this result, but definitely interesting to see.</p>
+
+<h2 id="endings">Endings</h2>
+
+<p>I wanted to collect some stats about the game endings, but this little project got a bit out of hand and so I&rsquo;ll defer the piece-type endings to a later date. I did however get some interesting stats on games ending with check or checkmate. The results aren&rsquo;t that shocking, but still cute to see.</p>
+
+<p>There are more than 50 thousand games that end in mate! Obviously this is minuscule compared to the size of the database, but I wonder if the players really didn&rsquo;t see it coming, or just &ldquo;allowed&rdquo; their opponent to finish what might have been a nice combination?</p>
+
+<div class="ending">
+    <div id="ending-check" class="donut">
+        <span class="caption">Games ending with Check</span>
+    </div>
+    <div id="ending-mate" class="donut">
+        <span class="caption">Games ending with Checkmate</span>
+    </div>
+</div>
+
+<p>Games ending on a check makes me think that either it was a draw-by-perpetual scenario, or that one side had that &ldquo;Oh shit!&rdquo; moment, perhaps a double attack by a queen or a knight fork.</p>
+
+<h2 id="game-length">Game Length</h2>
+
+<p>To get a sense of how long the games took, I plotted them as a simple histogram, number of plies vs number of games.</p>
+
+<div id="game-lengths" class="histogram">
+    <span class="caption">Game Length Frequencies</span>
+</div>
+
+<p>So, this graph is perhaps too skewed because of some ridiculously long games. The 2 longest games are <em>really</em> long, and I wonder how long the players had to be at the chess board. You can seriously pass out from dehydration!</p>
+
+<p>The <a href="http://chesstempo.com/gamedb/game/3242097">longest game</a>, with a whopping <strong>228 moves</strong> was played in 2012, and after such an arduous struggle, it ended in a draw. Kinda anti-climactic if you ask me. Guess what the result was for the second longest game, at a measly 227 moves? That was a draw too! So perhaps its wise to not push your luck move after move hoping your opponent will give up and just agree on the draw about 100 moves earlier. Interestingly, the longest game was also one that ended with a check (and also featured my current favorite variation, the Sicilian Accelerated Dragon).</p>
+
+<p>Instead of having a super-skewed graph, I think I can sacrifice 6,474 (0.3%) of the games and focus on the ones with at most 100 moves (or 200-ply).</p>
+
+<div id="game-lengths-200" class="histogram">
+    <span class="caption">Game Length Frequencies (max 200-ply)</span>
+</div>
+
+<p>At first glance my reaction was: <em>&ldquo;Uh oh, this histogram looks dangerously like a <a href="http://asq.org/learn-about-quality/data-collection-analysis-tools/overview/histogram2.html">comb distribution</a>&ldquo;</em>, making me question whether my statistics-gathering was faulty. Although, there isn&rsquo;t anything that would cause a rounding/collection error. Upon closer look though, you can see that the peaks are higher on odd-numbered plies. This means that Black is more likely to end any given game (whether win, lose or draw). Otherwise, ignoring the peaks, it looks like a good old normal distribution with a mean somewhere around 70-ply.</p>
+
+<p>We shouldn&rsquo;t ignore the peaks though! And seriously, what&rsquo;s up with those peaks? The largest peak is on ply 81 (Black&rsquo;s 40th move), and there is a second peak on ply 120 (White&rsquo;s 60th move), and a tiny but noticeable peak at ply 160. Hmmm, I wonder if this has anything to do with the classical time controls?</p>
+
+<blockquote>
+<p>120 minutes for 40 moves, followed by 60 minutes for 20 moves, followed by 15 minutes for the rest of the game, with a 30-second increment starting on move 61</p>
+</blockquote>
+
+<p>Perhaps it&rsquo;s a result of players pushing to make the time-control, only to realize they&rsquo;ve messed up their position? Or straight up running out of time? I think the peaks correspond to the standard time controls too closely to be a coincidence.</p>
+
+<h2 id="heatmaps">Heatmaps</h2>
+
+<p>Heatmaps are one of my favorite visualizations to show multiple games on the board. They give insight on what moves occured with frequencies and you get a greater sense of the whole board.</p>
+
+<p>Below is the heatmap visualization, which I hope you&rsquo;ll take some time to play around. There are 4 categories:</p>
+
+<ul>
+<li><em>Square Utilization:</em> the squares that a piece moves to</li>
+<li><em>Move Squares:</em> squares that a piece moved from</li>
+<li><em>Capture Squares:</em> squares where a capture occurred</li>
+<li><em>Checking Squares:</em> squares where the move resulted in a check</li>
+</ul>
+
+<div id="hm-combined">
+    <div id="heatmap" class="cdv-heatmap"></div>
+    <select id="heatmap-selector">
+        <option value="squareUtilization">Square Utilization</option>
+        <option value="moveSquares">Move Squares</option>
+        <option value="captureSquares">Capture Squares</option>
+        <option value="checkSquares">Checking Squares</option>
+    </select>
+    <div id="piece-selectors-w"></div>
+    <div id="piece-selectors-b"></div>
+</div>
+
+<p>Square utilization shows that White tries to be more aggressive and keep its inherent initiative alive. Comparing <a href="" class="hms" data-hm="squareUtilization" data-pc="wb">White Bishops</a> versus <a href="" class="hms" data-hm="squareUtilization" data-pc="bb">Black Bishops</a>, we see White positions them more actively and closer to the center (d3, e3, b5, c4, f4, g5) whereas Black more often prefers more passive but controlling squares (d7, e7, g7) and is more likely to fianchetto his bishops. This might be an interesting artifact of the hypermodern school that had so much impact on Black&rsquo;s defense.</p>
+
+<p><a href="" class="hms" data-hm="squareUtilization" data-pc="wn">White Knights</a> are also almost always placed on c3 and f3, but <a href="" class="hms" data-hm="squareUtilization" data-pc="bn">Black Knights</a>, especially the Queen&rsquo;s Knight likes keeping it flexible and utilize d7 much more than White does for d2.</p>
+
+<p>The <a href="" class="hms" data-hm="moveSquares" data-pc="wall">Move Squares</a> are mirrored on both sides almost perfectly. I wonder if this says something about how people think when playing with White vs Black pieces.</p>
+
+<p><a href="" class="hms" data-hm="captureSquares" data-pc="wall">Bloodiest squares</a> without a doubt are the d4 and d5 squares, boasting over 6 million capturing moves, about 15% more than any other square.</p>
+
+<p>The long range of Bishops are also highlighted in captures, whereas <a href="" class="hms" data-hm="captureSquares" data-pc="wb">Bishops</a> capture more around the center, the <a href="" class="hms" data-hm="captureSquares" data-pc="wn">Knights</a> are very much focused on the key central squares.</p>
+
+<p><a href="" class="hms" data-hm="captureSquares" data-pc="wr">Rooks</a> come out as being the most versatile in their bloodthirst, their capture squares span a much greater area than any other piece (even the <a href="" class="hms" data-hm="captureSquares" data-pc="wq">Queens</a>)</p>
+
+<p>Finally, one very unexpected thing for me was that both <a href="" class="hms" data-hm="checkSquares" data-pc="wp">White Pawns</a> and <a href="" class="hms" data-hm="checkSquares" data-pc="bp">Black Pawns</a> deliver checks much more on the kingside. I supposed there would be some bias, as the kings prefer castling kingside and then in the endgame support those pawns easier, but its still astonishing to see how much of a bias there is.</p>
+
+<h2 id="material-count-and-exchange-tendencies">Material Count and Exchange Tendencies</h2>
+
+<p>We can see the exchange tendencies of players as the game goes on by plotting the average material count. The material on the board is counted using the standard valuations (Pawn: 1, Knight/Bishop: 3, Rook: 5, Queen: 9).</p>
+
+<div id="material-count">
+    <span class="caption">Average Material Count per Ply</span>
+</div>
+
+<p>Surprisingly pleasant graph! The decay is definitely quite expected, as the game goes on and pieces get exchanged. The line pretty much settles somewhere between 12-13, which is about 3 pawns + 1 minor piece each. After about 150 moves (300-ply) things start going a bit wild, I suppose from promotions and blunders, which are much easier to make in the endgame.</p>
+
+<p>As for exchange tendencies, we see that after about 30 moves in, the material on the board is halved. There is a very nice comparison of exchange tendencies per player on <a href="http://chess-db.com/public/research/game_statistics.html">Chess-DB&rsquo;s Game Statistics</a> page.</p>
+
+<p>Another statistic I was interested in is the average material difference during the game. I wasn&rsquo;t sure what I was expecting to see, but it&rsquo;s definitely a nice one.</p>
+
+<div id="material-diff">
+    <span class="caption">Average Material Difference per Ply</span>
+</div>
+
+<p>Wow, what a graph! Values after 250-ply get a bit crazy as promotions and blunders take place, but look at that first section!</p>
+
+<div id="material-diff-200">
+    <span class="caption">Average Material Difference per Ply (max 250-ply)</span>
+</div>
+
+<p>Perhaps the best metaphor for a game of chess, the ultimate back and forth between White and Black for control and material dominance. It&rsquo;s surprisingly balanced all the way up until 120 moves, with White having a slight but probably negligible pull.</p>
+
+<h2 id="abstract-art">Abstract art</h2>
+
+<p>I leave you with a rendition of the pieces journeys throughout the game. I think it looks very pretty. Click on the pieces to explore its moves. Every thin strand of line represents 25,000 moves.</p>
+
+<div id="paths-combined">
+    <div class="cdv-move-paths" id="movepaths"></div>
+    <div id="board2"></div>
+</div>
+
+<h2 id="closing-words">Closing words</h2>
+
+<p>I hope it was pleasant and maybe even useful or instructive to see so many games analyzed visually. Keep in mind this isn&rsquo;t meant to be a super scientifically rigorous analysis! Let me know of any other interesting patterns or insights you see in the comments.</p>
+
+<p>For more technical details, you might be interested in checking out <a href="https://ebemunk.github.io/chess-dataviz/">chess-dataviz</a> for some of the visualizations, it&rsquo;s quite easy to use. The numbers were gathered by <a href="https://github.com/ebemunk/pgnstats">pgnstats</a>, so check that out if you would like to extract such statistics for your own PGN databases.</p>
+
+<p><script src="chess/js.js"></script>
+<link rel="stylesheet" href="chess/css.css"></p>
+
+</article>
+
+<div class="share">
+	<h4>Share this post</h4>
+	<p>I'm pretty sure you know how to share things on social media, so I'll spare you the 50 different obnoxious buttons. If you liked this, feel free to share anywhere, it helps me out.</p>
+</div>
+
+
+<div class="see-also">
+	<h4>See Also</h4>
+	<div class="see-also-items">
+		
+			
+			<div class="suggestion">
+				<a href="/visual-look-at-2-million-chess-games-part-2/">
+					<img src="/img/visual-look-part-2.png" />
+					Visual Look at 2 Million Chess Games: Part 2
+				</a>
+			</div>
+		
+			
+			<div class="suggestion">
+				<a href="/century-of-plane-crashes/">
+					<img src="/img/plane-crashes.png" />
+					One Century of Plane Crashes
+				</a>
+			</div>
+		
+	</div>
+</div>
+
+
+<div class="disqus">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "ebemunk" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+		<footer class="container site-footer">
+			<p>Thinking Through the Party &copy; 2019</p>
+			<p>Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a></p>
+		</footer>
+
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-212741-11', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+	</body>
+</html>
+
