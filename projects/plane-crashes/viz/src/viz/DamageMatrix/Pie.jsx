@@ -7,11 +7,12 @@ import ReactDOM from 'react-dom'
 import Tooltip from '../../vizlib/Tooltip'
 import Legend from '../../vizlib/Legend'
 import FlexPlot from '../../vizlib/FlexPlot'
-import { colors8 } from '../../vizlib/colors'
+import { colors8, get8 } from '../../vizlib/colors'
 import getVirtualReference from '../../vizlib/virtualReference'
 
 const Pie = ({ data }) => {
   const [hint, setHint] = useState(null)
+  const colorScale = get8()
 
   return (
     <div
@@ -26,7 +27,7 @@ const Pie = ({ data }) => {
           .sort((a, b) => a[1] - b[1])
           .map((d, i) => ({
             title: d[0],
-            color: colors8(d[0]),
+            color: colorScale(d[0]),
           }))}
         style={{
           position: 'absolute',
@@ -55,7 +56,7 @@ const Pie = ({ data }) => {
                   <path
                     key={d.data[0]}
                     d={arcGenerator(d)}
-                    style={{ fill: colors8(d.data[0]) }}
+                    style={{ fill: colorScale(d.data[0]) }}
                     onMouseMove={e =>
                       setHint({
                         d: d,

@@ -224,3 +224,11 @@ article.article .footnotes hr {
   height: 16rem;
   display: block;
 }
+.see-also .see-also-items .suggestion a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+}

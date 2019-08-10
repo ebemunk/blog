@@ -16,12 +16,15 @@
 		<meta name="twitter:title" content="One Century of Plane Crashes">
 		<meta name="twitter:creator" content="@ebemunk">
 		
-			<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
-			<meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
-			<meta property="article:published_time" content="2019-01-03T00:00:00Z">
-			<meta property="article:modified_time" content="2019-01-03T00:00:00&#43;0000">
+			<meta name="description" content="A data exploration of 100 years of plane crash data. I discovered the ASN Aviation Safety Database some time ago, and knew almost instantly that I would have to dig deep on this one. The earliest crash is from August 2nd, 1919 and the latest record I got are from August 1st, 2019. There are approximately 22 thousand crash records.
+Planes and aviation represent a great chunk of our progress in technology and manufacturing, as well as bringing the world closer to us, with novel means of not just travel, but other endeavors like war and scientific research.">
+			<meta property="og:description" content="A data exploration of 100 years of plane crash data. I discovered the ASN Aviation Safety Database some time ago, and knew almost instantly that I would have to dig deep on this one. The earliest crash is from August 2nd, 1919 and the latest record I got are from August 1st, 2019. There are approximately 22 thousand crash records.
+Planes and aviation represent a great chunk of our progress in technology and manufacturing, as well as bringing the world closer to us, with novel means of not just travel, but other endeavors like war and scientific research.">
+			<meta property="article:published_time" content="2019-08-10T00:00:00Z">
+			<meta property="article:modified_time" content="2019-08-10T00:00:00&#43;0000">
 			<meta property="article:author" content="ebemunk">
-			<meta name="twitter:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+			<meta name="twitter:description" content="A data exploration of 100 years of plane crash data. I discovered the ASN Aviation Safety Database some time ago, and knew almost instantly that I would have to dig deep on this one. The earliest crash is from August 2nd, 1919 and the latest record I got are from August 1st, 2019. There are approximately 22 thousand crash records.
+Planes and aviation represent a great chunk of our progress in technology and manufacturing, as well as bringing the world closer to us, with novel means of not just travel, but other endeavors like war and scientific research.">
 			
 				<meta property="og:image" content="https://blog.ebemunk.com/img/plane-crashes.png">
 				<meta name="twitter:image" content="https://blog.ebemunk.com/img/plane-crashes.png">
@@ -37,7 +40,7 @@
 			<title>One Century of Plane Crashes - Thinking Through the Party</title>
 		
 
-		<meta name="generator" content="Hugo 0.44" />
+		<meta name="generator" content="Hugo 0.55.2" />
 	</head>
 	<body>
 		<header class="site-header">
@@ -48,7 +51,7 @@
 <h1>One Century of Plane Crashes</h1>
 
 <div class="tags-and-date">
-	<time title='2019-01-03 @ 00:00am'>3 January 2019</time>
+	<time title='2019-08-10 @ 00:00am'>10 August 2019</time>
 	<div class="tags">
 	<em>on:</em>
 	
@@ -61,7 +64,11 @@
 <article class="article">
 	
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>A data exploration of 100 years of plane crash data. I discovered the <a href="http://aviation-safety.net/database/">ASN Aviation Safety Database</a> some time ago, and knew almost instantly that I would have to dig deep on this one. The earliest crash is from August 2nd, 1919 and the latest record I got are from August 1st, 2019. There are approximately 22 thousand crash records.</p>
+
+<p>Planes and aviation represent a great chunk of our progress in technology and manufacturing, as well as bringing the world closer to us, with novel means of not just travel, but other endeavors like war and scientific research.</p>
+
+<p>What can I find among the crashes? Working on this project was quite eye opening for me, and I hope it gives you something to think about as well. Lets go.</p>
 
 <h2 id="one-century-of-aviation-safety">One Century of Aviation Safety</h2>
 
@@ -147,7 +154,7 @@
 
 <h2 id="technical-details">Technical Details</h2>
 
-<p>I gathered the data from <a href="http://aviation-safety.net/database/">ASN Aviation Safety Database</a> and put it in a PostgreSQL database. This database contains <strong>22,000</strong> records of plane crashes with varying richness of data, most of it presented in the graphs above. I made the visualizations with React and d3, which I increasingly find to be a great way of producing interactive viz. You can see the project code [here]().</p>
+<p>I gathered the data from <a href="http://aviation-safety.net/database/">ASN Aviation Safety Database</a> and put it in a PostgreSQL database. This database contains ~<strong>22,000</strong> records of plane crashes with varying richness of data, most of it presented in the graphs above. I made the visualizations with React and d3, which I increasingly find to be a great way of producing interactive viz. Maps with Mapbox and DeckGL. You can see the project code <a href="https://github.com/ebemunk/blog/tree/master/projects/plane-crashes">here</a>.</p>
 
 <p>Don&rsquo;t forget - this data contains only crashes! This is important when thinking about percentages and relative scalar values. &ldquo;Operator X crashed more than Y, so they must be careless&rdquo; kind of thinking would not be appropriate, as we don&rsquo;t know how many successful flights took place.</p>
 
@@ -155,8 +162,9 @@
 
 <p>I hope this gave you a new perspective on aviation and flight safety. If you&rsquo;re into the history, statistics or trivia, I would love to hear from you in the comments. What else can you determine from these visualizations? What else does this make you wonder about? I welcome any discussion and thoughts you have.</p>
 
-<p><script src="http://localhost:9001/main.js"></script>
-<!-- <script src="/plane-crashes/main.js"></script> --></p>
+<!-- <script src="http://localhost:9001/main.js"></script> -->
+
+<script src="/plane-crashes/main.js"></script>
 
 <style>
   @media screen and (max-width: 750px) {
@@ -181,7 +189,18 @@
 		
 			
 			<div class="suggestion">
-				&lt;nil&gt; - /a-visual-look-at-2-million-chess-games
+				<a href="/a-visual-look-at-2-million-chess-games/">
+					<img src="/img/visual-look.png" />
+					A Visual Look at 2 Million Chess Games
+				</a>
+			</div>
+		
+			
+			<div class="suggestion">
+				<a href="/lost-text-mining/">
+					<img src="/img/lost-text-mining.png" />
+					Text Mining LOST
+				</a>
 			</div>
 		
 	</div>
@@ -190,7 +209,7 @@
 
 <div class="disqus">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
@@ -217,7 +236,7 @@
 		</footer>
 
 		
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

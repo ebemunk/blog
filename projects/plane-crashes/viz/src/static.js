@@ -37,6 +37,7 @@ const App = () => (
     <Maker noInteraction />
     <PlaneAge />
     <CrashesHeatmap
+      noInteraction
       zoom={1.25}
       subtitle="Heatmap of crashes where geodata is available. Locations are approximate. Also drawn is the Bermuda Triangle."
     />

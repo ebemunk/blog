@@ -1,14 +1,18 @@
 +++
-date = "2019-01-03"
+date = "2019-08-10"
 title = "One Century of Plane Crashes"
 slug = "century-of-plane-crashes"
 tags = ["data visualization", "plane crashes"]
 image = "img/plane-crashes.png"
 hidden = false
-related = ["2016-02-27-chess-2mil.md", "2018-12-29-chess-part2.md"]
+related = ["2016-02-27-chess-2mil.md", "2018-09-01-lost-text-mining.md"]
 +++
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+A data exploration of 100 years of plane crash data. I discovered the [ASN Aviation Safety Database](http://aviation-safety.net/database/) some time ago, and knew almost instantly that I would have to dig deep on this one. The earliest crash is from August 2nd, 1919 and the latest record I got are from August 1st, 2019. There are approximately 22 thousand crash records.
+
+Planes and aviation represent a great chunk of our progress in technology and manufacturing, as well as bringing the world closer to us, with novel means of not just travel, but other endeavors like war and scientific research.
+
+What can I find among the crashes? Working on this project was quite eye opening for me, and I hope it gives you something to think about as well. Lets go.
 
 ## One Century of Aviation Safety
 
@@ -94,7 +98,7 @@ Finally here's a map of all departure locations. Click on the dots to focus and 
 
 ## Technical Details
 
-I gathered the data from [ASN Aviation Safety Database](http://aviation-safety.net/database/) and put it in a PostgreSQL database. This database contains **22,000** records of plane crashes with varying richness of data, most of it presented in the graphs above. I made the visualizations with React and d3, which I increasingly find to be a great way of producing interactive viz. You can see the project code [here]().
+I gathered the data from [ASN Aviation Safety Database](http://aviation-safety.net/database/) and put it in a PostgreSQL database. This database contains ~**22,000** records of plane crashes with varying richness of data, most of it presented in the graphs above. I made the visualizations with React and d3, which I increasingly find to be a great way of producing interactive viz. Maps with Mapbox and DeckGL. You can see the project code [here](https://github.com/ebemunk/blog/tree/master/projects/plane-crashes).
 
 Don't forget - this data contains only crashes! This is important when thinking about percentages and relative scalar values. "Operator X crashed more than Y, so they must be careless" kind of thinking would not be appropriate, as we don't know how many successful flights took place.
 
@@ -102,8 +106,8 @@ Don't forget - this data contains only crashes! This is important when thinking 
 
 I hope this gave you a new perspective on aviation and flight safety. If you're into the history, statistics or trivia, I would love to hear from you in the comments. What else can you determine from these visualizations? What else does this make you wonder about? I welcome any discussion and thoughts you have.
 
-<script src="http://localhost:9001/main.js"></script>
-<!-- <script src="/plane-crashes/main.js"></script> -->
+<!-- <script src="http://localhost:9001/main.js"></script> -->
+<script src="/plane-crashes/main.js"></script>
 
 <style>
   @media screen and (max-width: 750px) {

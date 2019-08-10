@@ -11,9 +11,10 @@ import {
   scatter,
 } from './mapElements'
 
-const CrashesHeatmap = ({ subtitle, zoom }) => {
+const CrashesHeatmap = ({ subtitle, zoom, noInteraction }) => {
   const mapRef = useRef(null)
   const [viewState, setViewState] = useState({})
+  const [scrollZoom, setScrollZoom] = useState(false)
 
   return (
     <>
@@ -33,6 +34,7 @@ const CrashesHeatmap = ({ subtitle, zoom }) => {
           display: 'flex',
           justifyContent: 'center',
           marginBottom: '1.3rem',
+          position: 'relative',
         }}
       >
         <InteractiveMap
@@ -44,6 +46,7 @@ const CrashesHeatmap = ({ subtitle, zoom }) => {
           onViewStateChange={({ viewState }) => setViewState(viewState)}
           viewState={viewState}
           zoom={zoom || 0.5}
+          scrollZoom={scrollZoom}
           minZoom={0.5}
           onLoad={() => {
             const map = mapRef.current.getMap()
@@ -55,6 +58,33 @@ const CrashesHeatmap = ({ subtitle, zoom }) => {
             map.addLayer(scatter, 'waterway-label')
           }}
         />
+        {!noInteraction && (
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              right: 'calc(5vw + 1rem)',
+            }}
+          >
+            <div>
+              <label
+                style={{
+                  cursor: 'pointer',
+                  marginLeft: 30,
+                  fontSize: '0.8rem',
+                  color: 'white',
+                }}
+              >
+                <input
+                  type="checkbox"
+                  onChange={() => setScrollZoom(!scrollZoom)}
+                  checked={scrollZoom}
+                />
+                Scroll Zoom
+              </label>
+            </div>
+          </div>
+        )}
       </div>
     </>
   )

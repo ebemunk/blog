@@ -1,6 +1,10 @@
 import React, { useState, useRef } from 'react'
 import { StaticMap } from 'react-map-gl'
-import DeckGL, { ArcLayer, ScatterplotLayer } from 'deck.gl/dist/es6'
+import DeckGL, {
+  ArcLayer,
+  ScatterplotLayer,
+  MapController,
+} from 'deck.gl/dist/es6'
 import { pipe, groupBy, map, values, filter, unnest } from 'ramda'
 import { multiPoint } from '@turf/helpers'
 import bbox from '@turf/bbox'
@@ -46,7 +50,7 @@ const Info = ({ dep }) => (
   <div
     style={{
       position: 'absolute',
-      right: 0,
+      left: 0,
       top: 0,
       background: 'rgba(0, 0, 0, 0.5)',
       padding: '0.5rem',
@@ -93,6 +97,8 @@ const DepartureArcs = ({}) => {
         d.targetPosition[1] !== d.sourcePosition[1],
     ),
   )
+
+  const [scrollZoom, setScrollZoom] = useState(false)
 
   return (
     <>
@@ -156,7 +162,7 @@ const DepartureArcs = ({}) => {
             onViewStateChange={v => {
               setViewState(v.viewState)
             }}
-            controller
+            controller={{ scrollZoom }}
             onLayerHover={(info, layers, event) => {
               const closest = deck.current.pickObject({
                 x: event.layerX,
@@ -239,6 +245,31 @@ const DepartureArcs = ({}) => {
             <Tooltip hover={hover} />
             <Info dep={dep} />
           </DeckGL>
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              right: 0,
+            }}
+          >
+            <div>
+              <label
+                style={{
+                  cursor: 'pointer',
+                  marginLeft: 30,
+                  fontSize: '0.8rem',
+                  color: 'white',
+                }}
+              >
+                <input
+                  type="checkbox"
+                  onChange={() => setScrollZoom(!scrollZoom)}
+                  checked={scrollZoom}
+                />
+                Scroll Zoom
+              </label>
+            </div>
+          </div>
         </div>
       </div>
     </>
