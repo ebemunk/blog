@@ -106,6 +106,8 @@ Don't forget - this data contains only crashes! This is important when thinking 
 
 I hope this gave you a new perspective on aviation and flight safety. If you're into the history, statistics or trivia, I would love to hear from you in the comments. What else can you determine from these visualizations? What else does this make you wonder about? I welcome any discussion and thoughts you have.
 
+<div id="mobile-warning"></div>
+
 <!-- <script src="http://localhost:9001/main.js"></script> -->
 <script src="/plane-crashes/main.js"></script>
 

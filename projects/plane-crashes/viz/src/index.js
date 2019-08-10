@@ -63,3 +63,9 @@ window.showFps = function() {
   script.src = '//rawgit.com/mrdoob/stats.js/master/build/stats.min.js'
   document.head.appendChild(script)
 }
+
+import MobileWarning from './viz/MobileWarning'
+
+if (window.innerWidth < 768) {
+  render(<MobileWarning />, '#mobile-warning')
+}
