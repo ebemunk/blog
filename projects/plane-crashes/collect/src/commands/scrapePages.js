@@ -8,10 +8,10 @@ import { writeFile, logger } from '../util'
 const log = logger('scrapePages')
 
 export default async function scrapePages(opts) {
-  const years = R.range(1919, 2019)
+  // const years = R.range(1919, 2019)
   // const years = [1946]
   // const years = [1936]
-  // const years = [2018]
+  const years = [2018, 2019]
 
   await Promise.map(
     years,

@@ -1,3 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Text Mining on Thinking Through the Party</title><link>https://blog.ebemunk.com/tags/text-mining/</link><description>Recent content in Text Mining on Thinking Through the Party</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.ebemunk.com/tags/text-mining/index.xml" rel="self" type="application/rss+xml"/><item><title>Text Mining LOST</title><link>https://blog.ebemunk.com/lost-text-mining/</link><pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate><guid>https://blog.ebemunk.com/lost-text-mining/</guid><description>We&amp;rsquo;re text mining the transcripts of the TV show LOST, and visualizing them!
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Text Mining on Thinking Through the Party</title>
+    <link>https://blog.ebemunk.com/tags/text-mining/</link>
+    <description>Recent content in Text Mining on Thinking Through the Party</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.ebemunk.com/tags/text-mining/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Text Mining LOST</title>
+      <link>https://blog.ebemunk.com/lost-text-mining/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.ebemunk.com/lost-text-mining/</guid>
+      <description>We&amp;rsquo;re text mining the transcripts of the TV show LOST, and visualizing them!
 I retrieved and parsed the transcripts of LOST from Lostpedia1 and used a few different tools to look at this data.
-One thing to keep in mind is that this analysis is on only the text that the characters speak. I&amp;rsquo;m not a big LOST connoisseur, so take these visualizations at their face value and not as some objective judgement about your favorite LOST character or writer.</description></item></channel></rss>
+One thing to keep in mind is that this analysis is on only the text that the characters speak. I&amp;rsquo;m not a big LOST connoisseur, so take these visualizations at their face value and not as some objective judgement about your favorite LOST character or writer.</description>
+    </item>
+    
+  </channel>
+</rss>

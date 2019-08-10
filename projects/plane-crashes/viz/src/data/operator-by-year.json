@@ -271,135 +271,6 @@
       ]
     ],
     [
-      "Luftwaffe",
-      [
-        {
-          "count": 1,
-          "year": 1935
-        },
-        {
-          "count": 2,
-          "year": 1936
-        },
-        {
-          "count": 2,
-          "year": 1937
-        },
-        {
-          "count": 1,
-          "year": 1938
-        },
-        {
-          "count": 5,
-          "year": 1939
-        },
-        {
-          "count": 197,
-          "year": 1940
-        },
-        {
-          "count": 30,
-          "year": 1941
-        },
-        {
-          "count": 19,
-          "year": 1942
-        },
-        {
-          "count": 20,
-          "year": 1943
-        },
-        {
-          "count": 31,
-          "year": 1944
-        },
-        {
-          "count": 12,
-          "year": 1945
-        },
-        {
-          "count": 1,
-          "year": 1958
-        },
-        {
-          "count": 3,
-          "year": 1959
-        },
-        {
-          "count": 1,
-          "year": 1960
-        },
-        {
-          "count": 1,
-          "year": 1961
-        },
-        {
-          "count": 1,
-          "year": 1964
-        },
-        {
-          "count": 2,
-          "year": 1965
-        },
-        {
-          "count": 1,
-          "year": 1966
-        },
-        {
-          "count": 1,
-          "year": 1967
-        },
-        {
-          "count": 1,
-          "year": 1968
-        },
-        {
-          "count": 2,
-          "year": 1969
-        },
-        {
-          "count": 1,
-          "year": 1970
-        },
-        {
-          "count": 2,
-          "year": 1975
-        },
-        {
-          "count": 1,
-          "year": 1976
-        },
-        {
-          "count": 1,
-          "year": 1977
-        },
-        {
-          "count": 1,
-          "year": 1980
-        },
-        {
-          "count": 1,
-          "year": 1988
-        },
-        {
-          "count": 1,
-          "year": 1990
-        },
-        {
-          "count": 2,
-          "year": 1992
-        },
-        {
-          "count": 1,
-          "year": 1995
-        },
-        {
-          "count": 1,
-          "year": 1997
-        }
-      ]
-    ],
-    [
       "Royal Air Force - RAF",
       [
         {
@@ -613,7 +484,7 @@
       ]
     ],
     [
-      "Fuerza Aérea Colombiana",
+      "Fuerza A�rea Colombiana",
       [
         {
           "count": 1,
@@ -750,6 +621,123 @@
         {
           "count": 2,
           "year": 2016
+        }
+      ]
+    ],
+    [
+      "Luftwaffe",
+      [
+        {
+          "count": 2,
+          "year": 1937
+        },
+        {
+          "count": 1,
+          "year": 1939
+        },
+        {
+          "count": 60,
+          "year": 1940
+        },
+        {
+          "count": 7,
+          "year": 1941
+        },
+        {
+          "count": 7,
+          "year": 1942
+        },
+        {
+          "count": 7,
+          "year": 1943
+        },
+        {
+          "count": 20,
+          "year": 1944
+        },
+        {
+          "count": 3,
+          "year": 1945
+        },
+        {
+          "count": 1,
+          "year": 1958
+        },
+        {
+          "count": 3,
+          "year": 1959
+        },
+        {
+          "count": 1,
+          "year": 1960
+        },
+        {
+          "count": 1,
+          "year": 1961
+        },
+        {
+          "count": 1,
+          "year": 1964
+        },
+        {
+          "count": 2,
+          "year": 1965
+        },
+        {
+          "count": 1,
+          "year": 1966
+        },
+        {
+          "count": 1,
+          "year": 1967
+        },
+        {
+          "count": 1,
+          "year": 1968
+        },
+        {
+          "count": 2,
+          "year": 1969
+        },
+        {
+          "count": 1,
+          "year": 1970
+        },
+        {
+          "count": 2,
+          "year": 1975
+        },
+        {
+          "count": 1,
+          "year": 1976
+        },
+        {
+          "count": 1,
+          "year": 1977
+        },
+        {
+          "count": 1,
+          "year": 1980
+        },
+        {
+          "count": 1,
+          "year": 1988
+        },
+        {
+          "count": 1,
+          "year": 1990
+        },
+        {
+          "count": 2,
+          "year": 1992
+        },
+        {
+          "count": 1,
+          "year": 1995
+        },
+        {
+          "count": 1,
+          "year": 1997
         }
       ]
     ],
@@ -1003,7 +991,7 @@
       ]
     ],
     [
-      "Fuerza Aérea Argentina - FAA",
+      "Fuerza A�rea Argentina - FAA",
       [
         {
           "count": 1,
@@ -1156,22 +1144,18 @@
       ]
     ],
     [
-      "Ejército del Aire",
+      "Ej�rcito del Aire",
       [
         {
-          "count": 2,
-          "year": 1939
-        },
-        {
           "count": 1,
-          "year": 1941
+          "year": 1939
         },
         {
           "count": 1,
           "year": 1945
         },
         {
-          "count": 2,
+          "count": 1,
           "year": 1946
         },
         {
@@ -1179,7 +1163,7 @@
           "year": 1950
         },
         {
-          "count": 8,
+          "count": 6,
           "year": 1951
         },
         {
@@ -1199,16 +1183,12 @@
           "year": 1955
         },
         {
-          "count": 2,
+          "count": 1,
           "year": 1956
         },
         {
-          "count": 4,
+          "count": 3,
           "year": 1957
-        },
-        {
-          "count": 1,
-          "year": 1958
         },
         {
           "count": 3,
@@ -1406,6 +1386,10 @@
         {
           "count": 1,
           "year": 1981
+        },
+        {
+          "count": 1,
+          "year": 1982
         },
         {
           "count": 2,
@@ -1616,7 +1600,7 @@
       ]
     ],
     [
-      "Força Aérea Brasileira - FAB",
+      "For�a A�rea Brasileira - FAB",
       [
         {
           "count": 1,
@@ -1942,18 +1926,22 @@
         {
           "count": 1,
           "year": 2015
+        },
+        {
+          "count": 1,
+          "year": 2019
         }
       ]
     ],
     [
-      "L'Armée de L'Air",
+      "L'Arm�e de L'Air",
       [
         {
           "count": 1,
           "year": 1945
         },
         {
-          "count": 7,
+          "count": 6,
           "year": 1947
         },
         {
@@ -2384,7 +2372,7 @@
       ]
     ],
     [
-      "Türk Hava Kuvvetleri (Turkish Air Force)",
+      "T�rk Hava Kuvvetleri (Turkish Air Force)",
       [
         {
           "count": 1,
@@ -2485,107 +2473,6 @@
       ]
     ],
     [
-      "Republic of China Air Force - ROCAF",
-      [
-        {
-          "count": 1,
-          "year": 1950
-        },
-        {
-          "count": 2,
-          "year": 1952
-        },
-        {
-          "count": 2,
-          "year": 1953
-        },
-        {
-          "count": 1,
-          "year": 1955
-        },
-        {
-          "count": 1,
-          "year": 1956
-        },
-        {
-          "count": 3,
-          "year": 1958
-        },
-        {
-          "count": 1,
-          "year": 1960
-        },
-        {
-          "count": 1,
-          "year": 1961
-        },
-        {
-          "count": 2,
-          "year": 1962
-        },
-        {
-          "count": 2,
-          "year": 1963
-        },
-        {
-          "count": 4,
-          "year": 1964
-        },
-        {
-          "count": 1,
-          "year": 1966
-        },
-        {
-          "count": 1,
-          "year": 1968
-        },
-        {
-          "count": 1,
-          "year": 1969
-        },
-        {
-          "count": 2,
-          "year": 1971
-        },
-        {
-          "count": 2,
-          "year": 1972
-        },
-        {
-          "count": 2,
-          "year": 1974
-        },
-        {
-          "count": 2,
-          "year": 1977
-        },
-        {
-          "count": 1,
-          "year": 1979
-        },
-        {
-          "count": 2,
-          "year": 1983
-        },
-        {
-          "count": 1,
-          "year": 1989
-        },
-        {
-          "count": 1,
-          "year": 1990
-        },
-        {
-          "count": 1,
-          "year": 1996
-        },
-        {
-          "count": 1,
-          "year": 1997
-        }
-      ]
-    ],
-    [
       "Indian Air Force - IAF",
       [
         {
@@ -2613,11 +2500,11 @@
           "year": 1959
         },
         {
-          "count": 1,
+          "count": 2,
           "year": 1960
         },
         {
-          "count": 6,
+          "count": 5,
           "year": 1961
         },
         {
@@ -2751,6 +2638,10 @@
         {
           "count": 1,
           "year": 2016
+        },
+        {
+          "count": 1,
+          "year": 2019
         }
       ]
     ],
@@ -2931,7 +2822,7 @@
           "year": 2001
         },
         {
-          "count": 1,
+          "count": 2,
           "year": 2003
         },
         {
@@ -3063,7 +2954,7 @@
           "year": 1942
         },
         {
-          "count": 2,
+          "count": 1,
           "year": 1943
         },
         {
@@ -3214,6 +3105,10 @@
         {
           "count": 1,
           "year": 2013
+        },
+        {
+          "count": 3,
+          "year": 2019
         }
       ]
     ],
@@ -3309,7 +3204,7 @@
           "year": 1972
         },
         {
-          "count": 1,
+          "count": 2,
           "year": 1978
         },
         {
@@ -3323,156 +3218,7 @@
       ]
     ],
     [
-      "Pan American World Airways (Pan Am)",
-      [
-        {
-          "count": 1,
-          "year": 1929
-        },
-        {
-          "count": 1,
-          "year": 1930
-        },
-        {
-          "count": 1,
-          "year": 1944
-        },
-        {
-          "count": 4,
-          "year": 1945
-        },
-        {
-          "count": 2,
-          "year": 1946
-        },
-        {
-          "count": 3,
-          "year": 1947
-        },
-        {
-          "count": 3,
-          "year": 1948
-        },
-        {
-          "count": 1,
-          "year": 1949
-        },
-        {
-          "count": 2,
-          "year": 1951
-        },
-        {
-          "count": 3,
-          "year": 1952
-        },
-        {
-          "count": 1,
-          "year": 1955
-        },
-        {
-          "count": 1,
-          "year": 1956
-        },
-        {
-          "count": 1,
-          "year": 1957
-        },
-        {
-          "count": 2,
-          "year": 1958
-        },
-        {
-          "count": 6,
-          "year": 1959
-        },
-        {
-          "count": 2,
-          "year": 1961
-        },
-        {
-          "count": 1,
-          "year": 1963
-        },
-        {
-          "count": 1,
-          "year": 1964
-        },
-        {
-          "count": 2,
-          "year": 1965
-        },
-        {
-          "count": 1,
-          "year": 1966
-        },
-        {
-          "count": 5,
-          "year": 1968
-        },
-        {
-          "count": 2,
-          "year": 1969
-        },
-        {
-          "count": 4,
-          "year": 1970
-        },
-        {
-          "count": 3,
-          "year": 1971
-        },
-        {
-          "count": 1,
-          "year": 1972
-        },
-        {
-          "count": 3,
-          "year": 1973
-        },
-        {
-          "count": 2,
-          "year": 1974
-        },
-        {
-          "count": 1,
-          "year": 1975
-        },
-        {
-          "count": 1,
-          "year": 1977
-        },
-        {
-          "count": 2,
-          "year": 1979
-        },
-        {
-          "count": 1,
-          "year": 1980
-        },
-        {
-          "count": 2,
-          "year": 1982
-        },
-        {
-          "count": 3,
-          "year": 1983
-        },
-        {
-          "count": 1,
-          "year": 1985
-        },
-        {
-          "count": 2,
-          "year": 1986
-        },
-        {
-          "count": 1,
-          "year": 1988
-        }
-      ]
-    ],
-    [
-      "CSA Ceskoslovenské Aerolinie",
+      "CSA Ceskoslovensk� Aerolinie",
       [
         {
           "count": 1,
@@ -3580,7 +3326,7 @@
       "Transcontinental & Western Air - TWA",
       [
         {
-          "count": 4,
+          "count": 3,
           "year": 1931
         },
         {
@@ -3646,116 +3392,7 @@
       ]
     ],
     [
-      "Mexicana de Aviación",
-      [
-        {
-          "count": 1,
-          "year": 1931
-        },
-        {
-          "count": 1,
-          "year": 1934
-        },
-        {
-          "count": 1,
-          "year": 1936
-        },
-        {
-          "count": 1,
-          "year": 1940
-        },
-        {
-          "count": 1,
-          "year": 1942
-        },
-        {
-          "count": 1,
-          "year": 1943
-        },
-        {
-          "count": 1,
-          "year": 1944
-        },
-        {
-          "count": 1,
-          "year": 1945
-        },
-        {
-          "count": 2,
-          "year": 1946
-        },
-        {
-          "count": 1,
-          "year": 1948
-        },
-        {
-          "count": 2,
-          "year": 1949
-        },
-        {
-          "count": 1,
-          "year": 1951
-        },
-        {
-          "count": 1,
-          "year": 1952
-        },
-        {
-          "count": 2,
-          "year": 1955
-        },
-        {
-          "count": 1,
-          "year": 1959
-        },
-        {
-          "count": 1,
-          "year": 1960
-        },
-        {
-          "count": 1,
-          "year": 1967
-        },
-        {
-          "count": 1,
-          "year": 1968
-        },
-        {
-          "count": 4,
-          "year": 1969
-        },
-        {
-          "count": 1,
-          "year": 1970
-        },
-        {
-          "count": 1,
-          "year": 1972
-        },
-        {
-          "count": 2,
-          "year": 1973
-        },
-        {
-          "count": 1,
-          "year": 1983
-        },
-        {
-          "count": 1,
-          "year": 1986
-        },
-        {
-          "count": 1,
-          "year": 1996
-        },
-        {
-          "count": 1,
-          "year": 2000
-        }
-      ]
-    ],
-    [
-      "Lloyd Aéreo Boliviano - LAB",
+      "Lloyd A�reo Boliviano - LAB",
       [
         {
           "count": 1,
@@ -4105,7 +3742,7 @@
       ]
     ],
     [
-      "Cubana de Aviación",
+      "Cubana de Aviaci�n",
       [
         {
           "count": 1,
@@ -4254,10 +3891,6 @@
         },
         {
           "count": 1,
-          "year": 1984
-        },
-        {
-          "count": 1,
           "year": 1985
         },
         {
@@ -4343,6 +3976,111 @@
         {
           "count": 5,
           "year": 2018
+        },
+        {
+          "count": 6,
+          "year": 2019
+        }
+      ]
+    ],
+    [
+      "Mexicana de Aviaci�n",
+      [
+        {
+          "count": 1,
+          "year": 1936
+        },
+        {
+          "count": 1,
+          "year": 1940
+        },
+        {
+          "count": 1,
+          "year": 1942
+        },
+        {
+          "count": 1,
+          "year": 1943
+        },
+        {
+          "count": 1,
+          "year": 1944
+        },
+        {
+          "count": 1,
+          "year": 1945
+        },
+        {
+          "count": 2,
+          "year": 1946
+        },
+        {
+          "count": 1,
+          "year": 1948
+        },
+        {
+          "count": 2,
+          "year": 1949
+        },
+        {
+          "count": 1,
+          "year": 1951
+        },
+        {
+          "count": 1,
+          "year": 1952
+        },
+        {
+          "count": 2,
+          "year": 1955
+        },
+        {
+          "count": 1,
+          "year": 1959
+        },
+        {
+          "count": 1,
+          "year": 1960
+        },
+        {
+          "count": 1,
+          "year": 1967
+        },
+        {
+          "count": 1,
+          "year": 1968
+        },
+        {
+          "count": 4,
+          "year": 1969
+        },
+        {
+          "count": 1,
+          "year": 1970
+        },
+        {
+          "count": 1,
+          "year": 1972
+        },
+        {
+          "count": 2,
+          "year": 1973
+        },
+        {
+          "count": 1,
+          "year": 1983
+        },
+        {
+          "count": 1,
+          "year": 1986
+        },
+        {
+          "count": 1,
+          "year": 1996
+        },
+        {
+          "count": 1,
+          "year": 2000
         }
       ]
     ],
@@ -4637,6 +4375,10 @@
         {
           "count": 6,
           "year": 2017
+        },
+        {
+          "count": 1,
+          "year": 2019
         }
       ]
     ],
@@ -4842,6 +4584,10 @@
         {
           "count": 1,
           "year": 2017
+        },
+        {
+          "count": 1,
+          "year": 2019
         }
       ]
     ],
@@ -5273,7 +5019,7 @@
       ]
     ],
     [
-      "VASP - Viação Aérea São Paulo",
+      "VASP - Via��o A�rea S�o Paulo",
       [
         {
           "count": 1,
@@ -6310,6 +6056,147 @@
         {
           "count": 1,
           "year": 1993
+        }
+      ]
+    ],
+    [
+      "Pan American World Airways (Pan Am)",
+      [
+        {
+          "count": 1,
+          "year": 1944
+        },
+        {
+          "count": 4,
+          "year": 1945
+        },
+        {
+          "count": 2,
+          "year": 1946
+        },
+        {
+          "count": 3,
+          "year": 1947
+        },
+        {
+          "count": 3,
+          "year": 1948
+        },
+        {
+          "count": 1,
+          "year": 1949
+        },
+        {
+          "count": 2,
+          "year": 1951
+        },
+        {
+          "count": 3,
+          "year": 1952
+        },
+        {
+          "count": 1,
+          "year": 1955
+        },
+        {
+          "count": 1,
+          "year": 1956
+        },
+        {
+          "count": 1,
+          "year": 1957
+        },
+        {
+          "count": 2,
+          "year": 1958
+        },
+        {
+          "count": 6,
+          "year": 1959
+        },
+        {
+          "count": 2,
+          "year": 1961
+        },
+        {
+          "count": 1,
+          "year": 1963
+        },
+        {
+          "count": 1,
+          "year": 1964
+        },
+        {
+          "count": 2,
+          "year": 1965
+        },
+        {
+          "count": 1,
+          "year": 1966
+        },
+        {
+          "count": 5,
+          "year": 1968
+        },
+        {
+          "count": 2,
+          "year": 1969
+        },
+        {
+          "count": 4,
+          "year": 1970
+        },
+        {
+          "count": 3,
+          "year": 1971
+        },
+        {
+          "count": 1,
+          "year": 1972
+        },
+        {
+          "count": 3,
+          "year": 1973
+        },
+        {
+          "count": 2,
+          "year": 1974
+        },
+        {
+          "count": 1,
+          "year": 1975
+        },
+        {
+          "count": 1,
+          "year": 1977
+        },
+        {
+          "count": 2,
+          "year": 1979
+        },
+        {
+          "count": 1,
+          "year": 1980
+        },
+        {
+          "count": 2,
+          "year": 1982
+        },
+        {
+          "count": 3,
+          "year": 1983
+        },
+        {
+          "count": 1,
+          "year": 1985
+        },
+        {
+          "count": 2,
+          "year": 1986
+        },
+        {
+          "count": 1,
+          "year": 1988
         }
       ]
     ],
@@ -7522,7 +7409,7 @@
           "year": 1984
         },
         {
-          "count": 3,
+          "count": 4,
           "year": 1985
         },
         {
@@ -8031,6 +7918,10 @@
         {
           "count": 6,
           "year": 2018
+        },
+        {
+          "count": 10,
+          "year": 2019
         }
       ]
     ],
@@ -9172,11 +9063,19 @@
         },
         {
           "count": 1,
+          "year": 1978
+        },
+        {
+          "count": 1,
           "year": 1979
         },
         {
           "count": 2,
           "year": 1980
+        },
+        {
+          "count": 1,
+          "year": 1981
         },
         {
           "count": 2,
@@ -9358,6 +9257,14 @@
         {
           "count": 1,
           "year": 2016
+        },
+        {
+          "count": 1,
+          "year": 2018
+        },
+        {
+          "count": 1,
+          "year": 2019
         }
       ]
     ],
@@ -9451,6 +9358,10 @@
         {
           "count": 1,
           "year": 2011
+        },
+        {
+          "count": 1,
+          "year": 2019
         }
       ]
     ],
@@ -9572,6 +9483,10 @@
         {
           "count": 1,
           "year": 2014
+        },
+        {
+          "count": 1,
+          "year": 2019
         }
       ]
     ],

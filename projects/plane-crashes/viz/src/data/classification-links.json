@@ -3,7 +3,7 @@
     {
       "source": "Hijacker(s) overpowered by occupants",
       "target": "Hijack",
-      "count": 223
+      "count": 229
     },
     {
       "source": "Mid air collision",
@@ -16,14 +16,14 @@
       "count": 150
     },
     {
-      "source": "Forced landing outside airport",
-      "target": "All engine powerloss",
-      "count": 171
-    },
-    {
       "source": "Plane stormed",
       "target": "Hijack",
-      "count": 117
+      "count": 123
+    },
+    {
+      "source": "Forced landing outside airport",
+      "target": "All engine powerloss",
+      "count": 170
     },
     {
       "source": "Wing failure",
@@ -38,17 +38,22 @@
     {
       "source": "Missing",
       "target": "Missing",
-      "count": 61
+      "count": 63
     },
     {
       "source": "Fuel starvation",
       "target": "Forced landing outside airport",
-      "count": 88
+      "count": 92
     },
     {
       "source": "Low visibility",
       "target": "Controlled Flight Into Terrain (CFIT) - Ground",
       "count": 55
+    },
+    {
+      "source": "Wheel(s) up landing",
+      "target": "Forced landing on runway",
+      "count": 46
     },
     {
       "source": "Shot down from the ground",
@@ -61,19 +66,14 @@
       "count": 42
     },
     {
-      "source": "Wheel(s) up landing",
-      "target": "Forced landing on runway",
-      "count": 43
+      "source": "Hijacker(s) escaped",
+      "target": "Hijack",
+      "count": 38
     },
     {
       "source": "Mid air collision",
       "target": "Forced landing on runway",
       "count": 37
-    },
-    {
-      "source": "Hijacker(s) escaped",
-      "target": "Hijack",
-      "count": 36
     },
     {
       "source": "Loss of control",
@@ -93,7 +93,7 @@
     {
       "source": "Fuel starvation",
       "target": "All engine powerloss",
-      "count": 38
+      "count": 41
     },
     {
       "source": "Turbulence",
@@ -116,9 +116,9 @@
       "count": 26
     },
     {
-      "source": "Sabotage",
-      "target": "Loss of control",
-      "count": 29
+      "source": "Fuel starvation",
+      "target": "Ditching",
+      "count": 32
     },
     {
       "source": "Loss of control",
@@ -126,19 +126,14 @@
       "count": 26
     },
     {
-      "source": "Fuel starvation",
-      "target": "Ditching",
-      "count": 30
+      "source": "Sabotage",
+      "target": "Loss of control",
+      "count": 29
     },
     {
       "source": "Forced landing on runway",
       "target": "Bird strike",
       "count": 22
-    },
-    {
-      "source": "Ground collision",
-      "target": "Damaged on the ground",
-      "count": 21
     },
     {
       "source": "Loss of control",
@@ -166,14 +161,14 @@
       "count": 19
     },
     {
-      "source": "Loss of situational awareness",
-      "target": "Loss of control",
-      "count": 20
-    },
-    {
       "source": "Uncontained engine failure",
       "target": "Forced landing on runway",
       "count": 21
+    },
+    {
+      "source": "Loss of situational awareness",
+      "target": "Loss of control",
+      "count": 20
     },
     {
       "source": "Loss of control",
@@ -186,14 +181,9 @@
       "count": 18
     },
     {
-      "source": "VFR flight in IMC",
-      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
-      "count": 23
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Centre of Gravity outside limits",
-      "count": 18
+      "source": "Wrong takeoff configuration (flaps/trim)",
+      "target": "Loss of control",
+      "count": 19
     },
     {
       "source": "Loss of control",
@@ -201,14 +191,19 @@
       "count": 21
     },
     {
-      "source": "Wrong takeoff configuration (flaps/trim)",
+      "source": "Wrong installation of parts",
       "target": "Loss of control",
       "count": 19
     },
     {
-      "source": "Wrong installation of parts",
-      "target": "Loss of control",
-      "count": 19
+      "source": "Runway excursion",
+      "target": "Centre of Gravity outside limits",
+      "count": 18
+    },
+    {
+      "source": "VFR flight in IMC",
+      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
+      "count": 23
     },
     {
       "source": "Sabotage",
@@ -222,8 +217,8 @@
     },
     {
       "source": "Loss of control",
-      "target": "Flightcrew incapacitation",
-      "count": 15
+      "target": "Engine separation",
+      "count": 16
     },
     {
       "source": "Thunderstorm",
@@ -241,19 +236,14 @@
       "count": 12
     },
     {
-      "source": "Shot down by aircraft",
-      "target": "Loss of control",
+      "source": "Wheel(s) up landing",
+      "target": "Forced landing outside airport",
       "count": 15
     },
     {
-      "source": "Wheel(s) up landing",
-      "target": "Forced landing outside airport",
-      "count": 14
-    },
-    {
       "source": "Loss of control",
-      "target": "Engine separation",
-      "count": 16
+      "target": "Flightcrew incapacitation",
+      "count": 13
     },
     {
       "source": "Loss of control",
@@ -261,19 +251,9 @@
       "count": 15
     },
     {
-      "source": "Forced landing on runway",
-      "target": "Engine separation",
-      "count": 13
-    },
-    {
-      "source": "Hangar / ground fire",
-      "target": "Damaged on the ground",
-      "count": 11
-    },
-    {
-      "source": "Destroyed on ground",
-      "target": "Damaged on the ground",
-      "count": 11
+      "source": "Shot down by aircraft",
+      "target": "Loss of control",
+      "count": 15
     },
     {
       "source": "Uncontained engine failure",
@@ -281,14 +261,19 @@
       "count": 13
     },
     {
-      "source": "Wrong takeoff configuration (flaps/trim)",
-      "target": "Runway excursion",
-      "count": 12
+      "source": "Forced landing on runway",
+      "target": "Engine separation",
+      "count": 13
     },
     {
       "source": "Icing",
       "target": "Forced landing outside airport",
       "count": 17
+    },
+    {
+      "source": "Wrong takeoff configuration (flaps/trim)",
+      "target": "Runway excursion",
+      "count": 12
     },
     {
       "source": "Shot down from the ground",
@@ -297,13 +282,13 @@
     },
     {
       "source": "Runway excursion",
-      "target": "Icing",
-      "count": 10
+      "target": "Overloaded",
+      "count": 12
     },
     {
       "source": "Runway excursion",
-      "target": "Overloaded",
-      "count": 12
+      "target": "Icing",
+      "count": 10
     },
     {
       "source": "Forced landing outside airport",
@@ -311,9 +296,14 @@
       "count": 13
     },
     {
-      "source": "Forced landing outside airport",
-      "target": "Engine separation",
+      "source": "Insufficient rest / fatigue",
+      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
       "count": 9
+    },
+    {
+      "source": "Forced landing on runway",
+      "target": "Cargo fire/smoke",
+      "count": 8
     },
     {
       "source": "Mid air collision",
@@ -321,8 +311,8 @@
       "count": 8
     },
     {
-      "source": "Shot down by aircraft",
-      "target": "Forced landing on runway",
+      "source": "Insufficient rest / fatigue",
+      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
       "count": 9
     },
     {
@@ -336,19 +326,19 @@
       "count": 8
     },
     {
-      "source": "Insufficient rest / fatigue",
-      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
+      "source": "Forced landing outside airport",
+      "target": "Engine separation",
       "count": 9
     },
     {
-      "source": "Insufficient rest / fatigue",
-      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
+      "source": "Shot down by aircraft",
+      "target": "Forced landing on runway",
       "count": 9
     },
     {
-      "source": "Forced landing on runway",
-      "target": "Cargo fire/smoke",
-      "count": 8
+      "source": "Shot down from the ground",
+      "target": "Shot down from the ground",
+      "count": 7
     },
     {
       "source": "Loss of control",
@@ -356,13 +346,13 @@
       "count": 11
     },
     {
-      "source": "Simulated engine failure",
-      "target": "Loss of control",
-      "count": 7
+      "source": "Shot down by aircraft",
+      "target": "Forced landing outside airport",
+      "count": 8
     },
     {
-      "source": "Shot down from the ground",
-      "target": "Shot down from the ground",
+      "source": "Flightcrew member's alcohol, drug usage",
+      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
       "count": 7
     },
     {
@@ -371,34 +361,9 @@
       "count": 7
     },
     {
-      "source": "Flightcrew member's alcohol, drug usage",
-      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
+      "source": "Simulated engine failure",
+      "target": "Loss of control",
       "count": 7
-    },
-    {
-      "source": "Shot down by aircraft",
-      "target": "Forced landing outside airport",
-      "count": 8
-    },
-    {
-      "source": "Loss of control",
-      "target": "All engine powerloss",
-      "count": 11
-    },
-    {
-      "source": "Missing",
-      "target": "Ditching",
-      "count": 6
-    },
-    {
-      "source": "Shot down by aircraft",
-      "target": "Ditching",
-      "count": 6
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Landing or takeoff on wrong runway",
-      "count": 6
     },
     {
       "source": "Low visibility",
@@ -411,18 +376,8 @@
       "count": 6
     },
     {
-      "source": "Runway mishap",
-      "target": "Landing gear collapse",
-      "count": 8
-    },
-    {
-      "source": "Prop/turbine blade separation",
-      "target": "Loss of control",
-      "count": 8
-    },
-    {
-      "source": "Shot down by aircraft",
-      "target": "Shot down by aircraft",
+      "source": "Wheel(s) up landing",
+      "target": "Runway excursion",
       "count": 6
     },
     {
@@ -431,7 +386,32 @@
       "count": 9
     },
     {
+      "source": "Loss of control",
+      "target": "All engine powerloss",
+      "count": 11
+    },
+    {
+      "source": "Shot down by aircraft",
+      "target": "Ditching",
+      "count": 6
+    },
+    {
+      "source": "VFR flight in IMC",
+      "target": "Low visibility",
+      "count": 9
+    },
+    {
       "source": "Engine separation",
+      "target": "Ditching",
+      "count": 6
+    },
+    {
+      "source": "Prop/turbine blade separation",
+      "target": "Loss of control",
+      "count": 8
+    },
+    {
+      "source": "Missing",
       "target": "Ditching",
       "count": 6
     },
@@ -441,14 +421,44 @@
       "count": 6
     },
     {
-      "source": "VFR flight in IMC",
-      "target": "Low visibility",
-      "count": 9
+      "source": "Shot down by aircraft",
+      "target": "Shot down by aircraft",
+      "count": 6
     },
     {
-      "source": "Flightcrew member's alcohol, drug usage",
-      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
+      "source": "Runway excursion",
+      "target": "Landing or takeoff on wrong runway",
       "count": 6
+    },
+    {
+      "source": "Loss of control",
+      "target": "Cargo fire/smoke",
+      "count": 7
+    },
+    {
+      "source": "Overloaded",
+      "target": "Ditching",
+      "count": 5
+    },
+    {
+      "source": "Loss of control",
+      "target": "Fuel contamination",
+      "count": 6
+    },
+    {
+      "source": "Ground collision",
+      "target": "Damaged on the ground",
+      "count": 5
+    },
+    {
+      "source": "Fuel contamination",
+      "target": "Forced landing outside airport",
+      "count": 11
+    },
+    {
+      "source": "Shutdown of wrong engine",
+      "target": "Forced landing outside airport",
+      "count": 5
     },
     {
       "source": "Loss of control",
@@ -461,49 +471,29 @@
       "count": 10
     },
     {
-      "source": "Loss of control",
-      "target": "Cargo fire/smoke",
-      "count": 7
-    },
-    {
-      "source": "Overloaded",
-      "target": "Ditching",
-      "count": 5
+      "source": "Flightcrew member's alcohol, drug usage",
+      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
+      "count": 6
     },
     {
       "source": "Overloaded",
       "target": "Forced landing outside airport",
       "count": 5
+    },
+    {
+      "source": "Low visibility",
+      "target": "Controlled Flight Into Terrain (CFIT) - Water",
+      "count": 5
+    },
+    {
+      "source": "Controlled Flight Into Terrain (CFIT) - Water",
+      "target": "Cause undetermined",
+      "count": 6
     },
     {
       "source": "Fuel contamination",
-      "target": "Forced landing outside airport",
-      "count": 11
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Insufficient rest / fatigue",
-      "count": 6
-    },
-    {
-      "source": "Windshear/downdraft",
-      "target": "Forced landing on runway",
-      "count": 5
-    },
-    {
-      "source": "Tailstrike",
-      "target": "Runway mishap",
+      "target": "All engine powerloss",
       "count": 7
-    },
-    {
-      "source": "Loss of control",
-      "target": "Fuel contamination",
-      "count": 6
-    },
-    {
-      "source": "Shutdown of wrong engine",
-      "target": "Forced landing outside airport",
-      "count": 5
     },
     {
       "source": "Shutdown of wrong engine",
@@ -511,8 +501,8 @@
       "count": 7
     },
     {
-      "source": "Runway mishap",
-      "target": "Gear-up landing",
+      "source": "Windshear/downdraft",
+      "target": "Forced landing on runway",
       "count": 5
     },
     {
@@ -521,33 +511,18 @@
       "count": 10
     },
     {
-      "source": "Controlled Flight Into Terrain (CFIT) - Water",
-      "target": "Cause undetermined",
+      "source": "Runway excursion",
+      "target": "Insufficient rest / fatigue",
       "count": 6
     },
     {
-      "source": "Low visibility",
-      "target": "Controlled Flight Into Terrain (CFIT) - Water",
-      "count": 5
-    },
-    {
-      "source": "Wheel(s) up landing",
+      "source": "Windshear/downdraft",
       "target": "Runway excursion",
-      "count": 5
+      "count": 4
     },
     {
-      "source": "Fuel contamination",
-      "target": "All engine powerloss",
-      "count": 7
-    },
-    {
-      "source": "Loss of situational awareness",
-      "target": "Controlled Flight Into Terrain (CFIT) - Water",
-      "count": 5
-    },
-    {
-      "source": "Overloaded",
-      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
+      "source": "Prop/turbine blade separation",
+      "target": "Forced landing outside airport",
       "count": 4
     },
     {
@@ -566,9 +541,9 @@
       "count": 9
     },
     {
-      "source": "Bird strike",
-      "target": "All engine powerloss",
-      "count": 8
+      "source": "Loss of situational awareness",
+      "target": "Controlled Flight Into Terrain (CFIT) - Water",
+      "count": 5
     },
     {
       "source": "VFR flight in IMC",
@@ -576,19 +551,9 @@
       "count": 5
     },
     {
-      "source": "Tail failure",
-      "target": "Sabotage",
+      "source": "Overloaded",
+      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
       "count": 4
-    },
-    {
-      "source": "Prop/turbine blade separation",
-      "target": "Forced landing outside airport",
-      "count": 4
-    },
-    {
-      "source": "Runway mishap",
-      "target": "Heavy landing",
-      "count": 5
     },
     {
       "source": "Overloaded",
@@ -596,8 +561,8 @@
       "count": 8
     },
     {
-      "source": "Windshear/downdraft",
-      "target": "Runway excursion",
+      "source": "Loss of situational awareness",
+      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
       "count": 4
     },
     {
@@ -606,28 +571,48 @@
       "count": 6
     },
     {
-      "source": "Loss of situational awareness",
-      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
-      "count": 4
-    },
-    {
       "source": "Wrong installation of parts",
       "target": "Runway excursion",
       "count": 4
     },
     {
-      "source": "Runway mishap",
-      "target": "Runway incursion",
-      "count": 3
+      "source": "Bird strike",
+      "target": "All engine powerloss",
+      "count": 7
     },
     {
-      "source": "Forced landing outside airport",
-      "target": "Flightcrew  un(der)qualified",
+      "source": "Tail failure",
+      "target": "Sabotage",
       "count": 4
     },
     {
       "source": "Runway excursion",
-      "target": "Landing gear collapse",
+      "target": "Flightcrew  un(der)qualified",
+      "count": 5
+    },
+    {
+      "source": "Shot down from the ground",
+      "target": "Runway excursion",
+      "count": 3
+    },
+    {
+      "source": "Tail failure",
+      "target": "Icing",
+      "count": 3
+    },
+    {
+      "source": "Wing failure",
+      "target": "Lightningstrike",
+      "count": 3
+    },
+    {
+      "source": "Mid air collision",
+      "target": "Ditching",
+      "count": 3
+    },
+    {
+      "source": "Navigational beacons inoperative",
+      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
       "count": 3
     },
     {
@@ -636,34 +621,9 @@
       "count": 3
     },
     {
-      "source": "Low visibility",
-      "target": "Forced landing outside airport",
-      "count": 3
-    },
-    {
-      "source": "Low visibility",
-      "target": "Fuel starvation",
-      "count": 6
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Low visibility",
-      "count": 3
-    },
-    {
-      "source": "Inflight fire",
+      "source": "Fuselage failure",
       "target": "Forced landing on runway",
       "count": 3
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Flightcrew  un(der)qualified",
-      "count": 5
-    },
-    {
-      "source": "Insufficient rest / fatigue",
-      "target": "Controlled Flight Into Terrain (CFIT) - Water",
-      "count": 5
     },
     {
       "source": "Loss of control",
@@ -676,13 +636,43 @@
       "count": 3
     },
     {
-      "source": "Forced landing on runway",
-      "target": "Cargo door failure",
-      "count": 3
+      "source": "Low visibility",
+      "target": "Fuel starvation",
+      "count": 6
     },
     {
       "source": "Sabotage",
       "target": "Fuselage failure",
+      "count": 3
+    },
+    {
+      "source": "Passenger door failure",
+      "target": "Forced landing on runway",
+      "count": 3
+    },
+    {
+      "source": "Forced landing outside airport",
+      "target": "Flightcrew  un(der)qualified",
+      "count": 4
+    },
+    {
+      "source": "Low visibility",
+      "target": "Forced landing outside airport",
+      "count": 3
+    },
+    {
+      "source": "Runway excursion",
+      "target": "Low visibility",
+      "count": 3
+    },
+    {
+      "source": "Insufficient rest / fatigue",
+      "target": "Controlled Flight Into Terrain (CFIT) - Water",
+      "count": 5
+    },
+    {
+      "source": "Forced landing on runway",
+      "target": "Cargo door failure",
       "count": 3
     },
     {
@@ -696,26 +686,6 @@
       "count": 5
     },
     {
-      "source": "Mid air collision",
-      "target": "Ditching",
-      "count": 3
-    },
-    {
-      "source": "Tail failure",
-      "target": "Icing",
-      "count": 3
-    },
-    {
-      "source": "Gear-up landing",
-      "target": "Forced landing on runway",
-      "count": 3
-    },
-    {
-      "source": "Shot down from the ground",
-      "target": "Runway excursion",
-      "count": 3
-    },
-    {
       "source": "Turbulence",
       "target": "Tail failure",
       "count": 3
@@ -726,128 +696,18 @@
       "count": 3
     },
     {
-      "source": "Wing failure",
-      "target": "Lightningstrike",
-      "count": 3
-    },
-    {
-      "source": "Navigational beacons inoperative",
-      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
+      "source": "Precipitation-induced flame-out",
+      "target": "Forced landing outside airport",
       "count": 3
     },
     {
       "source": "Passenger door failure",
-      "target": "Forced landing on runway",
-      "count": 3
-    },
-    {
-      "source": "Fuselage failure",
-      "target": "Forced landing on runway",
-      "count": 3
-    },
-    {
-      "source": "Loss of control",
-      "target": "Failure to follow AD and SB's",
-      "count": 4
-    },
-    {
-      "source": "Lightningstrike",
-      "target": "Forced landing on runway",
-      "count": 3
-    },
-    {
-      "source": "Runway mishap",
-      "target": "Premature gear retraction on take-off",
-      "count": 2
-    },
-    {
-      "source": "Thunderstorm",
-      "target": "Engine separation",
-      "count": 2
-    },
-    {
-      "source": "Pilot or passenger suicide",
-      "target": "Deliberately crashed",
-      "count": 2
-    },
-    {
-      "source": "Overloaded",
-      "target": "Icing",
-      "count": 6
-    },
-    {
-      "source": "Forced landing on runway",
-      "target": "Engine fire",
-      "count": 2
-    },
-    {
-      "source": "Missing",
       "target": "Loss of control",
-      "count": 3
-    },
-    {
-      "source": "Thunderstorm",
-      "target": "Forced landing on runway",
-      "count": 2
-    },
-    {
-      "source": "Fuel exhaustion",
-      "target": "Forced landing outside airport",
-      "count": 4
-    },
-    {
-      "source": "Wing failure",
-      "target": "Thunderstorm",
-      "count": 2
-    },
-    {
-      "source": "Wrong takeoff configuration (flaps/trim)",
-      "target": "Overloaded",
-      "count": 2
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Premature gear retraction on take-off",
       "count": 2
     },
     {
       "source": "Runway incursion",
-      "target": "Runway excursion",
-      "count": 3
-    },
-    {
-      "source": "Turbulence",
-      "target": "Engine separation",
-      "count": 2
-    },
-    {
-      "source": "Turbulence",
       "target": "Forced landing on runway",
-      "count": 3
-    },
-    {
-      "source": "Windshear/downdraft",
-      "target": "Runway mishap",
-      "count": 2
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Fuel starvation",
-      "count": 3
-    },
-    {
-      "source": "Loss of control",
-      "target": "Engine fire",
-      "count": 3
-    },
-    {
-      "source": "Icing",
-      "target": "Ditching",
-      "count": 2
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Rejected takeoff",
       "count": 2
     },
     {
@@ -856,103 +716,13 @@
       "count": 2
     },
     {
-      "source": "Runway incursion",
-      "target": "Loss of control",
-      "count": 4
-    },
-    {
-      "source": "Runway incursion",
-      "target": "Forced landing on runway",
-      "count": 2
+      "source": "Loss of control",
+      "target": "Fuel starvation",
+      "count": 8
     },
     {
       "source": "Wrong installation of parts",
       "target": "Wing failure",
-      "count": 2
-    },
-    {
-      "source": "Sabotage",
-      "target": "Hijacker(s) overpowered by occupants",
-      "count": 2
-    },
-    {
-      "source": "Uncontained engine failure",
-      "target": "Forced landing outside airport",
-      "count": 2
-    },
-    {
-      "source": "Ditching",
-      "target": "Bird strike",
-      "count": 3
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Flightcrew member's alcohol, drug usage",
-      "count": 2
-    },
-    {
-      "source": "Normal landing",
-      "target": "Bird strike",
-      "count": 2
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Distraction in cockpit",
-      "count": 2
-    },
-    {
-      "source": "Hijack",
-      "target": "Forced landing on runway",
-      "count": 3
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Late landing",
-      "count": 2
-    },
-    {
-      "source": "Forced landing outside airport",
-      "target": "Cargo fire/smoke",
-      "count": 2
-    },
-    {
-      "source": "Loss of control",
-      "target": "Improper flap/slat usage",
-      "count": 3
-    },
-    {
-      "source": "Sabotage",
-      "target": "Damaged on the ground",
-      "count": 2
-    },
-    {
-      "source": "Forced landing outside airport",
-      "target": "Cause undetermined",
-      "count": 3
-    },
-    {
-      "source": "Landing gear collapse",
-      "target": "Damaged on the ground",
-      "count": 2
-    },
-    {
-      "source": "Tailstrike",
-      "target": "Runway excursion",
-      "count": 2
-    },
-    {
-      "source": "Runway incursion",
-      "target": "Damaged on the ground",
-      "count": 2
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Failure to follow AD and SB's",
-      "count": 2
-    },
-    {
-      "source": "Locked rudders/ailerons/gustlock",
-      "target": "Flightcrew member's alcohol, drug usage",
       "count": 2
     },
     {
@@ -966,13 +736,118 @@
       "count": 3
     },
     {
-      "source": "Passenger door failure",
-      "target": "Loss of control",
+      "source": "Icing",
+      "target": "Ditching",
       "count": 2
     },
     {
       "source": "Runway excursion",
+      "target": "Failure to follow AD and SB's",
+      "count": 2
+    },
+    {
+      "source": "Flightcrew member's alcohol, drug usage",
+      "target": "Centre of Gravity outside limits",
+      "count": 2
+    },
+    {
+      "source": "Runway excursion",
+      "target": "Distraction in cockpit",
+      "count": 2
+    },
+    {
+      "source": "Runway incursion",
+      "target": "Loss of control",
+      "count": 4
+    },
+    {
+      "source": "Landing gear collapse",
+      "target": "Damaged on the ground",
+      "count": 2
+    },
+    {
+      "source": "Forced landing outside airport",
+      "target": "Cause undetermined",
+      "count": 3
+    },
+    {
+      "source": "Loss of control",
+      "target": "Failure to follow AD and SB's",
+      "count": 4
+    },
+    {
+      "source": "Gear-up landing",
+      "target": "Forced landing on runway",
+      "count": 2
+    },
+    {
+      "source": "Wrong installation of parts",
+      "target": "Forced landing on runway",
+      "count": 5
+    },
+    {
+      "source": "Wrong takeoff configuration (flaps/trim)",
+      "target": "Overloaded",
+      "count": 2
+    },
+    {
+      "source": "Turbulence",
+      "target": "Engine separation",
+      "count": 2
+    },
+    {
+      "source": "Turbulence",
+      "target": "Forced landing on runway",
+      "count": 3
+    },
+    {
+      "source": "Overloaded",
+      "target": "Icing",
+      "count": 6
+    },
+    {
+      "source": "Runway mishap",
       "target": "Bounced on landing",
+      "count": 2
+    },
+    {
+      "source": "Tailstrike",
+      "target": "Runway excursion",
+      "count": 2
+    },
+    {
+      "source": "Runway excursion",
+      "target": "Premature gear retraction on take-off",
+      "count": 2
+    },
+    {
+      "source": "Thunderstorm",
+      "target": "Engine separation",
+      "count": 2
+    },
+    {
+      "source": "Runway excursion",
+      "target": "Fuel starvation",
+      "count": 3
+    },
+    {
+      "source": "Loss of control",
+      "target": "Improper flap/slat usage",
+      "count": 3
+    },
+    {
+      "source": "Lightningstrike",
+      "target": "Forced landing on runway",
+      "count": 3
+    },
+    {
+      "source": "Runway incursion",
+      "target": "Runway excursion",
+      "count": 3
+    },
+    {
+      "source": "Wing failure",
+      "target": "Thunderstorm",
       "count": 2
     },
     {
@@ -981,39 +856,54 @@
       "count": 3
     },
     {
+      "source": "Thunderstorm",
+      "target": "Forced landing on runway",
+      "count": 2
+    },
+    {
+      "source": "Missing",
+      "target": "Loss of control",
+      "count": 3
+    },
+    {
+      "source": "Forced landing outside airport",
+      "target": "Cargo fire/smoke",
+      "count": 2
+    },
+    {
+      "source": "Ditching",
+      "target": "Bird strike",
+      "count": 3
+    },
+    {
       "source": "Runway incursion",
       "target": "Low visibility",
-      "count": 3
-    },
-    {
-      "source": "Flightcrew member's alcohol, drug usage",
-      "target": "Centre of Gravity outside limits",
-      "count": 2
-    },
-    {
-      "source": "Precipitation-induced flame-out",
-      "target": "Forced landing outside airport",
-      "count": 3
-    },
-    {
-      "source": "Loss of control",
-      "target": "Fuel starvation",
-      "count": 8
-    },
-    {
-      "source": "Fuel starvation",
-      "target": "Flightcrew  un(der)qualified",
-      "count": 2
-    },
-    {
-      "source": "Language/communication problems",
-      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
-      "count": 2
-    },
-    {
-      "source": "Runway mishap",
-      "target": "Bounced on landing",
       "count": 4
+    },
+    {
+      "source": "Hijack",
+      "target": "Forced landing on runway",
+      "count": 3
+    },
+    {
+      "source": "Runway excursion",
+      "target": "Flightcrew member's alcohol, drug usage",
+      "count": 2
+    },
+    {
+      "source": "Locked rudders/ailerons/gustlock",
+      "target": "Flightcrew member's alcohol, drug usage",
+      "count": 2
+    },
+    {
+      "source": "Uncontained engine failure",
+      "target": "Forced landing outside airport",
+      "count": 2
+    },
+    {
+      "source": "Tailstrike",
+      "target": "Runway mishap",
+      "count": 3
     },
     {
       "source": "Missing",
@@ -1021,28 +911,53 @@
       "count": 2
     },
     {
-      "source": "Precipitation-induced flame-out",
-      "target": "Ditching",
+      "source": "Fuel starvation",
+      "target": "Flightcrew  un(der)qualified",
+      "count": 2
+    },
+    {
+      "source": "Sabotage",
+      "target": "Hijacker(s) overpowered by occupants",
+      "count": 2
+    },
+    {
+      "source": "Forced landing on runway",
+      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
       "count": 1
     },
     {
-      "source": "Wrong takeoff configuration (flaps/trim)",
-      "target": "Insufficient rest / fatigue",
+      "source": "Runway incursion",
+      "target": "Hijack",
       "count": 1
     },
     {
       "source": "Runway excursion",
-      "target": "All engine powerloss",
-      "count": 3
-    },
-    {
-      "source": "Shot down by aircraft",
       "target": "Hijack",
       "count": 2
     },
     {
-      "source": "Turbulence",
+      "source": "Loss of situational awareness",
+      "target": "Insufficient rest / fatigue",
+      "count": 2
+    },
+    {
+      "source": "Flightcrew  un(der)qualified",
+      "target": "All engine powerloss",
+      "count": 2
+    },
+    {
+      "source": "Navigational beacons inoperative",
       "target": "Controlled Flight Into Terrain (CFIT) - Ground",
+      "count": 1
+    },
+    {
+      "source": "Runway excursion",
+      "target": "Cargo door failure",
+      "count": 1
+    },
+    {
+      "source": "Low visibility",
+      "target": "Flightcrew member's alcohol, drug usage",
       "count": 1
     },
     {
@@ -1051,569 +966,9 @@
       "count": 2
     },
     {
-      "source": "Wing failure",
-      "target": "VFR flight in IMC",
-      "count": 2
-    },
-    {
-      "source": "VFR flight in IMC",
-      "target": "Turbulence",
-      "count": 1
-    },
-    {
-      "source": "Landing gear collapse",
-      "target": "Bounced on landing",
-      "count": 1
-    },
-    {
-      "source": "Runway mishap",
-      "target": "Collision with person or animal on the ground",
-      "count": 2
-    },
-    {
-      "source": "Landing gear collapse",
-      "target": "Collision with person or animal on the ground",
-      "count": 1
-    },
-    {
-      "source": "Wheel(s) up landing",
-      "target": "Cargo door failure",
-      "count": 1
-    },
-    {
-      "source": "Forced landing outside airport",
-      "target": "Cargo door failure",
-      "count": 1
-    },
-    {
-      "source": "Insufficient rest / fatigue",
-      "target": "Flightcrew's failure to monitor instruments",
-      "count": 1
-    },
-    {
-      "source": "Flightcrew's failure to monitor instruments",
-      "target": "Controlled Flight Into Terrain (CFIT) - Water",
-      "count": 1
-    },
-    {
-      "source": "Loss of control",
-      "target": "Language/communication problems",
-      "count": 2
-    },
-    {
-      "source": "Failure to follow AD and SB's",
-      "target": "Cargo door failure",
-      "count": 1
-    },
-    {
-      "source": "Runway mishap",
-      "target": "Centre of Gravity outside limits",
-      "count": 1
-    },
-    {
-      "source": "Centre of Gravity outside limits",
-      "target": "Bounced on landing",
-      "count": 1
-    },
-    {
-      "source": "Hijack",
-      "target": "Ditching",
-      "count": 1
-    },
-    {
-      "source": "Hijack",
-      "target": "Fuel starvation",
-      "count": 2
-    },
-    {
-      "source": "Flightcrew member's mental condition",
-      "target": "Controlled Flight Into Terrain (CFIT) - Water",
-      "count": 1
-    },
-    {
-      "source": "Low visibility",
-      "target": "Insufficient rest / fatigue",
-      "count": 2
-    },
-    {
-      "source": "Forced landing on runway",
-      "target": "Explosive decompression",
-      "count": 1
-    },
-    {
-      "source": "Fuel contamination",
-      "target": "Forced landing on runway",
-      "count": 1
-    },
-    {
-      "source": "Wheel(s) up landing",
-      "target": "Bird strike",
-      "count": 1
-    },
-    {
-      "source": "Loss of control",
-      "target": "Aileron issue",
-      "count": 1
-    },
-    {
-      "source": "Navigational error",
-      "target": "Low visibility",
-      "count": 1
-    },
-    {
-      "source": "Forced landing outside airport",
-      "target": "Collision with pole or wires",
-      "count": 1
-    },
-    {
-      "source": "Navigational error",
-      "target": "All engine powerloss",
-      "count": 1
-    },
-    {
-      "source": "Navigational error",
-      "target": "Forced landing outside airport",
-      "count": 2
-    },
-    {
-      "source": "Navigational error",
-      "target": "Fuel starvation",
-      "count": 1
-    },
-    {
-      "source": "Wrong installation of parts",
-      "target": "All engine powerloss",
-      "count": 2
-    },
-    {
-      "source": "Wrong installation of parts",
-      "target": "Forced landing on runway",
-      "count": 4
-    },
-    {
       "source": "Forced landing on runway",
       "target": "All engine powerloss",
       "count": 6
-    },
-    {
-      "source": "Overloaded",
-      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
-      "count": 1
-    },
-    {
-      "source": "Uncontained engine failure",
-      "target": "Ditching",
-      "count": 1
-    },
-    {
-      "source": "Uncontained engine failure",
-      "target": "Flightcrew member's alcohol, drug usage",
-      "count": 1
-    },
-    {
-      "source": "Uncontained engine failure",
-      "target": "Shutdown of wrong engine",
-      "count": 2
-    },
-    {
-      "source": "Shutdown of wrong engine",
-      "target": "Ditching",
-      "count": 2
-    },
-    {
-      "source": "Shutdown of wrong engine",
-      "target": "Flightcrew member's alcohol, drug usage",
-      "count": 1
-    },
-    {
-      "source": "Flightcrew member's alcohol, drug usage",
-      "target": "Ditching",
-      "count": 1
-    },
-    {
-      "source": "Windshear/downdraft",
-      "target": "Thunderstorm",
-      "count": 1
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Collision with approach or runway lights",
-      "count": 1
-    },
-    {
-      "source": "VFR flight in IMC",
-      "target": "Mid air collision",
-      "count": 1
-    },
-    {
-      "source": "Hijack",
-      "target": "Forced landing outside airport",
-      "count": 1
-    },
-    {
-      "source": "Flightcrew  un(der)qualified",
-      "target": "Controlled Flight Into Terrain (CFIT) - Water",
-      "count": 1
-    },
-    {
-      "source": "Wing failure",
-      "target": "Centre of Gravity outside limits",
-      "count": 1
-    },
-    {
-      "source": "Prop/turbine blade separation",
-      "target": "Failure to follow AD and SB's",
-      "count": 1
-    },
-    {
-      "source": "Fuel exhaustion",
-      "target": "All engine powerloss",
-      "count": 3
-    },
-    {
-      "source": "Distraction in cockpit",
-      "target": "Controlled Flight Into Terrain (CFIT) - Water",
-      "count": 1
-    },
-    {
-      "source": "Wrong installation of parts",
-      "target": "Tail failure",
-      "count": 1
-    },
-    {
-      "source": "Damaged on the ground",
-      "target": "Brake problem",
-      "count": 1
-    },
-    {
-      "source": "Wrong takeoff configuration (flaps/trim)",
-      "target": "Flightcrew  un(der)qualified",
-      "count": 1
-    },
-    {
-      "source": "Flightcrew's failure to monitor instruments",
-      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
-      "count": 2
-    },
-    {
-      "source": "Flightcrew  un(der)qualified",
-      "target": "All engine powerloss",
-      "count": 2
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Flightcrew member's mental condition",
-      "count": 1
-    },
-    {
-      "source": "Fuel exhaustion",
-      "target": "Ditching",
-      "count": 2
-    },
-    {
-      "source": "Damaged on the ground",
-      "target": "Collision with pole or wires",
-      "count": 1
-    },
-    {
-      "source": "Overloaded",
-      "target": "Flightcrew  un(der)qualified",
-      "count": 1
-    },
-    {
-      "source": "Icing",
-      "target": "Forced landing on runway",
-      "count": 1
-    },
-    {
-      "source": "Wrong takeoff configuration (flaps/trim)",
-      "target": "Forced landing on runway",
-      "count": 1
-    },
-    {
-      "source": "Tailstrike",
-      "target": "Loss of control",
-      "count": 1
-    },
-    {
-      "source": "Turbulence",
-      "target": "Thunderstorm",
-      "count": 1
-    },
-    {
-      "source": "Windshear/downdraft",
-      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
-      "count": 1
-    },
-    {
-      "source": "Windshear/downdraft",
-      "target": "VFR flight in IMC",
-      "count": 1
-    },
-    {
-      "source": "Thunderstorm",
-      "target": "Shot down by aircraft",
-      "count": 1
-    },
-    {
-      "source": "Engine separation",
-      "target": "Engine fire",
-      "count": 1
-    },
-    {
-      "source": "Icing",
-      "target": "Distraction in cockpit",
-      "count": 1
-    },
-    {
-      "source": "Flightcrew incapacitation",
-      "target": "Ditching",
-      "count": 1
-    },
-    {
-      "source": "Turbulence",
-      "target": "Plane stormed",
-      "count": 1
-    },
-    {
-      "source": "Thunderstorm",
-      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
-      "count": 1
-    },
-    {
-      "source": "Engine fire",
-      "target": "Ditching",
-      "count": 1
-    },
-    {
-      "source": "Wheel(s) up landing",
-      "target": "Uncontained engine failure",
-      "count": 1
-    },
-    {
-      "source": "Prop/turbine blade separation",
-      "target": "Fuselage failure",
-      "count": 1
-    },
-    {
-      "source": "Wrong takeoff configuration (flaps/trim)",
-      "target": "Centre of Gravity outside limits",
-      "count": 2
-    },
-    {
-      "source": "Shot down by aircraft",
-      "target": "Loss of control (presumed)",
-      "count": 1
-    },
-    {
-      "source": "Uncontained engine failure",
-      "target": "Bird strike",
-      "count": 1
-    },
-    {
-      "source": "Flightcrew incapacitation",
-      "target": "Centre of Gravity outside limits",
-      "count": 1
-    },
-    {
-      "source": "Wheel(s) up landing",
-      "target": "Loss of control",
-      "count": 1
-    },
-    {
-      "source": "Wrong installation of parts",
-      "target": "Elevator issue",
-      "count": 1
-    },
-    {
-      "source": "Loss of control",
-      "target": "Elevator issue",
-      "count": 1
-    },
-    {
-      "source": "Uncontained engine failure",
-      "target": "Runway excursion",
-      "count": 1
-    },
-    {
-      "source": "Loss of situational awareness",
-      "target": "Loss of control (presumed)",
-      "count": 1
-    },
-    {
-      "source": "Sabotage",
-      "target": "Forced landing outside airport",
-      "count": 1
-    },
-    {
-      "source": "Shot down by aircraft",
-      "target": "Missing",
-      "count": 1
-    },
-    {
-      "source": "Precipitation-induced flame-out",
-      "target": "Icing",
-      "count": 1
-    },
-    {
-      "source": "Wrong takeoff configuration (flaps/trim)",
-      "target": "Icing",
-      "count": 1
-    },
-    {
-      "source": "Loss of control",
-      "target": "Airframe failure",
-      "count": 1
-    },
-    {
-      "source": "Loss of control",
-      "target": "Autopilot issues",
-      "count": 1
-    },
-    {
-      "source": "Autopilot issues",
-      "target": "Airframe failure",
-      "count": 1
-    },
-    {
-      "source": "Loss of control (presumed)",
-      "target": "Icing",
-      "count": 1
-    },
-    {
-      "source": "Icing",
-      "target": "Cause undetermined",
-      "count": 1
-    },
-    {
-      "source": "Wrong installation of parts",
-      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
-      "count": 1
-    },
-    {
-      "source": "Cargo door failure",
-      "target": "Bird strike",
-      "count": 1
-    },
-    {
-      "source": "Overloaded",
-      "target": "Insufficient rest / fatigue",
-      "count": 1
-    },
-    {
-      "source": "Insufficient rest / fatigue",
-      "target": "Icing",
-      "count": 3
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Brake problem",
-      "count": 1
-    },
-    {
-      "source": "Turbulence",
-      "target": "Centre of Gravity outside limits",
-      "count": 1
-    },
-    {
-      "source": "Fuselage failure",
-      "target": "Cargo fire/smoke",
-      "count": 1
-    },
-    {
-      "source": "Uncontained engine failure",
-      "target": "Failure to follow AD and SB's",
-      "count": 1
-    },
-    {
-      "source": "Forced landing on runway",
-      "target": "Failure to follow AD and SB's",
-      "count": 1
-    },
-    {
-      "source": "Wheel(s) up landing",
-      "target": "VFR flight in IMC",
-      "count": 1
-    },
-    {
-      "source": "VFR flight in IMC",
-      "target": "Forced landing outside airport",
-      "count": 1
-    },
-    {
-      "source": "Missing",
-      "target": "Loss of control (presumed)",
-      "count": 1
-    },
-    {
-      "source": "Fuel starvation",
-      "target": "Fuel contamination",
-      "count": 1
-    },
-    {
-      "source": "Runway incursion",
-      "target": "Ground collision",
-      "count": 1
-    },
-    {
-      "source": "Runway incursion",
-      "target": "Landing or takeoff on wrong runway",
-      "count": 1
-    },
-    {
-      "source": "Landing or takeoff on wrong runway",
-      "target": "Ground collision",
-      "count": 1
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Collision with person or animal on the ground",
-      "count": 1
-    },
-    {
-      "source": "Runway incursion",
-      "target": "Hijack",
-      "count": 1
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Hijack",
-      "count": 2
-    },
-    {
-      "source": "Forced landing on runway",
-      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
-      "count": 1
-    },
-    {
-      "source": "Loss of situational awareness",
-      "target": "Insufficient rest / fatigue",
-      "count": 2
-    },
-    {
-      "source": "Runway excursion",
-      "target": "Cargo door failure",
-      "count": 1
-    },
-    {
-      "source": "Low visibility",
-      "target": "Flightcrew member's alcohol, drug usage",
-      "count": 1
-    },
-    {
-      "source": "Tailstrike",
-      "target": "Rejected takeoff",
-      "count": 1
-    },
-    {
-      "source": "Runway mishap",
-      "target": "Rejected takeoff",
-      "count": 2
-    },
-    {
-      "source": "Undershoot",
-      "target": "Runway excursion",
-      "count": 1
     },
     {
       "source": "VFR flight in IMC",
@@ -1636,23 +991,68 @@
       "count": 1
     },
     {
+      "source": "Shot down by aircraft",
+      "target": "Hijack",
+      "count": 2
+    },
+    {
       "source": "Wing failure",
       "target": "Flightcrew  un(der)qualified",
       "count": 1
     },
     {
-      "source": "Premature descent",
+      "source": "Flightcrew's failure to monitor instruments",
       "target": "Controlled Flight Into Terrain (CFIT) - Ground",
+      "count": 2
+    },
+    {
+      "source": "Wrong takeoff configuration (flaps/trim)",
+      "target": "Flightcrew  un(der)qualified",
       "count": 1
     },
     {
-      "source": "Wing failure",
-      "target": "Bird strike",
+      "source": "Locked rudders/ailerons/gustlock",
+      "target": "Distraction in cockpit",
+      "count": 1
+    },
+    {
+      "source": "Insufficient rest / fatigue",
+      "target": "Icing",
+      "count": 3
+    },
+    {
+      "source": "Runway incursion",
+      "target": "Ground collision",
+      "count": 1
+    },
+    {
+      "source": "Runway incursion",
+      "target": "Landing or takeoff on wrong runway",
+      "count": 1
+    },
+    {
+      "source": "Low visibility",
+      "target": "Ground collision",
+      "count": 1
+    },
+    {
+      "source": "Low visibility",
+      "target": "Landing or takeoff on wrong runway",
+      "count": 1
+    },
+    {
+      "source": "Landing or takeoff on wrong runway",
+      "target": "Ground collision",
       "count": 1
     },
     {
       "source": "Mid air collision",
       "target": "Loss of control (presumed)",
+      "count": 1
+    },
+    {
+      "source": "Wing failure",
+      "target": "Bird strike",
       "count": 1
     },
     {
@@ -1666,6 +1066,26 @@
       "count": 1
     },
     {
+      "source": "Hijack",
+      "target": "Fuel starvation",
+      "count": 2
+    },
+    {
+      "source": "Wrong takeoff configuration (flaps/trim)",
+      "target": "Insufficient rest / fatigue",
+      "count": 1
+    },
+    {
+      "source": "Wrong installation of parts",
+      "target": "Tail failure",
+      "count": 1
+    },
+    {
+      "source": "Shutdown of wrong engine",
+      "target": "Ditching",
+      "count": 2
+    },
+    {
       "source": "VFR flight in IMC",
       "target": "Icing",
       "count": 3
@@ -1676,8 +1096,38 @@
       "count": 1
     },
     {
+      "source": "Pilot or passenger suicide",
+      "target": "Deliberately crashed",
+      "count": 1
+    },
+    {
+      "source": "Distraction in cockpit",
+      "target": "Controlled Flight Into Terrain (CFIT) - Water",
+      "count": 1
+    },
+    {
       "source": "Missing",
       "target": "Mid air collision",
+      "count": 1
+    },
+    {
+      "source": "Tailstrike",
+      "target": "Heavy landing",
+      "count": 1
+    },
+    {
+      "source": "Runway mishap",
+      "target": "Heavy landing",
+      "count": 3
+    },
+    {
+      "source": "Prop/turbine blade separation",
+      "target": "Failure to follow AD and SB's",
+      "count": 1
+    },
+    {
+      "source": "Wing failure",
+      "target": "Centre of Gravity outside limits",
       "count": 1
     },
     {
@@ -1696,6 +1146,26 @@
       "count": 1
     },
     {
+      "source": "Fuel exhaustion",
+      "target": "Forced landing on runway",
+      "count": 1
+    },
+    {
+      "source": "Flightcrew  un(der)qualified",
+      "target": "Controlled Flight Into Terrain (CFIT) - Water",
+      "count": 1
+    },
+    {
+      "source": "Hijack",
+      "target": "Forced landing outside airport",
+      "count": 1
+    },
+    {
+      "source": "VFR flight in IMC",
+      "target": "Mid air collision",
+      "count": 1
+    },
+    {
       "source": "Simulated engine failure",
       "target": "Runway excursion",
       "count": 1
@@ -1711,8 +1181,8 @@
       "count": 1
     },
     {
-      "source": "Runway mishap",
-      "target": "Bird strike",
+      "source": "Destroyed on ground",
+      "target": "Damaged on the ground",
       "count": 1
     },
     {
@@ -1723,6 +1193,11 @@
     {
       "source": "Turbulence",
       "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
+      "count": 1
+    },
+    {
+      "source": "Windshear/downdraft",
+      "target": "Thunderstorm",
       "count": 1
     },
     {
@@ -1741,13 +1216,13 @@
       "count": 1
     },
     {
-      "source": "Low visibility",
-      "target": "Flightcrew's failure to monitor instruments",
+      "source": "Thunderstorm",
+      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
       "count": 1
     },
     {
-      "source": "Thunderstorm",
-      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
+      "source": "Low visibility",
+      "target": "Flightcrew's failure to monitor instruments",
       "count": 1
     },
     {
@@ -1756,8 +1231,58 @@
       "count": 1
     },
     {
-      "source": "Runway excursion",
-      "target": "Gear-up landing",
+      "source": "Uncontained engine failure",
+      "target": "Ditching",
+      "count": 1
+    },
+    {
+      "source": "Uncontained engine failure",
+      "target": "Flightcrew member's alcohol, drug usage",
+      "count": 1
+    },
+    {
+      "source": "Uncontained engine failure",
+      "target": "Shutdown of wrong engine",
+      "count": 2
+    },
+    {
+      "source": "Shutdown of wrong engine",
+      "target": "Flightcrew member's alcohol, drug usage",
+      "count": 1
+    },
+    {
+      "source": "Flightcrew member's alcohol, drug usage",
+      "target": "Ditching",
+      "count": 1
+    },
+    {
+      "source": "Overloaded",
+      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
+      "count": 1
+    },
+    {
+      "source": "Wrong installation of parts",
+      "target": "All engine powerloss",
+      "count": 2
+    },
+    {
+      "source": "Wing failure",
+      "target": "VFR flight in IMC",
+      "count": 2
+    },
+    {
+      "source": "Navigational error",
+      "target": "All engine powerloss",
+      "count": 1
+    },
+    {
+      "source": "Navigational error",
+      "target": "Forced landing outside airport",
+      "count": 2
+    },
+    {
+      "source": "Navigational error",
+      "target": "Fuel starvation",
       "count": 1
     },
     {
@@ -1776,14 +1301,29 @@
       "count": 1
     },
     {
-      "source": "Fuel starvation",
-      "target": "Forced landing on runway",
-      "count": 2
-    },
-    {
       "source": "VFR flight in IMC",
       "target": "Distraction in cockpit",
       "count": 1
+    },
+    {
+      "source": "Navigational error",
+      "target": "Low visibility",
+      "count": 1
+    },
+    {
+      "source": "Loss of control",
+      "target": "Language/communication problems",
+      "count": 2
+    },
+    {
+      "source": "Language/communication problems",
+      "target": "All engine powerloss",
+      "count": 1
+    },
+    {
+      "source": "Fuel starvation",
+      "target": "Forced landing on runway",
+      "count": 2
     },
     {
       "source": "VFR flight in IMC",
@@ -1796,24 +1336,9 @@
       "count": 1
     },
     {
-      "source": "Inflight fire",
-      "target": "Electrical system problem",
-      "count": 1
-    },
-    {
-      "source": "Inflight fire",
-      "target": "Forced landing outside airport",
-      "count": 1
-    },
-    {
-      "source": "Forced landing outside airport",
-      "target": "Electrical system problem",
-      "count": 1
-    },
-    {
-      "source": "Tail failure",
-      "target": "Normal landing",
-      "count": 1
+      "source": "Wrong takeoff configuration (flaps/trim)",
+      "target": "Centre of Gravity outside limits",
+      "count": 2
     },
     {
       "source": "Fuel starvation",
@@ -1826,14 +1351,19 @@
       "count": 1
     },
     {
+      "source": "Shot down from the ground",
+      "target": "Loss of control (presumed)",
+      "count": 2
+    },
+    {
       "source": "Wrong installation of parts",
       "target": "Fuel starvation",
       "count": 2
     },
     {
-      "source": "Shot down from the ground",
-      "target": "Loss of control (presumed)",
-      "count": 2
+      "source": "Wheel(s) up landing",
+      "target": "Bird strike",
+      "count": 1
     },
     {
       "source": "Fuel contamination",
@@ -1861,8 +1391,23 @@
       "count": 1
     },
     {
+      "source": "Runway mishap",
+      "target": "Landing gear collapse",
+      "count": 2
+    },
+    {
       "source": "Windshear/downdraft",
       "target": "Runway incursion",
+      "count": 1
+    },
+    {
+      "source": "Fuel contamination",
+      "target": "Forced landing on runway",
+      "count": 1
+    },
+    {
+      "source": "Forced landing on runway",
+      "target": "Explosive decompression",
       "count": 1
     },
     {
@@ -1871,8 +1416,48 @@
       "count": 1
     },
     {
+      "source": "Low visibility",
+      "target": "Insufficient rest / fatigue",
+      "count": 2
+    },
+    {
+      "source": "Runway excursion",
+      "target": "All engine powerloss",
+      "count": 3
+    },
+    {
+      "source": "Flightcrew member's mental condition",
+      "target": "Controlled Flight Into Terrain (CFIT) - Water",
+      "count": 1
+    },
+    {
+      "source": "Hijack",
+      "target": "Ditching",
+      "count": 1
+    },
+    {
       "source": "Turbulence",
       "target": "Overloaded",
+      "count": 1
+    },
+    {
+      "source": "Forced landing on runway",
+      "target": "Bounced on landing",
+      "count": 1
+    },
+    {
+      "source": "Forced landing on runway",
+      "target": "Electrical system problem",
+      "count": 1
+    },
+    {
+      "source": "Electrical system problem",
+      "target": "Bounced on landing",
+      "count": 1
+    },
+    {
+      "source": "Failure to follow AD and SB's",
+      "target": "Cargo door failure",
       "count": 1
     },
     {
@@ -1886,7 +1471,17 @@
       "count": 1
     },
     {
-      "source": "Wrong or misinterpreted ATC instructions",
+      "source": "Insufficient rest / fatigue",
+      "target": "Flightcrew's failure to monitor instruments",
+      "count": 1
+    },
+    {
+      "source": "Flightcrew's failure to monitor instruments",
+      "target": "Controlled Flight Into Terrain (CFIT) - Water",
+      "count": 1
+    },
+    {
+      "source": "Language/communication problems",
       "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
       "count": 1
     },
@@ -1901,8 +1496,8 @@
       "count": 1
     },
     {
-      "source": "Damaged on the ground",
-      "target": "Collision with airport equipment",
+      "source": "Shutdown of wrong engine",
+      "target": "Fuel contamination",
       "count": 1
     },
     {
@@ -1911,8 +1506,13 @@
       "count": 1
     },
     {
-      "source": "Shutdown of wrong engine",
-      "target": "Fuel contamination",
+      "source": "Wheel(s) up landing",
+      "target": "Cargo door failure",
+      "count": 1
+    },
+    {
+      "source": "Forced landing outside airport",
+      "target": "Cargo door failure",
       "count": 1
     },
     {
@@ -1926,13 +1526,13 @@
       "count": 1
     },
     {
-      "source": "Gear-up landing",
-      "target": "Cause undetermined",
+      "source": "VFR flight in IMC",
+      "target": "Turbulence",
       "count": 1
     },
     {
-      "source": "Gear-up landing",
-      "target": "Forced landing outside airport",
+      "source": "Runway mishap",
+      "target": "Collision with person or animal on the ground",
       "count": 1
     },
     {
@@ -1941,93 +1541,8 @@
       "count": 1
     },
     {
-      "source": "Distraction in cockpit",
-      "target": "Cargo door failure",
-      "count": 1
-    },
-    {
-      "source": "Loss of control",
-      "target": "Flightcrew member's mental condition",
-      "count": 1
-    },
-    {
-      "source": "Forced landing outside airport",
-      "target": "Engine fire",
-      "count": 1
-    },
-    {
-      "source": "Navigational beacons inoperative",
-      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
-      "count": 1
-    },
-    {
-      "source": "Locked rudders/ailerons/gustlock",
-      "target": "Distraction in cockpit",
-      "count": 1
-    },
-    {
-      "source": "Tailstrike",
-      "target": "Heavy landing",
-      "count": 1
-    },
-    {
-      "source": "Language/communication problems",
-      "target": "All engine powerloss",
-      "count": 1
-    },
-    {
-      "source": "Lightningstrike",
-      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
-      "count": 1
-    },
-    {
-      "source": "Shot down from the ground",
-      "target": "Fuselage failure",
-      "count": 1
-    },
-    {
-      "source": "Loss of control (presumed)",
-      "target": "Fuselage failure",
-      "count": 1
-    },
-    {
-      "source": "Low visibility",
-      "target": "Flightcrew  un(der)qualified",
-      "count": 1
-    },
-    {
-      "source": "Runway mishap",
-      "target": "Collision with snow bank",
-      "count": 1
-    },
-    {
-      "source": "Sandstorm",
-      "target": "Cause undetermined",
-      "count": 1
-    },
-    {
-      "source": "Sandstorm",
-      "target": "Controlled Flight Into Terrain (CFIT) - Water",
-      "count": 1
-    },
-    {
-      "source": "Language/communication problems",
-      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
-      "count": 1
-    },
-    {
-      "source": "Uncontained engine failure",
-      "target": "Rejected takeoff",
-      "count": 1
-    },
-    {
-      "source": "Uncontained engine failure",
-      "target": "Runway mishap",
-      "count": 2
-    },
-    {
-      "source": "Sabotage",
-      "target": "Ditching",
+      "source": "Thunderstorm",
+      "target": "Shot down by aircraft",
       "count": 1
     },
     {
@@ -2041,13 +1556,268 @@
       "count": 1
     },
     {
+      "source": "Sabotage",
+      "target": "Ditching",
+      "count": 1
+    },
+    {
+      "source": "Flightcrew incapacitation",
+      "target": "Ditching",
+      "count": 1
+    },
+    {
+      "source": "Icing",
+      "target": "Distraction in cockpit",
+      "count": 1
+    },
+    {
+      "source": "Turbulence",
+      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
+      "count": 1
+    },
+    {
       "source": "Low visibility",
       "target": "Loss of situational awareness",
       "count": 1
     },
     {
+      "source": "Turbulence",
+      "target": "Plane stormed",
+      "count": 1
+    },
+    {
+      "source": "Wheel(s) up landing",
+      "target": "Cause undetermined",
+      "count": 1
+    },
+    {
+      "source": "Thunderstorm",
+      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
+      "count": 1
+    },
+    {
+      "source": "Turbulence",
+      "target": "Thunderstorm",
+      "count": 1
+    },
+    {
+      "source": "Sandstorm",
+      "target": "Cause undetermined",
+      "count": 1
+    },
+    {
+      "source": "Sandstorm",
+      "target": "Controlled Flight Into Terrain (CFIT) - Water",
+      "count": 1
+    },
+    {
       "source": "Wrong installation of parts",
       "target": "Ditching",
+      "count": 1
+    },
+    {
+      "source": "Language/communication problems",
+      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
+      "count": 1
+    },
+    {
+      "source": "Windshear/downdraft",
+      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
+      "count": 1
+    },
+    {
+      "source": "Windshear/downdraft",
+      "target": "VFR flight in IMC",
+      "count": 1
+    },
+    {
+      "source": "Low visibility",
+      "target": "Flightcrew  un(der)qualified",
+      "count": 1
+    },
+    {
+      "source": "Precipitation-induced flame-out",
+      "target": "Ditching",
+      "count": 1
+    },
+    {
+      "source": "Distraction in cockpit",
+      "target": "Cargo door failure",
+      "count": 1
+    },
+    {
+      "source": "Wheel(s) up landing",
+      "target": "Uncontained engine failure",
+      "count": 1
+    },
+    {
+      "source": "Prop/turbine blade separation",
+      "target": "Fuselage failure",
+      "count": 1
+    },
+    {
+      "source": "Shot down by aircraft",
+      "target": "Loss of control (presumed)",
+      "count": 1
+    },
+    {
+      "source": "Landing gear collapse",
+      "target": "Heavy landing",
+      "count": 1
+    },
+    {
+      "source": "Uncontained engine failure",
+      "target": "Bird strike",
+      "count": 1
+    },
+    {
+      "source": "Wheel(s) up landing",
+      "target": "Loss of control",
+      "count": 1
+    },
+    {
+      "source": "Flightcrew incapacitation",
+      "target": "Centre of Gravity outside limits",
+      "count": 1
+    },
+    {
+      "source": "Tailstrike",
+      "target": "Loss of control",
+      "count": 1
+    },
+    {
+      "source": "Loss of control",
+      "target": "Flightcrew member's mental condition",
+      "count": 1
+    },
+    {
+      "source": "Wrong takeoff configuration (flaps/trim)",
+      "target": "Forced landing on runway",
+      "count": 1
+    },
+    {
+      "source": "Sabotage",
+      "target": "Forced landing outside airport",
+      "count": 1
+    },
+    {
+      "source": "Uncontained engine failure",
+      "target": "Runway excursion",
+      "count": 1
+    },
+    {
+      "source": "Loss of situational awareness",
+      "target": "Loss of control (presumed)",
+      "count": 1
+    },
+    {
+      "source": "Overloaded",
+      "target": "Flightcrew  un(der)qualified",
+      "count": 1
+    },
+    {
+      "source": "Shot down by aircraft",
+      "target": "Missing",
+      "count": 1
+    },
+    {
+      "source": "Precipitation-induced flame-out",
+      "target": "Icing",
+      "count": 1
+    },
+    {
+      "source": "Wrong takeoff configuration (flaps/trim)",
+      "target": "Icing",
+      "count": 1
+    },
+    {
+      "source": "Loss of control (presumed)",
+      "target": "Icing",
+      "count": 1
+    },
+    {
+      "source": "Wrong installation of parts",
+      "target": "Controlled Flight Into Terrain (CFIT) - Ground",
+      "count": 1
+    },
+    {
+      "source": "Icing",
+      "target": "Forced landing on runway",
+      "count": 1
+    },
+    {
+      "source": "Icing",
+      "target": "Cause undetermined",
+      "count": 1
+    },
+    {
+      "source": "Lightningstrike",
+      "target": "Controlled Flight Into Terrain (CFIT) - Mountain",
+      "count": 1
+    },
+    {
+      "source": "Cargo door failure",
+      "target": "Bird strike",
+      "count": 1
+    },
+    {
+      "source": "Overloaded",
+      "target": "Insufficient rest / fatigue",
+      "count": 1
+    },
+    {
+      "source": "Turbulence",
+      "target": "Centre of Gravity outside limits",
+      "count": 1
+    },
+    {
+      "source": "Fuselage failure",
+      "target": "Cargo fire/smoke",
+      "count": 1
+    },
+    {
+      "source": "Shot down from the ground",
+      "target": "Fuselage failure",
+      "count": 1
+    },
+    {
+      "source": "Loss of control (presumed)",
+      "target": "Fuselage failure",
+      "count": 1
+    },
+    {
+      "source": "Uncontained engine failure",
+      "target": "Failure to follow AD and SB's",
+      "count": 1
+    },
+    {
+      "source": "Forced landing on runway",
+      "target": "Failure to follow AD and SB's",
+      "count": 1
+    },
+    {
+      "source": "Wheel(s) up landing",
+      "target": "VFR flight in IMC",
+      "count": 1
+    },
+    {
+      "source": "VFR flight in IMC",
+      "target": "Forced landing outside airport",
+      "count": 1
+    },
+    {
+      "source": "Runway mishap",
+      "target": "Issue with flap(s)",
+      "count": 1
+    },
+    {
+      "source": "Fuel starvation",
+      "target": "Fuel contamination",
+      "count": 1
+    },
+    {
+      "source": "Missing",
+      "target": "Loss of control (presumed)",
       "count": 1
     }
   ],
@@ -2062,15 +1832,15 @@
     },
     {
       "id": "Loss of control",
-      "links": 54
-    },
-    {
-      "id": "Forced landing outside airport",
-      "links": 35
+      "links": 49
     },
     {
       "id": "Plane stormed",
       "links": 2
+    },
+    {
+      "id": "Forced landing outside airport",
+      "links": 29
     },
     {
       "id": "Wing failure",
@@ -2090,7 +1860,11 @@
     },
     {
       "id": "Low visibility",
-      "links": 17
+      "links": 19
+    },
+    {
+      "id": "Wheel(s) up landing",
+      "links": 10
     },
     {
       "id": "Shot down from the ground",
@@ -2098,11 +1872,7 @@
     },
     {
       "id": "Windshear/downdraft",
-      "links": 9
-    },
-    {
-      "id": "Wheel(s) up landing",
-      "links": 9
+      "links": 8
     },
     {
       "id": "Hijacker(s) escaped",
@@ -2122,35 +1892,31 @@
     },
     {
       "id": "Sabotage",
-      "links": 9
+      "links": 8
     },
     {
       "id": "Forced landing on runway",
-      "links": 33
-    },
-    {
-      "id": "Ground collision",
-      "links": 3
+      "links": 34
     },
     {
       "id": "Ditching",
-      "links": 23
+      "links": 21
     },
     {
       "id": "Tail failure",
-      "links": 6
+      "links": 5
+    },
+    {
+      "id": "Uncontained engine failure",
+      "links": 11
     },
     {
       "id": "Loss of situational awareness",
       "links": 7
     },
     {
-      "id": "Uncontained engine failure",
-      "links": 13
-    },
-    {
       "id": "Runway excursion",
-      "links": 46
+      "links": 36
     },
     {
       "id": "Wrong takeoff configuration (flaps/trim)",
@@ -2158,7 +1924,7 @@
     },
     {
       "id": "Wrong installation of parts",
-      "links": 12
+      "links": 11
     },
     {
       "id": "Thunderstorm",
@@ -2173,23 +1939,23 @@
       "links": 10
     },
     {
-      "id": "Hangar / ground fire",
-      "links": 1
-    },
-    {
-      "id": "Destroyed on ground",
-      "links": 2
-    },
-    {
       "id": "Icing",
       "links": 20
     },
     {
-      "id": "Controlled Flight Into Terrain (CFIT) - Mountain",
-      "links": 21
+      "id": "Insufficient rest / fatigue",
+      "links": 12
     },
     {
-      "id": "Insufficient rest / fatigue",
+      "id": "Controlled Flight Into Terrain (CFIT) - Mountain",
+      "links": 20
+    },
+    {
+      "id": "Flightcrew member's alcohol, drug usage",
+      "links": 13
+    },
+    {
+      "id": "Hijack",
       "links": 12
     },
     {
@@ -2197,35 +1963,23 @@
       "links": 2
     },
     {
-      "id": "Hijack",
-      "links": 12
-    },
-    {
-      "id": "Flightcrew member's alcohol, drug usage",
-      "links": 13
-    },
-    {
       "id": "Near miss",
       "links": 2
     },
     {
-      "id": "Runway mishap",
-      "links": 15
-    },
-    {
       "id": "Engine separation",
-      "links": 10
+      "links": 9
     },
     {
       "id": "Distraction in cockpit",
       "links": 11
     },
     {
-      "id": "Fuel contamination",
-      "links": 7
+      "id": "Ground collision",
+      "links": 4
     },
     {
-      "id": "Tailstrike",
+      "id": "Fuel contamination",
       "links": 7
     },
     {
@@ -2237,71 +1991,63 @@
       "links": 13
     },
     {
-      "id": "Bird strike",
-      "links": 12
-    },
-    {
       "id": "Controlled Flight Into Terrain (CFIT) - Ground",
-      "links": 17
+      "links": 16
     },
     {
-      "id": "Inflight fire",
-      "links": 3
-    },
-    {
-      "id": "Flightcrew  un(der)qualified",
-      "links": 14
-    },
-    {
-      "id": "Gear-up landing",
-      "links": 5
+      "id": "Bird strike",
+      "links": 10
     },
     {
       "id": "Navigational beacons inoperative",
       "links": 4
     },
     {
-      "id": "Passenger door failure",
-      "links": 2
-    },
-    {
       "id": "Fuselage failure",
       "links": 9
     },
     {
-      "id": "Lightningstrike",
-      "links": 6
-    },
-    {
-      "id": "Pilot or passenger suicide",
-      "links": 1
-    },
-    {
-      "id": "Fuel exhaustion",
-      "links": 3
-    },
-    {
-      "id": "Runway incursion",
-      "links": 10
-    },
-    {
-      "id": "Normal landing",
+      "id": "Passenger door failure",
       "links": 2
     },
     {
-      "id": "Landing gear collapse",
-      "links": 5
-    },
-    {
-      "id": "Locked rudders/ailerons/gustlock",
-      "links": 6
+      "id": "Flightcrew  un(der)qualified",
+      "links": 14
     },
     {
       "id": "Precipitation-induced flame-out",
       "links": 4
     },
     {
-      "id": "Language/communication problems",
+      "id": "Runway incursion",
+      "links": 8
+    },
+    {
+      "id": "Landing gear collapse",
+      "links": 3
+    },
+    {
+      "id": "Gear-up landing",
+      "links": 1
+    },
+    {
+      "id": "Runway mishap",
+      "links": 7
+    },
+    {
+      "id": "Tailstrike",
+      "links": 6
+    },
+    {
+      "id": "Lightningstrike",
+      "links": 6
+    },
+    {
+      "id": "Locked rudders/ailerons/gustlock",
+      "links": 6
+    },
+    {
+      "id": "Improper flap/slat usage",
       "links": 4
     },
     {
@@ -2309,31 +2055,47 @@
       "links": 4
     },
     {
-      "id": "Failure to follow AD and SB's",
-      "links": 6
+      "id": "Landing or takeoff on wrong runway",
+      "links": 4
     },
     {
-      "id": "Centre of Gravity outside limits",
+      "id": "Pilot or passenger suicide",
+      "links": 1
+    },
+    {
+      "id": "Fuel exhaustion",
+      "links": 1
+    },
+    {
+      "id": "Cause undetermined",
       "links": 12
     },
     {
-      "id": "Flightcrew member's mental condition",
-      "links": 3
+      "id": "Destroyed on ground",
+      "links": 2
     },
     {
-      "id": "Damaged on the ground",
-      "links": 9
+      "id": "Language/communication problems",
+      "links": 4
     },
     {
       "id": "Flightcrew incapacitation",
       "links": 5
     },
     {
-      "id": "Engine fire",
-      "links": 5
+      "id": "Flightcrew member's mental condition",
+      "links": 2
     },
     {
-      "id": "Autopilot issues",
+      "id": "Electrical system problem",
+      "links": 2
+    },
+    {
+      "id": "Failure to follow AD and SB's",
+      "links": 6
+    },
+    {
+      "id": "Sandstorm",
       "links": 2
     },
     {
@@ -2345,67 +2107,35 @@
       "links": 8
     },
     {
-      "id": "Landing or takeoff on wrong runway",
-      "links": 3
-    },
-    {
-      "id": "Undershoot",
-      "links": 1
-    },
-    {
-      "id": "Improper flap/slat usage",
-      "links": 4
-    },
-    {
-      "id": "Premature descent",
-      "links": 1
-    },
-    {
-      "id": "Cause undetermined",
-      "links": 12
-    },
-    {
-      "id": "Wrong or misinterpreted ATC instructions",
-      "links": 1
-    },
-    {
-      "id": "Sandstorm",
-      "links": 2
-    },
-    {
       "id": "All engine powerloss",
-      "links": 19
+      "links": 18
+    },
+    {
+      "id": "Centre of Gravity outside limits",
+      "links": 10
     },
     {
       "id": "Cargo fire/smoke",
       "links": 5
     },
     {
-      "id": "Heavy landing",
-      "links": 2
+      "id": "Damaged on the ground",
+      "links": 3
+    },
+    {
+      "id": "Bounced on landing",
+      "links": 3
     },
     {
       "id": "Premature gear retraction on take-off",
-      "links": 2
+      "links": 1
     },
     {
       "id": "Deliberately crashed",
       "links": 1
     },
     {
-      "id": "Rejected takeoff",
-      "links": 4
-    },
-    {
-      "id": "Late landing",
-      "links": 1
-    },
-    {
-      "id": "Bounced on landing",
-      "links": 4
-    },
-    {
-      "id": "Collision with person or animal on the ground",
+      "id": "Heavy landing",
       "links": 3
     },
     {
@@ -2413,43 +2143,15 @@
       "links": 1
     },
     {
-      "id": "Aileron issue",
-      "links": 1
-    },
-    {
-      "id": "Collision with pole or wires",
-      "links": 2
-    },
-    {
-      "id": "Collision with approach or runway lights",
-      "links": 1
-    },
-    {
-      "id": "Brake problem",
-      "links": 2
-    },
-    {
-      "id": "Elevator issue",
-      "links": 2
-    },
-    {
-      "id": "Airframe failure",
-      "links": 2
-    },
-    {
-      "id": "Electrical system problem",
-      "links": 2
-    },
-    {
-      "id": "Collision with airport equipment",
-      "links": 1
-    },
-    {
       "id": "Collision with vehicle",
       "links": 1
     },
     {
-      "id": "Collision with snow bank",
+      "id": "Collision with person or animal on the ground",
+      "links": 1
+    },
+    {
+      "id": "Issue with flap(s)",
       "links": 1
     }
   ]
