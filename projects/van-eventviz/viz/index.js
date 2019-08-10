@@ -21,4 +21,4 @@ const render = (component, selector) =>
     document.querySelector(selector),
   )
 
-render(<App />, '#root')
+// render(<App />, '#root')
