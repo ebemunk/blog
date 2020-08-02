@@ -54,6 +54,26 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spread = (this && this.__spread) || function () {
+    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
+    return ar;
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -98,11 +118,11 @@ function run() {
                     });
                     pool = db_1.default();
                     return [4 /*yield*/, bluebird_1.default.map(mates, function (mate) {
-                            return pool.query.apply(pool, db_1.insertObj({
+                            return pool.query.apply(pool, __spread(db_1.insertObj({
                                 name: mate.name,
                                 year: mate.year,
                                 month: mate.month,
-                            }));
+                            })));
                         }, { concurrency: Infinity })];
                 case 2:
                     _a.sent();

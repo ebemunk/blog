@@ -5,7 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "test": "jest"
   },
   "dependencies": {
     "@types/bluebird": "^3.5.32",
@@ -14,9 +15,16 @@
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
     "cheerio": "^1.0.0-rc.3",
+    "date-fns": "^2.15.0",
     "pg": "^8.3.0",
+    "prettier": "^2.0.5",
     "remeda": "^0.0.20",
     "typescript": "^3.9.7",
     "wtf_wikipedia": "^8.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.8",
+    "jest": "^26.2.2",
+    "ts-jest": "^26.1.4"
   }
 }

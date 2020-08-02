@@ -8,13 +8,13 @@ hidden = false
 related = ["2019-01-05-plane-crashes.md", "2016-02-27-chess-2mil.md"]
 +++
 
-What can I find among the crashes? Working on this project was quite eye opening for me, and I hope it gives you something to think about as well. Let's go.
+ines rau - first transgender playmate has no page on babepedia
 
 ## One Century of Aviation Safety
 
 As we look deeper into this dataset, I would ask you to keep in mind that we are focusing exclusively on crashes. The statistics, therefore, are closely tied to only the flights that end in crashes. The big picture to remind yourself is that this is a tiny portion of successful flights that occur on the daily. In 2018, which was somewhat of an outlier in itself, there were about [1 crash per 300 million flights](https://www.theguardian.com/world/2019/jan/02/plane-crash-deaths-jump-sharply-in-2018-but-fatalities-still-rare). [The odds of being struck by lightning](https://www.weather.gov/safety/lightning-odds) **twice** in your lifetime is still 20% higher than being in a flight that's involved in a crash.
 
-<div id="viz-years"></div>
+<div id="viz-trends"></div>
 
 ## Fatalities
 
@@ -40,8 +40,9 @@ I hope this gave you a new perspective on aviation and flight safety. If you're 
 
 <div id="mobile-warning"></div>
 
-<script src="http://localhost:9001/main.js"></script>
-<!-- <script src="/plane-crashes/main.js"></script> -->
+<script src="http://localhost:9001/bundle.js"></script>
+<!-- <script src="/playboy/bundle.js"></script> -->
+
 <!--
 <style>
   @media screen and (max-width: 750px) {

@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -54,62 +65,179 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// import axios from 'axios'
-var cheerio_1 = __importDefault(require("cheerio"));
-var promises_1 = __importDefault(require("fs/promises"));
-var path_1 = require("path");
+var wtf_wikipedia_1 = __importDefault(require("wtf_wikipedia"));
+var R = __importStar(require("remeda"));
 var bluebird_1 = __importDefault(require("bluebird"));
-var db_1 = __importStar(require("./db"));
-function run() {
-    return __awaiter(this, void 0, void 0, function () {
-        var html, $, years, mates, pool;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, promises_1.default.readFile(path_1.resolve(__dirname, '../dataRoots/wikipedia-list.html'), { encoding: 'utf-8' })];
-                case 1:
-                    html = _a.sent();
-                    $ = cheerio_1.default.load(html);
-                    years = $('.wikitable tbody tr')
-                        .filter(function (i, el) { return i > 0; })
-                        .map(function (i, tr) {
-                        var year = +$(tr).find('th').first().text().trim();
-                        var months = $(tr)
-                            .find('td')
-                            .map(function (ii, td) {
-                            var name = $(td).text().trim();
-                            var month = ii;
-                            return { name: name, month: month };
-                        })
-                            .get();
-                        return { year: year, months: months };
-                    })
-                        .get();
-                    mates = years.flatMap(function (_a) {
-                        var year = _a.year, months = _a.months;
-                        return months.map(function (month) { return ({
-                            year: year,
-                            name: month.name,
-                            month: month.month,
-                        }); });
-                    });
-                    pool = db_1.default();
-                    return [4 /*yield*/, bluebird_1.default.map(mates, function (mate) {
-                            return pool.query.apply(pool, db_1.insertObj({
-                                name: mate.name,
-                                year: mate.year,
-                                month: mate.month,
-                            }));
-                        }, { concurrency: Infinity })];
-                case 2:
-                    _a.sent();
-                    return [2 /*return*/];
-            }
-        });
+var db_1 = __importDefault(require("./db"));
+var remeda_1 = require("remeda");
+var years = R.range(1954, 2020).map(
+// const years = R.range(1964, 1965).map(
+function (year) { return "List of Playboy Playmates of " + year; });
+var doYear = function (year) { return __awaiter(void 0, void 0, void 0, function () {
+    var doc, infoboxes;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, wtf_wikipedia_1.default.fetch(year)];
+            case 1:
+                doc = _a.sent();
+                infoboxes = doc === null || doc === void 0 ? void 0 : doc.infoboxes();
+                if (!infoboxes) {
+                    throw new Error('infoboxes empty');
+                }
+                return [2 /*return*/, infoboxes.map(function (box) {
+                        var json = box.json();
+                        return Object.keys(json).reduce(function (obj, key) {
+                            var _a;
+                            return (__assign(__assign({}, obj), (_a = {}, _a[key] = json[key].text, _a.year = year, _a)));
+                        }, {});
+                    })];
+        }
     });
-}
+}); };
+var run = function () { return __awaiter(void 0, void 0, void 0, function () {
+    var infos, pool;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, bluebird_1.default.map(years, doYear)];
+            case 1:
+                infos = _a.sent();
+                pool = db_1.default();
+                console.log('got infos');
+                return [4 /*yield*/, bluebird_1.default.map(remeda_1.flatten(infos), function (info) { return __awaiter(void 0, void 0, void 0, function () {
+                        var name, nameArr, nameArr_1, nameArr_1_1, n, res, e_1_1;
+                        var e_1, _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    name = info.name;
+                                    nameArr = [name];
+                                    if (names[name])
+                                        nameArr = [names[name]];
+                                    else if (multiples[name])
+                                        nameArr = multiples[name];
+                                    if (!name) {
+                                        // @ts-ignore
+                                        console.log('!name', name, info.year);
+                                    }
+                                    _b.label = 1;
+                                case 1:
+                                    _b.trys.push([1, 7, 8, 9]);
+                                    nameArr_1 = __values(nameArr), nameArr_1_1 = nameArr_1.next();
+                                    _b.label = 2;
+                                case 2:
+                                    if (!!nameArr_1_1.done) return [3 /*break*/, 6];
+                                    n = nameArr_1_1.value;
+                                    return [4 /*yield*/, pool.query("select * from playboy.playmates where name='" + n + "'")];
+                                case 3:
+                                    res = _b.sent();
+                                    if (res.rowCount < 1) {
+                                        console.log('no rows');
+                                    }
+                                    return [4 /*yield*/, pool.query('update playboy.playmates set wiki=$1 where name=$2', [
+                                            info,
+                                            n,
+                                        ])];
+                                case 4:
+                                    _b.sent();
+                                    _b.label = 5;
+                                case 5:
+                                    nameArr_1_1 = nameArr_1.next();
+                                    return [3 /*break*/, 2];
+                                case 6: return [3 /*break*/, 9];
+                                case 7:
+                                    e_1_1 = _b.sent();
+                                    e_1 = { error: e_1_1 };
+                                    return [3 /*break*/, 9];
+                                case 8:
+                                    try {
+                                        if (nameArr_1_1 && !nameArr_1_1.done && (_a = nameArr_1.return)) _a.call(nameArr_1);
+                                    }
+                                    finally { if (e_1) throw e_1.error; }
+                                    return [7 /*endfinally*/];
+                                case 9: return [2 /*return*/];
+                            }
+                        });
+                    }); })];
+            case 2:
+                _a.sent();
+                return [2 /*return*/];
+        }
+    });
+}); };
+var names = {
+    'Marilyn Walts (aka Margaret Scott)': 'Marilyn Walts',
+    'Marilyn Walts\n( Margaret Scott)': 'Marilyn Walts',
+    'Jean Moorhead': 'Jean Moorehead',
+    'Elsa Sorensen': 'Elsa Sorensen',
+    'Pamela Gordon': 'Pamela Anne Gordon',
+    'Kelli Burke': 'Kelly Burke',
+    'P.J. Lansing': 'P. J. Lansing',
+    'Lena Forsén': 'Lenna Sjooblom',
+    'Cynthia Wood': 'Cyndi Wood',
+    'Jeane (Jean) Manson': 'Jean Manson',
+    'Ingeborg Sørensen': 'Ingeborg Sorensen',
+    'Patricia McClain': 'Patricia Margot McClain',
+    'Pamela Bryant': 'Pamela Jean Bryant',
+    'Susan Kiger': 'Susan Lynn Kiger',
+    'Vicky McCarty': 'Vicki McCarty',
+    'Vicki Lasseter': 'Vicki Lynn Lasseter',
+    'Debi Nicolle Johnson': 'Debi Johnson',
+    'Julie Michelle McCullough': 'Julie McCullough',
+    'Laurie Ann Carr': 'Laurie Carr',
+    'Pam Stein': 'Pamela Stein',
+    'Katariina Souri': 'Kata Kärkkäinen',
+    'Jennifer Lyn Jackson': 'Jennifer Jackson',
+    'Laurie Jo Wood': 'Laurie Wood',
+    'Stacy Arthur': 'Stacy Leigh Arthur',
+    'Carrie Yazel': 'Carrie Jean Yazel',
+    'cady cantrell': 'Cady Cantrell',
+    'Jennifer Leroy': 'Jennifer LeRoy',
+    'Stacy Elizabeth Sanches': 'Stacy Sanches',
+    'Kelly Gallagher\n(now known as Kelly Wearstler)': 'Kelly Gallagher',
+    'Cynthia Gwyn Brown': 'Cynthia Brown',
+    'Rachel Jéan Marteen': 'Rachel Jean Marteen',
+    'Karin Katherine Taylor': 'Karin Taylor',
+    'Nikki Ziering': 'Nikki Schieler',
+    'Linn Thomas': 'Lynn Thomas',
+    'Nicole, Erica and Jaclyn Dahm': 'Dahm triplets',
+    'Melissa Deanne Holliday': 'Melissa Holliday',
+    'Lexie Karlsen': 'Alexandria Karlsen',
+    'Stacy Fuson': 'Stacy Marie Fuson',
+    'Teri Marie Harrison': 'Teri Harrison',
+    'Tina Marie Jordan': 'Tina Jordan',
+    'Markéta Jánská': 'Marketa Janska',
+    'Pennelope M. Jimenez': 'Pennelope Jimenez',
+    'Pilar M. Lastra': 'Pilar Lastra',
+    'Rebecca Anne Ramos': 'Rebecca Ramos',
+    'Lindsey Gayle Evans': 'Lindsey Evans',
+    'Shanna Marie McLaughlin': 'Shanna McLaughlin',
+    'Jessa Hinton': 'Jessa Lynn Hinton',
+    'Olga De Mar': 'Olga de Mar',
+};
+var multiples = {
+    'Deisy and Sarah Teles': ['Deisy Teles', 'Sarah Teles'],
+    'Karen and Mirjam van Breeschooten': [
+        'Karin van Breeschooten',
+        'Mirjam van Breeschooten',
+    ],
+    'Jennifer and Natalie Jo Campbell': ['Jennifer Campbell', 'Natalie Campbell'],
+    'Kristina and Karissa Shannon': ['Kristina Shannon', 'Karissa Shannon'],
+    'Carol and Darlene Bernaola': ['Carol Bernaola', 'Darlene Bernaola'],
+};
 run();
 //# sourceMappingURL=wiki.js.map

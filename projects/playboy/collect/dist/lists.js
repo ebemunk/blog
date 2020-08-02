@@ -74,7 +74,8 @@ var R = __importStar(require("remeda"));
 var bluebird_1 = __importDefault(require("bluebird"));
 var db_1 = __importDefault(require("./db"));
 var remeda_1 = require("remeda");
-var years = R.range(1954, 2020).map(function (year) { return "List of Playboy Playmates of " + year; });
+// const years = R.range(1954, 2020).map(
+var years = R.range(1964, 1965).map(function (year) { return "List of Playboy Playmates of " + year; });
 var doYear = function (year) { return __awaiter(void 0, void 0, void 0, function () {
     var doc, infoboxes;
     return __generator(this, function (_a) {
@@ -111,12 +112,13 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                             switch (_a.label) {
                                 case 0:
                                     name = info.name;
-                                    nameArr = [];
+                                    nameArr = [name];
                                     if (names[name])
                                         nameArr = [names[name]];
                                     else if (multiples[name])
                                         nameArr = multiples[name];
                                     if (!name) {
+                                        // @ts-ignore
                                         console.log('!name', name, info.year);
                                     }
                                     _i = 0, nameArr_1 = nameArr;
@@ -127,8 +129,8 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                                     return [4 /*yield*/, pool.query("select * from playboy.playmates where name='" + n + "'")];
                                 case 2:
                                     res = _a.sent();
-                                    if (!res.rowCount) {
-                                        console.log('not found', n);
+                                    if (res.rowCount < 1) {
+                                        console.log('no rows');
                                     }
                                     return [4 /*yield*/, pool.query('update playboy.playmates set wiki=$1 where name=$2', [
                                             info,
