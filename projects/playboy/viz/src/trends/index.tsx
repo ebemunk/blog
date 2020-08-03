@@ -34,6 +34,8 @@ const Chart = ({ data, loess }) => {
     .range([chartHeight, 0])
     .nice()
 
+  console.log('hi')
+
   return (
     <>
       <WAxis
@@ -115,7 +117,7 @@ const Trends = ({}) => {
     })
   }, [focus])
 
-  console.log('fonk', dd)
+  // console.log('fonk', dd)
 
   return (
     <>
@@ -142,4 +144,6 @@ const Trends = ({}) => {
   )
 }
 
-export default Trends
+import { hot } from 'react-hot-loader'
+
+export default hot(module)(Trends)

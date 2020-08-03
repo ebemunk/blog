@@ -11,15 +11,19 @@ import BWH from './bwh/index'
 render(<BWH />, '#viz-bwh')
 
 // @ts-ignore
-if (module.hot) {
-  console.log('its hot')
+if (module.hot) module.hot.accept()
 
-  // @ts-ignore
-  module.hot.accept('./bwh/index', () => {
-    console.log('hottt')
+// // @ts-ignore
+// if (module.hot) {
+//   console.log('its hot')
 
-    render(<BWH />, '#viz-bwh')
-    // in all other cases - re-require App manually
-    // render(require('./bwh/index'));
-  })
-}
+//   // @ts-ignore
+//   module.hot.accept('./', () => {
+//     console.log('hottt')
+
+//     render(<Trends />, '#viz-trends')
+//     render(<BWH />, '#viz-bwh')
+//     // in all other cases - re-require App manually
+//     // render(require('./bwh/index'));
+//   })
+// }
