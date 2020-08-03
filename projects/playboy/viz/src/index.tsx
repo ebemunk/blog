@@ -6,3 +6,20 @@ const render = (component: React.ReactElement, selector: string) =>
 
 import Trends from './trends/index'
 render(<Trends />, '#viz-trends')
+
+import BWH from './bwh/index'
+render(<BWH />, '#viz-bwh')
+
+// @ts-ignore
+if (module.hot) {
+  console.log('its hot')
+
+  // @ts-ignore
+  module.hot.accept('./bwh/index', () => {
+    console.log('hottt')
+
+    render(<BWH />, '#viz-bwh')
+    // in all other cases - re-require App manually
+    // render(require('./bwh/index'));
+  })
+}

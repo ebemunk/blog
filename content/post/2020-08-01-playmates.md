@@ -20,7 +20,7 @@ As we look deeper into this dataset, I would ask you to keep in mind that we are
 
 Focusing on fatalities seem like a morbid curiosity; examining the terrifying and tragic deaths caused by plane crashes seems almost insulting. I was hesitant to look at this until I saw the numbers. Beyond the big crashes that make the news and are emblazed in our minds as the great tragedies they are, looking at it from this perspective is almost reassuring.
 
-<div id="viz-fat-hist"></div>
+<div id="viz-bwh"></div>
 
 ## Flight Phases
 
@@ -52,3 +52,7 @@ I hope this gave you a new perspective on aviation and flight safety. If you're 
     }
   }
 </style> -->
+
+debbie hooper - wrong height
+kristine winder - wrong height
+julia lyndon - bust
