@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom'
 const render = (component: React.ReactElement, selector: string) =>
   ReactDOM.render(component, document.querySelector(selector))
 
+import Scatter from './scatter/index'
+render(<Scatter />, '#viz-scatter')
+
 import Trends from './trends/index'
 render(<Trends />, '#viz-trends')
 

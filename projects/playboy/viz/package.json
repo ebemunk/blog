@@ -36,6 +36,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hot-loader": "^4.6.3",
+    "react-spring": "^8.0.27",
     "remeda": "^0.0.20"
   }
 }
