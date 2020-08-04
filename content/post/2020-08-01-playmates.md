@@ -18,8 +18,3 @@ ines rau - first transgender playmate has no page on babepedia
 
 <script src="http://localhost:9001/bundle.js"></script>
 <!-- <script src="/playboy/bundle.js"></script> -->
-
-
-debbie hooper - wrong height
-kristine winder - wrong height
-julia lyndon - bust

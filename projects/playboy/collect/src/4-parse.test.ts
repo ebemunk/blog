@@ -63,7 +63,9 @@ test('parseBorn', () => {
 
   const legits = h.filter(d => d !== null)
 
+  // @ts-ignore
   expect(isAfter(min(legits), new Date(1923, 3, 21))).toBe(true)
+  // @ts-ignore
   expect(isBefore(max(legits), new Date(2000, 6, 19))).toBe(true)
 })
 

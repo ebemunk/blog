@@ -1,4 +1,5 @@
-import memoize from 'lodash/memoize'
+// import memoize from 'lodash/memoize'
+const memoize = require('lodash/memoize')
 
 import raw from '../data.json'
 
@@ -10,12 +11,7 @@ export const data = raw
   .sort((a, b) => a.date.getTime() - b.date.getTime())
 
 const _get = (key: Function): [Date, number][] =>
-  data
-    .filter((d: any) => !!key(d))
-    .filter(d => d.name !== 'Debbie Hooper')
-    .filter(d => d.name !== 'Kristine Winder')
-    .filter(d => d.name !== 'Julia Lyndon')
-    .map((d: any) => [d.date, key(d)])
+  data.filter((d: any) => !!key(d)).map((d: any) => [d.date, key(d)])
 
 export const get = memoize(_get)
 

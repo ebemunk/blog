@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { hot } from 'react-hot-loader'
 
-import { FlexPlot, usePlotContext } from '@xmatters/vizlib'
+import { FlexPlot, usePlotContext, Path } from '@xmatters/vizlib'
 import { scalePoint, scaleTime, scaleLinear } from 'd3-scale'
 import { extent, range } from 'd3-array'
 import { useTransition, animated } from 'react-spring'
@@ -149,7 +149,55 @@ const accessors = stage => {
   }
 }
 
+import loessData from '../../loess.json'
+import { area, line } from 'd3-shape'
+
+const LOESS = ({ stage, sX, sY, yA }) => {
+  const ld = loessData.find(d => d.key === stage)
+
+  if (!ld) return null
+
+  const {
+    loess: { fitted, halfwidth },
+  } = ld
+
+  const dd = get(accessors(stage)[1])
+
+  return (
+    <>
+      <Path
+        data={dd.map((d, i) => [
+          sX(d[0]),
+          sY(fitted[i] - halfwidth[i]),
+          sY(fitted[i] + halfwidth[i]),
+        ])}
+        // @ts-ignore
+        generator={area()
+          .x(d => d[0])
+          .y0(d => d[1])
+          // @ts-ignore
+          .y1(d => d[2])}
+        style={{
+          opacity: 1,
+          fill: 'gray',
+        }}
+      />
+      <Path
+        data={dd.map((d, i) => [sX(d[0]), sY(fitted[i])])}
+        // @ts-ignore
+        generator={line()}
+        style={{
+          stroke: 'yellow',
+          fill: 'none',
+        }}
+      />
+    </>
+  )
+}
+
 const Viz = ({ stage }) => {
+  console.log('viz rendering', stage)
+
   const { chartHeight, chartWidth } = usePlotContext()
 
   const [xA, yA] = accessors(stage)
@@ -163,27 +211,36 @@ const Viz = ({ stage }) => {
 
   // @ts-ignore
   const transition = useTransition(
-    data.filter(d => !!yA(d)),
+    data,
     d => `${d.name}-${d.year}-${d.month}`,
     {
       from: {
         opacity: 0,
-        r: 0,
         // @ts-ignore
+        r: 0,
         cx: 0,
         cy: 0,
       },
       enter: d => ({
         opacity: 1,
-        r: 4,
-        cx: sX(xA(d)),
-        cy: sY(yA(d)),
-      }),
-      update: d => ({
-        cx: sX(xA(d)),
-        cy: sY(yA(d)),
         r: 2,
+        cx: sX(xA(d)),
+        cy: sY(yA(d)),
       }),
+      update: d => {
+        if (!yA(d)) {
+          return {
+            opacity: 0,
+          }
+        }
+
+        return {
+          cx: sX(xA(d)),
+          cy: sY(yA(d)),
+          r: 2,
+          opacity: 1,
+        }
+      },
       leave: d => ({
         r: 0,
         opacity: 0,
@@ -218,6 +275,7 @@ const Viz = ({ stage }) => {
           />
         )
       })}
+      {stage !== 'start' && <LOESS sX={sX} sY={sY} stage={stage} yA={yA} />}
     </>
   )
 }
@@ -226,6 +284,7 @@ const STAGES = ['start', 'mateAge', 'height', 'weight', 'bust', 'waist', 'hips']
 
 const Scatter = () => {
   const [stage, setStage] = React.useState('start')
+  console.log('scatter rendering')
 
   return (
     <div

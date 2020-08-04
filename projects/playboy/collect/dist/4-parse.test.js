@@ -82,7 +82,9 @@ test('parseBorn', function () {
     var nulls = h.filter(function (d) { return d == null; });
     expect(nulls.length).toBe(16);
     var legits = h.filter(function (d) { return d !== null; });
+    // @ts-ignore
     expect(date_fns_1.isAfter(date_fns_1.min(legits), new Date(1923, 3, 21))).toBe(true);
+    // @ts-ignore
     expect(date_fns_1.isBefore(date_fns_1.max(legits), new Date(2000, 6, 19))).toBe(true);
 });
 test('parseCup', function () {
