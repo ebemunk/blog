@@ -7,7 +7,7 @@ import {
   parseBorn,
   parseCup,
   parseTattoos,
-} from './parse'
+} from './4-parse'
 import getPool from './db'
 import { uniq } from 'remeda'
 import { max, min, isAfter, isBefore } from 'date-fns'

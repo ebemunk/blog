@@ -93,7 +93,6 @@ const names: { [key: string]: string } = {
   'Laurie Ann Carr': 'Laurie Carr',
   'Pam Stein': 'Pamela Stein',
   'Katariina Souri': 'Kata Kärkkäinen',
-  'Jennifer Lyn Jackson': 'Jennifer Jackson',
   'Laurie Jo Wood': 'Laurie Wood',
   'Stacy Arthur': 'Stacy Leigh Arthur',
   'Carrie Yazel': 'Carrie Jean Yazel',

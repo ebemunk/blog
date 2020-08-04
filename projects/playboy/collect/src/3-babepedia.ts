@@ -39,6 +39,7 @@ const nameCorrection: { [key: string]: string } = {
   'Jessa Lynn Hinton': 'Jessa_Hinton',
   'Chastity Samone': 'Chasity_Samone',
   'P. J. Lansing': 'P.J._Lansing',
+  'Victoria Valentino': 'Victoria_Valentino_%282%29',
   // skip Ines Rau
 }
 
