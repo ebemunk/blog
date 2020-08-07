@@ -19,7 +19,14 @@ const run = async () => {
     resolve(__dirname, '../../viz/data.json'),
     'utf-8',
   )
-  const data = JSON.parse(file)
+  const raw = JSON.parse(file)
+
+  const data = raw
+    .map(d => ({
+      ...d,
+      date: new Date(d.year, d.month, 1),
+    }))
+    .sort((a, b) => a.date.getTime() - b.date.getTime())
 
   const loessArr = Object.keys(slices).map(key => {
     const dd = data

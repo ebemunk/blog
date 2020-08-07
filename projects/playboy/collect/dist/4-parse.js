@@ -118,11 +118,10 @@ exports.parseHair = function (str) {
         return null;
     var colors = {
         Blonde: ['Blonde'],
-        Brunette: ['Brunette', 'Brown'],
+        Brunette: ['Brunette', 'Brown', 'Hazel'],
         Black: ['Black'],
         Red: ['Red', 'Redhead'],
         Auburn: ['Auburn'],
-        Hazel: ['Hazel'],
     };
     try {
         for (var _b = __values(Object.keys(colors)), _c = _b.next(); !_c.done; _c = _b.next()) {

@@ -58,11 +58,10 @@ export const parseHair = (str: string | undefined): string | null => {
 
   const colors: { [key: string]: string[] } = {
     Blonde: ['Blonde'],
-    Brunette: ['Brunette', 'Brown'],
+    Brunette: ['Brunette', 'Brown', 'Hazel'],
     Black: ['Black'],
     Red: ['Red', 'Redhead'],
     Auburn: ['Auburn'],
-    Hazel: ['Hazel'],
   }
 
   for (let color of Object.keys(colors)) {

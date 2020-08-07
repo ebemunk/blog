@@ -7,26 +7,11 @@ const render = (component: React.ReactElement, selector: string) =>
 import Scatter from './scatter/index'
 render(<Scatter />, '#viz-scatter')
 
-import Trends from './trends/index'
-render(<Trends />, '#viz-trends')
+// import Trends from './trends/index'
+// render(<Trends />, '#viz-trends')
 
 import BWH from './bwh/index'
 render(<BWH />, '#viz-bwh')
 
 // @ts-ignore
 if (module.hot) module.hot.accept()
-
-// // @ts-ignore
-// if (module.hot) {
-//   console.log('its hot')
-
-//   // @ts-ignore
-//   module.hot.accept('./', () => {
-//     console.log('hottt')
-
-//     render(<Trends />, '#viz-trends')
-//     render(<BWH />, '#viz-bwh')
-//     // in all other cases - re-require App manually
-//     // render(require('./bwh/index'));
-//   })
-// }
