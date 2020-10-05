@@ -13,5 +13,26 @@ render(<Scatter />, '#viz-scatter')
 import BWH from './bwh/index'
 render(<BWH />, '#viz-bwh')
 
+//@ts-ignore
+window.showFps = function () {
+  var script = document.createElement('script')
+  script.onload = function () {
+    //@ts-ignore
+    var stats = new Stats()
+    document.body.appendChild(stats.dom)
+    requestAnimationFrame(function loop() {
+      stats.update()
+      requestAnimationFrame(loop)
+    })
+  }
+  script.src = '//rawgit.com/mrdoob/stats.js/master/build/stats.min.js'
+  document.head.appendChild(script)
+}
+
+if (process.env.NODE_ENV === 'dev') {
+  //@ts-ignore
+  window.showFps()
+}
+
 // @ts-ignore
 if (module.hot) module.hot.accept()

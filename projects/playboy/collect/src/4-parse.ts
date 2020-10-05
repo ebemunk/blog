@@ -21,6 +21,9 @@ export const parseEthnicity = (str: string | undefined): string | null => {
   if (str === 'Caucaision') {
     eth = 'Caucasian'
   }
+  if (str.indexOf('Mixed') > -1 || str.indexOf(',') > -1) {
+    eth = 'Mixed'
+  }
 
   return eth
 }

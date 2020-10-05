@@ -2,30 +2,11 @@ import * as React from 'react'
 import { hot } from 'react-hot-loader'
 
 import { FlexPlot, usePlotContext, Path } from '@xmatters/vizlib'
-import {
-  scalePoint,
-  scaleTime,
-  scaleLinear,
-  scaleIdentity,
-  scaleOrdinal,
-  scalePow,
-} from 'd3-scale'
-import { extent, range } from 'd3-array'
-import {
-  forceSimulation,
-  forceX,
-  forceY,
-  forceCollide,
-  forceRadial,
-} from 'd3-force'
-import { packSiblings } from 'd3-hierarchy'
 import { useTransition, animated } from 'react-spring'
-import { identity, clone, groupBy, toPairs } from 'remeda'
 
 import { get, data } from '../data'
 import { WAxis } from '../themed'
 import { MONTHS } from '../util'
-import Pie from './Pie'
 
 const XAxis = ({ stage, scale }) => {
   switch (stage) {
@@ -106,228 +87,11 @@ const Circle = ({ datum, cx, cy, r, style }) => {
   )
 }
 
-const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
-  switch (stage) {
-    case 'start':
-      return [
-        scalePoint()
-          .range([0, chartWidth])
-          .domain(data.map(d => d.year + ''))
-          .padding(0.5),
-
-        scalePoint()
-          .range([0, chartHeight])
-          .domain(range(12).map(d => `${d}`))
-          .padding(0.5),
-
-        identity,
-      ]
-
-    case 'mateAge':
-    case 'height':
-    case 'weight':
-    case 'bust':
-    case 'waist':
-    case 'hips':
-      return [
-        scaleTime()
-          // @ts-ignore
-          .domain(extent(data, xA))
-          .range([0, chartWidth]),
-
-        scaleLinear()
-          .domain(
-            //@ts-ignore
-            extent(data, yA),
-          )
-          .range([chartHeight, 0])
-          .nice(),
-
-        identity,
-      ]
-
-    case 'hairdd':
-      const nodes: any[] = clone(data)
-      const counts = groupBy(nodes, d => d.hair)
-      const radiusScale = scalePow()
-        .exponent(0.5)
-        .domain(extent(Object.entries(counts).map(([key, val]) => val.length)))
-        .range([0, Math.min(chartHeight, chartWidth) / 2])
-      const circles = Object.entries(counts).map(([key, val]) => ({
-        // r: Math.ceil(Math.sqrt(val.length / Math.PI)),
-        // r: val.length,
-        r: radiusScale(val.length),
-        key: key,
-      }))
-      const packed = packSiblings(circles)
-
-      console.log('p', packed)
-      const inner = Object.entries(counts).reduce(
-        (acc, [key, val]) => ({
-          ...acc,
-          [key]: packSiblings(val.map(d => ({ ...d, r: 3 }))),
-        }),
-        {},
-      )
-      console.log('inner', inner)
-
-      return [
-        d =>
-          (inner[d.hair].find(n => n.name === d.name)?.x ?? 0) +
-          (packed.find(p => p.key === d.hair)?.x ?? 0) +
-          chartWidth / 2,
-        d =>
-          (inner[d.hair].find(n => n.name === d.name)?.y ?? 0) +
-          (packed.find(p => p.key === d.hair)?.y ?? 0) +
-          chartHeight / 2,
-        scaleOrdinal()
-          .domain([
-            'Blonde',
-            'Brunette',
-            'Black',
-            'Red',
-            'Auburn',
-            'Hazel',
-            'null',
-          ])
-          .range([
-            'yellow',
-            'brown',
-            'black',
-            'red',
-            'orange',
-            'olivedrab',
-            'gray',
-          ]),
-      ]
-
-    case 'hair': {
-      const nodes: any[] = clone(data)
-
-      const count = groupBy(nodes, d => d.hair)
-      // @ts-ignore
-      const pieLayout = pie().value(([k, arr]) => arr.length)(toPairs(count))
-      console.log('pie', pieLayout)
-
-      // const arcG = arc().innerRadius(0).outerRadius(100)
-      const arcG = arc()
-        .innerRadius(100)
-        .outerRadius(Math.min(chartHeight, chartWidth) / 2)
-      // @ts-ignore
-      const centers = pieLayout.map(d => {
-        // @ts-ignore
-        const [x, y] = arcG.centroid(d)
-        return [x + chartWidth / 2, y + chartHeight / 2]
-      })
-
-      console.log('centers', centers)
-
-      const simulation = forceSimulation(nodes)
-        // .force('x', forceX(chartWidth / 2))
-        // .force('y', forceY(chartHeight / 2))
-        .force('collide', forceCollide(2 + 1))
-        .force('cluster', custering(0.6))
-      // .force(
-      //   'radial',
-      //   forceRadial(100, chartWidth / 2, chartHeight / 2).strength(1),
-      // )
-      // .stop()
-
-      // for (let [i, c] of centers.entries()) {
-      //   simulation.force(
-      //     i + '-x',
-      //     forceX(c[0]).strength(d =>
-      //       //@ts-ignore
-      //       d.hair === pieLayout[i].data[0] ? 1 : 0,
-      //     ),
-      //   )
-      //   simulation.force(
-      //     i + '-y',
-      //     forceY(c[1]).strength(d =>
-      //       //@ts-ignore
-      //       d.hair === pieLayout[i].data[0] ? 1 : 0,
-      //     ),
-      //   )
-      // }
-
-      simulation.stop()
-
-      function clustering(alpha) {
-        nodes.forEach(function (d) {
-          var cluster = clusters[d.cluster]
-          if (cluster === d) return
-          var x = d.x - cluster.x,
-            y = d.y - cluster.y,
-            l = Math.sqrt(x * x + y * y),
-            r = d.r + cluster.r
-          if (l !== r) {
-            l = ((l - r) / l) * alpha
-            d.x -= x *= l
-            d.y -= y *= l
-            cluster.x += x
-            cluster.y += y
-          }
-        })
-      }
-      // for (let i = 0; i < 800; ++i) simulation.tick()
-      let prev = 0
-
-      for (
-        let i = 0,
-          n = Math.ceil(
-            Math.log(simulation.alphaMin()) /
-              Math.log(1 - simulation.alphaDecay()),
-          );
-        i < n;
-        ++i
-      ) {
-        const pct = i / n
-        if (pct - prev > 0.02) {
-          prev = pct
-        }
-
-        simulation.tick()
-      }
-
-      return [
-        d => nodes.find(n => d.name === n.name)?.x,
-        d => nodes.find(n => d.name === n.name)?.y,
-        scaleOrdinal()
-          .domain(['Blonde', 'Brunette', 'Black', 'Red', 'Auburn', 'Hazel'])
-          .range(['yellow', 'brown', 'black', 'red', 'orange', 'olivedrab']),
-      ]
-    }
-
-    default:
-      return [identity, identity]
-  }
-}
-
-const accessors = stage => {
-  switch (stage) {
-    case 'start':
-      return [d => d.year.toString(), d => d.month.toString(), d => 'pink']
-    case 'mateAge':
-      return [d => d.date, d => d.mateAge, d => 'pink']
-    case 'height':
-      return [d => d.date, d => d.height, d => 'pink']
-    case 'weight':
-      return [d => d.date, d => d.weight, d => 'pink']
-    case 'bust':
-      return [d => d.date, d => d.measurements?.bust, d => 'pink']
-    case 'waist':
-      return [d => d.date, d => d.measurements?.waist, d => 'pink']
-    case 'hips':
-      return [d => d.date, d => d.measurements?.hips, d => 'pink']
-    case 'hair':
-      return [identity, identity, d => d.hair]
-    default:
-      return [identity, identity, identity]
-  }
-}
+import accessors from './accessors'
+import scales from './scales'
 
 import loessData from '../../loess.json'
-import { area, line, pie, arc } from 'd3-shape'
+import { area, line } from 'd3-shape'
 
 const LOESS = ({ stage, sX, sY, yA }) => {
   const ld = loessData.find(d => d.key === stage)
@@ -431,7 +195,7 @@ const Viz = ({ stage }) => {
           cx: sX(xA(d)),
           cy: sY(yA(d)),
           r: 2,
-          opacity: 0.7,
+          opacity: 1,
           fill: sC(cA(d)),
         }
       },
@@ -475,18 +239,6 @@ const Viz = ({ stage }) => {
           />
         )
       })}
-      {!!packed &&
-        packed.map(p => (
-          <circle
-            key={p.key}
-            r={p.r}
-            cx={p.x + chartWidth / 2}
-            cy={p.y + chartHeight / 2}
-            fill="white"
-            opacity={0.5}
-            data-key={p.key}
-          />
-        ))}
       {['mateAge', 'height', 'weight', 'bust', 'waist', 'hips'].includes(
         stage,
       ) && <LOESS sX={sX} sY={sY} stage={stage} yA={yA} />}
@@ -505,6 +257,8 @@ const STAGES = [
   'hips',
 
   'hair',
+  'ethnicity',
+  'breasts',
 ]
 
 const Scatter = () => {
@@ -536,16 +290,27 @@ const Scatter = () => {
           marginLeft: '70vw',
         }}
       >
-        <button
+        {/* <button
           onClick={() =>
             setStage(
               // STAGES[(STAGES.findIndex(s => s === stage) + 1) % STAGES.length],
-              stage === 'hair' ? 'bust' : 'hair',
+              // STAGES[(STAGES.findIndex(s => s === stage) + 1) % STAGES.length],
+              // stage === 'hair' ? 'bust' : 'hair',
             )
           }
         >
           {stage}
-        </button>
+        </button> */}
+
+        <select
+          onChange={e => {
+            setStage(e.target.value)
+          }}
+        >
+          {STAGES.map(opt => (
+            <option key={opt} value={opt} label={opt} />
+          ))}
+        </select>
       </div>
       <div
         style={{
