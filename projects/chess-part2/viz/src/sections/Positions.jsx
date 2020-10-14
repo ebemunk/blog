@@ -153,7 +153,7 @@ const Positions = ({ datz, caption }) => {
 }
 
 const Pos = ({}) => (
-  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+  <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
     {data.Positions.map((datz, i) => (
       <div key={i}>
         <Positions

@@ -1,11 +1,11 @@
 +++
 date = "2016-01-21T04:56:00-07:00"
 PublishDate = "2016-01-21T04:56:00-07:00"
-draft = false
 title = "Optimizing Particle Background Performance with Quadtrees"
-tags = ["performance", "optimization", "javascript"]
+tags = ["performance", "javascript"]
 image = "img/quadtrees.png"
 related = ["2018-12-29-chess-part2.md", "2019-01-05-plane-crashes.md"]
+shortSummary = "Using quadtrees to optimize particle systems."
 +++
 
 I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, [Particleground](https://github.com/jnicol/particleground) and [particles.js](https://github.com/VincentGarreau/particles.js). Before jumping in and copy/pasting sample code, I figured I'd do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance.

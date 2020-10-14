@@ -2,9 +2,10 @@
 date = "2018-12-18"
 title = "One Year in Vancouver: Visualizing Events"
 slug = "one-year-in-van"
-tags = ["data visualization", "maps", "vancouver", "georgia straight"]
+tags = ["data visualization", "maps", "long form"]
 image = "img/year-in-van.png"
-hidden = false
+shortSummary = "2018 in Vancouver through the lens of event listings on the Georgia Straight."
+related = ["2016-02-27-chess-2mil.md", "2019-01-05-plane-crashes.md"]
 +++
 
 We're looking at the year of 2018 in Vancouver through the lens of event listings on the [Georgia Straight Events](https://www.straight.com/listings/events) page. I find their list extremely useful and use it all the time to find cool things to do, and notice a great deal of events happening all over the city. I collected all the events over the course of 2018 and wanted to make a "map of the city" from this data.

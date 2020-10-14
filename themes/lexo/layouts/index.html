@@ -1,31 +1,19 @@
 {{ partial "header.html" . }}
 
-<div class="article-list">
-	{{ range $key, $val := where .Paginator.Pages "Params.hidden" "ne" true }}
-		<article class="item">
-			<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-			<div class="tags-and-date">
-				<time title='{{ $val.Date.Format "2006-01-02 @ 15:04pm"}}'>{{ $val.Date.Format "2 January 2006" }}</time>
-				{{ partial "tags.html" . }}
-			</div>
-			<div class="split2">
-				<div class="image">
-					<img src="/{{ .Params.image }}" />
+<main class="home">
+	<section id="thumbs">
+		{{ range $key, $val := where .Paginator.Pages "Params.hidden" "ne" true }}
+			<a href="{{ .Permalink }}">
+				<img src="/{{ .Params.image }}" />
+				<div class="hover">
+					<span>{{ .Title }}</span>
+					<p>{{ .Params.shortSummary | markdownify }}</p>
 				</div>
-				<div class="summary">
-					{{ if .Params.summary }}
-						{{ .Params.summary | markdownify }}
-					{{ else }}
-						{{ .Summary }}
-					{{ end }}
-				</div>
-			</div>
-		</article>
+			</a>
+		{{ end }}
+	</section>
+</main>
 
-		<hr>
-	{{ end }}
-</div>
-
-{{ partial "pagination.html" . }}
+{{ partial "consult.html" . }}
 
 {{ partial "footer.html" . }}
