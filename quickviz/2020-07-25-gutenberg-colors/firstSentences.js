@@ -1,0 +1,37 @@
+module.exports = {
+  1: `It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.`,
+  2: `Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.`,
+  3: `“Well, Prince, so Genoa and Lucca are now just family estates of the Buonapartes. But I warn you, if you don’t tell me that this means war, if you still try to defend the infamies and horrors perpetrated by that Antichrist—I really believe he is Antichrist—I will have nothing more to do with you and you are no longer my friend, no longer my ‘faithful slave,’ as you call yourself! But how do you do? I see I have frightened you—sit down and tell me all the news.”`,
+  4: `Squire Trelawney, Dr. Livesey, and the rest of these gentlemen having asked me to write down the whole particulars about Treasure Island, from the beginning to the end, keeping nothing back but the bearings of the island, and that only because there is still treasure not yet lifted, I take up my pen in the year of grace 17__ and go back to the time when my father kept the Admiral Benbow inn and the brown old seaman with the sabre cut first took up his lodging under our roof.`,
+  5: `SCENE.--A room furnished comfortably and tastefully, but not extravagantly. At the back, a door to the right leads to the entrance-hall, another to the left leads to Helmer's study. Between the doors stands a piano.`,
+  6: `Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed. A yellow dressinggown, ungirdled, was sustained gently behind him on the mild morning air.`,
+  7: `You don't know about me without you have read a book by the name of The Adventures of Tom Sawyer; but that ain't no matter.`,
+  8: `My father’s family name being Pirrip, and my Christian name Philip, my infant tongue could make of both names nothing longer or more explicit than Pip. So, I called myself Pip, and came to be called Pip.`,
+  9: `On an exceptionally hot evening early in July a young man came out of the garret in which he lodged in S. Place and walked slowly, as though in hesitation, towards K. bridge.`,
+  10: `Alexey Fyodorovitch Karamazov was the third son of Fyodor Pavlovitch Karamazov, a land owner well known in our district in his own day, and still remembered among us owing to his gloomy and tragic death, which happened thirteen years ago, and which I shall describe in its proper place.`,
+  11: `The Nellie, a cruising yawl, swung to her anchor without a flutter of the sails, and was at rest.`,
+  12: `1801.--I have just returned from a visit to my landlord--the solitary neighbour that I shall be troubled with.  This is certainly a beautiful country!  In all England, I do not believe that I could have fixed on a situation so completely removed from the stir of society.`,
+  13: `Idle reader: thou mayest believe me without any oath that I would this book, as it is the child of my brain, were the fairest, gayest, and cleverest that could be imagined.`,
+  14: `The most usual way of appeasing the indignation of such as we have any way offended, when we see them in possession of the power of revenge, and find that we absolutely lie at their mercy, is by submission, to move them to commiseration and pity; and yet bravery, constancy, and resolution, however quite contrary means, have sometimes served to produce the same effect.`,
+  15: `Buck did not read the newspapers, or he would have known that trouble was brewing, not alone for himself, but for every tide-water dog, strong of muscle and with warm, long hair, from Puget Sound to San Diego.`,
+  16: `Happy families are all alike; every unhappy family is unhappy in its own way.`,
+  17: `His glory, by whose might all things are mov'd,
+  Pierces the universe, and in one part
+  Sheds more resplendence, elsewhere less.`,
+  18: `THE FIRST STORY. _Master Ciappelletto dupeth a holy friar with a false confession and dieth; and having been in his lifetime the worst of men, he is, after his death, reputed a saint and called Saint Ciappelletto_ 16`,
+  19: `The author of these Travels, Mr. Lemuel Gulliver, is my ancient and intimate friend; there is likewise some relation between us on the mother’s side.`,
+  20: `In a castle of Westphalia, belonging to the Baron of Thunder-ten-Tronckh, lived a youth, whom nature had endowed with the most gentle manners.`,
+  21: `Come, said my soul,
+  Such verses for my Body let us write, (for we are one,)
+  That should I after return,
+  Or, long, long hence, in other spheres,
+  There to some group of mates the chants resuming,
+  (Tallying Earth’s soil, trees, winds, tumultuous waves,)
+  Ever with pleas’d smile I may keep on,
+  Ever and ever yet the verses owning--as, first, I here and now
+  Signing for Soul and Body, set to them my name,`,
+  22: `One thing was certain, that the WHITE kitten had had nothing to do with it: --it was the black kitten’s fault entirely.`,
+  23: `The annual labour of every nation is the fund which originally supplies it with all the necessaries and conveniencies of life which it annually consumes, and which consist always either in the immediate produce of that labour, or in what is purchased with that produce from other nations.`,
+  24: `There were four of us—George, and William Samuel Harris, and myself, and Montmorency. We were sitting in my room, smoking, and talking about how bad we were—bad from a medical point of view I mean, of course.`,
+  25: `The story had held us, round the fire, sufficiently breathless, but except the obvious remark that it was gruesome, as, on Christmas Eve in an old house, a strange tale should essentially be, I remember no comment uttered till somebody happened to say that it was the only case he had met in which such a visitation had fallen on a child.`,
+}

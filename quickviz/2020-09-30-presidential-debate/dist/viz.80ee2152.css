@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+body {
+  font-size: 16px;
+  background: #fff0cb;
+  margin: 0;
+}
+
+#root {
+  width: 2000px;
+  margin: 8px;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", "Comis Sans MS";
+  font-weight: 600;
+}
+
+.chartTitle {
+  font-family: "Playfair Display", "Comis Sans MS";
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.chartDesc {
+  font-family: "Roboto Condensed", "Comis Sans MS";
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.polar {
+  position: relative;
+}
+.polar h1 {
+  font-size: 5rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.polar h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+.polar p {
+  font-family: "Roboto Condensed", "Comis Sans MS";
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+.polar .pies {
+  width: 1250px !important;
+}
+.polar .pies .name {
+  font-family: "Playfair Display", "Comis Sans MS";
+  font-size: 1.4rem;
+}
+.polar .pies .names {
+  font-family: "Roboto Condensed", "Comis Sans MS";
+  font-size: 1rem;
+}
+.polar .pies .pieName {
+  font-size: 3rem;
+}
+.polar .pies .small {
+  font-family: "Roboto Condensed", "Comis Sans MS";
+  font-size: 1rem;
+}
+.polar .pies .speaking-interlude {
+  font-size: 1rem;
+  margin-top: 0.8rem !important;
+  margin-bottom: 0.2rem !important;
+}
+.polar .pies .time {
+  font-size: 1.6rem !important;
+}
+.polar .axis .tick,
+.polar .ticks .tick {
+  font-size: 1rem;
+  font-family: "Roboto Condensed", "Comis Sans MS";
+}
+.polar .axis .tick line,
+.polar .ticks .tick line {
+  stroke-dasharray: 5, 5;
+  color: #636363;
+}
+.polar .axis .tick:last-child,
+.polar .ticks .tick:last-child {
+  display: none;
+}
+.polar .lanetext {
+  font-family: "Roboto Condensed", "Comis Sans MS";
+  font-size: 1.3rem;
+  dominant-baseline: central;
+  opacity: 0.5;
+}
+.polar .meta {
+  max-width: 700px;
+  margin-top: 5rem;
+}
+.polar .meta .madeBy {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.polar .meta .madeBy i {
+  margin-left: 0.5rem;
+  margin-right: 0.2rem;
+}
+.polar .meta p {
+  font-size: 1.2rem;
+}
+
+.normal h1 {
+  font-size: 5rem;
+  margin-bottom: 2.5rem;
+}
+.normal p {
+  font-family: "Roboto Condensed", "Comis Sans MS";
+  font-weight: 300;
+  font-size: 2rem;
+  max-width: 1200px;
+}
+.normal h1,
+.normal p,
+.normal .chartTitle,
+.normal .chartDesc {
+  margin-left: 75px;
+}
+.normal .axisLabel {
+  font-family: "Playfair Display", "Comis Sans MS";
+  display: block;
+  text-align: center;
+}
+.normal .sans-serif {
+  font-family: "Roboto Condensed", "Comis Sans MS";
+}
+.normal #SpeechRanges,
+.normal #PerSecondSpeech {
+  margin-top: 2rem;
+}
+.normal #SpeechRanges .xAxis text,
+.normal #SpeechRanges .yAxis text,
+.normal #PerSecondSpeech .xAxis text,
+.normal #PerSecondSpeech .yAxis text {
+  font-size: 1rem;
+  font-family: "Roboto Condensed", "Comis Sans MS";
+}
+.normal #SpeechRanges .xGrid .domain {
+  display: none;
+}
+.normal #SpeechRanges .xGrid line {
+  stroke-dasharray: 5, 5;
+  color: #636363;
+}
+.normal .pies {
+  width: 2000px !important;
+}
+.normal .pieName {
+  font-family: "Playfair Display", "Comis Sans MS";
+  font-size: 4rem;
+}
+.normal .name {
+  font-size: 2rem;
+  font-family: "Playfair Display", "Comis Sans MS";
+}
+.normal .small {
+  font-family: "Roboto Condensed", "Comis Sans MS";
+}
+
+/*# sourceMappingURL=/viz.80ee2152.css.map */

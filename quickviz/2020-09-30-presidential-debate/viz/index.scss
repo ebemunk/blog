@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+$bgYellow: #fff0cb;
+$serif: 'Playfair Display', 'Comis Sans MS';
+$sans-serif: 'Roboto Condensed', 'Comis Sans MS';
+
+body {
+  font-size: 16px;
+  background: $bgYellow;
+  margin: 0;
+}
+
+#root {
+  width: 2000px;
+  margin: 8px;
+}
+
+h1,
+h2 {
+  font-family: $serif;
+  font-weight: 600;
+}
+
+.chartTitle {
+  font-family: $serif;
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.chartDesc {
+  font-family: $sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.polar {
+  position: relative;
+
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+  }
+
+  p {
+    font-family: $sans-serif;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+  }
+
+  .pies {
+    width: 1250px !important;
+
+    .name {
+      font-family: $serif;
+      font-size: 1.4rem;
+    }
+
+    .names {
+      font-family: $sans-serif;
+      font-size: 1rem;
+    }
+
+    .pieName {
+      font-size: 3rem;
+    }
+
+    .small {
+      font-family: $sans-serif;
+      font-size: 1rem;
+    }
+
+    .speaking-interlude {
+      font-size: 1rem;
+      margin-top: 0.8rem !important;
+      margin-bottom: 0.2rem !important;
+    }
+
+    .time {
+      font-size: 1.6rem !important;
+    }
+  }
+
+  .axis,
+  .ticks {
+    .tick {
+      font-size: 1rem;
+      font-family: $sans-serif;
+
+      line {
+        stroke-dasharray: 5, 5;
+        color: #636363;
+      }
+    }
+
+    .tick:last-child {
+      display: none;
+    }
+  }
+
+  .lanetext {
+    font-family: $sans-serif;
+    font-size: 1.3rem;
+    dominant-baseline: central;
+    opacity: 0.5;
+  }
+
+  .meta {
+    max-width: 700px;
+    margin-top: 5rem;
+
+    .madeBy {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-left: 0.5rem;
+        margin-right: 0.2rem;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.normal {
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  p {
+    font-family: $sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    max-width: 1200px;
+  }
+
+  h1,
+  p,
+  .chartTitle,
+  .chartDesc {
+    margin-left: 75px;
+  }
+
+  .axisLabel {
+    font-family: $serif;
+    display: block;
+    text-align: center;
+  }
+
+  .sans-serif {
+    font-family: $sans-serif;
+  }
+
+  #SpeechRanges,
+  #PerSecondSpeech {
+    margin-top: 2rem;
+
+    .xAxis,
+    .yAxis {
+      text {
+        font-size: 1rem;
+        font-family: $sans-serif;
+      }
+    }
+  }
+
+  #SpeechRanges {
+    .xGrid {
+      .domain {
+        display: none;
+      }
+
+      line {
+        stroke-dasharray: 5, 5;
+        color: #636363;
+      }
+    }
+  }
+
+  .pies {
+    width: 2000px !important;
+  }
+
+  .pieName {
+    font-family: $serif;
+    font-size: 4rem;
+  }
+
+  .name {
+    font-size: 2rem;
+    font-family: $serif;
+  }
+
+  .small {
+    font-family: $sans-serif;
+  }
+}
