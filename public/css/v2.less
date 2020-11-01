@@ -4,6 +4,7 @@
 @light-grey: lighten(@dark-grey, 5%);
 @yellow: #d19a66;
 @orange: #de5442;
+@darkOrange: darken(@orange, 12%);
 @purple: #c776df;
 @green: #7cb34b;
 @faded-white: rgba(255, 255, 255, 0.8);
@@ -14,6 +15,7 @@
 
 html {
   height: 100%;
+  font-size: 18px;
 }
 
 body {
@@ -22,11 +24,12 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Roboto";
 }
 
-header.site-header {
+header.site-header,
+header.site-header a {
   height: 180px;
   background: url("../img/wildpianoparty.png");
   background-position: 50% -20px;
@@ -39,11 +42,14 @@ header.site-header {
   font-size: 3rem;
   line-height: 3rem;
   font-family: "Marcellus SC";
-  color: darken(@orange, 12%);
+  color: @darkOrange;
   text-align: center;
+  text-decoration: none;
+  transition: color 400ms;
 
   &:hover {
     background-color: @light-grey;
+    color: @orange;
   }
 }
 
@@ -60,7 +66,6 @@ footer.site-footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
 
   &:hover {
     background-color: @light-grey;
@@ -90,6 +95,7 @@ h6 {
   color: @yellow;
   margin: 1.3rem auto;
   max-width: @maxwidth;
+  font-weight: 500;
 }
 
 a,
@@ -118,7 +124,7 @@ blockquote {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 1.68rem;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: darken(@white, 15%);
 }
 
@@ -181,8 +187,10 @@ article.article {
 }
 
 .article-list {
+  margin-bottom: 2rem;
+
   .item {
-    h1 {
+    h2 {
       max-width: @maxwidth;
       font-size: 2rem;
       text-align: left;
@@ -201,6 +209,7 @@ article.article {
     .tags-and-date {
       text-align: left;
       margin: -1rem auto 1rem auto;
+      font-size: 0.8rem;
     }
 
     .split2 {
@@ -213,15 +222,17 @@ article.article {
     }
 
     .image {
-      max-width: 10rem;
+      width: 33%;
+      height: calc(33% / 1.5);
 
       img {
         width: 100%;
+        height: auto;
       }
     }
 
     .summary {
-      max-width: 30rem;
+      width: 66%;
       line-height: 1.68rem;
       padding: 0 0 0 1rem;
     }
@@ -258,21 +269,98 @@ article.article {
     justify-content: center;
 
     .suggestion {
+      flex-basis: 50%;
+      width: 50%;
+      height: calc(50% / 1.5);
       max-width: 18rem;
       margin: 1rem;
       text-align: center;
 
       img {
-        width: 16rem;
-        height: 16rem;
-        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0.5rem;
       }
 
       a {
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-weight: 500;
+        font-size: 1.1rem;
       }
     }
   }
+}
+
+.home {
+  section#thumbs {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      flex-basis: 33%;
+      width: 33%;
+      height: calc(33% / 1.5);
+      position: relative;
+      color: white;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .hover {
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity 400ms;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          text-align: center;
+          font-size: 1.2rem;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+
+        p {
+          text-align: center;
+          padding: 0.5rem;
+        }
+      }
+
+      &:hover {
+        color: white;
+
+        .hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    @media all and (max-width: 425px) {
+      a {
+        flex-basis: 100%;
+        width: 100%;
+        height: calc(100% / 1.5);
+      }
+    }
+  }
+}
+
+h2.consult {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
 }

@@ -1,0 +1,27 @@
+/* .title::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #444;
+  background: linear-gradient(left, transparent 0%, #444 50%, transparent 100%);
+} */
+
+.title-color {
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 100% 5px;
+  background-position: bottom 5px left 0, bottom -5px left 0;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}

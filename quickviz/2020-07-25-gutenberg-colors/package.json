@@ -1,0 +1,12 @@
+{
+  "name": "2020-07-25-gutenberg-colors",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^26.1.0"
+  }
+}
