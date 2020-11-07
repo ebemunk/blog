@@ -10,7 +10,7 @@ import {
   curveCatmullRom,
   curveNatural,
 } from 'd3-shape'
-import { schemeCategory10 } from 'd3-scale-chromatic'
+import { schemeBlues, schemeCategory10 } from 'd3-scale-chromatic'
 
 import { get, data } from '../data'
 import { WAxis } from '../themed'
@@ -46,7 +46,10 @@ const Silhouette = ({ data, line, decade, stroke }) => {
           // @ts-ignore
           stroke,
           fill: 'none',
+          strokeWidth: 3,
+          isolation: 'isolate',
         }}
+        className="silpath"
       >
         <title>{decade}</title>
       </Path>
@@ -58,7 +61,10 @@ const Silhouette = ({ data, line, decade, stroke }) => {
           // @ts-ignore
           stroke,
           fill: 'none',
+          strokeWidth: 3,
+          isolation: 'isolate',
         }}
+        className="silpath"
       >
         <title>{decade}</title>
       </Path>
@@ -89,7 +95,8 @@ const Viz = ({ decades, curve }) => {
     .domain(['top', 'bust', 'waist', 'hips', 'bottom'])
 
   const color = scaleOrdinal()
-    .range(schemeCategory10)
+    // .range(schemeCategory10)
+    .range(schemeBlues[8])
     .domain(Object.keys(decades))
 
   const lineGenerator = line()
@@ -131,7 +138,7 @@ const Viz = ({ decades, curve }) => {
           }}
         />
       ))}
-      <Silhouette
+      {/* <Silhouette
         decade="ideal"
         line={lineGenerator}
         stroke={'red'}
@@ -151,7 +158,7 @@ const Viz = ({ decades, curve }) => {
             ['bottom', 36 / 2],
           ],
         }}
-      />
+      /> */}
     </>
   )
 }
@@ -192,7 +199,7 @@ const BWH = () => {
           <option key={key} value={key} label={key} />
         ))}
       </select>
-      <Plot width={500} height={500} margin={30}>
+      <Plot width={900} height={900} margin={30}>
         {/* @ts-ignore */}
         <Viz decades={pick(decades, filters)} curve={curve} />
       </Plot>

@@ -18,25 +18,8 @@ const XAxis = ({ stage, scale }) => {
         <WAxis
           scale={scale}
           orientation="top"
-          // @ts-ignore
-          ticks={[
-            // @ts-ignore
-            '1953',
-            // @ts-ignore
-            '1960',
-            // @ts-ignore
-            '1970',
-            // @ts-ignore
-            '1980',
-            // @ts-ignore
-            '1990',
-            // @ts-ignore
-            '2000',
-            // @ts-ignore
-            '2010',
-            // @ts-ignore
-            '2020',
-          ]}
+          ticks={[1953, 1960, 1970, 1980, 1990, 2000, 2010, 2020]}
+          showDomain
         />
       )
 
@@ -93,53 +76,7 @@ const Circle = ({ datum, cx, cy, r, style }) => {
 import accessors from './accessors'
 import scales from './scales'
 
-import loessData from '../../loess.json'
-import { area, line } from 'd3-shape'
-
-const LOESS = ({ stage, sX, sY, yA }) => {
-  const ld = loessData.find(d => d.key === stage)
-
-  if (!ld) return null
-
-  const {
-    loess: { fitted, halfwidth },
-  } = ld
-
-  const dd = get(accessors(stage)[1])
-
-  return (
-    <>
-      <Path
-        data={dd.map((d, i) => [
-          sX(d[0]),
-          sY(fitted[i] - halfwidth[i]),
-          sY(fitted[i] + halfwidth[i]),
-        ])}
-        // @ts-ignore
-        generator={area()
-          .x(d => d[0])
-          .y0(d => d[1])
-          // @ts-ignore
-          .y1(d => d[2])}
-        style={{
-          opacity: 0.4,
-          fill: 'gray',
-        }}
-      />
-      <Path
-        data={dd.map((d, i) => [sX(d[0]), sY(fitted[i])])}
-        // @ts-ignore
-        generator={line()}
-        style={{
-          stroke: 'red',
-          strokeWidth: 4,
-          fill: 'none',
-          opacity: 0.6,
-        }}
-      />
-    </>
-  )
-}
+import LOESS from './LOESS'
 
 const Viz = ({ stage }) => {
   console.log('viz rendering', stage)
