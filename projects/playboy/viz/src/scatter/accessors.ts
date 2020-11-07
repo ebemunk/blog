@@ -22,6 +22,8 @@ const accessors = stage => {
       return [identity, identity, d => d.ethnicity]
     case 'breasts':
       return [identity, identity, d => d.breasts]
+    case 'theCup':
+      return [identity, identity, d => d.theCup]
     default:
       return [identity, identity, identity]
   }

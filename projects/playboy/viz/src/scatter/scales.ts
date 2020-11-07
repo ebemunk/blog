@@ -3,10 +3,12 @@ import forceInABox from 'force-in-a-box'
 import { identity, clone } from 'remeda'
 
 import { scalePoint, scaleTime, scaleLinear, scaleOrdinal } from 'd3-scale'
-import { range, extent } from 'd3-array'
+import { range, extent, group } from 'd3-array'
 import { forceSimulation, forceCollide } from 'd3-force'
+import { schemeSpectral } from 'd3-scale-chromatic'
 
 import { data } from '../data'
+import { hierarchy, HierarchyCircularNode, pack } from 'd3-hierarchy'
 
 const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
   switch (stage) {
@@ -23,7 +25,7 @@ const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
           .padding(0.5),
 
         identity,
-      ]
+      ] as const
     }
 
     case 'mateAge':
@@ -47,75 +49,53 @@ const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
           .nice(),
 
         identity,
-      ]
+      ] as const
     }
 
     case 'hair':
     case 'ethnicity':
-    case 'breasts': {
-      const nodes: any[] = clone(data)
+    case 'breasts':
+    case 'theCup': {
+      const packer = pack()
+        .size([chartWidth, chartHeight])
+        .padding(4)
+        .radius(d => 2)
 
-      const simulation = forceSimulation(nodes)
-        .force(
-          'pls',
-          forceInABox()
-            .strength(0.1) // Strength to cluster center
-            .template('force') // Either treemap or force
-            .groupBy(stage) // Node attribute to group
-            .links([]) // If you have links you can also use them
-            .forceNodeSize(d => 3)
-            .size([chartWidth, chartHeight]),
-        )
-        .force(
-          'collide',
-          forceCollide()
-            .radius(d => 2 + 1)
-            .strength(0.8),
-        ) //Original collide function
-      simulation.stop()
+      const hi = hierarchy(group(data, d => d[stage])).count()
 
-      for (
-        let i = 0,
-          n = Math.ceil(
-            Math.log(simulation.alphaMin()) /
-              Math.log(1 - simulation.alphaDecay()),
-          );
-        i < n;
-        ++i
-      ) {
-        simulation.tick()
-      }
+      const packed = packer(hi)
+
+      console.log('packed', packed.children)
+
+      const nodes = packed.leaves()
 
       const csD = {
-        hair: ['Blonde', 'Brunette', 'Black', 'Red', 'Auburn', 'Hazel', null],
+        hair: ['Blonde', 'Brunette', 'Black', 'Red', 'Auburn', 'Hazel'],
         ethnicity: ['Caucasian', 'Black', 'Latin', 'Asian', 'Mixed', 'Other'],
-        breasts: ['Real/Natural', 'Fake/Enhanced', undefined],
+        breasts: ['Real/Natural', 'Fake/Enhanced'],
+        theCup: ['A', 'B', 'C', 'D', 'DD', 'E', 'F', 'H', 'I'],
       }
       const csR = {
-        hair: [
-          'yellow',
-          'brown',
-          'black',
-          'red',
-          'orange',
-          'olivedrab',
-          'grey',
-        ],
+        hair: ['yellow', 'brown', 'black', 'red', 'orange', 'olivedrab'],
         ethnicity: ['white', 'black', 'brown', 'yellow', 'purple', 'salmon'],
-        breasts: ['green', 'red', 'grey'],
+        breasts: ['green', 'red'],
+        theCup: schemeSpectral[9],
       }
 
       const colorScale = scaleOrdinal().domain(csD[stage]).range(csR[stage])
 
       return [
-        d => nodes.find(n => d.name === n.name)?.x,
-        d => nodes.find(n => d.name === n.name)?.y,
+        //@ts-ignore
+        d => nodes.find(n => d.name === n.data.name)?.x,
+        //@ts-ignore
+        d => nodes.find(n => d.name === n.data.name)?.y,
         colorScale,
-      ]
+        packed.children,
+      ] as const
     }
 
     default:
-      return [identity, identity]
+      return [identity, identity, identity] as const
   }
 }
 

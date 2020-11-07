@@ -10,10 +10,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1969-09-21T07:00:00.000Z",
-    "age": 50,
+    "age": 51,
     "tattoos": null,
     "month": 3,
     "year": 1989,
@@ -31,6 +32,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1943-02-10T07:00:00.000Z",
@@ -52,10 +54,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Auburn",
     "breasts": "Real/Natural",
     "born": "1933-08-18T08:00:00.000Z",
-    "age": 86,
+    "age": 87,
     "eye": "Brown",
     "tattoos": null,
     "month": 9,
@@ -73,6 +76,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1943-11-20T07:00:00.000Z",
@@ -94,6 +98,7 @@
       "hips": 35
     },
     "cup": null,
+    "theCup": null,
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1942-05-19T07:00:00.000Z",
@@ -115,6 +120,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1968-12-02T08:00:00.000Z",
@@ -136,6 +142,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1935-01-01T08:00:00.000Z",
@@ -156,6 +163,7 @@
       "hips": 44
     },
     "cup": "DD",
+    "theCup": "DD",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1993-12-15T08:00:00.000Z",
@@ -177,10 +185,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1963-10-23T07:00:00.000Z",
-    "age": 56,
+    "age": 57,
     "tattoos": null,
     "month": 9,
     "year": 1986,
@@ -197,6 +206,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1974-11-25T08:00:00.000Z",
@@ -219,6 +229,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1947-03-06T08:00:00.000Z",
@@ -240,6 +251,7 @@
       "cup": "F"
     },
     "cup": "F",
+    "theCup": "F",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1948-03-23T08:00:00.000Z",
@@ -261,6 +273,7 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1951-03-31T08:00:00.000Z",
@@ -281,6 +294,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1950-05-14T07:00:00.000Z",
@@ -303,6 +317,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1985-02-20T08:00:00.000Z",
@@ -324,10 +339,11 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1955-09-18T07:00:00.000Z",
-    "age": 64,
+    "age": 65,
     "tattoos": false,
     "month": 10,
     "year": 1980,
@@ -337,13 +353,14 @@
     "name": "Anita Pathammavong",
     "height": 180,
     "weight": null,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 28,
       "hips": 39
     },
     "cup": null,
+    "theCup": null,
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": null,
@@ -365,10 +382,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1947-10-27T08:00:00.000Z",
-    "age": 72,
+    "age": 73,
     "tattoos": null,
     "month": 7,
     "year": 1968,
@@ -385,6 +403,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1976-11-10T08:00:00.000Z",
@@ -405,6 +424,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1945-11-14T08:00:00.000Z",
@@ -425,10 +445,11 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1976-08-31T07:00:00.000Z",
-    "age": 43,
+    "age": 44,
     "eye": "Blue",
     "tattoos": true,
     "month": 1,
@@ -447,6 +468,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1948-11-14T08:00:00.000Z",
@@ -468,6 +490,7 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1961-07-19T07:00:00.000Z",
@@ -488,6 +511,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1948-01-24T08:00:00.000Z",
@@ -508,6 +532,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1952-12-22T08:00:00.000Z",
@@ -529,10 +554,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1958-10-07T08:00:00.000Z",
-    "age": 61,
+    "age": 62,
     "tattoos": null,
     "month": 2,
     "year": 1986,
@@ -550,6 +576,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1984-02-05T08:00:00.000Z",
@@ -571,10 +598,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1950-09-09T07:00:00.000Z",
-    "age": 69,
+    "age": 70,
     "tattoos": null,
     "month": 3,
     "year": 1972,
@@ -591,6 +619,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1977-12-19T08:00:00.000Z",
@@ -612,6 +641,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1972-05-02T07:00:00.000Z",
@@ -632,10 +662,11 @@
       "hips": 35
     },
     "cup": "A",
+    "theCup": "A",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1948-08-18T07:00:00.000Z",
-    "age": 71,
+    "age": 72,
     "tattoos": null,
     "month": 6,
     "year": 1972,
@@ -652,6 +683,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1951-05-08T07:00:00.000Z",
@@ -672,6 +704,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1967-06-23T07:00:00.000Z",
@@ -693,6 +726,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1942-11-13T07:00:00.000Z",
@@ -714,10 +748,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1958-09-02T07:00:00.000Z",
-    "age": 61,
+    "age": 62,
     "tattoos": null,
     "month": 10,
     "year": 1982,
@@ -735,6 +770,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1947-12-13T08:00:00.000Z",
@@ -756,10 +792,11 @@
       "hips": 37
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1948-08-24T07:00:00.000Z",
-    "age": 71,
+    "age": 72,
     "eye": "Brown",
     "tattoos": false,
     "month": 5,
@@ -777,6 +814,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1948-02-24T08:00:00.000Z",
@@ -798,10 +836,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1945-08-11T07:00:00.000Z",
-    "age": 74,
+    "age": 75,
     "eye": "Brown",
     "tattoos": null,
     "month": 5,
@@ -819,6 +858,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1934-02-07T08:00:00.000Z",
@@ -840,6 +880,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1950-06-21T07:00:00.000Z",
@@ -860,10 +901,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1952-10-16T08:00:00.000Z",
-    "age": 67,
+    "age": 68,
     "eye": "Hazel",
     "tattoos": false,
     "month": 6,
@@ -881,6 +923,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1952-07-22T07:00:00.000Z",
@@ -902,6 +945,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1974-07-28T07:00:00.000Z",
@@ -923,6 +967,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1978-11-23T08:00:00.000Z",
@@ -944,10 +989,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1963-11-02T08:00:00.000Z",
-    "age": 56,
+    "age": 57,
     "tattoos": null,
     "month": 4,
     "year": 1983,
@@ -965,6 +1011,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1947-04-15T08:00:00.000Z",
@@ -987,6 +1034,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1991-07-05T07:00:00.000Z",
@@ -1009,6 +1057,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1962-04-04T08:00:00.000Z",
@@ -1030,6 +1079,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1983-12-25T08:00:00.000Z",
@@ -1051,6 +1101,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1950-11-20T08:00:00.000Z",
@@ -1071,6 +1122,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1958-03-13T08:00:00.000Z",
@@ -1091,10 +1143,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1952-09-16T07:00:00.000Z",
-    "age": 67,
+    "age": 68,
     "eye": "Green",
     "tattoos": false,
     "month": 7,
@@ -1112,6 +1165,7 @@
       "hips": 34
     },
     "cup": null,
+    "theCup": null,
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1948-05-28T07:00:00.000Z",
@@ -1132,6 +1186,7 @@
       "hips": 38
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": null,
@@ -1152,6 +1207,7 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1941-03-17T08:00:00.000Z",
@@ -1172,6 +1228,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1946-12-07T08:00:00.000Z",
@@ -1193,10 +1250,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1944-09-26T07:00:00.000Z",
-    "age": 75,
+    "age": 76,
     "eye": "Brown",
     "tattoos": null,
     "month": 8,
@@ -1215,10 +1273,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1951-09-09T07:00:00.000Z",
-    "age": 68,
+    "age": 69,
     "eye": "Brown",
     "tattoos": null,
     "month": 5,
@@ -1237,6 +1296,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1975-12-14T08:00:00.000Z",
@@ -1258,10 +1318,11 @@
       "hips": 33
     },
     "cup": "F",
+    "theCup": "F",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1985-09-01T07:00:00.000Z",
-    "age": 34,
+    "age": 35,
     "eye": "Brown",
     "tattoos": true,
     "month": 8,
@@ -1279,6 +1340,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1951-08-02T07:00:00.000Z",
@@ -1300,6 +1362,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1944-03-16T07:00:00.000Z",
@@ -1316,6 +1379,7 @@
     "ethnicity": null,
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": null,
     "breasts": "Real/Natural",
     "born": null,
@@ -1336,6 +1400,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1949-11-19T08:00:00.000Z",
@@ -1353,6 +1418,7 @@
     "ethnicity": null,
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": null,
     "born": null,
     "age": null,
@@ -1372,6 +1438,7 @@
       "hips": 34
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1945-12-07T08:00:00.000Z",
@@ -1388,6 +1455,7 @@
     "ethnicity": "Latin",
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": "Brunette",
     "born": null,
     "age": null,
@@ -1403,6 +1471,7 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1963-08-06T07:00:00.000Z",
@@ -1425,6 +1494,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1941-06-17T08:00:00.000Z",
@@ -1446,10 +1516,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1951-10-14T08:00:00.000Z",
-    "age": 68,
+    "age": 69,
     "eye": "Hazel",
     "tattoos": null,
     "month": 0,
@@ -1468,6 +1539,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1948-02-08T08:00:00.000Z",
@@ -1488,6 +1560,7 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1965-12-11T08:00:00.000Z",
@@ -1508,6 +1581,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1981-04-21T08:00:00.000Z",
@@ -1529,6 +1603,7 @@
       "hips": 36
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1944-06-25T07:00:00.000Z",
@@ -1551,6 +1626,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1976-05-23T07:00:00.000Z",
@@ -1572,10 +1648,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1962-09-28T07:00:00.000Z",
-    "age": 57,
+    "age": 58,
     "tattoos": null,
     "month": 1,
     "year": 1982,
@@ -1592,10 +1669,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1942-08-12T07:00:00.000Z",
-    "age": 77,
+    "age": 78,
     "tattoos": null,
     "month": 3,
     "year": 1967,
@@ -1613,10 +1691,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1941-10-18T08:00:00.000Z",
-    "age": 78,
+    "age": 79,
     "eye": "Blue",
     "tattoos": null,
     "month": 9,
@@ -1627,13 +1706,14 @@
     "name": "Patricia Margot McClain",
     "height": 172,
     "weight": 57,
-    "ethnicity": "Mixed-race",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 24,
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Auburn",
     "breasts": "Real/Natural",
     "born": "1954-04-03T08:00:00.000Z",
@@ -1654,10 +1734,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1945-10-01T08:00:00.000Z",
-    "age": 74,
+    "age": 75,
     "tattoos": null,
     "month": 5,
     "year": 1968,
@@ -1674,6 +1755,7 @@
       "hips": 33
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1944-01-12T07:00:00.000Z",
@@ -1695,6 +1777,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1959-12-25T08:00:00.000Z",
@@ -1716,6 +1799,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1938-02-18T08:00:00.000Z",
@@ -1736,10 +1820,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1986-08-08T07:00:00.000Z",
-    "age": 33,
+    "age": 34,
     "eye": "Grey",
     "tattoos": true,
     "month": 11,
@@ -1757,6 +1842,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1977-12-12T08:00:00.000Z",
@@ -1778,10 +1864,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1966-10-19T07:00:00.000Z",
-    "age": 53,
+    "age": 54,
     "eye": "Brown",
     "tattoos": null,
     "month": 3,
@@ -1799,6 +1886,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1985-12-20T08:00:00.000Z",
@@ -1819,6 +1907,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1942-11-19T07:00:00.000Z",
@@ -1841,6 +1930,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1939-06-09T08:00:00.000Z",
@@ -1861,6 +1951,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1935-12-01T08:00:00.000Z",
@@ -1881,6 +1972,7 @@
       "hips": 36
     },
     "cup": null,
+    "theCup": null,
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1936-03-05T08:00:00.000Z",
@@ -1902,10 +1994,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1937-08-24T08:00:00.000Z",
-    "age": 82,
+    "age": 83,
     "tattoos": false,
     "month": 5,
     "year": 1963,
@@ -1922,6 +2015,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1972-05-21T07:00:00.000Z",
@@ -1943,6 +2037,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1977-05-06T07:00:00.000Z",
@@ -1965,6 +2060,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1960-11-11T08:00:00.000Z",
@@ -1986,6 +2082,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1954-01-13T08:00:00.000Z",
@@ -2006,6 +2103,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "2000-07-18T07:00:00.000Z",
@@ -2027,6 +2125,7 @@
       "hips": 36
     },
     "cup": null,
+    "theCup": null,
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1953-06-15T07:00:00.000Z",
@@ -2048,6 +2147,7 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1964-02-07T08:00:00.000Z",
@@ -2068,6 +2168,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1947-11-11T08:00:00.000Z",
@@ -2088,6 +2189,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1969-11-30T08:00:00.000Z",
@@ -2108,6 +2210,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1962-02-23T08:00:00.000Z",
@@ -2129,10 +2232,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1955-10-15T08:00:00.000Z",
-    "age": 64,
+    "age": 65,
     "eye": "Brown",
     "tattoos": false,
     "month": 9,
@@ -2151,10 +2255,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1985-08-24T07:00:00.000Z",
-    "age": 34,
+    "age": 35,
     "eye": "Brown",
     "tattoos": null,
     "month": 0,
@@ -2173,10 +2278,11 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1937-09-30T08:00:00.000Z",
-    "age": 82,
+    "age": 83,
     "eye": "Brown",
     "tattoos": null,
     "month": 7,
@@ -2194,6 +2300,7 @@
       "hips": 37
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1953-07-15T07:00:00.000Z",
@@ -2216,10 +2323,11 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1988-10-12T07:00:00.000Z",
-    "age": 31,
+    "age": 32,
     "eye": "Blue",
     "tattoos": null,
     "month": 4,
@@ -2237,10 +2345,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1957-09-23T07:00:00.000Z",
-    "age": 62,
+    "age": 63,
     "eye": "Brown",
     "tattoos": null,
     "month": 10,
@@ -2259,6 +2368,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1953-11-16T08:00:00.000Z",
@@ -2280,6 +2390,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1956-05-28T07:00:00.000Z",
@@ -2301,6 +2412,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1954-03-15T08:00:00.000Z",
@@ -2322,6 +2434,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1936-04-25T08:00:00.000Z",
@@ -2344,6 +2457,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1931-12-16T08:00:00.000Z",
@@ -2365,6 +2479,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1979-11-13T08:00:00.000Z",
@@ -2386,6 +2501,7 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1958-01-11T08:00:00.000Z",
@@ -2406,6 +2522,7 @@
       "hips": 32
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1955-07-03T07:00:00.000Z",
@@ -2427,6 +2544,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1951-04-01T08:00:00.000Z",
@@ -2448,10 +2566,11 @@
       "hips": 37
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1939-09-11T08:00:00.000Z",
-    "age": 80,
+    "age": 81,
     "tattoos": false,
     "month": 3,
     "year": 1960,
@@ -2468,10 +2587,11 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1931-08-14T08:00:00.000Z",
-    "age": 88,
+    "age": 89,
     "tattoos": null,
     "month": 10,
     "year": 1956,
@@ -2488,6 +2608,7 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1966-03-03T08:00:00.000Z",
@@ -2510,6 +2631,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1966-04-06T08:00:00.000Z",
@@ -2531,10 +2653,11 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1937-08-24T08:00:00.000Z",
-    "age": 82,
+    "age": 83,
     "eye": "Brown",
     "tattoos": false,
     "month": 10,
@@ -2552,6 +2675,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1948-03-22T08:00:00.000Z",
@@ -2572,6 +2696,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1941-08-04T08:00:00.000Z",
@@ -2592,6 +2717,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1929-12-01T08:00:00.000Z",
@@ -2614,6 +2740,7 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1937-04-05T08:00:00.000Z",
@@ -2635,6 +2762,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1947-02-17T08:00:00.000Z",
@@ -2655,10 +2783,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1944-08-24T07:00:00.000Z",
-    "age": 75,
+    "age": 76,
     "tattoos": false,
     "month": 5,
     "year": 1964,
@@ -2675,10 +2804,11 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1968-08-21T07:00:00.000Z",
-    "age": 51,
+    "age": 52,
     "eye": "Blue",
     "tattoos": false,
     "month": 11,
@@ -2696,10 +2826,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1963-10-22T07:00:00.000Z",
-    "age": 56,
+    "age": 57,
     "tattoos": null,
     "month": 1,
     "year": 1985,
@@ -2716,6 +2847,7 @@
       "hips": 36
     },
     "cup": null,
+    "theCup": null,
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1964-03-10T08:00:00.000Z",
@@ -2737,10 +2869,11 @@
       "cup": "F"
     },
     "cup": "F",
+    "theCup": "F",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1950-09-12T07:00:00.000Z",
-    "age": 69,
+    "age": 70,
     "eye": "Brown",
     "tattoos": null,
     "month": 11,
@@ -2758,6 +2891,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1957-01-25T08:00:00.000Z",
@@ -2778,6 +2912,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1956-12-12T08:00:00.000Z",
@@ -2798,6 +2933,7 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1961-06-08T07:00:00.000Z",
@@ -2818,10 +2954,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1933-10-20T08:00:00.000Z",
-    "age": 86,
+    "age": 87,
     "tattoos": false,
     "month": 0,
     "year": 1957,
@@ -2838,6 +2975,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1957-05-13T07:00:00.000Z",
@@ -2859,6 +2997,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1970-01-13T08:00:00.000Z",
@@ -2881,6 +3020,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1947-03-18T08:00:00.000Z",
@@ -2901,6 +3041,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1942-01-01T08:00:00.000Z",
@@ -2922,6 +3063,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1959-01-14T08:00:00.000Z",
@@ -2943,10 +3085,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1968-10-18T07:00:00.000Z",
-    "age": 51,
+    "age": 52,
     "tattoos": null,
     "month": 5,
     "year": 1988,
@@ -2964,6 +3107,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1953-07-07T07:00:00.000Z",
@@ -2985,6 +3129,7 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1960-01-08T08:00:00.000Z",
@@ -3006,6 +3151,7 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": null,
@@ -3026,6 +3172,7 @@
       "hips": 33
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1930-06-08T08:00:00.000Z",
@@ -3047,6 +3194,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1944-04-15T07:00:00.000Z",
@@ -3067,6 +3215,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1940-12-14T08:00:00.000Z",
@@ -3087,10 +3236,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1928-08-26T08:00:00.000Z",
-    "age": 91,
+    "age": 92,
     "tattoos": null,
     "month": 6,
     "year": 1959,
@@ -3107,6 +3257,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1946-03-20T08:00:00.000Z",
@@ -3127,10 +3278,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1951-09-05T07:00:00.000Z",
-    "age": 68,
+    "age": 69,
     "eye": "Brown",
     "tattoos": false,
     "month": 10,
@@ -3148,6 +3300,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1955-03-21T08:00:00.000Z",
@@ -3168,6 +3321,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1957-02-02T08:00:00.000Z",
@@ -3190,10 +3344,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1959-08-11T07:00:00.000Z",
-    "age": 60,
+    "age": 61,
     "eye": "Brown",
     "tattoos": null,
     "month": 3,
@@ -3212,6 +3367,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1933-12-01T08:00:00.000Z",
@@ -3233,6 +3389,7 @@
       "cup": "DD"
     },
     "cup": "DD",
+    "theCup": "DD",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1939-06-09T08:00:00.000Z",
@@ -3253,6 +3410,7 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1933-06-06T08:00:00.000Z",
@@ -3273,6 +3431,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1957-12-19T08:00:00.000Z",
@@ -3295,10 +3454,11 @@
       "cup": "DD"
     },
     "cup": "E",
+    "theCup": "DD",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1963-08-27T07:00:00.000Z",
-    "age": 56,
+    "age": 57,
     "tattoos": null,
     "month": 4,
     "year": 1984,
@@ -3316,6 +3476,7 @@
       "cup": "C"
     },
     "cup": null,
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1961-12-17T08:00:00.000Z",
@@ -3338,6 +3499,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1966-11-18T08:00:00.000Z",
@@ -3359,10 +3521,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1936-09-21T08:00:00.000Z",
-    "age": 83,
+    "age": 84,
     "tattoos": null,
     "month": 10,
     "year": 1959,
@@ -3379,6 +3542,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1945-08-05T07:00:00.000Z",
@@ -3400,6 +3564,7 @@
       "hips": 32
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1962-11-24T08:00:00.000Z",
@@ -3416,6 +3581,7 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1938-06-17T08:00:00.000Z",
@@ -3437,10 +3603,11 @@
       "cup": "C"
     },
     "cup": null,
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1963-08-17T07:00:00.000Z",
-    "age": 56,
+    "age": 57,
     "eye": "Blue",
     "tattoos": null,
     "month": 6,
@@ -3458,6 +3625,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1935-06-18T08:00:00.000Z",
@@ -3478,6 +3646,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1952-05-01T07:00:00.000Z",
@@ -3498,6 +3667,7 @@
       "hips": 32
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1959-12-13T08:00:00.000Z",
@@ -3519,10 +3689,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1957-10-04T08:00:00.000Z",
-    "age": 62,
+    "age": 63,
     "tattoos": null,
     "month": 2,
     "year": 1978,
@@ -3539,6 +3710,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1960-03-15T08:00:00.000Z",
@@ -3559,6 +3731,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1959-05-14T07:00:00.000Z",
@@ -3579,10 +3752,11 @@
       "hips": 34
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1960-09-19T07:00:00.000Z",
-    "age": 59,
+    "age": 60,
     "eye": "Brown",
     "tattoos": null,
     "month": 10,
@@ -3601,6 +3775,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1971-02-25T08:00:00.000Z",
@@ -3623,10 +3798,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1980-09-16T07:00:00.000Z",
-    "age": 39,
+    "age": 40,
     "tattoos": null,
     "month": 1,
     "year": 2002,
@@ -3643,6 +3819,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1953-06-12T07:00:00.000Z",
@@ -3664,10 +3841,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1971-08-15T07:00:00.000Z",
-    "age": 48,
+    "age": 49,
     "tattoos": null,
     "month": 2,
     "year": 1996,
@@ -3685,10 +3863,11 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1979-08-15T07:00:00.000Z",
-    "age": 40,
+    "age": 41,
     "eye": "Blue",
     "tattoos": true,
     "month": 1,
@@ -3707,6 +3886,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1979-04-06T08:00:00.000Z",
@@ -3728,6 +3908,7 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1971-02-18T08:00:00.000Z",
@@ -3748,10 +3929,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1963-08-13T07:00:00.000Z",
-    "age": 56,
+    "age": 57,
     "tattoos": null,
     "month": 10,
     "year": 1987,
@@ -3768,6 +3950,7 @@
       "hips": 34
     },
     "cup": null,
+    "theCup": null,
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1942-05-23T07:00:00.000Z",
@@ -3789,6 +3972,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1964-05-28T07:00:00.000Z",
@@ -3810,10 +3994,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1970-08-10T07:00:00.000Z",
-    "age": 49,
+    "age": 50,
     "eye": "Green",
     "tattoos": false,
     "month": 6,
@@ -3832,6 +4017,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1934-06-07T08:00:00.000Z",
@@ -3848,6 +4034,7 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1977-02-08T08:00:00.000Z",
@@ -3869,6 +4056,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1986-03-22T08:00:00.000Z",
@@ -3890,6 +4078,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1990-01-05T08:00:00.000Z",
@@ -3911,6 +4100,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1990-06-03T07:00:00.000Z",
@@ -3932,6 +4122,7 @@
       "hips": 35
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Black",
     "breasts": "Fake/Enhanced",
     "born": "1961-01-27T08:00:00.000Z",
@@ -3953,6 +4144,7 @@
       "hips": 38
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1931-04-01T08:00:00.000Z",
@@ -3973,6 +4165,7 @@
       "hips": 32
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1977-12-17T08:00:00.000Z",
@@ -3995,6 +4188,7 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1975-01-17T08:00:00.000Z",
@@ -4017,6 +4211,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1976-12-31T08:00:00.000Z",
@@ -4039,6 +4234,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1978-06-16T07:00:00.000Z",
@@ -4056,10 +4252,11 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1961-09-06T07:00:00.000Z",
-    "age": 58,
+    "age": 59,
     "tattoos": null,
     "month": 0,
     "year": 1990,
@@ -4077,6 +4274,7 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1967-11-28T08:00:00.000Z",
@@ -4099,6 +4297,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1978-07-26T07:00:00.000Z",
@@ -4120,6 +4319,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1966-07-31T07:00:00.000Z",
@@ -4141,10 +4341,11 @@
       "hips": 34
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1967-08-26T07:00:00.000Z",
-    "age": 52,
+    "age": 53,
     "eye": "Brown",
     "tattoos": false,
     "month": 0,
@@ -4162,6 +4363,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1968-04-05T08:00:00.000Z",
@@ -4182,10 +4384,11 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1969-10-30T08:00:00.000Z",
-    "age": 50,
+    "age": 51,
     "tattoos": null,
     "month": 0,
     "year": 1995,
@@ -4203,6 +4406,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1980-01-29T08:00:00.000Z",
@@ -4225,6 +4429,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1986-04-05T08:00:00.000Z",
@@ -4246,6 +4451,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1986-02-17T08:00:00.000Z",
@@ -4267,6 +4473,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1974-06-20T07:00:00.000Z",
@@ -4288,6 +4495,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1973-03-03T08:00:00.000Z",
@@ -4309,6 +4517,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1948-05-16T07:00:00.000Z",
@@ -4330,6 +4539,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Fake/Enhanced",
     "born": "1969-02-17T08:00:00.000Z",
@@ -4351,10 +4561,11 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1971-08-09T07:00:00.000Z",
-    "age": 48,
+    "age": 49,
     "eye": "Green",
     "tattoos": false,
     "month": 8,
@@ -4365,7 +4576,7 @@
     "name": "Angela Melini",
     "height": 167,
     "weight": 52,
-    "ethnicity": "Mixed-race (primarily Caucasian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 36,
       "waist": 26,
@@ -4373,6 +4584,7 @@
       "cup": "DD"
     },
     "cup": "DD",
+    "theCup": "DD",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1969-07-25T07:00:00.000Z",
@@ -4394,6 +4606,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1984-03-21T08:00:00.000Z",
@@ -4416,6 +4629,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1980-03-07T08:00:00.000Z",
@@ -4438,6 +4652,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1982-01-09T08:00:00.000Z",
@@ -4460,10 +4675,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1972-08-22T07:00:00.000Z",
-    "age": 47,
+    "age": 48,
     "tattoos": null,
     "month": 2,
     "year": 1998,
@@ -4480,10 +4696,11 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1984-10-08T07:00:00.000Z",
-    "age": 35,
+    "age": 36,
     "eye": "Brown",
     "tattoos": null,
     "month": 11,
@@ -4502,10 +4719,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1930-09-01T08:00:00.000Z",
-    "age": 89,
+    "age": 90,
     "eye": "Brown",
     "tattoos": null,
     "month": 6,
@@ -4523,6 +4741,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1991-11-20T08:00:00.000Z",
@@ -4543,6 +4762,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1980-01-06T08:00:00.000Z",
@@ -4564,6 +4784,7 @@
       "hips": 34
     },
     "cup": "DD",
+    "theCup": "DD",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1972-04-17T08:00:00.000Z",
@@ -4584,10 +4805,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1976-10-01T07:00:00.000Z",
-    "age": 43,
+    "age": 44,
     "tattoos": null,
     "month": 1,
     "year": 1996,
@@ -4604,10 +4826,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1984-10-31T08:00:00.000Z",
-    "age": 35,
+    "age": 36,
     "eye": "Brown",
     "tattoos": false,
     "month": 11,
@@ -4625,6 +4848,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1980-06-15T07:00:00.000Z",
@@ -4646,6 +4870,7 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1966-02-03T08:00:00.000Z",
@@ -4667,10 +4892,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1982-09-19T07:00:00.000Z",
-    "age": 37,
+    "age": 38,
     "eye": "Blue",
     "tattoos": false,
     "month": 7,
@@ -4688,10 +4914,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1973-10-06T07:00:00.000Z",
-    "age": 46,
+    "age": 47,
     "eye": "Blue",
     "tattoos": false,
     "month": 11,
@@ -4710,6 +4937,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1937-04-13T08:00:00.000Z",
@@ -4730,6 +4958,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Fake/Enhanced",
     "born": "1978-12-30T08:00:00.000Z",
@@ -4752,6 +4981,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1942-05-12T07:00:00.000Z",
@@ -4773,6 +5003,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1954-11-19T08:00:00.000Z",
@@ -4794,6 +5025,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1970-12-11T08:00:00.000Z",
@@ -4816,6 +5048,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1934-06-13T08:00:00.000Z",
@@ -4837,10 +5070,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1955-10-02T08:00:00.000Z",
-    "age": 64,
+    "age": 65,
     "eye": "Brown",
     "tattoos": null,
     "month": 4,
@@ -4858,6 +5092,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1986-03-28T08:00:00.000Z",
@@ -4879,6 +5114,7 @@
       "hips": 34
     },
     "cup": null,
+    "theCup": null,
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": null,
@@ -4901,6 +5137,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1972-07-22T07:00:00.000Z",
@@ -4922,6 +5159,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1986-02-19T08:00:00.000Z",
@@ -4943,10 +5181,11 @@
       "hips": 34
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1989-10-02T07:00:00.000Z",
-    "age": 30,
+    "age": 31,
     "eye": "Blue",
     "tattoos": true,
     "month": 7,
@@ -4964,10 +5203,11 @@
       "hips": 45
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1990-10-09T07:00:00.000Z",
-    "age": 29,
+    "age": 30,
     "eye": "Brown",
     "tattoos": true,
     "month": 3,
@@ -4985,6 +5225,7 @@
       "hips": 33
     },
     "cup": null,
+    "theCup": null,
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": null,
@@ -4998,7 +5239,7 @@
     "name": "Teri Harrison",
     "height": 167,
     "weight": 53,
-    "ethnicity": "Mixed-race (primarily Caucasian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 26,
@@ -5006,6 +5247,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1981-02-16T08:00:00.000Z",
@@ -5026,6 +5268,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1977-12-16T08:00:00.000Z",
@@ -5046,6 +5289,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1942-08-01T07:00:00.000Z",
@@ -5060,13 +5304,14 @@
     "name": "Jodi Ann Paterson",
     "height": 165,
     "weight": 51,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 32,
       "waist": 23,
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1975-07-31T07:00:00.000Z",
@@ -5084,6 +5329,7 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1982-01-19T08:00:00.000Z",
@@ -5105,6 +5351,7 @@
       "hips": 33
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1982-08-01T07:00:00.000Z",
@@ -5126,6 +5373,7 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1932-07-29T08:00:00.000Z",
@@ -5147,10 +5395,11 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1987-10-24T07:00:00.000Z",
-    "age": 32,
+    "age": 33,
     "eye": "Brown",
     "tattoos": false,
     "month": 3,
@@ -5168,6 +5417,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1984-05-18T07:00:00.000Z",
@@ -5189,6 +5439,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1987-02-05T08:00:00.000Z",
@@ -5210,6 +5461,7 @@
       "hips": 33
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Fake/Enhanced",
     "born": "1976-05-14T07:00:00.000Z",
@@ -5232,6 +5484,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1986-05-16T07:00:00.000Z",
@@ -5254,6 +5507,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1980-06-24T07:00:00.000Z",
@@ -5276,6 +5530,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Fake/Enhanced",
     "born": "1989-11-29T08:00:00.000Z",
@@ -5296,6 +5551,7 @@
       "hips": 33
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1975-12-01T08:00:00.000Z",
@@ -5317,6 +5573,7 @@
       "hips": 35
     },
     "cup": "H",
+    "theCup": "H",
     "hair": "Auburn",
     "breasts": "Fake/Enhanced",
     "born": "1987-04-06T07:00:00.000Z",
@@ -5338,6 +5595,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1975-12-29T08:00:00.000Z",
@@ -5359,6 +5617,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1991-02-14T08:00:00.000Z",
@@ -5373,7 +5632,7 @@
     "name": "Kylie Johnson",
     "height": 162,
     "weight": 49,
-    "ethnicity": "Mixed-race (primarily Black)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 32,
       "waist": 25,
@@ -5381,6 +5640,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1990-11-30T08:00:00.000Z",
@@ -5402,6 +5662,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1987-05-11T07:00:00.000Z",
@@ -5423,10 +5684,11 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1987-10-04T07:00:00.000Z",
-    "age": 32,
+    "age": 33,
     "tattoos": null,
     "month": 2,
     "year": 2016,
@@ -5443,6 +5705,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1993-06-22T07:00:00.000Z",
@@ -5465,6 +5728,7 @@
       "cup": "F"
     },
     "cup": "F",
+    "theCup": "F",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1963-02-13T08:00:00.000Z",
@@ -5486,6 +5750,7 @@
       "hips": 34
     },
     "cup": null,
+    "theCup": null,
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": null,
@@ -5500,9 +5765,10 @@
     "name": "Geena Rocero",
     "height": 175,
     "weight": 55,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1983-01-01T08:00:00.000Z",
@@ -5524,6 +5790,7 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1970-07-29T07:00:00.000Z",
@@ -5545,6 +5812,7 @@
       "hips": 39
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1992-07-05T07:00:00.000Z",
@@ -5566,10 +5834,11 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1960-09-17T07:00:00.000Z",
-    "age": 59,
+    "age": 60,
     "tattoos": null,
     "month": 11,
     "year": 1983,
@@ -5586,6 +5855,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1991-06-07T07:00:00.000Z",
@@ -5608,10 +5878,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1965-10-05T07:00:00.000Z",
-    "age": 54,
+    "age": 55,
     "tattoos": null,
     "month": 0,
     "year": 1984,
@@ -5629,6 +5900,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1958-02-28T08:00:00.000Z",
@@ -5650,6 +5922,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1959-04-13T08:00:00.000Z",
@@ -5671,6 +5944,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1943-03-14T07:00:00.000Z",
@@ -5684,13 +5958,14 @@
     "name": "Bryiana Noelle",
     "height": 160,
     "weight": 39,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 31,
       "waist": 24,
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1991-07-21T07:00:00.000Z",
@@ -5712,6 +5987,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1981-01-15T08:00:00.000Z",
@@ -5733,6 +6009,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1996-01-20T08:00:00.000Z",
@@ -5755,6 +6032,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Fake/Enhanced",
     "born": "1974-05-23T07:00:00.000Z",
@@ -5771,6 +6049,7 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1956-03-19T08:00:00.000Z",
@@ -5791,10 +6070,11 @@
       "hips": 36
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1944-10-18T07:00:00.000Z",
-    "age": 75,
+    "age": 76,
     "tattoos": null,
     "month": 10,
     "year": 1962,
@@ -5811,10 +6091,11 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1931-10-31T08:00:00.000Z",
-    "age": 88,
+    "age": 89,
     "tattoos": false,
     "month": 6,
     "year": 1957,
@@ -5831,6 +6112,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1954-03-22T08:00:00.000Z",
@@ -5851,6 +6133,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1967-05-01T07:00:00.000Z",
@@ -5864,13 +6147,14 @@
     "name": "Carmella DeCesare",
     "height": 172,
     "weight": 59,
-    "ethnicity": "Caucasian, Latina",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 24,
       "hips": 27
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1982-07-01T07:00:00.000Z",
@@ -5888,6 +6172,7 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": null,
@@ -5910,6 +6195,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1951-01-30T08:00:00.000Z",
@@ -5931,6 +6217,7 @@
       "cup": "DD"
     },
     "cup": "DD",
+    "theCup": "DD",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1968-02-20T08:00:00.000Z",
@@ -5953,10 +6240,11 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1955-08-17T07:00:00.000Z",
-    "age": 64,
+    "age": 65,
     "tattoos": null,
     "month": 11,
     "year": 1978,
@@ -5974,10 +6262,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1954-10-22T08:00:00.000Z",
-    "age": 65,
+    "age": 66,
     "eye": "Brown",
     "tattoos": null,
     "month": 1,
@@ -5996,10 +6285,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1936-10-28T08:00:00.000Z",
-    "age": 83,
+    "age": 84,
     "tattoos": null,
     "month": 0,
     "year": 1959,
@@ -6017,10 +6307,11 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1942-10-07T07:00:00.000Z",
-    "age": 77,
+    "age": 78,
     "tattoos": null,
     "month": 1,
     "year": 1961,
@@ -6038,6 +6329,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1951-11-05T08:00:00.000Z",
@@ -6058,6 +6350,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1931-11-05T08:00:00.000Z",
@@ -6078,6 +6371,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1931-11-05T08:00:00.000Z",
@@ -6098,10 +6392,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1955-09-06T07:00:00.000Z",
-    "age": 64,
+    "age": 65,
     "tattoos": null,
     "month": 2,
     "year": 1974,
@@ -6118,6 +6413,7 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1939-02-19T08:00:00.000Z",
@@ -6138,6 +6434,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1972-05-05T07:00:00.000Z",
@@ -6159,10 +6456,11 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1971-08-11T07:00:00.000Z",
-    "age": 48,
+    "age": 49,
     "eye": "Brown",
     "tattoos": false,
     "month": 2,
@@ -6180,6 +6478,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1974-01-07T08:00:00.000Z",
@@ -6201,6 +6500,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1954-07-07T07:00:00.000Z",
@@ -6222,6 +6522,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1968-11-16T08:00:00.000Z",
@@ -6243,6 +6544,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1944-08-02T07:00:00.000Z",
@@ -6264,10 +6566,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1991-08-12T07:00:00.000Z",
-    "age": 28,
+    "age": 29,
     "eye": "Green",
     "tattoos": false,
     "month": 9,
@@ -6278,13 +6581,14 @@
     "name": "Cassandra Dawn",
     "height": 165,
     "weight": 47,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 32,
       "waist": 23,
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1990-01-10T08:00:00.000Z",
@@ -6306,10 +6610,11 @@
       "hips": 36
     },
     "cup": null,
+    "theCup": null,
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1943-10-15T07:00:00.000Z",
-    "age": 76,
+    "age": 77,
     "tattoos": null,
     "month": 7,
     "year": 1970,
@@ -6319,13 +6624,14 @@
     "name": "Nereyda Bird",
     "height": 175,
     "weight": 57,
-    "ethnicity": "Mixed-race (primarily Black)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 32,
       "waist": 24,
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1998-04-18T07:00:00.000Z",
@@ -6348,6 +6654,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1941-04-16T08:00:00.000Z",
@@ -6368,6 +6675,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1960-06-26T07:00:00.000Z",
@@ -6388,6 +6696,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1955-02-05T08:00:00.000Z",
@@ -6409,6 +6718,7 @@
       "cup": "F"
     },
     "cup": "F",
+    "theCup": "F",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1966-02-01T08:00:00.000Z",
@@ -6429,6 +6739,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1967-06-30T07:00:00.000Z",
@@ -6442,13 +6753,14 @@
     "name": "Christina Leardini",
     "height": 173,
     "weight": 50,
-    "ethnicity": "Mixed-race (primarily Middle Eastern)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 22,
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Fake/Enhanced",
     "born": "1969-01-22T08:00:00.000Z",
@@ -6470,6 +6782,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1928-12-13T08:00:00.000Z",
@@ -6490,10 +6803,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1949-09-21T07:00:00.000Z",
-    "age": 70,
+    "age": 71,
     "eye": "Brown",
     "tattoos": null,
     "month": 3,
@@ -6512,6 +6826,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1948-02-24T08:00:00.000Z",
@@ -6533,6 +6848,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1956-11-15T08:00:00.000Z",
@@ -6555,6 +6871,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1963-03-03T08:00:00.000Z",
@@ -6576,10 +6893,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1980-09-08T07:00:00.000Z",
-    "age": 39,
+    "age": 40,
     "eye": "Brown",
     "tattoos": false,
     "month": 6,
@@ -6597,10 +6915,11 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1982-08-15T07:00:00.000Z",
-    "age": 37,
+    "age": 38,
     "eye": "Blue",
     "tattoos": null,
     "month": 3,
@@ -6618,6 +6937,7 @@
       "hips": 34
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1988-03-14T08:00:00.000Z",
@@ -6639,10 +6959,11 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1979-08-31T07:00:00.000Z",
-    "age": 40,
+    "age": 41,
     "eye": "Hazel",
     "tattoos": null,
     "month": 8,
@@ -6661,6 +6982,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "born": "1977-11-12T08:00:00.000Z",
     "age": 42,
@@ -6681,6 +7003,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1993-03-01T08:00:00.000Z",
@@ -6703,6 +7026,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1980-07-21T07:00:00.000Z",
@@ -6724,6 +7048,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1965-06-01T07:00:00.000Z",
@@ -6746,6 +7071,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1988-05-04T07:00:00.000Z",
@@ -6767,10 +7093,11 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1988-09-14T07:00:00.000Z",
-    "age": 31,
+    "age": 32,
     "eye": "Brown",
     "tattoos": false,
     "month": 4,
@@ -6789,6 +7116,7 @@
       "cup": "DD"
     },
     "cup": "DD",
+    "theCup": "DD",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1986-01-17T08:00:00.000Z",
@@ -6810,10 +7138,11 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1947-08-08T07:00:00.000Z",
-    "age": 72,
+    "age": 73,
     "tattoos": null,
     "month": 2,
     "year": 1970,
@@ -6831,6 +7160,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1969-05-01T07:00:00.000Z",
@@ -6853,6 +7183,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1992-02-27T08:00:00.000Z",
@@ -6875,6 +7206,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1991-04-08T07:00:00.000Z",
@@ -6889,13 +7221,14 @@
     "name": "Lynn Thomas",
     "height": 170,
     "weight": 54,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 25,
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1976-01-21T08:00:00.000Z",
@@ -6917,6 +7250,7 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1967-02-20T08:00:00.000Z",
@@ -6938,6 +7272,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1956-04-04T08:00:00.000Z",
@@ -6959,6 +7294,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1950-07-11T07:00:00.000Z",
@@ -6980,6 +7316,7 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1991-04-08T07:00:00.000Z",
@@ -7001,10 +7338,11 @@
       "hips": 35
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1976-10-17T07:00:00.000Z",
-    "age": 43,
+    "age": 44,
     "eye": "Brown",
     "tattoos": false,
     "month": 11,
@@ -7022,6 +7360,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1926-06-01T08:00:00.000Z",
@@ -7043,6 +7382,7 @@
       "hips": 33
     },
     "cup": null,
+    "theCup": null,
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": null,
@@ -7064,6 +7404,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1962-11-27T08:00:00.000Z",
@@ -7085,6 +7426,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1978-04-18T08:00:00.000Z",
@@ -7106,6 +7448,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1949-12-29T08:00:00.000Z",
@@ -7127,6 +7470,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1954-07-22T07:00:00.000Z",
@@ -7148,6 +7492,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1978-02-02T08:00:00.000Z",
@@ -7162,7 +7507,7 @@
     "name": "Dani Mathers",
     "height": 154,
     "weight": 45,
-    "ethnicity": "Mixed-race (primarily Caucasian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 33,
       "waist": 23,
@@ -7170,6 +7515,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1987-01-05T08:00:00.000Z",
@@ -7191,10 +7537,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1989-09-25T07:00:00.000Z",
-    "age": 30,
+    "age": 31,
     "eye": "Blue",
     "tattoos": false,
     "month": 6,
@@ -7212,6 +7559,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1987-04-01T08:00:00.000Z",
@@ -7234,6 +7582,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1990-05-10T07:00:00.000Z",
@@ -7255,6 +7604,7 @@
       "hips": 33
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1944-12-31T07:00:00.000Z",
@@ -7275,10 +7625,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1946-10-04T08:00:00.000Z",
-    "age": 73,
+    "age": 74,
     "tattoos": null,
     "month": 10,
     "year": 1967,
@@ -7295,6 +7646,7 @@
       "hips": 37
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1947-02-12T08:00:00.000Z",
@@ -7315,6 +7667,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1985-08-04T07:00:00.000Z",
@@ -7336,6 +7689,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1974-06-13T07:00:00.000Z",
@@ -7357,6 +7711,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1934-03-25T08:00:00.000Z",
@@ -7379,6 +7734,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1981-06-04T07:00:00.000Z",
@@ -7401,6 +7757,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1994-05-09T07:00:00.000Z",
@@ -7423,10 +7780,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1991-09-04T07:00:00.000Z",
-    "age": 28,
+    "age": 29,
     "eye": "Brown",
     "tattoos": true,
     "month": 0,
@@ -7444,6 +7802,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1984-11-21T08:00:00.000Z",
@@ -7466,10 +7825,11 @@
       "cup": "DD"
     },
     "cup": "E",
+    "theCup": "DD",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1981-10-19T07:00:00.000Z",
-    "age": 38,
+    "age": 39,
     "eye": "Brown",
     "tattoos": true,
     "month": 10,
@@ -7488,6 +7848,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1986-05-13T07:00:00.000Z",
@@ -7509,6 +7870,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1989-04-04T07:00:00.000Z",
@@ -7523,13 +7885,14 @@
     "name": "Kaylia Cassandra",
     "height": 167,
     "weight": 53,
-    "ethnicity": "Mixed-race (primarily Black)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 32,
       "waist": 25,
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1990-03-23T08:00:00.000Z",
@@ -7551,6 +7914,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1991-05-22T07:00:00.000Z",
@@ -7565,17 +7929,18 @@
     "name": "Chelsie Aryn",
     "height": 165,
     "weight": 53,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 26,
       "hips": 31
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1992-09-18T07:00:00.000Z",
-    "age": 27,
+    "age": 28,
     "eye": "Brown",
     "tattoos": true,
     "month": 2,
@@ -7594,6 +7959,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1986-06-19T07:00:00.000Z",
@@ -7615,6 +7981,7 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1995-11-11T08:00:00.000Z",
@@ -7637,6 +8004,7 @@
       "cup": "DD"
     },
     "cup": "DD",
+    "theCup": "DD",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1962-07-31T07:00:00.000Z",
@@ -7658,6 +8026,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1995-01-16T08:00:00.000Z",
@@ -7680,6 +8049,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1986-01-07T08:00:00.000Z",
@@ -7701,6 +8071,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1986-04-29T07:00:00.000Z",
@@ -7723,10 +8094,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1981-09-30T07:00:00.000Z",
-    "age": 38,
+    "age": 39,
     "eye": "Blue",
     "tattoos": true,
     "month": 8,
@@ -7744,6 +8116,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1990-11-05T08:00:00.000Z",
@@ -7766,6 +8139,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1950-12-14T08:00:00.000Z",
@@ -7787,6 +8161,7 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1977-05-08T07:00:00.000Z",
@@ -7809,10 +8184,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1938-10-01T08:00:00.000Z",
-    "age": 81,
+    "age": 82,
     "eye": "Blue",
     "tattoos": null,
     "month": 0,
@@ -7830,6 +8206,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1990-11-20T08:00:00.000Z",
@@ -7852,6 +8229,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1981-02-12T08:00:00.000Z",
@@ -7874,10 +8252,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1983-09-14T07:00:00.000Z",
-    "age": 36,
+    "age": 37,
     "eye": "Blue",
     "tattoos": true,
     "month": 10,
@@ -7888,13 +8267,14 @@
     "name": "Karen McDougal",
     "height": 172,
     "weight": 57,
-    "ethnicity": "Mixed-race (primarily Caucasian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 24,
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1971-03-23T08:00:00.000Z",
@@ -7917,6 +8297,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1986-07-14T07:00:00.000Z",
@@ -7938,10 +8319,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1985-10-23T07:00:00.000Z",
-    "age": 34,
+    "age": 35,
     "eye": "Brown",
     "tattoos": false,
     "month": 5,
@@ -7959,6 +8341,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1975-03-28T08:00:00.000Z",
@@ -7973,13 +8356,14 @@
     "name": "Allie Silva",
     "height": 175,
     "weight": null,
-    "ethnicity": "Mixed-race (primarily Caucasian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 25,
       "hips": 35
     },
     "cup": null,
+    "theCup": null,
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1988-11-29T08:00:00.000Z",
@@ -8002,6 +8386,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1990-07-03T07:00:00.000Z",
@@ -8022,6 +8407,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1988-12-07T08:00:00.000Z",
@@ -8043,10 +8429,11 @@
       "hips": 34
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1989-10-02T07:00:00.000Z",
-    "age": 30,
+    "age": 31,
     "eye": "Blue",
     "tattoos": true,
     "month": 6,
@@ -8065,6 +8452,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1977-06-18T07:00:00.000Z",
@@ -8086,10 +8474,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1968-11-02T08:00:00.000Z",
-    "age": 51,
+    "age": 52,
     "tattoos": null,
     "month": 9,
     "year": 1987,
@@ -8107,10 +8496,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1984-09-19T07:00:00.000Z",
-    "age": 35,
+    "age": 36,
     "eye": "Brown",
     "tattoos": null,
     "month": 3,
@@ -8129,6 +8519,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1967-11-21T08:00:00.000Z",
@@ -8150,6 +8541,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1981-11-18T08:00:00.000Z",
@@ -8171,10 +8563,11 @@
       "hips": 32
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1983-08-09T07:00:00.000Z",
-    "age": 36,
+    "age": 37,
     "eye": "Brown",
     "tattoos": false,
     "month": 10,
@@ -8192,6 +8585,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1987-03-03T08:00:00.000Z",
@@ -8213,6 +8607,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1961-01-28T08:00:00.000Z",
@@ -8234,10 +8629,11 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1977-08-28T07:00:00.000Z",
-    "age": 42,
+    "age": 43,
     "eye": "Brown",
     "tattoos": null,
     "month": 7,
@@ -8255,6 +8651,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1989-12-09T08:00:00.000Z",
@@ -8277,10 +8674,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1989-09-03T07:00:00.000Z",
-    "age": 30,
+    "age": 31,
     "eye": "Blue",
     "tattoos": true,
     "month": 11,
@@ -8291,17 +8689,18 @@
     "name": "Ida Ljungqvist",
     "height": 162,
     "weight": 49,
-    "ethnicity": "Mixed-race (primarily Black)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 32,
       "waist": 21,
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1981-09-27T07:00:00.000Z",
-    "age": 38,
+    "age": 39,
     "eye": "Brown",
     "tattoos": false,
     "month": 2,
@@ -8319,6 +8718,7 @@
       "hips": 36
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1985-05-10T07:00:00.000Z",
@@ -8341,10 +8741,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1982-08-30T07:00:00.000Z",
-    "age": 37,
+    "age": 38,
     "eye": "Green",
     "tattoos": null,
     "month": 2,
@@ -8363,10 +8764,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1989-11-01T08:00:00.000Z",
-    "age": 30,
+    "age": 31,
     "eye": "Brown",
     "tattoos": null,
     "month": 2,
@@ -8384,6 +8786,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1996-03-05T08:00:00.000Z",
@@ -8406,10 +8809,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1972-10-12T07:00:00.000Z",
-    "age": 47,
+    "age": 48,
     "eye": "Blue",
     "tattoos": false,
     "month": 2,
@@ -8428,6 +8832,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1970-11-14T08:00:00.000Z",
@@ -8449,6 +8854,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1984-04-10T08:00:00.000Z",
@@ -8470,10 +8876,11 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1969-09-29T07:00:00.000Z",
-    "age": 50,
+    "age": 51,
     "eye": "Blue",
     "tattoos": null,
     "month": 6,
@@ -8487,6 +8894,7 @@
     "ethnicity": "Latin",
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1991-03-08T08:00:00.000Z",
@@ -8508,10 +8916,11 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1988-09-13T07:00:00.000Z",
-    "age": 31,
+    "age": 32,
     "eye": "Blue",
     "tattoos": true,
     "month": 4,
@@ -8529,6 +8938,7 @@
       "hips": 34
     },
     "cup": "A",
+    "theCup": "A",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1990-05-15T07:00:00.000Z",
@@ -8550,6 +8960,7 @@
       "hips": 36
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1973-11-05T08:00:00.000Z",
@@ -8564,13 +8975,14 @@
     "name": "Raquel Gibson",
     "height": 162,
     "weight": 50,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 23,
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1985-06-14T07:00:00.000Z",
@@ -8592,6 +9004,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1981-12-19T08:00:00.000Z",
@@ -8613,6 +9026,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Fake/Enhanced",
     "born": "1983-04-11T08:00:00.000Z",
@@ -8634,6 +9048,7 @@
       "hips": 34
     },
     "cup": null,
+    "theCup": null,
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1993-06-02T07:00:00.000Z",
@@ -8654,6 +9069,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1994-01-12T08:00:00.000Z",
@@ -8676,6 +9092,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1980-06-19T07:00:00.000Z",
@@ -8697,6 +9114,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1988-12-27T08:00:00.000Z",
@@ -8718,6 +9136,7 @@
       "hips": 43
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": null,
@@ -8740,6 +9159,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1974-08-02T07:00:00.000Z",
@@ -8754,7 +9174,7 @@
     "name": "Cristy Thom",
     "height": 167,
     "weight": 50,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 36,
       "waist": 23,
@@ -8762,10 +9182,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1971-09-08T07:00:00.000Z",
-    "age": 48,
+    "age": 49,
     "eye": "Brown",
     "tattoos": null,
     "month": 1,
@@ -8783,6 +9204,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1969-07-03T07:00:00.000Z",
@@ -8804,6 +9226,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1983-02-23T08:00:00.000Z",
@@ -8825,6 +9248,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1991-06-24T07:00:00.000Z",
@@ -8847,6 +9271,7 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1976-05-04T07:00:00.000Z",
@@ -8867,6 +9292,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Fake/Enhanced",
     "born": "1988-01-29T08:00:00.000Z",
@@ -8888,10 +9314,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1980-09-16T07:00:00.000Z",
-    "age": 39,
+    "age": 40,
     "eye": "Blue",
     "tattoos": true,
     "month": 4,
@@ -8909,6 +9336,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1974-05-14T07:00:00.000Z",
@@ -8930,10 +9358,11 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1980-08-22T07:00:00.000Z",
-    "age": 39,
+    "age": 40,
     "eye": "Brown",
     "tattoos": true,
     "month": 4,
@@ -8951,6 +9380,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1992-06-15T07:00:00.000Z",
@@ -8973,10 +9403,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1978-10-26T07:00:00.000Z",
-    "age": 41,
+    "age": 42,
     "eye": "Brown",
     "tattoos": null,
     "month": 2,
@@ -8994,6 +9425,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1996-06-25T07:00:00.000Z",
@@ -9015,6 +9447,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1978-07-24T07:00:00.000Z",
@@ -9036,6 +9469,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1991-05-25T07:00:00.000Z",
@@ -9058,6 +9492,7 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1981-06-21T07:00:00.000Z",
@@ -9072,13 +9507,14 @@
     "name": "Jaslyn Ome",
     "height": 165,
     "weight": 50,
-    "ethnicity": "South Asian, Black",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 32,
       "waist": 25,
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1991-07-21T07:00:00.000Z",
@@ -9100,10 +9536,11 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1976-08-18T07:00:00.000Z",
-    "age": 43,
+    "age": 44,
     "tattoos": null,
     "month": 6,
     "year": 1997,
@@ -9120,6 +9557,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1983-03-16T08:00:00.000Z",
@@ -9142,10 +9580,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1991-10-21T07:00:00.000Z",
-    "age": 28,
+    "age": 29,
     "eye": "Brown",
     "tattoos": null,
     "month": 5,
@@ -9164,6 +9603,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1974-05-01T07:00:00.000Z",
@@ -9185,6 +9625,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1935-01-01T08:00:00.000Z",
@@ -9205,6 +9646,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1983-02-26T08:00:00.000Z",
@@ -9226,6 +9668,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1964-11-27T08:00:00.000Z",
@@ -9246,6 +9689,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1995-11-28T08:00:00.000Z",
@@ -9267,6 +9711,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1970-02-16T08:00:00.000Z",
@@ -9288,10 +9733,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1986-08-08T07:00:00.000Z",
-    "age": 33,
+    "age": 34,
     "tattoos": null,
     "month": 11,
     "year": 2008,
@@ -9309,6 +9755,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1973-05-29T07:00:00.000Z",
@@ -9329,10 +9776,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1969-08-16T07:00:00.000Z",
-    "age": 50,
+    "age": 51,
     "eye": "Blue",
     "tattoos": false,
     "month": 3,
@@ -9350,6 +9798,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1962-05-04T07:00:00.000Z",
@@ -9370,6 +9819,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1984-01-26T08:00:00.000Z",
@@ -9392,6 +9842,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1986-04-12T08:00:00.000Z",
@@ -9413,6 +9864,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1998-11-28T08:00:00.000Z",
@@ -9434,6 +9886,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1972-02-20T08:00:00.000Z",
@@ -9455,10 +9908,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1964-08-30T07:00:00.000Z",
-    "age": 55,
+    "age": 56,
     "tattoos": null,
     "month": 0,
     "year": 1985,
@@ -9476,6 +9930,7 @@
       "cup": "DD"
     },
     "cup": "E",
+    "theCup": "DD",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1986-04-14T08:00:00.000Z",
@@ -9498,6 +9953,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1969-12-12T08:00:00.000Z",
@@ -9520,10 +9976,11 @@
       "cup": "DD"
     },
     "cup": "E",
+    "theCup": "DD",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1972-08-21T07:00:00.000Z",
-    "age": 47,
+    "age": 48,
     "eye": "Green",
     "tattoos": false,
     "month": 2,
@@ -9541,10 +9998,11 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1968-11-02T08:00:00.000Z",
-    "age": 51,
+    "age": 52,
     "eye": "Hazel",
     "tattoos": false,
     "month": 7,
@@ -9562,6 +10020,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1960-03-19T08:00:00.000Z",
@@ -9582,6 +10041,7 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1963-06-30T07:00:00.000Z",
@@ -9604,6 +10064,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1977-07-31T07:00:00.000Z",
@@ -9626,10 +10087,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1968-09-07T07:00:00.000Z",
-    "age": 51,
+    "age": 52,
     "tattoos": null,
     "month": 7,
     "year": 1992,
@@ -9646,10 +10108,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1986-08-12T07:00:00.000Z",
-    "age": 33,
+    "age": 34,
     "eye": "Blue",
     "tattoos": null,
     "month": 3,
@@ -9668,10 +10131,11 @@
       "cup": "C"
     },
     "cup": null,
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1976-08-27T07:00:00.000Z",
-    "age": 43,
+    "age": 44,
     "tattoos": null,
     "month": 0,
     "year": 2000,
@@ -9689,6 +10153,7 @@
       "cup": "F"
     },
     "cup": "F",
+    "theCup": "F",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1960-07-17T07:00:00.000Z",
@@ -9711,6 +10176,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1964-07-03T07:00:00.000Z",
@@ -9732,6 +10198,7 @@
       "hips": 32
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1969-02-11T08:00:00.000Z",
@@ -9754,10 +10221,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1986-09-10T07:00:00.000Z",
-    "age": 33,
+    "age": 34,
     "eye": "Green",
     "tattoos": true,
     "month": 2,
@@ -9775,10 +10243,11 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1990-08-14T07:00:00.000Z",
-    "age": 29,
+    "age": 30,
     "eye": "Brown",
     "tattoos": false,
     "month": 3,
@@ -9796,6 +10265,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1963-11-19T08:00:00.000Z",
@@ -9816,10 +10286,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1949-10-13T08:00:00.000Z",
-    "age": 70,
+    "age": 71,
     "tattoos": null,
     "month": 1,
     "year": 1972,
@@ -9836,6 +10307,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Fake/Enhanced",
     "born": "1965-02-26T08:00:00.000Z",
@@ -9857,10 +10329,11 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1989-11-02T08:00:00.000Z",
-    "age": 30,
+    "age": 31,
     "eye": "Brown",
     "tattoos": null,
     "month": 2,
@@ -9878,6 +10351,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1981-05-24T07:00:00.000Z",
@@ -9899,6 +10373,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1935-02-04T08:00:00.000Z",
@@ -9919,10 +10394,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1944-10-05T07:00:00.000Z",
-    "age": 75,
+    "age": 76,
     "tattoos": null,
     "month": 4,
     "year": 1964,
@@ -9940,6 +10416,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1955-04-13T08:00:00.000Z",
@@ -9961,6 +10438,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1977-12-12T08:00:00.000Z",
@@ -9981,6 +10459,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1971-03-02T08:00:00.000Z",
@@ -10002,10 +10481,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1942-09-21T07:00:00.000Z",
-    "age": 77,
+    "age": 78,
     "eye": "Brown",
     "tattoos": null,
     "month": 6,
@@ -10023,10 +10503,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1971-09-03T07:00:00.000Z",
-    "age": 48,
+    "age": 49,
     "eye": "Blue",
     "tattoos": null,
     "month": 10,
@@ -10044,6 +10525,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1948-05-28T07:00:00.000Z",
@@ -10065,6 +10547,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1970-05-28T07:00:00.000Z",
@@ -10086,6 +10569,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1945-02-06T07:00:00.000Z",
@@ -10107,6 +10591,7 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1967-12-02T08:00:00.000Z",
@@ -10127,6 +10612,7 @@
       "hips": 36
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1963-05-30T07:00:00.000Z",
@@ -10149,6 +10635,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1930-01-01T08:00:00.000Z",
@@ -10169,6 +10656,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1961-04-15T08:00:00.000Z",
@@ -10191,6 +10679,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1938-05-13T08:00:00.000Z",
@@ -10212,10 +10701,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1964-10-02T07:00:00.000Z",
-    "age": 55,
+    "age": 56,
     "eye": "Blue",
     "tattoos": null,
     "month": 0,
@@ -10233,10 +10723,11 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1968-10-27T07:00:00.000Z",
-    "age": 51,
+    "age": 52,
     "eye": "Blue",
     "tattoos": false,
     "month": 11,
@@ -10255,6 +10746,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1939-07-31T08:00:00.000Z",
@@ -10277,6 +10769,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1956-11-24T08:00:00.000Z",
@@ -10290,13 +10783,14 @@
     "name": "Petra Verkaik",
     "height": 172,
     "weight": 59,
-    "ethnicity": "Caucasian, Pacific Islander",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 37,
       "waist": 24,
       "hips": 36
     },
     "cup": "I",
+    "theCup": "I",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1966-11-04T08:00:00.000Z",
@@ -10318,10 +10812,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1957-10-02T08:00:00.000Z",
-    "age": 62,
+    "age": 63,
     "eye": "Brown",
     "tattoos": false,
     "month": 2,
@@ -10340,6 +10835,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1960-08-05T07:00:00.000Z",
@@ -10361,10 +10857,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1941-10-05T08:00:00.000Z",
-    "age": 78,
+    "age": 79,
     "tattoos": null,
     "month": 9,
     "year": 1961,
@@ -10382,6 +10879,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1936-02-25T08:00:00.000Z",
@@ -10402,6 +10900,7 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1961-12-13T08:00:00.000Z",
@@ -10423,6 +10922,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1957-07-31T07:00:00.000Z",
@@ -10445,6 +10945,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1962-11-03T08:00:00.000Z",
@@ -10467,6 +10968,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1968-06-04T07:00:00.000Z",
@@ -10488,6 +10990,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1933-02-07T08:00:00.000Z",
@@ -10509,10 +11012,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1966-08-23T07:00:00.000Z",
-    "age": 53,
+    "age": 54,
     "tattoos": null,
     "month": 8,
     "year": 1988,
@@ -10530,6 +11034,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1973-05-24T07:00:00.000Z",
@@ -10551,6 +11056,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1941-07-05T08:00:00.000Z",
@@ -10572,6 +11078,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1979-06-15T07:00:00.000Z",
@@ -10592,6 +11099,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1953-03-08T08:00:00.000Z",
@@ -10613,10 +11121,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1954-08-30T07:00:00.000Z",
-    "age": 65,
+    "age": 66,
     "eye": "Brown",
     "tattoos": null,
     "month": 11,
@@ -10635,10 +11144,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1960-11-02T08:00:00.000Z",
-    "age": 59,
+    "age": 60,
     "eye": "Brown",
     "tattoos": null,
     "month": 9,
@@ -10657,6 +11167,7 @@
       "cup": "DD"
     },
     "cup": "DD",
+    "theCup": "DD",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1962-02-24T08:00:00.000Z",
@@ -10673,6 +11184,7 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1936-07-01T08:00:00.000Z",
@@ -10693,6 +11205,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1939-01-17T08:00:00.000Z",
@@ -10713,6 +11226,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1940-05-20T08:00:00.000Z",
@@ -10733,10 +11247,11 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1950-10-01T08:00:00.000Z",
-    "age": 69,
+    "age": 70,
     "tattoos": null,
     "month": 7,
     "year": 1974,
@@ -10753,6 +11268,7 @@
       "hips": 39
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1947-03-22T08:00:00.000Z",
@@ -10774,6 +11290,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1934-07-14T08:00:00.000Z",
@@ -10795,6 +11312,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1957-03-10T08:00:00.000Z",
@@ -10816,6 +11334,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1958-03-12T08:00:00.000Z",
@@ -10837,10 +11356,11 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1965-09-04T07:00:00.000Z",
-    "age": 54,
+    "age": 55,
     "tattoos": null,
     "month": 6,
     "year": 1988,
@@ -10857,10 +11377,11 @@
       "hips": 34
     },
     "cup": "A",
+    "theCup": "A",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1956-09-20T07:00:00.000Z",
-    "age": 63,
+    "age": 64,
     "tattoos": null,
     "month": 8,
     "year": 1976,
@@ -10877,6 +11398,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1941-12-12T08:00:00.000Z",
@@ -10898,6 +11420,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1940-02-26T08:00:00.000Z",
@@ -10919,6 +11442,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1963-06-25T07:00:00.000Z",
@@ -10940,6 +11464,7 @@
       "hips": 36
     },
     "cup": "F",
+    "theCup": "F",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1952-01-12T08:00:00.000Z",
@@ -10961,10 +11486,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1969-10-24T07:00:00.000Z",
-    "age": 50,
+    "age": 51,
     "eye": "Brown",
     "tattoos": false,
     "month": 8,
@@ -10983,6 +11509,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1934-06-13T08:00:00.000Z",
@@ -10999,6 +11526,7 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": "F",
+    "theCup": "F",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1950-01-26T08:00:00.000Z",
@@ -11019,6 +11547,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1952-07-22T07:00:00.000Z",
@@ -11040,6 +11569,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1938-12-13T08:00:00.000Z",
@@ -11061,6 +11591,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1955-06-23T07:00:00.000Z",
@@ -11081,6 +11612,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1965-01-30T08:00:00.000Z",
@@ -11103,6 +11635,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1957-07-24T07:00:00.000Z",
@@ -11124,6 +11657,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1977-12-12T08:00:00.000Z",
@@ -11144,6 +11678,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1983-01-30T08:00:00.000Z",
@@ -11165,6 +11700,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1992-02-12T08:00:00.000Z",
@@ -11179,13 +11715,14 @@
     "name": "Lieko English",
     "height": 165,
     "weight": 53,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 36,
       "waist": 23,
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1947-06-03T07:00:00.000Z",
@@ -11207,10 +11744,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1976-08-27T07:00:00.000Z",
-    "age": 43,
+    "age": 44,
     "tattoos": null,
     "month": 0,
     "year": 2000,
@@ -11228,10 +11766,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1931-09-07T08:00:00.000Z",
-    "age": 88,
+    "age": 89,
     "eye": "Brown",
     "tattoos": null,
     "month": 9,
@@ -11249,6 +11788,7 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1937-07-16T08:00:00.000Z",
@@ -11270,10 +11810,11 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1969-08-23T07:00:00.000Z",
-    "age": 50,
+    "age": 51,
     "eye": "Brown",
     "tattoos": null,
     "month": 6,
@@ -11291,10 +11832,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1958-10-03T08:00:00.000Z",
-    "age": 61,
+    "age": 62,
     "tattoos": null,
     "month": 6,
     "year": 1978,
@@ -11311,6 +11853,7 @@
       "hips": 35
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1949-05-07T07:00:00.000Z",
@@ -11332,6 +11875,7 @@
       "hips": 36
     },
     "cup": "A",
+    "theCup": "A",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1949-06-17T07:00:00.000Z",
@@ -11352,6 +11896,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1983-03-16T08:00:00.000Z",
@@ -11373,6 +11918,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": null,
@@ -11394,6 +11940,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1958-07-22T07:00:00.000Z",
@@ -11415,6 +11962,7 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1964-06-21T07:00:00.000Z",
@@ -11435,6 +11983,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1959-02-08T08:00:00.000Z",
@@ -11455,6 +12004,7 @@
       "hips": 35
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1964-03-06T08:00:00.000Z",
@@ -11476,6 +12026,7 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": null,
@@ -11496,6 +12047,7 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": null,
@@ -11516,6 +12068,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1957-05-26T07:00:00.000Z",
@@ -11536,6 +12089,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1945-05-29T07:00:00.000Z",
@@ -11556,10 +12110,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1943-09-08T07:00:00.000Z",
-    "age": 76,
+    "age": 77,
     "tattoos": null,
     "month": 10,
     "year": 1964,
@@ -11576,10 +12131,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1957-10-23T08:00:00.000Z",
-    "age": 62,
+    "age": 63,
     "tattoos": null,
     "month": 5,
     "year": 1979,
@@ -11597,6 +12153,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1938-02-02T08:00:00.000Z",
@@ -11617,6 +12174,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1940-05-20T08:00:00.000Z",
@@ -11639,10 +12197,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1954-08-23T07:00:00.000Z",
-    "age": 65,
+    "age": 66,
     "eye": "Grey",
     "tattoos": null,
     "month": 7,
@@ -11660,6 +12219,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1957-11-07T08:00:00.000Z",
@@ -11681,6 +12241,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1944-11-23T07:00:00.000Z",
@@ -11702,6 +12263,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1972-06-01T07:00:00.000Z",
@@ -11723,6 +12285,7 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1965-04-21T08:00:00.000Z",
@@ -11743,6 +12306,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1970-11-15T08:00:00.000Z",
@@ -11764,6 +12328,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1980-01-31T08:00:00.000Z",
@@ -11785,6 +12350,7 @@
       "hips": 37
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1950-03-24T08:00:00.000Z",
@@ -11807,6 +12373,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1930-01-03T08:00:00.000Z",
@@ -11827,6 +12394,7 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1946-12-31T08:00:00.000Z",
@@ -11848,6 +12416,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1958-02-07T08:00:00.000Z",
@@ -11868,6 +12437,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1951-04-17T08:00:00.000Z",
@@ -11888,10 +12458,11 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1944-09-23T07:00:00.000Z",
-    "age": 75,
+    "age": 76,
     "tattoos": null,
     "month": 4,
     "year": 1966,
@@ -11908,6 +12479,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1949-08-04T07:00:00.000Z",
@@ -11929,6 +12501,7 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1971-02-18T08:00:00.000Z",
@@ -11950,6 +12523,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1956-11-21T08:00:00.000Z",
@@ -11971,6 +12545,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1980-06-06T07:00:00.000Z",
@@ -11992,6 +12567,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1969-04-19T08:00:00.000Z",
@@ -12013,6 +12589,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1988-05-16T07:00:00.000Z",
@@ -12034,6 +12611,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1958-06-14T07:00:00.000Z",
@@ -12055,10 +12633,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1981-11-02T08:00:00.000Z",
-    "age": 38,
+    "age": 39,
     "tattoos": null,
     "month": 4,
     "year": 2005,
@@ -12076,6 +12655,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1990-05-22T07:00:00.000Z",
@@ -12098,10 +12678,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1993-10-26T07:00:00.000Z",
-    "age": 26,
+    "age": 27,
     "eye": "Green",
     "tattoos": null,
     "month": 6,
@@ -12120,6 +12701,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1947-03-14T08:00:00.000Z",
@@ -12140,6 +12722,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1968-03-30T08:00:00.000Z",
@@ -12160,10 +12743,11 @@
       "hips": 37
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1982-09-17T07:00:00.000Z",
-    "age": 37,
+    "age": 38,
     "eye": "Green",
     "tattoos": false,
     "month": 3,
@@ -12181,10 +12765,11 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1960-08-12T07:00:00.000Z",
-    "age": 59,
+    "age": 60,
     "eye": "Brown",
     "tattoos": false,
     "month": 0,
@@ -12203,10 +12788,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1952-08-19T07:00:00.000Z",
-    "age": 67,
+    "age": 68,
     "eye": "Brown",
     "tattoos": null,
     "month": 7,
@@ -12225,6 +12811,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1942-12-13T07:00:00.000Z",
@@ -12245,6 +12832,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1956-07-09T07:00:00.000Z",
@@ -12266,6 +12854,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1946-12-31T08:00:00.000Z",
@@ -12287,6 +12876,7 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1971-11-28T08:00:00.000Z",
@@ -12309,6 +12899,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1980-05-04T07:00:00.000Z",
@@ -12330,6 +12921,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1959-11-06T08:00:00.000Z",
@@ -12351,6 +12943,7 @@
       "hips": 32
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1981-11-14T08:00:00.000Z",
@@ -12372,6 +12965,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1967-12-20T08:00:00.000Z",
@@ -12393,6 +12987,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1948-02-11T08:00:00.000Z",
@@ -12413,6 +13008,7 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1993-05-28T07:00:00.000Z",
@@ -12434,6 +13030,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1993-05-26T07:00:00.000Z",
@@ -12456,6 +13053,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1987-01-06T08:00:00.000Z",
@@ -12470,13 +13068,14 @@
     "name": "Alana Soares",
     "height": 157,
     "weight": 49,
-    "ethnicity": "Mixed-race",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 22,
       "hips": 32
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1964-02-21T08:00:00.000Z",
@@ -12498,10 +13097,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1987-09-16T07:00:00.000Z",
-    "age": 32,
+    "age": 33,
     "eye": "Brown",
     "tattoos": true,
     "month": 1,
@@ -12519,10 +13119,11 @@
       "hips": 36
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1972-09-12T07:00:00.000Z",
-    "age": 47,
+    "age": 48,
     "eye": "Hazel",
     "tattoos": false,
     "month": 3,
@@ -12541,6 +13142,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1991-03-28T08:00:00.000Z",
@@ -12562,6 +13164,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1944-12-24T07:00:00.000Z",
@@ -12582,6 +13185,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1963-07-09T07:00:00.000Z",
@@ -12602,6 +13206,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1947-03-26T08:00:00.000Z",
@@ -12622,6 +13227,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1991-04-07T08:00:00.000Z",
@@ -12644,6 +13250,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1991-04-12T07:00:00.000Z",
@@ -12665,6 +13272,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1990-11-26T08:00:00.000Z",
@@ -12687,6 +13295,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1946-12-07T08:00:00.000Z",
@@ -12709,6 +13318,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1953-02-12T08:00:00.000Z",
@@ -12730,6 +13340,7 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1948-12-20T08:00:00.000Z",
@@ -12751,10 +13362,11 @@
       "hips": 36
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1958-10-17T08:00:00.000Z",
-    "age": 61,
+    "age": 62,
     "eye": "Green",
     "tattoos": false,
     "month": 0,
@@ -12773,6 +13385,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1991-01-04T08:00:00.000Z",
@@ -12795,6 +13408,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1949-02-18T08:00:00.000Z",
@@ -12815,6 +13429,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1951-03-05T08:00:00.000Z",
@@ -12835,10 +13450,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1974-10-22T07:00:00.000Z",
-    "age": 45,
+    "age": 46,
     "eye": "Brown",
     "tattoos": false,
     "month": 9,
@@ -12857,6 +13473,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1946-07-05T07:00:00.000Z",
@@ -12879,6 +13496,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1985-02-05T08:00:00.000Z",
@@ -12901,6 +13519,7 @@
       "cup": "DD"
     },
     "cup": "E",
+    "theCup": "DD",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1983-12-18T08:00:00.000Z",
@@ -12922,10 +13541,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1950-08-31T07:00:00.000Z",
-    "age": 69,
+    "age": 70,
     "eye": "Blue",
     "tattoos": false,
     "month": 3,
@@ -12943,6 +13563,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1992-11-28T08:00:00.000Z",
@@ -12963,10 +13584,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1942-10-09T07:00:00.000Z",
-    "age": 77,
+    "age": 78,
     "tattoos": null,
     "month": 6,
     "year": 1965,
@@ -12983,6 +13605,7 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1942-07-08T07:00:00.000Z",
@@ -13004,10 +13627,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1964-09-29T07:00:00.000Z",
-    "age": 55,
+    "age": 56,
     "eye": "Blue",
     "tattoos": null,
     "month": 1,
@@ -13025,6 +13649,7 @@
       "hips": 33
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1974-01-11T08:00:00.000Z",
@@ -13046,10 +13671,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1939-09-12T08:00:00.000Z",
-    "age": 80,
+    "age": 81,
     "eye": "Brown",
     "tattoos": false,
     "month": 8,
@@ -13067,6 +13693,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1984-12-20T08:00:00.000Z",
@@ -13087,6 +13714,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1987-03-24T08:00:00.000Z",
@@ -13109,6 +13737,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1947-05-04T07:00:00.000Z",
@@ -13130,6 +13759,7 @@
       "cup": "A"
     },
     "cup": "A",
+    "theCup": "A",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1996-11-05T08:00:00.000Z",
@@ -13151,6 +13781,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1944-03-19T07:00:00.000Z",
@@ -13171,10 +13802,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1944-10-09T07:00:00.000Z",
-    "age": 75,
+    "age": 76,
     "eye": "Brown",
     "tattoos": false,
     "month": 10,
@@ -13192,6 +13824,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1953-11-23T08:00:00.000Z",
@@ -13212,10 +13845,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1946-10-13T08:00:00.000Z",
-    "age": 73,
+    "age": 74,
     "tattoos": null,
     "month": 1,
     "year": 1965,
@@ -13232,10 +13866,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1949-08-25T07:00:00.000Z",
-    "age": 70,
+    "age": 71,
     "tattoos": null,
     "month": 1,
     "year": 1971,
@@ -13252,10 +13887,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": null,
     "breasts": "Real/Natural",
     "born": "1949-08-31T07:00:00.000Z",
-    "age": 70,
+    "age": 71,
     "tattoos": null,
     "month": 7,
     "year": 1973,
@@ -13272,6 +13908,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1971-06-04T07:00:00.000Z",
@@ -13292,10 +13929,11 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1968-11-02T08:00:00.000Z",
-    "age": 51,
+    "age": 52,
     "tattoos": null,
     "month": 7,
     "year": 1990,
@@ -13312,6 +13950,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1970-01-31T08:00:00.000Z",
@@ -13332,6 +13971,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1963-12-13T08:00:00.000Z",
@@ -13353,6 +13993,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1961-12-12T08:00:00.000Z",
@@ -13366,13 +14007,14 @@
     "name": "Lisa Marie Scott",
     "height": 157,
     "weight": 47,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 21,
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1974-02-01T08:00:00.000Z",
@@ -13395,10 +14037,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1979-08-20T07:00:00.000Z",
-    "age": 40,
+    "age": 41,
     "eye": "Brown",
     "tattoos": false,
     "month": 10,
@@ -13416,6 +14059,7 @@
       "hips": 36
     },
     "cup": null,
+    "theCup": null,
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1951-03-11T08:00:00.000Z",
@@ -13436,10 +14080,11 @@
       "hips": 36
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1948-09-24T07:00:00.000Z",
-    "age": 71,
+    "age": 72,
     "eye": "Brown",
     "tattoos": null,
     "month": 9,
@@ -13457,10 +14102,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1946-09-19T07:00:00.000Z",
-    "age": 73,
+    "age": 74,
     "tattoos": null,
     "month": 0,
     "year": 1968,
@@ -13477,10 +14123,11 @@
       "hips": 35
     },
     "cup": null,
+    "theCup": null,
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1949-08-17T07:00:00.000Z",
-    "age": 70,
+    "age": 71,
     "eye": "Blue",
     "tattoos": null,
     "month": 5,
@@ -13498,6 +14145,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1981-11-10T08:00:00.000Z",
@@ -13520,6 +14168,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1954-12-30T08:00:00.000Z",
@@ -13541,6 +14190,7 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1945-01-07T07:00:00.000Z",
@@ -13561,6 +14211,7 @@
       "hips": 34
     },
     "cup": null,
+    "theCup": null,
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1949-03-21T08:00:00.000Z",
@@ -13583,10 +14234,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1952-09-09T07:00:00.000Z",
-    "age": 67,
+    "age": 68,
     "eye": "Blue",
     "tattoos": null,
     "month": 2,
@@ -13605,6 +14257,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1961-12-20T08:00:00.000Z",
@@ -13626,10 +14279,11 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1941-10-05T08:00:00.000Z",
-    "age": 78,
+    "age": 79,
     "tattoos": null,
     "month": 10,
     "year": 1965,
@@ -13646,10 +14300,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1938-08-22T08:00:00.000Z",
-    "age": 81,
+    "age": 82,
     "eye": "Brown",
     "tattoos": false,
     "month": 1,
@@ -13667,6 +14322,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1946-01-24T08:00:00.000Z",
@@ -13688,6 +14344,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1942-02-20T07:00:00.000Z",
@@ -13709,6 +14366,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1961-07-03T07:00:00.000Z",
@@ -13730,6 +14388,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1978-12-12T08:00:00.000Z",
@@ -13751,10 +14410,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1940-09-30T08:00:00.000Z",
-    "age": 79,
+    "age": 80,
     "tattoos": null,
     "month": 8,
     "year": 1962,
@@ -13772,6 +14432,7 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1943-01-05T07:00:00.000Z",
@@ -13792,6 +14453,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1987-11-15T08:00:00.000Z",
@@ -13813,10 +14475,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1978-09-04T07:00:00.000Z",
-    "age": 41,
+    "age": 42,
     "eye": "Brown",
     "tattoos": false,
     "month": 10,
@@ -13835,6 +14498,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Fake/Enhanced",
     "born": "1991-06-26T07:00:00.000Z",
@@ -13856,6 +14520,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1948-11-25T08:00:00.000Z",
@@ -13876,10 +14541,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1970-09-10T07:00:00.000Z",
-    "age": 49,
+    "age": 50,
     "eye": "Green",
     "tattoos": false,
     "month": 10,
@@ -13897,10 +14563,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1946-09-13T07:00:00.000Z",
-    "age": 73,
+    "age": 74,
     "tattoos": null,
     "month": 3,
     "year": 1971,
@@ -13917,10 +14584,11 @@
       "hips": 34
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1956-09-04T07:00:00.000Z",
-    "age": 63,
+    "age": 64,
     "tattoos": null,
     "month": 0,
     "year": 1979,
@@ -13937,6 +14605,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1944-12-14T07:00:00.000Z",
@@ -13957,6 +14626,7 @@
       "hips": 34
     },
     "cup": "A",
+    "theCup": "A",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1946-07-04T07:00:00.000Z",
@@ -13977,10 +14647,11 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1942-10-23T07:00:00.000Z",
-    "age": 77,
+    "age": 78,
     "tattoos": null,
     "month": 0,
     "year": 1965,
@@ -13997,6 +14668,7 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1945-08-05T07:00:00.000Z",
@@ -14018,6 +14690,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1939-11-13T08:00:00.000Z",
@@ -14039,6 +14712,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1940-05-20T08:00:00.000Z",
@@ -14059,6 +14733,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1943-07-17T07:00:00.000Z",
@@ -14079,10 +14754,11 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1940-10-11T08:00:00.000Z",
-    "age": 79,
+    "age": 80,
     "eye": "Green",
     "tattoos": false,
     "month": 5,
@@ -14101,10 +14777,11 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1939-09-07T08:00:00.000Z",
-    "age": 80,
+    "age": 81,
     "tattoos": null,
     "month": 9,
     "year": 1959,
@@ -14121,6 +14798,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1932-03-15T08:00:00.000Z",
@@ -14138,10 +14816,11 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1938-11-01T08:00:00.000Z",
-    "age": 81,
+    "age": 82,
     "tattoos": null,
     "month": 5,
     "year": 1957,
@@ -14159,10 +14838,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1944-09-23T07:00:00.000Z",
-    "age": 75,
+    "age": 76,
     "eye": "Blue",
     "tattoos": null,
     "month": 4,
@@ -14181,6 +14861,7 @@
       "cup": "DD"
     },
     "cup": "DD",
+    "theCup": "DD",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1982-02-02T08:00:00.000Z",
@@ -14203,6 +14884,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1987-12-08T08:00:00.000Z",
@@ -14224,6 +14906,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1948-03-13T08:00:00.000Z",
@@ -14245,10 +14928,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1972-09-21T07:00:00.000Z",
-    "age": 47,
+    "age": 48,
     "tattoos": null,
     "month": 9,
     "year": 1995,
@@ -14266,10 +14950,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1941-09-20T08:00:00.000Z",
-    "age": 78,
+    "age": 79,
     "eye": "Brown",
     "tattoos": null,
     "month": 0,
@@ -14287,6 +14972,7 @@
       "hips": 43
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1999-03-04T08:00:00.000Z",
@@ -14308,6 +14994,7 @@
       "hips": 37
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1935-12-01T08:00:00.000Z",
@@ -14329,10 +15016,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1941-10-02T08:00:00.000Z",
-    "age": 78,
+    "age": 79,
     "tattoos": null,
     "month": 2,
     "year": 1964,
@@ -14350,6 +15038,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1945-01-11T07:00:00.000Z",
@@ -14371,10 +15060,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1951-09-23T07:00:00.000Z",
-    "age": 68,
+    "age": 69,
     "eye": "Brown",
     "tattoos": null,
     "month": 8,
@@ -14393,6 +15083,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1966-08-03T07:00:00.000Z",
@@ -14414,6 +15105,7 @@
       "hips": 37
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1945-12-08T08:00:00.000Z",
@@ -14434,6 +15126,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1931-11-05T08:00:00.000Z",
@@ -14454,6 +15147,7 @@
       "hips": 36
     },
     "cup": "H",
+    "theCup": "H",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1977-07-08T07:00:00.000Z",
@@ -14476,10 +15170,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1982-10-01T07:00:00.000Z",
-    "age": 37,
+    "age": 38,
     "eye": "Blue",
     "tattoos": null,
     "month": 2,
@@ -14498,6 +15193,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1974-04-30T07:00:00.000Z",
@@ -14519,6 +15215,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1938-02-15T08:00:00.000Z",
@@ -14535,6 +15232,7 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1978-04-14T08:00:00.000Z",
@@ -14556,10 +15254,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1978-08-30T07:00:00.000Z",
-    "age": 41,
+    "age": 42,
     "eye": "Blue",
     "tattoos": null,
     "month": 1,
@@ -14577,6 +15276,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1948-12-17T08:00:00.000Z",
@@ -14597,6 +15297,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1952-05-28T07:00:00.000Z",
@@ -14618,6 +15319,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1941-11-23T08:00:00.000Z",
@@ -14639,6 +15341,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1965-12-15T08:00:00.000Z",
@@ -14661,6 +15364,7 @@
       "cup": "DD"
     },
     "cup": "E",
+    "theCup": "DD",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1969-11-18T08:00:00.000Z",
@@ -14683,6 +15387,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1987-02-05T08:00:00.000Z",
@@ -14704,6 +15409,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1923-04-22T08:00:00.000Z",
@@ -14725,6 +15431,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1970-11-15T08:00:00.000Z",
@@ -14745,10 +15452,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1937-10-17T08:00:00.000Z",
-    "age": 82,
+    "age": 83,
     "eye": "Brown",
     "tattoos": false,
     "month": 5,
@@ -14766,6 +15474,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1954-12-12T08:00:00.000Z",
@@ -14788,6 +15497,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1968-03-21T08:00:00.000Z",
@@ -14801,13 +15511,14 @@
     "name": "Kelly Gale",
     "height": 177,
     "weight": 55,
-    "ethnicity": "Mixed-race",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 32,
       "waist": 24,
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1995-05-14T07:00:00.000Z",
@@ -14829,6 +15540,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1961-05-11T07:00:00.000Z",
@@ -14849,6 +15561,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1954-02-05T08:00:00.000Z",
@@ -14870,6 +15583,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1968-12-10T08:00:00.000Z",
@@ -14890,10 +15604,11 @@
       "hips": 33
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1970-09-25T07:00:00.000Z",
-    "age": 49,
+    "age": 50,
     "eye": "Hazel",
     "tattoos": false,
     "month": 8,
@@ -14911,10 +15626,11 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1936-09-19T08:00:00.000Z",
-    "age": 83,
+    "age": 84,
     "tattoos": null,
     "month": 7,
     "year": 1957,
@@ -14932,10 +15648,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1972-11-01T08:00:00.000Z",
-    "age": 47,
+    "age": 48,
     "eye": "Blue",
     "tattoos": null,
     "month": 9,
@@ -14953,6 +15670,7 @@
       "hips": 34
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1987-01-08T08:00:00.000Z",
@@ -14974,6 +15692,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1970-06-14T07:00:00.000Z",
@@ -14995,6 +15714,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1960-02-28T08:00:00.000Z",
@@ -15016,6 +15736,7 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1932-07-29T08:00:00.000Z",
@@ -15037,6 +15758,7 @@
       "hips": 35
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1977-07-17T07:00:00.000Z",
@@ -15051,13 +15773,14 @@
     "name": "Jessica Burciaga",
     "height": 157,
     "weight": 50,
-    "ethnicity": "Mixed-race (primarily Asian)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 32,
       "waist": 24,
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1983-04-11T08:00:00.000Z",
@@ -15079,6 +15802,7 @@
       "hips": 33
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1979-07-09T07:00:00.000Z",
@@ -15100,10 +15824,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1975-09-23T07:00:00.000Z",
-    "age": 44,
+    "age": 45,
     "eye": "Brown",
     "tattoos": null,
     "month": 0,
@@ -15121,10 +15846,11 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1963-10-28T08:00:00.000Z",
-    "age": 56,
+    "age": 57,
     "tattoos": null,
     "month": 10,
     "year": 1983,
@@ -15134,9 +15860,10 @@
     "name": "Kirby Griffin",
     "height": 175,
     "weight": null,
-    "ethnicity": "Mixed-race",
+    "ethnicity": "Mixed",
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1991-11-14T08:00:00.000Z",
@@ -15159,6 +15886,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1934-06-13T08:00:00.000Z",
@@ -15180,6 +15908,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1990-04-18T07:00:00.000Z",
@@ -15202,6 +15931,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1960-06-26T07:00:00.000Z",
@@ -15224,6 +15954,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1953-11-25T08:00:00.000Z",
@@ -15245,6 +15976,7 @@
       "hips": 36
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1987-05-20T07:00:00.000Z",
@@ -15266,6 +15998,7 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1986-06-07T07:00:00.000Z",
@@ -15287,6 +16020,7 @@
       "hips": 32
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1993-07-07T07:00:00.000Z",
@@ -15309,6 +16043,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1978-05-25T07:00:00.000Z",
@@ -15330,6 +16065,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1938-04-22T08:00:00.000Z",
@@ -15351,6 +16087,7 @@
       "hips": 34
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1967-07-01T07:00:00.000Z",
@@ -15372,6 +16109,7 @@
       "hips": 33
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1979-12-23T08:00:00.000Z",
@@ -15393,6 +16131,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1991-08-05T07:00:00.000Z",
@@ -15414,10 +16153,11 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1974-09-19T07:00:00.000Z",
-    "age": 45,
+    "age": 46,
     "eye": "Blue",
     "tattoos": false,
     "month": 11,
@@ -15436,6 +16176,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1987-01-09T08:00:00.000Z",
@@ -15456,10 +16197,11 @@
       "hips": 33
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1971-09-02T07:00:00.000Z",
-    "age": 48,
+    "age": 49,
     "eye": "Blue",
     "tattoos": true,
     "month": 4,
@@ -15477,6 +16219,7 @@
       "hips": 31
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1984-03-26T08:00:00.000Z",
@@ -15499,6 +16242,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1992-04-08T07:00:00.000Z",
@@ -15520,6 +16264,7 @@
       "hips": 33
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1964-03-18T08:00:00.000Z",
@@ -15541,6 +16286,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1957-04-24T08:00:00.000Z",
@@ -15562,10 +16308,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1950-09-25T08:00:00.000Z",
-    "age": 69,
+    "age": 70,
     "eye": "Blue",
     "tattoos": null,
     "month": 1,
@@ -15583,6 +16330,7 @@
       "hips": 33
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1989-11-15T08:00:00.000Z",
@@ -15604,6 +16352,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1989-12-08T08:00:00.000Z",
@@ -15625,6 +16374,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1953-07-14T07:00:00.000Z",
@@ -15646,10 +16396,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1942-09-02T07:00:00.000Z",
-    "age": 77,
+    "age": 78,
     "eye": "Brown",
     "tattoos": false,
     "month": 7,
@@ -15668,6 +16419,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1967-04-28T08:00:00.000Z",
@@ -15685,6 +16437,7 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": null,
+    "theCup": null,
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1970-02-04T08:00:00.000Z",
@@ -15706,6 +16459,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1980-11-05T08:00:00.000Z",
@@ -15726,6 +16480,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1958-02-12T08:00:00.000Z",
@@ -15748,6 +16503,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1975-02-18T08:00:00.000Z",
@@ -15769,6 +16525,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1970-07-24T07:00:00.000Z",
@@ -15790,6 +16547,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1990-02-13T08:00:00.000Z",
@@ -15812,6 +16570,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1986-06-24T07:00:00.000Z",
@@ -15833,6 +16592,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Auburn",
     "breasts": "Real/Natural",
     "born": "1990-07-21T07:00:00.000Z",
@@ -15854,6 +16614,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1950-03-11T08:00:00.000Z",
@@ -15875,10 +16636,11 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1938-08-11T08:00:00.000Z",
-    "age": 81,
+    "age": 82,
     "eye": "Brown",
     "tattoos": null,
     "month": 7,
@@ -15896,6 +16658,7 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1954-03-15T08:00:00.000Z",
@@ -15916,6 +16679,7 @@
       "hips": 33
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1958-12-23T08:00:00.000Z",
@@ -15936,6 +16700,7 @@
       "hips": 32
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1958-01-23T08:00:00.000Z",
@@ -15956,6 +16721,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1983-06-03T07:00:00.000Z",
@@ -15978,10 +16744,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1984-10-28T07:00:00.000Z",
-    "age": 35,
+    "age": 36,
     "eye": "Blue",
     "tattoos": null,
     "month": 9,
@@ -15999,10 +16766,11 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1938-08-09T08:00:00.000Z",
-    "age": 81,
+    "age": 82,
     "tattoos": null,
     "month": 10,
     "year": 1961,
@@ -16020,6 +16788,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1965-12-18T08:00:00.000Z",
@@ -16040,6 +16809,7 @@
       "hips": 36
     },
     "cup": "F",
+    "theCup": "F",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1960-03-18T08:00:00.000Z",
@@ -16060,6 +16830,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1988-01-15T08:00:00.000Z",
@@ -16082,10 +16853,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1976-10-15T07:00:00.000Z",
-    "age": 43,
+    "age": 44,
     "eye": "Green",
     "tattoos": null,
     "month": 3,
@@ -16104,6 +16876,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1979-06-27T07:00:00.000Z",
@@ -16125,6 +16898,7 @@
       "hips": 34
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1960-02-19T08:00:00.000Z",
@@ -16141,6 +16915,7 @@
     "ethnicity": "Caucasian",
     "measurements": null,
     "cup": "DD",
+    "theCup": "DD",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1929-12-29T08:00:00.000Z",
@@ -16162,10 +16937,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Fake/Enhanced",
     "born": "1973-09-04T07:00:00.000Z",
-    "age": 46,
+    "age": 47,
     "eye": "Brown",
     "tattoos": null,
     "month": 2,
@@ -16184,6 +16960,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1936-08-05T08:00:00.000Z",
@@ -16206,10 +16983,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
     "born": "1972-09-27T07:00:00.000Z",
-    "age": 47,
+    "age": 48,
     "eye": "Brown",
     "tattoos": null,
     "month": 7,
@@ -16227,6 +17005,7 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1966-11-25T08:00:00.000Z",
@@ -16248,6 +17027,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1980-01-17T08:00:00.000Z",
@@ -16262,17 +17042,18 @@
     "name": "Christina Santiago",
     "height": 165,
     "weight": 49,
-    "ethnicity": "Mixed-race (primarily Latin)",
+    "ethnicity": "Mixed",
     "measurements": {
       "bust": 34,
       "waist": 24,
       "hips": 33
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1981-10-15T07:00:00.000Z",
-    "age": 38,
+    "age": 39,
     "eye": "Brown",
     "tattoos": null,
     "month": 7,
@@ -16290,6 +17071,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1935-04-05T08:00:00.000Z",
@@ -16311,6 +17093,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1938-06-25T08:00:00.000Z",
@@ -16332,10 +17115,11 @@
       "hips": 34
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1963-09-16T07:00:00.000Z",
-    "age": 56,
+    "age": 57,
     "tattoos": null,
     "month": 0,
     "year": 1982,
@@ -16353,6 +17137,7 @@
       "cup": "B"
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1939-04-20T08:00:00.000Z",
@@ -16375,6 +17160,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1949-07-20T07:00:00.000Z",
@@ -16395,6 +17181,7 @@
       "hips": 39
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1943-03-20T07:00:00.000Z",
@@ -16416,6 +17203,7 @@
       "cup": "C"
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1957-01-08T08:00:00.000Z",
@@ -16437,10 +17225,11 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1969-09-24T07:00:00.000Z",
-    "age": 50,
+    "age": 51,
     "eye": "Blue",
     "tattoos": null,
     "month": 3,
@@ -16458,6 +17247,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Red",
     "breasts": "Real/Natural",
     "born": "1939-03-11T08:00:00.000Z",
@@ -16478,10 +17268,11 @@
       "hips": 37
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1948-10-11T08:00:00.000Z",
-    "age": 71,
+    "age": 72,
     "eye": "Blue",
     "tattoos": false,
     "month": 9,
@@ -16500,6 +17291,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1938-05-22T08:00:00.000Z",
@@ -16521,6 +17313,7 @@
       "cup": "F"
     },
     "cup": "F",
+    "theCup": "F",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1967-12-08T08:00:00.000Z",
@@ -16542,6 +17335,7 @@
       "hips": 32
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1938-11-28T08:00:00.000Z",
@@ -16562,6 +17356,7 @@
       "hips": 36
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1938-03-12T08:00:00.000Z",
@@ -16583,6 +17378,7 @@
       "hips": 28
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1951-03-25T08:00:00.000Z",
@@ -16604,6 +17400,7 @@
       "cup": "E"
     },
     "cup": "E",
+    "theCup": "E",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1933-01-21T08:00:00.000Z",
@@ -16625,6 +17422,7 @@
       "hips": 36
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1933-04-19T08:00:00.000Z",
@@ -16646,6 +17444,7 @@
       "hips": 37
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Black",
     "breasts": "Real/Natural",
     "born": "1938-03-11T08:00:00.000Z",
@@ -16666,6 +17465,7 @@
       "hips": 35
     },
     "cup": "C",
+    "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1950-06-03T07:00:00.000Z",
@@ -16687,6 +17487,7 @@
       "cup": "DD"
     },
     "cup": "DD",
+    "theCup": "DD",
     "hair": "Auburn",
     "breasts": "Real/Natural",
     "born": "1961-01-27T08:00:00.000Z",
@@ -16708,6 +17509,7 @@
       "hips": 35
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1992-11-28T08:00:00.000Z",
@@ -16729,10 +17531,11 @@
       "hips": 34
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Brunette",
     "breasts": "Real/Natural",
     "born": "1951-09-14T07:00:00.000Z",
-    "age": 68,
+    "age": 69,
     "tattoos": null,
     "month": 6,
     "year": 1971,
@@ -16750,6 +17553,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1954-01-14T08:00:00.000Z",
@@ -16771,10 +17575,11 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1943-08-25T07:00:00.000Z",
-    "age": 76,
+    "age": 77,
     "tattoos": null,
     "month": 6,
     "year": 1963,
@@ -16791,6 +17596,7 @@
       "hips": 36
     },
     "cup": "B",
+    "theCup": "B",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1949-12-20T08:00:00.000Z",
@@ -16812,6 +17618,7 @@
       "cup": "D"
     },
     "cup": "D",
+    "theCup": "D",
     "hair": "Blonde",
     "breasts": "Real/Natural",
     "born": "1945-11-04T08:00:00.000Z",

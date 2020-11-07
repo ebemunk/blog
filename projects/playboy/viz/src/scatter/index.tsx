@@ -2,11 +2,14 @@ import * as React from 'react'
 import { hot } from 'react-hot-loader'
 
 import { FlexPlot, usePlotContext, Path } from '@xmatters/vizlib'
-import { useTransition, animated } from 'react-spring'
+import { useTransition, animated, useChain } from 'react-spring'
 
 import { get, data } from '../data'
 import { WAxis } from '../themed'
 import { MONTHS } from '../util'
+
+// @ts-ignore
+window.data = data
 
 const XAxis = ({ stage, scale }) => {
   switch (stage) {
@@ -144,7 +147,7 @@ const Viz = ({ stage }) => {
   const { chartHeight, chartWidth } = usePlotContext()
 
   const [xA, yA, cA] = React.useMemo(() => accessors(stage), [stage])
-  const [sX, sY, sC] = React.useMemo(
+  const [sX, sY, sC, extras] = React.useMemo(
     () =>
       scales({
         stage,
@@ -156,6 +159,7 @@ const Viz = ({ stage }) => {
     [stage, chartHeight, chartWidth, xA, yA],
   )
 
+  const transitionRef = React.useRef(null)
   // @ts-ignore
   const transition = useTransition(
     data,
@@ -181,7 +185,7 @@ const Viz = ({ stage }) => {
           r: 2,
           cx: sX(xA(d)),
           cy: sY(yA(d)),
-          fill: sC(cA(d)),
+          fill: cA(d) ? sC(cA(d)) : 'cyan',
         }
       },
       update: d => {
@@ -196,21 +200,70 @@ const Viz = ({ stage }) => {
           cy: sY(yA(d)),
           r: 2,
           opacity: 1,
-          fill: sC(cA(d)),
+          fill: cA(d) ? sC(cA(d)) : 'cyan',
         }
       },
       leave: d => ({
         r: 0,
         opacity: 0,
       }),
+      unique: true,
+      ref: transitionRef,
       // config: {
       //   duration: 3000,
       // },
-      unique: true,
       // trail: 1,
       // immediate: true,
     },
   )
+
+  const extrasTransitionRef = React.useRef(null)
+  // @ts-ignore
+  const extrasTransition = useTransition(
+    extras ?? [],
+    d => {
+      // @ts-ignore
+      return d.data[0]
+    },
+    {
+      from: d => ({
+        opacity: 0,
+        // @ts-ignore
+        r: 0,
+        // @ts-ignore
+        cx: d.x,
+        // @ts-ignore
+        cy: d.y,
+      }),
+      // @ts-ignore
+      enter: d => {
+        const upd = {
+          opacity: 0.4,
+          r: d.r,
+          cx: d.x,
+          cy: d.y,
+        }
+        console.log('d', upd)
+        return upd
+      },
+      update: d => {
+        return {
+          opacity: 0.4,
+          r: d.r,
+          cx: d.x,
+          cy: d.y,
+        }
+      },
+      leave: d => ({
+        r: 0,
+        opacity: 0,
+      }),
+      unique: true,
+      ref: extrasTransitionRef,
+    },
+  )
+
+  useChain([transitionRef, extrasTransitionRef])
 
   return (
     <>
@@ -220,25 +273,49 @@ const Viz = ({ stage }) => {
           <YAxis scale={sY} stage={stage} />
         </>
       )}
-      {/* {stage === 'hair' && <Pie />} */}
-      {transition.map(({ item, key, state, props }) => {
-        return (
-          <Circle
-            key={key}
-            // @ts-ignore
-            cx={props.cx}
-            // @ts-ignore
-            cy={props.cy}
-            // @ts-ignore
-            r={props.r}
-            style={{
-              fill: props.fill,
-              opacity: props.opacity,
-            }}
-            datum={item}
-          />
-        )
-      })}
+      {['hair', 'ethnicity', 'breasts', 'theCup'].includes(stage) && (
+        <g className="extras">
+          {extrasTransition.map(({ item, key, state, props }) => {
+            return (
+              <animated.circle
+                key={key}
+                // @ts-ignore
+                cx={props.cx}
+                // @ts-ignore
+                cy={props.cy}
+                // @ts-ignore
+                r={props.r}
+                fill="transparent"
+                //@ts-ignore
+                stroke={sC(item.data[0])}
+                strokeWidth={3}
+                opacity={props.opacity}
+                pointerEvents="none"
+              />
+            )
+          })}
+        </g>
+      )}
+      <g className="circles">
+        {transition.map(({ item, key, state, props }) => {
+          return (
+            <Circle
+              key={key}
+              // @ts-ignore
+              cx={props.cx}
+              // @ts-ignore
+              cy={props.cy}
+              // @ts-ignore
+              r={props.r}
+              style={{
+                fill: props.fill,
+                opacity: props.opacity,
+              }}
+              datum={item}
+            />
+          )
+        })}
+      </g>
       {['mateAge', 'height', 'weight', 'bust', 'waist', 'hips'].includes(
         stage,
       ) && <LOESS sX={sX} sY={sY} stage={stage} yA={yA} />}
@@ -259,11 +336,54 @@ const STAGES = [
   'hair',
   'ethnicity',
   'breasts',
+  'theCup',
 ]
+
+import _ from 'lodash'
+
+function flattenObject(o, prefix = '', result = {}, keepNull = true) {
+  if (
+    _.isString(o) ||
+    _.isNumber(o) ||
+    _.isBoolean(o) ||
+    (keepNull && _.isNull(o))
+  ) {
+    result[prefix] = o
+    return result
+  }
+
+  if (_.isArray(o) || _.isPlainObject(o)) {
+    for (let i in o) {
+      let pref = prefix
+      if (_.isArray(o)) {
+        pref = pref + `[${i}]`
+      } else {
+        if (_.isEmpty(prefix)) {
+          pref = i
+        } else {
+          pref = prefix + '.' + i
+        }
+      }
+      flattenObject(o[i], pref, result, keepNull)
+    }
+    return result
+  }
+  return result
+}
 
 const Scatter = () => {
   const [stage, setStage] = React.useState('hips')
   console.log('scatter rendering')
+
+  const khist = data
+    .map(d => flattenObject(d))
+    .reduce((acc, obj) => {
+      Object.keys(obj).forEach(k => {
+        acc[k] = acc[k] ? acc[k] + 1 : 1
+      })
+      return acc
+    }, {})
+  console.log('histtt', data.length, khist)
 
   return (
     <div

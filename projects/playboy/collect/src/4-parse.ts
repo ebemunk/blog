@@ -113,13 +113,22 @@ const run = async () => {
     const weight = parseWeight(bp?.['Weight'])
     const born = parseBorn(bp?.['Born'])
 
+    const measurements = parseMeasurements(bp?.['Measurements'])
+    const cup = parseCup(bp?.['Bra/cup size'])
+
+    if (measurements?.cup !== cup) {
+      console.log(row.name, measurements?.cup, cup)
+      console.log('---')
+    }
+
     return {
       name: row.name,
       height,
       weight,
       ethnicity,
-      measurements: parseMeasurements(bp?.['Measurements']),
-      cup: parseCup(bp?.['Bra/cup size']),
+      measurements,
+      cup,
+      theCup: measurements?.cup ?? cup,
       hair: parseHair(bp?.['Hair color']),
       breasts: bp?.['Boobs'],
       born,

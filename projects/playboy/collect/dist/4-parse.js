@@ -87,6 +87,9 @@ exports.parseEthnicity = function (str) {
     if (str === 'Caucaision') {
         eth = 'Caucasian';
     }
+    if (str.indexOf('Mixed') > -1 || str.indexOf(',') > -1) {
+        eth = 'Mixed';
+    }
     return eth;
 };
 exports.parseWeight = function (str) {
@@ -172,18 +175,26 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
             case 1:
                 rows = (_a.sent()).rows;
                 mates = rows.map(function (row) {
+                    var _a;
                     var bp = row.babepedia;
                     var height = exports.parseHeight(bp === null || bp === void 0 ? void 0 : bp['Height']);
                     var ethnicity = exports.parseEthnicity(bp === null || bp === void 0 ? void 0 : bp['Ethnicity']);
                     var weight = exports.parseWeight(bp === null || bp === void 0 ? void 0 : bp['Weight']);
                     var born = exports.parseBorn(bp === null || bp === void 0 ? void 0 : bp['Born']);
+                    var measurements = exports.parseMeasurements(bp === null || bp === void 0 ? void 0 : bp['Measurements']);
+                    var cup = exports.parseCup(bp === null || bp === void 0 ? void 0 : bp['Bra/cup size']);
+                    if ((measurements === null || measurements === void 0 ? void 0 : measurements.cup) !== cup) {
+                        console.log(row.name, measurements === null || measurements === void 0 ? void 0 : measurements.cup, cup);
+                        console.log('---');
+                    }
                     return {
                         name: row.name,
                         height: height,
                         weight: weight,
                         ethnicity: ethnicity,
-                        measurements: exports.parseMeasurements(bp === null || bp === void 0 ? void 0 : bp['Measurements']),
-                        cup: exports.parseCup(bp === null || bp === void 0 ? void 0 : bp['Bra/cup size']),
+                        measurements: measurements,
+                        cup: cup,
+                        theCup: (_a = measurements === null || measurements === void 0 ? void 0 : measurements.cup) !== null && _a !== void 0 ? _a : cup,
                         hair: exports.parseHair(bp === null || bp === void 0 ? void 0 : bp['Hair color']),
                         breasts: bp === null || bp === void 0 ? void 0 : bp['Boobs'],
                         born: born,
