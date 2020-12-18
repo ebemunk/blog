@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { hot } from 'react-hot-loader'
 
-import { FlexPlot, usePlotContext, Path } from '@xmatters/vizlib'
+import { FlexPlot, usePlotContext } from '@xmatters/vizlib'
 import { useTransition, animated, useChain } from 'react-spring'
 
-import { get, data } from '../data'
+import { data } from '../data'
 import { WAxis } from '../themed'
 import { MONTHS } from '../util'
 
@@ -56,27 +56,12 @@ const YAxis = ({ stage, scale }) => {
   }
 }
 
-const Circle = ({ datum, cx, cy, r, style }) => {
-  return (
-    <animated.circle
-      cx={cx}
-      cy={cy}
-      r={r}
-      style={{
-        fill: 'red',
-        // stroke: 'white',
-        ...style,
-      }}
-    >
-      <title>{datum.name}</title>
-    </animated.circle>
-  )
-}
-
 import accessors from './accessors'
 import scales from './scales'
 
 import LOESS from './LOESS'
+import PlaymateCircles from './PlaymateCircles'
+import GroupingCircles from './GroupingCircles'
 
 const Viz = ({ stage }) => {
   console.log('viz rendering', stage)
@@ -96,112 +81,6 @@ const Viz = ({ stage }) => {
     [stage, chartHeight, chartWidth, xA, yA],
   )
 
-  const transitionRef = React.useRef(null)
-  // @ts-ignore
-  const transition = useTransition(
-    data,
-    d => `${d.name}-${d.year}-${d.month}`,
-    {
-      from: {
-        opacity: 0,
-        // @ts-ignore
-        r: 0,
-        cx: 0,
-        cy: 0,
-        fill: 'pink',
-      },
-      enter: d => {
-        if (!yA(d)) {
-          return {
-            opacity: 0,
-          }
-        }
-
-        return {
-          opacity: 0.7,
-          r: 2,
-          cx: sX(xA(d)),
-          cy: sY(yA(d)),
-          fill: cA(d) ? sC(cA(d)) : 'cyan',
-        }
-      },
-      update: d => {
-        if (!yA(d)) {
-          return {
-            opacity: 0,
-          }
-        }
-
-        return {
-          cx: sX(xA(d)),
-          cy: sY(yA(d)),
-          r: 2,
-          opacity: 1,
-          fill: cA(d) ? sC(cA(d)) : 'cyan',
-        }
-      },
-      leave: d => ({
-        r: 0,
-        opacity: 0,
-      }),
-      unique: true,
-      ref: transitionRef,
-      // config: {
-      //   duration: 3000,
-      // },
-      // trail: 1,
-      // immediate: true,
-    },
-  )
-
-  const extrasTransitionRef = React.useRef(null)
-  // @ts-ignore
-  const extrasTransition = useTransition(
-    extras ?? [],
-    d => {
-      // @ts-ignore
-      return d.data[0]
-    },
-    {
-      from: d => ({
-        opacity: 0,
-        // @ts-ignore
-        r: 0,
-        // @ts-ignore
-        cx: d.x,
-        // @ts-ignore
-        cy: d.y,
-      }),
-      // @ts-ignore
-      enter: d => {
-        const upd = {
-          opacity: 0.4,
-          r: d.r,
-          cx: d.x,
-          cy: d.y,
-        }
-        console.log('d', upd)
-        return upd
-      },
-      update: d => {
-        return {
-          opacity: 0.4,
-          r: d.r,
-          cx: d.x,
-          cy: d.y,
-        }
-      },
-      leave: d => ({
-        r: 0,
-        opacity: 0,
-      }),
-      unique: true,
-      ref: extrasTransitionRef,
-    },
-  )
-
-  useChain([transitionRef, extrasTransitionRef])
-
   return (
     <>
       {stage !== 'hair' && (
@@ -211,51 +90,37 @@ const Viz = ({ stage }) => {
         </>
       )}
       {['hair', 'ethnicity', 'breasts', 'theCup'].includes(stage) && (
-        <g className="extras">
-          {extrasTransition.map(({ item, key, state, props }) => {
-            return (
-              <animated.circle
-                key={key}
-                // @ts-ignore
-                cx={props.cx}
-                // @ts-ignore
-                cy={props.cy}
-                // @ts-ignore
-                r={props.r}
-                fill="transparent"
-                //@ts-ignore
-                stroke={sC(item.data[0])}
-                strokeWidth={3}
-                opacity={props.opacity}
-                pointerEvents="none"
-              />
-            )
-          })}
-        </g>
+        <GroupingCircles
+          className="extras"
+          // @ts-ignore
+          data={extras.map(d => ({
+            ...d,
+            cx: d.x,
+            cy: d.y,
+            // @ts-ignore
+            stroke: sC(d.data[0]),
+          }))}
+          transitionDuration={750}
+        />
       )}
-      <g className="circles">
-        {transition.map(({ item, key, state, props }) => {
-          return (
-            <Circle
-              key={key}
-              // @ts-ignore
-              cx={props.cx}
-              // @ts-ignore
-              cy={props.cy}
-              // @ts-ignore
-              r={props.r}
-              style={{
-                fill: props.fill,
-                opacity: props.opacity,
-              }}
-              datum={item}
-            />
-          )
-        })}
-      </g>
+
       {['mateAge', 'height', 'weight', 'bust', 'waist', 'hips'].includes(
         stage,
-      ) && <LOESS sX={sX} sY={sY} stage={stage} yA={yA} />}
+      ) && <LOESS sX={sX} sY={sY} stage={stage} />}
+
+      <PlaymateCircles
+        data={data
+          .filter(d => typeof yA(d) !== 'undefined' && yA(d) !== null)
+          .map(d => ({
+            cx: sX(xA(d)) as number,
+            cy: sY(yA(d)) as number,
+            fill: cA(d) ? (sC(cA(d)) as string) : 'cyan',
+            datum: d,
+          }))}
+        r={2}
+        transitionDuration={750}
+        className="circles"
+      />
     </>
   )
 }
@@ -309,7 +174,7 @@ function flattenObject(o, prefix = '', result = {}, keepNull = true) {
 }
 
 const Scatter = () => {
-  const [stage, setStage] = React.useState('hips')
+  const [stage, setStage] = React.useState('start')
   console.log('scatter rendering')
 
   const khist = data
@@ -337,7 +202,7 @@ const Scatter = () => {
           width: '70vw',
         }}
       >
-        <FlexPlot margin={100}>
+        <FlexPlot margin={{ left: 30, top: 30, bottom: 10, right: 10 }}>
           <Viz stage={stage} />
         </FlexPlot>
       </div>
@@ -347,18 +212,6 @@ const Scatter = () => {
           marginLeft: '70vw',
         }}
       >
-        {/* <button
-          onClick={() =>
-            setStage(
-              // STAGES[(STAGES.findIndex(s => s === stage) + 1) % STAGES.length],
-              // STAGES[(STAGES.findIndex(s => s === stage) + 1) % STAGES.length],
-              // stage === 'hair' ? 'bust' : 'hair',
-            )
-          }
-        >
-          {stage}
-        </button> */}
-
         <select
           onChange={e => {
             setStage(e.target.value)

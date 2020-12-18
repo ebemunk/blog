@@ -1,28 +1,13 @@
 import React from 'react'
 import * as d3 from 'd3'
-import 'd3-transition'
-
-// import { Path } from '@xmatters/vizlib'
 
 import loessData from '../../loess.json'
-import { get, data } from '../data'
+import { get } from '../data'
 import accessors from './accessors'
 
-const Path = ({ data, generator, ...rest }) => {
-  const ref = React.useRef<SVGPathElement>(null)
+import Path from '../letgo/Path'
 
-  React.useEffect(() => {
-    if (!ref.current) return
-
-    d3.select(ref.current) //
-      .transition()
-      .attr('d', generator(data))
-  })
-
-  return <path ref={ref} {...rest} />
-}
-
-const LOESS = ({ stage, sX, sY, yA }) => {
+const LOESS = ({ stage, sX, sY }) => {
   const ld = loessData.find(d => d.key === stage)
 
   if (!ld) return null
@@ -50,6 +35,7 @@ const LOESS = ({ stage, sX, sY, yA }) => {
           opacity: 0.4,
           fill: 'gray',
         }}
+        transitionDuration={750}
       />
       <Path
         data={dd.map((d, i) => [sX(d[0]), sY(fitted[i])])}
@@ -60,6 +46,7 @@ const LOESS = ({ stage, sX, sY, yA }) => {
           fill: 'none',
           opacity: 0.6,
         }}
+        transitionDuration={750}
       />
     </>
   )
