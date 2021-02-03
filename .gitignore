@@ -7,3 +7,4 @@
 *.scout
 scoutfish
 projects/plane-crashes/collect/data/*
+.parcel-cache
