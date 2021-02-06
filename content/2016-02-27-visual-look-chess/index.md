@@ -37,14 +37,6 @@ Like many other amateur players, I tend place more importance on openings than I
 	<div id="openings-board"></div>
 </div>
 
-<div id="op-combined">
-	<span class="caption">Openings Tree</span>
-	<div id="openingsg" class="cdv-openings"></div>
-	<div id="board"></div>
-	<span id="op-name"></span>
-	<span id="op-percentage"></span>
-</div>
-
 Right from the first move, I see that e4 dominates by a large margin (48%), followed by d4 (34%). I would have expected the gap between these two most-popular moves to be smaller, but given the time range of this database, it seems reasonable. I will focus on some of my favorite openings and an insight I found to be quite interesting.
 
 Of course, among e4 openings, the beloved (and my favorite reply as Black) Sicilian (c5) is the most common reply, even more than e5. 2. Nf3 is by far the most played as White, aside from some respectable chunks from Alapin and Closed Sicilian. Interestingly, Black's second move seems to be a very critical crossroads of how the game will play out.
@@ -202,6 +194,10 @@ I hope it was pleasant and maybe even useful or instructive to see so many games
 
 For more technical details, you might be interested in checking out [chess-dataviz](https://ebemunk.github.io/chess-dataviz/) for some of the visualizations, it's quite easy to use. The numbers were gathered by [pgnstats](https://github.com/ebemunk/pgnstats), so check that out if you would like to extract such statistics for your own PGN databases.
 
-<script src="//localhost:1234/index.js"></script>
+<script>
+	window.HMR_WEBSOCKET_PORT = 8080
+</script>
+
+<script type="module" src="//localhost:8080/index.js"></script>
 <script src="chess/pret.js"></script>
 <link rel="stylesheet" href="chess/css.css">

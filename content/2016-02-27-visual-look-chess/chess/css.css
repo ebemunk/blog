@@ -203,9 +203,6 @@ body {
   position: relative;
   color: white;
 }
-#openings {
-  margin-bottom: 15px;
-}
 .op {
   pointer-events: none !important;
 }

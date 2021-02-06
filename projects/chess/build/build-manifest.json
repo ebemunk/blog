@@ -1,0 +1,64 @@
+{
+  "inputs": {
+    "_snowpack/pkg/d3.js": {
+      "bytes": 551366,
+      "imports": []
+    },
+    "openings/style.css": {
+      "bytes": 80,
+      "imports": []
+    },
+    "openings/index.js": {
+      "bytes": 2411,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "openings/style.css",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "index.js": {
+      "bytes": 268,
+      "imports": [
+        {
+          "path": "openings/index.js",
+          "kind": "import-statement"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "../~~bundle~~/index.js": {
+      "imports": [],
+      "exports": [],
+      "inputs": {
+        "_snowpack/pkg/d3.js": {
+          "bytesInOutput": 128260
+        },
+        "openings/style.css": {
+          "bytesInOutput": 0
+        },
+        "openings/index.js": {
+          "bytesInOutput": 1454
+        },
+        "index.js": {
+          "bytesInOutput": 180
+        }
+      },
+      "bytes": 129895
+    },
+    "../~~bundle~~/index.css": {
+      "imports": [],
+      "inputs": {
+        "openings/style.css": {
+          "bytesInOutput": 64
+        }
+      },
+      "bytes": 65
+    }
+  }
+}

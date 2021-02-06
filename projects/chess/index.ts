@@ -1,7 +1,11 @@
-import * as d3 from 'd3'
-window.d3 = null
+import openings from './openings'
 
-import data from './data.json'
+async function init() {
+  const data = await fetch('chess/fangol.json').then(r => r.json())
+  console.log('data', data)
+  openings(document.querySelector('#openings-viz'), data.openings)
+}
 
-// import './old/chess/css.css'
-// import './old/chess/js'
+init()
+
+console.log('aayaz')
