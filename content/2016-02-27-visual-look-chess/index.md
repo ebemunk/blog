@@ -199,5 +199,9 @@ For more technical details, you might be interested in checking out [chess-datav
 </script>
 
 <script type="module" src="//localhost:8080/index.js"></script>
+<!-- <script type="module" src="build/index.js"></script>
+<link rel="stylesheet" href="build/index.css"> -->
+
+
 <script src="chess/pret.js"></script>
 <link rel="stylesheet" href="chess/css.css">
