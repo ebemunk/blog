@@ -32,7 +32,7 @@
     }
   },
   "outputs": {
-    "../~~bundle~~/index.js": {
+    "../../../projects/chess/~~bundle~~/index.js": {
       "imports": [],
       "exports": [],
       "inputs": {
@@ -51,7 +51,7 @@
       },
       "bytes": 129895
     },
-    "../~~bundle~~/index.css": {
+    "../../../projects/chess/~~bundle~~/index.css": {
       "imports": [],
       "inputs": {
         "openings/style.css": {

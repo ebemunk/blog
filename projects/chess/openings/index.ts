@@ -6,9 +6,12 @@ interface Openings {
   children: Openings[]
 }
 
+import createTooltip from '../tooltip'
+import createBoard from '../board'
+
 import './style.css'
 
-const openings = async (domEl, data: Openings) => {
+const openings = (domEl, data: Openings) => {
   const container = d3.select(domEl)
 
   const width = 700
@@ -73,25 +76,76 @@ const openings = async (domEl, data: Openings) => {
     })
     .attr('d', arc)
 
+  const tooltip = createTooltip({
+    popperOptions: {
+      modifiers: [
+        {
+          name: 'offset',
+          options: {
+            offset: [0, 10],
+          },
+        },
+      ],
+    },
+  })
+
+  const boardWidth = 150
+
+  // draw arcs
   arcs
-    .on('mouseenter', (evt, d) => {
+    .on('mouseenter', (evt: MouseEvent, d) => {
       const ancestors = d.ancestors()
 
-      arcs.filter(node => ancestors.indexOf(node) === -1).style('opacity', 0.3)
+      arcs
+        .filter(node => ancestors.indexOf(node) > -1)
+        .classed('highlighted', true)
+
+      const centerAngle = (((d.x0 + d.x1) / 2) * 180) / Math.PI
+      tooltip.show({
+        html: d
+          .ancestors()
+          .map(d => d.data.san)
+          .reverse()
+          .join('/'),
+        reference: evt.currentTarget as HTMLElement,
+        popperOptionsOverride: {
+          placement: centerAngle < 90 || centerAngle > 270 ? 'top' : 'bottom',
+        },
+      })
+
+      boardSel.call(
+        createBoard({
+          width: boardWidth,
+          height: boardWidth,
+          fen: '2r5/1N3P2/2p2qp1/3np3/R2Pp1N1/K7/p5B1/1k6 w - - 0 1',
+        })
+      )
     })
     .on('mouseleave', (evt, d) => {
-      arcs.style('opacity', 1)
+      const ancestors = d.ancestors()
+      arcs
+        .filter(node => ancestors.indexOf(node) > -1)
+        .classed('highlighted', false)
+      tooltip.hide()
+      // boardSel.call(
+      //   createBoard({
+      //     width: boardWidth,
+      //     height: boardWidth,
+      //   })
+      // )
     })
 
-  arcs.append('title').text(
-    d =>
-      `${d
-        .ancestors()
-        .map(d => d.data.san)
-        .reverse()
-        // .join('/')}\n${format(d.value)}`
-        .join('/')}`
-  )
+  // draw board
+  const boardSel = svg
+    .append('g')
+    .attr('transform', `translate(${-boardWidth / 2},${-boardWidth / 2})`)
+    .attr('class', 'board')
+    .call(
+      createBoard({
+        width: boardWidth,
+        height: boardWidth,
+      })
+    )
 
   svg
     .append('g')

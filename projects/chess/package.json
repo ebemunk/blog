@@ -7,16 +7,20 @@
   "private": true,
   "scripts": {
     "dev": "snowpack dev",
-    "build": "snowpack build && cp -r build ../../content/2016-02-27-visual-look-chess"
+    "build": "snowpack build"
   },
   "devDependencies": {
     "@snowpack/plugin-webpack": "^2.3.0",
     "@types/d3": "6",
     "prettier": "^2.2.1",
     "snowpack": "^3.0.11",
+    "snowpack-plugin-url-loader": "^1.0.0",
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "d3": "6"
+    "@popperjs/core": "^2.6.0",
+    "chess.js": "^0.11.0",
+    "d3": "6",
+    "lodash": "^4.17.20"
   }
 }
