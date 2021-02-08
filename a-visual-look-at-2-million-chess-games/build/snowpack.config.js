@@ -1,0 +1,1 @@
+module.exports={mount:{},packageOptions:{},devOptions:{open:'none',hmr:true,},buildOptions:{clean:true,out:'../../content/2016-02-27-visual-look-chess/build',},plugins:[['snowpack-plugin-url-loader']],optimize:{bundle:true,minify:true,target:'es2017',entrypoints:['index.ts'],treeshake:true,splitting:true,},}
