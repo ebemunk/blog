@@ -19,6 +19,7 @@ module.exports = {
     clean: true,
     out: '../../content/2016-02-27-visual-look-chess/build',
   },
+  plugins: [['snowpack-plugin-url-loader']],
   optimize: {
     bundle: true,
     minify: true,

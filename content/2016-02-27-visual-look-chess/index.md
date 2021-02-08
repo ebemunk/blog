@@ -31,10 +31,9 @@ This generally seems to agree with all the other statistics out there. Nothing c
 
 Like many other amateur players, I tend place more importance on openings than I probably should. That being said, I was really excited about seeing the opening tendencies and popular moves. Below is a visualization of the first 5 moves (10-ply) from every game.
 
-<div id="openings">
+<div id="openings-chart">
 	<span class="title">Openings Tree</span>
 	<div id="openings-viz"></div>
-	<div id="openings-board"></div>
 </div>
 
 Right from the first move, I see that e4 dominates by a large margin (48%), followed by d4 (34%). I would have expected the gap between these two most-popular moves to be smaller, but given the time range of this database, it seems reasonable. I will focus on some of my favorite openings and an insight I found to be quite interesting.
@@ -198,9 +197,9 @@ For more technical details, you might be interested in checking out [chess-datav
 	window.HMR_WEBSOCKET_PORT = 8080
 </script>
 
-<script type="module" src="//localhost:8080/index.js"></script>
-<!-- <script type="module" src="build/index.js"></script>
-<link rel="stylesheet" href="build/index.css"> -->
+<!-- <script type="module" src="//localhost:8080/index.js"></script> -->
+<script type="module" src="build/index.js"></script>
+<link rel="stylesheet" href="build/index.css">
 
 
 <script src="chess/pret.js"></script>

@@ -1,18 +1,176 @@
 {
   "inputs": {
     "_snowpack/pkg/d3.js": {
-      "bytes": 551366,
+      "bytes": 115476,
       "imports": []
     },
-    "openings/style.css": {
-      "bytes": 80,
+    "_snowpack/pkg/chessjs.js": {
+      "bytes": 53024,
       "imports": []
     },
-    "openings/index.js": {
-      "bytes": 2411,
+    "_snowpack/pkg/@popperjs/core.js": {
+      "bytes": 55037,
+      "imports": []
+    },
+    "tooltip/style.css": {
+      "bytes": 166,
+      "imports": []
+    },
+    "tooltip/index.js": {
+      "bytes": 797,
       "imports": [
         {
           "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/@popperjs/core.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "tooltip/style.css",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "board/pieces/k.svg.js": {
+      "bytes": 1988,
+      "imports": []
+    },
+    "board/pieces/q.svg.js": {
+      "bytes": 2260,
+      "imports": []
+    },
+    "board/pieces/r.svg.js": {
+      "bytes": 2428,
+      "imports": []
+    },
+    "board/pieces/b.svg.js": {
+      "bytes": 1700,
+      "imports": []
+    },
+    "board/pieces/n.svg.js": {
+      "bytes": 2136,
+      "imports": []
+    },
+    "board/pieces/p.svg.js": {
+      "bytes": 1068,
+      "imports": []
+    },
+    "board/pieces/k-w.svg.js": {
+      "bytes": 1840,
+      "imports": []
+    },
+    "board/pieces/q-w.svg.js": {
+      "bytes": 2096,
+      "imports": []
+    },
+    "board/pieces/r-w.svg.js": {
+      "bytes": 1572,
+      "imports": []
+    },
+    "board/pieces/b-w.svg.js": {
+      "bytes": 1700,
+      "imports": []
+    },
+    "board/pieces/n-w.svg.js": {
+      "bytes": 1748,
+      "imports": []
+    },
+    "board/pieces/p-w.svg.js": {
+      "bytes": 1068,
+      "imports": []
+    },
+    "board/style.css": {
+      "bytes": 72,
+      "imports": []
+    },
+    "board/index.js": {
+      "bytes": 2432,
+      "imports": [
+        {
+          "path": "board/pieces/k.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/q.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/r.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/b.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/n.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/p.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/k-w.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/q-w.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/r-w.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/b-w.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/n-w.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/p-w.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/style.css",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "ecos.json.proxy.js": {
+      "bytes": 43966,
+      "imports": []
+    },
+    "openings/style.css": {
+      "bytes": 298,
+      "imports": []
+    },
+    "openings/index.js": {
+      "bytes": 4572,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/chessjs.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "tooltip/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "ecos.json.proxy.js",
           "kind": "import-statement"
         },
         {
@@ -22,7 +180,7 @@
       ]
     },
     "index.js": {
-      "bytes": 268,
+      "bytes": 217,
       "imports": [
         {
           "path": "openings/index.js",
@@ -37,28 +195,91 @@
       "exports": [],
       "inputs": {
         "_snowpack/pkg/d3.js": {
-          "bytesInOutput": 128260
+          "bytesInOutput": 55759
+        },
+        "_snowpack/pkg/chessjs.js": {
+          "bytesInOutput": 17504
+        },
+        "_snowpack/pkg/@popperjs/core.js": {
+          "bytesInOutput": 18593
+        },
+        "tooltip/style.css": {
+          "bytesInOutput": 0
+        },
+        "tooltip/index.js": {
+          "bytesInOutput": 339
+        },
+        "board/pieces/k.svg.js": {
+          "bytesInOutput": 1980
+        },
+        "board/pieces/q.svg.js": {
+          "bytesInOutput": 2252
+        },
+        "board/pieces/r.svg.js": {
+          "bytesInOutput": 2420
+        },
+        "board/pieces/b.svg.js": {
+          "bytesInOutput": 1692
+        },
+        "board/pieces/n.svg.js": {
+          "bytesInOutput": 2128
+        },
+        "board/pieces/p.svg.js": {
+          "bytesInOutput": 1060
+        },
+        "board/pieces/k-w.svg.js": {
+          "bytesInOutput": 1832
+        },
+        "board/pieces/q-w.svg.js": {
+          "bytesInOutput": 2088
+        },
+        "board/pieces/r-w.svg.js": {
+          "bytesInOutput": 1564
+        },
+        "board/pieces/b-w.svg.js": {
+          "bytesInOutput": 1692
+        },
+        "board/pieces/n-w.svg.js": {
+          "bytesInOutput": 1740
+        },
+        "board/pieces/p-w.svg.js": {
+          "bytesInOutput": 1060
+        },
+        "board/style.css": {
+          "bytesInOutput": 0
+        },
+        "board/index.js": {
+          "bytesInOutput": 1171
+        },
+        "ecos.json.proxy.js": {
+          "bytesInOutput": 43987
         },
         "openings/style.css": {
           "bytesInOutput": 0
         },
         "openings/index.js": {
-          "bytesInOutput": 1454
+          "bytesInOutput": 2353
         },
         "index.js": {
-          "bytesInOutput": 180
+          "bytesInOutput": 137
         }
       },
-      "bytes": 129895
+      "bytes": 161373
     },
     "../../../projects/chess/~~bundle~~/index.css": {
       "imports": [],
       "inputs": {
         "openings/style.css": {
-          "bytesInOutput": 64
+          "bytesInOutput": 242
+        },
+        "board/style.css": {
+          "bytesInOutput": 55
+        },
+        "tooltip/style.css": {
+          "bytesInOutput": 133
         }
       },
-      "bytes": 65
+      "bytes": 431
     }
   }
 }

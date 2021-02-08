@@ -1,4 +1,4 @@
-import * as d3 from 'd3'
+import { select as d3select } from 'd3'
 import {
   createPopper,
   Instance,
@@ -8,17 +8,19 @@ import {
 
 type PopperOptions = Partial<OptionsGeneric<Partial<Modifier<any, any>>>>
 
+import './style.css'
+
 const tooltip = ({
   popperOptions,
 }: {
   popperOptions?: PopperOptions
 } = {}) => {
   let popper: Instance
-  let tooltipEl = d3
-    .select('body')
+  let tooltipEl = d3select('body')
     .append('div')
     .style('position', 'absolute')
     .style('pointer-events', 'none')
+    .attr('class', 'tooltip')
 
   return {
     show({

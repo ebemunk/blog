@@ -165,10 +165,6 @@
   top: 2px;
   left: 2px;
 }
-body {
-  background: #282c34;
-  max-width: 710;
-}
 .black rect,
 .black div[class*="black-"] {
   fill: #3c3c3c !important;

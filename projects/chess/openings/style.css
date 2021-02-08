@@ -1,15 +1,20 @@
-#openings {
+#openings-chart {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#openings path {
+#openings-chart path {
   stroke: white;
   stroke-width: 2;
   stroke-opacity: 0;
 }
 
-#openings .highlighted {
+#openings-chart .highlighted {
   stroke-opacity: 1;
+}
+
+#openings-chart .title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
