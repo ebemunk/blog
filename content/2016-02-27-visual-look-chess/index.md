@@ -1,8 +1,8 @@
 +++
 publishDate = "2016-03-02"
-lastmod = "2021-02-01"
+lastmod = "2021-02-08"
 title = "A Visual Look at 2 Million Chess Games"
-slug = "2mil"
+slug = "a-visual-look-at-2-million-chess-games"
 tags = ["chess", "data visualization", "long form"]
 image = "img/visual-look.png"
 related = ["2018-12-29-chess-part2.md", "2019-01-05-plane-crashes.md"]
