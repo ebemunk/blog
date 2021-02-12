@@ -1,7 +1,7 @@
 {
   "inputs": {
     "_snowpack/pkg/d3.js": {
-      "bytes": 115476,
+      "bytes": 551366,
       "imports": []
     },
     "_snowpack/pkg/chessjs.js": {
@@ -86,7 +86,7 @@
       "imports": []
     },
     "board/index.js": {
-      "bytes": 2432,
+      "bytes": 3167,
       "imports": [
         {
           "path": "board/pieces/k.svg.js",
@@ -139,6 +139,10 @@
         {
           "path": "board/style.css",
           "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
         }
       ]
     },
@@ -179,11 +183,36 @@
         }
       ]
     },
+    "movepaths/style.css": {
+      "bytes": 327,
+      "imports": []
+    },
+    "movepaths/index.js": {
+      "bytes": 3744,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "movepaths/style.css",
+          "kind": "import-statement"
+        }
+      ]
+    },
     "index.js": {
-      "bytes": 217,
+      "bytes": 455,
       "imports": [
         {
           "path": "openings/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "movepaths/index.js",
           "kind": "import-statement"
         }
       ]
@@ -195,13 +224,13 @@
       "exports": [],
       "inputs": {
         "_snowpack/pkg/d3.js": {
-          "bytesInOutput": 55759
+          "bytesInOutput": 133700
         },
         "_snowpack/pkg/chessjs.js": {
-          "bytesInOutput": 17504
+          "bytesInOutput": 17601
         },
         "_snowpack/pkg/@popperjs/core.js": {
-          "bytesInOutput": 18593
+          "bytesInOutput": 18602
         },
         "tooltip/style.css": {
           "bytesInOutput": 0
@@ -249,7 +278,7 @@
           "bytesInOutput": 0
         },
         "board/index.js": {
-          "bytesInOutput": 1171
+          "bytesInOutput": 1684
         },
         "ecos.json.proxy.js": {
           "bytesInOutput": 43987
@@ -260,15 +289,24 @@
         "openings/index.js": {
           "bytesInOutput": 2353
         },
+        "movepaths/style.css": {
+          "bytesInOutput": 0
+        },
+        "movepaths/index.js": {
+          "bytesInOutput": 1724
+        },
         "index.js": {
-          "bytesInOutput": 137
+          "bytesInOutput": 274
         }
       },
-      "bytes": 161373
+      "bytes": 241794
     },
     "../../../projects/chess/~~bundle~~/index.css": {
       "imports": [],
       "inputs": {
+        "movepaths/style.css": {
+          "bytesInOutput": 261
+        },
         "openings/style.css": {
           "bytesInOutput": 242
         },
@@ -279,7 +317,7 @@
           "bytesInOutput": 133
         }
       },
-      "bytes": 431
+      "bytes": 692
     }
   }
 }

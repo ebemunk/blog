@@ -25092,51 +25092,52 @@ function line(e) {
         d3.select("#material-diff-200").datum([afaf]).call(Y),
         d3.select("#material-diff-200 svg").call(N);
     }
-  ),
-  d3.json(
-    "/a-visual-look-at-2-million-chess-games/chess/movepath.json",
-    function (e) {
-      e = e.moves;
-      var t = new ChessDataViz.MovePaths(
-        "#movepaths",
-        { binSize: 25e3, bezierRandomizer: d3.random.normal(7, 1), width: 550 },
-        e
-      );
-      ChessBoard("board2", {
-        position: "start",
-        draggable: !0,
-        showNotation: !1,
-        pieceTheme:
-          "/a-visual-look-at-2-million-chess-games/chesspieces/wikipedia/{piece}.png",
-        onDragStart: function (e) {
-          var a = d3.select("#board2");
-          a.selectAll('div[class^="square-"]').classed("active", !1),
-            a.select(".square-" + e).classed("active", !0);
-          var n;
-          if (2 == e[1] || 7 == e[1]) n = e;
-          else
-            switch (e[0]) {
-              case "a":
-              case "h":
-                n = "R" + e;
-                break;
-              case "b":
-              case "g":
-                n = "N" + e;
-                break;
-              case "c":
-              case "f":
-                n = "B" + e;
-                break;
-              case "d":
-                n = "Q" + e;
-                break;
-              case "e":
-                n = "K" + e;
-            }
-          return t.options({ accessor: n }), !1;
-        },
-      });
-      d3.select("#board2").select(".square-b1").classed("active", !0);
-    }
-  );
+  )
+  // ,
+  // d3.json(
+  //   "/a-visual-look-at-2-million-chess-games/chess/movepath.json",
+  //   function (e) {
+  //     e = e.moves;
+  //     var t = new ChessDataViz.MovePaths(
+  //       "#movepaths",
+  //       { binSize: 25e3, bezierRandomizer: d3.random.normal(7, 1), width: 550 },
+  //       e
+  //     );
+  //     ChessBoard("board2", {
+  //       position: "start",
+  //       draggable: !0,
+  //       showNotation: !1,
+  //       pieceTheme:
+  //         "/a-visual-look-at-2-million-chess-games/chesspieces/wikipedia/{piece}.png",
+  //       onDragStart: function (e) {
+  //         var a = d3.select("#board2");
+  //         a.selectAll('div[class^="square-"]').classed("active", !1),
+  //           a.select(".square-" + e).classed("active", !0);
+  //         var n;
+  //         if (2 == e[1] || 7 == e[1]) n = e;
+  //         else
+  //           switch (e[0]) {
+  //             case "a":
+  //             case "h":
+  //               n = "R" + e;
+  //               break;
+  //             case "b":
+  //             case "g":
+  //               n = "N" + e;
+  //               break;
+  //             case "c":
+  //             case "f":
+  //               n = "B" + e;
+  //               break;
+  //             case "d":
+  //               n = "Q" + e;
+  //               break;
+  //             case "e":
+  //               n = "K" + e;
+  //           }
+  //         return t.options({ accessor: n }), !1;
+  //       },
+  //     });
+  //     d3.select("#board2").select(".square-b1").classed("active", !0);
+  //   }
+  // );

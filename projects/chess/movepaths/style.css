@@ -1,0 +1,26 @@
+#movepaths {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paths-board .square.light {
+  color: #6c6c6c;
+}
+
+.paths-board .square.dark {
+  color: #3c3c3c;
+}
+
+.paths-board .label {
+  color: white;
+  font-size: 12px;
+}
+
+.piece-board .piece {
+  cursor: pointer;
+}
+
+.piece-board .highlight {
+  color: red;
+}

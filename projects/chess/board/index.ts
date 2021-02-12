@@ -12,10 +12,11 @@ import N from './pieces/n-w.svg'
 import P from './pieces/p-w.svg'
 
 import './style.css'
+import { range } from 'd3'
 
-type BoardRange = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+export type BoardRange = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
 
-interface Square {
+export interface Square {
   x: BoardRange
   y: BoardRange
   file: 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h'
@@ -67,7 +68,7 @@ function boardSquares(): Square[] {
   return squares
 }
 
-interface Piece extends Square {
+export interface Piece extends Square {
   piece: 'r' | 'b' | 'n' | 'q' | 'k' | 'p' | 'R' | 'B' | 'N' | 'Q' | 'K' | 'P'
 }
 
@@ -106,19 +107,25 @@ function piecesFromFen(fen: string): Piece[] {
 const board = ({
   width,
   height,
+  size = width,
   fen = '',
+  showLabels = false,
 }: {
-  width: number
-  height: number
+  width?: number
+  height?: number
+  size: number
   fen?: string
+  showLabels?: boolean
 }) => selection => {
+  const squareSize = size / 8
+
   selection
     .selectAll('.bg')
     .data([true])
     .join('rect')
     .attr('class', 'bg')
-    .attr('width', width)
-    .attr('height', height)
+    .attr('width', size)
+    .attr('height', size)
     .attr('stroke', 'black')
 
   selection
@@ -128,10 +135,10 @@ const board = ({
     .attr('class', d => (isLight(d) ? 'square light' : 'square dark'))
     .attr(
       'transform',
-      d => `translate(${d.x * (width / 8)},${d.y * (height / 8)})`
+      d => `translate(${d.x * squareSize},${d.y * squareSize})`
     )
-    .attr('width', width / 8)
-    .attr('height', height / 8)
+    .attr('width', squareSize)
+    .attr('height', squareSize)
     .attr('fill', 'currentColor')
 
   selection
@@ -141,11 +148,40 @@ const board = ({
     .attr('class', 'piece')
     .attr(
       'transform',
-      d => `translate(${d.x * (width / 8)},${d.y * (height / 8)})`
+      d => `translate(${d.x * squareSize},${d.y * squareSize})`
     )
-    .attr('width', width / 8)
-    .attr('height', height / 8)
+    .attr('width', squareSize)
+    .attr('height', squareSize)
     .attr('href', d => pieceToSrc[d.piece])
+
+  if (showLabels) {
+    selection
+      .selectAll('.rank')
+      .data(range(8))
+      .join('text')
+      .attr('class', 'rank label')
+      .attr('transform', d => `translate(0,${(7 - d) * squareSize})`)
+      .attr('dominant-baseline', 'hanging')
+      .attr('dy', '0.25em')
+      .attr('dx', '0.25em')
+      .attr('fill', 'currentColor')
+      .text(d => d + 1)
+
+    selection
+      .selectAll('.file')
+      .data(range(8))
+      .join('text')
+      .attr('class', 'file label')
+      .attr(
+        'transform',
+        d => `translate(${(7 - d) * squareSize + squareSize},${size})`
+      )
+      .attr('text-anchor', 'end')
+      .attr('dy', '-0.25em')
+      .attr('dx', '-0.25em')
+      .attr('fill', 'currentColor')
+      .text(d => String.fromCharCode(97 + (7 - d)))
+  }
 }
 
 export default board

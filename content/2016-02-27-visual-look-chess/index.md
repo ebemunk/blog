@@ -180,11 +180,11 @@ Perhaps the best metaphor for a game of chess, the ultimate back and forth betwe
 
 ## Abstract art
 
-I leave you with a rendition of the pieces journeys throughout the game. I think it looks very pretty. Click on the pieces to explore its moves. Every thin strand of line represents 25,000 moves.
+I leave you with a rendition of the pieces journeys throughout the game. I think it looks very pretty. Click on the pieces to explore its moves. Every thin strand of line represents 1,000 moves. Moves that were played less than 1,000 times are not shown.
 
-<div id="paths-combined">
-	<div class="cdv-move-paths" id="movepaths"></div>
-	<div id="board2"></div>
+<div id="movepaths">
+	<div id="movepaths-viz">
+	</div>
 </div>
 
 ## Closing words
