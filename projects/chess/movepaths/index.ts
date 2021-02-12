@@ -143,7 +143,7 @@ const movepaths = (domEl, data) => {
       )
       .join('path')
       .attr('stroke', 'white')
-      .attr('stroke-opacity', 0.1)
+      .attr('opacity', 0.1)
       .attr(
         'd',
         d => `M${d[0].x},${d[0].y}, Q${d[1].x},${d[1].y} ${d[2].x},${d[2].y}`
