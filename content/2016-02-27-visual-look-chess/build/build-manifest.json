@@ -188,7 +188,7 @@
       "imports": []
     },
     "movepaths/index.js": {
-      "bytes": 3737,
+      "bytes": 3736,
       "imports": [
         {
           "path": "_snowpack/pkg/d3.js",
@@ -293,13 +293,13 @@
           "bytesInOutput": 0
         },
         "movepaths/index.js": {
-          "bytesInOutput": 1717
+          "bytesInOutput": 1716
         },
         "index.js": {
           "bytesInOutput": 274
         }
       },
-      "bytes": 241787
+      "bytes": 241786
     },
     "../../../projects/chess/~~bundle~~/index.css": {
       "imports": [],
