@@ -17,6 +17,7 @@
 <div class="share">
 	<h4>Share this post</h4>
 	<p>I'm pretty sure you know how to share things on social media, so I'll spare you the 50 different obnoxious buttons. If you liked this, feel free to share anywhere, it helps me out.</p>
+	<p>Have something to say? <a href="https://twitter.com/search?q={{ .Permalink }}">Discuss on Twitter</a></p>
 </div>
 
 {{ with .Params.related }}
@@ -37,9 +38,5 @@
 {{ end }}
 
 {{ partial "consult.html" . }}
-
-<div class="disqus">
-	{{ template "_internal/disqus.html" . }}
-</div>
 
 {{ partial "footer.html" . }}
