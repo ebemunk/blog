@@ -19,10 +19,8 @@ I also wanted to show off some of the software I wrote for this purpose, checkou
 
 Lets start with some general numbers. White wins a bit more often than Black, 39% to 30%, with the rest being draws. It's not very surprising, although I would have expected the difference to be less. There are also some negligible amount of unfinished games, and I couldn't discern what happened to those.
 
-<div id="wins-combined">
-	<div id="wins" class="donut">
+<div id="wins-viz">
 		<span class="caption">Wins</span>
-	</div>
 </div>
 
 This generally seems to agree with all the other statistics out there. Nothing crazy going on here.
@@ -56,14 +54,14 @@ Regarding uncommon openings, like English (c4) or Reti (Nf3), it's worth noting 
 
 ## Castling
 
-<div class="castling">
-	<div id="white-castling" class="donut">
+<div id="castling-container">
+	<div id="white-castling">
 		<span class="caption">White Castling</span>
 	</div>
-	<div id="black-castling" class="donut">
+	<div id="black-castling">
 		<span class="caption">Black Castling</span>
 	</div>
-	<div id="castling-side" class="donut">
+	<div id="castling-side">
 		<span class="caption">Castling Side</span>
 	</div>
 </div>
@@ -78,12 +76,12 @@ I wanted to collect some stats about the game endings, but this little project g
 
 There are more than 50 thousand games that end in mate! Obviously this is minuscule compared to the size of the database, but I wonder if the players really didn't see it coming, or just "allowed" their opponent to finish what might have been a nice combination?
 
-<div class="ending">
-	<div id="ending-check" class="donut">
-		<span class="caption">Games ending with Check</span>
+<div id="ending">
+	<div id="ending-check">
+		<span class="caption">Games ending in Check</span>
 	</div>
-	<div id="ending-mate" class="donut">
-		<span class="caption">Games ending with Checkmate</span>
+	<div id="ending-mate">
+		<span class="caption">Games ending in Mate</span>
 	</div>
 </div>
 
@@ -93,7 +91,7 @@ Games ending on a check makes me think that either it was a draw-by-perpetual sc
 
 To get a sense of how long the games took, I plotted them as a simple histogram, number of plies vs number of games.
 
-<div id="game-lengths" class="histogram">
+<div id="game-lengths-viz">
 	<span class="caption">Game Length Frequencies</span>
 </div>
 
@@ -103,7 +101,7 @@ The [longest game](http://chesstempo.com/gamedb/game/3242097), with a whopping *
 
 Instead of having a super-skewed graph, I think I can sacrifice 6,474 (0.3%) of the games and focus on the ones with at most 100 moves (or 200-ply).
 
-<div id="game-lengths-200" class="histogram">
+<div id="game-lengths-viz-200">
 	<span class="caption">Game Length Frequencies (max 200-ply)</span>
 </div>
 
@@ -126,55 +124,51 @@ Below is the heatmap visualization, which I hope you'll take some time to play a
 - _Capture Squares:_ squares where a capture occurred
 - _Checking Squares:_ squares where the move resulted in a check
 
-<div id="hm-combined">
-	<div id="heatmap" class="cdv-heatmap"></div>
-	<select id="heatmap-selector">
+<div id="heatmap-container">
+	<div id="heatmap-chart"></div>
+	<select id="heatmap-select">
 		<option value="squareUtilization">Square Utilization</option>
 		<option value="moveSquares">Move Squares</option>
 		<option value="captureSquares">Capture Squares</option>
 		<option value="checkSquares">Checking Squares</option>
 	</select>
-	<div id="piece-selectors-w"></div>
-	<div id="piece-selectors-b"></div>
+	<div id="piece-select-w"></div>
+	<div id="piece-select-b"></div>
 </div>
 
-Square utilization shows that White tries to be more aggressive and keep its inherent initiative alive. Comparing <a href="" class="hms" data-hm="squareUtilization" data-pc="wb">White Bishops</a> versus <a href="" class="hms" data-hm="squareUtilization" data-pc="bb">Black Bishops</a>, we see White positions them more actively and closer to the center (d3, e3, b5, c4, f4, g5) whereas Black more often prefers more passive but controlling squares (d7, e7, g7) and is more likely to fianchetto his bishops. This might be an interesting artifact of the hypermodern school that had so much impact on Black's defense.
+Square utilization shows that White tries to be more aggressive and keep its inherent initiative alive. Comparing <a href="" class="hms" data-hm="squareUtilization" data-pc="B">White Bishops</a> versus <a href="" class="hms" data-hm="squareUtilization" data-pc="b">Black Bishops</a>, we see White positions them more actively and closer to the center (d3, e3, b5, c4, f4, g5) whereas Black more often prefers more passive but controlling squares (d7, e7, g7) and is more likely to fianchetto his bishops. This might be an interesting artifact of the hypermodern school that had so much impact on Black's defense.
 
-<a href="" class="hms" data-hm="squareUtilization" data-pc="wn">White Knights</a> are also almost always placed on c3 and f3, but <a href="" class="hms" data-hm="squareUtilization" data-pc="bn">Black Knights</a>, especially the Queen's Knight likes keeping it flexible and utilize d7 much more than White does for d2.
+<a href="" class="hms" data-hm="squareUtilization" data-pc="N">White Knights</a> are also almost always placed on c3 and f3, but <a href="" class="hms" data-hm="squareUtilization" data-pc="n">Black Knights</a>, especially the Queen's Knight likes keeping it flexible and utilize d7 much more than White does for d2.
 
-The <a href="" class="hms" data-hm="moveSquares" data-pc="wall">Move Squares</a> are mirrored on both sides almost perfectly. I wonder if this says something about how people think when playing with White vs Black pieces.
+The <a href="" class="hms" data-hm="moveSquares" data-pc="A">Move Squares</a> are mirrored on both sides almost perfectly. I wonder if this says something about how people think when playing with White vs Black pieces.
 
-<a href="" class="hms" data-hm="captureSquares" data-pc="wall">Bloodiest squares</a> without a doubt are the d4 and d5 squares, boasting over 6 million capturing moves, about 15% more than any other square.
+<a href="" class="hms" data-hm="captureSquares" data-pc="A">Bloodiest squares</a> without a doubt are the d4 and d5 squares, boasting over 6 million capturing moves, about 15% more than any other square.
 
-The long range of Bishops are also highlighted in captures, whereas <a href="" class="hms" data-hm="captureSquares" data-pc="wb">Bishops</a> capture more around the center, the <a href="" class="hms" data-hm="captureSquares" data-pc="wn">Knights</a> are very much focused on the key central squares.
+The long range of Bishops are also highlighted in captures, whereas <a href="" class="hms" data-hm="captureSquares" data-pc="B">Bishops</a> capture more around the center, the <a href="" class="hms" data-hm="captureSquares" data-pc="N">Knights</a> are very much focused on the key central squares.
 
-<a href="" class="hms" data-hm="captureSquares" data-pc="wr">Rooks</a> come out as being the most versatile in their bloodthirst, their capture squares span a much greater area than any other piece (even the <a href="" class="hms" data-hm="captureSquares" data-pc="wq">Queens</a>)
+<a href="" class="hms" data-hm="captureSquares" data-pc="R">Rooks</a> come out as being the most versatile in their bloodthirst, their capture squares span a much greater area than any other piece (even the <a href="" class="hms" data-hm="captureSquares" data-pc="Q">Queens</a>)
 
-Finally, one very unexpected thing for me was that both <a href="" class="hms" data-hm="checkSquares" data-pc="wp">White Pawns</a> and <a href="" class="hms" data-hm="checkSquares" data-pc="bp">Black Pawns</a> deliver checks much more on the kingside. I supposed there would be some bias, as the kings prefer castling kingside and then in the endgame support those pawns easier, but its still astonishing to see how much of a bias there is.
+Finally, one very unexpected thing for me was that both <a href="" class="hms" data-hm="checkSquares" data-pc="P">White Pawns</a> and <a href="" class="hms" data-hm="checkSquares" data-pc="p">Black Pawns</a> deliver checks much more on the kingside. I supposed there would be some bias, as the kings prefer castling kingside and then in the endgame support those pawns easier, but its still astonishing to see how much of a bias there is.
 
 ## Material Count and Exchange Tendencies
 
 We can see the exchange tendencies of players as the game goes on by plotting the average material count. The material on the board is counted using the standard valuations (Pawn: 1, Knight/Bishop: 3, Rook: 5, Queen: 9).
 
-<div id="material-count">
-	<span class="caption">Average Material Count per Ply</span>
+<div id="material-count-viz">
+	<span class="caption">Average Material Count per Ply (max 250-ply)</span>
 </div>
 
-Surprisingly pleasant graph! The decay is definitely quite expected, as the game goes on and pieces get exchanged. The line pretty much settles somewhere between 12-13, which is about 3 pawns + 1 minor piece each. After about 150 moves (300-ply) things start going a bit wild, I suppose from promotions and blunders, which are much easier to make in the endgame.
+Surprisingly pleasant graph! The decay is definitely quite expected, as the game goes on and pieces get exchanged. The line pretty much settles somewhere around 14, which is about 3-4 pawns + 1 minor piece each.
 
-As for exchange tendencies, we see that after about 30 moves in, the material on the board is halved. There is a very nice comparison of exchange tendencies per player on [Chess-DB's Game Statistics](http://chess-db.com/public/research/game_statistics.html) page.
+As for exchange tendencies, we see that after about 30 moves in (60-ply), the material on the board is halved. There is a very nice comparison of exchange tendencies per player on [Chess-DB's Game Statistics](http://chess-db.com/public/research/game_statistics.html) page.
 
 Another statistic I was interested in is the average material difference during the game. I wasn't sure what I was expecting to see, but it's definitely a nice one.
 
-<div id="material-diff">
-	<span class="caption">Average Material Difference per Ply</span>
-</div>
-
-Wow, what a graph! Values after 250-ply get a bit crazy as promotions and blunders take place, but look at that first section!
-
-<div id="material-diff-200">
+<div id="material-diff-viz">
 	<span class="caption">Average Material Difference per Ply (max 250-ply)</span>
 </div>
+
+Wow, what a graph!
 
 Perhaps the best metaphor for a game of chess, the ultimate back and forth between White and Black for control and material dominance. It's surprisingly balanced all the way up until 120 moves, with White having a slight but probably negligible pull.
 
@@ -200,7 +194,3 @@ For more technical details, you might be interested in checking out [chess-datav
 <!-- <script type="module" src="//localhost:8080/index.js"></script> -->
 <script type="module" src="build/index.js"></script>
 <link rel="stylesheet" href="build/index.css">
-
-
-<script src="chess/pret.js"></script>
-<link rel="stylesheet" href="chess/css.css">

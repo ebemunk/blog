@@ -1,4 +1,8 @@
-import * as d3 from 'd3'
+import {
+  range as d3range,
+  randomNormal as d3randomNormal,
+  select as d3select,
+} from 'd3'
 import board from '../board'
 
 import { Piece } from '../board'
@@ -6,7 +10,7 @@ import { Piece } from '../board'
 import './style.css'
 
 const movepaths = (domEl, data) => {
-  const container = d3.select(domEl)
+  const container = d3select(domEl)
 
   const width = 700
   const height = 550
@@ -65,14 +69,14 @@ const movepaths = (domEl, data) => {
       .attr('y', y * pieceBoardSquareSize)
   })
 
+  const pathsC = svg.append('g').attr('class', 'paths')
+
   drawPaths()
 
   function drawPaths() {
-    svg.selectAll('path').remove()
+    pathsC.selectAll('path').remove()
 
-    svg
-      .append('g')
-      .attr('class', 'paths')
+    pathsC
       .selectAll('path')
       .data(
         Object.entries(data[accessor]).flatMap(([squares, count]) => {
@@ -121,12 +125,12 @@ const movepaths = (domEl, data) => {
           controlPoint.x = clamp(controlPoint.x, 0, width - 150 - 10)
           controlPoint.y = clamp(controlPoint.y, 0, width - 150 - 10)
 
-          const pointRandomizer = d3.randomNormal(3, 1)
-          const bezierRandomizer = d3.randomNormal(12, 4)
+          const pointRandomizer = d3randomNormal(3, 1)
+          const bezierRandomizer = d3randomNormal(12, 4)
 
           const numCurves = Math.floor(count / 1000)
 
-          return d3.range(numCurves).map(() => {
+          return d3range(numCurves).map(() => {
             const s = {}
             s.x = start.x + pointRandomizer()
             s.y = start.y + pointRandomizer()

@@ -1,0 +1,49 @@
+#game-lengths-viz,
+#game-lengths-viz-200,
+#material-count-viz,
+#material-diff-viz,
+#wins-viz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+button {
+  background: transparent;
+  border: 1px solid #7cb34b;
+  border-radius: 3px;
+  color: #7cb34b;
+  display: inline-block;
+  font-size: 14px;
+  height: 32px;
+  line-height: 24px;
+  padding: 3px 8px;
+  position: relative;
+  vertical-align: top;
+  user-select: none;
+  padding: 3px 10px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+button.active {
+  background-color: #638f3c;
+  color: white;
+}
+select {
+  border: 1px solid #7cb34b;
+  border-radius: 3px;
+  color: #7cb34b;
+  display: inline-block;
+  font-size: 14px;
+  height: 32px;
+  line-height: 24px;
+  padding: 3px 8px;
+  cursor: pointer;
+  outline: none;
+  padding-right: 36px;
+}
+.caption {
+  font-weight: bold;
+  text-align: center;
+}

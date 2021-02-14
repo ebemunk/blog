@@ -21,6 +21,7 @@ const tooltip = ({
     .style('position', 'absolute')
     .style('pointer-events', 'none')
     .attr('class', 'tooltip')
+    .style('display', 'none')
 
   return {
     show({
@@ -34,6 +35,9 @@ const tooltip = ({
     }) {
       tooltipEl.html(html)
       tooltipEl.style('display', 'inherit')
+
+      if (popper) popper.destroy()
+
       popper = createPopper(reference, tooltipEl.node(), {
         ...popperOptions,
         ...popperOptionsOverride,
@@ -42,7 +46,6 @@ const tooltip = ({
     hide() {
       if (!popper) return
       popper.destroy()
-      // tooltipEl.remove()
       tooltipEl.style('display', 'none')
     },
   }

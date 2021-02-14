@@ -1,16 +1,3 @@
-import k from './pieces/k.svg'
-import q from './pieces/q.svg'
-import r from './pieces/r.svg'
-import b from './pieces/b.svg'
-import n from './pieces/n.svg'
-import p from './pieces/p.svg'
-import K from './pieces/k-w.svg'
-import Q from './pieces/q-w.svg'
-import R from './pieces/r-w.svg'
-import B from './pieces/b-w.svg'
-import N from './pieces/n-w.svg'
-import P from './pieces/p-w.svg'
-
 import './style.css'
 import { range } from 'd3'
 
@@ -21,22 +8,10 @@ export interface Square {
   y: BoardRange
   file: 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h'
   rank: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
+  i: number
 }
 
-const pieceToSrc = {
-  k,
-  q,
-  r,
-  b,
-  n,
-  p,
-  K,
-  Q,
-  R,
-  B,
-  N,
-  P,
-}
+import pieceToSrc from './pieceSvg'
 
 function isLight(square: Square) {
   return (!(square.x % 2) && !(square.y % 2)) || (square.x % 2 && square.y % 2)
@@ -62,6 +37,7 @@ function boardSquares(): Square[] {
       y,
       file,
       rank,
+      i,
     })
   }
 
@@ -118,15 +94,6 @@ const board = ({
   showLabels?: boolean
 }) => selection => {
   const squareSize = size / 8
-
-  selection
-    .selectAll('.bg')
-    .data([true])
-    .join('rect')
-    .attr('class', 'bg')
-    .attr('width', size)
-    .attr('height', size)
-    .attr('stroke', 'black')
 
   selection
     .selectAll('.square')
