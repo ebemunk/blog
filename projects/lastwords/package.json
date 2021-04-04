@@ -1,0 +1,39 @@
+{
+  "name": "lastwords",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ebemunk",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": "15"
+  },
+  "scripts": {
+    "dev": "snowpack dev",
+    "build": "snowpack build && cp build/{index.js,index.css} ../../content/2021-02-18-lastwords/build && cp node_modules/leaflet/dist/leaflet.css ../../content/2021-02-18-lastwords/build && cp -r node_modules/leaflet/dist/images ../../content/2021-02-18-lastwords/build/images"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.33",
+    "@types/cheerio": "^0.22.24",
+    "@types/d3": "^6.3.0",
+    "@types/leaflet": "^1.5.23",
+    "snowpack": "^3.0.11",
+    "snowpack-plugin-url-loader": "^1.0.0",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "@mapbox/polyline": "^1.1.1",
+    "@popperjs/core": "^2.8.2",
+    "axios": "^0.21.1",
+    "bluebird": "^3.7.2",
+    "cheerio": "^1.0.0-rc.5",
+    "compromise": "^13.9.3",
+    "compromise-ngrams": "^0.0.6",
+    "d3": "^6.5.0",
+    "leaflet": "^1.7.1",
+    "leaflet-minimap": "^3.6.1",
+    "natural": "^4.0.0",
+    "neat-csv": "^6.0.1",
+    "preact": "^10.5.12"
+  }
+}

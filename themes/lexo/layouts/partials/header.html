@@ -3,7 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		{{ if .Params.responsive }}
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		{{ else }}
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		{{ end }}
 		<meta name="referrer" content="origin" />
 		<!-- facebook -->
 		<meta property="og:url" content="{{ .Permalink }}">

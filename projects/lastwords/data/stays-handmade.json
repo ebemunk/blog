@@ -1,0 +1,214 @@
+[
+  {
+    "name": "Robert Pruett",
+    "received": "04/30/2002",
+    "ageReceived": 22,
+    "executed": "10/12/2017",
+    "stays": [
+      {
+        "date": 1400655600000,
+        "reason": "Stay granted to allow more time for appeals."
+      },
+      {
+        "date": 1430204400000,
+        "reason": "Stayed by trial court to possibly allow DNA testing."
+      },
+      {
+        "date": 1461740400000,
+        "reason": "Date changed to August 23, 2016."
+      },
+      {
+        "date": 1471935600000,
+        "reason": "Stay granted by Texas Court of Criminal Appeals on August 11 to permit review of claims based on DNA evidence."
+      },
+      {
+        "date": 1369119600000,
+        "reason": "60-day stay to allow for DNA testing.",
+        "highlight": "allow for DNA testing",
+        "anchor": "middle"
+      }
+    ]
+  },
+  {
+    "name": "Randall Mays",
+    "received": "05/16/2008",
+    "ageReceived": 48,
+    "executed": null,
+    "stays": [
+      {
+        "date": 1314082800000,
+        "reason": "Stayed for unknown reasons."
+      },
+      {
+        "date": 1426662000000,
+        "reason": "Stayed to review issues surrounding the mental health of the inmate.",
+        "highlight": "mental health of the inmate",
+        "anchor": "middle"
+      },
+      {
+        "date": 1571209200000,
+        "reason": "Warrant withdrawn on October 3, 2019 by the Henderson County District Court “to permit the Court time to properly review all medical records submitted” to determine Mays’ competency to be executed."
+      },
+      {
+        "date": 1589353200000,
+        "reason": "Stay granted by the Texas Court of Criminal Appeals on May 7, 2020, which remanded his case to the trial court to review his claim of intellectual disability."
+      }
+    ]
+  },
+  {
+    "name": "Ruben Gutierrez",
+    "received": "05/14/1999",
+    "ageReceived": 21,
+    "executed": null,
+    "stays": [
+      {
+        "date": 1536735600000,
+        "reason": "Stay granted by the U.S. District Court for the Southern District of Texas on August 22, 2018 to provide newly appointed counsel time to investigate the case and “to preserve Gutierrez’s right to meaningful and effective legal representation.” The U.S. Court of Appeals for the Fifth Circuit upheld the stay on September 10."
+      },
+      {
+        "date": 1564556400000,
+        "reason": "Warrant withdrawn. New death warrant issued rescheduling execution for October 30, 2019."
+      },
+      {
+        "date": 1572418800000,
+        "reason": "Stay granted by the Texas Court of Criminal Appeals on October 22, 2019 based on defects in the issuance and service of the death warrant."
+      },
+      {
+        "date": 1592290800000,
+        "reason": "Stay granted by the U.S. Supreme Court on June 16, 2020 to determine whether to review Gutierrez’s petition to review his challenge to Texas’s denial of his request to have a Christian chaplain accompany him in the execution chamber. The U.S. District Court for the Southern District of Texas initially granted a stay, which was vacated by the U.S. Court of Appeals for the Fifth Circuit on June 12."
+      }
+    ]
+  },
+  {
+    "name": "Rigoberto Avila",
+    "received": "07/19/2001",
+    "ageReceived": 28,
+    "executed": null,
+    "stays": [
+      {
+        "date": 1355299200000,
+        "reason": "Execution date has been changed to April 10, 2013. No reason has been given for the delay."
+      },
+      {
+        "date": 1389772800000,
+        "reason": "Stayed to allow time for appeals."
+      },
+      {
+        "date": 1365577200000,
+        "reason": "Stayed by 41st District Judge Anna Perez who ruled additional time is necessary to allow Avila’s defense attorneys to explore possible new evidence of Avila’s innocence.",
+        "highlight": "explore evidence of innocence",
+        "anchor": "middle"
+      }
+    ]
+  },
+  {
+    "name": "Cleve Foster",
+    "received": "3/1/2004",
+    "ageReceived": 40,
+    "executed": "09/25/2012",
+    "stays": [
+      {
+        "date": 1294732800000,
+        "reason": "U.S. Supreme Court stayed the execution without explanation."
+      },
+      {
+        "date": 1301986800000,
+        "reason": "Stayed by the U.S. Supreme Court to allow consideration of a request for a rehearing regarding ineffectiveness of counsel.",
+        "highlight": "rehearing on ineffective counsel",
+        "anchor": "middle"
+      },
+      {
+        "date": 1316502000000,
+        "reason": "Stayed by U.S. Supreme Court."
+      }
+    ]
+  },
+  {
+    "name": "Larry Swearingen",
+    "received": "7/12/2000",
+    "ageReceived": 29,
+    "executed": "8/21/2019",
+    "stays": [
+      {
+        "date": 1313650800000,
+        "reason": "Stayed by the Texas Court of Criminal Appeals to allow time to review forensic evidence."
+      },
+      {
+        "date": 1510819200000,
+        "reason": "Stay granted by trial court on October 27, 2017 because of clerk’s error in serving notice of execution.",
+        "highlight": "clerk error",
+        "anchor": "middle"
+      },
+      {
+        "date": 1361952000000,
+        "reason": "Stayed to allow time for DNA testing."
+      }
+    ]
+  },
+  {
+    "name": "Rodney Reed",
+    "received": "5/29/98",
+    "ageReceived": 30,
+    "executed": null,
+    "stays": [
+      {
+        "date": 1421222400000,
+        "reason": "Stayed to allow time for appeals regarding DNA testing. Judge denied a motion to introduce new DNA testing into the case. New date set."
+      },
+      {
+        "date": 1425542400000,
+        "reason": "Stayed by the Texas Court of Criminal Appeals to consider newly discovered evidence."
+      },
+      {
+        "date": 1574236800000,
+        "reason": "Stay granted on November 15, 2019 by the Texas Court of Criminal Appeals with directions that the trial court review Reed’s claims that “the State suppressed exculpatory evidence in violation of Brady v. Maryland”; “the State presented false testimony in violation of due process”; and that Reed “is actually innocent.”",
+        "highlight": "the State presented false testimony",
+        "anchor": "middle"
+      }
+    ]
+  },
+  {
+    "name": "Juan Castillo",
+    "received": "09/27/2005",
+    "ageReceived": 24,
+    "executed": "5/16/2018",
+    "stays": [
+      {
+        "date": 1495609200000,
+        "reason": "Execution rescheduled for September 7, 2017."
+      },
+      {
+        "date": 1504767600000,
+        "reason": "Stay granted by the Bexar County District Court on August 30, 2017 in response to the Bexar County District Attorney’s motion to withdraw Juan Castillo’s execution date. The request was made after Governor Abbott declared a state of disaster for 30 Texas counties because of Hurricane Harvey. The court also issued an order setting a new execution date for December 14, 2017.",
+        "highlight": "hurricane Harvey",
+        "anchor": "middle"
+      },
+      {
+        "date": 1513238400000,
+        "reason": "Stay granted by the Texas Court of Criminal Appeals on November 28, 2017 and evidentiary hearing ordered on Castillo’s claim that his conviction and sentence were obtained with false or perjured testimony from a prison informant."
+      }
+    ]
+  },
+  {
+    "name": "Carlos Trevino",
+    "received": "08/06/1997",
+    "ageReceived": 22,
+    "executed": null,
+    "stays": [
+      {
+        "date": 1583910000000,
+        "reason": "Execution rescheduled for June 3, 2020."
+      },
+      {
+        "date": 1591167600000,
+        "reason": "Execution rescheduled by Bexar County Judicial District Court on April 15, 2020. New execution date is September 30, 2020."
+      },
+      {
+        "date": 1601449200000,
+        "reason": "Execution date withdrawn by the Bexar County District Court on September 15, 2020 “due to the current COVID-19 conditions in Texas.” A hearing to reset the execution date has been scheduled for March 5, 2021.",
+        "highlight": "COVID-19",
+        "anchor": "middle"
+      }
+    ]
+  }
+]

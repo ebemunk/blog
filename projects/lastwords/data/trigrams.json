@@ -1,0 +1,705 @@
+{
+  "name": "root",
+  "children": [
+    {
+      "name": "I",
+      "children": [
+        {
+          "name": "love",
+          "children": [
+            {
+              "name": "you",
+              "value": 380
+            },
+            {
+              "name": "them",
+              "value": 46
+            },
+            {
+              "name": "all",
+              "value": 35
+            },
+            {
+              "name": "y'all",
+              "value": 26
+            },
+            {
+              "name": "my",
+              "value": 24
+            },
+            {
+              "name": "her",
+              "value": 18
+            }
+          ]
+        },
+        {
+          "name": "have",
+          "children": [
+            {
+              "name": "to",
+              "value": 35
+            },
+            {
+              "name": "caused",
+              "value": 29
+            },
+            {
+              "name": "done",
+              "value": 19
+            },
+            {
+              "name": "no",
+              "value": 18
+            },
+            {
+              "name": "been",
+              "value": 15
+            }
+          ]
+        },
+        {
+          "name": "am",
+          "children": [
+            {
+              "name": "sorry",
+              "value": 138
+            },
+            {
+              "name": "going",
+              "value": 56
+            },
+            {
+              "name": "ready",
+              "value": 53
+            },
+            {
+              "name": "not",
+              "value": 40
+            },
+            {
+              "name": "at",
+              "value": 19
+            },
+            {
+              "name": "truly",
+              "value": 18
+            },
+            {
+              "name": "so",
+              "value": 14
+            },
+            {
+              "name": "a",
+              "value": 13
+            },
+            {
+              "name": "innocent",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "name": "hope",
+          "children": [
+            {
+              "name": "you",
+              "value": 47
+            },
+            {
+              "name": "that",
+              "value": 30
+            },
+            {
+              "name": "this",
+              "value": 18
+            }
+          ]
+        },
+        {
+          "name": "want",
+          "children": [
+            {
+              "name": "to",
+              "value": 115
+            },
+            {
+              "name": "you",
+              "value": 29
+            }
+          ]
+        },
+        {
+          "name": "will",
+          "children": [
+            {
+              "name": "see",
+              "value": 30
+            },
+            {
+              "name": "be",
+              "value": 25
+            }
+          ]
+        },
+        {
+          "name": "know",
+          "children": [
+            {
+              "name": "you",
+              "value": 17
+            },
+            {
+              "name": "that",
+              "value": 14
+            },
+            {
+              "name": "I",
+              "value": 14
+            },
+            {
+              "name": "it",
+              "value": 11
+            }
+          ]
+        },
+        {
+          "name": "ask",
+          "children": [
+            {
+              "name": "that",
+              "value": 13
+            },
+            {
+              "name": "for",
+              "value": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "love",
+      "children": [
+        {
+          "name": "you",
+          "children": [
+            {
+              "name": "all",
+              "value": 89
+            },
+            {
+              "name": "and",
+              "value": 24
+            },
+            {
+              "name": "too",
+              "value": 19
+            },
+            {
+              "name": "I",
+              "value": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "to",
+      "children": [
+        {
+          "name": "say",
+          "children": [
+            {
+              "name": "to",
+              "value": 22
+            },
+            {
+              "name": "I",
+              "value": 13
+            }
+          ]
+        },
+        {
+          "name": "tell",
+          "children": [
+            {
+              "name": "my",
+              "value": 24
+            },
+            {
+              "name": "you",
+              "value": 13
+            }
+          ]
+        },
+        {
+          "name": "all",
+          "children": [
+            {
+              "name": "my",
+              "value": 15
+            },
+            {
+              "name": "of",
+              "value": 15
+            }
+          ]
+        },
+        {
+          "name": "the",
+          "children": [
+            {
+              "name": "family",
+              "value": 17
+            },
+            {
+              "name": "victim's",
+              "value": 15
+            },
+            {
+              "name": "lord",
+              "value": 12
+            }
+          ]
+        },
+        {
+          "name": "thank",
+          "children": [
+            {
+              "name": "my",
+              "value": 20
+            },
+            {
+              "name": "you",
+              "value": 14
+            },
+            {
+              "name": "all",
+              "value": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "and",
+      "children": [
+        {
+          "name": "I",
+          "children": [
+            {
+              "name": "am",
+              "value": 34
+            },
+            {
+              "name": "love",
+              "value": 21
+            },
+            {
+              "name": "will",
+              "value": 21
+            },
+            {
+              "name": "hope",
+              "value": 20
+            },
+            {
+              "name": "want",
+              "value": 18
+            },
+            {
+              "name": "know",
+              "value": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "am",
+      "children": [
+        {
+          "name": "ready",
+          "children": [
+            {
+              "name": "to",
+              "value": 17
+            },
+            {
+              "name": "warden",
+              "value": 15
+            }
+          ]
+        },
+        {
+          "name": "going",
+          "children": [
+            {
+              "name": "to",
+              "value": 32
+            },
+            {
+              "name": "home",
+              "value": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "for",
+      "children": [
+        {
+          "name": "being",
+          "children": [
+            {
+              "name": "here",
+              "value": 12
+            },
+            {
+              "name": "there",
+              "value": 12
+            }
+          ]
+        },
+        {
+          "name": "all",
+          "children": [
+            {
+              "name": "of",
+              "value": 37
+            },
+            {
+              "name": "the",
+              "value": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "the",
+      "children": [
+        {
+          "name": "pain",
+          "children": [
+            {
+              "name": "I",
+              "value": 18
+            },
+            {
+              "name": "and",
+              "value": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "you",
+      "children": [
+        {
+          "name": "for",
+          "children": [
+            {
+              "name": "being",
+              "value": 19
+            },
+            {
+              "name": "your",
+              "value": 18
+            },
+            {
+              "name": "all",
+              "value": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "on",
+      "children": [
+        {
+          "name": "the",
+          "children": [
+            {
+              "name": "other",
+              "value": 17
+            },
+            {
+              "name": "row",
+              "value": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "my",
+      "children": [
+        {
+          "name": "family",
+          "children": [
+            {
+              "name": "and",
+              "value": 38
+            },
+            {
+              "name": "I",
+              "value": 36
+            },
+            {
+              "name": "for",
+              "value": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "in",
+      "children": [
+        {
+          "name": "my",
+          "children": [
+            {
+              "name": "heart",
+              "value": 24
+            },
+            {
+              "name": "life",
+              "value": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hope",
+      "children": [
+        {
+          "name": "you",
+          "children": [
+            {
+              "name": "can",
+              "value": 15
+            },
+            {
+              "name": "find",
+              "value": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "family",
+      "children": [
+        {
+          "name": "I",
+          "children": [
+            {
+              "name": "love",
+              "value": 34
+            },
+            {
+              "name": "am",
+              "value": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "what",
+      "children": [
+        {
+          "name": "I",
+          "children": [
+            {
+              "name": "did",
+              "value": 28
+            },
+            {
+              "name": "have",
+              "value": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "all",
+      "children": [
+        {
+          "name": "of",
+          "children": [
+            {
+              "name": "you",
+              "value": 71
+            },
+            {
+              "name": "the",
+              "value": 27
+            },
+            {
+              "name": "my",
+              "value": 21
+            },
+            {
+              "name": "this",
+              "value": 15
+            }
+          ]
+        },
+        {
+          "name": "I",
+          "children": [
+            {
+              "name": "have",
+              "value": 22
+            },
+            {
+              "name": "want",
+              "value": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "yes",
+      "children": [
+        {
+          "name": "I",
+          "children": [
+            {
+              "name": "do",
+              "value": 30
+            },
+            {
+              "name": "would",
+              "value": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "that",
+      "children": [
+        {
+          "name": "I",
+          "children": [
+            {
+              "name": "am",
+              "value": 36
+            },
+            {
+              "name": "love",
+              "value": 35
+            },
+            {
+              "name": "have",
+              "value": 34
+            },
+            {
+              "name": "did",
+              "value": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sorry",
+      "children": [
+        {
+          "name": "for",
+          "children": [
+            {
+              "name": "the",
+              "value": 33
+            },
+            {
+              "name": "what",
+              "value": 23
+            },
+            {
+              "name": "all",
+              "value": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "want",
+      "children": [
+        {
+          "name": "to",
+          "children": [
+            {
+              "name": "thank",
+              "value": 38
+            },
+            {
+              "name": "say",
+              "value": 34
+            },
+            {
+              "name": "tell",
+              "value": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "thank",
+      "children": [
+        {
+          "name": "you",
+          "children": [
+            {
+              "name": "for",
+              "value": 98
+            },
+            {
+              "name": "warden",
+              "value": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "like",
+      "children": [
+        {
+          "name": "to",
+          "children": [
+            {
+              "name": "thank",
+              "value": 46
+            },
+            {
+              "name": "say",
+              "value": 40
+            },
+            {
+              "name": "tell",
+              "value": 20
+            },
+            {
+              "name": "apologize",
+              "value": 20
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
