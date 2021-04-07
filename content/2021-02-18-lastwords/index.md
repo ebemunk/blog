@@ -9,7 +9,7 @@ shortSummary = "Analyzing the last statements of 454 executed people in Texas."
 responsive = true
 +++
 
-In July of 1976, the US Supreme Court set forth the framework that states must follow to comply with the ban on _cruel and unusual punishment_ in the Eighth Amendment with the _[Gregg v. Georgia decision](https://en.wikipedia.org/wiki/Gregg_v._Georgia#Decision_of_the_Court)_. Since then, __1532 people were executed in the United States__. Death penalty and executions are subject to local laws and not every state carries them out to the same extent [(map)](https://en.wikipedia.org/wiki/Capital_punishment_in_the_United_States#/media/File:Death_penalty_in_the_United_States_with_hiatuses.svg).
+In July of 1976, the US Supreme Court set forth the framework that states must follow to comply with the ban on _cruel and unusual punishment_ in the Eighth Amendment with the _[Gregg v. Georgia decision](https://en.wikipedia.org/wiki/Gregg_v._Georgia#Decision_of_the_Court)_. Since then, **1532 people were executed in the United States**. Death penalty and executions are subject to local laws and not every state carries them out to the same extent [(map)](https://en.wikipedia.org/wiki/Capital_punishment_in_the_United_States#/media/File:Death_penalty_in_the_United_States_with_hiatuses.svg).
 
 Texas carries out the majority of these executions, having executed more people than the next top 6 states combined. It's also where the [first execution by lethal injection in the world](https://en.wikipedia.org/wiki/Capital_punishment_in_Texas) took place. In Texas, capital crimes generally involve [murders](https://en.wikipedia.org/wiki/Capital_punishment_in_Texas#Capital_crimes).
 
@@ -41,7 +41,7 @@ The simplest statistic we can look into here are the individual words that compr
 	<div id="most-common-words" class="viz"></div>
 </div>
 
-Interesting. It looks much more hopeful and positive than I would've imagined. <span class="wordFreq">__love__</span> is the most commonly used word, surrounded by <span class="wordFreq">__family__</span>, <span class="wordFreq">__sorry__</span>, <span class="wordFreq">__forgive__</span> and terms like <span class="wordFreq">__death__</span>, <span class="wordFreq">__pain__</span>, <span class="wordFreq">__kill__</span> are uttered much less. Even religious terms are secondary in these statements. <span class="wordFreq">__hate__</span> appears ~20 times less than it's opposite.
+Interesting. It looks much more hopeful and positive than I would've imagined. <span class="wordFreq">**love**</span> is the most commonly used word, surrounded by <span class="wordFreq">**family**</span>, <span class="wordFreq">**sorry**</span>, <span class="wordFreq">**forgive**</span> and terms like <span class="wordFreq">**death**</span>, <span class="wordFreq">**pain**</span>, <span class="wordFreq">**kill**</span> are uttered much less. Even religious terms are secondary in these statements. <span class="wordFreq">**hate**</span> appears ~20 times less than it's opposite.
 
 ## Length
 
@@ -57,7 +57,7 @@ Considering that [the average rate of speech in the US is about 150 words per mi
 
 ## Phrases
 
-One way to identify phrases (without going all-in linguist) is with [__n-grams__](https://en.wikipedia.org/wiki/N-gram). It's a convenient way to isolate unique phrases in text and speech. In this case, I've picked _n=3_, also called a trigram. This is useful as it will provide a bit more context into the most common words we've seen above.
+One way to identify phrases (without going all-in linguist) is with [**n-grams**](https://en.wikipedia.org/wiki/N-gram). It's a convenient way to isolate unique phrases in text and speech. In this case, I've picked _n=3_, also called a trigram. This is useful as it will provide a bit more context into the most common words we've seen above.
 
 <div>
 	<div class="viz-title">Trigrams</div>
@@ -67,11 +67,11 @@ One way to identify phrases (without going all-in linguist) is with [__n-grams__
 
 This trigrams visualization was inspired by ["Web Trigrams"](https://www.chrisharrison.net/index.php/Visualizations/WebTrigrams) by [Chris Harrison](https://www.chrisharrison.net/).
 
-__I love you__, __I am sorry__, __love you all__, __thank you for__ all make sense to me. Make sure to play around and see if you can spot other unique phrases. For more on this, check out ["Death in Texas"](https://jonmillward.com/blog/psychological-subtleties/death-in-texas-analyzing-the-last-words-of-478-death-row-prisoners/) by [Jon Millward](https://jonmillward.com/blog/).
+**I love you**, **I am sorry**, **love you all**, **thank you for** all make sense to me. Make sure to play around and see if you can spot other unique phrases. For more on this, check out ["Death in Texas"](https://jonmillward.com/blog/psychological-subtleties/death-in-texas-analyzing-the-last-words-of-478-death-row-prisoners/) by [Jon Millward](https://jonmillward.com/blog/).
 
 ## Sentiment
 
-The first thing to note is that TDCJ redacts profanity from the text of the last statements. Still, it's replaced with some kind of notice of the redaction, with phrases like *[Profanity directed toward staff.]* and *[Portion of statement omitted due to profanity]*. Only __3__ statements among 454 contain any such notation. There are rarely swear words flying around. This is further evidenced by the overall sentiment of last statements, which tend to lean towards positive.
+The first thing to note is that TDCJ redacts profanity from the text of the last statements. Still, it's replaced with some kind of notice of the redaction, with phrases like _[Profanity directed toward staff.]_ and _[Portion of statement omitted due to profanity]_. Only **3** statements among 454 contain any such notation. There are rarely swear words flying around. This is further evidenced by the overall sentiment of last statements, which tend to lean towards positive.
 
 <div>
 	<div class="viz-title">Ending on a positive note</div>
@@ -87,11 +87,11 @@ Google's [Cloud Natural Language](https://cloud.google.com/natural-language) pro
 	<div id="person-sentiment" class="viz"></div>
 </div>
 
-It's easy to get caught up in the exact numbers, but here we see a portrait of which people are referenced in last statements and under what light. Lots of family members are mentioned with goodbyes. <span class="statementSentiment">__warden__</span> generally has a positive sentiment whereas people involved in the criminal justice system such as <span class="statementSentiment">__judge__</span>, <span class="statementSentiment">__police__</span>, <span class="statementSentiment">__investigators__</span> and <span class="statementSentiment">__jury__</span> are spoken to in a more negative light.
+It's easy to get caught up in the exact numbers, but here we see a portrait of which people are referenced in last statements and under what light. Lots of family members are mentioned with goodbyes. <span class="statementSentiment">**warden**</span> generally has a positive sentiment whereas people involved in the criminal justice system such as <span class="statementSentiment">**judge**</span>, <span class="statementSentiment">**police**</span>, <span class="statementSentiment">**investigators**</span> and <span class="statementSentiment">**jury**</span> are spoken to in a more negative light.
 
-An interesting finding here is that the individual <span class="statementSentiment">__officers__</span> have a positive sentiment, whereas <span class="statementSentiment">__police__</span> as an institution of people have a far more negative tone.
+An interesting finding here is that the individual <span class="statementSentiment">**officers**</span> have a positive sentiment, whereas <span class="statementSentiment">**police**</span> as an institution of people have a far more negative tone.
 
-I imagine the negative sentiment of <span class="statementSentiment">__victim__</span> is because it's often spoken about in a sad, remorseful, indignant or apologetic tone. <span class="statementSentiment">__irene__</span> of course is one of the most positively mentioned names... Wait what? Who's Irene?
+I imagine the negative sentiment of <span class="statementSentiment">**victim**</span> is because it's often spoken about in a sad, remorseful, indignant or apologetic tone. <span class="statementSentiment">**irene**</span> of course is one of the most positively mentioned names... Wait what? Who's Irene?
 
 ## Irene?
 
@@ -103,16 +103,16 @@ This is one of the things I never saw in any of the other related projects I fou
 	<div id="firstNames" class="viz"></div>
 </div>
 
-__Jesus:__ pretty obvious, considering the [demographics of Texas](https://en.wikipedia.org/wiki/Demographics_of_Texas#Religion) this isn't a shocker.\
-__John:__ [one of most common names in the US](https://en.wikipedia.org/wiki/John_(given_name)#Name_statistics).\
-__Jack:__ ok, I'd imagine that it was up there with John.\
-__Father:__ is sometimes a religious minister, sometimes god or "Heavenly Father".
+**Jesus:** pretty obvious, considering the [demographics of Texas](https://en.wikipedia.org/wiki/Demographics_of_Texas#Religion) this isn't a shocker.\
+**John:** [one of most common names in the US](<https://en.wikipedia.org/wiki/John_(given_name)#Name_statistics>).\
+**Jack:** ok, I'd imagine that it was up there with John.\
+**Father:** is sometimes a religious minister, sometimes god or "Heavenly Father".
 
-But __Irene__? [The 632nd most popular name in the US](https://en.wikipedia.org/wiki/Irene_(given_name)) appears 18 times in the last statements of 454 executed people in Texas? I had to dig. Are these 18 different "Irene"s, or could it be 1 person?
+But **Irene**? [The 632nd most popular name in the US](<https://en.wikipedia.org/wiki/Irene_(given_name)>) appears 18 times in the last statements of 454 executed people in Texas? I had to dig. Are these 18 different "Irene"s, or could it be 1 person?
 
-Irene in some statements appears as "Irene Wilcox". Some searching led me to [TDCJ Chaplains' Network](http://www.preciousheart.net/chaplaincy/Prison_Ministries.htm). Her husband's name: __Jack__. It seems that Irene and Jack were [TDCJ Chaplains](https://www.tdcj.texas.gov/TDCJ_chaplains.html) that offered spiritual counselling.
+Irene in some statements appears as "Irene Wilcox". Some searching led me to [TDCJ Chaplains' Network](http://www.preciousheart.net/chaplaincy/Prison_Ministries.htm). Her husband's name: **Jack**. It seems that Irene and Jack were [TDCJ Chaplains](https://www.tdcj.texas.gov/TDCJ_chaplains.html) that offered spiritual counselling.
 
-Sadly, Irene [passed away in 2003](https://www.newhopefh.com/obituary/irene-wilcox) but I find it interesting that someone - who has clearly touched so many of these people and left a lasting impression - showing such compassion can come up as an outlier in otherwise mundane data.
+Sadly, Irene [passed away in 2013](https://www.newhopefh.com/obituary/irene-wilcox) but I find it interesting that someone - who has clearly touched so many of these people and left a lasting impression - showing such compassion can come up as an outlier in otherwise mundane data.
 
 ## Stays of Execution
 
@@ -124,7 +124,7 @@ In the US, [all death sentences are stayed automatically](https://en.wikipedia.o
 	<div id="numStays" class="viz"></div>
 </div>
 
-The combination of years of extended isolation and the multiple stays in addition to the stress of the court process is said to cause the [Death row syndrome](http://jaapl.org/content/33/2/153). Suicide rate on death row is [__10x__ the rate for US in total, and __6x__ the rate of the US prison population](https://en.wikipedia.org/wiki/Death_row_phenomenon).
+The combination of years of extended isolation and the multiple stays in addition to the stress of the court process is said to cause the [Death row syndrome](http://jaapl.org/content/33/2/153). Suicide rate on death row is [**10x** the rate for US in total, and **6x** the rate of the US prison population](https://en.wikipedia.org/wiki/Death_row_phenomenon).
 
 I wanted to get a visual sense of the timelines involved, as well as the reasons for stays. A clerical error delaying an execution must be hard to handle.
 
@@ -138,7 +138,7 @@ I wanted to get a visual sense of the timelines involved, as well as the reasons
 
 In the beginning, I suggested some people might've been innocent and still executed. This is more than pure speculation, there is [strong evidence](https://tcadp.org/get-informed/wrongful-execution/) that up to 10 people might've been [wrongfully executed](https://deathpenaltyinfo.org/policy-issues/innocence/executed-but-possibly-innocent) in Texas. Courts rarely go back to review capital cases after execution, and defense lawyers must move onto advocate for other people.
 
-On the other side of the coin, since 1972, __16__ people convicted of capital crimes were [later exonerated](https://deathpenaltyinfo.org/policy-issues/innocence-database?filters%5Bstate%5D=Texas) on appeals.
+On the other side of the coin, since 1972, **16** people convicted of capital crimes were [later exonerated](https://deathpenaltyinfo.org/policy-issues/innocence-database?filters%5Bstate%5D=Texas) on appeals.
 
 <div>
 	<div class="viz-title">Reasons for exoneration</div>
