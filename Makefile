@@ -9,4 +9,9 @@ deploy:
 	git add -A
 	git commit -m "hugo rebuild"
 	git push
-	git subtree push --prefix=public git@github.com:ebemunk/blog gh-pages
+	git subtree push --prefix=public origin gh-pages
+
+forceGH:
+	git subtree split --prefix=public origin -b gh-pages
+	git push -f origin gh-pages:gh-pages
+	git branch -D gh-pages
