@@ -8,7 +8,6 @@ import CharWordHistogram from 'sections/CharWordHistogram'
 import CountPerEpisode from 'sections/CountPerEpisode'
 import CharSelector from 'sections/CharSelector'
 import Personalities from 'sections/Personalities'
-import Individual from 'sections/Individual'
 import LinesPerChar from 'sections/LinesPerChar'
 import Flashes from 'sections/Flashes'
 import SceneTone from 'sections/SceneTone'
@@ -22,13 +21,13 @@ import configureStore from 'store'
 
 const store = configureStore({})
 
-const render = (component, selector) =>
+const render = (component, selector) => document.querySelector(selector) ?
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>{component}</Provider>
     </AppContainer>,
     document.querySelector(selector),
-  )
+  ) : undefined
 
 render(<WordCount />, '#word-count')
 render(<CountPerEpisode />, '#char-per-episode')

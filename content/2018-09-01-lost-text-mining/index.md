@@ -1,5 +1,6 @@
 +++
 date = "2018-09-01"
+lastmod = "2021-04-25"
 draft = false
 title = "Text Mining LOST"
 slug = "lost-text-mining"
@@ -11,13 +12,11 @@ related = ["2016-02-27-visual-look-chess/index.md", "2019-01-05-plane-crashes.md
 
 We're text mining the transcripts of the TV show LOST, and visualizing them!
 
-I retrieved and parsed the transcripts of LOST from Lostpedia[^lostpedia] and used a few different tools to look at this data.
+I retrieved and parsed the transcripts of LOST from [Lostpedia](http://lostpedia.wikia.com/wiki/Portal:Transcripts) and used a few different tools to look at this data.
 
-[^lostpedia]: http://lostpedia.wikia.com/wiki/Portal:Transcripts
+One thing to keep in mind is that this analysis is on only the text that the characters speak. I'm not a  LOST connoisseur, and haven't seen all the episodes. I'm not an authority on LOST, or on text mining.
 
-One thing to keep in mind is that this analysis is on only the text that the characters speak. I'm not a big LOST connoisseur, so take these visualizations at their face value and not as some objective judgement about your favorite LOST character or writer. I'm not an authority on LOST, or on text mining.
-
-So strap yourselves in for a disgustingly deep dive of this influential TV show, in what I should have titled "i've finally lost it".
+So strap yourselves in for a disgustingly deep dive of this influential TV show, in what I should have titled "I've Finally LOST It".
 
 ## Meta
 
@@ -25,9 +24,7 @@ Before we get started, you'll notice that there is a bar with every season of th
 
 You'll notice some episodes are way longer than others. These episodes are combined together because some aired as 2-parter, others during the same day back-to-back. The ending episodes of every season, and start of season 6 was combined in the transcripts.
 
-Let's look at some general metrics first, the chart below shows the total number of words per episode, unique words, and density. Unique words are the count of words that occur at least once. Density is `unique/total*100` as a metric to describe what percentage of the text is unique. This tells us about the vocabulary of the show, also called "Vocabulary Density"[^vocabulary-density]
-
-[^vocabulary-density]: http://www.mine-control.com/zack/guttenberg/
+Let's look at some general metrics first, the chart below shows the total number of words per episode, unique words, and density. Unique words are the count of words that occur at least once. Density is `unique/total*100` as a metric to describe what percentage of the text is unique. This tells us about the vocabulary of the show, also called ["Vocabulary Density"](http://www.mine-control.com/zack/guttenberg/)
 
 <div id="word-count" class="viz"></div>
 
@@ -63,16 +60,9 @@ I'm guessing `CHARLIE` dies after S3, but keeps making reappearances (flash-side
 
 ## Personalities
 
-So far, all we've really done is some statistics on the text, which is cool and all, but I say let's grab our pickaxes and start some real mining. I had heard of and wanted to use the IBM Watson APIs[^watson], especially Personality Insights[^personality-insights] and Tone Analyzer[^tone-analyzer] to see what they can do for this kind of data.
+So far, all we've really done is some statistics on the text, which is cool and all, but I say let's grab our pickaxes and start some real mining. I had heard of and wanted to use the IBM Watson APIs, especially [Personality Insights](https://www.ibm.com/watson/services/personality-insights/) (2021: now deprecated) and [Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/) to see what they can do for this kind of data.
 
-[^watson]: https://www.ibm.com/watson/services/personality-insights/
-[^personality-insights]: https://www.ibm.com/watson/services/tone-analyzer/
-
-Given a chunk of text, Watson will generate a "personality profile"[^personality-profile]. This profile contains the Big-5[^big5], Needs, Values and Consumption Preferences.
-
-<!-- prettier-ignore -->
-[^personality-profile]: https://console.bluemix.net/docs/services/personality-insights/science.html
-[^big5]: https://en.wikipedia.org/wiki/Big_Five_personality_traits
+Given a chunk of text, Watson will generate a ["personality profile"](https://console.bluemix.net/docs/services/personality-insights/science.html). This profile contains the [Big-5](https://en.wikipedia.org/wiki/Big_Five_personality_traits), Needs, Values and Consumption Preferences.
 
 I wanted to be able to compare random groups/populations together. This next visualisation shows the Big-5, all the individual traits, values and needs. You can pick a single character, or compare multiple and groups of characters. I really hope you take some time to play around with it, I found some comparisons very interesting.
 
@@ -89,7 +79,7 @@ I'm still fascinated by what this API can do, but have questioned whether it's a
 
 ## Flashbacks, Flash-forwards and Flash-sideways
 
-LOST is kind of renowned for its liberal use of flashbacks, flash-forwards and the greatest invention of all time to fix plot holes: "flash-sideways". Below is a visualisation of every episode, where any scene that's a "flash" is colored in. "Scene" in this context refers to the scene in text, and not necessarily the cinematic technique.
+LOST is kind of renowned for its liberal use of flashbacks, flash-forwards and the greatest invention of all time to fix plot holes: "flash-sideways". Below is a visualization of every episode, where any scene that's a "flash" is colored in. "Scene" in this context refers to the scene in text, and not necessarily the cinematic technique.
 
 <div id="flashbacks" class="viz"></div>
 
@@ -97,15 +87,10 @@ Obviously flashbacks were an integral part of S1, and kept going until the end o
 
 ## Tone
 
-The other Watson API, Tone Analyzer[^tone-analyzer], makes an attempt at determining the "tone" of a piece of text. This is also often referred to as "sentiment analysis" in some circles, but Tone Analyzer determines 4 emotional tones, and 3 language tones[^tone-analyzer-science].
+The other Watson API, [Tone Analyzer](https://console.bluemix.net/docs/services/tone-analyzer/using-tone.html#using-the-general-purpose-endpoint), makes an attempt at determining the "tone" of a piece of text. This is also often referred to as "sentiment analysis" in some circles, but Tone Analyzer [determines 4 emotional tones, and 3 language tones](https://console.bluemix.net/docs/services/tone-analyzer/science.html#the-science-behind-the-service).
 
-<!-- prettier-ignore -->
-[^tone-analyzer-science]: https://console.bluemix.net/docs/services/tone-analyzer/science.html#the-science-behind-the-service
 
 The graph below shows the tones detected in each scene. Color-coded segments show that the tone was detected, while the opacity indicates the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.
-
-<!-- prettier-ignore -->
-[^tone-analyzer]: https://console.bluemix.net/docs/services/tone-analyzer/using-tone.html#using-the-general-purpose-endpoint
 
 <div id="scene-tone" class="viz"></div>
 
@@ -125,9 +110,8 @@ Honestly to me this is more of a vanity visualization, nevertheless there are so
 
 ## Reading Level
 
-Reading level is something I often wondered about TV shows. My gut feeling was that it'd be somewhat low, to appeal to a bigger and wider demographic. textstat[^textstat] is a tool that runs text through a few "reading level" measurements, and reports back a value that corresponds to the school grade level of the text. Below are the results of running textstat on the text of every episode.
+Reading level is something I often wondered about TV shows. My gut feeling was that it'd be somewhat low, to appeal to a bigger and wider demographic. [textstat](https://github.com/shivam5992/textstat) is a tool that runs text through a few "reading level" measurements, and reports back a value that corresponds to the school grade level of the text. Below are the results of running textstat on the text of every episode.
 
-[^textstat]: https://github.com/shivam5992/textstat
 
 <div id="episode-reading-level" class="viz"></div>
 
@@ -141,9 +125,7 @@ We can also see the reading level per character. I wanted to see if there was va
 
 ## Word Connections
 
-I saved the prettiest for last! I saw this visualization for "Les Miserables" by Neoformix[^neoformix] and had to try to adapt it for LOST. This one attempts to show which words occur in which episodes in a radial manner. You can get a sense of how prominent and often a word was used throughout the series. I've picked a couple of word groups, colored individually. The lines represent occurrences with thicker lines meaning more hits. Seasons are colored the same so it's easier to see seasonal themes. Click on words to toggle them on or off, and use &lt; and &gt; buttons to cycle through groups of words.
-
-[^neoformix]: http://www.neoformix.com/2013/NovelViews.html
+I saved the prettiest for last! I saw this visualization for ["Les Miserables" by Neoformix](http://www.neoformix.com/2013/NovelViews.html) and had to try to adapt it for LOST. You can get a sense of how prominent and often a word was used throughout the series. I picked a couple of word groups, colored individually. Click on words to toggle them on or off, and use arrow buttons to cycle through groups of words.
 
 <div id="radial-word-connections" class="viz"></div>
 
@@ -158,8 +140,10 @@ If you can't get enough, below is a list of similar analyses that you might like
 - [Visualization of affect in movie scripts](https://hal.archives-ouvertes.fr/hal-01099668/document)
 - [Detecting Mixtures of Genres in Movie Dialogues](https://saravananthirumuruganathan.wordpress.com/2012/01/10/detecting-mixtures-of-genres-in-movie-dialogues/)
 
-<!-- <script src="http://localhost:9001/bundle.js"></script> -->
-<script src="bundle.js"></script>
+<!--
+<script src="http://localhost:9001/bundle.js"></script>
+-->
+<script src="./build/bundle.js"></script>
 
 <style>
 .viz {

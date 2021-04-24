@@ -40,11 +40,7 @@ export default class WordConnections extends React.Component {
       .sort(null)
     const arc = d3
       .arc()
-      .innerRadius(width / 2 - 25)
-      .outerRadius(width / 2)
-    const thickArc = d3
-      .arc()
-      .innerRadius(95)
+      .innerRadius(width / 2 - 50)
       .outerRadius(width / 2 - 25)
     const link = d3
       .linkRadial()
@@ -52,20 +48,6 @@ export default class WordConnections extends React.Component {
       .radius(d => d.radius)
 
     const arcs = pie(episodes)
-    // const epArcs = d3
-    //   .pie()
-    //   .value(d => d.length)
-    //   .sort(null)(
-    //   R.pipe(
-    //     R.groupBy(d => d.season),
-    //     R.map(R.reduce((acc, f) => acc + f.length, 0)),
-    //     R.mapObjIndexed((v, k) => ({
-    //       season: k,
-    //       length: v,
-    //     })),
-    //     R.values,
-    //   )(episodes),
-    // )
 
     const wordColor = d3.scaleOrdinal(d3.schemeCategory10)
     const linkThickness = d3
@@ -79,7 +61,7 @@ export default class WordConnections extends React.Component {
           d => d.count,
         ),
       ])
-      .range([1, 3])
+      .range([3, 10])
 
     const seasonAngles = R.pipe(
       R.groupBy(d => d.data.season),
@@ -132,7 +114,7 @@ export default class WordConnections extends React.Component {
               })
             }}
           >
-            &lt;
+            ‹
           </div>
           <div
             className={css.arrow}
@@ -153,11 +135,17 @@ export default class WordConnections extends React.Component {
               })
             }}
           >
-            &gt;
+            ›
           </div>
         </div>
         <svg width={width} height={width}>
           <g transform={`translate(${width / 2}, ${width / 2})`}>
+            {/* <circle cx={0} cy={0} r={width/2-25} id="curve" /> */}
+            <path d={d3.arc()({
+              startAngle: 0,
+              endAngle: Math.PI*2,
+              outerRadius: width/2-25
+            })} fill="none" id="curve" />
             <g className={css.axis}>
               {arcs.map(d => (
                 <path
@@ -169,17 +157,6 @@ export default class WordConnections extends React.Component {
                   }}
                 />
               ))}
-              {/* {epArcs.map(d => (
-                <path
-                  key={`${d.data.season}`}
-                  d={thickArc(d)}
-                  className={css.thickArc}
-                  style={{
-                    stroke: seasonColor(d.data.season - 1),
-                    fill: seasonColor(d.data.season - 1),
-                  }}
-                />
-              ))} */}
             </g>
             <g className={css.links}>
               {words.filter(d => this.state.selected[d]).map((key, index) =>
@@ -213,22 +190,41 @@ export default class WordConnections extends React.Component {
                       d={link({
                         source: {
                           angle: sourceAngle,
-                          radius: 100,
+                          radius: 50,
+                          // radius: 100 + index*25
                         },
                         target: {
                           angle,
-                          radius: width / 2 - 25,
+                          radius: width / 2 - 50,
                         },
                       })}
                       className={css.link}
                       style={{
                         stroke: wordColor(d.word),
                         strokeWidth: linkThickness(d.count),
+                        strokeOpacity: 0.6
                       }}
                     />
                   )
                 }),
               )}
+            </g>
+            <g>
+              {Object.entries(seasonAngles).map(([season, angles]) => (
+                <text
+                  key={season}
+                  x={2}
+                  dy={-5}
+                  y={-width/2+25}
+                  transform={`rotate(${(angles[0]-0.2) * (180/Math.PI)})`}
+                  fill={seasonColor(season-1)}
+                  // textAnchor="middle"
+                >
+                  <textPath xlinkHref="#curve">
+                    Season {season} →
+                  </textPath>
+                </text>
+              ))}
             </g>
           </g>
         </svg>
@@ -238,5 +234,5 @@ export default class WordConnections extends React.Component {
 }
 
 WordConnections.defaultProps = {
-  width: 600,
+  width: 800,
 }
