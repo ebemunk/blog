@@ -56,6 +56,12 @@
     justify-content: center;
   }
 
+  @media screen and (max-width: 40rem) {
+    form {
+      flex-direction: column;
+    }
+  }
+
   form * {
     margin: 0.25rem;
   }
