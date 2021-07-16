@@ -165,12 +165,6 @@ article.article .footnotes a {
 article.article .footnotes hr {
   border: 0.5px solid #9eabb3;
 }
-.disqus {
-  width: 100%;
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 0;
-}
 .article-list {
   margin-bottom: 2rem;
 }

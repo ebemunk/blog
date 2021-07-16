@@ -17,7 +17,14 @@
 <div class="share">
 	<h4>Share this post</h4>
 	<p>I'm pretty sure you know how to share things on social media, so I'll spare you the 50 different obnoxious buttons. If you liked this, feel free to share anywhere, it helps me out.</p>
-	<p>Have something to say? <a href="https://twitter.com/search?q={{ .Permalink }}">Discuss on Twitter</a>, or tell me <a href="https://twitter.com/ebemunk">@ebemunk</a></p>
+	<p>
+		Have something to say? <a target="_blakn" href="https://twitter.com/search?q={{ .Permalink }}">Discuss on Twitter</a>, or tell me <a href="https://twitter.com/ebemunk">@ebemunk</a>.
+		Consume my work <a href="https://instagram.com/thinkingthrougtheparty">on Instagram</a> or stalk me <a href="https://www.reddit.com/user/boxer-collar">on Reddit</a>.
+	</p>
+	<p>
+		Join my newsletter to get updates when I add new stuff here. I won't sell you anything or spam you with bs.
+	</p>
+	{{ partial "newsletter-signup" . }}
 </div>
 
 {{ with .Params.related }}
