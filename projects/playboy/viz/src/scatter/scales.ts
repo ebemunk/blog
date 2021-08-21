@@ -58,7 +58,7 @@ const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
     case 'theCup': {
       const packer = pack()
         .size([chartWidth, chartHeight])
-        .padding(5)
+        .padding(d => (d.depth === 1 ? 5 : 15))
         .radius(d => 2)
 
       const hi = hierarchy(group(data, d => d[stage])).count()

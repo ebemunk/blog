@@ -187,6 +187,8 @@ const Scatter = () => {
     }, {})
   console.log('histtt', data.length, khist)
 
+  const stageIndex = STAGES.indexOf(stage)
+
   return (
     <div
       style={{
@@ -216,11 +218,34 @@ const Scatter = () => {
           onChange={e => {
             setStage(e.target.value)
           }}
+          value={stage}
         >
           {STAGES.map(opt => (
             <option key={opt} value={opt} label={opt} />
           ))}
         </select>
+        <button
+          onClick={() => {
+            setStage(s =>
+              stageIndex > 0
+                ? STAGES[stageIndex - 1]
+                : STAGES[STAGES.length - 1],
+            )
+          }}
+        >
+          &lt;
+        </button>
+        <button
+          onClick={() => {
+            setStage(s =>
+              stageIndex < STAGES.length - 1
+                ? STAGES[stageIndex + 1]
+                : STAGES[0],
+            )
+          }}
+        >
+          &gt;
+        </button>
       </div>
       <div
         style={{

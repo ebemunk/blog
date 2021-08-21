@@ -18,10 +18,10 @@ const PlaymateCircles = ({
 }) => {
   const ref = React.useRef<SVGGElement>(null)
 
-  const t = d3.transition().duration(transitionDuration)
-
   React.useEffect(() => {
     if (!ref.current) return
+
+    const t = d3.transition().duration(transitionDuration)
 
     d3.select(ref.current) //
       .selectAll('circle')
@@ -52,7 +52,8 @@ const PlaymateCircles = ({
               .transition(t)
               .attr('cx', d => d.cx)
               .attr('cy', d => d.cy)
-              .attr('fill', d => d.fill),
+              .attr('fill', d => d.fill)
+              .attr('opacity', 1),
           ),
         exit =>
           exit //
