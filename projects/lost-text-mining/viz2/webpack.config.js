@@ -19,8 +19,8 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: dir('../../../static/lost-text-mining'),
-    publicPath: isProd ? '' : 'http://localhost:9001/',
+    path: dir('../../../content/2018-09-01-lost-text-mining/build'),
+    publicPath: isProd ? './build/' : 'http://localhost:9001/',
     globalObject: 'this',
   },
   devtool: 'source-map',
@@ -100,7 +100,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new CleanWebpackPlugin(dir('../../../static/lost-text-mining'), {
+    new CleanWebpackPlugin(dir('../../../content/2018-09-01-lost-text-mining/build'), {
       allowExternal: true,
     }),
   ],

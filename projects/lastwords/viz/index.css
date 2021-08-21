@@ -1,0 +1,74 @@
+#most-common-words {
+}
+
+#statement-lengths {
+  margin-top: 1rem;
+}
+
+#trigrams {
+}
+
+#person-sentiment {
+}
+
+#firstNames {
+  margin-top: 1rem;
+}
+
+#statementSentiment {
+  margin-top: 1rem;
+}
+
+#stays .tooltip {
+  max-width: 25ch;
+}
+
+#lastRide {
+  margin-bottom: 1rem;
+}
+#lastRide button {
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  background: #282c34;
+  border: 1px solid #7cb34b;
+  border-radius: 5px;
+  color: #7cb34b;
+}
+
+.viz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.viz-title,
+.viz-subtitle {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.viz-title {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+.viz-subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.viz-meta {
+  font-size: 0.75rem;
+  color: slategray;
+  max-width: 40rem;
+  font-style: italic;
+  margin: -1rem auto 1rem auto;
+}
+
+.axisTitle {
+  fill: white;
+  font-size: 11px;
+  font-weight: bold;
+}

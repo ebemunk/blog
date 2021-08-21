@@ -1,0 +1,18 @@
+#castling-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+#castling-container div {
+  margin: 0 20px;
+  width: 220px;
+  text-align: center;
+}
+
+#castling-container .caption {
+  text-align: center;
+  margin-bottom: 1rem;
+  display: block;
+}

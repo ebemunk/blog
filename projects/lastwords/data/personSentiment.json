@@ -1,0 +1,226 @@
+[
+  {
+    "name": "family",
+    "salience": 0.12032096995696204,
+    "score": 0.20822784810126577,
+    "type": "PERSON",
+    "freq": 316
+  },
+  {
+    "name": "god",
+    "salience": 0.08368739465038169,
+    "score": 0.3832061068702291,
+    "type": "PERSON",
+    "freq": 131
+  },
+  {
+    "name": "mom",
+    "salience": 0.09263054040814815,
+    "score": 0.291358024691358,
+    "type": "PERSON",
+    "freq": 81
+  },
+  {
+    "name": "jesus",
+    "salience": 0.10427797077337667,
+    "score": 0.36103896103896094,
+    "type": "PERSON",
+    "freq": 77
+  },
+  {
+    "name": "father",
+    "salience": 0.04155645082352941,
+    "score": 0.18823529411764708,
+    "type": "PERSON",
+    "freq": 51
+  },
+  {
+    "name": "victim",
+    "salience": 0.10365726258666666,
+    "score": -0.11555555555555554,
+    "type": "PERSON",
+    "freq": 45
+  },
+  {
+    "name": "warden",
+    "salience": 0.10412174066952386,
+    "score": 0.2166666666666667,
+    "type": "PERSON",
+    "freq": 42
+  },
+  {
+    "name": "sister",
+    "salience": 0.04357629945558823,
+    "score": 0.22058823529411764,
+    "type": "PERSON",
+    "freq": 34
+  },
+  {
+    "name": "son",
+    "salience": 0.05607610816,
+    "score": 0.11200000000000002,
+    "type": "PERSON",
+    "freq": 25
+  },
+  {
+    "name": "daughter",
+    "salience": 0.027856728917391303,
+    "score": 0.34782608695652184,
+    "type": "PERSON",
+    "freq": 23
+  },
+  {
+    "name": "brother",
+    "salience": 0.1169358949857143,
+    "score": 0.2761904761904762,
+    "type": "PERSON",
+    "freq": 21
+  },
+  {
+    "name": "witness",
+    "salience": 0.019404450494444444,
+    "score": 0.049999999999999996,
+    "type": "PERSON",
+    "freq": 18
+  },
+  {
+    "name": "baby",
+    "salience": 0.02548473745555556,
+    "score": 0.4666666666666667,
+    "type": "PERSON",
+    "freq": 18
+  },
+  {
+    "name": "wife",
+    "salience": 0.12360092128666667,
+    "score": 0.18666666666666665,
+    "type": "PERSON",
+    "freq": 15
+  },
+  {
+    "name": "irene",
+    "salience": 0.04981686707142857,
+    "score": 0.6285714285714287,
+    "type": "PERSON",
+    "freq": 14
+  },
+  {
+    "name": "children",
+    "salience": 0.12474764354999998,
+    "score": 0.09,
+    "type": "PERSON",
+    "freq": 10
+  },
+  {
+    "name": "parents",
+    "salience": 0.08945734818,
+    "score": 0.27,
+    "type": "PERSON",
+    "freq": 10
+  },
+  {
+    "name": "lawyers",
+    "salience": 0.08865589198000001,
+    "score": 0.009999999999999992,
+    "type": "PERSON",
+    "freq": 10
+  },
+  {
+    "name": "police",
+    "salience": 0.026122349662500002,
+    "score": -0.10000000000000002,
+    "type": "PERSON",
+    "freq": 8
+  },
+  {
+    "name": "officers",
+    "salience": 0.005661096457142857,
+    "score": 0.35714285714285715,
+    "type": "PERSON",
+    "freq": 7
+  },
+  {
+    "name": "niece",
+    "salience": 0.015474911685714285,
+    "score": 0.1142857142857143,
+    "type": "PERSON",
+    "freq": 7
+  },
+  {
+    "name": "sinner",
+    "salience": 0.1338420777714286,
+    "score": -0.09999999999999999,
+    "type": "PERSON",
+    "freq": 7
+  },
+  {
+    "name": "nephew",
+    "salience": 0.13772897163333334,
+    "score": 0.11666666666666665,
+    "type": "PERSON",
+    "freq": 6
+  },
+  {
+    "name": "grandma",
+    "salience": 0.052887094916666676,
+    "score": 0.016666666666666666,
+    "type": "PERSON",
+    "freq": 6
+  },
+  {
+    "name": "prosecutor",
+    "salience": 0.193427413825,
+    "score": 0.025,
+    "type": "PERSON",
+    "freq": 4
+  },
+  {
+    "name": "judge",
+    "salience": 0.031441320575,
+    "score": -0.125,
+    "type": "PERSON",
+    "freq": 4
+  },
+  {
+    "name": "husband",
+    "salience": 0.02187414575,
+    "score": -0.07500000000000001,
+    "type": "PERSON",
+    "freq": 4
+  },
+  {
+    "name": "jury",
+    "salience": 0.06234913533333333,
+    "score": -0.03333333333333333,
+    "type": "PERSON",
+    "freq": 3
+  },
+  {
+    "name": "satan",
+    "salience": 0.00349258697,
+    "score": -0.45,
+    "type": "PERSON",
+    "freq": 2
+  },
+  {
+    "name": "district attorney",
+    "salience": 0.009400819500000001,
+    "score": 0.15000000000000002,
+    "type": "PERSON",
+    "freq": 2
+  },
+  {
+    "name": "cousin",
+    "salience": 0.01462279125,
+    "score": 0.1,
+    "type": "PERSON",
+    "freq": 2
+  },
+  {
+    "name": "investigators",
+    "salience": 0.12823762025,
+    "score": -0.15,
+    "type": "PERSON",
+    "freq": 2
+  }
+]

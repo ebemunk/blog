@@ -16,6 +16,10 @@
 
 .legend {
   display: flex;
+
+  & button {
+    margin-bottom: 1rem;
+  }
 }
 
 .box {

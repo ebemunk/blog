@@ -103,6 +103,7 @@ a:visited,
 a:active {
   color: @white;
   text-decoration: underline solid @green;
+  text-decoration-thickness: 3px;
   transition: color 400ms;
 
   &:hover {
@@ -135,8 +136,7 @@ blockquote {
   article.article h4,
   article.article h5,
   article.article h6,
-  .share,
-  .disqus,
+  .share h4,
   .article-list {
     padding: 0 0.625rem;
   }
@@ -177,13 +177,6 @@ article.article {
   p {
     &:extend(article.article p);
   }
-}
-
-.disqus {
-  width: 100%;
-  max-width: @maxwidth;
-  margin: 0 auto;
-  padding: 0;
 }
 
 .article-list {

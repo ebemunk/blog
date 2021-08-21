@@ -32,9 +32,11 @@ export default function Season({ data, season, scale }) {
         <text
           x={seasonScale(acc)}
           y={25}
+          dy="4px"
           dx="2px"
-          dy="1rem"
           className={css.episodeLabel}
+          textAnchor="start"
+          dominantBaseline="hanging"
         >
           {episode.episode}
         </text>

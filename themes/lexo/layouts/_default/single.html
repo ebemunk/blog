@@ -3,7 +3,10 @@
 <h1>{{ .Title }}</h1>
 
 <div class="tags-and-date">
-	<time title='{{ $.Date.Format "2006-01-02 @ 15:04pm"}}'>{{ $.Date.Format "2 January 2006" }}</time>
+	<time title='{{ $.PublishDate.Format "2006-01-02 @ 15:04pm"}}'>{{ $.Date.Format "2 January 2006" }}</time>
+	{{ if not (eq $.PublishDate $.Lastmod) }}
+	<div>Updated:  <time title='{{ $.Lastmod.Format "2006-01-02 @ 15:04pm"}}'>{{ $.Lastmod.Format "2 January 2006" }}</time></div>
+	{{ end }}
 	{{ partial "tags.html" . }}
 </div>
 
@@ -14,6 +17,14 @@
 <div class="share">
 	<h4>Share this post</h4>
 	<p>I'm pretty sure you know how to share things on social media, so I'll spare you the 50 different obnoxious buttons. If you liked this, feel free to share anywhere, it helps me out.</p>
+	<p>
+		Have something to say? <a target="_blakn" href="https://twitter.com/search?q={{ .Permalink }}">Discuss on Twitter</a>, or tell me <a href="https://twitter.com/ebemunk">@ebemunk</a>.
+		Consume my work <a href="https://instagram.com/thinkingthrougtheparty">on Instagram</a> or stalk me <a href="https://www.reddit.com/user/boxer-collar">on Reddit</a>.
+	</p>
+	<p>
+		Join my newsletter to get updates when I add new stuff here. I won't sell you anything or spam you with bs.
+	</p>
+	{{ partial "newsletter-signup" . }}
 </div>
 
 {{ with .Params.related }}
@@ -34,9 +45,5 @@
 {{ end }}
 
 {{ partial "consult.html" . }}
-
-<div class="disqus">
-	{{ template "_internal/disqus.html" . }}
-</div>
 
 {{ partial "footer.html" . }}

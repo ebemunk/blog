@@ -100,6 +100,7 @@ a:active {
   color: white;
   -webkit-text-decoration: underline solid #7cb34b;
           text-decoration: underline solid #7cb34b;
+  text-decoration-thickness: 3px;
   -webkit-transition: color 400ms;
   transition: color 400ms;
 }
@@ -132,8 +133,7 @@ blockquote {
   article.article h4,
   article.article h5,
   article.article h6,
-  .share,
-  .disqus,
+  .share h4,
   .article-list,
   .share p {
     padding: 0 0.625rem;
@@ -163,12 +163,6 @@ article.article .footnotes a {
 }
 article.article .footnotes hr {
   border: 0.5px solid #9eabb3;
-}
-.disqus {
-  width: 100%;
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 0;
 }
 .article-list {
   margin-bottom: 2rem;

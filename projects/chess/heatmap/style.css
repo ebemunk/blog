@@ -1,0 +1,27 @@
+#heatmap-container select {
+  background: inherit;
+  margin-bottom: 1rem;
+}
+
+#heatmap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#heatmap-chart {
+  margin-bottom: 1rem;
+}
+
+#heatmap-chart .square.light {
+  color: #6c6c6c;
+}
+
+#heatmap-chart .square.dark {
+  color: #3c3c3c;
+}
+
+#heatmap-chart .label {
+  font-size: 12px;
+}

@@ -4,7 +4,7 @@ title = "One Century of Plane Crashes"
 slug = "century-of-plane-crashes"
 tags = ["data visualization", "plane crashes", "long form"]
 image = "img/plane-crashes.png"
-related = ["2016-02-27-chess-2mil.md", "2018-09-01-lost-text-mining.md"]
+related = ["2016-02-27-visual-look-chess/index.md", "2018-09-01-lost-text-mining.md"]
 shortSummary = "An exploration of 100 years of plane crashes from 1919 to 2019."
 +++
 

@@ -1,0 +1,9 @@
+.tooltip {
+  background-color: #282c34;
+  border: 1px solid grey;
+  color: white;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
