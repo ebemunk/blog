@@ -117,7 +117,7 @@ const Viz = ({ stage }) => {
             fill: cA(d) ? (sC(cA(d)) as string) : 'cyan',
             datum: d,
           }))}
-        r={2}
+        r={3}
         transitionDuration={750}
         className="circles"
       />

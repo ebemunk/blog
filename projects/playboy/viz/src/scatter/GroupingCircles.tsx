@@ -1,12 +1,15 @@
 import React from 'react'
 import * as d3 from 'd3'
 import { arcTween } from '../util'
+import { drag, format } from 'd3'
 
 interface CircleDatum {
+  data: any[]
   cx: number
   cy: number
-  r: string
+  r: number
   stroke: string
+  children: {}[]
 }
 
 const GroupingCircles = ({
@@ -20,6 +23,7 @@ const GroupingCircles = ({
   const ref = React.useRef<SVGGElement>(null)
 
   console.log('what', data)
+  const total = data.reduce((sum, cur) => sum + cur.children.length, 0)
 
   React.useEffect(() => {
     if (!ref.current) return
@@ -72,8 +76,12 @@ const GroupingCircles = ({
       .arc<CircleDatum>()
       .innerRadius(d => +d.r - 2)
       .outerRadius(d => +d.r + 16)
-      .startAngle(-Math.PI / 4)
-      .endAngle(Math.PI / 4)
+      .startAngle(0)
+      .endAngle(d => {
+        const total = (d.data[0]?.length ?? 2) + 4
+        const angl = (total * 10) / (d.r + Math.PI * 6)
+        return angl
+      })
 
     d3.select(ref.current)
       .selectAll('path')
@@ -84,12 +92,14 @@ const GroupingCircles = ({
             .append('path')
             .attr('d', arc)
             .attr('fill', d => d.stroke)
+            .attr('fill-opacity', 0.4)
             .attr('stroke', d => d.stroke)
+            .attr('stroke-opacity', 0.4)
             .attr('transform', d => `translate(${d.cx},${d.cy})`)
             .attr('opacity', 0)
+            .attr('id', d => `arc-${d.data[0]}`)
             .call(enter =>
               enter //
-                // @ts-ignore
                 .transition(t)
                 .attr('opacity', 1),
             )
@@ -98,12 +108,14 @@ const GroupingCircles = ({
         update =>
           update.call(update =>
             update
-              // @ts-ignore
-              .transition(t)
+              .attr('opacity', 0)
+              .attr('d', arc)
               .attr('transform', d => `translate(${d.cx},${d.cy})`)
               .attr('stroke', d => d.stroke)
               .attr('fill', d => d.stroke)
-              .attr('d', arc),
+              .attr('id', d => `arc-${d.data[0]}`)
+              .transition()
+              .attr('opacity', 1),
           ),
         exit =>
           exit.call(exit =>
@@ -118,11 +130,52 @@ const GroupingCircles = ({
     d3.select(ref.current)
       .selectAll('text')
       .data(data)
-      .join('text')
-      // @ts-ignore
-      .text(d => d.data[0])
-      .attr('x', d => d.cx)
-      .attr('y', d => d.cy)
+      .join(
+        enter => {
+          return (
+            enter
+              .append('text')
+              .attr('dy', 0)
+              .attr('dx', 4)
+              .append('textPath')
+              .attr('xlink:href', d => `#arc-${d.data[0]}`)
+              .attr('alignment-baseline', 'hanging')
+              .attr('font-size', 14)
+              .attr('fill', 'white')
+              .attr('letter-spacing', 2)
+              // .attr('font-family', 'monospace')
+              // .attr('letter-spacing', 4)
+              .text(
+                d =>
+                  `${d.data[0] ?? '??'} ${format('.0%')(
+                    d.children.length / total,
+                  )}`,
+              )
+              .attr('id', d => `label-${d.data[0]?.replace('/', '')}`)
+              .attr('data-length', function () {
+                //@ts-ignore
+                return this.getComputedTextLength()
+              })
+              .attr('spacing', 'auto')
+          )
+        },
+        update => {
+          update
+            .select('textPath')
+            .attr('xlink:href', d => {
+              return `#arc-${d.data[0]}`
+            })
+            .text(
+              d =>
+                `${d.data[0] ?? '??'} ${format('.0%')(
+                  d.children.length / total,
+                )}`,
+            )
+            .attr('id', d => `label-${d.data[0]?.replace('/', '')}`)
+
+          return update
+        },
+      )
   })
 
   return <g ref={ref} {...rest} />
