@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { useRef } from 'react'
 import * as d3 from 'd3'
 import { animated, useSpring } from '@react-spring/web'
@@ -26,7 +26,7 @@ const LOESS = ({ stage, sX, sY }) => {
 
   // const [avg, api] = useSpring({})
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!avgRef.current) return
 
     const sel = d3
@@ -43,7 +43,7 @@ const LOESS = ({ stage, sX, sY }) => {
       })
   })
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!errRef.current) return
 
     d3.select(errRef.current)

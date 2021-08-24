@@ -140,9 +140,17 @@ const GroupingCircles = ({
             .append('text')
             .attr('dy', 0)
             .attr('dx', 4)
+            .attr('opacity', 0)
+            .call(enter =>
+              enter //
+                .transition()
+                .delay(transitionDuration)
+                .duration(transitionDuration)
+                .attr('opacity', 1),
+            )
             .append('textPath')
             .attr('xlink:href', d => `#arc-${d.data[0]}`)
-            .attr('alignment-baseline', 'hanging')
+            .attr('dominant-baseline', 'hanging')
             .attr('font-size', 14)
             .attr('fill', 'white')
             .attr('letter-spacing', 2)
@@ -158,17 +166,14 @@ const GroupingCircles = ({
               return this.getComputedTextLength()
             })
             .attr('spacing', 'auto')
-            .attr('opacity', 0)
-            .call(enter =>
-              enter //
-                .transition()
-                .delay(transitionDuration)
-                .duration(transitionDuration)
-                .attr('opacity', 1),
-            )
         },
         update => {
           update
+            .attr('opacity', 0)
+            .transition()
+            .delay(transitionDuration)
+            .duration(transitionDuration)
+            .attr('opacity', 1)
             .select('textPath')
             .attr('xlink:href', d => {
               return `#arc-${d.data[0]}`
@@ -180,11 +185,6 @@ const GroupingCircles = ({
                 )}`,
             )
             .attr('id', d => `label-${d.data[0]?.replace('/', '')}`)
-            .attr('opacity', 0)
-            .transition()
-            .delay(transitionDuration)
-            .duration(transitionDuration)
-            .attr('opacity', 1)
 
           return update
         },
