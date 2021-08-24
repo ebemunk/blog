@@ -100,7 +100,9 @@ const GroupingCircles = ({
             .attr('id', d => `arc-${d.data[0]}`)
             .call(enter =>
               enter //
-                .transition(t)
+                .transition()
+                .delay(transitionDuration)
+                .duration(transitionDuration)
                 .attr('opacity', 1),
             )
           return s2
@@ -115,6 +117,8 @@ const GroupingCircles = ({
               .attr('fill', d => d.stroke)
               .attr('id', d => `arc-${d.data[0]}`)
               .transition()
+              .delay(transitionDuration)
+              .duration(transitionDuration)
               .attr('opacity', 1),
           ),
         exit =>
@@ -132,32 +136,36 @@ const GroupingCircles = ({
       .data(data)
       .join(
         enter => {
-          return (
-            enter
-              .append('text')
-              .attr('dy', 0)
-              .attr('dx', 4)
-              .append('textPath')
-              .attr('xlink:href', d => `#arc-${d.data[0]}`)
-              .attr('alignment-baseline', 'hanging')
-              .attr('font-size', 14)
-              .attr('fill', 'white')
-              .attr('letter-spacing', 2)
-              // .attr('font-family', 'monospace')
-              // .attr('letter-spacing', 4)
-              .text(
-                d =>
-                  `${d.data[0] ?? '??'} ${format('.0%')(
-                    d.children.length / total,
-                  )}`,
-              )
-              .attr('id', d => `label-${d.data[0]?.replace('/', '')}`)
-              .attr('data-length', function () {
-                //@ts-ignore
-                return this.getComputedTextLength()
-              })
-              .attr('spacing', 'auto')
-          )
+          return enter
+            .append('text')
+            .attr('dy', 0)
+            .attr('dx', 4)
+            .append('textPath')
+            .attr('xlink:href', d => `#arc-${d.data[0]}`)
+            .attr('alignment-baseline', 'hanging')
+            .attr('font-size', 14)
+            .attr('fill', 'white')
+            .attr('letter-spacing', 2)
+            .text(
+              d =>
+                `${d.data[0] ?? '??'} ${format('.0%')(
+                  d.children.length / total,
+                )}`,
+            )
+            .attr('id', d => `label-${d.data[0]?.replace('/', '')}`)
+            .attr('data-length', function () {
+              //@ts-ignore
+              return this.getComputedTextLength()
+            })
+            .attr('spacing', 'auto')
+            .attr('opacity', 0)
+            .call(enter =>
+              enter //
+                .transition()
+                .delay(transitionDuration)
+                .duration(transitionDuration)
+                .attr('opacity', 1),
+            )
         },
         update => {
           update
@@ -172,6 +180,11 @@ const GroupingCircles = ({
                 )}`,
             )
             .attr('id', d => `label-${d.data[0]?.replace('/', '')}`)
+            .attr('opacity', 0)
+            .transition()
+            .delay(transitionDuration)
+            .duration(transitionDuration)
+            .attr('opacity', 1)
 
           return update
         },
