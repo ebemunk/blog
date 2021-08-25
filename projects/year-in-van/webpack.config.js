@@ -19,7 +19,7 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components/'),
       roots: path.resolve(__dirname, 'src/roots/'),
       data: path.resolve(__dirname, 'src/data/'),
-      vizlib: path.resolve(__dirname, '../vizlib/dist'),
+      vizlib: path.resolve(__dirname, './vizlib/dist'),
     },
   },
   devtool: 'source-map',
