@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { FlexPlot, Path, usePlotContext, Plot } from '@xmatters/vizlib'
+import { FlexPlot, Path, usePlotContext, Plot } from 'vizlib'
 import { scaleLinear } from 'd3-scale'
 import { arc as d3arc, pie as d3pie } from 'd3-shape'
 

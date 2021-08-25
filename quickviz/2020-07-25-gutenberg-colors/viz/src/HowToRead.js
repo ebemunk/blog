@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { usePlotContext, Plot } from '@xmatters/vizlib'
+import { usePlotContext, Plot } from 'vizlib'
 import { scaleLinear } from 'd3-scale'
 import { arc as d3arc, pie as d3pie, line as d3line } from 'd3-shape'
 

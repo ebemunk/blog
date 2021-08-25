@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "@xmatters/vizlib": "file:../../../livechat-sentiment/vizlib",
+    "vizlib": "file:./vizlib",
     "d3-array": "^2.4.0",
     "d3-color": "^1.4.1",
     "d3-scale": "^3.2.1",

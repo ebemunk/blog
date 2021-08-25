@@ -1907,13 +1907,6 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
-"@xmatters/vizlib@file:../../../livechat-sentiment/vizlib":
-  version "1.0.0"
-  dependencies:
-    d3-interpolate "^1.4.0"
-    lodash "^4.17.15"
-    react-spring "^9.0.0-rc.3"
-
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -10531,6 +10524,13 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
+
+"vizlib@file:./vizlib":
+  version "1.0.0"
+  dependencies:
+    d3-interpolate "^1.4.0"
+    lodash "^4.17.15"
+    react-spring "^9.0.0-rc.3"
 
 vm-browserify@^1.0.1:
   version "1.1.2"
