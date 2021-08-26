@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { scaleLinear, scalePoint, scaleOrdinal } from 'd3-scale'
-import { FlexPlot, usePlotContext, Path, Plot } from '@xmatters/vizlib'
+import { usePlotContext, Path, Svg } from 'vizlib'
 import { extent, mean, max } from 'd3-array'
 import {
   line,
@@ -13,7 +13,6 @@ import {
 import { schemeBlues, schemeCategory10 } from 'd3-scale-chromatic'
 
 import { get, data } from '../data'
-import { WAxis } from '../themed'
 
 const getData = () => {
   const byDecade = groupBy(

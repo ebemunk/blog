@@ -30,7 +30,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
-    "@xmatters/vizlib": "file:../../../../livechat-sentiment/vizlib",
+    "vizlib": "file:../vizlib",
     "core-js": "3",
     "d3": "6",
     "d3-scale-chromatic": "^2.0.0",

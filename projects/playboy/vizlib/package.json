@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && tsc --emitDeclarationOnly",
     "dev": "rollup -c -w"
   },
   "peerDependencies": {
