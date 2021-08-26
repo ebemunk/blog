@@ -5,7 +5,7 @@ import { ResponsiveSvg, usePlotContext } from 'vizlib'
 import { useTransition, animated, useChain } from 'react-spring'
 
 import { data } from '../data'
-import { WAxis } from '../themed'
+// import { WAxis } from '../themed'
 import { MONTHS } from '../util'
 
 // @ts-ignore

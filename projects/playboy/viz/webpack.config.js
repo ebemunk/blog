@@ -10,7 +10,10 @@ module.exports = {
   entry: ['react-hot-loader/patch', './src/index.tsx'],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../../../static/playboy'),
+    path: path.resolve(
+      __dirname,
+      '../../../content/2021-12-01-playmates/build',
+    ),
     publicPath: 'http://localhost:9001/',
   },
   resolve: {
@@ -36,14 +39,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        use: 'babel-loader',
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.tsx?$/,
-        use: ['babel-loader', 'ts-loader'],
-        exclude: /node_modules/,
+        test: /\.[tj]sx?$/,
+        use: ['swc-loader'],
+        exclude: /node_modules\/(?!(vizlib)\/).*/,
       },
       {
         test: /\.css$/,

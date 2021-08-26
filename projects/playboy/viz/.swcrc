@@ -1,0 +1,11 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true
+    },
+    "target": "es5",
+    "loose": true
+  },
+  "sourceMaps": true
+}

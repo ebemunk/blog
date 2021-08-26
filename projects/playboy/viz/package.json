@@ -12,6 +12,7 @@
     "@babel/core": "7.11.0",
     "@babel/preset-env": "7.11.0",
     "@babel/preset-react": "7.10.4",
+    "@swc/core": "^1.2.82",
     "@types/d3": "6",
     "@types/d3-scale-chromatic": "^2.0.0",
     "@types/node": "^14.14.6",
@@ -23,6 +24,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.5.0",
     "style-loader": "^0.23.1",
+    "swc-loader": "^0.1.14",
     "ts-loader": "^8.0.2",
     "typescript": "^3.9.7",
     "webpack": "^4.28.2",
@@ -30,15 +32,15 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
-    "vizlib": "file:../vizlib",
     "core-js": "3",
     "d3": "6",
     "d3-scale-chromatic": "^2.0.0",
     "lodash": "^4.17.20",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-hot-loader": "^4.6.3",
     "react-spring": "9.2.4",
-    "remeda": "^0.0.20"
+    "remeda": "^0.0.20",
+    "vizlib": "file:../vizlib"
   }
 }
