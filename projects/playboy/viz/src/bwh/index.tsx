@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { scaleLinear, scalePoint, scaleOrdinal } from 'd3-scale'
-import { usePlotContext, Path, Svg } from 'vizlib'
+import { usePlotContext, Svg } from 'vizlib'
 import { extent, mean, max } from 'd3-array'
 import {
   line,
@@ -37,7 +37,7 @@ const getData = () => {
 const Silhouette = ({ data, line, decade, stroke }) => {
   return (
     <>
-      <Path
+      {/* <Path
         //@ts-ignore
         generator={line}
         data={data.left}
@@ -66,7 +66,7 @@ const Silhouette = ({ data, line, decade, stroke }) => {
         className="silpath"
       >
         <title>{decade}</title>
-      </Path>
+      </Path> */}
     </>
   )
 }
@@ -198,10 +198,10 @@ const BWH = () => {
           <option key={key} value={key} label={key} />
         ))}
       </select>
-      <Plot width={900} height={900} margin={30}>
+      <Svg width={900} height={900} margin={30}>
         {/* @ts-ignore */}
         <Viz decades={pick(decades, filters)} curve={curve} />
-      </Plot>
+      </Svg>
     </div>
   )
 }

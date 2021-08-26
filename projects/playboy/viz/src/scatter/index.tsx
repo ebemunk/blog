@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { hot } from 'react-hot-loader'
 
-import { FlexPlot, usePlotContext } from '@xmatters/vizlib'
+import { ResponsiveSvg, usePlotContext } from 'vizlib'
 import { useTransition, animated, useChain } from 'react-spring'
 
 import { data } from '../data'
@@ -14,14 +14,15 @@ window.data = data
 const XAxis = ({ stage, scale }) => {
   switch (stage) {
     case 'start':
-      return (
-        <WAxis
-          scale={scale}
-          orientation="top"
-          ticks={[1953, 1960, 1970, 1980, 1990, 2000, 2010, 2020]}
-          showDomain
-        />
-      )
+      return null
+    // return (
+    //   <WAxis
+    //     scale={scale}
+    //     orientation="top"
+    //     ticks={[1953, 1960, 1970, 1980, 1990, 2000, 2010, 2020]}
+    //     showDomain
+    //   />
+    // )
 
     case 'mateAge':
     case 'height':
@@ -29,7 +30,8 @@ const XAxis = ({ stage, scale }) => {
     case 'bust':
     case 'waist':
     case 'hips':
-      return <WAxis scale={scale} orientation="top" showDomain />
+      // return <WAxis scale={scale} orientation="top" showDomain />
+      return null
 
     default:
       return null
@@ -39,9 +41,10 @@ const XAxis = ({ stage, scale }) => {
 const YAxis = ({ stage, scale }) => {
   switch (stage) {
     case 'start':
-      return (
-        <WAxis scale={scale} orientation="left" tickFormat={d => MONTHS[d]} />
-      )
+      return null
+    // return (
+    //   <WAxis scale={scale} orientation="left" tickFormat={d => MONTHS[d]} />
+    // )
 
     case 'mateAge':
     case 'height':
@@ -49,7 +52,8 @@ const YAxis = ({ stage, scale }) => {
     case 'bust':
     case 'waist':
     case 'hips':
-      return <WAxis scale={scale} orientation="left" showDomain />
+      // return <WAxis scale={scale} orientation="left" showDomain />
+      return null
 
     default:
       return null
@@ -204,9 +208,9 @@ const Scatter = () => {
           width: '70vw',
         }}
       >
-        <FlexPlot margin={{ left: 30, top: 30, bottom: 10, right: 10 }}>
+        <ResponsiveSvg margin={{ left: 30, top: 30, bottom: 10, right: 10 }}>
           <Viz stage={stage} />
-        </FlexPlot>
+        </ResponsiveSvg>
       </div>
       <div
         style={{
