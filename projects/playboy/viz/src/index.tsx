@@ -29,7 +29,7 @@ window.showFps = function () {
   document.head.appendChild(script)
 }
 
-if (process.env.NODE_ENV === 'dev') {
+if (process.env.NODE_ENV === 'development') {
   //@ts-ignore
   window.showFps()
 }
