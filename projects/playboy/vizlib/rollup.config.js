@@ -11,19 +11,17 @@ export default [
     input: 'src/index.ts',
     external: Object.keys(pkg.peerDependencies),
     output: [
-      { file: pkg.module, format: 'es', sourcemap: true },
       {
-        file: pkg.main,
-        format: 'umd',
+        file: pkg.module,
+        format: 'es',
         sourcemap: true,
-        name: 'vizlib',
       },
     ],
     plugins: [
       resolve({
-        extensions: ['.ts', '.tsx'],
+        extensions: ['.mjs', '.js', '.json', '.ts', '.tsx'],
       }),
-      // commonjs(),
+      commonjs(),
       swc({
         jsc: {
           parser: {
@@ -32,7 +30,9 @@ export default [
           },
           target: 'es2021',
           loose: true,
+          // externalHelpers: true,
         },
+        sourceMaps: true,
       }),
       // terser(),
       visualizer({

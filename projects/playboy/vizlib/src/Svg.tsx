@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import merge from 'lodash/merge'
+import merge from 'lodash-es/merge'
 
 import PlotContext from './PlotContext'
 import { marginDefaults } from './const'
