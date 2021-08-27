@@ -1,28 +1,24 @@
 import React from 'react'
 import * as d3 from 'd3'
-import { arcTween } from '../util'
-import { drag, format } from 'd3'
+import { format, HierarchyCircularNode } from 'd3'
+import { Playmate } from '../types'
 
-interface CircleDatum {
-  data: any[]
+type Data = (HierarchyCircularNode<Playmate> & {
   cx: number
   cy: number
-  r: number
   stroke: string
-  children: {}[]
-}
+})[]
 
 const GroupingCircles = ({
   data,
   transitionDuration,
   ...rest
 }: {
-  data: CircleDatum[]
+  data: Data
   transitionDuration: number
 } & { [key: string]: any }) => {
   const ref = React.useRef<SVGGElement>(null)
 
-  console.log('what', data)
   const total = data.reduce((sum, cur) => sum + cur.children.length, 0)
 
   React.useEffect(() => {
@@ -34,8 +30,8 @@ const GroupingCircles = ({
       .selectAll('circle')
       .data(data)
       .join(
-        enter => {
-          const s1 = enter
+        enter =>
+          enter
             .append('circle')
             .attr('cx', d => d.cx)
             .attr('cy', d => d.cy)
@@ -46,12 +42,9 @@ const GroupingCircles = ({
             .attr('fill', 'transparent')
             .call(enter =>
               enter //
-                // @ts-ignore
                 .transition(t)
                 .attr('r', d => d.r),
-            )
-          return s1
-        },
+            ),
         update =>
           update.call(update =>
             update
@@ -73,7 +66,7 @@ const GroupingCircles = ({
       )
 
     const arc = d3
-      .arc<CircleDatum>()
+      .arc<Data[number]>()
       .innerRadius(d => +d.r - 2)
       .outerRadius(d => +d.r + 16)
       .startAngle(0)
@@ -87,8 +80,8 @@ const GroupingCircles = ({
       .selectAll('path')
       .data(data)
       .join(
-        enter => {
-          const s2 = enter
+        enter =>
+          enter
             .append('path')
             .attr('d', arc)
             .attr('fill', d => d.stroke)
@@ -104,9 +97,7 @@ const GroupingCircles = ({
                 .delay(transitionDuration)
                 .duration(transitionDuration)
                 .attr('opacity', 1),
-            )
-          return s2
-        },
+            ),
         update =>
           update.call(update =>
             update
@@ -122,13 +113,7 @@ const GroupingCircles = ({
               .attr('opacity', 1),
           ),
         exit =>
-          exit.call(exit =>
-            exit
-              // @ts-ignore
-              .transition(t)
-              .attr('opacity', 0)
-              .remove(),
-          ),
+          exit.call(exit => exit.transition(t).attr('opacity', 0).remove()),
       )
 
     d3.select(ref.current)
@@ -162,7 +147,6 @@ const GroupingCircles = ({
             )
             .attr('id', d => `label-${d.data[0]?.replace('/', '')}`)
             .attr('data-length', function () {
-              //@ts-ignore
               return this.getComputedTextLength()
             })
             .attr('spacing', 'auto')
