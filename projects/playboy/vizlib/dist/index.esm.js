@@ -1,4 +1,5 @@
-import React, { createContext } from 'react';
+import React, { createContext, useRef, useLayoutEffect } from 'react';
+import { select, axisTop, axisRight, axisBottom, axisLeft } from 'd3';
 
 /**
  * Removes all key-value entries from the list cache.
@@ -1768,8 +1769,8 @@ const PlotContext = /*#__PURE__*/ createContext({
     getBoundingClientRect: undefined
 });
 
-function _extends$1() {
-    _extends$1 = Object.assign || function(target) {
+function _extends$2() {
+    _extends$2 = Object.assign || function(target) {
         for(var i = 1; i < arguments.length; i++){
             var source = arguments[i];
             for(var key in source){
@@ -1780,7 +1781,7 @@ function _extends$1() {
         }
         return target;
     };
-    return _extends$1.apply(this, arguments);
+    return _extends$2.apply(this, arguments);
 }
 const Svg = ({ children , margin ={
 } , width , height , ...rest })=>{
@@ -1804,7 +1805,7 @@ const Svg = ({ children , margin ={
             margin: margins,
             getBoundingClientRect: ()=>ref?.current?.getBoundingClientRect()
         }
-    }, /*#__PURE__*/ React.createElement("svg", _extends$1({
+    }, /*#__PURE__*/ React.createElement("svg", _extends$2({
         width: width,
         height: height,
         ref: ref
@@ -2109,8 +2110,8 @@ function useDimensions(opts = {
     ];
 }
 
-function _extends() {
-    _extends = Object.assign || function(target) {
+function _extends$1() {
+    _extends$1 = Object.assign || function(target) {
         for(var i = 1; i < arguments.length; i++){
             var source = arguments[i];
             for(var key in source){
@@ -2121,7 +2122,7 @@ function _extends() {
         }
         return target;
     };
-    return _extends.apply(this, arguments);
+    return _extends$1.apply(this, arguments);
 }
 const ResponsiveSvg = ({ children , margin ={
     top: 0,
@@ -2136,7 +2137,7 @@ const ResponsiveSvg = ({ children , margin ={
             width: '100%'
         },
         ref: ref
-    }, /*#__PURE__*/ React.createElement(Svg, _extends({
+    }, /*#__PURE__*/ React.createElement(Svg, _extends$1({
     }, rest, {
         height: dims.height,
         width: dims.width,
@@ -2149,9 +2150,55 @@ const ResponsiveSvg = ({ children , margin ={
     }), children)));
 };
 
+function _extends() {
+    _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source){
+                if (Object.prototype.hasOwnProperty.call(source, key)) {
+                    target[key] = source[key];
+                }
+            }
+        }
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+const AXIS_TYPE = {
+    top: axisTop,
+    right: axisRight,
+    bottom: axisBottom,
+    left: axisLeft
+};
+const Axis = ({ orientation , scale , ticks =null , tickSize =6 , tickSizeInner =6 , tickSizeOuter =6 , tickFormat =null , tickValues =null , tickPadding =3 , tickArguments =null , offset =null , transitionDuration =0 , ...otherProps })=>{
+    const ref = useRef(null);
+    useLayoutEffect(()=>{
+        if (!ref.current) return;
+        const axis = AXIS_TYPE[orientation](scale).ticks(ticks).tickSize(tickSize).tickSizeInner(tickSizeInner).tickSizeOuter(tickSizeOuter).tickFormat(tickFormat).tickValues(tickValues).tickPadding(tickPadding).tickArguments(tickArguments).offset(offset);
+        select(ref.current).transition().duration(transitionDuration).call(axis);
+    }, [
+        orientation,
+        scale,
+        ticks,
+        tickSize,
+        tickSizeInner,
+        tickSizeOuter,
+        tickFormat,
+        tickValues,
+        tickPadding,
+        offset,
+        tickArguments,
+        transitionDuration, 
+    ]);
+    return(/*#__PURE__*/ React.createElement("g", _extends({
+        key: orientation,
+        ref: ref
+    }, otherProps)));
+};
+
 function usePlotContext() {
     return React.useContext(PlotContext);
 }
 
-export { ResponsiveSvg, Svg, useDimensions, usePlotContext };
+export { Axis, ResponsiveSvg, Svg, useDimensions, usePlotContext };
 //# sourceMappingURL=index.esm.js.map

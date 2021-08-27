@@ -1,11 +1,10 @@
 import * as React from 'react'
 import { hot } from 'react-hot-loader'
 
-import { ResponsiveSvg, usePlotContext } from 'vizlib'
+import { ResponsiveSvg, usePlotContext, Axis } from 'vizlib'
 import { useTransition, animated, useChain } from 'react-spring'
 
 import { data } from '../data'
-// import { WAxis } from '../themed'
 import { MONTHS } from '../util'
 
 // @ts-ignore
@@ -14,15 +13,15 @@ window.data = data
 const XAxis = ({ stage, scale }) => {
   switch (stage) {
     case 'start':
-      return null
-    // return (
-    //   <WAxis
-    //     scale={scale}
-    //     orientation="top"
-    //     ticks={[1953, 1960, 1970, 1980, 1990, 2000, 2010, 2020]}
-    //     showDomain
-    //   />
-    // )
+      return (
+        <Axis
+          scale={scale}
+          orientation="top"
+          tickValues={range(1955, 2021, 5).map(String)}
+          tickSizeOuter={0}
+          transitionDuration={300}
+        />
+      )
 
     case 'mateAge':
     case 'height':
@@ -30,8 +29,14 @@ const XAxis = ({ stage, scale }) => {
     case 'bust':
     case 'waist':
     case 'hips':
-      // return <WAxis scale={scale} orientation="top" showDomain />
-      return null
+      return (
+        <Axis
+          scale={scale}
+          orientation="top"
+          tickSizeOuter={0}
+          transitionDuration={300}
+        />
+      )
 
     default:
       return null
@@ -41,10 +46,14 @@ const XAxis = ({ stage, scale }) => {
 const YAxis = ({ stage, scale }) => {
   switch (stage) {
     case 'start':
-      return null
-    // return (
-    //   <WAxis scale={scale} orientation="left" tickFormat={d => MONTHS[d]} />
-    // )
+      return (
+        <Axis
+          scale={scale}
+          orientation="left"
+          tickFormat={d => MONTHS[d]}
+          transitionDuration={300}
+        />
+      )
 
     case 'mateAge':
     case 'height':
@@ -52,8 +61,14 @@ const YAxis = ({ stage, scale }) => {
     case 'bust':
     case 'waist':
     case 'hips':
-      // return <WAxis scale={scale} orientation="left" showDomain />
-      return null
+      return (
+        <Axis
+          scale={scale}
+          orientation="left"
+          tickSizeOuter={0}
+          transitionDuration={300}
+        />
+      )
 
     default:
       return null
@@ -146,6 +161,7 @@ const STAGES = [
 ]
 
 import _ from 'lodash'
+import { range } from 'd3'
 
 function flattenObject(o, prefix = '', result = {}, keepNull = true) {
   if (

@@ -59,7 +59,7 @@ const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
       const packer = pack()
         .size([chartWidth, chartHeight])
         .padding(d => (d.depth === 1 ? 5 : 25))
-        .radius(d => 2)
+      // .radius(d => 2)
 
       console.log('ch, cw', chartWidth, chartHeight)
 
@@ -73,16 +73,32 @@ const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
       const nodes = packed.leaves()
 
       const csD = {
-        hair: ['Blonde', 'Brunette', 'Black', 'Red', 'Auburn', 'Hazel'],
-        ethnicity: ['Caucasian', 'Black', 'Latin', 'Asian', 'Mixed', 'Other'],
-        breasts: ['Real/Natural', 'Fake/Enhanced'],
-        theCup: ['A', 'B', 'C', 'D', 'DD', 'E', 'F', 'H', 'I'],
+        hair: ['Blonde', 'Brunette', 'Black', 'Red', 'Auburn', null],
+        ethnicity: [
+          'Caucasian',
+          'Black',
+          'Latin',
+          'Asian',
+          'Mixed',
+          'Other',
+          null,
+        ],
+        breasts: ['Real/Natural', 'Fake/Enhanced', null],
+        theCup: ['A', 'B', 'C', 'D', 'DD', 'E', 'F', 'H', 'I', null],
       }
       const csR = {
-        hair: ['yellow', 'brown', 'black', 'red', 'orange', 'olivedrab'],
-        ethnicity: ['white', 'black', 'brown', 'yellow', 'purple', 'salmon'],
-        breasts: ['green', 'red'],
-        theCup: schemeSpectral[9],
+        hair: ['yellow', 'brown', 'black', 'red', 'orange', 'cyan'],
+        ethnicity: [
+          'white',
+          'black',
+          'brown',
+          'yellow',
+          'purple',
+          'salmon',
+          'cyan',
+        ],
+        breasts: ['green', 'red', 'cyan'],
+        theCup: [...schemeSpectral[9], 'cyan'],
       }
 
       const colorScale = scaleOrdinal().domain(csD[stage]).range(csR[stage])

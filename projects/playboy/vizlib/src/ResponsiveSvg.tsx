@@ -9,7 +9,7 @@ export interface Props {
   margin?: Margin | number
 }
 
-export const ResponsiveSvg = ({
+const ResponsiveSvg = ({
   children,
   margin = { top: 0, right: 0, bottom: 0, left: 0 },
   ...rest
