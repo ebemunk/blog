@@ -28,12 +28,11 @@ const PlaymateCircles = ({
             .attr('fill', d => d.fill)
             .attr('cx', d => d.cx)
             .attr('cy', d => d?.cy ?? 0)
-            .attr('r', 0)
+            .attr('r', r)
             .attr('data-playmate', d => d.datum.name)
             .call(enter =>
               enter
                 .transition(t) //
-                .attr('r', r)
                 .attr('opacity', 1),
             )
 
