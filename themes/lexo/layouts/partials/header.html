@@ -37,7 +37,7 @@
 		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/v2.css">
 
 		{{ if .IsHome }}
-			<title>{{ .Title }}</title>
+			<title>{{ .Site.Title }}</title>
 		{{ else }}
 			<title>{{ .Title }} - {{ .Site.Title }}</title>
 		{{ end }}

@@ -143,7 +143,7 @@ const Viz = ({ stage }) => {
         transitionDuration={750}
         className="circles"
       />
-      <Voronoi data={playmateCircles} />
+      <Voronoi data={playmateCircles} stage={stage} />
     </>
   )
 }

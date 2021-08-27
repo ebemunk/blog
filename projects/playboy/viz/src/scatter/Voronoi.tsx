@@ -5,7 +5,13 @@ import { usePlotContext } from 'vizlib'
 import { usePopper } from 'react-popper'
 import { Playmate, PlaymateCircle } from '../types'
 
-const Voronoi = ({ data }: { data: PlaymateCircle[] }) => {
+const Voronoi = ({
+  data,
+  stage,
+}: {
+  data: PlaymateCircle[]
+  stage: string
+}) => {
   const plotCtx = usePlotContext()
 
   const [showing, setShowing] = useState<{
@@ -33,7 +39,7 @@ const Voronoi = ({ data }: { data: PlaymateCircle[] }) => {
     setDelaunay(Delaunay.from(data.map(d => [d.cx, d.cy])))
     setPinned(false)
     setShowing(null)
-  }, [data[0].cx])
+  }, [stage])
 
   return (
     <g>
@@ -50,6 +56,10 @@ const Voronoi = ({ data }: { data: PlaymateCircle[] }) => {
           const [mx, my] = pointer(evt)
           const idx = delaunay.find(mx, my)
           const d = data[idx]
+
+          if (!d) {
+            console.log('OOPS', idx, d)
+          }
 
           const dist = Math.sqrt(
             Math.pow(mx - d.cx, 2) + Math.pow(my - d.cy, 2),
