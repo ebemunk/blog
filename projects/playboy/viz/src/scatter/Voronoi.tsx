@@ -13,7 +13,17 @@ const Voronoi = ({ data }: { data: PlaymateCircle[] }) => {
     reference: Element
   }>(null)
   const [popper, setPopper] = useState(null)
-  const { styles, attributes } = usePopper(showing?.reference, popper)
+  const { styles, attributes } = usePopper(showing?.reference, popper, {
+    placement: 'top',
+    modifiers: [
+      {
+        name: 'offset',
+        options: {
+          offset: [0, 8],
+        },
+      },
+    ],
+  })
   const [pinned, setPinned] = useState(false)
   const [delaunay, setDelaunay] = useState(
     Delaunay.from(data.map(d => [d.cx, d.cy])),
@@ -28,10 +38,12 @@ const Voronoi = ({ data }: { data: PlaymateCircle[] }) => {
   return (
     <g>
       <rect
-        x={0}
-        y={0}
-        width={plotCtx.chartWidth}
-        height={plotCtx.chartHeight}
+        x={0 - plotCtx.margin.left}
+        y={0 - plotCtx.margin.top}
+        width={plotCtx.chartWidth + plotCtx.margin.left + plotCtx.margin.right}
+        height={
+          plotCtx.chartHeight + plotCtx.margin.top + plotCtx.margin.bottom
+        }
         onMouseMove={evt => {
           if (pinned) return
 
