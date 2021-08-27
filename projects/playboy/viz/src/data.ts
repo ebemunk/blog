@@ -1,9 +1,9 @@
-// import memoize from 'lodash/memoize'
-const memoize = require('lodash/memoize')
+import memoize from 'lodash/memoize'
 
 import raw from '../data.json'
+import { Playmate } from './types'
 
-export const data = raw
+export const data: Playmate[] = raw
   .map(d => ({
     ...d,
     date: new Date(d.year, d.month, 1),

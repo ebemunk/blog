@@ -6,8 +6,23 @@ import { schemeSpectral } from 'd3-scale-chromatic'
 
 import { data } from '../data'
 import { hierarchy, pack } from 'd3-hierarchy'
+import { Playmate } from '../types'
 
-const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
+type Accessor = (d: any, i: number, arr: Iterable<any>) => string | number
+
+const scales = ({
+  stage,
+  chartHeight,
+  chartWidth,
+  xA,
+  yA,
+}: {
+  stage: string
+  chartHeight: number
+  chartWidth: number
+  xA: Accessor
+  yA: Accessor
+}) => {
   switch (stage) {
     case 'start': {
       return [
@@ -33,7 +48,7 @@ const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
     case 'hips': {
       return [
         scaleTime()
-          // @ts-ignore
+          //@ts-ignore
           .domain(extent(data, xA))
           .range([0, chartWidth]),
 
@@ -53,19 +68,16 @@ const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
     case 'ethnicity':
     case 'breasts':
     case 'theCup': {
-      const packer = pack()
+      const packer = pack<Playmate>()
         .size([chartWidth, chartHeight])
         .padding(d => (d.depth === 1 ? 5 : 25))
-      // .radius(d => 2)
-
-      console.log('ch, cw', chartWidth, chartHeight)
 
       const grouped = group(data, d => d[stage] ?? null)
       const hi = hierarchy(grouped).count()
 
+      // wrong typings in case when arg is a Map
+      // @ts-ignore
       const packed = packer(hi)
-
-      console.log('packed', packed.children)
 
       const nodes = packed.leaves()
 
@@ -101,9 +113,7 @@ const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
       const colorScale = scaleOrdinal().domain(csD[stage]).range(csR[stage])
 
       return [
-        //@ts-ignore
         d => nodes.find(n => d.name === n.data.name)?.x,
-        //@ts-ignore
         d => nodes.find(n => d.name === n.data.name)?.y,
         colorScale,
         packed.children,
