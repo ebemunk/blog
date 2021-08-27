@@ -1,19 +1,13 @@
 import React from 'react'
 import * as d3 from 'd3'
-
-interface CircleDatum {
-  cx: number
-  cy: number
-  fill: string
-  datum: { [key: string]: any }
-}
+import { PlaymateCircle } from '../types'
 
 const PlaymateCircles = ({
   data,
   r,
   transitionDuration,
   ...rest
-}: { data: CircleDatum[]; r: number; transitionDuration: number } & {
+}: { data: PlaymateCircle[]; r: number; transitionDuration: number } & {
   [key: string]: any
 }) => {
   const ref = React.useRef<SVGGElement>(null)
@@ -23,22 +17,22 @@ const PlaymateCircles = ({
 
     const t = d3.transition().duration(transitionDuration)
 
-    d3.select(ref.current) //
-      .selectAll('circle')
-      .data(data)
+    d3.select(ref.current)
+      .selectAll<SVGCircleElement, PlaymateCircle>('circle')
+      .data(data, d => d.datum.name)
       .join(
         enter => {
           const entered = enter
-            .append('circle') //
+            .append('circle')
             .attr('opacity', 0)
             .attr('fill', d => d.fill)
             .attr('cx', d => d.cx)
             .attr('cy', d => d?.cy ?? 0)
             .attr('r', 0)
+            .attr('data-playmate', d => d.datum.name)
             .call(enter =>
               enter
-                // @ts-ignore
-                .transition(t)
+                .transition(t) //
                 .attr('r', r)
                 .attr('opacity', 1),
             )
@@ -48,7 +42,6 @@ const PlaymateCircles = ({
         update =>
           update.call(update =>
             update
-              // @ts-ignore
               .transition(t)
               .attr('cx', d => d.cx)
               .attr('cy', d => d.cy)
@@ -59,7 +52,6 @@ const PlaymateCircles = ({
           exit //
             .call(exit =>
               exit
-                // @ts-ignore
                 .transition(t) //
                 .attr('opacity', 0)
                 .remove(),

@@ -81,6 +81,7 @@ import scales from './scales'
 import LOESS from './LOESS'
 import PlaymateCircles from './PlaymateCircles'
 import GroupingCircles from './GroupingCircles'
+import Voronoi from './Voronoi'
 
 const Viz = ({ stage }) => {
   console.log('viz rendering', stage)
@@ -99,6 +100,15 @@ const Viz = ({ stage }) => {
       }),
     [stage, chartHeight, chartWidth, xA, yA],
   )
+
+  const playmateCircles: PlaymateCircle[] = data
+    .filter(d => typeof yA(d) !== 'undefined' && yA(d) !== null)
+    .map(d => ({
+      cx: sX(xA(d)) as number,
+      cy: sY(yA(d)) as number,
+      fill: cA(d) ? (sC(cA(d)) as string) : 'cyan',
+      datum: d,
+    }))
 
   return (
     <>
@@ -128,18 +138,12 @@ const Viz = ({ stage }) => {
       ) && <LOESS sX={sX} sY={sY} stage={stage} />}
 
       <PlaymateCircles
-        data={data
-          .filter(d => typeof yA(d) !== 'undefined' && yA(d) !== null)
-          .map(d => ({
-            cx: sX(xA(d)) as number,
-            cy: sY(yA(d)) as number,
-            fill: cA(d) ? (sC(cA(d)) as string) : 'cyan',
-            datum: d,
-          }))}
+        data={playmateCircles}
         r={3}
         transitionDuration={750}
         className="circles"
       />
+      <Voronoi data={playmateCircles} />
     </>
   )
 }
@@ -162,6 +166,7 @@ const STAGES = [
 
 import _ from 'lodash'
 import { range } from 'd3'
+import { Playmate, PlaymateCircle } from '../types'
 
 function flattenObject(o, prefix = '', result = {}, keepNull = true) {
   if (

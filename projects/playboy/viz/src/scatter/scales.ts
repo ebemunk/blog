@@ -1,14 +1,11 @@
-//@ts-ignore
-import forceInABox from 'force-in-a-box'
-import { identity, clone } from 'remeda'
+import { identity } from 'remeda'
 
 import { scalePoint, scaleTime, scaleLinear, scaleOrdinal } from 'd3-scale'
 import { range, extent, group } from 'd3-array'
-import { forceSimulation, forceCollide } from 'd3-force'
 import { schemeSpectral } from 'd3-scale-chromatic'
 
 import { data } from '../data'
-import { hierarchy, HierarchyCircularNode, pack } from 'd3-hierarchy'
+import { hierarchy, pack } from 'd3-hierarchy'
 
 const scales = ({ stage, chartHeight, chartWidth, xA, yA }) => {
   switch (stage) {
