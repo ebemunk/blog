@@ -42,6 +42,7 @@
     "react-hot-loader": "^4.6.3",
     "react-popper": "^2.2.5",
     "react-spring": "9.2.4",
+    "react-waypoint": "^10.1.0",
     "remeda": "^0.0.20",
     "vizlib": "file:../vizlib"
   }
