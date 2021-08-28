@@ -1,19 +1,24 @@
 import { range } from 'd3'
-import React from 'react'
+import React, { ComponentProps } from 'react'
 import { Axis } from 'vizlib'
 
 import { MONTHS } from '../util'
 
-export const XAxis = ({ stage, scale }) => {
+export const XAxis = ({
+  stage,
+  ...rest
+}: {
+  stage: string
+} & ComponentProps<typeof Axis>) => {
   switch (stage) {
     case 'start':
       return (
         <Axis
-          scale={scale}
           orientation="top"
           tickValues={range(1955, 2021, 5).map(String)}
           tickSizeOuter={0}
           transitionDuration={300}
+          {...rest}
         />
       )
 
@@ -25,10 +30,10 @@ export const XAxis = ({ stage, scale }) => {
     case 'hips':
       return (
         <Axis
-          scale={scale}
           orientation="top"
           tickSizeOuter={0}
           transitionDuration={300}
+          {...rest}
         />
       )
 
@@ -46,6 +51,7 @@ export const YAxis = ({ stage, scale }) => {
           orientation="left"
           tickFormat={d => MONTHS[d]}
           transitionDuration={300}
+          tickSizeOuter={0}
         />
       )
 

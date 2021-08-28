@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { SVGProps, useLayoutEffect, useRef } from 'react'
 import { axisTop, axisRight, axisBottom, axisLeft, select } from 'd3'
 
 const AXIS_TYPE = {
@@ -35,7 +35,7 @@ const Axis = ({
   tickArguments?: any
   offset?: any
   transitionDuration?: number
-}) => {
+} & SVGProps<SVGGElement>) => {
   const ref = useRef<SVGGElement>(null)
 
   useLayoutEffect(() => {

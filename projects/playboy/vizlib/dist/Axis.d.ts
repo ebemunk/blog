@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React, { SVGProps } from 'react';
 import { axisTop, axisRight, axisBottom, axisLeft } from 'd3';
 declare const AXIS_TYPE: {
     top: typeof axisTop;
@@ -19,6 +19,6 @@ declare const Axis: ({ orientation, scale, ticks, tickSize, tickSizeInner, tickS
     tickArguments?: any;
     offset?: any;
     transitionDuration?: number | undefined;
-}) => JSX.Element;
+} & React.SVGProps<SVGGElement>) => JSX.Element;
 export default Axis;
 //# sourceMappingURL=Axis.d.ts.map
