@@ -41,25 +41,31 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
 
   return (
     <>
-      {stage !== 'hair' && (
+      {[
+        'start',
+        'mateAge',
+        'height',
+        'weight',
+        'bust',
+        'waist',
+        'hips',
+      ].includes(stage) && (
         <>
           <XAxis
             //@ts-ignore its fine
             scale={sX}
             stage={stage}
           />
+          <XAxis
+            //@ts-ignore its fine
+            scale={sX}
+            stage={stage}
+            tickSizeInner={-chartHeight}
+            tickFormat={() => ''}
+            opacity={0.2}
+          />
           <YAxis scale={sY} stage={stage} />
         </>
-      )}
-      {stage === 'start' && (
-        <XAxis
-          //@ts-ignore its fine
-          scale={sX}
-          stage={stage}
-          tickSizeInner={-chartHeight}
-          tickFormat={() => ''}
-          opacity={0.2}
-        />
       )}
       {['hair', 'ethnicity', 'breasts', 'theCup'].includes(stage) && (
         <GroupingCircles
