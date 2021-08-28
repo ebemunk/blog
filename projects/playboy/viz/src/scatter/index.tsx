@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { hot } from 'react-hot-loader'
+import { createUseStyles } from 'react-jss'
 import { Waypoint } from 'react-waypoint'
 
 import { ResponsiveSvg } from 'vizlib'
@@ -32,35 +33,52 @@ const WP = ({
   </Waypoint>
 )
 
+const useStyles = createUseStyles({
+  wrap: {
+    border: '2px solid red',
+    position: 'relative',
+    display: 'flex',
+  },
+  viz: {
+    position: 'sticky',
+    top: '10vh',
+    border: '2px solid blue',
+    height: '80vh',
+    flexBasis: '100%',
+  },
+  story: {
+    flexBasis: '30%',
+  },
+  '@media (max-width: 1023px)': {
+    wrap: {
+      flexDirection: 'column',
+    },
+    viz: {
+      top: '0',
+      flexBasis: '100%',
+    },
+    story: {
+      flexBasis: '100%',
+    },
+  },
+})
+
 const Scatter = () => {
   const [stage, setStage] = React.useState<typeof STAGES[number]>('start')
   console.log('scatter rendering')
 
   const stageIndex = STAGES.indexOf(stage)
+  const classes = useStyles()
 
   return (
-    <div
-      style={{
-        border: '2px solid red',
-        position: 'relative',
-        display: 'flex',
-      }}
-    >
-      <div
-        style={{
-          position: 'sticky',
-          top: '10vh',
-          border: '2px solid blue',
-          height: '80vh',
-          flexBasis: '70%',
-        }}
-      >
+    <div className={classes.wrap}>
+      <div className={classes.viz}>
         <ResponsiveSvg margin={{ left: 30, top: 30, bottom: 10, right: 10 }}>
           <Viz stage={stage} />
         </ResponsiveSvg>
       </div>
 
-      <div style={{ flexBasis: '30%' }}>
+      <div className={classes.story}>
         <WP onEnter={() => setStage('start')} active={stage === 'start'}>
           hi
         </WP>
