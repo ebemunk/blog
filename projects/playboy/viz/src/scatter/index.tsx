@@ -4,6 +4,7 @@ import { createUseStyles } from 'react-jss'
 import { Waypoint } from 'react-waypoint'
 
 import { ResponsiveSvg } from 'vizlib'
+import StartHighlights from './StartHighlights'
 import { STAGES } from './util'
 import Viz from './Viz'
 
@@ -63,9 +64,18 @@ const useStyles = createUseStyles({
   },
 })
 
+const SUB_STAGES = [
+  'start', //
+  'marilyn',
+  'multiMonth',
+] as const
+
 const Scatter = () => {
   const [stage, setStage] = React.useState<typeof STAGES[number]>('start')
-  console.log('scatter rendering')
+  const [subStage, setSubStage] =
+    React.useState<typeof SUB_STAGES[number]>('start')
+
+  console.log('scatter rendering', { stage, subStage })
 
   const stageIndex = STAGES.indexOf(stage)
   const classes = useStyles()
@@ -75,12 +85,42 @@ const Scatter = () => {
       <div className={classes.viz}>
         <ResponsiveSvg margin={{ left: 30, top: 30, bottom: 10, right: 10 }}>
           <Viz stage={stage} />
+          {stage === 'start' && <StartHighlights subStage={subStage} />}
         </ResponsiveSvg>
       </div>
 
       <div className={classes.story}>
-        <WP onEnter={() => setStage('start')} active={stage === 'start'}>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('start')
+          }}
+          active={stage === 'start' && subStage === 'start'}
+        >
           hi
+        </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('marilyn')
+          }}
+          active={subStage === 'marilyn'}
+        >
+          marilyn was the first
+        </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('multiMonth')
+          }}
+          active={subStage === 'multiMonth'}
+        >
+          some girls were playmates for multiple months
+          <br />
+          Margie Harrison: 2<br />
+          Marilyn Waltz: 3<br />
+          Marguerite Empey: 2<br />
+          Janet Pilgrim: 3<br />
         </WP>
         <WP
           onEnter={() => setStage('mateAge')}
