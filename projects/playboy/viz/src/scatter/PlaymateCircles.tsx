@@ -29,7 +29,10 @@ const PlaymateCircles = ({
             .attr('cx', d => d.cx)
             .attr('cy', d => d?.cy ?? 0)
             .attr('r', r)
-            .attr('data-playmate', d => d.datum.name)
+            .attr(
+              'data-playmate',
+              d => `${d.datum.name}-${d.datum.year}-${d.datum.month}`,
+            )
             .call(enter =>
               enter
                 .transition(t) //

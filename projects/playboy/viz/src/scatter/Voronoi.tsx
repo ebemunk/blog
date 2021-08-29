@@ -4,6 +4,7 @@ import { createPortal } from 'react-dom'
 import { usePlotContext } from 'vizlib'
 import { usePopper } from 'react-popper'
 import { Playmate, PlaymateCircle } from '../types'
+import PlaymateTooltip from './PlaymateTooltip'
 
 const Voronoi = ({
   data,
@@ -74,7 +75,7 @@ const Voronoi = ({
             setShowing({
               data: d.datum,
               reference: document.querySelector(
-                `[data-playmate="${d.datum.name}"]`,
+                `[data-playmate="${d.datum.name}-${d.datum.year}-${d.datum.month}"]`,
               ),
             })
           }
@@ -84,7 +85,7 @@ const Voronoi = ({
           setShowing(null)
         }}
         onClick={() => {
-          // setPinned(!pinned)
+          setPinned(!pinned)
         }}
         fill="transparent"
         pointerEvents="all"
@@ -96,11 +97,10 @@ const Voronoi = ({
             style={{
               ...styles.popper,
               pointerEvents: pinned ? 'auto' : 'none',
-              background: 'black',
             }}
             {...attributes.popper}
           >
-            {showing.data.name}
+            <PlaymateTooltip data={showing.data} pinned={pinned} />
           </div>,
           document.querySelector('body'),
         )}
