@@ -68,6 +68,7 @@ const useStyles = createUseStyles({
 
 const SUB_STAGES = [
   'start', //
+  'noissue',
   'marilyn',
   'multiMonth',
   'multiGirl',
@@ -110,6 +111,16 @@ const Scatter = () => {
           active={subStage === 'marilyn'}
         >
           marilyn was the first
+        </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('noissue')
+          }}
+          active={subStage === 'noissue'}
+        >
+          there was no March 1955 issue
+          https://web.archive.org/web/20060326233118/http://www.playboy.com/worldofplayboy/faq/collecting.html#4
         </WP>
         <WP
           onEnter={() => {

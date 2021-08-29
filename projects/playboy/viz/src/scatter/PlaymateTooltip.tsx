@@ -27,6 +27,7 @@ const PlaymateTooltip = ({
         padding: '0.25rem',
         borderRadius: '5px',
       }}
+      data-playmatetooltip
     >
       <div
         style={{

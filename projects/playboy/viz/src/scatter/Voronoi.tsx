@@ -1,5 +1,5 @@
 import { Delaunay, pointer } from 'd3'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { usePlotContext } from 'vizlib'
 import { usePopper } from 'react-popper'
@@ -42,9 +42,34 @@ const Voronoi = ({
     setShowing(null)
   }, [stage])
 
+  const ref = useRef(null)
+  useEffect(() => {
+    const listener = (evt: MouseEvent) => {
+      if (!ref.current || ref.current.contains(evt.target)) {
+        return
+      }
+
+      const possibleTooltip = document.querySelector(
+        'div[data-playmatetooltip]',
+      )
+      if (pinned && !possibleTooltip?.contains(evt.target as Node)) {
+        setPinned(false)
+        setShowing(null)
+        console.log('window handler')
+      }
+    }
+
+    window.addEventListener('click', listener, { capture: true })
+
+    return () => {
+      window.removeEventListener('click', listener, { capture: true })
+    }
+  }, [setPinned, setShowing, pinned, ref.current])
+
   return (
     <g>
       <rect
+        ref={ref}
         x={0 - plotCtx.margin.left}
         y={0 - plotCtx.margin.top}
         width={plotCtx.chartWidth + plotCtx.margin.left + plotCtx.margin.right}
@@ -57,10 +82,6 @@ const Voronoi = ({
           const [mx, my] = pointer(evt)
           const idx = delaunay.find(mx, my)
           const d = data[idx]
-
-          if (!d) {
-            console.log('OOPS', idx, d)
-          }
 
           const dist = Math.sqrt(
             Math.pow(mx - d.cx, 2) + Math.pow(my - d.cy, 2),
@@ -84,8 +105,13 @@ const Voronoi = ({
           if (pinned) return
           setShowing(null)
         }}
-        onClick={() => {
-          setPinned(!pinned)
+        onClick={evt => {
+          if (showing === null) return
+          if (pinned) {
+            setShowing(null)
+            setPinned(false)
+          }
+          if (!pinned) setPinned(true)
         }}
         fill="transparent"
         pointerEvents="all"

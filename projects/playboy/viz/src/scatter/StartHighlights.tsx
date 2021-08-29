@@ -18,7 +18,11 @@ interface CutoutCircle {
   key: string
 }
 
-const getCutouts = (subStage, data: PlaymateCircle[]): CutoutCircle[] => {
+const getCutouts = (
+  subStage,
+  data: PlaymateCircle[],
+  scales,
+): CutoutCircle[] => {
   switch (subStage) {
     case 'marilyn':
       return [data.find(d => d.datum.name === 'Marilyn Monroe')].map(d => ({
@@ -27,6 +31,15 @@ const getCutouts = (subStage, data: PlaymateCircle[]): CutoutCircle[] => {
         r: 10,
         key: d.datum.name,
       }))
+    case 'noissue':
+      return [
+        {
+          cx: scales.sX('1955'),
+          cy: scales.sY('2'),
+          r: 10,
+          key: 'noissue',
+        },
+      ]
     case 'multiMonth':
       return data
         .filter(d =>
@@ -108,9 +121,9 @@ const getCutouts = (subStage, data: PlaymateCircle[]): CutoutCircle[] => {
 const StartHighlights = ({ subStage }: { subStage: string }) => {
   const plotCtx = usePlotContext()
 
-  const { data } = useStageData('start')
+  const { data, scales } = useStageData('start')
 
-  const cutouts = getCutouts(subStage, data)
+  const cutouts = getCutouts(subStage, data, scales)
 
   const pathRef = useRef(null)
   const circlesRef = useRef(null)
