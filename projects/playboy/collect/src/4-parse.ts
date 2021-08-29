@@ -105,43 +105,45 @@ const run = async () => {
   const pool = getPool()
   const { rows } = await pool.query('select * from playboy.playmates')
 
-  const mates = rows.map(row => {
-    const bp = row.babepedia
+  const mates = rows
+    .map(row => {
+      const bp = row.babepedia
 
-    const height = parseHeight(bp?.['Height'])
-    const ethnicity = parseEthnicity(bp?.['Ethnicity'])
-    const weight = parseWeight(bp?.['Weight'])
-    const born = parseBorn(bp?.['Born'])
+      const height = parseHeight(bp?.['Height'])
+      const ethnicity = parseEthnicity(bp?.['Ethnicity'])
+      const weight = parseWeight(bp?.['Weight'])
+      const born = parseBorn(bp?.['Born'])
 
-    const measurements = parseMeasurements(bp?.['Measurements'])
-    const cup = parseCup(bp?.['Bra/cup size'])
+      const measurements = parseMeasurements(bp?.['Measurements'])
+      const cup = parseCup(bp?.['Bra/cup size'])
 
-    if (measurements?.cup !== cup) {
-      console.log(row.name, measurements?.cup, cup)
-      console.log('---')
-    }
+      return {
+        name: row.name,
+        height,
+        weight,
+        ethnicity,
+        measurements,
+        cup,
+        theCup: measurements?.cup ?? cup,
+        hair: parseHair(bp?.['Hair color']),
+        breasts: bp?.['Boobs'],
+        born,
+        age: born ? differenceInYears(new Date(), born) : null,
+        eye: bp?.['Eye color'],
+        tattoos: parseTattoos(bp?.['Tattoos']),
+        month: row.month,
+        year: row.year,
+        mateAge: born
+          ? differenceInYears(new Date(row.year, row.month, 1), born)
+          : null,
+      }
+    })
+    .sort((a, b) => {
+      const yr = a.year - b.year
+      if (yr !== 0) return yr
 
-    return {
-      name: row.name,
-      height,
-      weight,
-      ethnicity,
-      measurements,
-      cup,
-      theCup: measurements?.cup ?? cup,
-      hair: parseHair(bp?.['Hair color']),
-      breasts: bp?.['Boobs'],
-      born,
-      age: born ? differenceInYears(new Date(), born) : null,
-      eye: bp?.['Eye color'],
-      tattoos: parseTattoos(bp?.['Tattoos']),
-      month: row.month,
-      year: row.year,
-      mateAge: born
-        ? differenceInYears(new Date(row.year, row.month, 1), born)
-        : null,
-    }
-  })
+      return a.month - b.month
+    })
 
   await fs.writeFile(
     resolve(__dirname, '../../viz/data.json'),

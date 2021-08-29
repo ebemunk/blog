@@ -4,7 +4,7 @@ import bb from 'bluebird'
 import getPool from './db'
 import { flatten } from 'remeda'
 
-const years = R.range(1954, 2020).map(
+const years = R.range(1954, 2021).map(
   // const years = R.range(1964, 1965).map(
   year => `List of Playboy Playmates of ${year}`,
 )
@@ -14,7 +14,9 @@ const doYear = async (year: string) => {
   const infoboxes = doc?.infoboxes()
 
   if (!infoboxes) {
-    throw new Error('infoboxes empty')
+    // throw new Error(`infoboxes empty for ${year}`)
+    console.log(`infoboxes empty for ${year}`)
+    return
   }
 
   return infoboxes.map(box => {
@@ -42,6 +44,8 @@ const run = async () => {
   console.log('got infos')
 
   await bb.map(flatten(infos), async info => {
+    if (!info) return
+
     // @ts-ignore
     let name: string = info.name
     let nameArr: string[] = [name]

@@ -6,12 +6,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.insertObj = void 0;
 var pg_1 = require("pg");
 var bluebird_1 = __importDefault(require("bluebird"));
+var dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
 var pool = new pg_1.Pool({
-    user: 'postgres',
-    password: '123123',
-    host: 'localhost',
-    port: 32769,
-    database: 'postgres',
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    host: process.env.DB_HOST,
+    port: Number(process.env.DB_PORT),
+    database: process.env.DB_DATABASE,
     Promise: bluebird_1.default,
 });
 function getPool() {

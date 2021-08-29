@@ -85,7 +85,7 @@ var R = __importStar(require("remeda"));
 var bluebird_1 = __importDefault(require("bluebird"));
 var db_1 = __importDefault(require("./db"));
 var remeda_1 = require("remeda");
-var years = R.range(1954, 2020).map(
+var years = R.range(1954, 2021).map(
 // const years = R.range(1964, 1965).map(
 function (year) { return "List of Playboy Playmates of " + year; });
 var doYear = function (year) { return __awaiter(void 0, void 0, void 0, function () {
@@ -97,7 +97,9 @@ var doYear = function (year) { return __awaiter(void 0, void 0, void 0, function
                 doc = _a.sent();
                 infoboxes = doc === null || doc === void 0 ? void 0 : doc.infoboxes();
                 if (!infoboxes) {
-                    throw new Error('infoboxes empty');
+                    // throw new Error(`infoboxes empty for ${year}`)
+                    console.log("infoboxes empty for " + year);
+                    return [2 /*return*/];
                 }
                 return [2 /*return*/, infoboxes.map(function (box) {
                         var json = box.json();
@@ -124,6 +126,8 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                         return __generator(this, function (_b) {
                             switch (_b.label) {
                                 case 0:
+                                    if (!info)
+                                        return [2 /*return*/];
                                     name = info.name;
                                     nameArr = [name];
                                     if (names[name])

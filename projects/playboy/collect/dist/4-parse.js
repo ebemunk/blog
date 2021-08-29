@@ -174,7 +174,8 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                 return [4 /*yield*/, pool.query('select * from playboy.playmates')];
             case 1:
                 rows = (_a.sent()).rows;
-                mates = rows.map(function (row) {
+                mates = rows
+                    .map(function (row) {
                     var _a;
                     var bp = row.babepedia;
                     var height = exports.parseHeight(bp === null || bp === void 0 ? void 0 : bp['Height']);
@@ -183,10 +184,6 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                     var born = exports.parseBorn(bp === null || bp === void 0 ? void 0 : bp['Born']);
                     var measurements = exports.parseMeasurements(bp === null || bp === void 0 ? void 0 : bp['Measurements']);
                     var cup = exports.parseCup(bp === null || bp === void 0 ? void 0 : bp['Bra/cup size']);
-                    if ((measurements === null || measurements === void 0 ? void 0 : measurements.cup) !== cup) {
-                        console.log(row.name, measurements === null || measurements === void 0 ? void 0 : measurements.cup, cup);
-                        console.log('---');
-                    }
                     return {
                         name: row.name,
                         height: height,
@@ -207,6 +204,12 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                             ? date_fns_1.differenceInYears(new Date(row.year, row.month, 1), born)
                             : null,
                     };
+                })
+                    .sort(function (a, b) {
+                    var yr = a.year - b.year;
+                    if (yr !== 0)
+                        return yr;
+                    return a.month - b.month;
                 });
                 return [4 /*yield*/, promises_1.default.writeFile(path_1.resolve(__dirname, '../../viz/data.json'), JSON.stringify(mates, null, 2))];
             case 2:
