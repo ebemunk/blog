@@ -84,7 +84,7 @@ const Voronoi = ({
           setShowing(null)
         }}
         onClick={() => {
-          setPinned(!pinned)
+          // setPinned(!pinned)
         }}
         fill="transparent"
         pointerEvents="all"

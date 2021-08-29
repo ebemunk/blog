@@ -18,7 +18,7 @@ const WP = ({
   style?: React.CSSProperties
   active?: boolean
 } & React.ComponentProps<typeof Waypoint>) => (
-  <Waypoint topOffset="40%" bottomOffset="80%" {...rest}>
+  <Waypoint topOffset="33%" bottomOffset="60%" {...rest}>
     <div
       style={{
         padding: '1rem',
@@ -46,17 +46,19 @@ const useStyles = createUseStyles({
     border: '2px solid blue',
     height: '80vh',
     flexBasis: '100%',
+    maxWidth: '100%',
   },
   story: {
     flexBasis: '30%',
   },
   '@media (max-width: 1023px)': {
     wrap: {
-      flexDirection: 'column',
+      flexWrap: 'wrap',
     },
     viz: {
-      top: '0',
+      top: '20vh',
       flexBasis: '100%',
+      height: '60vh',
     },
     story: {
       flexBasis: '100%',
@@ -68,6 +70,7 @@ const SUB_STAGES = [
   'start', //
   'marilyn',
   'multiMonth',
+  'multiGirl',
 ] as const
 
 const Scatter = () => {
@@ -121,6 +124,16 @@ const Scatter = () => {
           Marilyn Waltz: 3<br />
           Marguerite Empey: 2<br />
           Janet Pilgrim: 3<br />
+        </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('multiGirl')
+          }}
+          active={subStage === 'multiGirl'}
+        >
+          5 sets of twins, 1 set of triplets. only 1 month where 2 girls were
+          unrelated
         </WP>
         <WP
           onEnter={() => setStage('mateAge')}
