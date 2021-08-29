@@ -55,7 +55,6 @@ const Voronoi = ({
       if (pinned && !possibleTooltip?.contains(evt.target as Node)) {
         setPinned(false)
         setShowing(null)
-        console.log('window handler')
       }
     }
 

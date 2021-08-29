@@ -50,6 +50,7 @@ const useStyles = createUseStyles({
   },
   story: {
     flexBasis: '30%',
+    maxWidth: '30%',
   },
   '@media (max-width: 1023px)': {
     wrap: {
@@ -72,6 +73,9 @@ const SUB_STAGES = [
   'marilyn',
   'multiMonth',
   'multiGirl',
+  'firstBlack',
+  'firstAsian',
+  'firstLatino',
 ] as const
 
 const Scatter = () => {
@@ -146,6 +150,34 @@ const Scatter = () => {
           5 sets of twins, 1 set of triplets. only 1 month where 2 girls were
           unrelated
         </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('firstBlack')
+          }}
+          active={subStage === 'firstBlack'}
+        >
+          first black playmate was Jennifer Jackson
+        </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('firstAsian')
+          }}
+          active={subStage === 'firstAsian'}
+        >
+          first asian playmate was China Lee
+        </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('firstLatino')
+          }}
+          active={subStage === 'firstLatino'}
+        >
+          first latino playmate was Raquel Pomplum
+        </WP>
+
         <WP
           onEnter={() => setStage('mateAge')}
           active={stage === 'mateAge'}

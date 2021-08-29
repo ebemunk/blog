@@ -23,14 +23,18 @@ const getCutouts = (
   data: PlaymateCircle[],
   scales,
 ): CutoutCircle[] => {
+  const mapPlaymateToCutoutCircle = d => ({
+    cx: d.cx,
+    cy: d.cy,
+    r: 10,
+    key: `${d.datum.name}-${d.datum.year}-${d.datum.month}`,
+  })
+
   switch (subStage) {
     case 'marilyn':
-      return [data.find(d => d.datum.name === 'Marilyn Monroe')].map(d => ({
-        cx: d.cx,
-        cy: d.cy,
-        r: 10,
-        key: d.datum.name,
-      }))
+      return data
+        .filter(d => d.datum.name === 'Marilyn Monroe')
+        .map(mapPlaymateToCutoutCircle)
     case 'noissue':
       return [
         {
@@ -50,12 +54,7 @@ const getCutouts = (
             'Janet Pilgrim',
           ].includes(d.datum.name),
         )
-        .map(d => ({
-          cx: d.cx,
-          cy: d.cy,
-          r: 10,
-          key: `${d.datum.year}-${d.datum.month}`,
-        }))
+        .map(mapPlaymateToCutoutCircle)
     case 'multiGirl': {
       const startCenter = {
         cx: 0,
@@ -112,6 +111,21 @@ const getCutouts = (
           .reduce(avgCenter, startCenter),
       ]
     }
+
+    case 'firstBlack':
+      return data
+        .filter(d => d.datum.name === 'Jennifer Jackson')
+        .map(mapPlaymateToCutoutCircle)
+
+    case 'firstAsian':
+      return data
+        .filter(d => d.datum.name === 'China Lee')
+        .map(mapPlaymateToCutoutCircle)
+
+    case 'firstLatino':
+      return data
+        .filter(d => d.datum.name === 'Raquel Pomplum')
+        .map(mapPlaymateToCutoutCircle)
 
     default:
       return []
