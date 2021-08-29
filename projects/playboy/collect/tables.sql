@@ -37,11 +37,13 @@ insert into playmates (name, year, month) values ('Mary Collinson', 1970, 9);
 update playmates set name = 'Karin van Breeschooten' where name = 'Karin van Breeschooten & Mirjam van Breeschooten';
 insert into playmates (name, year, month) values ('Mirjam van Breeschooten', 1989, 8);
 
-update playmates set name = 'Nicole Dahm' where name = 'Dahm triplets';
+update playmates set name = 'Nicole Dahm' where name = 'Nicole, Erica and Jaclyn Dahm';
 insert into playmates (name, year, month) values ('Erica Dahm', 1998, 11);
 insert into playmates (name, year, month) values ('Jaclyn Dahm', 1998, 11);
 
 update playmates set name = 'Jennifer Lyn Jackson' where name = 'Jennifer Jackson' and year = 1989;
+
+update playmates set name ='Khrystyana Kazakova' where name = 'Khrystyana[2]';
 -- RUN AFTER STEP 1 END
 
 -- sanity checks
@@ -49,7 +51,7 @@ select * from playmates where name like '% & %';
 select * from playmates where name like '% and %';
 select * from playmates where name like '%a.k.a.%';
 
--- RUN AFTER STEP 4
+-- RUN AFTER STEP 3
 -- corrections
 update playmates
 set babepedia = '{"Age":"27 years young","Born":"Friday 8th of July 1977","Birthplace":"Queens, New York, United States","Ethnicity":"Other","Profession":"Centerfold, Playboy Model","Hair color":"Brown","Eye color":"Brown","Height":"54\" (or 162 cm)","Weight":"112 lbs (or 51 kg)","Body type":"Slim","Measurements":"34-25-36","Bra/cup size":"H","Boobs":"Real/Natural","Years active":"2001 - present","Tattoos":"None","Piercings":"None","":"Playboy Playmate Of The Month March 2001"}'
@@ -66,4 +68,8 @@ where name = 'Kristine Winder';
 update playmates
 set babepedia = '{"Age":"65 years young","Born":"Sunday 3rd of July 1955","Birthplace":"Buffalo, New York, United States","Ethnicity":"Caucasian","Profession":"Model","Hair color":"Brown","Height":"56\" (or 167 cm)","Weight":"112 lbs (or 51 kg)","Body type":"Average","Measurements":"36-23-32","Bra/cup size":"36E (80E)","Boobs":"Real/Natural","":"Playboy Playmate Of The Month August 1977"}'
 where name = 'Julia Lyndon';
--- RUN AFTER STEP 4 END
+
+update playmates
+set babepedia = '{"Died":"Friday 30th of November 2012 (age 76)","Born":"Saturday 19th of September 1936","Birthplace":"Philadelphia, Pennsylvania, United States","Ethnicity":"Caucasian","Profession":"Centerfold, Playboy Model","Hair color":"Blonde","Height":"57\" (or 170 cm)","Weight":"110 lbs (or 50 kg)","Body type":"Slim","Measurements":"36-23-33","Bra/cup size":"C","Boobs":"Real/Natural","":"Playboy Playmate Of The Month August 1957"}'
+where name = 'Dolores Donlon';
+-- RUN AFTER STEP 3 END

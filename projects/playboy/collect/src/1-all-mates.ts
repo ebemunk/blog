@@ -16,7 +16,7 @@ async function run() {
   const years = $('.wikitable tbody tr')
     .filter((i, el) => i > 0)
     .map((i, tr) => {
-      const year = +$(tr).find('th').first().text().trim()
+      const year = +$(tr).find('th').first().text().replace(/\[1\]/, '').trim()
 
       const months = $(tr)
         .find('td')
@@ -31,13 +31,15 @@ async function run() {
     })
     .get() as { year: number; months: { name: string; month: string }[] }[]
 
-  const mates = years.flatMap(({ year, months }) =>
-    months.map(month => ({
-      year,
-      name: month.name,
-      month: month.month,
-    })),
-  )
+  const mates = years
+    .filter(d => d.year !== 2021)
+    .flatMap(({ year, months }) =>
+      months.map(month => ({
+        year,
+        name: month.name,
+        month: month.month,
+      })),
+    )
 
   const pool = getPool()
 

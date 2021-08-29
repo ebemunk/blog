@@ -96,7 +96,7 @@ function run() {
                     years = $('.wikitable tbody tr')
                         .filter(function (i, el) { return i > 0; })
                         .map(function (i, tr) {
-                        var year = +$(tr).find('th').first().text().trim();
+                        var year = +$(tr).find('th').first().text().replace(/\[1\]/, '').trim();
                         var months = $(tr)
                             .find('td')
                             .map(function (ii, td) {
@@ -108,7 +108,9 @@ function run() {
                         return { year: year, months: months };
                     })
                         .get();
-                    mates = years.flatMap(function (_a) {
+                    mates = years
+                        .filter(function (d) { return d.year !== 2021; })
+                        .flatMap(function (_a) {
                         var year = _a.year, months = _a.months;
                         return months.map(function (month) { return ({
                             year: year,
