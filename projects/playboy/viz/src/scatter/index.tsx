@@ -126,8 +126,13 @@ const Scatter = () => {
           }}
           active={subStage === 'noissue'}
         >
-          there was no March 1955 issue
-          https://web.archive.org/web/20060326233118/http://www.playboy.com/worldofplayboy/faq/collecting.html#4
+          there was no March 1955 issue{' '}
+          <a
+            href="https://web.archive.org/web/20060326233118/http://www.playboy.com/worldofplayboy/faq/collecting.html#4"
+            target="_blank"
+          >
+            here
+          </a>
         </WP>
         <WP
           onEnter={() => {

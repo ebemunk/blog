@@ -30,6 +30,19 @@ const getCutouts = (
     key: `${d.datum.name}-${d.datum.year}-${d.datum.month}`,
   })
 
+  const startCenter = {
+    cx: 0,
+    cy: 0,
+    r: 10,
+    key: '',
+  }
+  const avgCenter = (obj, val, i, arr) => ({
+    cx: (obj?.cx ?? 0) + val.cx / arr.length,
+    cy: (obj?.cy ?? 0) + val.cy / arr.length,
+    r: 10,
+    key: obj?.key + val.datum.name,
+  })
+
   switch (subStage) {
     case 'marilyn':
       return data
@@ -56,19 +69,6 @@ const getCutouts = (
         )
         .map(mapPlaymateToCutoutCircle)
     case 'multiGirl': {
-      const startCenter = {
-        cx: 0,
-        cy: 0,
-        r: 10,
-        key: '',
-      }
-      const avgCenter = (obj, val, i, arr) => ({
-        cx: (obj?.cx ?? 0) + val.cx / arr.length,
-        cy: (obj?.cy ?? 0) + val.cy / arr.length,
-        r: 10,
-        key: obj?.key + val.datum.name,
-      })
-
       return [
         data
           .filter(d => ['Pat Sheehan', 'Mara Corday'].includes(d.datum.name))
@@ -148,12 +148,8 @@ const getCutouts = (
             'Marian Stafford',
             'Marion Scott',
             'Elizabeth Ann Roberts',
-            'Pat Sheehan',
-            'Mara Corday',
             'China Lee',
             'Jennifer Jackson',
-            'Mary Collinson',
-            'Madeleine Collinson',
             'Liv Lindeland',
             'Marilyn Cole',
             'Bonnie Large',
@@ -163,9 +159,6 @@ const getCutouts = (
             'Lonny Chin',
             'Carol Eden',
             'Simone Eden',
-            'Erica Dahm',
-            'Nicole Dahm',
-            'Jaclyn Dahm',
             'Dalene Kurtis',
             'Raquel Pomplun',
             'Ines Rau',
@@ -174,6 +167,23 @@ const getCutouts = (
           ].includes(d.datum.name),
         )
         .map(mapPlaymateToCutoutCircle)
+        .concat(
+          data
+            .filter(d =>
+              ['Erica Dahm', 'Jaclyn Dahm', 'Nicole Dahm'].includes(
+                d.datum.name,
+              ),
+            )
+            .reduce(avgCenter, startCenter),
+          data
+            .filter(d =>
+              ['Madeleine Collinson', 'Mary Collinson'].includes(d.datum.name),
+            )
+            .reduce(avgCenter, startCenter),
+          data
+            .filter(d => ['Pat Sheehan', 'Mara Corday'].includes(d.datum.name))
+            .reduce(avgCenter, startCenter),
+        )
 
     default:
       return []
