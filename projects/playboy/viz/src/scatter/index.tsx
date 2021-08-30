@@ -236,6 +236,55 @@ const Scatter = () => {
         >
           weight
         </WP>
+        <WP
+          onEnter={() => setStage('bust')}
+          active={stage === 'bust'}
+          style={{ height: '20rem' }}
+        >
+          bust
+        </WP>
+        <WP
+          onEnter={() => setStage('waist')}
+          active={stage === 'waist'}
+          style={{ height: '20rem' }}
+        >
+          waist
+        </WP>
+        <WP
+          onEnter={() => setStage('hips')}
+          active={stage === 'hips'}
+          style={{ height: '20rem' }}
+        >
+          hips
+        </WP>
+        <WP
+          onEnter={() => setStage('hair')}
+          active={stage === 'hair'}
+          style={{ height: '20rem' }}
+        >
+          hair
+        </WP>
+        <WP
+          onEnter={() => setStage('ethnicity')}
+          active={stage === 'ethnicity'}
+          style={{ height: '20rem' }}
+        >
+          ethnicity
+        </WP>
+        <WP
+          onEnter={() => setStage('breasts')}
+          active={stage === 'breasts'}
+          style={{ height: '20rem' }}
+        >
+          breasts
+        </WP>
+        <WP
+          onEnter={() => setStage('theCup')}
+          active={stage === 'theCup'}
+          style={{ height: '20rem' }}
+        >
+          theCup
+        </WP>
 
         <div
           style={{
