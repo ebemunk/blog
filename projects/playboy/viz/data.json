@@ -935,12 +935,12 @@
     "theCup": "C",
     "hair": "Blonde",
     "breasts": "Real/Natural",
-    "born": "1936-09-19T08:00:00.000Z",
-    "age": 84,
+    "born": "1920-09-19T08:00:00.000Z",
+    "age": 100,
     "tattoos": null,
     "month": 7,
     "year": 1957,
-    "mateAge": 20
+    "mateAge": 36
   },
   {
     "name": "Jacquelyn Prescott",
@@ -1222,28 +1222,6 @@
     "mateAge": 19
   },
   {
-    "name": "Mara Corday",
-    "height": 165,
-    "weight": 54,
-    "ethnicity": "Caucasian",
-    "measurements": {
-      "bust": 34,
-      "waist": 24,
-      "hips": 35,
-      "cup": "D"
-    },
-    "cup": "D",
-    "theCup": "D",
-    "hair": "Red",
-    "breasts": "Real/Natural",
-    "born": "1930-01-03T08:00:00.000Z",
-    "age": 91,
-    "tattoos": null,
-    "month": 9,
-    "year": 1958,
-    "mateAge": 28
-  },
-  {
     "name": "Pat Sheehan",
     "height": 167,
     "weight": 55,
@@ -1264,6 +1242,28 @@
     "month": 9,
     "year": 1958,
     "mateAge": 27
+  },
+  {
+    "name": "Mara Corday",
+    "height": 165,
+    "weight": 54,
+    "ethnicity": "Caucasian",
+    "measurements": {
+      "bust": 34,
+      "waist": 24,
+      "hips": 35,
+      "cup": "D"
+    },
+    "cup": "D",
+    "theCup": "D",
+    "hair": "Red",
+    "breasts": "Real/Natural",
+    "born": "1930-01-03T08:00:00.000Z",
+    "age": 91,
+    "tattoos": null,
+    "month": 9,
+    "year": 1958,
+    "mateAge": 28
   },
   {
     "name": "Joan Staley",
@@ -5386,25 +5386,20 @@
     "mateAge": 25
   },
   {
-    "name": "Jean Manson",
-    "height": 170,
-    "weight": 55,
-    "ethnicity": "Caucasian",
-    "measurements": {
-      "bust": 36,
-      "waist": 24,
-      "hips": 35
-    },
-    "cup": "B",
-    "theCup": "B",
-    "hair": "Blonde",
-    "breasts": "Real/Natural",
-    "born": "1950-10-01T08:00:00.000Z",
-    "age": 70,
+    "name": "Jeane Manson",
+    "height": null,
+    "weight": null,
+    "ethnicity": null,
+    "measurements": null,
+    "cup": null,
+    "theCup": null,
+    "hair": null,
+    "born": null,
+    "age": null,
     "tattoos": null,
     "month": 7,
     "year": 1974,
-    "mateAge": 23
+    "mateAge": null
   },
   {
     "name": "Kristine Hanson",
@@ -8685,9 +8680,10 @@
     "cup": "C",
     "theCup": "C",
     "hair": "Blonde",
-    "breasts": "Real/Natural",
+    "breasts": "Fake/Enhanced",
     "born": "1961-01-28T08:00:00.000Z",
     "age": 60,
+    "eye": "Brown",
     "tattoos": null,
     "month": 0,
     "year": 1987,
@@ -11845,7 +11841,7 @@
     "mateAge": 21
   },
   {
-    "name": "Jaclyn Dahm",
+    "name": "Nicole Dahm",
     "height": 172,
     "weight": 52,
     "ethnicity": "Caucasian",
@@ -11887,7 +11883,7 @@
     "mateAge": 20
   },
   {
-    "name": "Nicole Dahm",
+    "name": "Jaclyn Dahm",
     "height": 172,
     "weight": 52,
     "ethnicity": "Caucasian",
@@ -12173,17 +12169,16 @@
     "mateAge": 23
   },
   {
-    "name": "Carol Bernaola",
+    "name": "Darlene Bernaola",
     "height": 170,
     "weight": 50,
     "ethnicity": "Latin",
     "measurements": {
       "bust": 32,
       "waist": 23,
-      "hips": 34,
-      "cup": "C"
+      "hips": 34
     },
-    "cup": null,
+    "cup": "C",
     "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
@@ -12195,16 +12190,17 @@
     "mateAge": 23
   },
   {
-    "name": "Darlene Bernaola",
+    "name": "Carol Bernaola",
     "height": 170,
     "weight": 50,
     "ethnicity": "Latin",
     "measurements": {
       "bust": 32,
       "waist": 23,
-      "hips": 34
+      "hips": 34,
+      "cup": "C"
     },
-    "cup": "C",
+    "cup": null,
     "theCup": "C",
     "hair": "Blonde",
     "breasts": "Fake/Enhanced",
@@ -17585,7 +17581,7 @@
     "mateAge": 26
   },
   {
-    "name": "Chastity Samone",
+    "name": "Chasity Samone",
     "height": 172,
     "weight": 49,
     "ethnicity": "Black",
@@ -17712,5 +17708,109 @@
     "month": 6,
     "year": 2020,
     "mateAge": 26
+  },
+  {
+    "name": "Ali Chanel",
+    "height": 175,
+    "weight": 104,
+    "ethnicity": "Caucasian",
+    "measurements": {
+      "bust": 43,
+      "waist": 36,
+      "hips": 46
+    },
+    "cup": "DD",
+    "theCup": "DD",
+    "hair": "Blonde",
+    "breasts": "Real/Natural",
+    "born": "1990-06-17T07:00:00.000Z",
+    "age": 31,
+    "eye": "Blue",
+    "tattoos": null,
+    "month": 7,
+    "year": 2020,
+    "mateAge": 30
+  },
+  {
+    "name": "Danielle Alcaraz",
+    "height": 172,
+    "weight": 57,
+    "ethnicity": "Mixed",
+    "measurements": {
+      "bust": 33,
+      "waist": 24,
+      "hips": 34
+    },
+    "cup": "B",
+    "theCup": "B",
+    "hair": "Brunette",
+    "breasts": "Real/Natural",
+    "born": "1990-05-16T07:00:00.000Z",
+    "age": 31,
+    "eye": "Brown",
+    "tattoos": false,
+    "month": 8,
+    "year": 2020,
+    "mateAge": 30
+  },
+  {
+    "name": "Carolina Ballesteros",
+    "height": 177,
+    "weight": 57,
+    "ethnicity": "Caucasian",
+    "measurements": {
+      "bust": 31,
+      "waist": 23,
+      "hips": 35
+    },
+    "cup": "B",
+    "theCup": "B",
+    "hair": "Brunette",
+    "breasts": "Real/Natural",
+    "born": "1991-11-23T08:00:00.000Z",
+    "age": 29,
+    "eye": "Green",
+    "tattoos": null,
+    "month": 9,
+    "year": 2020,
+    "mateAge": 28
+  },
+  {
+    "name": "Khrystyana Kazakova",
+    "height": 177,
+    "weight": 68,
+    "ethnicity": "Caucasian",
+    "measurements": {
+      "bust": 34,
+      "waist": 28,
+      "hips": 42
+    },
+    "cup": "D",
+    "theCup": "D",
+    "hair": "Blonde",
+    "breasts": "Real/Natural",
+    "born": "1985-05-21T07:00:00.000Z",
+    "age": 36,
+    "eye": "Green",
+    "tattoos": null,
+    "month": 10,
+    "year": 2020,
+    "mateAge": 35
+  },
+  {
+    "name": "Tanerélle",
+    "height": null,
+    "weight": null,
+    "ethnicity": "Black",
+    "measurements": null,
+    "cup": null,
+    "theCup": null,
+    "hair": null,
+    "born": "1995-04-09T07:00:00.000Z",
+    "age": 26,
+    "tattoos": null,
+    "month": 11,
+    "year": 2020,
+    "mateAge": 25
   }
 ]

@@ -27,7 +27,9 @@ const getBabe = async (name: string) => {
         ...acc,
         [cur.key]: cur.val,
       }),
-      {},
+      {
+        url: `https://www.babepedia.com/babe/${slug}`,
+      },
     )
 }
 

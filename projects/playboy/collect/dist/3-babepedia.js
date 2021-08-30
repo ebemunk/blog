@@ -80,7 +80,9 @@ var getBabe = function (name) { return __awaiter(void 0, void 0, void 0, functio
                         .reduce(function (acc, cur) {
                         var _a;
                         return (__assign(__assign({}, acc), (_a = {}, _a[cur.key] = cur.val, _a)));
-                    }, {})];
+                    }, {
+                        url: "https://www.babepedia.com/babe/" + slug,
+                    })];
         }
     });
 }); };
