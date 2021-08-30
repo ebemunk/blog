@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import * as d3 from 'd3'
 import { PlaymateCircle } from '../types'
 
@@ -33,6 +33,8 @@ const PlaymateCircles = ({
               'data-playmate',
               d => `${d.datum.name}-${d.datum.year}-${d.datum.month}`,
             )
+            .attr('stroke-width', 4)
+            .attr('stroke', 'none')
             .call(enter =>
               enter
                 .transition(t) //
@@ -60,6 +62,31 @@ const PlaymateCircles = ({
             ),
       )
   })
+
+  useEffect(() => {
+    const hoverListener = evt => {
+      d3.select(ref.current)
+        .selectAll('circle')
+        .select(function (this: SVGCircleElement) {
+          //@ts-ignore stroke exists i promise
+          return this.attributes.stroke.value !== 'none' ? this : null
+        })
+        .attr('stroke', 'none')
+
+      if (!evt.detail) return
+
+      const key = `${evt.detail.name}-${evt.detail.year}-${evt.detail.month}`
+      d3.select(ref.current)
+        .select(`[data-playmate="${key}"]`)
+        .attr('stroke', 'white')
+    }
+
+    window.addEventListener('playmateCircleHover', hoverListener)
+
+    return () => {
+      window.removeEventListener('playmateCircleHover', hoverListener)
+    }
+  }, [])
 
   return <g ref={ref} {...rest} />
 }

@@ -40,7 +40,7 @@ const Voronoi = ({
     setDelaunay(Delaunay.from(data.map(d => [d.cx, d.cy])))
     setPinned(false)
     setShowing(null)
-  }, [stage])
+  }, [stage, plotCtx])
 
   const ref = useRef(null)
   useEffect(() => {
@@ -64,6 +64,14 @@ const Voronoi = ({
       window.removeEventListener('click', listener, { capture: true })
     }
   }, [setPinned, setShowing, pinned, ref.current])
+
+  useEffect(() => {
+    window.dispatchEvent(
+      new CustomEvent('playmateCircleHover', {
+        detail: showing?.data,
+      }),
+    )
+  }, [showing])
 
   return (
     <g>
