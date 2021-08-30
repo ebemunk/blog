@@ -70,6 +70,6 @@ set babepedia = '{"Age":"65 years young","Born":"Sunday 3rd of July 1955","Birth
 where name = 'Julia Lyndon';
 
 update playmates
-set babepedia = '{"Died":"Friday 30th of November 2012 (age 76)","Born":"Saturday 19th of September 1936","Birthplace":"Philadelphia, Pennsylvania, United States","Ethnicity":"Caucasian","Profession":"Centerfold, Playboy Model","Hair color":"Blonde","Height":"57\" (or 170 cm)","Weight":"110 lbs (or 50 kg)","Body type":"Slim","Measurements":"36-23-33","Bra/cup size":"C","Boobs":"Real/Natural","":"Playboy Playmate Of The Month August 1957"}'
+set babepedia = '{"Died":"Friday 30th of November 2012 (age 76)","Born":"Saturday 19th of September 1920","Birthplace":"Philadelphia, Pennsylvania, United States","Ethnicity":"Caucasian","Profession":"Centerfold, Playboy Model","Hair color":"Blonde","Height":"57\" (or 170 cm)","Weight":"110 lbs (or 50 kg)","Body type":"Slim","Measurements":"36-23-33","Bra/cup size":"C","Boobs":"Real/Natural","":"Playboy Playmate Of The Month August 1957"}'
 where name = 'Dolores Donlon';
 -- RUN AFTER STEP 3 END
