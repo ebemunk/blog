@@ -72,4 +72,8 @@ where name = 'Julia Lyndon';
 update playmates
 set babepedia = '{"Died":"Friday 30th of November 2012 (age 76)","Born":"Saturday 19th of September 1920","Birthplace":"Philadelphia, Pennsylvania, United States","Ethnicity":"Caucasian","Profession":"Centerfold, Playboy Model","Hair color":"Blonde","Height":"57\" (or 170 cm)","Weight":"110 lbs (or 50 kg)","Body type":"Slim","Measurements":"36-23-33","Bra/cup size":"C","Boobs":"Real/Natural","":"Playboy Playmate Of The Month August 1957"}'
 where name = 'Dolores Donlon';
+
+update playmates
+set babepedia = '{"url":"https://www.babepedia.com/babe/Ester_Cordet","Age":"74 years young","Born":"Tuesday 31st of December 1946","Birthplace":"Panama","Ethnicity":"Latin","Profession":"Adult Model, Centerfold, Playboy Model","Hair color":"Black","Height":"58\" (or 172 cm)","Weight":"123 lbs (or 56 kg)","Body type":"Slim","Measurements":"36D-24-36","Bra/cup size":"36D","Boobs":"Real/Natural","":"Playboy Playmate Of The Month October 1974"}'
+where name = 'Ester Cordet';
 -- RUN AFTER STEP 3 END

@@ -124,7 +124,55 @@ const getCutouts = (
 
     case 'firstLatino':
       return data
-        .filter(d => d.datum.name === 'Raquel Pomplum')
+        .filter(d => d.datum.name === 'Ester Cordet')
+        .map(mapPlaymateToCutoutCircle)
+
+    case 'firstTransgender':
+      return data
+        .filter(d => d.datum.name === 'Ines Rau')
+        .map(mapPlaymateToCutoutCircle)
+
+    case 'momDaughter':
+      return data
+        .filter(d => ['Carol Eden', 'Simone Eden'].includes(d.datum.name))
+        .map(mapPlaymateToCutoutCircle)
+
+    case 'otherFirsts':
+      return data
+        .filter(d =>
+          [
+            'Marilyn Monroe',
+            'Margie Harrison',
+            'Marilyn Waltz',
+            'Janet Pilgrim',
+            'Marian Stafford',
+            'Marion Scott',
+            'Elizabeth Ann Roberts',
+            'Pat Sheehan',
+            'Mara Corday',
+            'China Lee',
+            'Jennifer Jackson',
+            'Mary Collinson',
+            'Madeleine Collinson',
+            'Liv Lindeland',
+            'Marilyn Cole',
+            'Bonnie Large',
+            'Ester Cordet',
+            'Elaine Morton',
+            'Karen Elaine Morton',
+            'Lonny Chin',
+            'Carol Eden',
+            'Simone Eden',
+            'Erica Dahm',
+            'Nicole Dahm',
+            'Jaclyn Dahm',
+            'Dalene Kurtis',
+            'Raquel Pomplun',
+            'Ines Rau',
+            'Marsha Elle',
+            'Priscilla Huggins',
+          ].includes(d.datum.name),
+        )
         .map(mapPlaymateToCutoutCircle)
 
     default:

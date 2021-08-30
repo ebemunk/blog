@@ -76,6 +76,9 @@ const SUB_STAGES = [
   'firstBlack',
   'firstAsian',
   'firstLatino',
+  'firstTransgender',
+  'momDaughter',
+  'otherFirsts',
 ] as const
 
 const Scatter = () => {
@@ -114,7 +117,7 @@ const Scatter = () => {
           }}
           active={subStage === 'marilyn'}
         >
-          marilyn was the first
+          marilyn was the first, she was "Sweetheart of the Month"
         </WP>
         <WP
           onEnter={() => {
@@ -175,7 +178,34 @@ const Scatter = () => {
           }}
           active={subStage === 'firstLatino'}
         >
-          first latino playmate was Raquel Pomplum
+          first latino playmate was Ester Cordet
+        </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('firstTransgender')
+          }}
+          active={subStage === 'firstTransgender'}
+        >
+          first transgender Ines Rau also does not have a page on babepedia
+        </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('momDaughter')
+          }}
+          active={subStage === 'momDaughter'}
+        >
+          Carol Eden (1960) and Simone Eden (1989) were mom-dau
+        </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('otherFirsts')
+          }}
+          active={subStage === 'otherFirsts'}
+        >
+          Explore some of the other "firsts" in playmates.
         </WP>
 
         <WP
