@@ -41,7 +41,22 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
             tickFormat={() => ''}
             opacity={0.2}
           />
-          <YAxis scale={scales.sY} stage={stage} />
+          <YAxis
+            //@ts-ignore its fine
+            scale={scales.sY}
+            stage={stage}
+            units={
+              {
+                start: '',
+                mateAge: 'Years old',
+                height: 'centimetres',
+                weight: 'kilograms',
+                bust: 'inches',
+                waist: 'inches',
+                hips: 'inches',
+              }[stage]
+            }
+          />
         </>
       )}
       {['hair', 'ethnicity', 'breasts', 'theCup'].includes(stage) && (

@@ -42,16 +42,23 @@ export const XAxis = ({
   }
 }
 
-export const YAxis = ({ stage, scale }) => {
+export const YAxis = ({
+  stage,
+  units,
+  ...rest
+}: {
+  stage: string
+  units: string
+} & ComponentProps<typeof Axis>) => {
   switch (stage) {
     case 'start':
       return (
         <Axis
-          scale={scale}
           orientation="left"
           tickFormat={d => MONTHS[d]}
           transitionDuration={300}
           tickSizeOuter={0}
+          {...rest}
         />
       )
 
@@ -62,12 +69,22 @@ export const YAxis = ({ stage, scale }) => {
     case 'waist':
     case 'hips':
       return (
-        <Axis
-          scale={scale}
-          orientation="left"
-          tickSizeOuter={0}
-          transitionDuration={300}
-        />
+        <g>
+          <Axis
+            orientation="left"
+            tickSizeOuter={0}
+            transitionDuration={300}
+            {...rest}
+          />
+          <text
+            y={rest.scale(rest.scale.domain()[0])}
+            fill="currentColor"
+            fontSize={12}
+            dx="0.25rem"
+          >
+            {units}
+          </text>
+        </g>
       )
 
     default:
