@@ -1,6 +1,6 @@
 +++
 publishDate = "2020-07-01"
-title = "Beauty:"
+title = "Beholder:"
 slug = "beauty"
 tags = ["data visualization", "playboy"]
 image = "img/plane-crashes.png"
