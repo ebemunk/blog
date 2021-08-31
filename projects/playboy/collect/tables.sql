@@ -66,15 +66,15 @@ set babepedia = babepedia::jsonb || '{"Ethnicity": "Latin"}'::jsonb
 where name = 'Ester Cordet';
 
 update playmates
-set babepedia = babepedia::jsonb || '{"Hair color":"Black"}'::jsonb
+set babepedia = babepedia::jsonb || '{"Hair color":"Black","Boobs":"Real/Natural"}'::jsonb
 where name = 'Tanerélle';
 
 update playmates
-set babepedia = babepedia::jsonb || '{"Hair color":"Blonde","Ethnicity":"Caucasian"}'::jsonb
+set babepedia = babepedia::jsonb || '{"Hair color":"Blonde","Ethnicity":"Caucasian","Boobs":"Real/Natural"}'::jsonb
 where name = 'Jeane Manson';
 
 update playmates
-set babepedia = babepedia::jsonb || '{"Hair color":"Brunette","Ethnicity":"Black"}'::jsonb
+set babepedia = babepedia::jsonb || '{"Hair color":"Brunette","Ethnicity":"Black","Boobs":"Fake/Enhanced"}'::jsonb
 where name = 'Ines Rau';
 
 update playmates

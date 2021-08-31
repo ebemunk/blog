@@ -9,6 +9,8 @@ import PlaymateCircles from './PlaymateCircles'
 import useStageData from './useStageData'
 import { STAGES } from './util'
 import Voronoi from './Voronoi'
+import { data as fullData } from '../data'
+import { format } from 'd3-format'
 
 const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
   console.log('viz rendering', stage)
@@ -17,8 +19,20 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
 
   const { scales, data, accessors } = useStageData(stage)
 
+  const pct = format('.0%')(data.length / fullData.length)
+
   return (
     <>
+      <text
+        fill="white"
+        x={chartWidth}
+        y={chartHeight}
+        textAnchor="end"
+        alignmentBaseline="baseline"
+        fontSize={12}
+      >
+        {pct} data ({data.length} of {fullData.length} total)
+      </text>
       {[
         'start',
         'mateAge',
