@@ -137,6 +137,7 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                                     if (!name) {
                                         // @ts-ignore
                                         console.log('!name', name, info.year);
+                                        return [2 /*return*/];
                                     }
                                     _b.label = 1;
                                 case 1:
@@ -146,7 +147,7 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                                 case 2:
                                     if (!!nameArr_1_1.done) return [3 /*break*/, 6];
                                     n = nameArr_1_1.value;
-                                    return [4 /*yield*/, pool.query("select * from playboy.playmates where name='" + n + "'")];
+                                    return [4 /*yield*/, pool.query("select * from playboy.playmates where name='" + n.replaceAll("'", "''") + "'")];
                                 case 3:
                                     res = _b.sent();
                                     if (res.rowCount < 1) {

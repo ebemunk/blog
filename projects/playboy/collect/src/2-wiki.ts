@@ -56,11 +56,15 @@ const run = async () => {
     if (!name) {
       // @ts-ignore
       console.log('!name', name, info.year)
+      return
     }
 
     for (let n of nameArr) {
       const res = await pool.query(
-        `select * from playboy.playmates where name='${n}'`,
+        `select * from playboy.playmates where name='${n.replaceAll(
+          "'",
+          "''",
+        )}'`,
       )
 
       if (res.rowCount < 1) {

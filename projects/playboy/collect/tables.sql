@@ -54,26 +54,30 @@ select * from playmates where name like '%a.k.a.%';
 -- RUN AFTER STEP 3
 -- corrections
 update playmates
-set babepedia = '{"Age":"27 years young","Born":"Friday 8th of July 1977","Birthplace":"Queens, New York, United States","Ethnicity":"Other","Profession":"Centerfold, Playboy Model","Hair color":"Brown","Eye color":"Brown","Height":"54\" (or 162 cm)","Weight":"112 lbs (or 51 kg)","Body type":"Slim","Measurements":"34-25-36","Bra/cup size":"H","Boobs":"Real/Natural","Years active":"2001 - present","Tattoos":"None","Piercings":"None","":"Playboy Playmate Of The Month March 2001"}'
-where name = 'Miriam Gonzalez';
-
-update playmates
-set babepedia = '{"Age":"72 years young","Born":"Saturday 24th of January 1948","Birthplace":"Cleveland, Ohio, United States","Ethnicity":"Caucasian","Hair color":"Black","Height":"151\" (or 160 cm)","Weight":"112 lbs (or 51 kg)","Body type":"Slim","Measurements":"36-25-36","Bra/cup size":"C","Boobs":"Real/Natural","":"Playboy Playmate Of The Month August 1969"}'
-where name = 'Debbie Hooper';
-
-update playmates
-set babepedia = '{"Died":"Saturday 1st of January 2011 (age 55)","Born":"Saturday 15th of October 1955","Birthplace":"Vancouver, British Columbia, Canada","Ethnicity":"Caucasian","Profession":"Glamour Model","Hair color":"Brown","Eye color":"Brown","Height":"19\" (or 168 cm)","Weight":"368 lbs (or 54 kg)","Body type":"Slim","Measurements":"34D-25-34","Bra/cup size":"34D","Boobs":"Real/Natural","Tattoos":"None","Piercings":"None","":"Playboy Playmate Of The Month October 1977"}'
-where name = 'Kristine Winder';
-
-update playmates
-set babepedia = '{"Age":"65 years young","Born":"Sunday 3rd of July 1955","Birthplace":"Buffalo, New York, United States","Ethnicity":"Caucasian","Profession":"Model","Hair color":"Brown","Height":"56\" (or 167 cm)","Weight":"112 lbs (or 51 kg)","Body type":"Average","Measurements":"36-23-32","Bra/cup size":"36E (80E)","Boobs":"Real/Natural","":"Playboy Playmate Of The Month August 1977"}'
+set babepedia = babepedia::jsonb || '{"Measurements": "36-23-32"}'::jsonb
 where name = 'Julia Lyndon';
 
 update playmates
-set babepedia = '{"Died":"Friday 30th of November 2012 (age 76)","Born":"Saturday 19th of September 1920","Birthplace":"Philadelphia, Pennsylvania, United States","Ethnicity":"Caucasian","Profession":"Centerfold, Playboy Model","Hair color":"Blonde","Height":"57\" (or 170 cm)","Weight":"110 lbs (or 50 kg)","Body type":"Slim","Measurements":"36-23-33","Bra/cup size":"C","Boobs":"Real/Natural","":"Playboy Playmate Of The Month August 1957"}'
+set babepedia = babepedia::jsonb || '{"Born": "Saturday 19th of September 1920"}'::jsonb
 where name = 'Dolores Donlon';
 
 update playmates
-set babepedia = '{"url":"https://www.babepedia.com/babe/Ester_Cordet","Age":"74 years young","Born":"Tuesday 31st of December 1946","Birthplace":"Panama","Ethnicity":"Latin","Profession":"Adult Model, Centerfold, Playboy Model","Hair color":"Black","Height":"58\" (or 172 cm)","Weight":"123 lbs (or 56 kg)","Body type":"Slim","Measurements":"36D-24-36","Bra/cup size":"36D","Boobs":"Real/Natural","":"Playboy Playmate Of The Month October 1974"}'
+set babepedia = babepedia::jsonb || '{"Ethnicity": "Latin"}'::jsonb
 where name = 'Ester Cordet';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Hair color":"Black"}'::jsonb
+where name = 'Tanerélle';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Hair color":"Blonde","Ethnicity":"Caucasian"}'::jsonb
+where name = 'Jeane Manson';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Hair color":"Brunette","Ethnicity":"Black"}'::jsonb
+where name = 'Ines Rau';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Hair color":"Auburn"}'::jsonb
+where name = 'Phyllis Coleman';
 -- RUN AFTER STEP 3 END
