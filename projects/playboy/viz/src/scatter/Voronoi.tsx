@@ -20,17 +20,21 @@ const Voronoi = ({
     reference: Element
   }>(null)
   const [popper, setPopper] = useState(null)
-  const { styles, attributes } = usePopper(showing?.reference, popper, {
-    placement: 'top',
-    modifiers: [
-      {
-        name: 'offset',
-        options: {
-          offset: [0, 8],
+  const { styles, attributes, forceUpdate } = usePopper(
+    showing?.reference,
+    popper,
+    {
+      placement: 'top',
+      modifiers: [
+        {
+          name: 'offset',
+          options: {
+            offset: [0, 8],
+          },
         },
-      },
-    ],
-  })
+      ],
+    },
+  )
   const [pinned, setPinned] = useState(false)
   const [delaunay, setDelaunay] = useState(
     Delaunay.from(data.map(d => [d.cx, d.cy])),
@@ -72,6 +76,12 @@ const Voronoi = ({
       }),
     )
   }, [showing])
+
+  useEffect(() => {
+    if (!pinned) return
+
+    forceUpdate()
+  }, [pinned])
 
   return (
     <g>

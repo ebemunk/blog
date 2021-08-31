@@ -60,7 +60,7 @@ export default function useStageData(stage) {
           const datum = {
             cx: sX(xA(d)) as number,
             cy: sY(yA(d)) as number,
-            fill: cA(d) ? (sC(cA(d)) as string) : 'cyan',
+            fill: sC(cA(d)) as string,
             datum: d,
           }
 

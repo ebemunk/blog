@@ -2,6 +2,7 @@ import React from 'react'
 import { usePlotContext } from 'vizlib'
 
 import { XAxis, YAxis } from './Axis'
+import Bars from './Bars'
 import GroupingCircles from './GroupingCircles'
 import LOESS from './LOESS'
 import PlaymateCircles from './PlaymateCircles'
@@ -14,7 +15,7 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
 
   const { chartHeight, chartWidth } = usePlotContext()
 
-  const { scales, data } = useStageData(stage)
+  const { scales, data, accessors } = useStageData(stage)
 
   return (
     <>
@@ -57,19 +58,36 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
               }[stage]
             }
           />
+          <YAxis
+            //@ts-ignore its fine
+            scale={scales.sY}
+            stage={stage}
+            tickSizeInner={-chartWidth}
+            tickFormat={() => ''}
+            opacity={0.2}
+          />
         </>
       )}
       {['hair', 'ethnicity', 'breasts', 'theCup'].includes(stage) && (
-        <GroupingCircles
-          className="extras"
-          data={scales.extras.map(d => ({
-            ...d,
-            cx: d.x,
-            cy: d.y,
-            stroke: scales.sC(d.data[0]) as string,
-          }))}
-          transitionDuration={750}
-        />
+        <>
+          <GroupingCircles
+            className="extras"
+            data={scales.extras.map(d => ({
+              ...d,
+              cx: d.x,
+              cy: d.y,
+              stroke: scales.sC(d.data[0]) as string,
+            }))}
+            transitionDuration={750}
+          />
+          <Bars
+            width={chartWidth / 2}
+            height={chartHeight}
+            accessor={accessors.cA}
+            colorScale={scales.sC}
+            transform={`translate(${chartWidth / 2},0)`}
+          />
+        </>
       )}
 
       {['mateAge', 'height', 'weight', 'bust', 'waist', 'hips'].includes(
