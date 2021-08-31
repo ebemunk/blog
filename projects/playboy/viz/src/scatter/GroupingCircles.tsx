@@ -36,7 +36,7 @@ const GroupingCircles = ({
             .attr('cx', d => d.cx)
             .attr('cy', d => d.cy)
             .attr('r', 0)
-            .attr('opacity', 0.4)
+            .attr('opacity', 1)
             .attr('stroke', d => d.stroke)
             .attr('stroke-width', 3)
             .attr('fill', 'transparent')

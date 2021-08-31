@@ -81,11 +81,13 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
             transitionDuration={750}
           />
           <Bars
-            width={chartWidth / 2}
-            height={chartHeight}
+            width={chartWidth / 2 - 40}
+            height={Math.min(chartWidth / 2 / 1.6, chartHeight)}
             accessor={accessors.cA}
             colorScale={scales.sC}
-            transform={`translate(${chartWidth / 2},0)`}
+            transform={`translate(${chartWidth / 2 + 20},${
+              (chartHeight - Math.min(chartWidth / 2 / 1.6, chartHeight)) / 2
+            })`}
           />
         </>
       )}

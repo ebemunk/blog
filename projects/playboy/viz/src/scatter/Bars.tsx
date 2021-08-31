@@ -18,8 +18,6 @@ const Bars = ({
   colorScale: d3.ScaleOrdinal<string, unknown, never>
   accessor: (p: Playmate) => unknown
 } & SVGProps<SVGGElement>) => {
-  const plotCtx = usePlotContext()
-
   const years = range(1953, 2021).map(year => {
     const cols = Object.fromEntries(
       d3.group(
@@ -49,14 +47,14 @@ const Bars = ({
   const yScale = d3
     .scaleLinear()
     .domain([0, 1])
-    .range([plotCtx.chartHeight - 10, 0])
+    .range([height - 10, 0])
 
   console.log('yscale', yScale.domain(), yScale.range())
 
   const xScale = d3
     .scaleBand()
     .domain(years.map(d => d.year.toString()))
-    .range([0, plotCtx.chartWidth / 2])
+    .range([0, width])
     .padding(0.1)
 
   const barsRef = useRef(null)
@@ -102,7 +100,7 @@ const Bars = ({
         scale={xScale}
         orientation="bottom"
         tickValues={d3.range(1955, 2021, 5).map(String)}
-        transform={`translate(0,${plotCtx.chartHeight - 10})`}
+        transform={`translate(0,${height - 10})`}
       />
       <g ref={barsRef} />
     </g>
