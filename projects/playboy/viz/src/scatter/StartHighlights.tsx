@@ -225,7 +225,7 @@ const StartHighlights = ({ subStage }: { subStage: string }) => {
         fillOpacity={0.4}
         opacity={0}
       />
-      <g ref={circlesRef} opacity={0}>
+      <g ref={circlesRef} opacity={0} pointerEvents="none">
         {cutouts.map(d => (
           <circle
             key={`${d.key}-${d.key}`}

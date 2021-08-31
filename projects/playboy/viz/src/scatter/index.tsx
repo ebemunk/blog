@@ -115,7 +115,7 @@ const Scatter = () => {
             setStage('start')
             setSubStage('marilyn')
           }}
-          active={subStage === 'marilyn'}
+          active={stage === 'start' && subStage === 'marilyn'}
         >
           marilyn was the first, she was "Sweetheart of the Month"
         </WP>
@@ -124,7 +124,7 @@ const Scatter = () => {
             setStage('start')
             setSubStage('noissue')
           }}
-          active={subStage === 'noissue'}
+          active={stage === 'start' && subStage === 'noissue'}
         >
           there was no March 1955 issue{' '}
           <a
@@ -139,7 +139,7 @@ const Scatter = () => {
             setStage('start')
             setSubStage('multiMonth')
           }}
-          active={subStage === 'multiMonth'}
+          active={stage === 'start' && subStage === 'multiMonth'}
         >
           some girls were playmates for multiple months
           <br />
@@ -153,7 +153,7 @@ const Scatter = () => {
             setStage('start')
             setSubStage('multiGirl')
           }}
-          active={subStage === 'multiGirl'}
+          active={stage === 'start' && subStage === 'multiGirl'}
         >
           5 sets of twins, 1 set of triplets. only 1 month where 2 girls were
           unrelated
@@ -163,7 +163,7 @@ const Scatter = () => {
             setStage('start')
             setSubStage('firstBlack')
           }}
-          active={subStage === 'firstBlack'}
+          active={stage === 'start' && subStage === 'firstBlack'}
         >
           first black playmate was Jennifer Jackson
         </WP>
@@ -172,7 +172,7 @@ const Scatter = () => {
             setStage('start')
             setSubStage('firstAsian')
           }}
-          active={subStage === 'firstAsian'}
+          active={stage === 'start' && subStage === 'firstAsian'}
         >
           first asian playmate was China Lee
         </WP>
@@ -181,7 +181,7 @@ const Scatter = () => {
             setStage('start')
             setSubStage('firstLatino')
           }}
-          active={subStage === 'firstLatino'}
+          active={stage === 'start' && subStage === 'firstLatino'}
         >
           first latino playmate was Ester Cordet
         </WP>
@@ -190,7 +190,7 @@ const Scatter = () => {
             setStage('start')
             setSubStage('firstTransgender')
           }}
-          active={subStage === 'firstTransgender'}
+          active={stage === 'start' && subStage === 'firstTransgender'}
         >
           first transgender Ines Rau also does not have a page on babepedia
         </WP>
@@ -199,7 +199,7 @@ const Scatter = () => {
             setStage('start')
             setSubStage('momDaughter')
           }}
-          active={subStage === 'momDaughter'}
+          active={stage === 'start' && subStage === 'momDaughter'}
         >
           Carol Eden (1960) and Simone Eden (1989) were mom-dau
         </WP>
@@ -208,7 +208,7 @@ const Scatter = () => {
             setStage('start')
             setSubStage('otherFirsts')
           }}
-          active={subStage === 'otherFirsts'}
+          active={stage === 'start' && subStage === 'otherFirsts'}
         >
           Explore some of the other "firsts" in playmates.
         </WP>
