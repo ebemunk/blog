@@ -84,6 +84,7 @@ const SUB_STAGES = [
 
 import loess from '../../loess.json'
 import { TiArrowUpThick, TiArrowDownThick } from 'react-icons/ti'
+import { Store } from '../store'
 
 const AvgChange = ({ stage }: { stage: typeof STAGES[number] }) => {
   const linreg = loess.find(d => d.key === stage).loess.fitted
@@ -93,6 +94,8 @@ const AvgChange = ({ stage }: { stage: typeof STAGES[number] }) => {
   const diff = last - first
   const pct = d3.format('.0%')(diff / first)
   const avgFormat = d3.format('.1f')
+
+  const units = Store.useState(s => s.units)
 
   return (
     <div style={{}}>
@@ -104,8 +107,8 @@ const AvgChange = ({ stage }: { stage: typeof STAGES[number] }) => {
           color: 'lightgray',
         }}
       >
-        ({avgFormat(diff)} {STAGE_UNITS[stage]} 1954: {avgFormat(first)}, 2020:{' '}
-        {avgFormat(last)})
+        ({avgFormat(diff)} {STAGE_UNITS[units][stage]} 1954: {avgFormat(first)},
+        2020: {avgFormat(last)})
       </span>
     </div>
   )

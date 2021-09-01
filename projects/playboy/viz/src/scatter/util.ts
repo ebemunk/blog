@@ -18,13 +18,24 @@ export const STAGES = [
 ] as const
 
 export const STAGE_UNITS = {
-  start: '',
-  mateAge: 'years',
-  height: 'centimetres',
-  weight: 'kilograms',
-  bust: 'inches',
-  waist: 'inches',
-  hips: 'inches',
+  metric: {
+    start: '',
+    mateAge: 'years',
+    height: 'cm',
+    weight: 'kg',
+    bust: 'cm',
+    waist: 'cm',
+    hips: 'cm',
+  },
+  imperial: {
+    start: '',
+    mateAge: 'years',
+    height: 'ft.in.',
+    weight: 'lbs',
+    bust: 'in',
+    waist: 'in',
+    hips: 'in',
+  },
 }
 
 function flattenObject(o, prefix = '', result = {}, keepNull = true) {

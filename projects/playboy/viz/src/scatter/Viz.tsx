@@ -11,6 +11,7 @@ import { STAGES, STAGE_UNITS } from './util'
 import Voronoi from './Voronoi'
 import { data as fullData } from '../data'
 import { format } from 'd3-format'
+import { Store } from '../store'
 
 const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
   console.log('viz rendering', stage)
@@ -20,6 +21,10 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
   const { scales, data, accessors } = useStageData(stage)
 
   const pct = format('.0%')(data.length / fullData.length)
+
+  const units = Store.useState(s => s.units)
+
+  console.log('whatt', units)
 
   return (
     <>
@@ -60,7 +65,7 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
             //@ts-ignore its fine
             scale={scales.sY}
             stage={stage}
-            units={STAGE_UNITS[stage]}
+            units={STAGE_UNITS[units][stage]}
           />
           <YAxis
             //@ts-ignore its fine

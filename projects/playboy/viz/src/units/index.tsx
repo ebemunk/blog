@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { Store } from '../store'
 
 const Units = () => {
-  const [unit, setUnit] = useState('metric')
+  const unit = Store.useState(s => s.units)
 
   useEffect(() => {
     window.localStorage.setItem('beholder_units', unit)
@@ -10,11 +11,23 @@ const Units = () => {
   return (
     <div>
       Show units in{' '}
-      <button onClick={() => setUnit('imperial')}>
+      <button
+        onClick={() =>
+          Store.update(s => {
+            s.units = 'imperial'
+          })
+        }
+      >
         Imperial (feet, inches, pounds)
       </button>{' '}
       or{' '}
-      <button onClick={() => setUnit('metric')}>
+      <button
+        onClick={() =>
+          Store.update(s => {
+            s.units = 'metric'
+          })
+        }
+      >
         Metric (centimetres, kilograms)
       </button>
     </div>
