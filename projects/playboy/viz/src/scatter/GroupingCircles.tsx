@@ -71,7 +71,11 @@ const GroupingCircles = ({
       .outerRadius(d => +d.r + 16)
       .startAngle(0)
       .endAngle(d => {
-        const total = (d.data[0]?.length ?? 2) + 4
+        const total =
+          (d.data[0]
+            ?.replace('Latin', 'Latino')
+            ?.replace('Real/Natural', 'Natural')
+            ?.replace('Fake/Enhanced', 'Enhanced')?.length ?? 2) + 4
         const angl = (total * 10) / (d.r + Math.PI * 6)
         return angl
       })
@@ -141,11 +145,14 @@ const GroupingCircles = ({
             .attr('letter-spacing', 2)
             .text(
               d =>
-                `${d.data[0] ?? '??'} ${format('.0%')(
-                  d.children.length / total,
-                )}`,
+                `${
+                  d.data[0]
+                    ?.replace('Latin', 'Latino')
+                    ?.replace('Real/Natural', 'Natural')
+                    ?.replace('Fake/Enhanced', 'Enhanced') ?? '??'
+                } ${format('.0%')(d.children.length / total)}`,
             )
-            .attr('id', d => `label-${d.data[0]?.replace('/', '')}`)
+            .attr('id', d => `label-${d.data[0]}`)
             .attr('data-length', function () {
               return this.getComputedTextLength()
             })
@@ -164,11 +171,14 @@ const GroupingCircles = ({
             })
             .text(
               d =>
-                `${d.data[0] ?? '??'} ${format('.0%')(
-                  d.children.length / total,
-                )}`,
+                `${
+                  d.data[0]
+                    ?.replace('Latin', 'Latino')
+                    ?.replace('Real/Natural', 'Natural')
+                    ?.replace('Fake/Enhanced', 'Enhanced') ?? '??'
+                } ${format('.0%')(d.children.length / total)}`,
             )
-            .attr('id', d => `label-${d.data[0]?.replace('/', '')}`)
+            .attr('id', d => `label-${d.data[0]}`)
 
           return update
         },

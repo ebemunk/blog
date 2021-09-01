@@ -60,7 +60,7 @@ const Bars = ({
 
     d3.select(barsRef.current)
       .selectAll('g')
-      .data(stack)
+      .data(stack, d => d.key)
       .join('g')
       .attr('fill', d => colorScale(d.key))
       .selectAll('rect')
