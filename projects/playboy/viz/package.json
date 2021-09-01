@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",
+    "clsx": "^1.1.1",
     "core-js": "3",
     "d3": "^7.0.1",
     "d3-scale-chromatic": "^2.0.0",

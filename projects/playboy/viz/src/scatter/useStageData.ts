@@ -1,26 +1,16 @@
 import { useMemo } from 'react'
 import { usePlotContext } from 'vizlib'
 import { data } from '../data'
+import { Store } from '../store'
 import { PlaymateCircle } from '../types'
 
 import accessors from './accessors'
 import scales from './scales'
 
-const fak = Object.entries(
-  data.reduce(
-    (obj, d) => ({
-      ...obj,
-      [d.name]: obj[d.name] ? obj[d.name] + 1 : 1,
-    }),
-    {},
-  ),
-).filter(d => d[1] > 1)
-
-console.log('marrr', fak)
-
 export default function useStageData(stage) {
   const { chartHeight, chartWidth } = usePlotContext()
-  const [xA, yA, cA] = useMemo(() => accessors(stage), [stage])
+  const units = Store.useState(s => s.units)
+  const [xA, yA, cA] = useMemo(() => accessors(stage, units), [stage])
   const [sX, sY, sC, extras] = useMemo(
     () =>
       scales({
@@ -50,7 +40,6 @@ export default function useStageData(stage) {
   )
 
   const handledMultiple = { ...multiplePlaymates }
-  console.log('multiple', multiplePlaymates)
 
   const playmateCircles: PlaymateCircle[] = useMemo(
     () =>

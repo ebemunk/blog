@@ -6,7 +6,7 @@ import * as d3 from 'd3'
 
 import { ResponsiveSvg } from 'vizlib'
 import StartHighlights from './StartHighlights'
-import { STAGES, STAGE_UNITS } from './util'
+import { loessKey, STAGES, STAGE_UNITS } from './util'
 import Viz from './Viz'
 
 const WP = ({
@@ -87,15 +87,15 @@ import { TiArrowUpThick, TiArrowDownThick } from 'react-icons/ti'
 import { Store } from '../store'
 
 const AvgChange = ({ stage }: { stage: typeof STAGES[number] }) => {
-  const linreg = loess.find(d => d.key === stage).loess.fitted
+  const units = Store.useState(s => s.units)
+  const linreg = loess.find(d => d.key === loessKey(stage, units)).loess.fitted
+
   const first = linreg[0]
   const last = linreg[linreg.length - 1]
 
   const diff = last - first
   const pct = d3.format('.0%')(diff / first)
   const avgFormat = d3.format('.1f')
-
-  const units = Store.useState(s => s.units)
 
   return (
     <div style={{}}>
@@ -119,9 +119,6 @@ const Scatter = () => {
   const [subStage, setSubStage] =
     React.useState<typeof SUB_STAGES[number]>('start')
 
-  console.log('scatter rendering', { stage, subStage })
-
-  const stageIndex = STAGES.indexOf(stage)
   const classes = useStyles()
 
   return (
@@ -312,54 +309,12 @@ const Scatter = () => {
           breasts
         </WP>
         <WP
-          onEnter={() => setStage('theCup')}
-          active={stage === 'theCup'}
+          onEnter={() => setStage('cup')}
+          active={stage === 'cup'}
           style={{ height: '20rem' }}
         >
-          theCup
+          cup
         </WP>
-
-        <div
-          style={{
-            height: '100vh',
-            flexBasis: '30%',
-          }}
-        >
-          <select
-            onChange={e => {
-              // for debugging only
-              // @ts-ignore
-              setStage(e.target.value)
-            }}
-            value={stage}
-          >
-            {STAGES.map(opt => (
-              <option key={opt} value={opt} label={opt} />
-            ))}
-          </select>
-          <button
-            onClick={() => {
-              setStage(s =>
-                stageIndex > 0
-                  ? STAGES[stageIndex - 1]
-                  : STAGES[STAGES.length - 1],
-              )
-            }}
-          >
-            &lt;
-          </button>
-          <button
-            onClick={() => {
-              setStage(s =>
-                stageIndex < STAGES.length - 1
-                  ? STAGES[stageIndex + 1]
-                  : STAGES[0],
-              )
-            }}
-          >
-            &gt;
-          </button>
-        </div>
       </div>
     </div>
   )

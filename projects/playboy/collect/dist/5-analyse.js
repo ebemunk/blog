@@ -56,11 +56,16 @@ var loess_1 = __importDefault(require("loess"));
 // import data from '../../viz/data.json'
 var slices = {
     mateAge: function (d) { return d.mateAge; },
-    height: function (d) { return d.height; },
-    weight: function (d) { return d.weight; },
-    bust: function (d) { var _a; return (_a = d === null || d === void 0 ? void 0 : d.measurements) === null || _a === void 0 ? void 0 : _a.bust; },
-    waist: function (d) { var _a; return (_a = d === null || d === void 0 ? void 0 : d.measurements) === null || _a === void 0 ? void 0 : _a.waist; },
-    hips: function (d) { var _a; return (_a = d === null || d === void 0 ? void 0 : d.measurements) === null || _a === void 0 ? void 0 : _a.hips; },
+    heightIN: function (d) { return d.heightIN; },
+    heightCM: function (d) { return d.heightCM; },
+    weightLB: function (d) { return d.weightLB; },
+    weightKG: function (d) { return d.weightKG; },
+    bustIN: function (d) { return d === null || d === void 0 ? void 0 : d.bustIN; },
+    bustCM: function (d) { return d === null || d === void 0 ? void 0 : d.bustCM; },
+    waistIN: function (d) { return d === null || d === void 0 ? void 0 : d.waistIN; },
+    waistCM: function (d) { return d === null || d === void 0 ? void 0 : d.waistCM; },
+    hipsIN: function (d) { return d === null || d === void 0 ? void 0 : d.hipsIN; },
+    hipsCM: function (d) { return d === null || d === void 0 ? void 0 : d.hipsCM; },
 };
 var run = function () { return __awaiter(void 0, void 0, void 0, function () {
     var file, raw, data, loessArr;

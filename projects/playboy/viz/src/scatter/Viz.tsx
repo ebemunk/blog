@@ -24,8 +24,6 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
 
   const units = Store.useState(s => s.units)
 
-  console.log('whatt', units)
-
   return (
     <>
       <text
@@ -77,7 +75,7 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
           />
         </>
       )}
-      {['hair', 'ethnicity', 'breasts', 'theCup'].includes(stage) && (
+      {['hair', 'ethnicity', 'breasts', 'cup'].includes(stage) && (
         <>
           <GroupingCircles
             className="extras"

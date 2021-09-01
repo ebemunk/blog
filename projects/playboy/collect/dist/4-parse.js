@@ -165,6 +165,9 @@ exports.parseTattoos = function (str) {
         return true;
     return false;
 };
+var cm2in = function (num) { return (num ? num / 2.54 : null); };
+var in2cm = function (num) { return (num ? num * 2.54 : null); };
+var kg2lb = function (num) { return (num ? num / 0.45359237 : null); };
 var run = function () { return __awaiter(void 0, void 0, void 0, function () {
     var pool, rows, mates;
     return __generator(this, function (_a) {
@@ -186,18 +189,21 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                     var cup = exports.parseCup(bp === null || bp === void 0 ? void 0 : bp['Bra/cup size']);
                     return {
                         name: row.name,
-                        height: height,
-                        weight: weight,
-                        ethnicity: ethnicity,
-                        measurements: measurements,
-                        cup: cup,
-                        theCup: (_a = measurements === null || measurements === void 0 ? void 0 : measurements.cup) !== null && _a !== void 0 ? _a : cup,
+                        heightCM: height,
+                        heightIN: cm2in(height),
+                        weightKG: weight,
+                        weightLB: kg2lb(weight),
+                        bustIN: measurements === null || measurements === void 0 ? void 0 : measurements.bust,
+                        bustCM: in2cm(measurements === null || measurements === void 0 ? void 0 : measurements.bust),
+                        waistIN: measurements === null || measurements === void 0 ? void 0 : measurements.waist,
+                        waistCM: in2cm(measurements === null || measurements === void 0 ? void 0 : measurements.waist),
+                        hipsIN: measurements === null || measurements === void 0 ? void 0 : measurements.hips,
+                        hipsCM: in2cm(measurements === null || measurements === void 0 ? void 0 : measurements.hips),
+                        cup: (_a = measurements === null || measurements === void 0 ? void 0 : measurements.cup) !== null && _a !== void 0 ? _a : cup,
                         hair: exports.parseHair(bp === null || bp === void 0 ? void 0 : bp['Hair color']),
                         breasts: bp === null || bp === void 0 ? void 0 : bp['Boobs'],
+                        ethnicity: ethnicity,
                         born: born,
-                        age: born ? date_fns_1.differenceInYears(new Date(), born) : null,
-                        eye: bp === null || bp === void 0 ? void 0 : bp['Eye color'],
-                        tattoos: exports.parseTattoos(bp === null || bp === void 0 ? void 0 : bp['Tattoos']),
                         month: row.month,
                         year: row.year,
                         mateAge: born

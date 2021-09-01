@@ -67,7 +67,7 @@ const scales = ({
     case 'hair':
     case 'ethnicity':
     case 'breasts':
-    case 'theCup': {
+    case 'cup': {
       const packer = pack<Playmate>()
         .size([chartWidth / 2 - 10, chartHeight])
         .padding(d => (d.depth === 1 ? 5 : 25))
@@ -92,13 +92,13 @@ const scales = ({
           null,
         ],
         breasts: ['Real/Natural', 'Fake/Enhanced', null],
-        theCup: ['A', 'B', 'C', 'D', 'DD', 'E', 'F', 'H', 'I', null],
+        cup: ['A', 'B', 'C', 'D', 'DD', 'E', 'F', 'H', 'I', null],
       }
       const csR = {
         hair: schemeSpectral[6],
         ethnicity: schemeSpectral[7],
         breasts: schemeSpectral[3],
-        theCup: schemeSpectral[10],
+        cup: schemeSpectral[10],
       }
 
       const colorScale = scaleOrdinal().domain(csD[stage]).range(csR[stage])

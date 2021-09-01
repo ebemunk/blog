@@ -1,26 +1,25 @@
 declare module 'loess'
 
 export interface Playmate {
-  age: number
   born: string
   breasts?: string
   cup: string
   date: Date
   ethnicity: string
-  eye?: string
   hair: string
-  height: number
+  heightCM: number
+  heightIN: number
   mateAge: number
-  measurements: {
-    bust: number
-    waist: number
-    hips: number
-  }
+  bustCM: number
+  bustIN: number
+  waistCM: number
+  waistIN: number
+  hipsCM: number
+  hipsIN: number
   month: number
   name: string
-  tatoos?: boolean
-  theCup: string
-  weight: number
+  weightKG: number
+  weightLB: number
   year: number
 }
 

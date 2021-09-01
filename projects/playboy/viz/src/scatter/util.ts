@@ -14,7 +14,7 @@ export const STAGES = [
   'hair',
   'ethnicity',
   'breasts',
-  'theCup',
+  'cup',
 ] as const
 
 export const STAGE_UNITS = {
@@ -36,6 +36,24 @@ export const STAGE_UNITS = {
     waist: 'in',
     hips: 'in',
   },
+}
+
+export const loessKey = (stage, units) => {
+  const isMetric = units === 'metric'
+  switch (stage) {
+    case 'height':
+      return isMetric ? 'heightCM' : 'heightIN'
+    case 'weight':
+      return isMetric ? 'weightKG' : 'weightLB'
+    case 'bust':
+      return isMetric ? 'bustCM' : 'bustIN'
+    case 'waist':
+      return isMetric ? 'waistCM' : 'waistIN'
+    case 'hips':
+      return isMetric ? 'hipsCM' : 'hipsIN'
+    default:
+      return stage
+  }
 }
 
 function flattenObject(o, prefix = '', result = {}, keepNull = true) {

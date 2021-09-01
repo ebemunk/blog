@@ -7,11 +7,16 @@ import loess from 'loess'
 
 const slices = {
   mateAge: d => d.mateAge,
-  height: d => d.height,
-  weight: d => d.weight,
-  bust: d => d?.measurements?.bust,
-  waist: d => d?.measurements?.waist,
-  hips: d => d?.measurements?.hips,
+  heightIN: d => d.heightIN,
+  heightCM: d => d.heightCM,
+  weightLB: d => d.weightLB,
+  weightKG: d => d.weightKG,
+  bustIN: d => d?.bustIN,
+  bustCM: d => d?.bustCM,
+  waistIN: d => d?.waistIN,
+  waistCM: d => d?.waistCM,
+  hipsIN: d => d?.hipsIN,
+  hipsCM: d => d?.hipsCM,
 }
 
 const run = async () => {

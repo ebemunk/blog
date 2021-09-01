@@ -5,17 +5,18 @@ import * as d3 from 'd3'
 import loessData from '../../loess.json'
 import { get } from '../data'
 import accessors from './accessors'
+import { Store } from '../store'
+import { loessKey } from './util'
 
 const LOESS = ({ stage, sX, sY }) => {
-  const ld = loessData.find(d => d.key === stage)
-
-  if (!ld) return null
+  const units = Store.useState(s => s.units)
+  const ld = loessData.find(d => d.key === loessKey(stage, units))
 
   const {
     loess: { fitted, halfwidth },
   } = ld
 
-  const dd = get(accessors(stage)[1])
+  const dd = get(accessors(stage, units)[1])
 
   const avgRef = useRef()
   const errRef = useRef()
@@ -50,6 +51,8 @@ const LOESS = ({ stage, sX, sY }) => {
       .duration(750)
       .attr('opacity', 0.3)
   })
+
+  if (!ld) return null
 
   return (
     <>

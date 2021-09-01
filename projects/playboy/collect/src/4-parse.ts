@@ -101,6 +101,10 @@ export const parseTattoos = (str: string | undefined): boolean | null => {
   return false
 }
 
+const cm2in = num => (num ? num / 2.54 : null)
+const in2cm = num => (num ? num * 2.54 : null)
+const kg2lb = num => (num ? num / 0.45359237 : null)
+
 const run = async () => {
   const pool = getPool()
   const { rows } = await pool.query('select * from playboy.playmates')
@@ -119,18 +123,21 @@ const run = async () => {
 
       return {
         name: row.name,
-        height,
-        weight,
-        ethnicity,
-        measurements,
-        cup,
-        theCup: measurements?.cup ?? cup,
+        heightCM: height,
+        heightIN: cm2in(height),
+        weightKG: weight,
+        weightLB: kg2lb(weight),
+        bustIN: measurements?.bust,
+        bustCM: in2cm(measurements?.bust),
+        waistIN: measurements?.waist,
+        waistCM: in2cm(measurements?.waist),
+        hipsIN: measurements?.hips,
+        hipsCM: in2cm(measurements?.hips),
+        cup: measurements?.cup ?? cup,
         hair: parseHair(bp?.['Hair color']),
         breasts: bp?.['Boobs'],
+        ethnicity,
         born,
-        age: born ? differenceInYears(new Date(), born) : null,
-        eye: bp?.['Eye color'],
-        tattoos: parseTattoos(bp?.['Tattoos']),
         month: row.month,
         year: row.year,
         mateAge: born
