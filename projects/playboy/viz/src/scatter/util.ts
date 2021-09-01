@@ -17,6 +17,16 @@ export const STAGES = [
   'theCup',
 ] as const
 
+export const STAGE_UNITS = {
+  start: '',
+  mateAge: 'years',
+  height: 'centimetres',
+  weight: 'kilograms',
+  bust: 'inches',
+  waist: 'inches',
+  hips: 'inches',
+}
+
 function flattenObject(o, prefix = '', result = {}, keepNull = true) {
   if (
     _.isString(o) ||

@@ -7,7 +7,7 @@ import GroupingCircles from './GroupingCircles'
 import LOESS from './LOESS'
 import PlaymateCircles from './PlaymateCircles'
 import useStageData from './useStageData'
-import { STAGES } from './util'
+import { STAGES, STAGE_UNITS } from './util'
 import Voronoi from './Voronoi'
 import { data as fullData } from '../data'
 import { format } from 'd3-format'
@@ -60,17 +60,7 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
             //@ts-ignore its fine
             scale={scales.sY}
             stage={stage}
-            units={
-              {
-                start: '',
-                mateAge: 'Years old',
-                height: 'centimetres',
-                weight: 'kilograms',
-                bust: 'inches',
-                waist: 'inches',
-                hips: 'inches',
-              }[stage]
-            }
+            units={STAGE_UNITS[stage]}
           />
           <YAxis
             //@ts-ignore its fine

@@ -42,14 +42,10 @@ const Bars = ({
       return (d[key]?.length ?? 0) / total
     })(years)
 
-  console.log('datz', years, stack)
-
   const yScale = d3
     .scaleLinear()
     .domain([0, 1])
     .range([height - 10, 0])
-
-  console.log('yscale', yScale.domain(), yScale.range())
 
   const xScale = d3
     .scaleBand()
@@ -85,9 +81,6 @@ const Bars = ({
           .attr('y', d => yScale(d[1]))
           .attr('height', d => {
             const h = yScale(d[0]) - yScale(d[1])
-            if (isNaN(h)) {
-              console.log('nan', d, yScale(d[0]), yScale(d[1]))
-            }
             return h
           }),
       )
@@ -95,12 +88,18 @@ const Bars = ({
 
   return (
     <g {...rest}>
-      <Axis scale={yScale} orientation="left" tickFormat={d3.format('.0%')} />
+      <Axis
+        scale={yScale}
+        orientation="left"
+        tickFormat={d3.format('.0%')}
+        transitionDuration={300}
+      />
       <Axis
         scale={xScale}
         orientation="bottom"
         tickValues={d3.range(1955, 2021, 5).map(String)}
         transform={`translate(0,${height - 10})`}
+        transitionDuration={300}
       />
       <g ref={barsRef} />
     </g>

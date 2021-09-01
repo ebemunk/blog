@@ -2,10 +2,11 @@ import * as React from 'react'
 import { hot } from 'react-hot-loader'
 import { createUseStyles } from 'react-jss'
 import { Waypoint } from 'react-waypoint'
+import * as d3 from 'd3'
 
 import { ResponsiveSvg } from 'vizlib'
 import StartHighlights from './StartHighlights'
-import { STAGES } from './util'
+import { STAGES, STAGE_UNITS } from './util'
 import Viz from './Viz'
 
 const WP = ({
@@ -22,7 +23,7 @@ const WP = ({
     <div
       style={{
         padding: '1rem',
-        background: 'green',
+        background: 'rgba(255,255,255,0.2)',
         marginTop: '10rem',
         marginBottom: '10rem',
         opacity: active ? 1 : 0.3,
@@ -80,6 +81,35 @@ const SUB_STAGES = [
   'momDaughter',
   'otherFirsts',
 ] as const
+
+import loess from '../../loess.json'
+import { TiArrowUpThick, TiArrowDownThick } from 'react-icons/ti'
+
+const AvgChange = ({ stage }: { stage: typeof STAGES[number] }) => {
+  const linreg = loess.find(d => d.key === stage).loess.fitted
+  const first = linreg[0]
+  const last = linreg[linreg.length - 1]
+
+  const diff = last - first
+  const pct = d3.format('.0%')(diff / first)
+  const avgFormat = d3.format('.1f')
+
+  return (
+    <div style={{}}>
+      {pct}
+      {diff > 0 ? <TiArrowUpThick /> : <TiArrowDownThick />}
+      <span
+        style={{
+          fontSize: '0.9rem',
+          color: 'lightgray',
+        }}
+      >
+        ({avgFormat(diff)} {STAGE_UNITS[stage]} 1954: {avgFormat(first)}, 2020:{' '}
+        {avgFormat(last)})
+      </span>
+    </div>
+  )
+}
 
 const Scatter = () => {
   const [stage, setStage] = React.useState<typeof STAGES[number]>('start')
@@ -218,7 +248,7 @@ const Scatter = () => {
           active={stage === 'mateAge'}
           style={{ height: '10rem' }}
         >
-          age
+          age <AvgChange stage="mateAge" />
         </WP>
         <WP
           onEnter={() => {
@@ -227,35 +257,35 @@ const Scatter = () => {
           active={stage === 'height'}
           style={{ height: '15rem' }}
         >
-          height
+          height <AvgChange stage="height" />
         </WP>
         <WP
           onEnter={() => setStage('weight')}
           active={stage === 'weight'}
           style={{ height: '20rem' }}
         >
-          weight
+          weight <AvgChange stage="weight" />
         </WP>
         <WP
           onEnter={() => setStage('bust')}
           active={stage === 'bust'}
           style={{ height: '20rem' }}
         >
-          bust
+          bust <AvgChange stage="bust" />
         </WP>
         <WP
           onEnter={() => setStage('waist')}
           active={stage === 'waist'}
           style={{ height: '20rem' }}
         >
-          waist
+          waist <AvgChange stage="waist" />
         </WP>
         <WP
           onEnter={() => setStage('hips')}
           active={stage === 'hips'}
           style={{ height: '20rem' }}
         >
-          hips
+          hips <AvgChange stage="hips" />
         </WP>
         <WP
           onEnter={() => setStage('hair')}
