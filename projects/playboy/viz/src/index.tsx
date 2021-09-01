@@ -13,6 +13,9 @@ render(<Scatter />, '#viz-scatter')
 import BWH from './bwh/index'
 render(<BWH />, '#viz-bwh')
 
+import Units from './units/index'
+render(<Units />, '#viz-units')
+
 //@ts-ignore
 window.showFps = function () {
   var script = document.createElement('script')
