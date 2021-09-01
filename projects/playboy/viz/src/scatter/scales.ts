@@ -69,7 +69,7 @@ const scales = ({
     case 'breasts':
     case 'theCup': {
       const packer = pack<Playmate>()
-        .size([chartWidth / 2, chartHeight])
+        .size([chartWidth / 2 - 10, chartHeight])
         .padding(d => (d.depth === 1 ? 5 : 25))
 
       const grouped = group(data, d => d[stage] ?? null)
@@ -95,21 +95,9 @@ const scales = ({
         theCup: ['A', 'B', 'C', 'D', 'DD', 'E', 'F', 'H', 'I', null],
       }
       const csR = {
-        // hair: ['yellow', 'brown', 'black', 'red', 'orange', 'cyan'],
         hair: schemeSpectral[6],
-        // ethnicity: [
-        //   'white',
-        //   'black',
-        //   'brown',
-        //   'yellow',
-        //   'purple',
-        //   'salmon',
-        //   'cyan',
-        // ],
         ethnicity: schemeSpectral[7],
-        // breasts: ['green', 'red', 'cyan'],
         breasts: schemeSpectral[3],
-        // theCup: [...schemeSpectral[9], 'cyan'],
         theCup: schemeSpectral[10],
       }
 

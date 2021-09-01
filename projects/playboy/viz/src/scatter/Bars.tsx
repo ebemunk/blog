@@ -95,7 +95,7 @@ const Bars = ({
 
   return (
     <g {...rest}>
-      <Axis scale={yScale} orientation="left" />
+      <Axis scale={yScale} orientation="left" tickFormat={d3.format('.0%')} />
       <Axis
         scale={xScale}
         orientation="bottom"
