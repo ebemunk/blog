@@ -7,7 +7,7 @@ import GroupingCircles from './GroupingCircles'
 import LOESS from './LOESS'
 import PlaymateCircles from './PlaymateCircles'
 import useStageData from './useStageData'
-import { STAGES, STAGE_UNITS } from './util'
+import { formatFeetIn, STAGES, STAGE_UNITS } from './util'
 import Voronoi from './Voronoi'
 import { data as fullData } from '../data'
 import { format } from 'd3-format'
@@ -64,6 +64,7 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
             scale={scales.sY}
             stage={stage}
             units={STAGE_UNITS[units][stage]}
+            tickFormat={stage === 'height' ? formatFeetIn : null}
           />
           <YAxis
             //@ts-ignore its fine

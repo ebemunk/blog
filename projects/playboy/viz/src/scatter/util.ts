@@ -1,3 +1,4 @@
+import { format } from 'd3'
 import _ from 'lodash'
 import { data } from '../data'
 
@@ -54,6 +55,15 @@ export const loessKey = (stage, units) => {
     default:
       return stage
   }
+}
+
+export const formatFeetIn = num => {
+  const feet = Math.floor(num / 12)
+  const formatter = format('.0f')
+
+  if (!feet) return `${formatter(num)}"`
+
+  return `${feet}'${formatter(num % 12)}"`
 }
 
 function flattenObject(o, prefix = '', result = {}, keepNull = true) {

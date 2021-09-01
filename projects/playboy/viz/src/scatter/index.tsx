@@ -6,7 +6,7 @@ import * as d3 from 'd3'
 
 import { ResponsiveSvg } from 'vizlib'
 import StartHighlights from './StartHighlights'
-import { loessKey, STAGES, STAGE_UNITS } from './util'
+import { formatFeetIn, loessKey, STAGES, STAGE_UNITS } from './util'
 import Viz from './Viz'
 
 const WP = ({
@@ -95,7 +95,8 @@ const AvgChange = ({ stage }: { stage: typeof STAGES[number] }) => {
 
   const diff = last - first
   const pct = d3.format('.0%')(diff / first)
-  const avgFormat = d3.format('.1f')
+  const avgFormat = stage === 'height' ? formatFeetIn : d3.format('.1f')
+  const unitfmt = stage === 'height' ? ',' : ` ${STAGE_UNITS[units][stage]},`
 
   return (
     <div style={{}}>
@@ -107,8 +108,10 @@ const AvgChange = ({ stage }: { stage: typeof STAGES[number] }) => {
           color: 'lightgray',
         }}
       >
-        ({avgFormat(diff)} {STAGE_UNITS[units][stage]} 1954: {avgFormat(first)},
-        2020: {avgFormat(last)})
+        ({avgFormat(diff)}
+        {unitfmt} 1954: {avgFormat(first)}
+        {unitfmt} 2020: {avgFormat(last)}
+        {unitfmt.replace(',', '')})
       </span>
     </div>
   )
