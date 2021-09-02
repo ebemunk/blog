@@ -210,6 +210,7 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                             ? date_fns_1.differenceInYears(new Date(row.year, row.month, 1), born)
                             : null,
                         first: row.first,
+                        url: bp.url,
                     };
                 })
                     .sort(function (a, b) {

@@ -5,13 +5,14 @@ import { usePlotContext } from 'vizlib'
 import { usePopper } from 'react-popper'
 import { Playmate, PlaymateCircle } from '../types'
 import PlaymateTooltip from './PlaymateTooltip'
+import { STAGES } from './util'
 
 const Voronoi = ({
   data,
   stage,
 }: {
   data: PlaymateCircle[]
-  stage: string
+  stage: typeof STAGES[number]
 }) => {
   const plotCtx = usePlotContext()
 

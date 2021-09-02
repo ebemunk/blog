@@ -21,6 +21,8 @@ export interface Playmate {
   weightKG: number
   weightLB: number
   year: number
+  first?: string
+  url?: string
 }
 
 interface PlaymateCircle {

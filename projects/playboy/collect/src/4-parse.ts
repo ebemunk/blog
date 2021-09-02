@@ -144,6 +144,7 @@ const run = async () => {
           ? differenceInYears(new Date(row.year, row.month, 1), born)
           : null,
         first: row.first,
+        url: bp.url,
       }
     })
     .sort((a, b) => {
