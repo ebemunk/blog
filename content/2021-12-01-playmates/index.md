@@ -1,7 +1,7 @@
 +++
 publishDate = "2021-08-31"
-title = "Beholder: Beauty from the eyes of Playboy"
-slug = "beholder-beauty-from-the-eyes-of-playboy"
+title = "Beholder: Beauty in the eyes of Playboy"
+slug = "beholder-beauty-in-the-eyes-of-playboy"
 tags = ["data visualization", "playboy", "long form"]
 image = "img/plane-crashes.png"
 hidden = false
