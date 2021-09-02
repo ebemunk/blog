@@ -9,7 +9,7 @@ create table playmates (
 	month int,
 	wiki json default '{}'::json,
 	babepedia json default '{}'::json,
-	parsed json default '{}'::json
+	first character varying
 );
 
 -- RUN AFTER STEP 1
@@ -81,3 +81,138 @@ update playmates
 set babepedia = babepedia::jsonb || '{"Hair color":"Auburn"}'::jsonb
 where name = 'Phyllis Coleman';
 -- RUN AFTER STEP 3 END
+
+-- RUN AT THE END
+-- "firsts" according to https://en.wikipedia.org/wiki/Playboy_Playmate
+update playmates
+set first = 'First and only "Sweetheart of the Month".'
+where name = 'Marilyn Monroe';
+
+update playmates
+set first = 'First ever Playmate.'
+where name = 'Margie Harrison';
+
+update playmates
+set first = 'First to be chosen three times.'
+where name = 'Marilyn Waltz';
+
+update playmates
+set first = 'First centerfold (two-page).'
+where name = 'Janet Pilgrim';
+
+update playmates
+set first = 'First fold-out centerfold (three-page).'
+where name = 'Marian Stafford';
+
+update playmates
+set first = 'First foreign born Playmate.'
+where name = 'Marion Scott';
+
+update playmates
+set first = 'Youngest Playmate ever featured.'
+where name = 'Elizabeth Ann Roberts';
+
+update playmates
+set first = 'First to share the Playmate title in the same month, with Mara Corday.'
+where name = 'Pet Sheehan';
+
+update playmates
+set first = 'First to share the Playmate title in the same month, with Path Sheehan.'
+where name = 'Mara Corday';
+
+update playmates
+set first = 'First to share the Playmate title in the same month, with Mara Corday.'
+where name = 'Pet Sheehan';
+
+update playmates
+set first = 'First to become Playmate of the Year.'
+where name = 'Ellen Stratton';
+
+update playmates
+set first = 'First Asian-American Playmate.'
+where name = 'China Lee';
+
+update playmates
+set first = 'First African-American Playmate.'
+where name = 'Jennifer Jackson';
+
+update playmates
+set first = 'First twin Playmate with Madeleine Collinson.'
+where name = 'Mary Collinson';
+
+update playmates
+set first = 'First twin Playmate with Mary Collinson.'
+where name = 'Madeleine Collinson';
+
+update playmates
+set first = 'First Playmate to show clearly visible pubic hair.'
+where name = 'Liv Lindeland';
+
+update playmates
+set first = 'First full frontal nude centerfold.'
+where name = 'Marilyn Cole';
+
+update playmates
+set first = 'First full frontal nude centerfold with clearly visible entire pubic hair.'
+where name = 'Bonnie Large';
+
+update playmates
+set first = 'First Hispanic-American Playmate.'
+where name = 'Ester Cordet';
+
+update playmates
+set first = 'First cousins to be Playmates with Karen Elaine Morton.'
+where name = 'Elaine Morton';
+
+update playmates
+set first = 'First cousins to be Playmates with Elaine Morton.'
+where name = 'Karen Elaine Morton';
+
+update playmates
+set first = 'First video Playmate.'
+where name = 'Lonny Chin';
+
+update playmates
+set first = 'First mother and daughter (separately) to become Playmates. Daughter: Simone Eden'
+where name = 'Carol Eden';
+
+update playmates
+set first = 'First mother and daughter (separately) to become Playmates. Mother: Carol Eden'
+where name = 'Simone Eden';
+
+update playmates
+set first = 'First African-American Playmate of the Year.'
+where name = 'Renee Tenison';
+
+update playmates
+set first = 'First triples to become Playmates.'
+where name = 'Erica Dahm';
+
+update playmates
+set first = 'First triples to become Playmates.'
+where name = 'Nicole Dahm';
+
+update playmates
+set first = 'First triples to become Playmates.'
+where name = 'Jaclyn Dahm';
+
+update playmates
+set first = 'First Playmate to pose with shaved pubic area.'
+where name = 'Dalene Kurtis';
+
+update playmates
+set first = 'First Mexican-American Playmate of the Year.'
+where name = 'Raquel Pomplun';
+
+update playmates
+set first = 'First openly transgender Playmate.'
+where name = 'Ines Rau';
+
+update playmates
+set first = 'First amputee Playmate.'
+where name = 'Marsha Elle';
+
+update playmates
+set first = 'First digital only Playmate.'
+where name = 'Priscilla Huggins';
+-- END

@@ -143,6 +143,7 @@ const run = async () => {
         mateAge: born
           ? differenceInYears(new Date(row.year, row.month, 1), born)
           : null,
+        first: row.first,
       }
     })
     .sort((a, b) => {

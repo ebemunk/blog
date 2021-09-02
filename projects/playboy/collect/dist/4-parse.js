@@ -209,6 +209,7 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                         mateAge: born
                             ? date_fns_1.differenceInYears(new Date(row.year, row.month, 1), born)
                             : null,
+                        first: row.first,
                     };
                 })
                     .sort(function (a, b) {

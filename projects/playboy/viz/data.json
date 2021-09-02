@@ -18,7 +18,8 @@
     "born": "1926-06-01T08:00:00.000Z",
     "month": 11,
     "year": 1953,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": "First and only \"Sweetheart of the Month\"."
   },
   {
     "name": "Margie Harrison",
@@ -39,7 +40,8 @@
     "born": "1931-11-03T08:00:00.000Z",
     "month": 0,
     "year": 1954,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": "First ever Playmate."
   },
   {
     "name": "Marilyn Waltz",
@@ -60,7 +62,8 @@
     "born": "1931-11-05T08:00:00.000Z",
     "month": 1,
     "year": 1954,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": "First to be chosen three times."
   },
   {
     "name": "Dolores Del Monte",
@@ -81,7 +84,8 @@
     "born": "1932-03-15T08:00:00.000Z",
     "month": 2,
     "year": 1954,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Marilyn Waltz",
@@ -102,7 +106,8 @@
     "born": "1931-11-05T08:00:00.000Z",
     "month": 3,
     "year": 1954,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": "First to be chosen three times."
   },
   {
     "name": "Joanne Arnold",
@@ -123,7 +128,8 @@
     "born": "1931-04-01T08:00:00.000Z",
     "month": 4,
     "year": 1954,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Margie Harrison",
@@ -144,7 +150,8 @@
     "born": "1931-11-03T08:00:00.000Z",
     "month": 5,
     "year": 1954,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": "First ever Playmate."
   },
   {
     "name": "Neva Gilbert",
@@ -165,7 +172,8 @@
     "born": "1930-09-01T08:00:00.000Z",
     "month": 6,
     "year": 1954,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Arline Hunter",
@@ -186,7 +194,8 @@
     "born": "1931-12-16T08:00:00.000Z",
     "month": 7,
     "year": 1954,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Jackie Rainbow",
@@ -207,7 +216,8 @@
     "born": "1933-06-06T08:00:00.000Z",
     "month": 8,
     "year": 1954,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Madeline Castle",
@@ -228,7 +238,8 @@
     "born": "1933-08-18T08:00:00.000Z",
     "month": 9,
     "year": 1954,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Diane Hunter",
@@ -249,7 +260,8 @@
     "born": "1934-07-14T08:00:00.000Z",
     "month": 10,
     "year": 1954,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Terry Ryan",
@@ -270,7 +282,8 @@
     "born": "1933-12-01T08:00:00.000Z",
     "month": 11,
     "year": 1954,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Bettie Page",
@@ -291,7 +304,8 @@
     "born": "1923-04-22T08:00:00.000Z",
     "month": 0,
     "year": 1955,
-    "mateAge": 31
+    "mateAge": 31,
+    "first": null
   },
   {
     "name": "Jayne Mansfield",
@@ -312,7 +326,8 @@
     "born": "1933-04-19T08:00:00.000Z",
     "month": 1,
     "year": 1955,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Marilyn Waltz",
@@ -333,7 +348,8 @@
     "born": "1931-11-05T08:00:00.000Z",
     "month": 3,
     "year": 1955,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": "First to be chosen three times."
   },
   {
     "name": "Marguerite Empey",
@@ -354,7 +370,8 @@
     "born": "1932-07-29T08:00:00.000Z",
     "month": 4,
     "year": 1955,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Eve Meyer",
@@ -375,7 +392,8 @@
     "born": "1928-12-13T08:00:00.000Z",
     "month": 5,
     "year": 1955,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Janet Pilgrim",
@@ -396,7 +414,8 @@
     "born": "1934-06-13T08:00:00.000Z",
     "month": 6,
     "year": 1955,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": "First centerfold (two-page)."
   },
   {
     "name": "Pat Lawler",
@@ -414,7 +433,8 @@
     "born": "1929-12-29T08:00:00.000Z",
     "month": 7,
     "year": 1955,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Anne Fleming",
@@ -435,7 +455,8 @@
     "born": "1929-12-01T08:00:00.000Z",
     "month": 8,
     "year": 1955,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Jean Moorehead",
@@ -456,7 +477,8 @@
     "born": "1935-02-04T08:00:00.000Z",
     "month": 9,
     "year": 1955,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Barbara Cameron",
@@ -477,7 +499,8 @@
     "born": "1930-06-08T08:00:00.000Z",
     "month": 10,
     "year": 1955,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Janet Pilgrim",
@@ -498,7 +521,8 @@
     "born": "1934-06-13T08:00:00.000Z",
     "month": 11,
     "year": 1955,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": "First centerfold (two-page)."
   },
   {
     "name": "Lynn Turner",
@@ -519,7 +543,8 @@
     "born": "1935-12-01T08:00:00.000Z",
     "month": 0,
     "year": 1956,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Marguerite Empey",
@@ -540,7 +565,8 @@
     "born": "1932-07-29T08:00:00.000Z",
     "month": 1,
     "year": 1956,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Marian Stafford",
@@ -561,7 +587,8 @@
     "born": "1931-02-07T08:00:00.000Z",
     "month": 2,
     "year": 1956,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": "First fold-out centerfold (three-page)."
   },
   {
     "name": "Rusty Fisher",
@@ -582,7 +609,8 @@
     "born": "1935-04-05T08:00:00.000Z",
     "month": 3,
     "year": 1956,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Marion Scott",
@@ -603,7 +631,8 @@
     "born": "1930-01-01T08:00:00.000Z",
     "month": 4,
     "year": 1956,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": "First foreign born Playmate."
   },
   {
     "name": "Gloria Walker",
@@ -624,7 +653,8 @@
     "born": "1937-07-16T08:00:00.000Z",
     "month": 5,
     "year": 1956,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Alice Denham",
@@ -645,7 +675,8 @@
     "born": "1933-01-21T08:00:00.000Z",
     "month": 6,
     "year": 1956,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Jonnie Nicely",
@@ -666,7 +697,8 @@
     "born": "1936-02-25T08:00:00.000Z",
     "month": 7,
     "year": 1956,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Elsa Sorensen",
@@ -687,7 +719,8 @@
     "born": "1934-03-25T08:00:00.000Z",
     "month": 8,
     "year": 1956,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Janet Pilgrim",
@@ -708,7 +741,8 @@
     "born": "1934-06-13T08:00:00.000Z",
     "month": 9,
     "year": 1956,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": "First centerfold (two-page)."
   },
   {
     "name": "Betty Blue",
@@ -729,7 +763,8 @@
     "born": "1931-08-14T08:00:00.000Z",
     "month": 10,
     "year": 1956,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Lisa Winters",
@@ -750,7 +785,8 @@
     "born": "1935-12-01T08:00:00.000Z",
     "month": 11,
     "year": 1956,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "June Blair",
@@ -771,7 +807,8 @@
     "born": "1933-10-20T08:00:00.000Z",
     "month": 0,
     "year": 1957,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Sally Todd",
@@ -792,7 +829,8 @@
     "born": "1934-06-07T08:00:00.000Z",
     "month": 1,
     "year": 1957,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Sandra Edwards",
@@ -813,7 +851,8 @@
     "born": "1938-03-12T08:00:00.000Z",
     "month": 2,
     "year": 1957,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Gloria Windsor",
@@ -834,7 +873,8 @@
     "born": "1935-01-01T08:00:00.000Z",
     "month": 3,
     "year": 1957,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Dawn Richard",
@@ -855,7 +895,8 @@
     "born": "1936-03-05T08:00:00.000Z",
     "month": 4,
     "year": 1957,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Carrie Radison",
@@ -873,7 +914,8 @@
     "born": "1938-11-01T08:00:00.000Z",
     "month": 5,
     "year": 1957,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Jean Jani",
@@ -894,7 +936,8 @@
     "born": "1931-10-31T08:00:00.000Z",
     "month": 6,
     "year": 1957,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Dolores Donlon",
@@ -915,7 +958,8 @@
     "born": "1920-09-19T08:00:00.000Z",
     "month": 7,
     "year": 1957,
-    "mateAge": 36
+    "mateAge": 36,
+    "first": null
   },
   {
     "name": "Jacquelyn Prescott",
@@ -936,7 +980,8 @@
     "born": null,
     "month": 8,
     "year": 1957,
-    "mateAge": null
+    "mateAge": null,
+    "first": null
   },
   {
     "name": "Colleen Farrington",
@@ -957,7 +1002,8 @@
     "born": "1936-08-05T08:00:00.000Z",
     "month": 9,
     "year": 1957,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Marlene Callahan",
@@ -978,7 +1024,8 @@
     "born": "1937-08-24T08:00:00.000Z",
     "month": 10,
     "year": 1957,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Linda Vargas",
@@ -999,7 +1046,8 @@
     "born": "1939-04-20T08:00:00.000Z",
     "month": 11,
     "year": 1957,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Elizabeth Ann Roberts",
@@ -1020,7 +1068,8 @@
     "born": "1941-08-04T08:00:00.000Z",
     "month": 0,
     "year": 1958,
-    "mateAge": 16
+    "mateAge": 16,
+    "first": "Youngest Playmate ever featured."
   },
   {
     "name": "Cheryl Kubert",
@@ -1041,7 +1090,8 @@
     "born": "1938-03-11T08:00:00.000Z",
     "month": 1,
     "year": 1958,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Zahra Norbo",
@@ -1062,7 +1112,8 @@
     "born": "1934-02-07T08:00:00.000Z",
     "month": 2,
     "year": 1958,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Felicia Atkins",
@@ -1083,7 +1134,8 @@
     "born": "1937-04-05T08:00:00.000Z",
     "month": 3,
     "year": 1958,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Lari Laine",
@@ -1104,7 +1156,8 @@
     "born": "1937-04-13T08:00:00.000Z",
     "month": 4,
     "year": 1958,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Judy Lee Tomerlin",
@@ -1125,7 +1178,8 @@
     "born": "1940-05-20T08:00:00.000Z",
     "month": 5,
     "year": 1958,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Linné Ahlstrand",
@@ -1143,7 +1197,8 @@
     "born": "1936-07-01T08:00:00.000Z",
     "month": 6,
     "year": 1958,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Myrna Weber",
@@ -1164,7 +1219,8 @@
     "born": "1938-04-22T08:00:00.000Z",
     "month": 7,
     "year": 1958,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Teri Hope",
@@ -1185,7 +1241,8 @@
     "born": "1939-02-19T08:00:00.000Z",
     "month": 8,
     "year": 1958,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Pat Sheehan",
@@ -1206,7 +1263,8 @@
     "born": "1931-09-07T08:00:00.000Z",
     "month": 9,
     "year": 1958,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Mara Corday",
@@ -1227,7 +1285,8 @@
     "born": "1930-01-03T08:00:00.000Z",
     "month": 9,
     "year": 1958,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": "First to share the Playmate title in the same month, with Path Sheehan."
   },
   {
     "name": "Joan Staley",
@@ -1248,7 +1307,8 @@
     "born": "1940-05-20T08:00:00.000Z",
     "month": 10,
     "year": 1958,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Joyce Nizzari",
@@ -1269,7 +1329,8 @@
     "born": "1940-05-20T08:00:00.000Z",
     "month": 11,
     "year": 1958,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Virginia Gordon",
@@ -1290,7 +1351,8 @@
     "born": "1936-10-28T08:00:00.000Z",
     "month": 0,
     "year": 1959,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Eleanor Bradley",
@@ -1311,7 +1373,8 @@
     "born": "1938-12-13T08:00:00.000Z",
     "month": 1,
     "year": 1959,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Audrey Daston",
@@ -1332,7 +1395,8 @@
     "born": "1936-04-25T08:00:00.000Z",
     "month": 2,
     "year": 1959,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Nancy Crawford",
@@ -1353,7 +1417,8 @@
     "born": "1941-04-16T08:00:00.000Z",
     "month": 3,
     "year": 1959,
-    "mateAge": 17
+    "mateAge": 17,
+    "first": null
   },
   {
     "name": "Cindy Fuller",
@@ -1374,7 +1439,8 @@
     "born": "1938-05-13T08:00:00.000Z",
     "month": 4,
     "year": 1959,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Marilyn Hanold",
@@ -1395,7 +1461,8 @@
     "born": null,
     "month": 5,
     "year": 1959,
-    "mateAge": null
+    "mateAge": null,
+    "first": null
   },
   {
     "name": "Yvette Vickers",
@@ -1416,7 +1483,8 @@
     "born": "1928-08-26T08:00:00.000Z",
     "month": 6,
     "year": 1959,
-    "mateAge": 30
+    "mateAge": 30,
+    "first": null
   },
   {
     "name": "Clayre Peters",
@@ -1437,7 +1505,8 @@
     "born": "1935-01-01T08:00:00.000Z",
     "month": 7,
     "year": 1959,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Marianne Gaba",
@@ -1458,7 +1527,8 @@
     "born": "1939-11-13T08:00:00.000Z",
     "month": 8,
     "year": 1959,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Elaine Reynolds",
@@ -1479,7 +1549,8 @@
     "born": "1939-09-07T08:00:00.000Z",
     "month": 9,
     "year": 1959,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Donna Lynn",
@@ -1500,7 +1571,8 @@
     "born": "1936-09-21T08:00:00.000Z",
     "month": 10,
     "year": 1959,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Ellen Stratton",
@@ -1521,7 +1593,8 @@
     "born": "1939-06-09T08:00:00.000Z",
     "month": 11,
     "year": 1959,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": "First to become Playmate of the Year."
   },
   {
     "name": "Stella Stevens",
@@ -1542,7 +1615,8 @@
     "born": "1938-10-01T08:00:00.000Z",
     "month": 0,
     "year": 1960,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Susie Scott",
@@ -1563,7 +1637,8 @@
     "born": "1938-08-22T08:00:00.000Z",
     "month": 1,
     "year": 1960,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Sally Sarell",
@@ -1584,7 +1659,8 @@
     "born": "1938-06-25T08:00:00.000Z",
     "month": 2,
     "year": 1960,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Linda Gamble",
@@ -1605,7 +1681,8 @@
     "born": "1939-09-11T08:00:00.000Z",
     "month": 3,
     "year": 1960,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Ginger Young",
@@ -1626,7 +1703,8 @@
     "born": "1939-03-11T08:00:00.000Z",
     "month": 4,
     "year": 1960,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Delores Wells",
@@ -1647,7 +1725,8 @@
     "born": "1937-10-17T08:00:00.000Z",
     "month": 5,
     "year": 1960,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Teddi Smith",
@@ -1668,7 +1747,8 @@
     "born": "1942-09-21T07:00:00.000Z",
     "month": 6,
     "year": 1960,
-    "mateAge": 17
+    "mateAge": 17,
+    "first": null
   },
   {
     "name": "Elaine Paul",
@@ -1689,7 +1769,8 @@
     "born": "1938-08-11T08:00:00.000Z",
     "month": 7,
     "year": 1960,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Ann Davis",
@@ -1707,7 +1788,8 @@
     "born": "1938-06-17T08:00:00.000Z",
     "month": 8,
     "year": 1960,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Kathy Douglas",
@@ -1728,7 +1810,8 @@
     "born": "1942-05-23T07:00:00.000Z",
     "month": 9,
     "year": 1960,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Joni Mattis",
@@ -1749,7 +1832,8 @@
     "born": "1938-11-28T08:00:00.000Z",
     "month": 10,
     "year": 1960,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Carol Eden",
@@ -1770,7 +1854,8 @@
     "born": "1942-05-19T07:00:00.000Z",
     "month": 11,
     "year": 1960,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": "First mother and daughter (separately) to become Playmates. Daughter: Simone Eden"
   },
   {
     "name": "Connie Cooper",
@@ -1791,7 +1876,8 @@
     "born": "1941-09-20T08:00:00.000Z",
     "month": 0,
     "year": 1961,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Barbara Ann Lawford",
@@ -1812,7 +1898,8 @@
     "born": "1942-10-07T07:00:00.000Z",
     "month": 1,
     "year": 1961,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Tonya Crews",
@@ -1833,7 +1920,8 @@
     "born": "1938-02-02T08:00:00.000Z",
     "month": 2,
     "year": 1961,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Nancy Nielsen",
@@ -1854,7 +1942,8 @@
     "born": "1940-12-14T08:00:00.000Z",
     "month": 3,
     "year": 1961,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Susan Kelly",
@@ -1875,7 +1964,8 @@
     "born": "1938-02-15T08:00:00.000Z",
     "month": 4,
     "year": 1961,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Heidi Becker",
@@ -1896,7 +1986,8 @@
     "born": "1940-10-11T08:00:00.000Z",
     "month": 5,
     "year": 1961,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Sheralee Conners",
@@ -1917,7 +2008,8 @@
     "born": "1941-12-12T08:00:00.000Z",
     "month": 6,
     "year": 1961,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Karen Thompson",
@@ -1938,7 +2030,8 @@
     "born": "1942-01-01T08:00:00.000Z",
     "month": 7,
     "year": 1961,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Christa Speck",
@@ -1959,7 +2052,8 @@
     "born": "1942-08-01T07:00:00.000Z",
     "month": 8,
     "year": 1961,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Jean Cannon",
@@ -1980,7 +2074,8 @@
     "born": "1941-10-05T08:00:00.000Z",
     "month": 9,
     "year": 1961,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Dianne Danford",
@@ -2001,7 +2096,8 @@
     "born": "1938-08-09T08:00:00.000Z",
     "month": 10,
     "year": 1961,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Lynn Karrol",
@@ -2022,7 +2118,8 @@
     "born": "1939-07-31T08:00:00.000Z",
     "month": 11,
     "year": 1961,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Merle Pertile",
@@ -2043,7 +2140,8 @@
     "born": "1941-11-23T08:00:00.000Z",
     "month": 0,
     "year": 1962,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Kari Knudsen",
@@ -2064,7 +2162,8 @@
     "born": "1939-01-17T08:00:00.000Z",
     "month": 1,
     "year": 1962,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Pamela Anne Gordon",
@@ -2085,7 +2184,8 @@
     "born": "1943-02-10T07:00:00.000Z",
     "month": 2,
     "year": 1962,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Roberta Lane",
@@ -2106,7 +2206,8 @@
     "born": "1943-03-14T07:00:00.000Z",
     "month": 3,
     "year": 1962,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Marya Carter",
@@ -2127,7 +2228,8 @@
     "born": "1942-05-12T07:00:00.000Z",
     "month": 4,
     "year": 1962,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Merissa Mathes",
@@ -2148,7 +2250,8 @@
     "born": "1940-02-26T08:00:00.000Z",
     "month": 5,
     "year": 1962,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Unne Terjesen",
@@ -2169,7 +2272,8 @@
     "born": "1943-03-20T07:00:00.000Z",
     "month": 6,
     "year": 1962,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Jan Roberts",
@@ -2190,7 +2294,8 @@
     "born": "1939-06-09T08:00:00.000Z",
     "month": 7,
     "year": 1962,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Mickey Winters",
@@ -2211,7 +2316,8 @@
     "born": "1940-09-30T08:00:00.000Z",
     "month": 8,
     "year": 1962,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Laura Young",
@@ -2232,7 +2338,8 @@
     "born": "1938-05-22T08:00:00.000Z",
     "month": 9,
     "year": 1962,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Avis Kimble",
@@ -2253,7 +2360,8 @@
     "born": "1944-10-18T07:00:00.000Z",
     "month": 10,
     "year": 1962,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "June Cochran",
@@ -2274,7 +2382,8 @@
     "born": "1942-02-20T07:00:00.000Z",
     "month": 11,
     "year": 1962,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Judi Monterey",
@@ -2295,7 +2404,8 @@
     "born": "1944-01-12T07:00:00.000Z",
     "month": 0,
     "year": 1963,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Toni Ann Thomas",
@@ -2316,7 +2426,8 @@
     "born": "1944-04-15T07:00:00.000Z",
     "month": 1,
     "year": 1963,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Adrienne Moreau",
@@ -2337,7 +2448,8 @@
     "born": "1941-07-05T08:00:00.000Z",
     "month": 2,
     "year": 1963,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Sandra Settani",
@@ -2358,7 +2470,8 @@
     "born": "1938-02-18T08:00:00.000Z",
     "month": 3,
     "year": 1963,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Sharon Cintron",
@@ -2379,7 +2492,8 @@
     "born": "1935-06-18T08:00:00.000Z",
     "month": 4,
     "year": 1963,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Connie Mason",
@@ -2400,7 +2514,8 @@
     "born": "1937-08-24T08:00:00.000Z",
     "month": 5,
     "year": 1963,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Carrie Enwright",
@@ -2421,7 +2536,8 @@
     "born": "1943-08-25T07:00:00.000Z",
     "month": 6,
     "year": 1963,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Phyllis Sherwood",
@@ -2442,7 +2558,8 @@
     "born": "1937-09-30T08:00:00.000Z",
     "month": 7,
     "year": 1963,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Victoria Valentino",
@@ -2463,7 +2580,8 @@
     "born": "1942-12-13T07:00:00.000Z",
     "month": 8,
     "year": 1963,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Christine Williams",
@@ -2484,7 +2602,8 @@
     "born": "1945-01-07T07:00:00.000Z",
     "month": 9,
     "year": 1963,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Terre Tucker",
@@ -2505,7 +2624,8 @@
     "born": "1944-10-09T07:00:00.000Z",
     "month": 10,
     "year": 1963,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Donna Michelle",
@@ -2526,7 +2646,8 @@
     "born": "1945-12-08T08:00:00.000Z",
     "month": 11,
     "year": 1963,
-    "mateAge": 17
+    "mateAge": 17,
+    "first": null
   },
   {
     "name": "Sharon Rogers",
@@ -2547,7 +2668,8 @@
     "born": "1942-11-19T07:00:00.000Z",
     "month": 0,
     "year": 1964,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Nancy Jo Hooper",
@@ -2568,7 +2690,8 @@
     "born": "1943-07-17T07:00:00.000Z",
     "month": 1,
     "year": 1964,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Nancy Scott",
@@ -2589,7 +2712,8 @@
     "born": "1941-10-02T08:00:00.000Z",
     "month": 2,
     "year": 1964,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Ashlyn Martin",
@@ -2610,7 +2734,8 @@
     "born": "1946-03-20T08:00:00.000Z",
     "month": 3,
     "year": 1964,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Terri Kimball",
@@ -2631,7 +2756,8 @@
     "born": "1944-10-05T07:00:00.000Z",
     "month": 4,
     "year": 1964,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Lori Winston",
@@ -2652,7 +2778,8 @@
     "born": "1944-08-24T07:00:00.000Z",
     "month": 5,
     "year": 1964,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Melba Ogle",
@@ -2673,7 +2800,8 @@
     "born": "1942-11-13T07:00:00.000Z",
     "month": 6,
     "year": 1964,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "China Lee",
@@ -2694,7 +2822,8 @@
     "born": "1942-09-02T07:00:00.000Z",
     "month": 7,
     "year": 1964,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": "First Asian-American Playmate."
   },
   {
     "name": "Astrid Schulz",
@@ -2715,7 +2844,8 @@
     "born": "1939-09-12T08:00:00.000Z",
     "month": 8,
     "year": 1964,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Rosemarie Hillcrest",
@@ -2736,7 +2866,8 @@
     "born": "1943-01-05T07:00:00.000Z",
     "month": 9,
     "year": 1964,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Kai Brendlinger",
@@ -2757,7 +2888,8 @@
     "born": "1943-09-08T07:00:00.000Z",
     "month": 10,
     "year": 1964,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Jo Collins",
@@ -2778,7 +2910,8 @@
     "born": "1945-08-05T07:00:00.000Z",
     "month": 11,
     "year": 1964,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Sally Duberson",
@@ -2799,7 +2932,8 @@
     "born": "1942-10-23T07:00:00.000Z",
     "month": 0,
     "year": 1965,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Jessica St. George",
@@ -2820,7 +2954,8 @@
     "born": "1946-10-13T08:00:00.000Z",
     "month": 1,
     "year": 1965,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Jennifer Jackson",
@@ -2841,7 +2976,8 @@
     "born": "1945-02-06T07:00:00.000Z",
     "month": 2,
     "year": 1965,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": "First African-American Playmate."
   },
   {
     "name": "Sue Williams",
@@ -2862,7 +2998,8 @@
     "born": "1945-11-14T08:00:00.000Z",
     "month": 3,
     "year": 1965,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Maria McBane",
@@ -2883,7 +3020,8 @@
     "born": "1948-02-08T08:00:00.000Z",
     "month": 4,
     "year": 1965,
-    "mateAge": 17
+    "mateAge": 17,
+    "first": null
   },
   {
     "name": "Hedy Scott",
@@ -2904,7 +3042,8 @@
     "born": "1946-01-24T08:00:00.000Z",
     "month": 5,
     "year": 1965,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Gay Collier",
@@ -2925,7 +3064,8 @@
     "born": "1942-10-09T07:00:00.000Z",
     "month": 6,
     "year": 1965,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Lannie Balcom",
@@ -2946,7 +3086,8 @@
     "born": "1941-03-17T08:00:00.000Z",
     "month": 7,
     "year": 1965,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Patti Reynolds",
@@ -2967,7 +3108,8 @@
     "born": "1948-05-28T07:00:00.000Z",
     "month": 8,
     "year": 1965,
-    "mateAge": 17
+    "mateAge": 17,
+    "first": null
   },
   {
     "name": "Allison Parks",
@@ -2988,7 +3130,8 @@
     "born": "1941-10-18T08:00:00.000Z",
     "month": 9,
     "year": 1965,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Pat Russo",
@@ -3009,7 +3152,8 @@
     "born": "1941-10-05T08:00:00.000Z",
     "month": 10,
     "year": 1965,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Dinah Willis",
@@ -3030,7 +3174,8 @@
     "born": "1945-08-05T07:00:00.000Z",
     "month": 11,
     "year": 1965,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Judy Tyler",
@@ -3051,7 +3196,8 @@
     "born": "1944-12-24T07:00:00.000Z",
     "month": 0,
     "year": 1966,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Melinda Windsor",
@@ -3072,7 +3218,8 @@
     "born": "1944-06-25T07:00:00.000Z",
     "month": 1,
     "year": 1966,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Priscilla Wright",
@@ -3093,7 +3240,8 @@
     "born": "1943-11-20T07:00:00.000Z",
     "month": 2,
     "year": 1966,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Karla Conway",
@@ -3114,7 +3262,8 @@
     "born": "1946-07-05T07:00:00.000Z",
     "month": 3,
     "year": 1966,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Dolly Read",
@@ -3135,7 +3284,8 @@
     "born": "1944-09-23T07:00:00.000Z",
     "month": 4,
     "year": 1966,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Kelly Burke",
@@ -3156,7 +3306,8 @@
     "born": "1944-12-31T07:00:00.000Z",
     "month": 5,
     "year": 1966,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Tish Howard",
@@ -3177,7 +3328,8 @@
     "born": "1946-07-04T07:00:00.000Z",
     "month": 6,
     "year": 1966,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Susan Denberg",
@@ -3198,7 +3350,8 @@
     "born": "1944-08-02T07:00:00.000Z",
     "month": 7,
     "year": 1966,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Dianne Chandler",
@@ -3219,7 +3372,8 @@
     "born": "1946-12-31T08:00:00.000Z",
     "month": 8,
     "year": 1966,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Linda Moon",
@@ -3240,7 +3394,8 @@
     "born": "1948-09-24T07:00:00.000Z",
     "month": 9,
     "year": 1966,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Lisa Baker",
@@ -3261,7 +3416,8 @@
     "born": "1944-03-19T07:00:00.000Z",
     "month": 10,
     "year": 1966,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Susan Bernard",
@@ -3282,7 +3438,8 @@
     "born": "1948-02-11T08:00:00.000Z",
     "month": 11,
     "year": 1966,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Surrey Marshe",
@@ -3303,7 +3460,8 @@
     "born": "1947-11-11T08:00:00.000Z",
     "month": 0,
     "year": 1967,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Kim Farber",
@@ -3324,7 +3482,8 @@
     "born": "1946-12-07T08:00:00.000Z",
     "month": 1,
     "year": 1967,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Fran Gerard",
@@ -3345,7 +3504,8 @@
     "born": "1948-03-23T08:00:00.000Z",
     "month": 2,
     "year": 1967,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Gwen Wong",
@@ -3366,7 +3526,8 @@
     "born": "1942-08-12T07:00:00.000Z",
     "month": 3,
     "year": 1967,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Anne Randall",
@@ -3387,7 +3548,8 @@
     "born": "1944-09-23T07:00:00.000Z",
     "month": 4,
     "year": 1967,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Joey Gibson",
@@ -3408,7 +3570,8 @@
     "born": "1945-08-11T07:00:00.000Z",
     "month": 5,
     "year": 1967,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Heather Ryan",
@@ -3429,7 +3592,8 @@
     "born": "1947-03-18T08:00:00.000Z",
     "month": 6,
     "year": 1967,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "DeDe Lind",
@@ -3450,7 +3614,8 @@
     "born": "1947-04-15T08:00:00.000Z",
     "month": 7,
     "year": 1967,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Angela Dorian",
@@ -3471,7 +3636,8 @@
     "born": "1944-09-26T07:00:00.000Z",
     "month": 8,
     "year": 1967,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Reagan Wilson",
@@ -3492,7 +3658,8 @@
     "born": "1947-03-06T08:00:00.000Z",
     "month": 9,
     "year": 1967,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Kaya Christian",
@@ -3513,7 +3680,8 @@
     "born": "1946-10-04T08:00:00.000Z",
     "month": 10,
     "year": 1967,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Lynn Winchell",
@@ -3534,7 +3702,8 @@
     "born": "1947-05-04T07:00:00.000Z",
     "month": 11,
     "year": 1967,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Connie Kreski",
@@ -3555,7 +3724,8 @@
     "born": "1946-09-19T07:00:00.000Z",
     "month": 0,
     "year": 1968,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Nancy Harwood",
@@ -3576,7 +3746,8 @@
     "born": "1948-12-17T08:00:00.000Z",
     "month": 1,
     "year": 1968,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Michelle Hamilton",
@@ -3597,7 +3768,8 @@
     "born": "1948-12-20T08:00:00.000Z",
     "month": 2,
     "year": 1968,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Gaye Rennie",
@@ -3618,7 +3790,8 @@
     "born": "1949-09-21T07:00:00.000Z",
     "month": 3,
     "year": 1968,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Elizabeth Jordan",
@@ -3639,7 +3812,8 @@
     "born": "1945-01-11T07:00:00.000Z",
     "month": 4,
     "year": 1968,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Britt Fredriksen",
@@ -3660,7 +3834,8 @@
     "born": "1945-10-01T08:00:00.000Z",
     "month": 5,
     "year": 1968,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Melodye Prentiss",
@@ -3681,7 +3856,8 @@
     "born": "1944-12-14T07:00:00.000Z",
     "month": 6,
     "year": 1968,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Gale Olson",
@@ -3702,7 +3878,8 @@
     "born": "1947-10-27T08:00:00.000Z",
     "month": 7,
     "year": 1968,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Dru Hart",
@@ -3723,7 +3900,8 @@
     "born": "1948-11-25T08:00:00.000Z",
     "month": 8,
     "year": 1968,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Majken Haugedal",
@@ -3744,7 +3922,8 @@
     "born": "1947-03-26T08:00:00.000Z",
     "month": 9,
     "year": 1968,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Paige Young",
@@ -3765,7 +3944,8 @@
     "born": "1944-03-16T07:00:00.000Z",
     "month": 10,
     "year": 1968,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Cynthia Myers",
@@ -3786,7 +3966,8 @@
     "born": "1950-09-12T07:00:00.000Z",
     "month": 11,
     "year": 1968,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Leslie Bianchini",
@@ -3807,7 +3988,8 @@
     "born": "1947-02-12T08:00:00.000Z",
     "month": 0,
     "year": 1969,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Lorrie Menconi",
@@ -3828,7 +4010,8 @@
     "born": "1948-02-24T08:00:00.000Z",
     "month": 1,
     "year": 1969,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Kathy MacDonald",
@@ -3849,7 +4032,8 @@
     "born": "1946-12-07T08:00:00.000Z",
     "month": 2,
     "year": 1969,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Lorna Hopper",
@@ -3870,7 +4054,8 @@
     "born": "1950-08-31T07:00:00.000Z",
     "month": 3,
     "year": 1969,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Sally Sheffield",
@@ -3891,7 +4076,8 @@
     "born": "1941-06-17T08:00:00.000Z",
     "month": 4,
     "year": 1969,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Helena Antonaccio",
@@ -3912,7 +4098,8 @@
     "born": "1949-03-21T08:00:00.000Z",
     "month": 5,
     "year": 1969,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Nancy McNeil",
@@ -3933,7 +4120,8 @@
     "born": "1947-12-13T08:00:00.000Z",
     "month": 6,
     "year": 1969,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Debbie Hooper",
@@ -3954,7 +4142,8 @@
     "born": "1948-01-24T08:00:00.000Z",
     "month": 7,
     "year": 1969,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Shay Knuth",
@@ -3975,7 +4164,8 @@
     "born": "1945-05-29T07:00:00.000Z",
     "month": 8,
     "year": 1969,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Jean Bell",
@@ -3996,7 +4186,8 @@
     "born": "1944-11-23T07:00:00.000Z",
     "month": 9,
     "year": 1969,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Claudia Jennings",
@@ -4017,7 +4208,8 @@
     "born": "1949-12-20T08:00:00.000Z",
     "month": 10,
     "year": 1969,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Gloria Root",
@@ -4038,7 +4230,8 @@
     "born": "1948-05-28T07:00:00.000Z",
     "month": 11,
     "year": 1969,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Jill Taylor",
@@ -4059,7 +4252,8 @@
     "born": "1951-10-14T08:00:00.000Z",
     "month": 0,
     "year": 1970,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Linda Forsythe",
@@ -4080,7 +4274,8 @@
     "born": "1950-05-14T07:00:00.000Z",
     "month": 1,
     "year": 1970,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Chris Koren",
@@ -4101,7 +4296,8 @@
     "born": "1947-08-08T07:00:00.000Z",
     "month": 2,
     "year": 1970,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Barbara Hillary",
@@ -4122,7 +4318,8 @@
     "born": "1949-02-18T08:00:00.000Z",
     "month": 3,
     "year": 1970,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Jennifer Liano",
@@ -4143,7 +4340,8 @@
     "born": "1948-02-24T08:00:00.000Z",
     "month": 4,
     "year": 1970,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Elaine Morton",
@@ -4164,7 +4362,8 @@
     "born": "1949-08-17T07:00:00.000Z",
     "month": 5,
     "year": 1970,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": "First cousins to be Playmates with Karen Elaine Morton."
   },
   {
     "name": "Carol Willis",
@@ -4185,7 +4384,8 @@
     "born": "1951-04-17T08:00:00.000Z",
     "month": 6,
     "year": 1970,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Sharon Clark",
@@ -4206,7 +4406,8 @@
     "born": "1943-10-15T07:00:00.000Z",
     "month": 7,
     "year": 1970,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Debbie Ellison",
@@ -4227,7 +4428,8 @@
     "born": "1949-06-17T07:00:00.000Z",
     "month": 8,
     "year": 1970,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Mary Collinson",
@@ -4248,7 +4450,8 @@
     "born": "1952-07-22T07:00:00.000Z",
     "month": 9,
     "year": 1970,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": "First twin Playmate with Madeleine Collinson."
   },
   {
     "name": "Madeleine Collinson",
@@ -4269,7 +4472,8 @@
     "born": "1952-07-22T07:00:00.000Z",
     "month": 9,
     "year": 1970,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": "First twin Playmate with Mary Collinson."
   },
   {
     "name": "Avis Miller",
@@ -4290,7 +4494,8 @@
     "born": "1945-11-04T08:00:00.000Z",
     "month": 10,
     "year": 1970,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Carol Imhof",
@@ -4311,7 +4516,8 @@
     "born": "1948-03-13T08:00:00.000Z",
     "month": 11,
     "year": 1970,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Liv Lindeland",
@@ -4332,7 +4538,8 @@
     "born": "1945-12-07T08:00:00.000Z",
     "month": 0,
     "year": 1971,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": "First Playmate to show clearly visible pubic hair."
   },
   {
     "name": "Willy Rey",
@@ -4353,7 +4560,8 @@
     "born": "1949-08-25T07:00:00.000Z",
     "month": 1,
     "year": 1971,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Cynthia Hall",
@@ -4374,7 +4582,8 @@
     "born": "1951-04-01T08:00:00.000Z",
     "month": 2,
     "year": 1971,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Chris Cranston",
@@ -4395,7 +4604,8 @@
     "born": "1946-09-13T07:00:00.000Z",
     "month": 3,
     "year": 1971,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Janice Pennington",
@@ -4416,7 +4626,8 @@
     "born": "1942-07-08T07:00:00.000Z",
     "month": 4,
     "year": 1971,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Lieko English",
@@ -4437,7 +4648,8 @@
     "born": "1947-06-03T07:00:00.000Z",
     "month": 5,
     "year": 1971,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Heather Van Every",
@@ -4458,7 +4670,8 @@
     "born": "1951-09-14T07:00:00.000Z",
     "month": 6,
     "year": 1971,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Cathy Rowland",
@@ -4479,7 +4692,8 @@
     "born": "1950-03-11T08:00:00.000Z",
     "month": 7,
     "year": 1971,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Crystal Smith",
@@ -4500,7 +4714,8 @@
     "born": "1951-08-02T07:00:00.000Z",
     "month": 8,
     "year": 1971,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Claire Rambeau",
@@ -4521,7 +4736,8 @@
     "born": "1951-05-08T07:00:00.000Z",
     "month": 9,
     "year": 1971,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Danielle de Vabre",
@@ -4542,7 +4758,8 @@
     "born": "1949-11-19T08:00:00.000Z",
     "month": 10,
     "year": 1971,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Karen Christy",
@@ -4563,7 +4780,8 @@
     "born": "1951-03-11T08:00:00.000Z",
     "month": 11,
     "year": 1971,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Marilyn Cole",
@@ -4584,7 +4802,8 @@
     "born": "1949-05-07T07:00:00.000Z",
     "month": 0,
     "year": 1972,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": "First full frontal nude centerfold."
   },
   {
     "name": "P. J. Lansing",
@@ -4605,7 +4824,8 @@
     "born": "1949-10-13T08:00:00.000Z",
     "month": 1,
     "year": 1972,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Ellen Michaels",
@@ -4626,7 +4846,8 @@
     "born": "1953-02-12T08:00:00.000Z",
     "month": 2,
     "year": 1972,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Vicki Peters",
@@ -4647,7 +4868,8 @@
     "born": "1950-09-09T07:00:00.000Z",
     "month": 3,
     "year": 1972,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Deanna Baker",
@@ -4668,7 +4890,8 @@
     "born": "1949-12-29T08:00:00.000Z",
     "month": 4,
     "year": 1972,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Debbie Davis",
@@ -4689,7 +4912,8 @@
     "born": "1951-09-09T07:00:00.000Z",
     "month": 5,
     "year": 1972,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Carol O'Neal",
@@ -4710,7 +4934,8 @@
     "born": "1948-08-18T07:00:00.000Z",
     "month": 6,
     "year": 1972,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Linda Summers",
@@ -4731,7 +4956,8 @@
     "born": "1950-11-20T08:00:00.000Z",
     "month": 7,
     "year": 1972,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Susan Miller",
@@ -4752,7 +4978,8 @@
     "born": "1947-03-22T08:00:00.000Z",
     "month": 8,
     "year": 1972,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Sharon Johansen",
@@ -4773,7 +5000,8 @@
     "born": "1948-10-11T08:00:00.000Z",
     "month": 9,
     "year": 1972,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Lenna Sjooblom",
@@ -4794,7 +5022,8 @@
     "born": "1951-03-31T08:00:00.000Z",
     "month": 10,
     "year": 1972,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Mercy Rooney",
@@ -4815,7 +5044,8 @@
     "born": "1950-06-21T07:00:00.000Z",
     "month": 11,
     "year": 1972,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Miki Garcia",
@@ -4836,7 +5066,8 @@
     "born": "1947-02-17T08:00:00.000Z",
     "month": 0,
     "year": 1973,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Cyndi Wood",
@@ -4857,7 +5088,8 @@
     "born": "1950-09-25T08:00:00.000Z",
     "month": 1,
     "year": 1973,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Bonnie Large",
@@ -4878,7 +5110,8 @@
     "born": "1952-09-09T07:00:00.000Z",
     "month": 2,
     "year": 1973,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": "First full frontal nude centerfold with clearly visible entire pubic hair."
   },
   {
     "name": "Julie Woodson",
@@ -4899,7 +5132,8 @@
     "born": "1950-07-11T07:00:00.000Z",
     "month": 3,
     "year": 1973,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Anulka Dziubinska",
@@ -4920,7 +5154,8 @@
     "born": "1950-12-14T08:00:00.000Z",
     "month": 4,
     "year": 1973,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Ruthy Ross",
@@ -4941,7 +5176,8 @@
     "born": "1948-03-22T08:00:00.000Z",
     "month": 5,
     "year": 1973,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Martha Smith",
@@ -4962,7 +5198,8 @@
     "born": "1952-10-16T08:00:00.000Z",
     "month": 6,
     "year": 1973,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Phyllis Coleman",
@@ -4983,7 +5220,8 @@
     "born": "1949-08-31T07:00:00.000Z",
     "month": 7,
     "year": 1973,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Geri Glass",
@@ -5004,7 +5242,8 @@
     "born": "1949-07-20T07:00:00.000Z",
     "month": 8,
     "year": 1973,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Valerie Lane",
@@ -5025,7 +5264,8 @@
     "born": "1949-08-04T07:00:00.000Z",
     "month": 9,
     "year": 1973,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Monica Tidwell",
@@ -5046,7 +5286,8 @@
     "born": "1954-01-14T08:00:00.000Z",
     "month": 10,
     "year": 1973,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Christine Maddox",
@@ -5067,7 +5308,8 @@
     "born": "1950-03-24T08:00:00.000Z",
     "month": 11,
     "year": 1973,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Nancy Cameron",
@@ -5088,7 +5330,8 @@
     "born": "1954-03-15T08:00:00.000Z",
     "month": 0,
     "year": 1974,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Francine Parks",
@@ -5109,7 +5352,8 @@
     "born": "1951-01-30T08:00:00.000Z",
     "month": 1,
     "year": 1974,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Pamela Zinszer",
@@ -5130,7 +5374,8 @@
     "born": "1955-09-06T07:00:00.000Z",
     "month": 2,
     "year": 1974,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Marlene Morrow",
@@ -5151,7 +5396,8 @@
     "born": "1954-03-15T08:00:00.000Z",
     "month": 3,
     "year": 1974,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Marilyn Lange",
@@ -5172,7 +5418,8 @@
     "born": "1952-01-12T08:00:00.000Z",
     "month": 4,
     "year": 1974,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Sandy Johnson",
@@ -5193,7 +5440,8 @@
     "born": "1954-07-07T07:00:00.000Z",
     "month": 5,
     "year": 1974,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Carol Vitale",
@@ -5214,7 +5462,8 @@
     "born": "1948-11-14T08:00:00.000Z",
     "month": 6,
     "year": 1974,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Jeane Manson",
@@ -5232,7 +5481,8 @@
     "born": null,
     "month": 7,
     "year": 1974,
-    "mateAge": null
+    "mateAge": null,
+    "first": null
   },
   {
     "name": "Kristine Hanson",
@@ -5253,7 +5503,8 @@
     "born": "1951-09-23T07:00:00.000Z",
     "month": 8,
     "year": 1974,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Ester Cordet",
@@ -5274,7 +5525,8 @@
     "born": "1946-12-31T08:00:00.000Z",
     "month": 9,
     "year": 1974,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": "First Hispanic-American Playmate."
   },
   {
     "name": "Bebe Buell",
@@ -5295,7 +5547,8 @@
     "born": "1953-07-14T07:00:00.000Z",
     "month": 10,
     "year": 1974,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Janice Raymond",
@@ -5316,7 +5569,8 @@
     "born": "1951-03-25T08:00:00.000Z",
     "month": 11,
     "year": 1974,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Lynnda Kimball",
@@ -5337,7 +5591,8 @@
     "born": "1952-05-01T07:00:00.000Z",
     "month": 0,
     "year": 1975,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Laura Misch",
@@ -5358,7 +5613,8 @@
     "born": "1953-11-23T08:00:00.000Z",
     "month": 1,
     "year": 1975,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Ingeborg Sorensen",
@@ -5379,7 +5635,8 @@
     "born": "1948-05-16T07:00:00.000Z",
     "month": 2,
     "year": 1975,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Victoria Cunningham",
@@ -5400,7 +5657,8 @@
     "born": "1952-05-28T07:00:00.000Z",
     "month": 3,
     "year": 1975,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Bridgett Rollins",
@@ -5421,7 +5679,8 @@
     "born": "1956-07-09T07:00:00.000Z",
     "month": 4,
     "year": 1975,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Azizi Johari",
@@ -5442,7 +5701,8 @@
     "born": "1948-08-24T07:00:00.000Z",
     "month": 5,
     "year": 1975,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Lynn Schiller",
@@ -5463,7 +5723,8 @@
     "born": "1951-03-05T08:00:00.000Z",
     "month": 6,
     "year": 1975,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Lillian Müller",
@@ -5484,7 +5745,8 @@
     "born": "1952-08-19T07:00:00.000Z",
     "month": 7,
     "year": 1975,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Mesina Miller",
@@ -5505,7 +5767,8 @@
     "born": "1953-07-07T07:00:00.000Z",
     "month": 8,
     "year": 1975,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Jill De Vries",
@@ -5526,7 +5789,8 @@
     "born": null,
     "month": 9,
     "year": 1975,
-    "mateAge": null
+    "mateAge": null,
+    "first": null
   },
   {
     "name": "Janet Lupo",
@@ -5547,7 +5811,8 @@
     "born": "1950-01-26T08:00:00.000Z",
     "month": 10,
     "year": 1975,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Nancie Li Brandi",
@@ -5568,7 +5833,8 @@
     "born": "1954-08-30T07:00:00.000Z",
     "month": 11,
     "year": 1975,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Daina House",
@@ -5589,7 +5855,8 @@
     "born": "1954-12-30T08:00:00.000Z",
     "month": 0,
     "year": 1976,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Laura Lyons",
@@ -5610,7 +5877,8 @@
     "born": "1954-10-22T08:00:00.000Z",
     "month": 1,
     "year": 1976,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Ann Pennington",
@@ -5631,7 +5899,8 @@
     "born": "1950-06-03T07:00:00.000Z",
     "month": 2,
     "year": 1976,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Denise Michele",
@@ -5652,7 +5921,8 @@
     "born": "1953-06-12T07:00:00.000Z",
     "month": 3,
     "year": 1976,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Patricia Margot McClain",
@@ -5673,7 +5943,8 @@
     "born": "1954-04-03T08:00:00.000Z",
     "month": 4,
     "year": 1976,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Debra Peterson",
@@ -5694,7 +5965,8 @@
     "born": "1955-04-13T08:00:00.000Z",
     "month": 5,
     "year": 1976,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Deborah Borkman",
@@ -5715,7 +5987,8 @@
     "born": "1957-01-08T08:00:00.000Z",
     "month": 6,
     "year": 1976,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Linda Beatty",
@@ -5736,7 +6009,8 @@
     "born": "1952-09-16T07:00:00.000Z",
     "month": 7,
     "year": 1976,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Whitney Kaine",
@@ -5757,7 +6031,8 @@
     "born": "1956-09-20T07:00:00.000Z",
     "month": 8,
     "year": 1976,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Hope Olson",
@@ -5778,7 +6053,8 @@
     "born": "1956-04-04T08:00:00.000Z",
     "month": 9,
     "year": 1976,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Patti McGuire",
@@ -5799,7 +6075,8 @@
     "born": "1951-09-05T07:00:00.000Z",
     "month": 10,
     "year": 1976,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Karen Hafter",
@@ -5820,7 +6097,8 @@
     "born": "1954-12-12T08:00:00.000Z",
     "month": 11,
     "year": 1976,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Susan Lynn Kiger",
@@ -5841,7 +6119,8 @@
     "born": "1953-11-16T08:00:00.000Z",
     "month": 0,
     "year": 1977,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Star Stowe",
@@ -5859,7 +6138,8 @@
     "born": "1956-03-19T08:00:00.000Z",
     "month": 1,
     "year": 1977,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Nicki Thomas",
@@ -5880,7 +6160,8 @@
     "born": "1954-03-22T08:00:00.000Z",
     "month": 2,
     "year": 1977,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Lisa Sohm",
@@ -5901,7 +6182,8 @@
     "born": "1955-03-21T08:00:00.000Z",
     "month": 3,
     "year": 1977,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Sheila Mullen",
@@ -5922,7 +6204,8 @@
     "born": "1957-11-07T08:00:00.000Z",
     "month": 4,
     "year": 1977,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Virve Reid",
@@ -5943,7 +6226,8 @@
     "born": "1956-11-24T08:00:00.000Z",
     "month": 5,
     "year": 1977,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Sondra Theodore",
@@ -5964,7 +6248,8 @@
     "born": "1956-12-12T08:00:00.000Z",
     "month": 6,
     "year": 1977,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Julia Lyndon",
@@ -5985,7 +6270,8 @@
     "born": "1955-07-03T07:00:00.000Z",
     "month": 7,
     "year": 1977,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Debra Jo Fondren",
@@ -6006,7 +6292,8 @@
     "born": "1955-02-05T08:00:00.000Z",
     "month": 8,
     "year": 1977,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Kristine Winder",
@@ -6027,7 +6314,8 @@
     "born": "1955-10-15T08:00:00.000Z",
     "month": 9,
     "year": 1977,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Rita Lee",
@@ -6048,7 +6336,8 @@
     "born": "1953-06-15T07:00:00.000Z",
     "month": 10,
     "year": 1977,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Ashley Cox",
@@ -6069,7 +6358,8 @@
     "born": "1956-11-15T08:00:00.000Z",
     "month": 11,
     "year": 1977,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Debra Jensen",
@@ -6090,7 +6380,8 @@
     "born": "1958-03-12T08:00:00.000Z",
     "month": 0,
     "year": 1978,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Janis Schmitt",
@@ -6111,7 +6402,8 @@
     "born": "1947-03-14T08:00:00.000Z",
     "month": 1,
     "year": 1978,
-    "mateAge": 30
+    "mateAge": 30,
+    "first": null
   },
   {
     "name": "Christina Smith",
@@ -6132,7 +6424,8 @@
     "born": "1957-10-04T08:00:00.000Z",
     "month": 2,
     "year": 1978,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Pamela Jean Bryant",
@@ -6153,7 +6446,8 @@
     "born": "1959-02-08T08:00:00.000Z",
     "month": 3,
     "year": 1978,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Kathryn Morrison",
@@ -6174,7 +6468,8 @@
     "born": "1955-10-02T08:00:00.000Z",
     "month": 4,
     "year": 1978,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Gail Stanton",
@@ -6195,7 +6490,8 @@
     "born": "1954-11-19T08:00:00.000Z",
     "month": 5,
     "year": 1978,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Karen Morton",
@@ -6216,7 +6512,8 @@
     "born": "1958-10-03T08:00:00.000Z",
     "month": 6,
     "year": 1978,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Vicki Witt",
@@ -6237,7 +6534,8 @@
     "born": "1959-04-13T08:00:00.000Z",
     "month": 7,
     "year": 1978,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Rosanne Katon",
@@ -6258,7 +6556,8 @@
     "born": "1954-02-05T08:00:00.000Z",
     "month": 8,
     "year": 1978,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Marcy Hanson",
@@ -6279,7 +6578,8 @@
     "born": "1952-12-22T08:00:00.000Z",
     "month": 9,
     "year": 1978,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Monique St. Pierre",
@@ -6300,7 +6600,8 @@
     "born": "1953-11-25T08:00:00.000Z",
     "month": 10,
     "year": 1978,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Janet Quist",
@@ -6321,7 +6622,8 @@
     "born": "1955-08-17T07:00:00.000Z",
     "month": 11,
     "year": 1978,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Candy Loving",
@@ -6342,7 +6644,8 @@
     "born": "1956-09-04T07:00:00.000Z",
     "month": 0,
     "year": 1979,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Lee Ann Michelle",
@@ -6363,7 +6666,8 @@
     "born": "1960-03-19T08:00:00.000Z",
     "month": 1,
     "year": 1979,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Denise McConnell",
@@ -6384,7 +6688,8 @@
     "born": "1958-12-23T08:00:00.000Z",
     "month": 2,
     "year": 1979,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Missy Cleveland",
@@ -6405,7 +6710,8 @@
     "born": "1959-12-25T08:00:00.000Z",
     "month": 3,
     "year": 1979,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Michele Drake",
@@ -6426,7 +6732,8 @@
     "born": "1958-02-07T08:00:00.000Z",
     "month": 4,
     "year": 1979,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Louann Fernald",
@@ -6447,7 +6754,8 @@
     "born": "1957-10-23T08:00:00.000Z",
     "month": 5,
     "year": 1979,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Dorothy Mays",
@@ -6468,7 +6776,8 @@
     "born": "1957-07-24T07:00:00.000Z",
     "month": 6,
     "year": 1979,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Dorothy Stratten",
@@ -6489,7 +6798,8 @@
     "born": "1960-02-28T08:00:00.000Z",
     "month": 7,
     "year": 1979,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Vicki McCarty",
@@ -6510,7 +6820,8 @@
     "born": "1954-01-13T08:00:00.000Z",
     "month": 8,
     "year": 1979,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Ursula Buchfellner",
@@ -6531,7 +6842,8 @@
     "born": "1961-06-08T07:00:00.000Z",
     "month": 9,
     "year": 1979,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Sylvie Garant",
@@ -6552,7 +6864,8 @@
     "born": "1957-09-23T07:00:00.000Z",
     "month": 10,
     "year": 1979,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Candace Collins",
@@ -6573,7 +6886,8 @@
     "born": "1957-05-26T07:00:00.000Z",
     "month": 11,
     "year": 1979,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Gig Gangel",
@@ -6594,7 +6908,8 @@
     "born": "1958-10-17T08:00:00.000Z",
     "month": 0,
     "year": 1980,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Sandy Cagle",
@@ -6615,7 +6930,8 @@
     "born": "1957-02-02T08:00:00.000Z",
     "month": 1,
     "year": 1980,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Henriette Allais",
@@ -6636,7 +6952,8 @@
     "born": "1954-07-22T07:00:00.000Z",
     "month": 2,
     "year": 1980,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Liz Glazowski",
@@ -6657,7 +6974,8 @@
     "born": "1957-12-19T08:00:00.000Z",
     "month": 3,
     "year": 1980,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Martha Thomsen",
@@ -6678,7 +6996,8 @@
     "born": "1957-01-25T08:00:00.000Z",
     "month": 4,
     "year": 1980,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Ola Ray",
@@ -6699,7 +7018,8 @@
     "born": "1960-06-26T07:00:00.000Z",
     "month": 5,
     "year": 1980,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Teri Peterson",
@@ -6720,7 +7040,8 @@
     "born": "1959-11-06T08:00:00.000Z",
     "month": 6,
     "year": 1980,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Victoria Cooke",
@@ -6741,7 +7062,8 @@
     "born": "1957-07-31T07:00:00.000Z",
     "month": 7,
     "year": 1980,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Lisa Welch",
@@ -6762,7 +7084,8 @@
     "born": "1960-11-11T08:00:00.000Z",
     "month": 8,
     "year": 1980,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Mardi Jacquet",
@@ -6783,7 +7106,8 @@
     "born": "1960-11-02T08:00:00.000Z",
     "month": 9,
     "year": 1980,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Jeana Tomasino",
@@ -6804,7 +7128,8 @@
     "born": "1955-09-18T07:00:00.000Z",
     "month": 10,
     "year": 1980,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Terri Welles",
@@ -6825,7 +7150,8 @@
     "born": "1956-11-21T08:00:00.000Z",
     "month": 11,
     "year": 1980,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Karen Price",
@@ -6846,7 +7172,8 @@
     "born": "1960-07-17T07:00:00.000Z",
     "month": 0,
     "year": 1981,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Vicki Lynn Lasseter",
@@ -6867,7 +7194,8 @@
     "born": "1960-02-19T08:00:00.000Z",
     "month": 1,
     "year": 1981,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Kymberly Herrin",
@@ -6888,7 +7216,8 @@
     "born": "1957-10-02T08:00:00.000Z",
     "month": 2,
     "year": 1981,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Lorraine Michaels",
@@ -6909,7 +7238,8 @@
     "born": "1958-01-23T08:00:00.000Z",
     "month": 3,
     "year": 1981,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Gina Goldberg",
@@ -6930,7 +7260,8 @@
     "born": "1963-06-30T07:00:00.000Z",
     "month": 4,
     "year": 1981,
-    "mateAge": 17
+    "mateAge": 17,
+    "first": null
   },
   {
     "name": "Cathy Larmouth",
@@ -6951,7 +7282,8 @@
     "born": "1953-07-15T07:00:00.000Z",
     "month": 5,
     "year": 1981,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Heidi Sorenson",
@@ -6972,7 +7304,8 @@
     "born": "1960-08-05T07:00:00.000Z",
     "month": 6,
     "year": 1981,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Debbie Boostrom",
@@ -6993,7 +7326,8 @@
     "born": "1955-06-23T07:00:00.000Z",
     "month": 7,
     "year": 1981,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Susan Smith",
@@ -7014,7 +7348,8 @@
     "born": "1959-01-14T08:00:00.000Z",
     "month": 8,
     "year": 1981,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Kelly Tough",
@@ -7035,7 +7370,8 @@
     "born": "1961-12-12T08:00:00.000Z",
     "month": 9,
     "year": 1981,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Shannon Tweed",
@@ -7056,7 +7392,8 @@
     "born": "1957-03-10T08:00:00.000Z",
     "month": 10,
     "year": 1981,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Patricia Farinelli",
@@ -7077,7 +7414,8 @@
     "born": "1960-03-18T08:00:00.000Z",
     "month": 11,
     "year": 1981,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Kimberly McArthur",
@@ -7098,7 +7436,8 @@
     "born": "1963-09-16T07:00:00.000Z",
     "month": 0,
     "year": 1982,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Anne-Marie Fox",
@@ -7119,7 +7458,8 @@
     "born": "1962-09-28T07:00:00.000Z",
     "month": 1,
     "year": 1982,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Karen Witter",
@@ -7140,7 +7480,8 @@
     "born": "1961-12-13T08:00:00.000Z",
     "month": 2,
     "year": 1982,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Linda Rhys Vaughn",
@@ -7161,7 +7502,8 @@
     "born": "1959-08-11T07:00:00.000Z",
     "month": 3,
     "year": 1982,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Kym Malin",
@@ -7182,7 +7524,8 @@
     "born": "1962-07-31T07:00:00.000Z",
     "month": 4,
     "year": 1982,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Lourdes Estores",
@@ -7203,7 +7546,8 @@
     "born": "1958-01-11T08:00:00.000Z",
     "month": 5,
     "year": 1982,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Lynda Wiesmeier",
@@ -7224,7 +7568,8 @@
     "born": "1963-05-30T07:00:00.000Z",
     "month": 6,
     "year": 1982,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Cathy St. George",
@@ -7245,7 +7590,8 @@
     "born": "1954-08-23T07:00:00.000Z",
     "month": 7,
     "year": 1982,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Connie Brighton",
@@ -7266,7 +7612,8 @@
     "born": "1959-05-14T07:00:00.000Z",
     "month": 8,
     "year": 1982,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Marianne Gravatte",
@@ -7287,7 +7634,8 @@
     "born": "1959-12-13T08:00:00.000Z",
     "month": 9,
     "year": 1982,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Marlene Janssen",
@@ -7308,7 +7656,8 @@
     "born": "1958-09-02T07:00:00.000Z",
     "month": 10,
     "year": 1982,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Charlotte Kemp",
@@ -7329,7 +7678,8 @@
     "born": "1961-01-27T08:00:00.000Z",
     "month": 11,
     "year": 1982,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Lonny Chin",
@@ -7350,7 +7700,8 @@
     "born": "1960-08-12T07:00:00.000Z",
     "month": 0,
     "year": 1983,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": "First video Playmate."
   },
   {
     "name": "Melinda Mays",
@@ -7371,7 +7722,8 @@
     "born": "1962-02-23T08:00:00.000Z",
     "month": 1,
     "year": 1983,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Alana Soares",
@@ -7392,7 +7744,8 @@
     "born": "1964-02-21T08:00:00.000Z",
     "month": 2,
     "year": 1983,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Christina Ferguson",
@@ -7413,7 +7766,8 @@
     "born": "1964-03-18T08:00:00.000Z",
     "month": 3,
     "year": 1983,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Susie Scott Krabacher",
@@ -7434,7 +7788,8 @@
     "born": "1963-11-02T08:00:00.000Z",
     "month": 4,
     "year": 1983,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Jolanda Egger",
@@ -7455,7 +7810,8 @@
     "born": "1960-01-08T08:00:00.000Z",
     "month": 5,
     "year": 1983,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Ruth Guerri",
@@ -7476,7 +7832,8 @@
     "born": "1958-02-12T08:00:00.000Z",
     "month": 6,
     "year": 1983,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Carina Persson",
@@ -7497,7 +7854,8 @@
     "born": "1958-06-14T07:00:00.000Z",
     "month": 7,
     "year": 1983,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Barbara Edwards",
@@ -7518,7 +7876,8 @@
     "born": "1960-06-26T07:00:00.000Z",
     "month": 8,
     "year": 1983,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Tracy Vaccaro",
@@ -7539,7 +7898,8 @@
     "born": "1962-05-04T07:00:00.000Z",
     "month": 9,
     "year": 1983,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Veronica Gamba",
@@ -7560,7 +7920,8 @@
     "born": "1963-10-28T08:00:00.000Z",
     "month": 10,
     "year": 1983,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Terry Nihen",
@@ -7581,7 +7942,8 @@
     "born": "1960-09-17T07:00:00.000Z",
     "month": 11,
     "year": 1983,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Penny Baker",
@@ -7602,7 +7964,8 @@
     "born": "1965-10-05T07:00:00.000Z",
     "month": 0,
     "year": 1984,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Justine Greiner",
@@ -7623,7 +7986,8 @@
     "born": "1963-11-19T08:00:00.000Z",
     "month": 1,
     "year": 1984,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Dona Speir",
@@ -7644,7 +8008,8 @@
     "born": "1964-02-07T08:00:00.000Z",
     "month": 2,
     "year": 1984,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Lesa Ann Pedriana",
@@ -7665,7 +8030,8 @@
     "born": "1962-11-24T08:00:00.000Z",
     "month": 3,
     "year": 1984,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Patty Duffek",
@@ -7686,7 +8052,8 @@
     "born": "1963-08-27T07:00:00.000Z",
     "month": 4,
     "year": 1984,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Tricia Lange",
@@ -7707,7 +8074,8 @@
     "born": "1957-04-24T08:00:00.000Z",
     "month": 5,
     "year": 1984,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Liz Stewart",
@@ -7728,7 +8096,8 @@
     "born": "1961-07-03T07:00:00.000Z",
     "month": 6,
     "year": 1984,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Suzi Schott",
@@ -7749,7 +8118,8 @@
     "born": "1961-07-19T07:00:00.000Z",
     "month": 7,
     "year": 1984,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Kimberly Evenson",
@@ -7770,7 +8140,8 @@
     "born": "1962-11-03T08:00:00.000Z",
     "month": 8,
     "year": 1984,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Debi Johnson",
@@ -7791,7 +8162,8 @@
     "born": "1958-03-13T08:00:00.000Z",
     "month": 9,
     "year": 1984,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Roberta Vasquez",
@@ -7812,7 +8184,8 @@
     "born": "1963-02-13T08:00:00.000Z",
     "month": 10,
     "year": 1984,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Karen Velez",
@@ -7833,7 +8206,8 @@
     "born": "1961-01-27T08:00:00.000Z",
     "month": 11,
     "year": 1984,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Joan Bennett",
@@ -7854,7 +8228,8 @@
     "born": "1964-08-30T07:00:00.000Z",
     "month": 0,
     "year": 1985,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Cherie Witter",
@@ -7875,7 +8250,8 @@
     "born": "1963-10-22T07:00:00.000Z",
     "month": 1,
     "year": 1985,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Donna Smith",
@@ -7896,7 +8272,8 @@
     "born": "1960-03-15T08:00:00.000Z",
     "month": 2,
     "year": 1985,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Cindy Brooks",
@@ -7917,7 +8294,8 @@
     "born": "1951-11-05T08:00:00.000Z",
     "month": 3,
     "year": 1985,
-    "mateAge": 33
+    "mateAge": 33,
+    "first": null
   },
   {
     "name": "Kathy Shower",
@@ -7938,7 +8316,8 @@
     "born": "1953-03-08T08:00:00.000Z",
     "month": 4,
     "year": 1985,
-    "mateAge": 32
+    "mateAge": 32,
+    "first": null
   },
   {
     "name": "Devin DeVasquez",
@@ -7959,7 +8338,8 @@
     "born": "1963-06-25T07:00:00.000Z",
     "month": 5,
     "year": 1985,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Hope Marie Carlton",
@@ -7980,7 +8360,8 @@
     "born": "1966-03-03T08:00:00.000Z",
     "month": 6,
     "year": 1985,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Cher Butler",
@@ -8001,7 +8382,8 @@
     "born": "1964-03-06T08:00:00.000Z",
     "month": 7,
     "year": 1985,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Venice Kong",
@@ -8022,7 +8404,8 @@
     "born": "1961-12-17T08:00:00.000Z",
     "month": 8,
     "year": 1985,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Cynthia Brimhall",
@@ -8043,7 +8426,8 @@
     "born": "1964-03-10T08:00:00.000Z",
     "month": 9,
     "year": 1985,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Pamela Saunders",
@@ -8064,7 +8448,8 @@
     "born": "1963-07-09T07:00:00.000Z",
     "month": 10,
     "year": 1985,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Carol Ficatier",
@@ -8085,7 +8470,8 @@
     "born": "1958-02-28T08:00:00.000Z",
     "month": 11,
     "year": 1985,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Sherry Arnett",
@@ -8106,7 +8492,8 @@
     "born": "1964-10-02T07:00:00.000Z",
     "month": 0,
     "year": 1986,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Julie McCullough",
@@ -8127,7 +8514,8 @@
     "born": "1965-01-30T08:00:00.000Z",
     "month": 1,
     "year": 1986,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Kim Morris",
@@ -8148,7 +8536,8 @@
     "born": "1958-10-07T08:00:00.000Z",
     "month": 2,
     "year": 1986,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Teri Weigel",
@@ -8169,7 +8558,8 @@
     "born": "1962-02-24T08:00:00.000Z",
     "month": 3,
     "year": 1986,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Christine Richters",
@@ -8190,7 +8580,8 @@
     "born": "1966-08-03T07:00:00.000Z",
     "month": 4,
     "year": 1986,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Rebecca Ferratti",
@@ -8211,7 +8602,8 @@
     "born": "1964-11-27T08:00:00.000Z",
     "month": 5,
     "year": 1986,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Lynne Austin",
@@ -8232,7 +8624,8 @@
     "born": "1961-04-15T08:00:00.000Z",
     "month": 6,
     "year": 1986,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Ava Fabian",
@@ -8253,7 +8646,8 @@
     "born": "1962-04-04T08:00:00.000Z",
     "month": 7,
     "year": 1986,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Rebekka Armstrong",
@@ -8274,7 +8668,8 @@
     "born": "1967-02-20T08:00:00.000Z",
     "month": 8,
     "year": 1986,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Katherine Hushaw",
@@ -8295,7 +8690,8 @@
     "born": "1963-10-23T07:00:00.000Z",
     "month": 9,
     "year": 1986,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Donna Edmondson",
@@ -8316,7 +8712,8 @@
     "born": "1966-02-01T08:00:00.000Z",
     "month": 10,
     "year": 1986,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Laurie Carr",
@@ -8337,7 +8734,8 @@
     "born": "1965-12-11T08:00:00.000Z",
     "month": 11,
     "year": 1986,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Luann Lee",
@@ -8358,7 +8756,8 @@
     "born": "1961-01-28T08:00:00.000Z",
     "month": 0,
     "year": 1987,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Julie Peterson",
@@ -8379,7 +8778,8 @@
     "born": "1964-09-29T07:00:00.000Z",
     "month": 1,
     "year": 1987,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Marina Baker",
@@ -8400,7 +8800,8 @@
     "born": "1967-12-08T08:00:00.000Z",
     "month": 2,
     "year": 1987,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Anna Clark",
@@ -8421,7 +8822,8 @@
     "born": "1966-10-19T07:00:00.000Z",
     "month": 3,
     "year": 1987,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Kymberly Paige",
@@ -8442,7 +8844,8 @@
     "born": "1966-04-06T08:00:00.000Z",
     "month": 4,
     "year": 1987,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Sandy Greenberg",
@@ -8463,7 +8866,8 @@
     "born": "1958-07-22T07:00:00.000Z",
     "month": 5,
     "year": 1987,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Carmen Berg",
@@ -8484,7 +8888,8 @@
     "born": "1963-08-17T07:00:00.000Z",
     "month": 6,
     "year": 1987,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Sharry Konopski",
@@ -8505,7 +8910,8 @@
     "born": "1967-12-02T08:00:00.000Z",
     "month": 7,
     "year": 1987,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Gwen Hajek",
@@ -8526,7 +8932,8 @@
     "born": "1966-11-18T08:00:00.000Z",
     "month": 8,
     "year": 1987,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Brandi Brandt",
@@ -8547,7 +8954,8 @@
     "born": "1968-11-02T08:00:00.000Z",
     "month": 9,
     "year": 1987,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Pamela Stein",
@@ -8568,7 +8976,8 @@
     "born": "1963-08-13T07:00:00.000Z",
     "month": 10,
     "year": 1987,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "India Allen",
@@ -8589,7 +8998,8 @@
     "born": "1965-06-01T07:00:00.000Z",
     "month": 11,
     "year": 1987,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Kimberley Conrad",
@@ -8607,7 +9017,8 @@
     "born": "1963-08-06T07:00:00.000Z",
     "month": 0,
     "year": 1988,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Kari Kennell",
@@ -8628,7 +9039,8 @@
     "born": "1964-06-21T07:00:00.000Z",
     "month": 1,
     "year": 1988,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Susie Owens",
@@ -8649,7 +9061,8 @@
     "born": "1956-05-28T07:00:00.000Z",
     "month": 2,
     "year": 1988,
-    "mateAge": 31
+    "mateAge": 31,
+    "first": null
   },
   {
     "name": "Eloise Broady",
@@ -8670,7 +9083,8 @@
     "born": "1957-05-13T07:00:00.000Z",
     "month": 3,
     "year": 1988,
-    "mateAge": 30
+    "mateAge": 30,
+    "first": null
   },
   {
     "name": "Diana Lee",
@@ -8691,7 +9105,8 @@
     "born": "1961-05-11T07:00:00.000Z",
     "month": 4,
     "year": 1988,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Emily Arth",
@@ -8712,7 +9127,8 @@
     "born": "1968-10-18T07:00:00.000Z",
     "month": 5,
     "year": 1988,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Terri Lynn Doss",
@@ -8733,7 +9149,8 @@
     "born": "1965-09-04T07:00:00.000Z",
     "month": 6,
     "year": 1988,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Helle Michaelsen",
@@ -8754,7 +9171,8 @@
     "born": "1968-11-02T08:00:00.000Z",
     "month": 7,
     "year": 1988,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Laura Richmond",
@@ -8775,7 +9193,8 @@
     "born": "1966-08-23T07:00:00.000Z",
     "month": 8,
     "year": 1988,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Shannon Long",
@@ -8796,7 +9215,8 @@
     "born": "1969-02-11T08:00:00.000Z",
     "month": 9,
     "year": 1988,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Pia Reyes",
@@ -8817,7 +9237,8 @@
     "born": "1964-07-03T07:00:00.000Z",
     "month": 10,
     "year": 1988,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Kata Kärkkäinen",
@@ -8838,7 +9259,8 @@
     "born": "1968-10-27T07:00:00.000Z",
     "month": 11,
     "year": 1988,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Fawna MacLaren",
@@ -8859,7 +9281,8 @@
     "born": "1965-12-18T08:00:00.000Z",
     "month": 0,
     "year": 1989,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Simone Eden",
@@ -8880,7 +9303,8 @@
     "born": "1970-06-14T07:00:00.000Z",
     "month": 1,
     "year": 1989,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": "First mother and daughter (separately) to become Playmates. Mother: Carol Eden"
   },
   {
     "name": "Laurie Wood",
@@ -8901,7 +9325,8 @@
     "born": "1967-06-23T07:00:00.000Z",
     "month": 2,
     "year": 1989,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Jennifer Lyn Jackson",
@@ -8922,7 +9347,8 @@
     "born": "1969-09-21T07:00:00.000Z",
     "month": 3,
     "year": 1989,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Monique Noel",
@@ -8943,7 +9369,8 @@
     "born": "1967-04-28T08:00:00.000Z",
     "month": 4,
     "year": 1989,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Tawnni Cable",
@@ -8964,7 +9391,8 @@
     "born": "1967-05-01T07:00:00.000Z",
     "month": 5,
     "year": 1989,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Erika Eleniak",
@@ -8985,7 +9413,8 @@
     "born": "1969-09-29T07:00:00.000Z",
     "month": 6,
     "year": 1989,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Gianna Amore",
@@ -9006,7 +9435,8 @@
     "born": "1968-04-05T08:00:00.000Z",
     "month": 7,
     "year": 1989,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Mirjam van Breeschooten",
@@ -9027,7 +9457,8 @@
     "born": "1970-11-15T08:00:00.000Z",
     "month": 8,
     "year": 1989,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Karin van Breeschooten",
@@ -9048,7 +9479,8 @@
     "born": "1970-11-15T08:00:00.000Z",
     "month": 8,
     "year": 1989,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Karen Foster",
@@ -9069,7 +9501,8 @@
     "born": "1965-04-21T08:00:00.000Z",
     "month": 9,
     "year": 1989,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Renee Tenison",
@@ -9090,7 +9523,8 @@
     "born": "1968-12-02T08:00:00.000Z",
     "month": 10,
     "year": 1989,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": "First African-American Playmate of the Year."
   },
   {
     "name": "Petra Verkaik",
@@ -9111,7 +9545,8 @@
     "born": "1966-11-04T08:00:00.000Z",
     "month": 11,
     "year": 1989,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Peggy McIntaggart",
@@ -9129,7 +9564,8 @@
     "born": "1961-09-06T07:00:00.000Z",
     "month": 0,
     "year": 1990,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Pamela Anderson",
@@ -9150,7 +9586,8 @@
     "born": "1967-07-01T07:00:00.000Z",
     "month": 1,
     "year": 1990,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Deborah Driggs",
@@ -9171,7 +9608,8 @@
     "born": "1963-12-13T08:00:00.000Z",
     "month": 2,
     "year": 1990,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Lisa Matthews",
@@ -9192,7 +9630,8 @@
     "born": "1969-09-24T07:00:00.000Z",
     "month": 3,
     "year": 1990,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Tina Bockrath",
@@ -9213,7 +9652,8 @@
     "born": "1967-06-30T07:00:00.000Z",
     "month": 4,
     "year": 1990,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Bonnie Marino",
@@ -9234,7 +9674,8 @@
     "born": "1961-12-20T08:00:00.000Z",
     "month": 5,
     "year": 1990,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Jacqueline Sheen",
@@ -9255,7 +9696,8 @@
     "born": "1963-03-03T08:00:00.000Z",
     "month": 6,
     "year": 1990,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Melissa Evridge",
@@ -9276,7 +9718,8 @@
     "born": "1968-11-02T08:00:00.000Z",
     "month": 7,
     "year": 1990,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Kerri Kendall",
@@ -9297,7 +9740,8 @@
     "born": "1970-09-25T07:00:00.000Z",
     "month": 8,
     "year": 1990,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Brittany York",
@@ -9318,7 +9762,8 @@
     "born": "1965-02-26T08:00:00.000Z",
     "month": 9,
     "year": 1990,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Lorraine Olivia",
@@ -9339,7 +9784,8 @@
     "born": "1968-02-20T08:00:00.000Z",
     "month": 10,
     "year": 1990,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Morgan Fox",
@@ -9360,7 +9806,8 @@
     "born": "1970-05-28T07:00:00.000Z",
     "month": 11,
     "year": 1990,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Stacy Leigh Arthur",
@@ -9381,7 +9828,8 @@
     "born": "1968-06-04T07:00:00.000Z",
     "month": 0,
     "year": 1991,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Cristy Thom",
@@ -9402,7 +9850,8 @@
     "born": "1971-09-08T07:00:00.000Z",
     "month": 1,
     "year": 1991,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Julie Clarke",
@@ -9423,7 +9872,8 @@
     "born": "1971-08-11T07:00:00.000Z",
     "month": 2,
     "year": 1991,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Christina Leardini",
@@ -9444,7 +9894,8 @@
     "born": "1969-01-22T08:00:00.000Z",
     "month": 3,
     "year": 1991,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Carrie Jean Yazel",
@@ -9465,7 +9916,8 @@
     "born": "1969-11-30T08:00:00.000Z",
     "month": 4,
     "year": 1991,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Saskia Linssen",
@@ -9486,7 +9938,8 @@
     "born": "1970-02-16T08:00:00.000Z",
     "month": 5,
     "year": 1991,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Wendy Kaye",
@@ -9507,7 +9960,8 @@
     "born": "1972-05-05T07:00:00.000Z",
     "month": 6,
     "year": 1991,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Corinna Harney",
@@ -9528,7 +9982,8 @@
     "born": "1972-02-20T08:00:00.000Z",
     "month": 7,
     "year": 1991,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Samantha Dorman",
@@ -9549,7 +10004,8 @@
     "born": "1968-03-21T08:00:00.000Z",
     "month": 8,
     "year": 1991,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Cheryl Bachman",
@@ -9570,7 +10026,8 @@
     "born": "1969-11-18T08:00:00.000Z",
     "month": 9,
     "year": 1991,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Tonja Christensen",
@@ -9591,7 +10048,8 @@
     "born": "1971-09-03T07:00:00.000Z",
     "month": 10,
     "year": 1991,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Wendy Hamilton",
@@ -9612,7 +10070,8 @@
     "born": "1967-12-20T08:00:00.000Z",
     "month": 11,
     "year": 1991,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Suzi Simpson",
@@ -9633,7 +10092,8 @@
     "born": "1968-11-16T08:00:00.000Z",
     "month": 0,
     "year": 1992,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Tanya Beyer",
@@ -9654,7 +10114,8 @@
     "born": "1971-06-04T07:00:00.000Z",
     "month": 1,
     "year": 1992,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Tylyn John",
@@ -9675,7 +10136,8 @@
     "born": "1966-07-31T07:00:00.000Z",
     "month": 2,
     "year": 1992,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Cady Cantrell",
@@ -9696,7 +10158,8 @@
     "born": "1972-09-12T07:00:00.000Z",
     "month": 3,
     "year": 1992,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Anna Nicole Smith",
@@ -9717,7 +10180,8 @@
     "born": "1967-11-28T08:00:00.000Z",
     "month": 4,
     "year": 1992,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Angela Melini",
@@ -9738,7 +10202,8 @@
     "born": "1969-07-25T07:00:00.000Z",
     "month": 5,
     "year": 1992,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Amanda Hope",
@@ -9759,7 +10224,8 @@
     "born": "1969-08-23T07:00:00.000Z",
     "month": 6,
     "year": 1992,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Ashley Allen",
@@ -9780,7 +10246,8 @@
     "born": "1968-09-07T07:00:00.000Z",
     "month": 7,
     "year": 1992,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Morena Corwin",
@@ -9801,7 +10268,8 @@
     "born": "1969-10-24T07:00:00.000Z",
     "month": 8,
     "year": 1992,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Tiffany Sloan",
@@ -9822,7 +10290,8 @@
     "born": "1973-05-29T07:00:00.000Z",
     "month": 9,
     "year": 1992,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Stephanie Adams",
@@ -9843,7 +10312,8 @@
     "born": "1970-07-24T07:00:00.000Z",
     "month": 10,
     "year": 1992,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Barbara Moore",
@@ -9864,7 +10334,8 @@
     "born": "1968-08-21T07:00:00.000Z",
     "month": 11,
     "year": 1992,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Echo Johnson",
@@ -9885,7 +10356,8 @@
     "born": "1974-01-11T08:00:00.000Z",
     "month": 0,
     "year": 1993,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Jennifer LeRoy",
@@ -9906,7 +10378,8 @@
     "born": "1974-01-07T08:00:00.000Z",
     "month": 1,
     "year": 1993,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Kimberly Donley",
@@ -9927,7 +10400,8 @@
     "born": "1965-12-15T08:00:00.000Z",
     "month": 2,
     "year": 1993,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Nicole Wood",
@@ -9945,7 +10419,8 @@
     "born": "1970-02-04T08:00:00.000Z",
     "month": 3,
     "year": 1993,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Elke Jeinsen",
@@ -9966,7 +10441,8 @@
     "born": "1966-11-25T08:00:00.000Z",
     "month": 4,
     "year": 1993,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Alesha Oreskovich",
@@ -9987,7 +10463,8 @@
     "born": "1972-05-21T07:00:00.000Z",
     "month": 5,
     "year": 1993,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Leisa Sheridan",
@@ -10008,7 +10485,8 @@
     "born": "1964-05-28T07:00:00.000Z",
     "month": 6,
     "year": 1993,
-    "mateAge": 29
+    "mateAge": 29,
+    "first": null
   },
   {
     "name": "Jennifer Lavoie",
@@ -10029,7 +10507,8 @@
     "born": "1971-02-25T08:00:00.000Z",
     "month": 7,
     "year": 1993,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Carrie Westcott",
@@ -10050,7 +10529,8 @@
     "born": "1969-12-12T08:00:00.000Z",
     "month": 8,
     "year": 1993,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Jenny McCarthy",
@@ -10071,7 +10551,8 @@
     "born": "1972-11-01T08:00:00.000Z",
     "month": 9,
     "year": 1993,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Julianna Young",
@@ -10092,7 +10573,8 @@
     "born": "1960-09-19T07:00:00.000Z",
     "month": 10,
     "year": 1993,
-    "mateAge": 33
+    "mateAge": 33,
+    "first": null
   },
   {
     "name": "Arlene Baxter",
@@ -10113,7 +10595,8 @@
     "born": "1962-11-27T08:00:00.000Z",
     "month": 11,
     "year": 1993,
-    "mateAge": 31
+    "mateAge": 31,
+    "first": null
   },
   {
     "name": "Anna-Marie Goddard",
@@ -10134,7 +10617,8 @@
     "born": "1970-01-13T08:00:00.000Z",
     "month": 0,
     "year": 1994,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Julie Lynn Cialini",
@@ -10155,7 +10639,8 @@
     "born": "1970-11-14T08:00:00.000Z",
     "month": 1,
     "year": 1994,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Neriah Davis",
@@ -10176,7 +10661,8 @@
     "born": "1972-10-12T07:00:00.000Z",
     "month": 2,
     "year": 1994,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Becky DelosSantos",
@@ -10197,7 +10683,8 @@
     "born": "1969-08-16T07:00:00.000Z",
     "month": 3,
     "year": 1994,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Shae Marks",
@@ -10218,7 +10705,8 @@
     "born": "1972-06-01T07:00:00.000Z",
     "month": 4,
     "year": 1994,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Elan Carter",
@@ -10239,7 +10727,8 @@
     "born": "1969-07-03T07:00:00.000Z",
     "month": 5,
     "year": 1994,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Traci Adell",
@@ -10260,7 +10749,8 @@
     "born": "1969-02-17T08:00:00.000Z",
     "month": 6,
     "year": 1994,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Maria Checa",
@@ -10281,7 +10771,8 @@
     "born": "1970-07-29T07:00:00.000Z",
     "month": 7,
     "year": 1994,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Kelly Gallagher",
@@ -10302,7 +10793,8 @@
     "born": "1967-11-21T08:00:00.000Z",
     "month": 8,
     "year": 1994,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Victoria Zdrok",
@@ -10323,7 +10815,8 @@
     "born": "1973-03-03T08:00:00.000Z",
     "month": 9,
     "year": 1994,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Donna Perry",
@@ -10344,7 +10837,8 @@
     "born": "1971-03-02T08:00:00.000Z",
     "month": 10,
     "year": 1994,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Elisa Bridges",
@@ -10365,7 +10859,8 @@
     "born": "1973-05-24T07:00:00.000Z",
     "month": 11,
     "year": 1994,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Melissa Holliday",
@@ -10386,7 +10881,8 @@
     "born": "1969-10-30T08:00:00.000Z",
     "month": 0,
     "year": 1995,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Lisa Marie Scott",
@@ -10407,7 +10903,8 @@
     "born": "1974-02-01T08:00:00.000Z",
     "month": 1,
     "year": 1995,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Stacy Sanches",
@@ -10428,7 +10925,8 @@
     "born": "1973-09-04T07:00:00.000Z",
     "month": 2,
     "year": 1995,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Danelle Folta",
@@ -10449,7 +10947,8 @@
     "born": "1969-04-19T08:00:00.000Z",
     "month": 3,
     "year": 1995,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Cynthia Brown",
@@ -10470,7 +10969,8 @@
     "born": "1974-11-25T08:00:00.000Z",
     "month": 4,
     "year": 1995,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Rhonda Adams",
@@ -10491,7 +10991,8 @@
     "born": "1971-11-27T08:00:00.000Z",
     "month": 5,
     "year": 1995,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Heidi Mark",
@@ -10512,7 +11013,8 @@
     "born": "1971-02-18T08:00:00.000Z",
     "month": 6,
     "year": 1995,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Rachel Jean Marteen",
@@ -10533,7 +11035,8 @@
     "born": "1970-01-31T08:00:00.000Z",
     "month": 7,
     "year": 1995,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Donna D'Errico",
@@ -10554,7 +11057,8 @@
     "born": "1968-03-30T08:00:00.000Z",
     "month": 8,
     "year": 1995,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Alicia Rickter",
@@ -10575,7 +11079,8 @@
     "born": "1972-09-21T07:00:00.000Z",
     "month": 9,
     "year": 1995,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Holly Witt",
@@ -10596,7 +11101,8 @@
     "born": "1968-12-10T08:00:00.000Z",
     "month": 10,
     "year": 1995,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Samantha Torres",
@@ -10617,7 +11123,8 @@
     "born": "1973-10-06T07:00:00.000Z",
     "month": 11,
     "year": 1995,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Victoria Fuller",
@@ -10638,7 +11145,8 @@
     "born": "1970-12-11T08:00:00.000Z",
     "month": 0,
     "year": 1996,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Kona Carmack",
@@ -10659,7 +11167,8 @@
     "born": "1976-10-01T07:00:00.000Z",
     "month": 1,
     "year": 1996,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Priscilla Taylor",
@@ -10680,7 +11189,8 @@
     "born": "1971-08-15T07:00:00.000Z",
     "month": 2,
     "year": 1996,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Gillian Bonner",
@@ -10701,7 +11211,8 @@
     "born": "1966-02-03T08:00:00.000Z",
     "month": 3,
     "year": 1996,
-    "mateAge": 30
+    "mateAge": 30,
+    "first": null
   },
   {
     "name": "Shauna Sand",
@@ -10722,7 +11233,8 @@
     "born": "1971-09-02T07:00:00.000Z",
     "month": 4,
     "year": 1996,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Karin Taylor",
@@ -10743,7 +11255,8 @@
     "born": "1971-11-28T08:00:00.000Z",
     "month": 5,
     "year": 1996,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Angel Boris",
@@ -10764,7 +11277,8 @@
     "born": "1974-08-02T07:00:00.000Z",
     "month": 6,
     "year": 1996,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Jessica Lee",
@@ -10785,7 +11299,8 @@
     "born": "1975-02-18T08:00:00.000Z",
     "month": 7,
     "year": 1996,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Jennifer Allan",
@@ -10806,7 +11321,8 @@
     "born": "1974-05-14T07:00:00.000Z",
     "month": 8,
     "year": 1996,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Nadine Chanz",
@@ -10827,7 +11343,8 @@
     "born": "1972-04-17T08:00:00.000Z",
     "month": 9,
     "year": 1996,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Ulrika Ericsson",
@@ -10848,7 +11365,8 @@
     "born": "1966-03-11T08:00:00.000Z",
     "month": 10,
     "year": 1996,
-    "mateAge": 30
+    "mateAge": 30,
+    "first": null
   },
   {
     "name": "Victoria Silvstedt",
@@ -10869,7 +11387,8 @@
     "born": "1974-09-19T07:00:00.000Z",
     "month": 11,
     "year": 1996,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Jami Ferrell",
@@ -10890,7 +11409,8 @@
     "born": "1974-06-20T07:00:00.000Z",
     "month": 0,
     "year": 1997,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Kimber West",
@@ -10911,7 +11431,8 @@
     "born": "1974-05-23T07:00:00.000Z",
     "month": 1,
     "year": 1997,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Jennifer Miriam",
@@ -10932,7 +11453,8 @@
     "born": "1972-05-02T07:00:00.000Z",
     "month": 2,
     "year": 1997,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Kelly Monaco",
@@ -10953,7 +11475,8 @@
     "born": "1976-05-23T07:00:00.000Z",
     "month": 3,
     "year": 1997,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Lynn Thomas",
@@ -10974,7 +11497,8 @@
     "born": "1976-01-21T08:00:00.000Z",
     "month": 4,
     "year": 1997,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Carrie Stevens",
@@ -10995,7 +11519,8 @@
     "born": "1969-05-01T07:00:00.000Z",
     "month": 5,
     "year": 1997,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Daphnée Lynn Duplaix",
@@ -11016,7 +11541,8 @@
     "born": "1976-08-18T07:00:00.000Z",
     "month": 6,
     "year": 1997,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Kalin Olson",
@@ -11037,7 +11563,8 @@
     "born": "1975-12-29T08:00:00.000Z",
     "month": 7,
     "year": 1997,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Nikki Schieler",
@@ -11058,7 +11585,8 @@
     "born": "1971-08-09T07:00:00.000Z",
     "month": 8,
     "year": 1997,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Layla Roberts",
@@ -11079,7 +11607,8 @@
     "born": "1974-10-22T07:00:00.000Z",
     "month": 9,
     "year": 1997,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Inga Drozdova",
@@ -11100,7 +11629,8 @@
     "born": "1975-12-14T08:00:00.000Z",
     "month": 10,
     "year": 1997,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Karen McDougal",
@@ -11121,7 +11651,8 @@
     "born": "1971-03-23T08:00:00.000Z",
     "month": 11,
     "year": 1997,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Heather Kozar",
@@ -11142,7 +11673,8 @@
     "born": "1976-05-04T07:00:00.000Z",
     "month": 0,
     "year": 1998,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Julia Schultz",
@@ -11163,7 +11695,8 @@
     "born": "1979-06-15T07:00:00.000Z",
     "month": 1,
     "year": 1998,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Marliece Andrada",
@@ -11184,7 +11717,8 @@
     "born": "1972-08-22T07:00:00.000Z",
     "month": 2,
     "year": 1998,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Holly Joan Hart",
@@ -11205,7 +11739,8 @@
     "born": "1976-11-10T08:00:00.000Z",
     "month": 3,
     "year": 1998,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Deanna Brooks",
@@ -11226,7 +11761,8 @@
     "born": "1974-04-30T07:00:00.000Z",
     "month": 4,
     "year": 1998,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Maria Luisa Gil",
@@ -11247,7 +11783,8 @@
     "born": "1977-12-16T08:00:00.000Z",
     "month": 5,
     "year": 1998,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Lisa Dergan",
@@ -11268,7 +11805,8 @@
     "born": "1970-08-10T07:00:00.000Z",
     "month": 6,
     "year": 1998,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Angela Little",
@@ -11289,7 +11827,8 @@
     "born": "1972-07-22T07:00:00.000Z",
     "month": 7,
     "year": 1998,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Vanessa Gleason",
@@ -11310,7 +11849,8 @@
     "born": "1979-08-31T07:00:00.000Z",
     "month": 8,
     "year": 1998,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Laura Cover",
@@ -11331,7 +11871,8 @@
     "born": "1977-05-06T07:00:00.000Z",
     "month": 9,
     "year": 1998,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Tiffany Taylor",
@@ -11352,28 +11893,8 @@
     "born": "1977-07-17T07:00:00.000Z",
     "month": 10,
     "year": 1998,
-    "mateAge": 21
-  },
-  {
-    "name": "Jaclyn Dahm",
-    "heightCM": 172,
-    "heightIN": 67.71653543307086,
-    "weightKG": 52,
-    "weightLB": 114.64037633613634,
-    "bustIN": 34,
-    "bustCM": 86.36,
-    "waistIN": 24,
-    "waistCM": 60.96,
-    "hipsIN": 35,
-    "hipsCM": 88.9,
-    "cup": "C",
-    "hair": "Blonde",
-    "breasts": "Fake/Enhanced",
-    "ethnicity": "Caucasian",
-    "born": "1977-12-12T08:00:00.000Z",
-    "month": 11,
-    "year": 1998,
-    "mateAge": 20
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Erica Dahm",
@@ -11394,7 +11915,8 @@
     "born": "1977-12-12T08:00:00.000Z",
     "month": 11,
     "year": 1998,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": "First triples to become Playmates."
   },
   {
     "name": "Nicole Dahm",
@@ -11415,7 +11937,30 @@
     "born": "1977-12-12T08:00:00.000Z",
     "month": 11,
     "year": 1998,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": "First triples to become Playmates."
+  },
+  {
+    "name": "Jaclyn Dahm",
+    "heightCM": 172,
+    "heightIN": 67.71653543307086,
+    "weightKG": 52,
+    "weightLB": 114.64037633613634,
+    "bustIN": 34,
+    "bustCM": 86.36,
+    "waistIN": 24,
+    "waistCM": 60.96,
+    "hipsIN": 35,
+    "hipsCM": 88.9,
+    "cup": "C",
+    "hair": "Blonde",
+    "breasts": "Fake/Enhanced",
+    "ethnicity": "Caucasian",
+    "born": "1977-12-12T08:00:00.000Z",
+    "month": 11,
+    "year": 1998,
+    "mateAge": 20,
+    "first": "First triples to become Playmates."
   },
   {
     "name": "Jaime Bergman",
@@ -11436,7 +11981,8 @@
     "born": "1975-09-23T07:00:00.000Z",
     "month": 0,
     "year": 1999,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Stacy Marie Fuson",
@@ -11457,7 +12003,8 @@
     "born": "1978-08-30T07:00:00.000Z",
     "month": 1,
     "year": 1999,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Alexandria Karlsen",
@@ -11478,7 +12025,8 @@
     "born": "1978-10-26T07:00:00.000Z",
     "month": 2,
     "year": 1999,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Natalia Sokolova",
@@ -11499,7 +12047,8 @@
     "born": "1976-10-15T07:00:00.000Z",
     "month": 3,
     "year": 1999,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Tishara Cousino",
@@ -11520,7 +12069,8 @@
     "born": "1978-06-16T07:00:00.000Z",
     "month": 4,
     "year": 1999,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Kimberly Spicer",
@@ -11541,7 +12091,8 @@
     "born": "1980-01-17T08:00:00.000Z",
     "month": 5,
     "year": 1999,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Jennifer Rovero",
@@ -11562,7 +12113,8 @@
     "born": "1978-12-12T08:00:00.000Z",
     "month": 6,
     "year": 1999,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Rebecca Scott",
@@ -11583,7 +12135,8 @@
     "born": "1972-09-27T07:00:00.000Z",
     "month": 7,
     "year": 1999,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Kristi Cline",
@@ -11604,7 +12157,8 @@
     "born": "1980-05-04T07:00:00.000Z",
     "month": 8,
     "year": 1999,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Jodi Ann Paterson",
@@ -11625,7 +12179,8 @@
     "born": "1975-07-31T07:00:00.000Z",
     "month": 9,
     "year": 1999,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Cara Wakelin",
@@ -11643,7 +12198,8 @@
     "born": "1977-02-08T08:00:00.000Z",
     "month": 10,
     "year": 1999,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Brooke Richards",
@@ -11664,7 +12220,8 @@
     "born": "1976-10-17T07:00:00.000Z",
     "month": 11,
     "year": 1999,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Darlene Bernaola",
@@ -11685,7 +12242,8 @@
     "born": "1976-08-27T07:00:00.000Z",
     "month": 0,
     "year": 2000,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Carol Bernaola",
@@ -11706,7 +12264,8 @@
     "born": "1976-08-27T07:00:00.000Z",
     "month": 0,
     "year": 2000,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Suzanne Stokes",
@@ -11727,7 +12286,8 @@
     "born": "1979-07-09T07:00:00.000Z",
     "month": 1,
     "year": 2000,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Nicole Marie Lenz",
@@ -11748,7 +12308,8 @@
     "born": "1980-06-24T07:00:00.000Z",
     "month": 2,
     "year": 2000,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Brande Roderick",
@@ -11769,7 +12330,8 @@
     "born": "1974-06-13T07:00:00.000Z",
     "month": 3,
     "year": 2000,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Brooke Berry",
@@ -11790,7 +12352,8 @@
     "born": "1980-03-07T08:00:00.000Z",
     "month": 4,
     "year": 2000,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Shannon Stewart",
@@ -11811,7 +12374,8 @@
     "born": "1978-05-25T07:00:00.000Z",
     "month": 5,
     "year": 2000,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Neferteri Shepherd",
@@ -11832,7 +12396,8 @@
     "born": "1980-09-08T07:00:00.000Z",
     "month": 6,
     "year": 2000,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Summer Altice",
@@ -11853,7 +12418,8 @@
     "born": "1979-12-23T08:00:00.000Z",
     "month": 7,
     "year": 2000,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Kerissa Fare",
@@ -11874,7 +12440,8 @@
     "born": "1976-12-31T08:00:00.000Z",
     "month": 8,
     "year": 2000,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Nichole Van Croft",
@@ -11895,7 +12462,8 @@
     "born": "1973-11-05T08:00:00.000Z",
     "month": 9,
     "year": 2000,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Buffy Tyler",
@@ -11916,7 +12484,8 @@
     "born": "1978-04-18T08:00:00.000Z",
     "month": 10,
     "year": 2000,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Cara Michelle",
@@ -11937,7 +12506,8 @@
     "born": "1978-02-02T08:00:00.000Z",
     "month": 11,
     "year": 2000,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Irina Voronina",
@@ -11958,7 +12528,8 @@
     "born": "1977-12-19T08:00:00.000Z",
     "month": 0,
     "year": 2001,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Lauren Michelle Hill",
@@ -11979,7 +12550,8 @@
     "born": "1979-06-27T07:00:00.000Z",
     "month": 1,
     "year": 2001,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Miriam Gonzalez",
@@ -12000,7 +12572,8 @@
     "born": "1977-07-08T07:00:00.000Z",
     "month": 2,
     "year": 2001,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Katie Lohmann",
@@ -12021,7 +12594,8 @@
     "born": "1980-01-29T08:00:00.000Z",
     "month": 3,
     "year": 2001,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Crista Nicole",
@@ -12042,7 +12616,8 @@
     "born": "1978-07-24T07:00:00.000Z",
     "month": 4,
     "year": 2001,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Heather Spytek",
@@ -12063,7 +12638,8 @@
     "born": "1977-12-17T08:00:00.000Z",
     "month": 5,
     "year": 2001,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Kimberley Stanfield",
@@ -12084,7 +12660,8 @@
     "born": "1981-11-18T08:00:00.000Z",
     "month": 6,
     "year": 2001,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Jennifer Walcott",
@@ -12105,7 +12682,8 @@
     "born": "1977-05-08T07:00:00.000Z",
     "month": 7,
     "year": 2001,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Dalene Kurtis",
@@ -12126,7 +12704,8 @@
     "born": "1977-11-12T08:00:00.000Z",
     "month": 8,
     "year": 2001,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": "First Playmate to pose with shaved pubic area."
   },
   {
     "name": "Stephanie Heinrich",
@@ -12147,7 +12726,8 @@
     "born": "1979-11-13T08:00:00.000Z",
     "month": 9,
     "year": 2001,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Lindsey Vuolo",
@@ -12168,7 +12748,8 @@
     "born": "1981-10-19T07:00:00.000Z",
     "month": 10,
     "year": 2001,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Shanna Moakler",
@@ -12189,7 +12770,8 @@
     "born": "1975-03-28T08:00:00.000Z",
     "month": 11,
     "year": 2001,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Nicole Narain",
@@ -12210,7 +12792,8 @@
     "born": "1974-07-28T07:00:00.000Z",
     "month": 0,
     "year": 2002,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Anka Romensky",
@@ -12231,7 +12814,8 @@
     "born": "1980-09-16T07:00:00.000Z",
     "month": 1,
     "year": 2002,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Tina Jordan",
@@ -12252,7 +12836,8 @@
     "born": "1972-08-21T07:00:00.000Z",
     "month": 2,
     "year": 2002,
-    "mateAge": 29
+    "mateAge": 29,
+    "first": null
   },
   {
     "name": "Heather Carolin",
@@ -12273,7 +12858,8 @@
     "born": "1982-08-15T07:00:00.000Z",
     "month": 3,
     "year": 2002,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Christi Shake",
@@ -12294,7 +12880,8 @@
     "born": "1980-08-22T07:00:00.000Z",
     "month": 4,
     "year": 2002,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Michele Rogers",
@@ -12315,7 +12902,8 @@
     "born": "1976-05-14T07:00:00.000Z",
     "month": 5,
     "year": 2002,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Lauren Anderson",
@@ -12336,7 +12924,8 @@
     "born": "1980-06-06T07:00:00.000Z",
     "month": 6,
     "year": 2002,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Christina Santiago",
@@ -12357,7 +12946,8 @@
     "born": "1981-10-15T07:00:00.000Z",
     "month": 7,
     "year": 2002,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Shallan Meiers",
@@ -12378,7 +12968,8 @@
     "born": "1981-09-30T07:00:00.000Z",
     "month": 8,
     "year": 2002,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Teri Harrison",
@@ -12399,7 +12990,8 @@
     "born": "1981-02-16T08:00:00.000Z",
     "month": 9,
     "year": 2002,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Serria Tawan",
@@ -12420,7 +13012,8 @@
     "born": "1978-09-04T07:00:00.000Z",
     "month": 10,
     "year": 2002,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Lani Todd",
@@ -12441,7 +13034,8 @@
     "born": "1981-06-04T07:00:00.000Z",
     "month": 11,
     "year": 2002,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Rebecca Ramos",
@@ -12462,7 +13056,8 @@
     "born": "1967-08-26T07:00:00.000Z",
     "month": 0,
     "year": 2003,
-    "mateAge": 35
+    "mateAge": 35,
+    "first": null
   },
   {
     "name": "Charis Boyle",
@@ -12483,7 +13078,8 @@
     "born": "1976-08-31T07:00:00.000Z",
     "month": 1,
     "year": 2003,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Pennelope Jimenez",
@@ -12504,7 +13100,8 @@
     "born": "1978-07-26T07:00:00.000Z",
     "month": 2,
     "year": 2003,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Carmella DeCesare",
@@ -12525,7 +13122,8 @@
     "born": "1982-07-01T07:00:00.000Z",
     "month": 3,
     "year": 2003,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Laurie Fetter",
@@ -12546,7 +13144,8 @@
     "born": "1982-01-09T08:00:00.000Z",
     "month": 4,
     "year": 2003,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Tailor James",
@@ -12567,7 +13166,8 @@
     "born": "1980-07-21T07:00:00.000Z",
     "month": 5,
     "year": 2003,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Marketa Janska",
@@ -12588,7 +13188,8 @@
     "born": "1981-05-24T07:00:00.000Z",
     "month": 6,
     "year": 2003,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Colleen Marie",
@@ -12609,7 +13210,8 @@
     "born": "1977-08-28T07:00:00.000Z",
     "month": 7,
     "year": 2003,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Luci Victoria",
@@ -12630,7 +13232,8 @@
     "born": "1982-02-02T08:00:00.000Z",
     "month": 8,
     "year": 2003,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Audra Lynn",
@@ -12651,7 +13254,8 @@
     "born": "1980-01-31T08:00:00.000Z",
     "month": 9,
     "year": 2003,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Divini Rae",
@@ -12672,7 +13276,8 @@
     "born": "1977-07-31T07:00:00.000Z",
     "month": 10,
     "year": 2003,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Sarah Teles",
@@ -12693,7 +13298,8 @@
     "born": "1983-03-16T08:00:00.000Z",
     "month": 11,
     "year": 2003,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Deisy Teles",
@@ -12714,7 +13320,8 @@
     "born": "1983-03-16T08:00:00.000Z",
     "month": 11,
     "year": 2003,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Colleen Shannon",
@@ -12732,7 +13339,8 @@
     "born": "1978-04-14T08:00:00.000Z",
     "month": 0,
     "year": 2004,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Aliya Wolf",
@@ -12753,7 +13361,8 @@
     "born": "1975-01-17T08:00:00.000Z",
     "month": 1,
     "year": 2004,
-    "mateAge": 29
+    "mateAge": 29,
+    "first": null
   },
   {
     "name": "Sandra Hubby",
@@ -12774,7 +13383,8 @@
     "born": "1978-11-23T08:00:00.000Z",
     "month": 2,
     "year": 2004,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Krista Kelly",
@@ -12795,7 +13405,8 @@
     "born": "1977-06-18T07:00:00.000Z",
     "month": 3,
     "year": 2004,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Nicole Whitehead",
@@ -12816,7 +13427,8 @@
     "born": "1980-11-05T08:00:00.000Z",
     "month": 4,
     "year": 2004,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Hiromi Oshima",
@@ -12837,7 +13449,8 @@
     "born": "1980-01-06T08:00:00.000Z",
     "month": 5,
     "year": 2004,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Stephanie Glasson",
@@ -12858,7 +13471,8 @@
     "born": "1975-12-01T08:00:00.000Z",
     "month": 6,
     "year": 2004,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Pilar Lastra",
@@ -12879,7 +13493,8 @@
     "born": "1981-01-15T08:00:00.000Z",
     "month": 7,
     "year": 2004,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Scarlett Keegan",
@@ -12900,7 +13515,8 @@
     "born": "1984-05-18T07:00:00.000Z",
     "month": 8,
     "year": 2004,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Kimberly Holland",
@@ -12921,7 +13537,8 @@
     "born": "1982-08-01T07:00:00.000Z",
     "month": 9,
     "year": 2004,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Cara Zavaleta",
@@ -12942,7 +13559,8 @@
     "born": "1980-06-15T07:00:00.000Z",
     "month": 10,
     "year": 2004,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Tiffany Fallon",
@@ -12963,7 +13581,8 @@
     "born": "1974-05-01T07:00:00.000Z",
     "month": 11,
     "year": 2004,
-    "mateAge": 30
+    "mateAge": 30,
+    "first": null
   },
   {
     "name": "Destiny Davis",
@@ -12984,7 +13603,8 @@
     "born": "1985-08-24T07:00:00.000Z",
     "month": 0,
     "year": 2005,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Amber Campisi",
@@ -13005,7 +13625,8 @@
     "born": "1981-06-21T07:00:00.000Z",
     "month": 1,
     "year": 2005,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Jillian Grace",
@@ -13026,7 +13647,8 @@
     "born": "1985-12-20T08:00:00.000Z",
     "month": 2,
     "year": 2005,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Courtney Rachel Culkin",
@@ -13047,7 +13669,8 @@
     "born": "1983-02-23T08:00:00.000Z",
     "month": 3,
     "year": 2005,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Jamie Westenhiser",
@@ -13068,7 +13691,8 @@
     "born": "1981-11-02T08:00:00.000Z",
     "month": 4,
     "year": 2005,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Kara Monaco",
@@ -13089,7 +13713,8 @@
     "born": "1983-02-26T08:00:00.000Z",
     "month": 5,
     "year": 2005,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Qiana Chase",
@@ -13110,7 +13735,8 @@
     "born": "1981-02-12T08:00:00.000Z",
     "month": 6,
     "year": 2005,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Tamara Witmer",
@@ -13131,7 +13757,8 @@
     "born": "1984-03-21T08:00:00.000Z",
     "month": 7,
     "year": 2005,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Vanessa Hoelsher",
@@ -13149,7 +13776,8 @@
     "born": "1982-01-19T08:00:00.000Z",
     "month": 8,
     "year": 2005,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Amanda Paige",
@@ -13170,7 +13798,8 @@
     "born": "1984-10-28T07:00:00.000Z",
     "month": 9,
     "year": 2005,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Raquel Gibson",
@@ -13191,7 +13820,8 @@
     "born": "1985-06-14T07:00:00.000Z",
     "month": 10,
     "year": 2005,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Christine Smith",
@@ -13212,7 +13842,8 @@
     "born": "1979-04-06T08:00:00.000Z",
     "month": 11,
     "year": 2005,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Athena Lundberg",
@@ -13233,7 +13864,8 @@
     "born": "1986-04-12T08:00:00.000Z",
     "month": 0,
     "year": 2006,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Cassandra Lynn",
@@ -13254,7 +13886,8 @@
     "born": "1979-08-15T07:00:00.000Z",
     "month": 1,
     "year": 2006,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Monica Leigh",
@@ -13275,7 +13908,8 @@
     "born": "1981-12-19T08:00:00.000Z",
     "month": 2,
     "year": 2006,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Holley Ann Dorrough",
@@ -13296,7 +13930,8 @@
     "born": "1986-08-12T07:00:00.000Z",
     "month": 3,
     "year": 2006,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Alison Waite",
@@ -13317,7 +13952,8 @@
     "born": "1981-11-10T08:00:00.000Z",
     "month": 4,
     "year": 2006,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Stephanie Larimore",
@@ -13338,7 +13974,8 @@
     "born": "1981-04-21T08:00:00.000Z",
     "month": 5,
     "year": 2006,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Sara Jean Underwood",
@@ -13359,7 +13996,8 @@
     "born": "1984-03-26T08:00:00.000Z",
     "month": 6,
     "year": 2006,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Nicole Voss",
@@ -13380,7 +14018,8 @@
     "born": "1982-09-19T07:00:00.000Z",
     "month": 7,
     "year": 2006,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Janine Habeck",
@@ -13401,7 +14040,8 @@
     "born": "1983-06-03T07:00:00.000Z",
     "month": 8,
     "year": 2006,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Jordan Monroe",
@@ -13422,7 +14062,8 @@
     "born": "1986-04-14T08:00:00.000Z",
     "month": 9,
     "year": 2006,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Sarah Elizabeth",
@@ -13443,7 +14084,8 @@
     "born": "1983-08-09T07:00:00.000Z",
     "month": 10,
     "year": 2006,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Kia Drayton",
@@ -13464,7 +14106,8 @@
     "born": "1983-04-11T08:00:00.000Z",
     "month": 11,
     "year": 2006,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Jayde Nicole",
@@ -13485,7 +14128,8 @@
     "born": "1986-02-19T08:00:00.000Z",
     "month": 0,
     "year": 2007,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Heather Rene Smith",
@@ -13506,7 +14150,8 @@
     "born": "1987-01-08T08:00:00.000Z",
     "month": 1,
     "year": 2007,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Tyran Richard",
@@ -13527,7 +14172,8 @@
     "born": "1982-10-01T07:00:00.000Z",
     "month": 2,
     "year": 2007,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Giuliana Marino",
@@ -13548,7 +14194,8 @@
     "born": "1986-05-13T07:00:00.000Z",
     "month": 3,
     "year": 2007,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Shannon James",
@@ -13569,7 +14216,8 @@
     "born": "1987-02-05T08:00:00.000Z",
     "month": 4,
     "year": 2007,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Brittany Binger",
@@ -13590,7 +14238,8 @@
     "born": "1987-03-24T08:00:00.000Z",
     "month": 5,
     "year": 2007,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Tiffany Selby",
@@ -13611,7 +14260,8 @@
     "born": "1981-11-14T08:00:00.000Z",
     "month": 6,
     "year": 2007,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Tamara Sky",
@@ -13632,7 +14282,8 @@
     "born": "1985-02-20T08:00:00.000Z",
     "month": 7,
     "year": 2007,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Patrice Hollis",
@@ -13653,7 +14304,8 @@
     "born": "1985-09-01T07:00:00.000Z",
     "month": 8,
     "year": 2007,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Spencer Scott",
@@ -13674,7 +14326,8 @@
     "born": "1989-04-04T07:00:00.000Z",
     "month": 9,
     "year": 2007,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Lindsay Wagner",
@@ -13695,7 +14348,8 @@
     "born": "1988-03-14T08:00:00.000Z",
     "month": 10,
     "year": 2007,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Sasckya Porto",
@@ -13716,7 +14370,8 @@
     "born": "1984-10-31T08:00:00.000Z",
     "month": 11,
     "year": 2007,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Sandra Nilsson",
@@ -13737,7 +14392,8 @@
     "born": "1986-02-17T08:00:00.000Z",
     "month": 0,
     "year": 2008,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Michelle McLaughlin",
@@ -13758,7 +14414,8 @@
     "born": "1986-06-19T07:00:00.000Z",
     "month": 1,
     "year": 2008,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Ida Ljungqvist",
@@ -13779,7 +14436,8 @@
     "born": "1981-09-27T07:00:00.000Z",
     "month": 2,
     "year": 2008,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Regina Deutinger",
@@ -13800,7 +14458,8 @@
     "born": "1982-09-17T07:00:00.000Z",
     "month": 3,
     "year": 2008,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "AJ Alexander",
@@ -13821,7 +14480,8 @@
     "born": "1980-09-16T07:00:00.000Z",
     "month": 4,
     "year": 2008,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Juliette Fretté",
@@ -13842,7 +14502,8 @@
     "born": "1983-12-25T08:00:00.000Z",
     "month": 5,
     "year": 2008,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Laura Croft",
@@ -13863,7 +14524,8 @@
     "born": "1983-01-30T08:00:00.000Z",
     "month": 6,
     "year": 2008,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Kayla Collins",
@@ -13884,7 +14546,8 @@
     "born": "1987-04-01T08:00:00.000Z",
     "month": 7,
     "year": 2008,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Valerie Mason",
@@ -13905,7 +14568,8 @@
     "born": "1988-01-29T08:00:00.000Z",
     "month": 8,
     "year": 2008,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Kelly Carrington",
@@ -13926,7 +14590,8 @@
     "born": "1986-06-24T07:00:00.000Z",
     "month": 9,
     "year": 2008,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Grace Kim",
@@ -13947,7 +14612,8 @@
     "born": "1979-08-20T07:00:00.000Z",
     "month": 10,
     "year": 2008,
-    "mateAge": 29
+    "mateAge": 29,
+    "first": null
   },
   {
     "name": "Natalie Campbell",
@@ -13968,7 +14634,8 @@
     "born": "1986-08-08T07:00:00.000Z",
     "month": 11,
     "year": 2008,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Jennifer Campbell",
@@ -13989,7 +14656,8 @@
     "born": "1986-08-08T07:00:00.000Z",
     "month": 11,
     "year": 2008,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Dasha Astafieva",
@@ -14010,7 +14678,8 @@
     "born": "1985-08-04T07:00:00.000Z",
     "month": 0,
     "year": 2009,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Jessica Burciaga",
@@ -14031,7 +14700,8 @@
     "born": "1983-04-11T08:00:00.000Z",
     "month": 1,
     "year": 2009,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Jennifer Pershing",
@@ -14052,7 +14722,8 @@
     "born": "1980-06-19T07:00:00.000Z",
     "month": 2,
     "year": 2009,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Hope Dworaczyk",
@@ -14073,7 +14744,8 @@
     "born": "1984-11-21T08:00:00.000Z",
     "month": 3,
     "year": 2009,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Crystal McCahill",
@@ -14094,7 +14766,8 @@
     "born": "1983-12-18T08:00:00.000Z",
     "month": 4,
     "year": 2009,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Candice Cassidy",
@@ -14115,7 +14788,8 @@
     "born": "1985-10-23T07:00:00.000Z",
     "month": 5,
     "year": 2009,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Karissa Shannon",
@@ -14136,7 +14810,8 @@
     "born": "1989-10-02T07:00:00.000Z",
     "month": 6,
     "year": 2009,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Kristina Shannon",
@@ -14157,7 +14832,8 @@
     "born": "1989-10-02T07:00:00.000Z",
     "month": 7,
     "year": 2009,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Kimberly Phillips",
@@ -14178,7 +14854,8 @@
     "born": "1987-01-09T08:00:00.000Z",
     "month": 8,
     "year": 2009,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Lindsey Evans",
@@ -14199,7 +14876,8 @@
     "born": "1989-12-09T08:00:00.000Z",
     "month": 9,
     "year": 2009,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Kelley Thompson",
@@ -14220,7 +14898,8 @@
     "born": "1987-12-08T08:00:00.000Z",
     "month": 10,
     "year": 2009,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Crystal Harris",
@@ -14241,7 +14920,8 @@
     "born": "1986-04-29T07:00:00.000Z",
     "month": 11,
     "year": 2009,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Jaime Faith Edmondson",
@@ -14262,7 +14942,8 @@
     "born": "1978-12-30T08:00:00.000Z",
     "month": 0,
     "year": 2010,
-    "mateAge": 31
+    "mateAge": 31,
+    "first": null
   },
   {
     "name": "Heather Rae Young",
@@ -14283,7 +14964,8 @@
     "born": "1987-09-16T07:00:00.000Z",
     "month": 1,
     "year": 2010,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Kyra Milan",
@@ -14304,7 +14986,8 @@
     "born": "1989-11-02T08:00:00.000Z",
     "month": 2,
     "year": 2010,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Amy Leigh Andrews",
@@ -14325,7 +15008,8 @@
     "born": "1984-09-19T07:00:00.000Z",
     "month": 3,
     "year": 2010,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Kassie Lyn Logsdon",
@@ -14346,7 +15030,8 @@
     "born": "1987-01-06T08:00:00.000Z",
     "month": 4,
     "year": 2010,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Katie Vernola",
@@ -14367,7 +15052,8 @@
     "born": "1991-10-21T07:00:00.000Z",
     "month": 5,
     "year": 2010,
-    "mateAge": 18
+    "mateAge": 18,
+    "first": null
   },
   {
     "name": "Shanna McLaughlin",
@@ -14388,7 +15074,8 @@
     "born": "1985-05-10T07:00:00.000Z",
     "month": 6,
     "year": 2010,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Francesca Frigo",
@@ -14409,7 +15096,8 @@
     "born": "1986-03-22T08:00:00.000Z",
     "month": 7,
     "year": 2010,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Olivia Paige",
@@ -14430,7 +15118,8 @@
     "born": "1991-05-22T07:00:00.000Z",
     "month": 8,
     "year": 2010,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Claire Sinclair",
@@ -14451,7 +15140,8 @@
     "born": "1991-05-25T07:00:00.000Z",
     "month": 9,
     "year": 2010,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Shera Bechard",
@@ -14472,7 +15162,8 @@
     "born": "1983-09-14T07:00:00.000Z",
     "month": 10,
     "year": 2010,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Ashley Hobbs",
@@ -14493,7 +15184,8 @@
     "born": "1989-09-03T07:00:00.000Z",
     "month": 11,
     "year": 2010,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Anna Sophia Berglund",
@@ -14514,7 +15206,8 @@
     "born": "1986-04-05T08:00:00.000Z",
     "month": 0,
     "year": 2011,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Kylie Johnson",
@@ -14535,7 +15228,8 @@
     "born": "1990-11-30T08:00:00.000Z",
     "month": 1,
     "year": 2011,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Ashley Mattingly",
@@ -14556,7 +15250,8 @@
     "born": "1986-09-10T07:00:00.000Z",
     "month": 2,
     "year": 2011,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Jaclyn Swedberg",
@@ -14577,7 +15272,8 @@
     "born": "1990-08-14T07:00:00.000Z",
     "month": 3,
     "year": 2011,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Sasha Bonilova",
@@ -14598,7 +15294,8 @@
     "born": "1987-05-20T07:00:00.000Z",
     "month": 4,
     "year": 2011,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Mei-Ling Lam",
@@ -14619,7 +15316,8 @@
     "born": "1984-01-26T08:00:00.000Z",
     "month": 5,
     "year": 2011,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Jessa Lynn Hinton",
@@ -14640,7 +15338,8 @@
     "born": "1984-04-10T08:00:00.000Z",
     "month": 6,
     "year": 2011,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Iryna Ivanova",
@@ -14661,7 +15360,8 @@
     "born": "1987-04-06T07:00:00.000Z",
     "month": 7,
     "year": 2011,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Tiffany Toth",
@@ -14682,7 +15382,8 @@
     "born": "1986-03-28T08:00:00.000Z",
     "month": 8,
     "year": 2011,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Amanda Cerny",
@@ -14703,7 +15404,8 @@
     "born": "1991-06-26T07:00:00.000Z",
     "month": 9,
     "year": 2011,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Ciara Price",
@@ -14724,7 +15426,8 @@
     "born": "1990-05-10T07:00:00.000Z",
     "month": 10,
     "year": 2011,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Rainy Day Jordan",
@@ -14745,7 +15448,8 @@
     "born": "1991-04-08T07:00:00.000Z",
     "month": 11,
     "year": 2011,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Heather Knox",
@@ -14766,7 +15470,8 @@
     "born": "1986-01-17T08:00:00.000Z",
     "month": 0,
     "year": 2012,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Leola Bell",
@@ -14787,7 +15492,8 @@
     "born": "1984-12-20T08:00:00.000Z",
     "month": 1,
     "year": 2012,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Lisa Seiffert",
@@ -14808,7 +15514,8 @@
     "born": "1982-08-30T07:00:00.000Z",
     "month": 2,
     "year": 2012,
-    "mateAge": 29
+    "mateAge": 29,
+    "first": null
   },
   {
     "name": "Raquel Pomplun",
@@ -14829,7 +15536,8 @@
     "born": "1987-10-24T07:00:00.000Z",
     "month": 3,
     "year": 2012,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": "First Mexican-American Playmate of the Year."
   },
   {
     "name": "Nikki Leigh",
@@ -14850,7 +15558,8 @@
     "born": "1988-09-13T07:00:00.000Z",
     "month": 4,
     "year": 2012,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Amelia Talon",
@@ -14871,7 +15580,8 @@
     "born": "1990-01-05T08:00:00.000Z",
     "month": 5,
     "year": 2012,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Shelby Chesnes",
@@ -14892,7 +15602,8 @@
     "born": "1991-02-14T08:00:00.000Z",
     "month": 6,
     "year": 2012,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Beth Williams",
@@ -14913,7 +15624,8 @@
     "born": "1987-02-05T08:00:00.000Z",
     "month": 7,
     "year": 2012,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Alana Campos",
@@ -14934,7 +15646,8 @@
     "born": "1990-11-05T08:00:00.000Z",
     "month": 8,
     "year": 2012,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Pamela Horton",
@@ -14955,7 +15668,8 @@
     "born": "1988-05-04T07:00:00.000Z",
     "month": 9,
     "year": 2012,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Britany Nola",
@@ -14976,7 +15690,8 @@
     "born": "1991-04-12T07:00:00.000Z",
     "month": 10,
     "year": 2012,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Amanda Streich",
@@ -14997,7 +15712,8 @@
     "born": "1993-05-26T07:00:00.000Z",
     "month": 11,
     "year": 2012,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Karina Marie",
@@ -15018,7 +15734,8 @@
     "born": "1984-02-05T08:00:00.000Z",
     "month": 0,
     "year": 2013,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Shawn Dillon",
@@ -15039,7 +15756,8 @@
     "born": "1986-06-07T07:00:00.000Z",
     "month": 1,
     "year": 2013,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Ashley Doris",
@@ -15060,7 +15778,8 @@
     "born": "1989-11-01T08:00:00.000Z",
     "month": 2,
     "year": 2013,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Jaslyn Ome",
@@ -15081,7 +15800,8 @@
     "born": "1991-07-21T07:00:00.000Z",
     "month": 3,
     "year": 2013,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Kristen Nicole",
@@ -15102,7 +15822,8 @@
     "born": "1989-11-15T08:00:00.000Z",
     "month": 4,
     "year": 2013,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Audrey Aleen Allen",
@@ -15123,7 +15844,8 @@
     "born": "1991-04-08T07:00:00.000Z",
     "month": 5,
     "year": 2013,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Alyssa Arcè",
@@ -15144,7 +15866,8 @@
     "born": "1992-02-27T08:00:00.000Z",
     "month": 6,
     "year": 2013,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Val Keil",
@@ -15165,7 +15888,8 @@
     "born": "1991-01-04T08:00:00.000Z",
     "month": 7,
     "year": 2013,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Bryiana Noelle",
@@ -15186,7 +15910,8 @@
     "born": "1991-07-21T07:00:00.000Z",
     "month": 8,
     "year": 2013,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Carly Lauren",
@@ -15207,7 +15932,8 @@
     "born": "1990-07-03T07:00:00.000Z",
     "month": 9,
     "year": 2013,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Gemma Lee Farrell",
@@ -15228,7 +15954,8 @@
     "born": "1988-01-15T08:00:00.000Z",
     "month": 10,
     "year": 2013,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Kennedy Summers",
@@ -15249,7 +15976,8 @@
     "born": "1987-03-03T08:00:00.000Z",
     "month": 11,
     "year": 2013,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Roos van Montfort",
@@ -15270,7 +15998,8 @@
     "born": "1989-11-29T08:00:00.000Z",
     "month": 0,
     "year": 2014,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Amanda Booth",
@@ -15291,7 +16020,8 @@
     "born": "1986-07-14T07:00:00.000Z",
     "month": 1,
     "year": 2014,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Britt Linn",
@@ -15312,7 +16042,8 @@
     "born": "1990-07-21T07:00:00.000Z",
     "month": 2,
     "year": 2014,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Shanice Jordyn",
@@ -15333,7 +16064,8 @@
     "born": "1992-04-08T07:00:00.000Z",
     "month": 3,
     "year": 2014,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Dani Mathers",
@@ -15354,7 +16086,8 @@
     "born": "1987-01-05T08:00:00.000Z",
     "month": 4,
     "year": 2014,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Jessica Ashley",
@@ -15375,7 +16108,8 @@
     "born": "1989-12-08T08:00:00.000Z",
     "month": 5,
     "year": 2014,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Emily Agnes",
@@ -15396,7 +16130,8 @@
     "born": "1993-07-07T07:00:00.000Z",
     "month": 6,
     "year": 2014,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Maggie May",
@@ -15417,7 +16152,8 @@
     "born": "1987-11-15T08:00:00.000Z",
     "month": 7,
     "year": 2014,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Stephanie Branton",
@@ -15438,7 +16174,8 @@
     "born": "1990-04-18T07:00:00.000Z",
     "month": 8,
     "year": 2014,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Roxanna June",
@@ -15459,7 +16196,8 @@
     "born": "1991-06-07T07:00:00.000Z",
     "month": 9,
     "year": 2014,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Gia Marie",
@@ -15480,7 +16218,8 @@
     "born": "1980-02-05T08:00:00.000Z",
     "month": 10,
     "year": 2014,
-    "mateAge": 34
+    "mateAge": 34,
+    "first": null
   },
   {
     "name": "Elizabeth Ostrander",
@@ -15501,7 +16240,8 @@
     "born": "1988-12-07T08:00:00.000Z",
     "month": 11,
     "year": 2014,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Brittny Ward",
@@ -15522,7 +16262,8 @@
     "born": "1990-05-22T07:00:00.000Z",
     "month": 0,
     "year": 2015,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Kayslee Collins",
@@ -15543,7 +16284,8 @@
     "born": "1991-03-28T08:00:00.000Z",
     "month": 1,
     "year": 2015,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Chelsie Aryn",
@@ -15564,7 +16306,8 @@
     "born": "1992-09-18T07:00:00.000Z",
     "month": 2,
     "year": 2015,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Alexandra Tyler",
@@ -15585,7 +16328,8 @@
     "born": "1994-05-09T07:00:00.000Z",
     "month": 3,
     "year": 2015,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Brittany Brousseau",
@@ -15606,7 +16350,8 @@
     "born": "1988-10-12T07:00:00.000Z",
     "month": 4,
     "year": 2015,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Kaylia Cassandra",
@@ -15627,7 +16372,8 @@
     "born": "1990-03-23T08:00:00.000Z",
     "month": 5,
     "year": 2015,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Kayla Rae Reid",
@@ -15648,7 +16394,8 @@
     "born": "1991-07-05T07:00:00.000Z",
     "month": 6,
     "year": 2015,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Dominique Jane",
@@ -15669,7 +16416,8 @@
     "born": "1988-05-16T07:00:00.000Z",
     "month": 7,
     "year": 2015,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Monica Sims",
@@ -15690,7 +16438,8 @@
     "born": "1992-06-15T07:00:00.000Z",
     "month": 8,
     "year": 2015,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Ana Cheri",
@@ -15711,7 +16460,8 @@
     "born": "1986-05-16T07:00:00.000Z",
     "month": 9,
     "year": 2015,
-    "mateAge": 29
+    "mateAge": 29,
+    "first": null
   },
   {
     "name": "Rachel Harris",
@@ -15732,7 +16482,8 @@
     "born": "1991-06-24T07:00:00.000Z",
     "month": 10,
     "year": 2015,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Eugena Washington",
@@ -15753,7 +16504,8 @@
     "born": "1984-10-08T07:00:00.000Z",
     "month": 11,
     "year": 2015,
-    "mateAge": 31
+    "mateAge": 31,
+    "first": null
   },
   {
     "name": "Amberleigh West",
@@ -15774,7 +16526,8 @@
     "born": "1991-09-04T07:00:00.000Z",
     "month": 0,
     "year": 2016,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Kristy Garett",
@@ -15795,7 +16548,8 @@
     "born": "1990-02-13T08:00:00.000Z",
     "month": 1,
     "year": 2016,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Dree Hemingway",
@@ -15816,7 +16570,8 @@
     "born": "1987-10-04T07:00:00.000Z",
     "month": 2,
     "year": 2016,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Camille Rowe",
@@ -15837,7 +16592,8 @@
     "born": "1986-01-07T08:00:00.000Z",
     "month": 3,
     "year": 2016,
-    "mateAge": 30
+    "mateAge": 30,
+    "first": null
   },
   {
     "name": "Brook Power",
@@ -15858,7 +16614,8 @@
     "born": "1988-09-14T07:00:00.000Z",
     "month": 4,
     "year": 2016,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Josie Canseco",
@@ -15879,7 +16636,8 @@
     "born": "1996-11-05T08:00:00.000Z",
     "month": 5,
     "year": 2016,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Ali Michael",
@@ -15900,7 +16658,8 @@
     "born": "1990-05-15T07:00:00.000Z",
     "month": 6,
     "year": 2016,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Valerie van der Graaf",
@@ -15921,7 +16680,8 @@
     "born": "1992-02-12T08:00:00.000Z",
     "month": 7,
     "year": 2016,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Kelly Gale",
@@ -15942,7 +16702,8 @@
     "born": "1995-05-14T07:00:00.000Z",
     "month": 8,
     "year": 2016,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Allie Silva",
@@ -15963,7 +16724,8 @@
     "born": "1988-11-29T08:00:00.000Z",
     "month": 9,
     "year": 2016,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Ashley Smith",
@@ -15984,7 +16746,8 @@
     "born": "1990-11-26T08:00:00.000Z",
     "month": 10,
     "year": 2016,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Enikő Mihalik",
@@ -16005,7 +16768,8 @@
     "born": "1987-05-11T07:00:00.000Z",
     "month": 11,
     "year": 2016,
-    "mateAge": 29
+    "mateAge": 29,
+    "first": null
   },
   {
     "name": "Bridget Malcolm",
@@ -16026,7 +16790,8 @@
     "born": "1991-11-20T08:00:00.000Z",
     "month": 0,
     "year": 2017,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Joy Corrigan",
@@ -16047,7 +16812,8 @@
     "born": "1995-01-16T08:00:00.000Z",
     "month": 1,
     "year": 2017,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Elizabeth Elam",
@@ -16068,7 +16834,8 @@
     "born": "1991-08-05T07:00:00.000Z",
     "month": 2,
     "year": 2017,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   },
   {
     "name": "Nina Daniele",
@@ -16089,7 +16856,8 @@
     "born": "1988-12-27T08:00:00.000Z",
     "month": 3,
     "year": 2017,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Lada Kravchenko",
@@ -16110,7 +16878,8 @@
     "born": "1992-11-28T08:00:00.000Z",
     "month": 4,
     "year": 2017,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Elsie Hewitt",
@@ -16131,7 +16900,8 @@
     "born": "1996-03-05T08:00:00.000Z",
     "month": 5,
     "year": 2017,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Dana Taylor",
@@ -16152,7 +16922,8 @@
     "born": "1993-06-02T07:00:00.000Z",
     "month": 6,
     "year": 2017,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Liza Kei",
@@ -16173,7 +16944,8 @@
     "born": "1995-11-28T08:00:00.000Z",
     "month": 7,
     "year": 2017,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Jessica Wall",
@@ -16194,7 +16966,8 @@
     "born": "1996-06-25T07:00:00.000Z",
     "month": 8,
     "year": 2017,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Milan Dixon",
@@ -16215,7 +16988,8 @@
     "born": null,
     "month": 9,
     "year": 2017,
-    "mateAge": null
+    "mateAge": null,
+    "first": null
   },
   {
     "name": "Ines Rau",
@@ -16233,7 +17007,8 @@
     "born": null,
     "month": 10,
     "year": 2017,
-    "mateAge": null
+    "mateAge": null,
+    "first": "First openly transgender Playmate."
   },
   {
     "name": "Allie Leggett",
@@ -16254,7 +17029,8 @@
     "born": "1994-01-12T08:00:00.000Z",
     "month": 11,
     "year": 2017,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Kayla Garvin",
@@ -16275,7 +17051,8 @@
     "born": "1990-06-03T07:00:00.000Z",
     "month": 0,
     "year": 2018,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Megan Samperi",
@@ -16296,7 +17073,8 @@
     "born": "1993-06-22T07:00:00.000Z",
     "month": 1,
     "year": 2018,
-    "mateAge": 24
+    "mateAge": 24,
+    "first": null
   },
   {
     "name": "Jenny Watwood",
@@ -16317,7 +17095,8 @@
     "born": "1990-11-20T08:00:00.000Z",
     "month": 2,
     "year": 2018,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Nereyda Bird",
@@ -16338,7 +17117,8 @@
     "born": "1998-04-18T07:00:00.000Z",
     "month": 3,
     "year": 2018,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Shauna Sexton",
@@ -16359,7 +17139,8 @@
     "born": "1996-01-20T08:00:00.000Z",
     "month": 4,
     "year": 2018,
-    "mateAge": 22
+    "mateAge": 22,
+    "first": null
   },
   {
     "name": "Cassandra Dawn",
@@ -16380,7 +17161,8 @@
     "born": "1990-01-10T08:00:00.000Z",
     "month": 5,
     "year": 2018,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Valeria Lakhina",
@@ -16401,7 +17183,8 @@
     "born": "1989-09-25T07:00:00.000Z",
     "month": 6,
     "year": 2018,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Lorena Medina",
@@ -16422,7 +17205,8 @@
     "born": null,
     "month": 7,
     "year": 2018,
-    "mateAge": null
+    "mateAge": null,
+    "first": null
   },
   {
     "name": "Kirby Griffin",
@@ -16440,7 +17224,8 @@
     "born": "1991-11-14T08:00:00.000Z",
     "month": 8,
     "year": 2018,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Olga de Mar",
@@ -16461,7 +17246,8 @@
     "born": "1991-08-12T07:00:00.000Z",
     "month": 9,
     "year": 2018,
-    "mateAge": 27
+    "mateAge": 27,
+    "first": null
   },
   {
     "name": "Shelby Rose",
@@ -16479,7 +17265,8 @@
     "born": null,
     "month": 10,
     "year": 2018,
-    "mateAge": null
+    "mateAge": null,
+    "first": null
   },
   {
     "name": "Jordan Emanuel",
@@ -16500,7 +17287,8 @@
     "born": "1992-04-17T07:00:00.000Z",
     "month": 11,
     "year": 2018,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Vendela Lindblom",
@@ -16521,7 +17309,8 @@
     "born": "1995-11-11T08:00:00.000Z",
     "month": 0,
     "year": 2019,
-    "mateAge": 23
+    "mateAge": 23,
+    "first": null
   },
   {
     "name": "Megan Moore",
@@ -16542,7 +17331,8 @@
     "born": "1992-07-05T07:00:00.000Z",
     "month": 1,
     "year": 2019,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Miki Hamano",
@@ -16563,7 +17353,8 @@
     "born": "1993-03-01T08:00:00.000Z",
     "month": 2,
     "year": 2019,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Fo Porter",
@@ -16584,7 +17375,8 @@
     "born": "1990-10-09T07:00:00.000Z",
     "month": 3,
     "year": 2019,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Abigail O'Neill",
@@ -16605,7 +17397,8 @@
     "born": "1997-05-15T07:00:00.000Z",
     "month": 4,
     "year": 2019,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Yoli Lara",
@@ -16626,7 +17419,8 @@
     "born": "1997-09-14T07:00:00.000Z",
     "month": 5,
     "year": 2019,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Teela LaRoux",
@@ -16647,7 +17441,8 @@
     "born": null,
     "month": 6,
     "year": 2019,
-    "mateAge": null
+    "mateAge": null,
+    "first": null
   },
   {
     "name": "Geena Rocero",
@@ -16665,7 +17460,8 @@
     "born": "1983-01-01T08:00:00.000Z",
     "month": 7,
     "year": 2019,
-    "mateAge": 36
+    "mateAge": 36,
+    "first": null
   },
   {
     "name": "Sophie O’Neil",
@@ -16686,7 +17482,8 @@
     "born": "1998-11-28T08:00:00.000Z",
     "month": 8,
     "year": 2019,
-    "mateAge": 20
+    "mateAge": 20,
+    "first": null
   },
   {
     "name": "Hilda Dias Pimentel",
@@ -16707,7 +17504,8 @@
     "born": "1991-03-08T08:00:00.000Z",
     "month": 9,
     "year": 2019,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Gillian Chan",
@@ -16728,7 +17526,8 @@
     "born": null,
     "month": 10,
     "year": 2019,
-    "mateAge": null
+    "mateAge": null,
+    "first": null
   },
   {
     "name": "Jordy Murray",
@@ -16749,7 +17548,8 @@
     "born": "1993-05-28T07:00:00.000Z",
     "month": 11,
     "year": 2019,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Riley Ticotin",
@@ -16770,7 +17570,8 @@
     "born": "1993-12-15T08:00:00.000Z",
     "month": 0,
     "year": 2020,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": null
   },
   {
     "name": "Chasity Samone",
@@ -16791,7 +17592,8 @@
     "born": "1991-04-07T08:00:00.000Z",
     "month": 1,
     "year": 2020,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Anita Pathammavong",
@@ -16812,7 +17614,8 @@
     "born": null,
     "month": 2,
     "year": 2020,
-    "mateAge": null
+    "mateAge": null,
+    "first": null
   },
   {
     "name": "Marsha Elle",
@@ -16830,7 +17633,8 @@
     "born": null,
     "month": 3,
     "year": 2020,
-    "mateAge": null
+    "mateAge": null,
+    "first": "First amputee Playmate."
   },
   {
     "name": "Savannah Smith",
@@ -16851,7 +17655,8 @@
     "born": "2000-07-18T07:00:00.000Z",
     "month": 4,
     "year": 2020,
-    "mateAge": 19
+    "mateAge": 19,
+    "first": null
   },
   {
     "name": "Alicia Olivas",
@@ -16872,7 +17677,8 @@
     "born": "1999-03-04T08:00:00.000Z",
     "month": 5,
     "year": 2020,
-    "mateAge": 21
+    "mateAge": 21,
+    "first": null
   },
   {
     "name": "Priscilla Huggins",
@@ -16893,7 +17699,8 @@
     "born": "1993-10-26T07:00:00.000Z",
     "month": 6,
     "year": 2020,
-    "mateAge": 26
+    "mateAge": 26,
+    "first": "First digital only Playmate."
   },
   {
     "name": "Ali Chanel",
@@ -16914,7 +17721,8 @@
     "born": "1990-06-17T07:00:00.000Z",
     "month": 7,
     "year": 2020,
-    "mateAge": 30
+    "mateAge": 30,
+    "first": null
   },
   {
     "name": "Danielle Alcaraz",
@@ -16935,7 +17743,8 @@
     "born": "1990-05-16T07:00:00.000Z",
     "month": 8,
     "year": 2020,
-    "mateAge": 30
+    "mateAge": 30,
+    "first": null
   },
   {
     "name": "Carolina Ballesteros",
@@ -16956,7 +17765,8 @@
     "born": "1991-11-23T08:00:00.000Z",
     "month": 9,
     "year": 2020,
-    "mateAge": 28
+    "mateAge": 28,
+    "first": null
   },
   {
     "name": "Khrystyana Kazakova",
@@ -16977,7 +17787,8 @@
     "born": "1985-05-21T07:00:00.000Z",
     "month": 10,
     "year": 2020,
-    "mateAge": 35
+    "mateAge": 35,
+    "first": null
   },
   {
     "name": "Tanerélle",
@@ -16995,6 +17806,7 @@
     "born": "1995-04-09T07:00:00.000Z",
     "month": 11,
     "year": 2020,
-    "mateAge": 25
+    "mateAge": 25,
+    "first": null
   }
 ]

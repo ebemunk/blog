@@ -83,6 +83,8 @@ const Voronoi = ({
     forceUpdate()
   }, [pinned])
 
+  const halfWidth = ['hair', 'ethnicity', 'breasts', 'cup'].includes(stage)
+
   return (
     <g>
       <rect
