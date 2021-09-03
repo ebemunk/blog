@@ -40,6 +40,7 @@ const useStyles = createUseStyles({
     border: '2px solid red',
     position: 'relative',
     display: 'flex',
+    marginBottom: '1rem',
   },
   viz: {
     position: 'sticky',

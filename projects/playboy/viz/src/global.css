@@ -1,0 +1,15 @@
+.viz-title,
+.viz-subtitle {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.viz-title {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+.viz-subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}

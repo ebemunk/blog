@@ -16,9 +16,17 @@ ines rau - first transgender playmate has no page on babepedia
 
 <div id="viz-scatter"></div>
 
+## The Hourglass
+
 babbidy babbdiy bleu
 
-<div id="viz-bwh"></div>
+<div>
+  <div class="viz-title">Breaking the mold</div>
+  <div class="viz-subtitle">2020 is the first and only year the hourglass-figure mold was broken. Bust measurements decline through the decades, waist and hips increase. Thicc is finally embraced in 2020. The "Ideal" <span data-cms="90">90</span>-<span data-cms="60">60</span>-<span data-cms="90">90</span> shown in red.</div>
+  <div id="viz-bwh"></div>
+</div>
+
+bla bla
 
 <div id="viz-trends"></div>
 

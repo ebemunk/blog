@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
-import { scaleLinear, scalePoint, scaleOrdinal } from 'd3-scale'
+import React, { useEffect, useRef, useState } from 'react'
+import * as d3 from 'd3'
 import { usePlotContext, Svg } from 'vizlib'
-import { mean, max } from 'd3-array'
-import { line, curveBasis, curveCatmullRom } from 'd3-shape'
-import { schemeBlues } from 'd3-scale-chromatic'
+import { schemeGreens } from 'd3-scale-chromatic'
 
 import { data } from '../data'
 
@@ -17,18 +15,30 @@ const getData = () => {
     (acc, key) => ({
       ...acc,
       [key]: [
-        mean(byDecade[key], d => d.bustIN),
-        mean(byDecade[key], d => d.waistIN),
-        mean(byDecade[key], d => d.hipsIN),
+        d3.mean(byDecade[key], d => d.bustIN),
+        d3.mean(byDecade[key], d => d.waistIN),
+        d3.mean(byDecade[key], d => d.hipsIN),
       ],
     }),
     {},
   )
 }
 
-const Silhouette = ({ data, line, decade, stroke, i }) => {
+const Silhouette = ({ data, line, stroke, opacity = 1 }) => {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    if (!ref.current) return
+
+    d3.select(ref.current)
+      //
+      .transition()
+      .duration(750)
+      .attr('opacity', opacity)
+  }, [opacity])
+
   return (
-    <>
+    <g ref={ref}>
       <path
         style={{
           stroke,
@@ -45,20 +55,21 @@ const Silhouette = ({ data, line, decade, stroke, i }) => {
         }}
         d={line(data.right)}
       />
-    </>
+    </g>
   )
 }
 
 const Viz = ({ decades, chosen }: { decades: any; chosen: string }) => {
   const { chartHeight, chartWidth } = usePlotContext()
 
-  const maxD = max(Object.keys(decades).flatMap(d => [...decades[d]]))
+  const maxD = d3.max(Object.keys(decades).flatMap(d => [...decades[d]]))
 
-  const sX = scaleLinear()
+  const sX = d3
+    .scaleLinear()
     .range([0, chartWidth])
     .domain([-maxD / 2, maxD / 2])
 
-  const sY = scaleLinear().domain([0, 89]).range([0, chartHeight])
+  const sY = d3.scaleLinear().domain([0, 89]).range([0, chartHeight])
 
   const partToSy = {
     top: 0,
@@ -68,11 +79,13 @@ const Viz = ({ decades, chosen }: { decades: any; chosen: string }) => {
     bottom: 89,
   }
 
-  const color = scaleOrdinal()
-    .range(schemeBlues[8])
-    .domain(Object.keys(decades))
+  const color = d3
+    .scaleOrdinal()
+    .range(schemeGreens[9])
+    .domain(Object.keys(decades).concat(''))
 
-  const lineGenerator = line()
+  const lineGenerator = d3
+    .line()
     .x(d => {
       const k = sX(d[1])
       return k
@@ -81,42 +94,39 @@ const Viz = ({ decades, chosen }: { decades: any; chosen: string }) => {
       const k = sY(partToSy[d[0].toString()])
       return k
     })
-    .curve(curveCatmullRom)
+    .curve(d3.curveCatmullRom)
 
   const multiplier = 1 / 2.3
 
   return (
     <>
-      {Object.keys(decades)
-        .filter(k => (chosen ? k === chosen : true))
-        .map((key, i) => (
-          <Silhouette
-            i={i}
-            key={key}
-            decade={key}
-            line={lineGenerator}
-            stroke={color(key)}
-            data={{
-              left: [
-                ['top', -((decades[key][0] - 4) * multiplier)],
-                ['bust', -(decades[key][0] * multiplier)],
-                ['waist', -(decades[key][1] * multiplier)],
-                ['hips', -(decades[key][2] * multiplier)],
-                ['bottom', -(decades[key][2] * multiplier)],
-              ],
-              right: [
-                ['top', (decades[key][0] - 4) * multiplier],
-                ['bust', decades[key][0] * multiplier],
-                ['waist', decades[key][1] * multiplier],
-                ['hips', decades[key][2] * multiplier],
-                ['bottom', decades[key][2] * multiplier],
-              ],
-            }}
-          />
-        ))}
+      {Object.keys(decades).map((key, i) => (
+        <Silhouette
+          opacity={
+            chosen && key === chosen ? 1 : chosen && key !== chosen ? 0 : 1
+          }
+          key={key}
+          line={lineGenerator}
+          stroke={color(key)}
+          data={{
+            left: [
+              ['top', -((decades[key][0] - 4) * multiplier)],
+              ['bust', -(decades[key][0] * multiplier)],
+              ['waist', -(decades[key][1] * multiplier)],
+              ['hips', -(decades[key][2] * multiplier)],
+              ['bottom', -(decades[key][2] * multiplier)],
+            ],
+            right: [
+              ['top', (decades[key][0] - 4) * multiplier],
+              ['bust', decades[key][0] * multiplier],
+              ['waist', decades[key][1] * multiplier],
+              ['hips', decades[key][2] * multiplier],
+              ['bottom', decades[key][2] * multiplier],
+            ],
+          }}
+        />
+      ))}
       <Silhouette
-        i={100}
-        decade="ideal"
         line={lineGenerator}
         stroke={'red'}
         data={{
@@ -142,13 +152,29 @@ const Viz = ({ decades, chosen }: { decades: any; chosen: string }) => {
 
 const BWH = () => {
   const decades = getData()
-  console.log('decades', decades)
 
-  const color = scaleOrdinal()
-    .range(schemeBlues[8])
+  const color = d3
+    .scaleOrdinal()
+    .range(schemeGreens[8])
     .domain(Object.keys(decades))
 
   const [chosen, setChosen] = useState(null)
+
+  const legendRef = useRef(null)
+
+  useEffect(() => {
+    if (!legendRef.current) return
+
+    d3.select(legendRef.current)
+      .selectAll('div[data-key]')
+      .transition()
+      .duration(750)
+      .style('background', function () {
+        const key = this.attributes['data-key'].value
+        if (!chosen) return color(key)
+        return chosen === key ? color(key) : 'transparent'
+      })
+  }, [chosen])
 
   return (
     <div
@@ -168,14 +194,17 @@ const BWH = () => {
           top: '50%',
           transform: 'translate(-50%,-50%)',
         }}
+        ref={legendRef}
       >
         {Object.keys(decades).map(k => (
           <div
+            key={k}
             style={{
               display: 'flex',
               marginBottom: '0.25rem',
               fontSize: '0.8rem',
               cursor: 'pointer',
+              alignItems: 'center',
             }}
             onClick={() => {
               if (k === chosen) {
@@ -186,10 +215,13 @@ const BWH = () => {
             }}
           >
             <div
+              data-key={k}
               style={{
                 height: '1rem',
                 width: '1rem',
-                background: color(k),
+                // background:
+                // chosen && chosen !== k ? 'transparent' : (color(k) as string),
+                border: `2px solid ${color(k)}`,
                 marginRight: '0.25rem',
               }}
             />{' '}
@@ -201,6 +233,7 @@ const BWH = () => {
             display: 'flex',
             marginBottom: '0.25rem',
             fontSize: '0.8rem',
+            alignItems: 'center',
           }}
         >
           <div
@@ -208,6 +241,7 @@ const BWH = () => {
               height: '1rem',
               width: '1rem',
               background: 'red',
+              border: '2px solid red',
               marginRight: '0.25rem',
             }}
           />{' '}
@@ -219,6 +253,6 @@ const BWH = () => {
 }
 
 import { hot } from 'react-hot-loader'
-import { pipe, groupBy, pick } from 'remeda'
+import { pipe, groupBy } from 'remeda'
 
 export default pipe(BWH, hot(module))
