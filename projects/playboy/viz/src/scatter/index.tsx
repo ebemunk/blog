@@ -81,6 +81,7 @@ const SUB_STAGES = [
   'firstTransgender',
   'momDaughter',
   'otherFirsts',
+  'hugh',
 ] as const
 
 import loess from '../../loess.json'
@@ -129,7 +130,7 @@ const Scatter = () => {
     <div className={classes.wrap}>
       <div className={classes.viz}>
         <ResponsiveSvg margin={{ left: 30, top: 30, bottom: 10, right: 10 }}>
-          <Viz stage={stage} />
+          <Viz stage={stage} subStage={subStage} />
           {stage === 'start' && <StartHighlights subStage={subStage} />}
         </ResponsiveSvg>
       </div>
@@ -245,6 +246,15 @@ const Scatter = () => {
           active={stage === 'start' && subStage === 'otherFirsts'}
         >
           Explore some of the other "firsts" in playmates.
+        </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('hugh')
+          }}
+          active={stage === 'start' && subStage === 'hugh'}
+        >
+          Hugh dies 27 sept 2017, selection stuff
         </WP>
 
         <WP

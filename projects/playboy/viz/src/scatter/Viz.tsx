@@ -13,7 +13,7 @@ import { data as fullData } from '../data'
 import { format } from 'd3-format'
 import { Store } from '../store'
 
-const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
+const Viz = ({ stage, subStage }: { stage: typeof STAGES[number] }) => {
   const { chartHeight, chartWidth } = usePlotContext()
 
   const { scales, data, accessors } = useStageData(stage)
@@ -76,6 +76,29 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
             tickFormat={() => ''}
             opacity={0.2}
           />
+        </>
+      )}
+      {(['mateAge', 'height', 'weight', 'bust', 'waist', 'hips'].includes(
+        stage,
+      ) ||
+        (stage === 'start' && subStage === 'hugh')) && (
+        <>
+          <g
+            transform={`translate(${scales.sX(
+              stage === 'start' ? '2017' : new Date(2017, 8, 27),
+            )},0)`}
+          >
+            <line x1={0} y1={0} x2={0} y2={chartHeight} stroke="white" />
+            <text
+              fill="white"
+              fontSize={11}
+              transform="rotate(90)"
+              dx={6}
+              dy={-4}
+            >
+              Hugh Hefner dies Sept 27, 2017
+            </text>
+          </g>
         </>
       )}
       {['hair', 'ethnicity', 'breasts', 'cup'].includes(stage) && (

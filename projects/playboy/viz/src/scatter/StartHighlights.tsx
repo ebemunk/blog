@@ -208,7 +208,7 @@ const StartHighlights = ({ subStage }: { subStage: string }) => {
     d3.select(circlesRef.current).transition().duration(750).attr('opacity', 1)
   }, [subStage])
 
-  if (subStage === 'start') return null
+  if (['start', 'hugh'].includes(subStage)) return null
 
   return (
     <>
