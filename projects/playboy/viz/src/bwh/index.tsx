@@ -1,18 +1,11 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import { scaleLinear, scalePoint, scaleOrdinal } from 'd3-scale'
 import { usePlotContext, Svg } from 'vizlib'
-import { extent, mean, max } from 'd3-array'
-import {
-  line,
-  curveBasis,
-  curveBundle,
-  curveCardinal,
-  curveCatmullRom,
-  curveNatural,
-} from 'd3-shape'
-import { schemeBlues, schemeCategory10 } from 'd3-scale-chromatic'
+import { mean, max } from 'd3-array'
+import { line, curveBasis, curveCatmullRom } from 'd3-shape'
+import { schemeBlues } from 'd3-scale-chromatic'
 
-import { get, data } from '../data'
+import { data } from '../data'
 
 const getData = () => {
   const byDecade = groupBy(
@@ -23,78 +16,59 @@ const getData = () => {
   return Object.keys(byDecade).reduce(
     (acc, key) => ({
       ...acc,
-      // @ts-ignore
       [key]: [
-        mean(byDecade[key], d => d.measurements?.bust),
-        mean(byDecade[key], d => d.measurements?.waist),
-        mean(byDecade[key], d => d.measurements?.hips),
+        mean(byDecade[key], d => d.bustIN),
+        mean(byDecade[key], d => d.waistIN),
+        mean(byDecade[key], d => d.hipsIN),
       ],
     }),
     {},
   )
 }
 
-const Silhouette = ({ data, line, decade, stroke }) => {
+const Silhouette = ({ data, line, decade, stroke, i }) => {
   return (
     <>
-      {/* <Path
-        //@ts-ignore
-        generator={line}
-        data={data.left}
+      <path
         style={{
-          // @ts-ignore
           stroke,
           fill: 'none',
           strokeWidth: 3,
-          isolation: 'isolate',
         }}
-        className="silpath"
-      >
-        <title>{decade}</title>
-      </Path>
-      <Path
-        //@ts-ignore
-        generator={line}
-        data={data.right}
+        d={line(data.left)}
+      />
+      <path
         style={{
-          // @ts-ignore
           stroke,
           fill: 'none',
           strokeWidth: 3,
-          isolation: 'isolate',
         }}
-        className="silpath"
-      >
-        <title>{decade}</title>
-      </Path> */}
+        d={line(data.right)}
+      />
     </>
   )
 }
 
-const curves = {
-  basis: curveBasis,
-  natural: curveNatural,
-  cardinal: curveCardinal,
-  catmullrom: curveCatmullRom,
-  bundle: curveBundle,
-}
-
-const Viz = ({ decades, curve }) => {
+const Viz = ({ decades, chosen }: { decades: any; chosen: string }) => {
   const { chartHeight, chartWidth } = usePlotContext()
 
   const maxD = max(Object.keys(decades).flatMap(d => [...decades[d]]))
 
   const sX = scaleLinear()
     .range([0, chartWidth])
-    // @ts-ignore
     .domain([-maxD / 2, maxD / 2])
 
-  const sY = scalePoint()
-    .range([0, chartHeight])
-    .domain(['top', 'bust', 'waist', 'hips', 'bottom'])
+  const sY = scaleLinear().domain([0, 89]).range([0, chartHeight])
+
+  const partToSy = {
+    top: 0,
+    bust: 18,
+    waist: 39,
+    hips: 74,
+    bottom: 89,
+  }
 
   const color = scaleOrdinal()
-    // .range(schemeCategory10)
     .range(schemeBlues[8])
     .domain(Object.keys(decades))
 
@@ -103,61 +77,65 @@ const Viz = ({ decades, curve }) => {
       const k = sX(d[1])
       return k
     })
-    // @ts-ignore
     .y(d => {
-      // @ts-ignore
-      const k = sY(d[0])
+      const k = sY(partToSy[d[0].toString()])
       return k
     })
-    .curve(curves[curve])
+    .curve(curveCatmullRom)
+
+  const multiplier = 1 / 2.3
 
   return (
     <>
-      {Object.keys(decades).map(key => (
-        <Silhouette
-          key={key}
-          decade={key}
-          line={lineGenerator}
-          stroke={color(key)}
-          data={{
-            left: [
-              ['top', -(decades[key][0] / 2)],
-              ['bust', -(decades[key][0] / 2)],
-              ['waist', -(decades[key][1] / 2)],
-              ['hips', -(decades[key][2] / 2)],
-              ['bottom', -(decades[key][2] / 2)],
-            ],
-            right: [
-              ['top', decades[key][0] / 2],
-              ['bust', decades[key][0] / 2],
-              ['waist', decades[key][1] / 2],
-              ['hips', decades[key][2] / 2],
-              ['bottom', decades[key][2] / 2],
-            ],
-          }}
-        />
-      ))}
-      {/* <Silhouette
+      {Object.keys(decades)
+        .filter(k => (chosen ? k === chosen : true))
+        .map((key, i) => (
+          <Silhouette
+            i={i}
+            key={key}
+            decade={key}
+            line={lineGenerator}
+            stroke={color(key)}
+            data={{
+              left: [
+                ['top', -((decades[key][0] - 4) * multiplier)],
+                ['bust', -(decades[key][0] * multiplier)],
+                ['waist', -(decades[key][1] * multiplier)],
+                ['hips', -(decades[key][2] * multiplier)],
+                ['bottom', -(decades[key][2] * multiplier)],
+              ],
+              right: [
+                ['top', (decades[key][0] - 4) * multiplier],
+                ['bust', decades[key][0] * multiplier],
+                ['waist', decades[key][1] * multiplier],
+                ['hips', decades[key][2] * multiplier],
+                ['bottom', decades[key][2] * multiplier],
+              ],
+            }}
+          />
+        ))}
+      <Silhouette
+        i={100}
         decade="ideal"
         line={lineGenerator}
         stroke={'red'}
         data={{
           left: [
-            ['top', -(36 / 2)],
-            ['bust', -(36 / 2)],
-            ['waist', -(24 / 2)],
-            ['hips', -(36 / 2)],
-            ['bottom', -(36 / 2)],
+            ['top', -(32 * multiplier)],
+            ['bust', -(36 * multiplier)],
+            ['waist', -(24 * multiplier)],
+            ['hips', -(36 * multiplier)],
+            ['bottom', -(36 * multiplier)],
           ],
           right: [
-            ['top', 36 / 2],
-            ['bust', 36 / 2],
-            ['waist', 24 / 2],
-            ['hips', 36 / 2],
-            ['bottom', 36 / 2],
+            ['top', 32 * multiplier],
+            ['bust', 36 * multiplier],
+            ['waist', 24 * multiplier],
+            ['hips', 36 * multiplier],
+            ['bottom', 36 * multiplier],
           ],
         }}
-      /> */}
+      />
     </>
   )
 }
@@ -166,42 +144,76 @@ const BWH = () => {
   const decades = getData()
   console.log('decades', decades)
 
-  const select = React.useRef(null!)
-  const [filters, setFilters] = React.useState(Object.keys(decades))
-  // @ts-ignore
-  const [curve, setCurve] = React.useState('basis')
+  const color = scaleOrdinal()
+    .range(schemeBlues[8])
+    .domain(Object.keys(decades))
 
-  console.log('aaa', curve)
+  const [chosen, setChosen] = useState(null)
 
   return (
     <div
       style={{
         display: 'flex',
+        position: 'relative',
+        justifyContent: 'center',
       }}
     >
-      <select
-        ref={select}
-        onChange={e => {
-          setFilters([e.target.value])
-        }}
-      >
-        {Object.keys(decades).map(key => (
-          <option key={key} value={key} label={key} />
-        ))}
-      </select>
-      <select
-        onChange={e => {
-          setCurve(e.target.value)
-        }}
-      >
-        {Object.keys(curves).map(key => (
-          <option key={key} value={key} label={key} />
-        ))}
-      </select>
-      <Svg width={900} height={900} margin={30}>
-        {/* @ts-ignore */}
-        <Viz decades={pick(decades, filters)} curve={curve} />
+      <Svg width={600} height={600} margin={30}>
+        <Viz decades={decades} chosen={chosen} />
       </Svg>
+      <div
+        style={{
+          position: 'absolute',
+          left: '50%',
+          top: '50%',
+          transform: 'translate(-50%,-50%)',
+        }}
+      >
+        {Object.keys(decades).map(k => (
+          <div
+            style={{
+              display: 'flex',
+              marginBottom: '0.25rem',
+              fontSize: '0.8rem',
+              cursor: 'pointer',
+            }}
+            onClick={() => {
+              if (k === chosen) {
+                setChosen(null)
+              } else {
+                setChosen(k)
+              }
+            }}
+          >
+            <div
+              style={{
+                height: '1rem',
+                width: '1rem',
+                background: color(k),
+                marginRight: '0.25rem',
+              }}
+            />{' '}
+            {k}
+          </div>
+        ))}
+        <div
+          style={{
+            display: 'flex',
+            marginBottom: '0.25rem',
+            fontSize: '0.8rem',
+          }}
+        >
+          <div
+            style={{
+              height: '1rem',
+              width: '1rem',
+              background: 'red',
+              marginRight: '0.25rem',
+            }}
+          />{' '}
+          "Ideal"
+        </div>
+      </div>
     </div>
   )
 }

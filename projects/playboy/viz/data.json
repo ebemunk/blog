@@ -1302,29 +1302,6 @@
     "url": "https://www.babepedia.com/babe/Teri_Hope"
   },
   {
-    "name": "Pat Sheehan",
-    "heightCM": 167,
-    "heightIN": 65.74803149606299,
-    "weightKG": 55,
-    "weightLB": 121.25424420168267,
-    "bustIN": 34,
-    "bustCM": 86.36,
-    "waistIN": 22,
-    "waistCM": 55.88,
-    "hipsIN": 34,
-    "hipsCM": 86.36,
-    "cup": "C",
-    "hair": "Blonde",
-    "breasts": "Real/Natural",
-    "ethnicity": "Caucasian",
-    "born": "1931-09-07T08:00:00.000Z",
-    "month": 9,
-    "year": 1958,
-    "mateAge": 27,
-    "first": null,
-    "url": "https://www.babepedia.com/babe/Pat_Sheehan"
-  },
-  {
     "name": "Mara Corday",
     "heightCM": 165,
     "heightIN": 64.96062992125984,
@@ -1344,8 +1321,31 @@
     "month": 9,
     "year": 1958,
     "mateAge": 28,
-    "first": "First to share the Playmate title in the same month, with Path Sheehan.",
+    "first": "First to share the Playmate title in the same month, with Pat Sheehan.",
     "url": "https://www.babepedia.com/babe/Mara_Corday"
+  },
+  {
+    "name": "Pat Sheehan",
+    "heightCM": 167,
+    "heightIN": 65.74803149606299,
+    "weightKG": 55,
+    "weightLB": 121.25424420168267,
+    "bustIN": 34,
+    "bustCM": 86.36,
+    "waistIN": 22,
+    "waistCM": 55.88,
+    "hipsIN": 34,
+    "hipsCM": 86.36,
+    "cup": "C",
+    "hair": "Blonde",
+    "breasts": "Real/Natural",
+    "ethnicity": "Caucasian",
+    "born": "1931-09-07T08:00:00.000Z",
+    "month": 9,
+    "year": 1958,
+    "mateAge": 27,
+    "first": "First to share the Playmate title in the same month, with Mara Corday.",
+    "url": "https://www.babepedia.com/babe/Pat_Sheehan"
   },
   {
     "name": "Joan Staley",
@@ -4561,7 +4561,7 @@
     "month": 5,
     "year": 1970,
     "mateAge": 20,
-    "first": "First cousins to be Playmates with Karen Elaine Morton.",
+    "first": "First cousins to be Playmates with Karen Morton.",
     "url": "https://www.babepedia.com/babe/Elaine_Morton"
   },
   {
@@ -6809,7 +6809,7 @@
     "month": 6,
     "year": 1978,
     "mateAge": 19,
-    "first": null,
+    "first": "First cousins to be Playmates with Elaine Morton.",
     "url": "https://www.babepedia.com/babe/Karen_Morton"
   },
   {

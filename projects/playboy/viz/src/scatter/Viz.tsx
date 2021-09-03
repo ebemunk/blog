@@ -14,8 +14,6 @@ import { format } from 'd3-format'
 import { Store } from '../store'
 
 const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
-  console.log('viz rendering', stage)
-
   const { chartHeight, chartWidth } = usePlotContext()
 
   const { scales, data, accessors } = useStageData(stage)
@@ -64,7 +62,11 @@ const Viz = ({ stage }: { stage: typeof STAGES[number] }) => {
             scale={scales.sY}
             stage={stage}
             units={STAGE_UNITS[units][stage]}
-            tickFormat={stage === 'height' ? formatFeetIn : null}
+            {...(stage === 'height' && units !== 'metric'
+              ? {
+                  tickFormat: formatFeetIn,
+                }
+              : {})}
           />
           <YAxis
             //@ts-ignore its fine

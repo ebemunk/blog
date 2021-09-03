@@ -155,7 +155,7 @@ const getCutouts = (
             'Bonnie Large',
             'Ester Cordet',
             'Elaine Morton',
-            'Karen Elaine Morton',
+            'Karen Morton',
             'Lonny Chin',
             'Carol Eden',
             'Simone Eden',

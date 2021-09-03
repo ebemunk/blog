@@ -117,12 +117,12 @@ set first = 'First to share the Playmate title in the same month, with Mara Cord
 where name = 'Pet Sheehan';
 
 update playmates
-set first = 'First to share the Playmate title in the same month, with Path Sheehan.'
+set first = 'First to share the Playmate title in the same month, with Pat Sheehan.'
 where name = 'Mara Corday';
 
 update playmates
 set first = 'First to share the Playmate title in the same month, with Mara Corday.'
-where name = 'Pet Sheehan';
+where name = 'Pat Sheehan';
 
 update playmates
 set first = 'First to become Playmate of the Year.'
@@ -161,12 +161,12 @@ set first = 'First Hispanic-American Playmate.'
 where name = 'Ester Cordet';
 
 update playmates
-set first = 'First cousins to be Playmates with Karen Elaine Morton.'
+set first = 'First cousins to be Playmates with Karen Morton.'
 where name = 'Elaine Morton';
 
 update playmates
 set first = 'First cousins to be Playmates with Elaine Morton.'
-where name = 'Karen Elaine Morton';
+where name = 'Karen Morton';
 
 update playmates
 set first = 'First video Playmate.'

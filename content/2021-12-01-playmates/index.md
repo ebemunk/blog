@@ -16,9 +16,11 @@ ines rau - first transgender playmate has no page on babepedia
 
 <div id="viz-scatter"></div>
 
-<div id="viz-trends"></div>
+babbidy babbdiy bleu
 
 <div id="viz-bwh"></div>
+
+<div id="viz-trends"></div>
 
 <script src="http://localhost:9001/bundle.js"></script>
 <!-- <script src="/build/bundle.js"></script> -->
