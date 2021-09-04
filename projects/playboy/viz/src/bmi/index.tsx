@@ -200,7 +200,7 @@ const Viz = ({}) => {
       </g>
 
       <BMITick
-        bmi={28.9}
+        bmi={28.3}
         xScale={xScale}
         yScale={yScale}
         stroke="forestgreen"
@@ -213,8 +213,8 @@ const Viz = ({}) => {
           x={ctx.chartHeight + 60}
           textAnchor="end"
         >
-          <textPath xlinkHref="#bmi-28.9">
-            Average for US Women 2017-2020
+          <textPath xlinkHref="#bmi-28.3">
+            Average for US Women 2015-2018
           </textPath>
         </text>
       </BMITick>

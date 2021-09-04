@@ -28,7 +28,9 @@ babbidy babbdiy bleu
   <div id="viz-bwh"></div>
 </div>
 
-bla bla
+## BMI
+
+bla bla [CDC NCHS](https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf)
 
 <div>
   <div class="viz-title">Straddling the line</div>
