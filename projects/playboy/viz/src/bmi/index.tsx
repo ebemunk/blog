@@ -44,7 +44,7 @@ const BMITick = ({
   const line = d3.line()
 
   const wtf = xScale
-    .ticks(1000)
+    .ticks(800)
     .map(d => [
       xScale(d),
       Math.min(ctx.chartHeight, yScale(invertBmiY(units, d, bmi))),
@@ -163,7 +163,7 @@ const Viz = ({}) => {
             d3
               .range(xScale.domain()[0], xScale.domain()[1] + 1, 0.5)
               .map(d => [
-                xScale(d),
+                Math.min(ctx.chartWidth, xScale(d)),
                 Math.max(
                   0,
                   Math.min(
@@ -194,7 +194,7 @@ const Viz = ({}) => {
       </g>
 
       <g className="bmiTicks">
-        {d3.range(10, 47, 1).map(bmi => (
+        {d3.range(10, units !== 'metric' ? 50 : 47, 1).map(bmi => (
           <BMITick bmi={bmi} xScale={xScale} yScale={yScale} key={bmi} />
         ))}
       </g>
@@ -212,6 +212,9 @@ const Viz = ({}) => {
           fill="forestgreen"
           x={ctx.chartHeight + 60}
           textAnchor="end"
+          stroke={bmiColors('Overweight')}
+          strokeWidth={3}
+          paintOrder="stroke"
         >
           <textPath xlinkHref="#bmi-28.3">
             Average for US Women 2015-2018
@@ -231,6 +234,9 @@ const Viz = ({}) => {
           fill="steelblue"
           x={ctx.chartHeight + 60}
           textAnchor="end"
+          stroke={bmiColors('Underweight')}
+          strokeWidth={3}
+          paintOrder="stroke"
         >
           <textPath
             xlinkHref={`#bmi-${d3.mean(data, d =>
