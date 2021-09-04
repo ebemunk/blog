@@ -2124,13 +2124,19 @@ function _extends$1() {
     };
     return _extends$1.apply(this, arguments);
 }
+// aspect = width / height
 const ResponsiveSvg = ({ children , margin ={
     top: 0,
     right: 0,
     bottom: 0,
     left: 0
-} , ...rest })=>{
+} , aspectRatio , maxWidth =Infinity , maxHeight =Infinity , ...rest })=>{
     const [ref, dims] = useDimensions();
+    let height = Math.min(maxHeight, dims.height);
+    let width = Math.min(maxWidth, dims.width);
+    if (aspectRatio) {
+        height = Math.min(maxHeight, width / aspectRatio);
+    }
     return(/*#__PURE__*/ React.createElement("div", {
         style: {
             height: '100%',
@@ -2139,8 +2145,8 @@ const ResponsiveSvg = ({ children , margin ={
         ref: ref
     }, /*#__PURE__*/ React.createElement(Svg, _extends$1({
     }, rest, {
-        height: dims.height,
-        width: dims.width,
+        height: height,
+        width: width,
         margin: typeof margin === 'number' ? {
             top: margin,
             right: margin,

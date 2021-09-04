@@ -14,6 +14,10 @@ render(<BWH />, '#viz-bwh')
 
 import Units from './units/index'
 render(<Units />, '#viz-units')
+render(<Units />, '#viz-units2')
+
+import BMI from './bmi/index'
+render(<BMI />, '#viz-bmi')
 
 //@ts-ignore
 window.showFps = function () {

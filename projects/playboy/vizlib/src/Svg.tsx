@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, SVGProps } from 'react'
 import merge from 'lodash-es/merge'
 
 import PlotContext from './PlotContext'
@@ -6,12 +6,14 @@ import { marginDefaults } from './const'
 
 import { Margin } from './types'
 
-export interface Props {
+interface SvgProps {
   margin?: Margin | number
   children: ReactNode
   width: number
   height: number
 }
+
+export type Props = SvgProps & SVGProps<SVGSVGElement>
 
 const Svg = ({ children, margin = {}, width, height, ...rest }: Props) => {
   const ref = React.useRef<SVGSVGElement>(null)

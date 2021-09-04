@@ -16,6 +16,8 @@ ines rau - first transgender playmate has no page on babepedia
 
 <div id="viz-scatter"></div>
 
+<div id="viz-units2"></div>
+
 ## The Hourglass
 
 babbidy babbdiy bleu
@@ -27,6 +29,14 @@ babbidy babbdiy bleu
 </div>
 
 bla bla
+
+<div>
+  <div class="viz-title">Straddling the line</div>
+  <div class="viz-subtitle">Although the majority of Playmates are in the Healthy BMI range, a considerable amount (46%) are Underweight. There are only 2 other playmates (<1%) in any other category. The difference of the averages between US women and Playmates is staggering.</div>
+  <div id="viz-bmi"></div>
+</div>
+
+der der
 
 <div id="viz-trends"></div>
 
