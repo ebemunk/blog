@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
-import { usePlotContext, Svg } from 'vizlib'
+import { usePlotContext, Svg, ResponsiveSvg } from 'vizlib'
 import { schemeGreens } from 'd3-scale-chromatic'
 
 import { data } from '../data'
@@ -182,11 +182,13 @@ const BWH = () => {
         display: 'flex',
         position: 'relative',
         justifyContent: 'center',
+        maxWidth: '600px',
+        margin: 'auto',
       }}
     >
-      <Svg width={600} height={600} margin={30}>
+      <ResponsiveSvg aspectRatio={1} margin={30}>
         <Viz decades={decades} chosen={chosen} />
-      </Svg>
+      </ResponsiveSvg>
       <div
         style={{
           position: 'absolute',
