@@ -89,17 +89,19 @@ const PlaymateTooltip = ({
             />
             <IfExists
               label="Bust"
-              value={isMetric ? formatVal(data.bustCM) : data.bustIN}
+              value={isMetric ? formatVal(data.bustCM) : formatVal(data.bustIN)}
               units={STAGE_UNITS[units].bust}
             />
             <IfExists
               label="Waist"
-              value={isMetric ? formatVal(data.waistCM) : data.waistIN}
+              value={
+                isMetric ? formatVal(data.waistCM) : formatVal(data.waistIN)
+              }
               units={STAGE_UNITS[units].waist}
             />
             <IfExists
               label="Hips"
-              value={isMetric ? formatVal(data.hipsCM) : data.hipsIN}
+              value={isMetric ? formatVal(data.hipsCM) : formatVal(data.hipsIN)}
               units={STAGE_UNITS[units].hips}
             />
             <IfExists
@@ -116,11 +118,20 @@ const PlaymateTooltip = ({
               >
                 google images
               </a>
-              {data.url && (
+              {data.mypmatesUrl && (
                 <>
                   {' '}
                   |{' '}
-                  <a href={data.url} target="_blank">
+                  <a href={data.mypmatesUrl} target="_blank">
+                    mypmates
+                  </a>
+                </>
+              )}
+              {data.babepediaUrl && (
+                <>
+                  {' '}
+                  |{' '}
+                  <a href={data.babepediaUrl} target="_blank">
                     babepedia
                   </a>
                 </>
@@ -147,8 +158,7 @@ function IfExists({
     <div>
       <strong>{label}:</strong>{' '}
       <span>
-        {value}
-        {units}
+        {value} {units}
       </span>
     </div>
   )

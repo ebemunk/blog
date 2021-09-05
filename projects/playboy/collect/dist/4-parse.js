@@ -168,6 +168,9 @@ exports.parseTattoos = function (str) {
 var cm2in = function (num) { return (num ? num / 2.54 : null); };
 var in2cm = function (num) { return (num ? num * 2.54 : null); };
 var kg2lb = function (num) { return (num ? num / 0.45359237 : null); };
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 var run = function () { return __awaiter(void 0, void 0, void 0, function () {
     var pool, rows, mates;
     return __generator(this, function (_a) {
@@ -188,7 +191,7 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                     var waist = mp.waist;
                     var hips = mp.hips;
                     var zodiac = mp.zodiac;
-                    var hair = mp.hair;
+                    var hair = capitalizeFirstLetter(mp.hair);
                     var ethnicity = mp.ethnicity;
                     var born = new Date(mp.born);
                     var measurements = exports.parseMeasurements(bp === null || bp === void 0 ? void 0 : bp['Measurements']);

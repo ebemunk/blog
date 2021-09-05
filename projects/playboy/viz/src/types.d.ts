@@ -22,7 +22,8 @@ export interface Playmate {
   weightLB: number
   year: number
   first?: string
-  url?: string
+  babepediaUrl?: string
+  mypmatesUrl?: string
 }
 
 interface PlaymateCircle {

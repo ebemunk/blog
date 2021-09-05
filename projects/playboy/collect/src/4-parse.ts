@@ -105,6 +105,10 @@ const cm2in = num => (num ? num / 2.54 : null)
 const in2cm = num => (num ? num * 2.54 : null)
 const kg2lb = num => (num ? num / 0.45359237 : null)
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
 const run = async () => {
   const pool = getPool()
   const { rows } = await pool.query('select * from playboy.playmates')
@@ -120,7 +124,7 @@ const run = async () => {
       const waist = mp.waist
       const hips = mp.hips
       const zodiac = mp.zodiac
-      const hair = mp.hair
+      const hair = capitalizeFirstLetter(mp.hair)
       const ethnicity = mp.ethnicity
       const born = new Date(mp.born)
 
