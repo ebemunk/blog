@@ -7,6 +7,7 @@ import { Axis, ResponsiveSvg, Svg, usePlotContext } from 'vizlib'
 import PlaymateCircles from '../scatter/PlaymateCircles'
 import { hot } from 'react-hot-loader'
 import { Store } from '../store'
+import { formatFeetIn } from '../scatter/util'
 
 const data = rawData.filter(d => d.weightKG !== null && d.heightCM !== null)
 
@@ -279,7 +280,15 @@ const Viz = ({}) => {
           Weight {units === 'metric' ? '(kg)' : '(lbs)'}
         </text>
       </Axis>
-      <Axis scale={yScale} orientation="left">
+      <Axis
+        scale={yScale}
+        orientation="left"
+        {...(units !== 'metric'
+          ? {
+              tickFormat: formatFeetIn,
+            }
+          : {})}
+      >
         <text
           fill="white"
           transform={`translate(-33,${yScale(

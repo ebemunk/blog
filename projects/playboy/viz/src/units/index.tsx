@@ -29,7 +29,7 @@ const Units = () => {
   const classes = useStyles()
 
   return (
-    <div>
+    <p>
       Show units in{' '}
       <button
         className={clsx(classes.button, {
@@ -56,7 +56,8 @@ const Units = () => {
       >
         Metric (centimetres, kilograms)
       </button>
-    </div>
+      .
+    </p>
   )
 }
 

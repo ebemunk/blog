@@ -19,6 +19,11 @@ render(<Units />, '#viz-units2')
 import BMI from './bmi/index'
 render(<BMI />, '#viz-bmi')
 
+import DemographicsPrint from './demographics/index'
+render(<DemographicsPrint />, '#viz-demographics-print')
+import DemographicsOnline from './demographics/online'
+render(<DemographicsOnline />, '#viz-demographics-online')
+
 //@ts-ignore
 window.showFps = function () {
   var script = document.createElement('script')
@@ -39,6 +44,25 @@ if (process.env.NODE_ENV === 'development') {
   //@ts-ignore
   window.showFps()
 }
+
+import { Store } from './store'
+import { format } from 'd3'
+const cm2in = num => (num ? num / 2.54 : null)
+const in2cm = num => (num ? num * 2.54 : null)
+const kg2lb = num => (num ? num / 0.45359237 : null)
+
+Store.subscribe(
+  s => s.units,
+  units => {
+    document.querySelectorAll('[data-cms]').forEach(el => {
+      const val = +el.attributes['data-cms'].value
+      el.textContent =
+        units === 'metric'
+          ? val.toString()
+          : format('d')(Math.ceil(cm2in(val))).toString()
+    })
+  },
+)
 
 // @ts-ignore
 if (module.hot) module.hot.accept()

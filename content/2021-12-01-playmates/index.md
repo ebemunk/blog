@@ -10,6 +10,36 @@ shortSummary = "Analyzing the last statements of 454 executed people in Texas."
 responsive = true
 +++
 
+## Who Reads Playboy?
+
+playboy demographics [print](https://web.archive.org/web/20041019143228/https://www.playboy.com/mediakit/print_demographics.html)
+
+<div>
+  <div class="viz-title">Reading it for the articles</div>
+  <div class="viz-subtitle">Demographics breakdown of the magazine (printed) from 2004. Playboy describes them as 
+    <strong>brand conscious</strong>,
+    <strong>outdoor enthusiasts</strong>,
+    <strong>trendsetters</strong> and
+    <strong>socially active</strong>.
+  </div>
+  <div id="viz-demographics-print"></div>
+</div>
+
+[online](https://web.archive.org/web/20041022052012/http://www.playboy.com/mediakit/online_demographics.html)
+
+<div>
+  <div class="viz-title">Viewing it for the articles</div>
+  <div class="viz-subtitle">Demographics breakdown of playboy.com (online) from 2004. Playboy describes them as 
+    <strong>tech savvy</strong>,
+    <strong>gamers</strong>,
+    <strong>online shoppers</strong> and
+    <strong>active & adventurous</strong>. Employment adds up to 105%, Household Income adds up to 112% <span style="font-style: normal;">🤷‍♀️</span>.
+  </div>
+  <div id="viz-demographics-online"></div>
+</div>
+
+## Playmates
+
 ines rau - first transgender playmate has no page on babepedia
 
 <div id="viz-units"></div>
@@ -30,7 +60,7 @@ babbidy babbdiy bleu
 
 ## BMI
 
-bla bla [CDC NCHS](https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf)
+bla bla [CDC NCHS](https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf) [CDC BMI](https://www.cdc.gov/obesity/adult/defining.html)
 
 <div>
   <div class="viz-title">Straddling the line</div>
