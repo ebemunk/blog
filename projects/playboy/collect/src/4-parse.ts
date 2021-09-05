@@ -112,11 +112,17 @@ const run = async () => {
   const mates = rows
     .map(row => {
       const bp = row.babepedia
+      const mp = row.mypmates
 
-      const height = parseHeight(bp?.['Height'])
-      const ethnicity = parseEthnicity(bp?.['Ethnicity'])
-      const weight = parseWeight(bp?.['Weight'])
-      const born = parseBorn(bp?.['Born'])
+      const height = mp.height
+      const weight = mp.weight
+      const bust = mp.bust
+      const waist = mp.waist
+      const hips = mp.hips
+      const zodiac = mp.zodiac
+      const hair = mp.hair
+      const ethnicity = mp.ethnicity
+      const born = new Date(mp.born)
 
       const measurements = parseMeasurements(bp?.['Measurements'])
       const cup = parseCup(bp?.['Bra/cup size'])
@@ -127,14 +133,14 @@ const run = async () => {
         heightIN: cm2in(height),
         weightKG: weight,
         weightLB: kg2lb(weight),
-        bustIN: measurements?.bust,
-        bustCM: in2cm(measurements?.bust),
-        waistIN: measurements?.waist,
-        waistCM: in2cm(measurements?.waist),
-        hipsIN: measurements?.hips,
-        hipsCM: in2cm(measurements?.hips),
+        bustIN: cm2in(bust),
+        bustCM: bust,
+        waistIN: cm2in(waist),
+        waistCM: waist,
+        hipsIN: cm2in(hips),
+        hipsCM: hips,
         cup: measurements?.cup ?? cup,
-        hair: parseHair(bp?.['Hair color']),
+        hair: hair,
         breasts: bp?.['Boobs'],
         ethnicity,
         born,
@@ -144,7 +150,9 @@ const run = async () => {
           ? differenceInYears(new Date(row.year, row.month, 1), born)
           : null,
         first: row.first,
-        url: bp.url,
+        babepediaUrl: bp.url,
+        mypmatesUrl: mp.url,
+        zodiac,
       }
     })
     .sort((a, b) => {

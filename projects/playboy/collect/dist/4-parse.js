@@ -181,10 +181,16 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                     .map(function (row) {
                     var _a;
                     var bp = row.babepedia;
-                    var height = exports.parseHeight(bp === null || bp === void 0 ? void 0 : bp['Height']);
-                    var ethnicity = exports.parseEthnicity(bp === null || bp === void 0 ? void 0 : bp['Ethnicity']);
-                    var weight = exports.parseWeight(bp === null || bp === void 0 ? void 0 : bp['Weight']);
-                    var born = exports.parseBorn(bp === null || bp === void 0 ? void 0 : bp['Born']);
+                    var mp = row.mypmates;
+                    var height = mp.height;
+                    var weight = mp.weight;
+                    var bust = mp.bust;
+                    var waist = mp.waist;
+                    var hips = mp.hips;
+                    var zodiac = mp.zodiac;
+                    var hair = mp.hair;
+                    var ethnicity = mp.ethnicity;
+                    var born = new Date(mp.born);
                     var measurements = exports.parseMeasurements(bp === null || bp === void 0 ? void 0 : bp['Measurements']);
                     var cup = exports.parseCup(bp === null || bp === void 0 ? void 0 : bp['Bra/cup size']);
                     return {
@@ -193,14 +199,14 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                         heightIN: cm2in(height),
                         weightKG: weight,
                         weightLB: kg2lb(weight),
-                        bustIN: measurements === null || measurements === void 0 ? void 0 : measurements.bust,
-                        bustCM: in2cm(measurements === null || measurements === void 0 ? void 0 : measurements.bust),
-                        waistIN: measurements === null || measurements === void 0 ? void 0 : measurements.waist,
-                        waistCM: in2cm(measurements === null || measurements === void 0 ? void 0 : measurements.waist),
-                        hipsIN: measurements === null || measurements === void 0 ? void 0 : measurements.hips,
-                        hipsCM: in2cm(measurements === null || measurements === void 0 ? void 0 : measurements.hips),
+                        bustIN: cm2in(bust),
+                        bustCM: bust,
+                        waistIN: cm2in(waist),
+                        waistCM: waist,
+                        hipsIN: cm2in(hips),
+                        hipsCM: hips,
                         cup: (_a = measurements === null || measurements === void 0 ? void 0 : measurements.cup) !== null && _a !== void 0 ? _a : cup,
-                        hair: exports.parseHair(bp === null || bp === void 0 ? void 0 : bp['Hair color']),
+                        hair: hair,
                         breasts: bp === null || bp === void 0 ? void 0 : bp['Boobs'],
                         ethnicity: ethnicity,
                         born: born,
@@ -210,7 +216,9 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                             ? date_fns_1.differenceInYears(new Date(row.year, row.month, 1), born)
                             : null,
                         first: row.first,
-                        url: bp.url,
+                        babepediaUrl: bp.url,
+                        mypmatesUrl: mp.url,
+                        zodiac: zodiac,
                     };
                 })
                     .sort(function (a, b) {
