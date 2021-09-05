@@ -70,6 +70,13 @@ bla bla [CDC NCHS](https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf) 
 
 der der
 
+<div>
+  <div class="viz-title">birthplace</div>
+  <div class="viz-subtitle">yeah
+  </div>
+  <div id="viz-birthplace"></div>
+</div>
+
 <div id="viz-trends"></div>
 
 <script src="http://localhost:9001/bundle.js"></script>

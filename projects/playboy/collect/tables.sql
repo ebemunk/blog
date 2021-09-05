@@ -80,6 +80,106 @@ where name = 'Ines Rau';
 update playmates
 set babepedia = babepedia::jsonb || '{"Hair color":"Auburn"}'::jsonb
 where name = 'Phyllis Coleman';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Dar es Salaam, Tanzania"}'::jsonb
+where name = 'Ida Ljungqvist';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Seoul, South Korea"}'::jsonb
+where name = 'Morena Corwin';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Nong Khai, Nong Khai Province, Thailand"}'::jsonb
+where name = 'Anita Pathammavong';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Orange County, California, United States"}'::jsonb
+where name = 'Ali Chanel';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Colorado Springs, Colorado, United States"}'::jsonb
+where name = 'Rusty Fisher';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Moulton, Alabama, United States"}'::jsonb
+where name = 'Elaine Paul';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Santa Monica, California, United States"}'::jsonb
+where name = 'Jackie Rainbow';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"New York City, New York, United States"}'::jsonb
+where name = 'Connie Cooper';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Brookville, Ohio, United States"}'::jsonb
+where name = 'Ann Davis';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Sarasota, Florida, United States"}'::jsonb
+where name = 'Ginger Young';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Detroit, Michigan, United States"}'::jsonb
+where name = 'Linda Vargas';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"New York City, New York, United States"}'::jsonb
+where name = 'Karen Thompson';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Los Angeles, California, United States"}'::jsonb
+where name = 'Jean Moorhead';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Los Angeles, California, United States"}'::jsonb
+where name = 'Joanne Arnold';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"New York City, New York, United States"}'::jsonb
+where name = 'Nancy Nielsen';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Los Angeles, California, United States"}'::jsonb
+where name = 'Barbara Cameron';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Portsmouth, Virginia, United States"}'::jsonb
+where name = 'Madeline Castle';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Fort Sill, Oklahoma, United States"}'::jsonb
+where name = 'Anne Fleming';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Los Angeles, California, United States"}'::jsonb
+where name = 'Margie Harrison';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Salinas, California, United States"}'::jsonb
+where name = 'Lynn Turner';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Fort Lauderdale, Florida, United States"}'::jsonb
+where name = 'Myrna Weber';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Honolulu, Hawaii, United States"}'::jsonb
+where name = 'Cara Michelle';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Chicago, Illinois, United States"}'::jsonb
+where name = 'Kristine Hanson';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Arkansas City, Kansas, United States"}'::jsonb
+where name = 'Pamela Zinszer';
+
+update playmates
+set babepedia = babepedia::jsonb || '{"Birthplace":"Detroit, Michigan, United States"}'::jsonb
+where name = 'Linda Moon';
 -- RUN AFTER STEP 3 END
 
 -- RUN AT THE END
