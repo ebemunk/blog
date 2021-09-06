@@ -2,43 +2,12 @@ import React, { useState } from 'react'
 import * as d3 from 'd3'
 import world from 'world-atlas/countries-110m.json'
 import * as topojson from 'topojson-client'
+import { usePopper } from 'react-popper'
+import { createPortal } from 'react-dom'
 
-import data from '../../locations.json'
 import { ResponsiveSvg, usePlotContext } from 'vizlib'
-import Bins from './bins'
 
-const byCountry = d3.group(
-  data.map(d => {
-    const [country, state, town] = d.birthplace.split(', ').reverse()
-    return {
-      ...d,
-      country,
-      state,
-      town,
-    }
-  }),
-  d => d.country,
-)
-
-console.log(
-  Array.from(byCountry.entries()).sort((a, b) => b[1].length - a[1].length),
-)
-
-// const byTown = d3.group(
-//   data.map(d => {
-//     const [country, state, town] = d.birthplace.split(', ').reverse()
-//     return {
-//       ...d,
-//       country,
-//       state,
-//       town,
-//     }
-//   }),
-//   d => `${d.country} - ${d.state} - ${d.town}`,
-//   // d => d.country,
-//   // d => d.state,
-//   // d => d.town,
-// )
+import { byCountry } from '../data'
 
 const countries = topojson.feature(world, world.objects.countries)
 countries.features.forEach(country => {
@@ -161,7 +130,10 @@ const WorldMap = () => {
               >
                 {hovered.data.name}
               </div>
-              <div>{hovered.data.data.length} playmates</div>
+              <div>
+                {hovered.data.data.length} playmate
+                {hovered.data.data.length > 1 ? 's' : ''}
+              </div>
             </div>
           </div>,
           document.querySelector('body'),
@@ -190,8 +162,9 @@ const Birthplace = () => {
         {[
           { val: 0, label: 0 },
           { val: 1, label: 1 },
-          { val: 2, label: '2-10' },
-          { val: 20, label: '10-20' },
+          { val: 2, label: '2-9' },
+          { val: 10, label: '10-19' },
+          { val: 20, label: '20-100' },
           { val: 100, label: '100+' },
         ].map(d => (
           <div
@@ -218,80 +191,9 @@ const Birthplace = () => {
       <ResponsiveSvg aspectRatio={1.8} margin={0}>
         <WorldMap />
       </ResponsiveSvg>
-
-      <div>
-        {Array.from(byCountry.entries())
-          .sort((a, b) => {
-            const lendiff = b[1].length - a[1].length
-            if (lendiff !== 0) return lendiff
-            return a[0].localeCompare(b[0])
-          })
-          .map(([country, arr]) => {
-            return (
-              <div
-                key={country}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: 12,
-                    width: '100px',
-                    flex: '0 0 auto',
-                    textAlign: 'right',
-                    marginRight: '6px',
-                  }}
-                >
-                  {country}
-                </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    flexGrow: 0,
-                    borderLeft: '1px solid white',
-                    padding: '12px 0 12px 3px',
-                  }}
-                >
-                  {arr.map((d, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        height: '8px',
-                        width: '8px',
-                        borderRadius: '100%',
-                        background: 'red',
-                        margin: 1,
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-            )
-          })}
-      </div>
-      {/* <ResponsiveSvg
-        aspectRatio={1.68}
-        margin={{
-          left: 100,
-          top: 10,
-          bottom: 10,
-          right: 10,
-        }}
-      >
-        <Bins
-          data={Array.from(byCountry.entries())
-            .filter(d => d[1].length > 4)
-            .sort((a, b) => b[1].length - a[1].length)}
-        />
-      </ResponsiveSvg> */}
     </div>
   )
 }
 
 import { hot } from 'react-hot-loader'
-import { usePopper } from 'react-popper'
-import { createPortal } from 'react-dom'
 export default hot(module)(Birthplace)

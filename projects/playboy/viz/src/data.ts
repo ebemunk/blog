@@ -1,4 +1,6 @@
+import { group } from 'd3'
 import memoize from 'lodash/memoize'
+import { uniqBy } from 'remeda'
 
 import raw from '../data.json'
 import { Playmate } from './types'
@@ -19,3 +21,8 @@ console.log('data', data)
 
 // @ts-ignore
 window.data = data
+
+export const byCountry = group(
+  uniqBy(data, d => d.name),
+  d => d.country,
+)

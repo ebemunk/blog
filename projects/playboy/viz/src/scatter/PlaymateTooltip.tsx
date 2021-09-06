@@ -111,6 +111,12 @@ const PlaymateTooltip = ({
                 ?.replace('Fake/Enhanced', 'Enhanced')}
             />
             <IfExists label="Cup" value={data.cup} />
+            <IfExists
+              label="Birthplace"
+              value={[data.town, data.state, data.country]
+                .filter(Boolean)
+                .join(', ')}
+            />
             <div style={{ marginTop: '0.5rem' }}>
               <a
                 href={`https://google.com/search?tbm=isch&q=${data.name}+playmate`}

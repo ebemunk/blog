@@ -24,6 +24,9 @@ export interface Playmate {
   first?: string
   babepediaUrl?: string
   mypmatesUrl?: string
+  country: string
+  state: string
+  town: string
 }
 
 interface PlaymateCircle {

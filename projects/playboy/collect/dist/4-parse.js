@@ -196,6 +196,7 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                     var born = new Date(mp.born);
                     var measurements = exports.parseMeasurements(bp === null || bp === void 0 ? void 0 : bp['Measurements']);
                     var cup = exports.parseCup(bp === null || bp === void 0 ? void 0 : bp['Bra/cup size']);
+                    var _b = __read(mp.birthplace.split(', ').reverse(), 3), country = _b[0], state = _b[1], town = _b[2];
                     return {
                         name: row.name,
                         heightCM: height,
@@ -221,7 +222,9 @@ var run = function () { return __awaiter(void 0, void 0, void 0, function () {
                         first: row.first,
                         babepediaUrl: bp.url,
                         mypmatesUrl: mp.url,
-                        zodiac: zodiac,
+                        country: country,
+                        state: state,
+                        town: town,
                     };
                 })
                     .sort(function (a, b) {

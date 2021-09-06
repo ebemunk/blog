@@ -27,6 +27,9 @@ render(<DemographicsOnline />, '#viz-demographics-online')
 import Birthplace from './birthplace/index'
 render(<Birthplace />, '#viz-birthplace')
 
+import BirthplaceBins from './birthplace/bins'
+render(<BirthplaceBins />, '#viz-birthplace-bins')
+
 //@ts-ignore
 window.showFps = function () {
   var script = document.createElement('script')

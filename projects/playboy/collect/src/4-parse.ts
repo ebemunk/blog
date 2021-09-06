@@ -131,6 +131,8 @@ const run = async () => {
       const measurements = parseMeasurements(bp?.['Measurements'])
       const cup = parseCup(bp?.['Bra/cup size'])
 
+      const [country, state, town] = mp.birthplace.split(', ').reverse()
+
       return {
         name: row.name,
         heightCM: height,
@@ -156,7 +158,9 @@ const run = async () => {
         first: row.first,
         babepediaUrl: bp.url,
         mypmatesUrl: mp.url,
-        zodiac,
+        country,
+        state,
+        town,
       }
     })
     .sort((a, b) => {
