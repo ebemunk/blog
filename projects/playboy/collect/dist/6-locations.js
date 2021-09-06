@@ -49,7 +49,7 @@ function run() {
             switch (_a.label) {
                 case 0:
                     pool = db_1.default();
-                    return [4 /*yield*/, pool.query("select name, babepedia->'Birthplace' as birthplace from playboy.playmates where babepedia->'Birthplace' is not null;")];
+                    return [4 /*yield*/, pool.query("select name, mypmates->'birthplace' as birthplace from playboy.playmates;")];
                 case 1:
                     rows = (_a.sent()).rows;
                     return [4 /*yield*/, promises_1.default.writeFile(path_1.resolve(__dirname, '../../viz/locations.json'), JSON.stringify(rows, null, 2))];

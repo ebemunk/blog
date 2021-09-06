@@ -29,7 +29,7 @@ const getMate = async ({ name, year, month }) => {
   const bio = $('.playmate-bio')
     .first()
     .text()
-    .match(/She was born on ([A-Za-z]+ \d{1,2}, \d{4}) in (.+)\. She/s)
+    .match(/She was born on ([A-Za-z]+ \d{1,2}, \d{4}) in (.+)\. She wa/s)
 
   if (!bio) {
     console.log('NO BIO', name, url)

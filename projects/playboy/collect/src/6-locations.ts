@@ -6,7 +6,7 @@ import getPool from './db'
 async function run() {
   const pool = getPool()
   const { rows } = await pool.query(
-    "select name, babepedia->'Birthplace' as birthplace from playboy.playmates where babepedia->'Birthplace' is not null;",
+    "select name, mypmates->'birthplace' as birthplace from playboy.playmates;",
   )
 
   await fs.writeFile(
