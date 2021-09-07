@@ -136,12 +136,14 @@ const Birthplace = () => {
         display: 'flex',
         margin: 'auto',
         flexDirection: 'column',
+        marginBottom: '1rem',
       }}
     >
       <div
         style={{
           display: 'flex',
           justifyContent: 'center',
+          marginBottom: '0.75rem',
         }}
       >
         {[
@@ -173,7 +175,14 @@ const Birthplace = () => {
           </div>
         ))}
       </div>
-      <ResponsiveSvg aspectRatio={1.8} margin={0}>
+      <ResponsiveSvg
+        aspectRatio={1.8}
+        margin={0}
+        style={{
+          border: '2px solid white',
+          borderRadius: '20%',
+        }}
+      >
         <USAMap />
       </ResponsiveSvg>
     </div>

@@ -120,6 +120,7 @@ const Bins = ({ data }) => {
         display: 'flex',
         margin: 'auto',
         flexDirection: 'column',
+        marginBottom: '1rem',
       }}
       className="bins"
     >

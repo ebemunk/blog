@@ -104,6 +104,8 @@ dadaaad da d ad
   <div id="viz-birthplace-bins-usa"></div>
 </div>
 
+lorem ipsum falan
+
 <div id="viz-trends"></div>
 
 <script src="http://localhost:9001/bundle.js"></script>
