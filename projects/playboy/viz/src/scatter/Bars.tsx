@@ -33,6 +33,7 @@ const Bars = ({
 
   const stack = d3
     .stack()
+    .order(d3.stackOrderDescending)
     .keys(colorScale.domain())
     .value((d, key) => {
       const total = Object.keys(d)

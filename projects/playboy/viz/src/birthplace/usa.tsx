@@ -28,11 +28,12 @@ const State = ({ feature, path }) => {
       placement: 'top',
     },
   )
+  const d = useMemo(() => path(feature), [path, feature])
 
   return (
     <>
       <path
-        d={path(feature)}
+        d={d}
         fill={color(feature.properties.data.length)}
         stroke={
           hovered?.data.name === feature.properties.name ? 'white' : 'black'
