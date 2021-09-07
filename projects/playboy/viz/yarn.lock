@@ -6188,6 +6188,11 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
+us-atlas@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/us-atlas/-/us-atlas-3.0.0.tgz#673c1fae018de0f134c7870c5cf80348597ae55b"
+  integrity sha512-cqvwK7Tdt8PZxhf5Nq5uenoHg/6cYWP3GFJocwDY01IszUC5HgwkODNKKXNWj1o24LFGK5ZgALqlcHK2R5EHwQ==
+
 use-debounce@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/use-debounce/-/use-debounce-7.0.0.tgz#00a67d23d4fe09905e11145a99278da06c01c880"

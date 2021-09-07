@@ -51,6 +51,7 @@
     "react-waypoint": "^10.1.0",
     "remeda": "^0.0.20",
     "topojson-client": "^3.1.0",
+    "us-atlas": "^3.0.0",
     "use-debounce": "^7.0.0",
     "vizlib": "file:../vizlib",
     "world-atlas": "^2.0.2"

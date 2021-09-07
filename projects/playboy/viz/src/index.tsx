@@ -30,6 +30,9 @@ render(<Birthplace />, '#viz-birthplace')
 import BirthplaceBins from './birthplace/bins'
 render(<BirthplaceBins />, '#viz-birthplace-bins')
 
+import BirthplaceUSA from './birthplace/usa'
+render(<BirthplaceUSA />, '#viz-birthplace-usa')
+
 //@ts-ignore
 window.showFps = function () {
   var script = document.createElement('script')

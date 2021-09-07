@@ -1,31 +1,26 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import * as d3 from 'd3'
-import world from 'world-atlas/countries-110m.json'
+// import world from 'world-atlas/countries-110m.json'
+import usa from 'us-atlas/states-10m.json'
 import * as topojson from 'topojson-client'
 import { usePopper } from 'react-popper'
 import { createPortal } from 'react-dom'
 
 import { ResponsiveSvg, usePlotContext } from 'vizlib'
 
-import { byCountry } from '../data'
+export const byState = d3.group(
+  uniqBy(data, d => d.name).filter(d => d.country === 'United States'),
+  d => d.state.trim(),
+)
 
-const countries = topojson.feature(world, world.objects.countries)
-countries.features.forEach(country => {
-  country.properties.data =
-    byCountry.get(
-      country.properties.name
-        .replace('United States of America', 'United States')
-        .replace('Netherlands', 'The Netherlands')
-        .replace('Czechia', 'Czech Republic')
-        .replace('United Kingdom', 'England'),
-    ) ?? []
+const states = topojson.feature(usa, usa.objects.states)
+states.features.forEach(state => {
+  state.properties.data = byState.get(state.properties.name) ?? []
 })
-
-const outline = { type: 'Sphere' }
 
 const color = d3.scaleThreshold(d3.schemeBlues[6]).domain([1, 2, 10, 20, 100])
 
-const Country = ({ path, feature }) => {
+const State = ({ feature, path }) => {
   const [hovered, setHovered] = useState<{
     data: any
     reference: Element
@@ -36,14 +31,6 @@ const Country = ({ path, feature }) => {
     popper,
     {
       placement: 'top',
-      modifiers: [
-        {
-          name: 'offset',
-          options: {
-            offset: [0, 20],
-          },
-        },
-      ],
     },
   )
 
@@ -55,10 +42,14 @@ const Country = ({ path, feature }) => {
         stroke={
           hovered?.data.name === feature.properties.name ? 'white' : 'black'
         }
-        strokeWidth={hovered?.data.name === feature.properties.name ? 3 : 0.25}
+        strokeWidth={hovered?.data.name === feature.properties.name ? 2 : 0.25}
+        data-state={feature.properties.name}
         onMouseMove={evt => {
           setHovered({
-            data: feature.properties,
+            data: {
+              name: feature.properties.name,
+              value: feature.properties.data.length,
+            },
             reference: {
               getBoundingClientRect() {
                 return {
@@ -77,7 +68,6 @@ const Country = ({ path, feature }) => {
           setHovered(null)
         }}
       ></path>
-
       {hovered &&
         createPortal(
           <div
@@ -105,8 +95,8 @@ const Country = ({ path, feature }) => {
                 {hovered.data.name}
               </div>
               <div>
-                {hovered.data.data.length} playmate
-                {hovered.data.data.length > 1 ? 's' : ''}
+                {hovered.data.value} playmate
+                {hovered.data.value > 1 ? 's' : ''}
               </div>
             </div>
           </div>,
@@ -116,40 +106,28 @@ const Country = ({ path, feature }) => {
   )
 }
 
-const WorldMap = () => {
+const USAMap = () => {
   const ctx = usePlotContext()
   const projection = useMemo(
     () =>
-      d3.geoNaturalEarth1().fitExtent(
+      d3.geoAlbersUsa().fitExtent(
         [
           [10, 10],
           [ctx.chartWidth - 10, ctx.chartHeight - 10],
         ],
-        countries,
+        states,
       ),
-    [ctx.chartWidth, ctx.chartHeight],
+    [ctx.chartHeight, ctx.chartWidth],
   )
-  const path = d3.geoPath(projection)
+  const path = useMemo(() => d3.geoPath(projection), [projection])
+
   return (
     <>
-      <defs>
-        <path id="worldmap-outline" d={`${path(outline)}`} />
-      </defs>
       <g>
-        {countries.features.map(feature => (
-          <Country
-            feature={feature}
-            path={path}
-            key={feature.properties.name}
-          />
+        {states.features.map(feature => (
+          <State key={feature.id} feature={feature} path={path} />
         ))}
       </g>
-      <use
-        xlinkHref="#worldmap-outline"
-        fill="none"
-        stroke="white"
-        strokeWidth={3}
-      />
     </>
   )
 }
@@ -201,12 +179,14 @@ const Birthplace = () => {
         ))}
       </div>
       <ResponsiveSvg aspectRatio={1.8} margin={0}>
-        <WorldMap />
+        <USAMap />
       </ResponsiveSvg>
     </div>
   )
 }
 
 import { hot } from 'react-hot-loader'
+import { uniqBy } from 'remeda'
+import { data } from '../data'
 import { useMemo } from 'react'
 export default hot(module)(Birthplace)

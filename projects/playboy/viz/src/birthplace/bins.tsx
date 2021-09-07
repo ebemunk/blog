@@ -6,9 +6,7 @@ import { byCountry } from '../data'
 import PlaymateTooltip from '../scatter/PlaymateTooltip'
 import { Playmate } from '../types'
 
-const Bins = () => {
-  const [expanded, setExpanded] = useState(false)
-
+const Circle = ({ d }) => {
   const [pinned, setPinned] = useState(false)
   const [showing, setShowing] = useState<{
     data: Playmate
@@ -56,6 +54,61 @@ const Bins = () => {
   }, [setPinned, setShowing, pinned])
 
   return (
+    <>
+      <div
+        style={{
+          height: '8px',
+          width: '8px',
+          borderRadius: '100%',
+          background: showing?.data.name === d.name ? 'white' : 'pink',
+          margin: 1,
+        }}
+        data-playmate={d.name}
+        onMouseOver={evt => {
+          if (pinned) return
+
+          setShowing({
+            data: d,
+            reference: document.querySelector(
+              `.bins [data-playmate="${d.name}"]`,
+            ),
+          })
+        }}
+        onMouseOut={() => {
+          if (pinned) return
+          setShowing(null)
+        }}
+        onClick={evt => {
+          if (showing === null) return
+          if (pinned) {
+            setShowing(null)
+            setPinned(false)
+          }
+          if (!pinned) setPinned(true)
+        }}
+      />
+      {showing &&
+        createPortal(
+          <div
+            ref={setPopper}
+            style={{
+              ...styles.popper,
+              pointerEvents: pinned ? 'auto' : 'none',
+            }}
+            {...attributes.popper}
+          >
+            <PlaymateTooltip data={showing.data} pinned={pinned} />
+          </div>,
+          document.querySelector('body'),
+        )}
+    </>
+  )
+}
+
+const Bins = () => {
+  const [expanded, setExpanded] = useState(false)
+
+  return (
     <div
       style={{
         width: '100vw',
@@ -81,11 +134,11 @@ const Bins = () => {
           .map(([country, arr]) => {
             return (
               <div
-                key={country}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                 }}
+                key={country}
               >
                 <div
                   style={{
@@ -108,40 +161,7 @@ const Bins = () => {
                   }}
                 >
                   {arr.map((d, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        height: '8px',
-                        width: '8px',
-                        borderRadius: '100%',
-                        background:
-                          showing?.data.name === d.name ? 'white' : 'pink',
-                        margin: 1,
-                      }}
-                      data-playmate={d.name}
-                      onMouseOver={evt => {
-                        if (pinned) return
-
-                        setShowing({
-                          data: d,
-                          reference: document.querySelector(
-                            `.bins [data-playmate="${d.name}"]`,
-                          ),
-                        })
-                      }}
-                      onMouseOut={() => {
-                        if (pinned) return
-                        setShowing(null)
-                      }}
-                      onClick={evt => {
-                        if (showing === null) return
-                        if (pinned) {
-                          setShowing(null)
-                          setPinned(false)
-                        }
-                        if (!pinned) setPinned(true)
-                      }}
-                    />
+                    <Circle d={d} key={i} />
                   ))}
                 </div>
               </div>
@@ -162,21 +182,6 @@ const Bins = () => {
       >
         Show {!expanded ? 'More' : 'Less'}
       </div>
-
-      {showing &&
-        createPortal(
-          <div
-            ref={setPopper}
-            style={{
-              ...styles.popper,
-              pointerEvents: pinned ? 'auto' : 'none',
-            }}
-            {...attributes.popper}
-          >
-            <PlaymateTooltip data={showing.data} pinned={pinned} />
-          </div>,
-          document.querySelector('body'),
-        )}
     </div>
   )
 }
