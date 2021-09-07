@@ -28,10 +28,13 @@ import Birthplace from './birthplace/index'
 render(<Birthplace />, '#viz-birthplace')
 
 import BirthplaceBins from './birthplace/bins'
-render(<BirthplaceBins />, '#viz-birthplace-bins')
+import { byCountry } from './data'
+render(<BirthplaceBins data={byCountry} />, '#viz-birthplace-bins')
 
 import BirthplaceUSA from './birthplace/usa'
 render(<BirthplaceUSA />, '#viz-birthplace-usa')
+import { byState } from './data'
+render(<BirthplaceBins data={byState} />, '#viz-birthplace-bins-usa')
 
 //@ts-ignore
 window.showFps = function () {

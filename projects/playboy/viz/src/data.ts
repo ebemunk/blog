@@ -26,3 +26,8 @@ export const byCountry = group(
   uniqBy(data, d => d.name),
   d => d.country,
 )
+
+export const byState = group(
+  uniqBy(data, d => d.name).filter(d => d.country === 'United States'),
+  d => d.state.trim(),
+)

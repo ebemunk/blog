@@ -95,6 +95,15 @@ dadaaad da d ad
   <div id="viz-birthplace-usa"></div>
 </div>
 
+dadaaad da d ad
+
+<div>
+  <div class="viz-title">usa birthplace</div>
+  <div class="viz-subtitle">yeah
+  </div>
+  <div id="viz-birthplace-bins-usa"></div>
+</div>
+
 <div id="viz-trends"></div>
 
 <script src="http://localhost:9001/bundle.js"></script>

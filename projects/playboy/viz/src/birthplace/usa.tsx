@@ -8,11 +8,6 @@ import { createPortal } from 'react-dom'
 
 import { ResponsiveSvg, usePlotContext } from 'vizlib'
 
-export const byState = d3.group(
-  uniqBy(data, d => d.name).filter(d => d.country === 'United States'),
-  d => d.state.trim(),
-)
-
 const states = topojson.feature(usa, usa.objects.states)
 states.features.forEach(state => {
   state.properties.data = byState.get(state.properties.name) ?? []
@@ -187,6 +182,6 @@ const Birthplace = () => {
 
 import { hot } from 'react-hot-loader'
 import { uniqBy } from 'remeda'
-import { data } from '../data'
+import { byState, data } from '../data'
 import { useMemo } from 'react'
 export default hot(module)(Birthplace)

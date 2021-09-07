@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { usePopper } from 'react-popper'
+import * as d3 from 'd3'
 
-import { byCountry } from '../data'
 import PlaymateTooltip from '../scatter/PlaymateTooltip'
 import { Playmate } from '../types'
 
@@ -13,8 +13,9 @@ const Circle = ({ d }) => {
     reference: Element
   }>(null)
   const [popper, setPopper] = useState(null)
+  const refRef = useRef(null)
   const { styles, attributes, forceUpdate } = usePopper(
-    showing?.reference,
+    refRef.current,
     popper,
     {
       placement: 'top',
@@ -56,6 +57,7 @@ const Circle = ({ d }) => {
   return (
     <>
       <div
+        ref={refRef}
         style={{
           height: '8px',
           width: '8px',
@@ -105,8 +107,10 @@ const Circle = ({ d }) => {
   )
 }
 
-const Bins = () => {
+const Bins = ({ data }) => {
   const [expanded, setExpanded] = useState(false)
+
+  const total = d3.sum(Array.from(data.values()), d => d.length)
 
   return (
     <div
@@ -123,9 +127,10 @@ const Bins = () => {
         style={{
           height: expanded ? 'auto' : '250px',
           overflow: expanded ? 'auto' : 'hidden',
+          overflowY: 'scroll',
         }}
       >
-        {Array.from(byCountry.entries())
+        {Array.from(data.entries())
           .sort((a, b) => {
             const lendiff = b[1].length - a[1].length
             if (lendiff !== 0) return lendiff
@@ -143,13 +148,14 @@ const Bins = () => {
                 <div
                   style={{
                     fontSize: 12,
-                    width: '100px',
+                    width: '150px',
                     flex: '0 0 auto',
                     textAlign: 'right',
                     marginRight: '6px',
                   }}
                 >
-                  {country}
+                  {country}: <strong>{arr.length}</strong> (
+                  {d3.format('.2p')(arr.length / total)})
                 </div>
                 <div
                   style={{
@@ -168,7 +174,7 @@ const Bins = () => {
             )
           })}
       </div>
-      <div
+      {/* <div
         style={{
           height: '1.5rem',
           background: 'gray',
@@ -181,7 +187,7 @@ const Bins = () => {
         onClick={() => setExpanded(!expanded)}
       >
         Show {!expanded ? 'More' : 'Less'}
-      </div>
+      </div> */}
     </div>
   )
 }
