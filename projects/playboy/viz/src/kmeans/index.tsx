@@ -6,13 +6,19 @@ import * as d3 from 'd3'
 import { data } from '../data'
 import { Axis, ResponsiveSvg, usePlotContext } from 'vizlib'
 
-const NUM_CLUSTERS = 5
+const NUM_CLUSTERS = 4
 
 const normalizer = accessor =>
   d3
     .scaleLinear()
     .domain(d3.extent(data, accessor) as [number, number])
     .range([0, 1])
+
+// const normalizer = accessor => {
+//   const mean = d3.mean(data, accessor)
+//   const std = Math.sqrt(d3.variance(data, accessor))
+//   return d => (d - mean) / std
+// }
 
 const normalizedData = data.map(d => [
   normalizer(d => d.bustCM)(d.bustCM),
@@ -25,6 +31,7 @@ const normalizedData = data.map(d => [
 
 const clusters = KMeans(normalizedData, NUM_CLUSTERS, {
   seed: 6,
+  tolerance: 1e-10,
 })
 
 const dadz = data.map((d, i) => ({
@@ -121,10 +128,9 @@ const Clusters = () => {
         }}
       >
         <ResponsiveSvg
-          maxHeight={300}
           maxWidth={900}
-          margin={40}
-          aspectRatio={3}
+          margin={{ top: 40, left: 40, bottom: 5 }}
+          aspectRatio={4.5}
         >
           <Viz />
         </ResponsiveSvg>
@@ -134,7 +140,14 @@ const Clusters = () => {
             justifyContent: 'center',
           }}
         >
-          {['Bust', 'Waist', 'Hips', 'Height', 'Age'].map((d, i) => (
+          {[
+            'Bust',
+            'Waist',
+            'Hips',
+            'Height',
+            // 'Weight',
+            'Age',
+          ].map((d, i) => (
             <div
               key={d}
               style={{
