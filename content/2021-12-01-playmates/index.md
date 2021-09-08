@@ -106,6 +106,15 @@ dadaaad da d ad
 
 lorem ipsum falan
 
+<div>
+  <div class="viz-title">kmeans</div>
+  <div class="viz-subtitle">yeah
+  </div>
+  <div id="viz-kmeans"></div>
+</div>
+
+yummy yummy
+
 <div id="viz-trends"></div>
 
 <script src="http://localhost:9001/bundle.js"></script>

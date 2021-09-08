@@ -36,6 +36,9 @@ render(<BirthplaceUSA />, '#viz-birthplace-usa')
 import { byState } from './data'
 render(<BirthplaceBins data={byState} />, '#viz-birthplace-bins-usa')
 
+import KMeans from './kmeans/index'
+render(<KMeans />, '#viz-kmeans')
+
 //@ts-ignore
 window.showFps = function () {
   var script = document.createElement('script')
