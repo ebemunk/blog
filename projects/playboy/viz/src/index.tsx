@@ -39,6 +39,9 @@ render(<BirthplaceBins data={byState} />, '#viz-birthplace-bins-usa')
 import KMeans from './kmeans/index'
 render(<KMeans />, '#viz-kmeans')
 
+import MostAverage from './mostaverage/index'
+render(<MostAverage />, '#viz-mostaverage')
+
 //@ts-ignore
 window.showFps = function () {
   var script = document.createElement('script')

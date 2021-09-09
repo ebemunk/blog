@@ -36,7 +36,7 @@ const PlaymateTooltip = ({
   return (
     <div
       style={{
-        background: 'rgba(0,0,0,0.66)',
+        background: 'rgba(0,0,0,0.75)',
         padding: '0.25rem',
         borderRadius: '5px',
         maxWidth: '14rem',

@@ -179,10 +179,10 @@ const Birthplace = () => {
       <ResponsiveSvg
         aspectRatio={1.8}
         margin={0}
-        style={{
-          border: '2px solid white',
-          borderRadius: '20%',
-        }}
+        // style={{
+        //   border: '2px solid white',
+        //   borderRadius: '20%',
+        // }}
       >
         <USAMap />
       </ResponsiveSvg>

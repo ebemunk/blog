@@ -115,6 +115,15 @@ lorem ipsum falan
 
 yummy yummy
 
+<div>
+  <div class="viz-title">most average</div>
+  <div class="viz-subtitle">yeah
+  </div>
+  <div id="viz-mostaverage"></div>
+</div>
+
+yummy yummy
+
 <div id="viz-trends"></div>
 
 <script src="http://localhost:9001/bundle.js"></script>

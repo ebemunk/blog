@@ -78,6 +78,14 @@ module.exports = {
         test: /\.csv$/,
         use: [{ loader: 'dsv-loader', options: { delimiter: ',' } }],
       },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+          },
+        ],
+      },
     ],
   },
 }
