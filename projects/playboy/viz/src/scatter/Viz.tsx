@@ -12,6 +12,9 @@ import Voronoi from './Voronoi'
 import { data as fullData } from '../data'
 import { format } from 'd3-format'
 import { Store } from '../store'
+import { useRef } from 'react'
+import { useEffect } from 'react'
+import * as d3 from 'd3'
 
 const Viz = ({ stage, subStage }: { stage: typeof STAGES[number] }) => {
   const { chartHeight, chartWidth } = usePlotContext()
@@ -22,18 +25,19 @@ const Viz = ({ stage, subStage }: { stage: typeof STAGES[number] }) => {
 
   const units = Store.useState(s => s.units)
 
+  const yikesRef = useRef()
+  useEffect(() => {
+    if (stage !== 'mateAge') return
+
+    d3.select(yikesRef.current)
+      .transition()
+      .delay(750)
+      .duration(750)
+      .attr('fill-opacity', 0.3)
+  }, [stage])
+
   return (
     <>
-      <text
-        fill="white"
-        x={chartWidth}
-        y={chartHeight}
-        textAnchor="end"
-        alignmentBaseline="baseline"
-        fontSize={12}
-      >
-        {pct} data ({data.length} of {fullData.length} total)
-      </text>
       {[
         'start',
         'mateAge',
@@ -99,6 +103,19 @@ const Viz = ({ stage, subStage }: { stage: typeof STAGES[number] }) => {
               Hugh Hefner dies Sept 27, 2017
             </text>
           </g>
+        </>
+      )}
+      {stage === 'mateAge' && (
+        <>
+          <rect
+            ref={yikesRef}
+            x={0}
+            y={scales.sY(18)}
+            width={chartWidth}
+            height={chartHeight - scales.sY(18)}
+            fill="red"
+            fillOpacity={0}
+          />
         </>
       )}
       {['hair', 'ethnicity', 'breasts', 'cup'].includes(stage) && (

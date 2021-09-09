@@ -10,9 +10,13 @@ shortSummary = "Analyzing the last statements of 454 executed people in Texas."
 responsive = true
 +++
 
+**Since the subject matter is Playboy and their Playmates of the Month, you should beware that most links will be NSFW. I've taken care to <u>not have any NSFW content on this post</u>.**
+
+The two primary sources for the data here is [mypmates.club](https://mypmates.club/) and [Babepedia](https://www.babepedia.com/). Babepedia has a bit more information, whereas mypmates seems to be a Playboy affiliate site. When there were disagreements about the data, I went with the values in mypmates.
+
 ## Who Reads Playboy?
 
-playboy demographics [print](https://web.archive.org/web/20041019143228/https://www.playboy.com/mediakit/print_demographics.html)
+Turns out, Playboy is not very transparent with their demographics (not sure if this is common among other magazines). But, I did find some information about who reads playboy on their own [media kit from 2004](https://web.archive.org/web/20041019143228/https://www.playboy.com/mediakit/print_demographics.html). More than a decade later, obviously these values are outdated, but I think it gives a bit of context into _who Playboy is meant for_.
 
 <div>
   <div class="viz-title">Reading it for the articles</div>
@@ -25,10 +29,10 @@ playboy demographics [print](https://web.archive.org/web/20041019143228/https://
   <div id="viz-demographics-print"></div>
 </div>
 
-[online](https://web.archive.org/web/20041022052012/http://www.playboy.com/mediakit/online_demographics.html)
+Playboy also has information for their [online demographics](https://web.archive.org/web/20041022052012/http://www.playboy.com/mediakit/online_demographics.html). The values here are inconsistent, and combined with it's age, it's best to take these with a huge grain of salt.
 
 <div>
-  <div class="viz-title">Viewing it for the articles</div>
+  <div class="viz-title">Browsing for the articles</div>
   <div class="viz-subtitle">Demographics breakdown of playboy.com (online) from 2004. Playboy describes them as 
     <strong>tech savvy</strong>,
     <strong>gamers</strong>,

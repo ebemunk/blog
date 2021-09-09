@@ -192,15 +192,15 @@ set first = 'First African-American Playmate of the Year.'
 where name = 'Renee Tenison';
 
 update playmates
-set first = 'First triples to become Playmates.'
+set first = 'First triplets to become Playmates.'
 where name = 'Erica Dahm';
 
 update playmates
-set first = 'First triples to become Playmates.'
+set first = 'First triplets to become Playmates.'
 where name = 'Nicole Dahm';
 
 update playmates
-set first = 'First triples to become Playmates.'
+set first = 'First triplets to become Playmates.'
 where name = 'Jaclyn Dahm';
 
 update playmates
