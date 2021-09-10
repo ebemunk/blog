@@ -472,56 +472,113 @@ const Scatter = () => {
             There has been a significant drop in bust sizes, 9.6% decrease
             overall.
           </p>
+          <p>
+            This is interesting, because most sources online claim that bust
+            size, especially in the US has actually gone <em>up</em>, but
+            without citing clear sources.
+          </p>
+          <p>
+            Between September 2012 until Hefner's death, there was an upper cap
+            on bust size. We start seeing huge variance once again, like the
+            early days, after his death.
+          </p>
         </WP>
 
-        <WP
-          onEnter={() => setStage('waist')}
-          active={stage === 'waist'}
-          style={{ height: '20rem' }}
-        >
+        <WP onEnter={() => setStage('waist')} active={stage === 'waist'}>
           <h3>Waist</h3>
           <AvgChange stage="waist" />
+          <p>
+            The highest change in body measurements are for waist, a whopping
+            11% increase with way more larger Playmates being features
+            especially after 2017.
+          </p>
+          <p>
+            Even with that, the average waist measurement of women in the US was
+            92.1 cm or 36.3"{' '}
+            <a
+              href="https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf"
+              target="_blank"
+            >
+              between 2015-2018
+            </a>
+            . If we plot it on this graph, it would extend beyond the top axis.
+            In other words, no Playmate has ever been at the US average for
+            waist measurement.
+          </p>
+          <p>
+            Having a smaller waist is the most important distinction between
+            Playmates and the US average.
+          </p>
         </WP>
 
-        <WP
-          onEnter={() => setStage('hips')}
-          active={stage === 'hips'}
-          style={{ height: '20rem' }}
-        >
+        <WP onEnter={() => setStage('hips')} active={stage === 'hips'}>
           <h3>Hips</h3>
           <AvgChange stage="hips" />
+          <p>
+            Yet another example of explosion of variance after Hefner's death,
+            hip measurements have seen a minor 2% increase, yet most of that
+            increase is carried by the post-2017 Playmates with much higher
+            measurements than in the history of Playmates.
+          </p>
+          <p>
+            <strong>Buffy Tyler</strong> is the strong outlier here, with the
+            smallest waist measurement ever by far.
+          </p>
         </WP>
 
-        <WP
-          onEnter={() => setStage('hair')}
-          active={stage === 'hair'}
-          style={{ height: '20rem' }}
-        >
+        <WP onEnter={() => setStage('hair')} active={stage === 'hair'}>
           <h3>Hair</h3>
+          <p>
+            Without looking at the data, my bias would've been that Playmates
+            would be majority blond. It's not the case, as there is almost the
+            same amount of blond and brown hair.
+          </p>
+          <p>
+            That said, many sources claim that blond hair is much rarer than
+            brown or black hair, by an order of magnitude. If that's true, then
+            blondes are definitely overrepresented among Playmates.
+          </p>
         </WP>
 
         <WP
           onEnter={() => setStage('ethnicity')}
           active={stage === 'ethnicity'}
-          style={{ height: '20rem' }}
         >
           <h3>Ethnicity</h3>
+          <p>
+            Despite featuring a black Playmate early in their publication, and
+            receiving backlash for it, Playboy undoubtedly prefers white women,
+            with a 90% majority.
+          </p>
+          <p>
+            Too bad I have no data on the ethnicity of Playboy's demographics,
+            but I would bet money that this Playmate distribution closely
+            mirrors reader ethnicities as well.
+          </p>
+          <p>
+            Also despite their progressive image, only 2019 and 2020 had 40%
+            non-white Playmates, the most it's ever been in it's 67-year
+            history.
+          </p>
         </WP>
 
-        <WP
-          onEnter={() => setStage('breasts')}
-          active={stage === 'breasts'}
-          style={{ height: '20rem' }}
-        >
+        <WP onEnter={() => setStage('breasts')} active={stage === 'breasts'}>
           <h3>Real or Fake</h3>
+          <p>
+            This was another surprise for me. You can clearly see that enhanced
+            breasts came into prominence starting around 1995 and peaked around
+            2010s before fading away again.
+          </p>
         </WP>
 
-        <WP
-          onEnter={() => setStage('cup')}
-          active={stage === 'cup'}
-          style={{ height: '20rem' }}
-        >
+        <WP onEnter={() => setStage('cup')} active={stage === 'cup'}>
           <h3>Cup Size</h3>
+          <p>US average is reported to be DD cup.</p>
+          <p>
+            I'm not quite sure how these data points were gathered to be honest,
+            so approach with healthy skepticism. Majority C cup is not
+            surprising for me.
+          </p>
         </WP>
       </div>
     </div>

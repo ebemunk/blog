@@ -50,6 +50,8 @@ ines rau - first transgender playmate has no page on babepedia
 
 <div id="viz-scatter"></div>
 
+we made it
+
 <div id="viz-units2"></div>
 
 ## The Hourglass

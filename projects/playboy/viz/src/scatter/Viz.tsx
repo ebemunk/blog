@@ -56,6 +56,7 @@ const Viz = ({ stage, subStage }: { stage: typeof STAGES[number] }) => {
 
   const avgHeightRef = useOpacityTransition(stage === 'height')
   const avgWeightRef = useOpacityTransition(stage === 'weight')
+  const avgWaistRef = useOpacityTransition(stage === 'waist')
 
   return (
     <>
