@@ -411,13 +411,8 @@ const Scatter = () => {
             </a>
             .
           </p>
-          <p>
-            <strong>Gay Collier</strong>'s birth year is reported as 1949 in
-            mypmates, which would make her just below 16 when she was became a
-            Playmate. Yet, I didn't find any sources confirming this, and
-            Babepedia reports it as 1942, which would make her 23 at the time.
-          </p>
         </WP>
+
         <WP
           onEnter={() => {
             setStage('height')
@@ -427,10 +422,22 @@ const Scatter = () => {
           <h3>Height</h3>
           <AvgChange stage="height" />
           <p>
-            The average height of Playmates have also increased by about 5%.
-            Pretty consistent increase besides a lull between 1995-2000.
+            Playmates have always been taller than the average woman, but they
+            have gotten even taller throught time, about a 5% increase since
+            1954.
+          </p>
+          <p>
+            The average height of women in the US was 162.6 cm or 5'4"{' '}
+            <a
+              href="https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf"
+              target="_blank"
+            >
+              between 2015-2018
+            </a>
+            .
           </p>
         </WP>
+
         <WP onEnter={() => setStage('weight')} active={stage === 'weight'}>
           <h3>Weight</h3>
           <AvgChange stage="weight" />
@@ -457,14 +464,16 @@ const Scatter = () => {
             .
           </p>
         </WP>
-        <WP
-          onEnter={() => setStage('bust')}
-          active={stage === 'bust'}
-          style={{ height: '20rem' }}
-        >
+
+        <WP onEnter={() => setStage('bust')} active={stage === 'bust'}>
           <h3>Bust</h3>
           <AvgChange stage="bust" />
+          <p>
+            There has been a significant drop in bust sizes, 9.6% decrease
+            overall.
+          </p>
         </WP>
+
         <WP
           onEnter={() => setStage('waist')}
           active={stage === 'waist'}
@@ -473,6 +482,7 @@ const Scatter = () => {
           <h3>Waist</h3>
           <AvgChange stage="waist" />
         </WP>
+
         <WP
           onEnter={() => setStage('hips')}
           active={stage === 'hips'}
@@ -481,6 +491,7 @@ const Scatter = () => {
           <h3>Hips</h3>
           <AvgChange stage="hips" />
         </WP>
+
         <WP
           onEnter={() => setStage('hair')}
           active={stage === 'hair'}
@@ -488,6 +499,7 @@ const Scatter = () => {
         >
           <h3>Hair</h3>
         </WP>
+
         <WP
           onEnter={() => setStage('ethnicity')}
           active={stage === 'ethnicity'}
@@ -495,6 +507,7 @@ const Scatter = () => {
         >
           <h3>Ethnicity</h3>
         </WP>
+
         <WP
           onEnter={() => setStage('breasts')}
           active={stage === 'breasts'}
@@ -502,6 +515,7 @@ const Scatter = () => {
         >
           <h3>Real or Fake</h3>
         </WP>
+
         <WP
           onEnter={() => setStage('cup')}
           active={stage === 'cup'}

@@ -16,6 +16,23 @@ import { useRef } from 'react'
 import { useEffect } from 'react'
 import * as d3 from 'd3'
 
+const useOpacityTransition = (
+  condition,
+  { delay = 0, duration = 750 } = {},
+) => {
+  const ref = useRef()
+  useEffect(() => {
+    if (!condition) return
+
+    d3.select(ref.current)
+      .transition()
+      .delay(delay)
+      .duration(duration)
+      .attr('opacity', 1)
+  }, [condition])
+  return ref
+}
+
 const Viz = ({ stage, subStage }: { stage: typeof STAGES[number] }) => {
   const { chartHeight, chartWidth } = usePlotContext()
 
@@ -24,6 +41,7 @@ const Viz = ({ stage, subStage }: { stage: typeof STAGES[number] }) => {
   const pct = format('.0%')(data.length / fullData.length)
 
   const units = Store.useState(s => s.units)
+  const isMetric = units === 'metric'
 
   const yikesRef = useRef()
   useEffect(() => {
@@ -31,10 +49,13 @@ const Viz = ({ stage, subStage }: { stage: typeof STAGES[number] }) => {
 
     d3.select(yikesRef.current)
       .transition()
-      .delay(750)
+      .delay(750 * 2)
       .duration(750)
-      .attr('fill-opacity', 0.3)
+      .attr('fill-opacity', 0.2)
   }, [stage])
+
+  const avgHeightRef = useOpacityTransition(stage === 'height')
+  const avgWeightRef = useOpacityTransition(stage === 'weight')
 
   return (
     <>
@@ -117,6 +138,62 @@ const Viz = ({ stage, subStage }: { stage: typeof STAGES[number] }) => {
             fillOpacity={0}
           />
         </>
+      )}
+      {stage === 'height' && (
+        <g
+          transform={`translate(0,${scales.sY(isMetric ? 162.6 : 64)})`}
+          color="rgb(237, 201, 73)"
+          ref={avgHeightRef}
+          opacity={0}
+        >
+          <line
+            x1={0}
+            x2={chartWidth}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeOpacity={0.7}
+            strokeDasharray="5 5"
+          />
+          <text
+            fill="currentColor"
+            fontSize={12}
+            dy={4}
+            dominantBaseline="hanging"
+            textAnchor="end"
+            x={chartWidth}
+          >
+            Average for US Women 20-29 between 2015-2018
+          </text>
+        </g>
+      )}
+      {stage === 'weight' && (
+        <g
+          transform={`translate(0,${scales.sY(isMetric ? 74.9 : 165)})`}
+          color="rgb(237, 201, 73)"
+          ref={avgWeightRef}
+          opacity={0}
+        >
+          <line
+            x1={0}
+            x2={chartWidth}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeOpacity={0.7}
+            strokeDasharray="5 5"
+          />
+          <text
+            fill="currentColor"
+            fontSize={12}
+            dy={4}
+            dominantBaseline="hanging"
+            textAnchor="end"
+            x={chartWidth}
+          >
+            Average for US Women 20-29 between 2015-2018
+          </text>
+        </g>
       )}
       {['hair', 'ethnicity', 'breasts', 'cup'].includes(stage) && (
         <>

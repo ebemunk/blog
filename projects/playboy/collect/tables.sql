@@ -87,6 +87,10 @@ where name = 'Ines Rau';
 update playmates
 set babepedia = babepedia::jsonb || '{"Hair color":"Auburn"}'::jsonb
 where name = 'Phyllis Coleman';
+
+update playmates
+set mypmates = mypmates::jsonb || '{"born":"October 9, 1942"}'::jsonb
+where name = 'Gay Collier';
 -- RUN AFTER STEP 3 END
 
 -- RUN AT THE END

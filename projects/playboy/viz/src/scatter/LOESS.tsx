@@ -49,7 +49,7 @@ const LOESS = ({ stage, sX, sY }) => {
       .transition()
       .delay(750 * 2)
       .duration(750)
-      .attr('opacity', 0.3)
+      .attr('opacity', 0.2)
   })
 
   if (!ld) return null
@@ -75,7 +75,12 @@ const LOESS = ({ stage, sX, sY }) => {
       />
       <path
         ref={avgRef}
-        style={{ opacity: 0.6, stroke: 'red', strokeWidth: 4, fill: 'none' }}
+        style={{
+          opacity: 0.9,
+          stroke: 'red',
+          strokeWidth: 4,
+          fill: 'none',
+        }}
         d={d3.line()(dd.map((d, i) => [sX(d[0]), sY(fitted[i])]))}
       />
     </>
