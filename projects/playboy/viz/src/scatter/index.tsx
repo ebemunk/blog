@@ -462,49 +462,52 @@ const Scatter = () => {
           active={stage === 'bust'}
           style={{ height: '20rem' }}
         >
-          bust <AvgChange stage="bust" />
+          <h3>Bust</h3>
+          <AvgChange stage="bust" />
         </WP>
         <WP
           onEnter={() => setStage('waist')}
           active={stage === 'waist'}
           style={{ height: '20rem' }}
         >
-          waist <AvgChange stage="waist" />
+          <h3>Waist</h3>
+          <AvgChange stage="waist" />
         </WP>
         <WP
           onEnter={() => setStage('hips')}
           active={stage === 'hips'}
           style={{ height: '20rem' }}
         >
-          hips <AvgChange stage="hips" />
+          <h3>Hips</h3>
+          <AvgChange stage="hips" />
         </WP>
         <WP
           onEnter={() => setStage('hair')}
           active={stage === 'hair'}
           style={{ height: '20rem' }}
         >
-          hair
+          <h3>Hair</h3>
         </WP>
         <WP
           onEnter={() => setStage('ethnicity')}
           active={stage === 'ethnicity'}
           style={{ height: '20rem' }}
         >
-          ethnicity
+          <h3>Ethnicity</h3>
         </WP>
         <WP
           onEnter={() => setStage('breasts')}
           active={stage === 'breasts'}
           style={{ height: '20rem' }}
         >
-          breasts
+          <h3>Real or Fake</h3>
         </WP>
         <WP
           onEnter={() => setStage('cup')}
           active={stage === 'cup'}
           style={{ height: '20rem' }}
         >
-          cup
+          <h3>Cup Size</h3>
         </WP>
       </div>
     </div>
