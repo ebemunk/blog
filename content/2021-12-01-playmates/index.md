@@ -60,7 +60,7 @@ babbidy babbdiy bleu
 
 <div>
   <div class="viz-title">Breaking the mold</div>
-  <div class="viz-subtitle">2020 is the first and only year the hourglass-figure mold was broken. Bust measurements decline through the decades, waist and hips increase. Thicc is finally embraced in 2020. The "Ideal" <span data-cms="90">90</span>-<span data-cms="60">60</span>-<span data-cms="90">90</span> shown in red.</div>
+  <div class="viz-subtitle">2020 is the first and only year the hourglass-figure mold was broken. Bust measurements decline through the decades, waist and hips increase. Thicc is finally embraced in 2020. The "Ideal" <span data-cms="90">90</span>-<span data-cms="60">60</span>-<span data-cms="90">90</span> shown in red. <a href="https://www.huffpost.com/entry/the-scary-reality-of-a-re_b_845239" target="_blank">Projected dimensions</a> of the Barbie doll in yellow.</div>
   <div id="viz-bwh"></div>
 </div>
 
@@ -70,7 +70,7 @@ bla bla [CDC NCHS](https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf) 
 
 <div>
   <div class="viz-title">Straddling the line</div>
-  <div class="viz-subtitle">Although the majority of Playmates are in the Healthy BMI range, a considerable amount (46%) are Underweight. There are only 2 other playmates (<1%) in any other category. The difference of the averages between US women and Playmates is staggering.</div>
+  <div class="viz-subtitle">Majority of Playmates are underweight, and just over half is in the Healthy range. There are only 2 other playmates (<1%) in any other category. The difference of the averages between US women and Playmates is staggering.</div>
   <div id="viz-bmi"></div>
 </div>
 

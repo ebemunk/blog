@@ -44,6 +44,7 @@ const Silhouette = ({ data, line, stroke, opacity = 1 }) => {
           stroke,
           fill: 'none',
           strokeWidth: 3,
+          opacity: 0.7,
         }}
         d={line(data.left)}
       />
@@ -52,6 +53,7 @@ const Silhouette = ({ data, line, stroke, opacity = 1 }) => {
           stroke,
           fill: 'none',
           strokeWidth: 3,
+          opacity: 0.7,
         }}
         d={line(data.right)}
       />
@@ -100,6 +102,26 @@ const Viz = ({ decades, chosen }: { decades: any; chosen: string }) => {
 
   return (
     <>
+      <Silhouette
+        line={lineGenerator}
+        stroke={'yellow'}
+        data={{
+          left: [
+            ['top', -(35 * multiplier)],
+            ['bust', -(39 * multiplier)],
+            ['waist', -(18 * multiplier)],
+            ['hips', -(33 * multiplier)],
+            ['bottom', -(33 * multiplier)],
+          ],
+          right: [
+            ['top', 35 * multiplier],
+            ['bust', 39 * multiplier],
+            ['waist', 18 * multiplier],
+            ['hips', 33 * multiplier],
+            ['bottom', 33 * multiplier],
+          ],
+        }}
+      />
       {Object.keys(decades).map((key, i) => (
         <Silhouette
           opacity={
@@ -248,6 +270,25 @@ const BWH = () => {
             }}
           />{' '}
           "Ideal"
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            marginBottom: '0.25rem',
+            fontSize: '0.8rem',
+            alignItems: 'center',
+          }}
+        >
+          <div
+            style={{
+              height: '1rem',
+              width: '1rem',
+              background: 'yellow',
+              border: '2px solid yellow',
+              marginRight: '0.25rem',
+            }}
+          />{' '}
+          Barbie doll
         </div>
       </div>
     </div>
