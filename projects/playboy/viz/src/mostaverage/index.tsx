@@ -12,8 +12,6 @@ import { createUseStyles } from 'react-jss'
 
 const data = uniqBy(rawData, d => d.name)
 
-console.log('dat', data.length)
-
 const normalizer = accessor =>
   d3
     .scaleLinear()
@@ -133,6 +131,8 @@ const euclidian = normalizedData
 //     return { ...d, distance }
 //   })
 //   .sort((a, b) => a.distance - b.distance)
+
+// console.log(cosine.slice(0, 5), cosine.slice(-5))
 
 const useStyles = createUseStyles({
   circle: {

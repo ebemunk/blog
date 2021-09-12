@@ -44,6 +44,8 @@ Playboy also has information for their [online demographics](https://web.archive
 
 ## Playmates
 
+**806** unique Playmates.
+
 We'll be talking about body measurements, and in this article you can pick which units you prefer to see these numbers in. You can change this at any time, and the visuals will adjust to your preference.
 
 <div id="viz-units"></div>
@@ -84,43 +86,58 @@ That said, it's useful to see trends in BMI among Playmates, especially since it
 
 ## Geography
 
-Let's now take a little break from numbers, and look at the geography. Where are Playmates from? Despite it's global reach (as is common with most US-based media),
+Let's now take a little break from numbers, and look at some geography. Where are Playmates from? Despite it's global reach (as is common with most US-based media), only **42** countries have had Playmates and they account for only ~15% of the total.
 
 <div>
-  <div class="viz-title">birthplace</div>
-  <div class="viz-subtitle">yeah
-  </div>
+  <div class="viz-title">Birthplace of Playmates</div>
+  <div class="viz-subtitle">Only 18% of Playmates were born outside of the US. Focus on the regions of the world where no Playmate was born in. What does this say about Playboy?</div>
   <div id="viz-birthplace"></div>
 </div>
 
-dadaaad da d ad
+Important thing to highlight here isn't "how many playmates came from which countries?", but "what regions of the world have never had Playmates?". Africa is almost completely ignored besides **Ida Ljungqvist** from Tanzania. Middle eastern countries have never had one, and most of Asia remains barren. **United Kingdom** and **Germany** lead among the European countries, and **Brazil** is the favorite in South America.
+
+Below is a different view of the same data for those curious about the individual Playmates.
 
 <div>
-  <div class="viz-title">birthplace</div>
-  <div class="viz-subtitle">yeah
-  </div>
+  <div class="viz-title">Birthplace of Playmates</div>
+  <div class="viz-subtitle">Hover/tap over the dots to view details.</div>
   <div id="viz-birthplace-bins"></div>
 </div>
 
-dadaaad da d ad
+We can't ignore ~82% of the data though, so let's see the State's breakdown of birthplaces.
 
 <div>
-  <div class="viz-title">usa birthplace</div>
-  <div class="viz-subtitle">yeah
-  </div>
+  <div class="viz-title">Californication</div>
+  <div class="viz-subtitle">West coast - best coast for Playmates. Vermont and Delaware are the only states that have never had Playmates.</div>
   <div id="viz-birthplace-usa"></div>
 </div>
 
-dadaaad da d ad
+Not surprising, as Playboy is headquartered in Beverly Hills, California and has largely carried some of the west coast sensibilities when it comes to beauty. I know my friends from the US like to compete with their states, so here's a tidbit: **Vermont** and **Delaware** are the only 2 states that have never had Playmates. Also, **Hawaii** has had more playmates than **Wyoming**, **South Dakota**, **Iowa**, **West Virginia** and **New Hampshire** combined.
+
+Below a similar chart as the previous one, for the detail-oriented.
 
 <div>
-  <div class="viz-title">usa birthplace</div>
-  <div class="viz-subtitle">yeah
-  </div>
+  <div class="viz-title">Birthplace in the US</div>
+  <div class="viz-subtitle">Hover/tap over the dots to view details.</div>
   <div id="viz-birthplace-bins-usa"></div>
 </div>
 
-lorem ipsum falan
+## The "Most Average" Playmates
+
+We focused on how the "Average US Woman 20-29" differs from the Playmates, but what about within the group? Who's the "averagest" Playmate, and who's the least average? To calculate, I first calculated the average values across all Playmates for their weight, height, body measurements, hair color and ethnicities. Then, I ordered them by their _distance_ from this average.
+
+<div>
+  <div class="viz-title">most average</div>
+  <div class="viz-subtitle">yeah
+  </div>
+  <div id="viz-mostaverage"></div>
+</div>
+
+Not surprising that **Ali Chanel** is the least average Playmate, as she was an outlier in most categories. I am happy to see that since the 2000s, Playboy has been pushing its own boundaries and including people with much more diverse characteristics.
+
+For the nerds among you, this is the _euclidian distance_ from the average. I also computed the _cosine similarity_ out of curiosity. Ask me about it on Twitter.
+
+## k-means What?
 
 <div>
   <div class="viz-title">kmeans</div>
@@ -130,13 +147,6 @@ lorem ipsum falan
 </div>
 
 yummy yummy
-
-<div>
-  <div class="viz-title">most average</div>
-  <div class="viz-subtitle">yeah
-  </div>
-  <div id="viz-mostaverage"></div>
-</div>
 
 yummy yummy
 

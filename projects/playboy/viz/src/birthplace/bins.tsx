@@ -38,6 +38,8 @@ const Circle = ({ d }) => {
 
   useEffect(() => {
     const listener = (evt: MouseEvent) => {
+      if (!showing) return
+
       const possibleTooltip = document.querySelector(
         'div[data-playmatetooltip]',
       )
