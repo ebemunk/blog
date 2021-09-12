@@ -35,7 +35,7 @@ const Axis = ({
   tickArguments?: any
   offset?: any
   transitionDuration?: number
-} & SVGProps<SVGGElement>) => {
+} & Omit<SVGProps<SVGGElement>, 'scale'>) => {
   const ref = useRef<SVGGElement>(null)
 
   useLayoutEffect(() => {

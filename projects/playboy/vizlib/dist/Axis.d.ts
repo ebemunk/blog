@@ -19,6 +19,6 @@ declare const Axis: ({ orientation, scale, ticks, tickSize, tickSizeInner, tickS
     tickArguments?: any;
     offset?: any;
     transitionDuration?: number | undefined;
-} & React.SVGProps<SVGGElement>) => JSX.Element;
+} & Omit<React.SVGProps<SVGGElement>, "scale">) => JSX.Element;
 export default Axis;
 //# sourceMappingURL=Axis.d.ts.map
