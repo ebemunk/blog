@@ -41,6 +41,8 @@ render(<KMeans />, '#viz-kmeans')
 
 import MostAverage from './mostaverage/index'
 render(<MostAverage />, '#viz-mostaverage')
+import MostAverageYears from './mostaverage/years'
+render(<MostAverageYears />, '#viz-mostaverage-years')
 
 //@ts-ignore
 window.showFps = function () {

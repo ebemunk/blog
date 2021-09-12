@@ -134,6 +134,12 @@ We focused on how the "Average US Woman 20-29" differs from the Playmates, but w
 
 Not surprising that **Ali Chanel** is the least average Playmate, as she was an outlier in most categories. I am happy to see that since the 2000s, Playboy has been pushing its own boundaries and including people with much more diverse characteristics.
 
+<div>
+  <div class="viz-title">Difference from Average per Year</div>
+  <div class="viz-subtitle">Playmates have been increasingly "different" from the "Most Average Playmate" through the years.</div>
+  <div id="viz-mostaverage-years"></div>
+</div>
+
 For the nerds among you, this is the _euclidian distance_ from the average. I also computed the _cosine similarity_ out of curiosity. Ask me about it on Twitter.
 
 ## k-means What?

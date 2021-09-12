@@ -79,7 +79,7 @@ const average = [
   cupAvgs.get('C'),
 ]
 
-const euclidian = normalizedData
+export const euclidian = normalizedData
   .map((d, i) => {
     const distance = Math.sqrt(
       Math.pow(average[0] - d.bustCM, 2) +
