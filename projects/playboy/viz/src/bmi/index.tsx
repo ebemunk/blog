@@ -8,20 +8,24 @@ import PlaymateCircles from '../scatter/PlaymateCircles'
 import { hot } from 'react-hot-loader'
 import { Store } from '../store'
 import { formatFeetIn } from '../scatter/util'
+import { uniqBy } from 'remeda'
 
 const data = rawData.filter(d => d.weightKG !== null && d.heightCM !== null)
 
 // https://www.cdc.gov/obesity/adult/defining.html
-const bmiz = d3.group(data, d => {
-  const bmi = (d.weightKG / d.heightCM / d.heightCM) * 10000
+const bmiz = d3.group(
+  uniqBy(data, d => d.name),
+  d => {
+    const bmi = (d.weightKG / d.heightCM / d.heightCM) * 10000
 
-  if (bmi < 18.5) return 'Underweight'
-  if (bmi < 25) return 'Healthy'
-  if (bmi < 30) return 'Overweight'
-  if (bmi < 35) return 'Obese (Class 1)'
-  if (bmi < 40) return 'Obese (Class 2)'
-  return 'Obese (Class 3 - Severe)'
-})
+    if (bmi < 18.5) return 'Underweight'
+    if (bmi < 25) return 'Healthy'
+    if (bmi < 30) return 'Overweight'
+    if (bmi < 35) return 'Obese (Class 1)'
+    if (bmi < 40) return 'Obese (Class 2)'
+    return 'Obese (Class 3 - Severe)'
+  },
+)
 
 const bmi = (weight, height) => (weight / height / height) * 10000 // [weight (kg) / height (cm) / height (cm)] x 10,000
 const invertBmiY = (units, weight, bmi) =>
@@ -357,16 +361,17 @@ const BMI = () => {
         style={{
           display: 'flex',
           width: '100vw',
-          maxWidth: '960px',
+          maxWidth: 'calc(960px - 45px - 10px)',
+          marginLeft: '45px',
         }}
       >
         {bmiRanges.map(k => (
           <div
             key={k.label}
-            data-key={bmiz.get(k.label)}
+            data-key={k.label}
             style={{
               background: bmiColors(k.label),
-              width: `${((bmiz.get(k.label)?.length ?? 0) / 759) * 100}%`,
+              width: `${((bmiz.get(k.label)?.length ?? 0) / 806) * 100}%`,
               height: '2rem',
               display: 'flex',
               alignItems: 'center',
@@ -380,7 +385,7 @@ const BMI = () => {
                   fontSize: '0.8rem',
                 }}
               >
-                {d3.format('.2p')((bmiz.get(k.label)?.length ?? 0) / 759)}
+                {d3.format('.2p')((bmiz.get(k.label)?.length ?? 0) / 806)}
               </span>
             )}
           </div>

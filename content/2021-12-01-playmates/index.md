@@ -44,19 +44,19 @@ Playboy also has information for their [online demographics](https://web.archive
 
 ## Playmates
 
-ines rau - first transgender playmate has no page on babepedia
+We'll be talking about body measurements, and in this article you can pick which units you prefer to see these numbers in. You can change this at any time, and the visuals will adjust to your preference.
 
 <div id="viz-units"></div>
 
 <div id="viz-scatter"></div>
 
-we made it
+This was a high-level look into the patterns and quirks of our Playmate population. Let's now dig into some specifics which I found to be relevant in many respects. Before we proceed, you can once again make a selection to see the results in your preferred units.
 
 <div id="viz-units2"></div>
 
 ## The Hourglass
 
-babbidy babbdiy bleu
+"The Hourglass Figure" is the most well-known body shapes. All across the media (including Playboy) it's shown to be the most desirable body shape. Yet, there is evidence that this insistance in the media is responsible for the <a href="https://www.semanticscholar.org/paper/An-Evolutionary-Theory-of-Female-Physical-Singh/00dde6b664c882410fa5e4ed1d7e17f994636793" target="_blank">widespread body dissatisfaction and eating disorders in young women</a>, and that "losing body weight by dieting may not lead to positive body image as weight loss does not significantly alter the nature of fat distribution".
 
 <div>
   <div class="viz-title">Breaking the mold</div>
@@ -64,17 +64,27 @@ babbidy babbdiy bleu
   <div id="viz-bwh"></div>
 </div>
 
+It is encouraging to see that 2020s have seen the breaking of this mold somewhat. Both waist and hip measurements have gotten larger, to accommodate the other common body shapes, like the pear and the rectangle. "Thicc" seems to be finally embraced in the modern world by Playboy.
+
+I plotted the controversial measurements for the Barbie doll to highlight <a href="https://www.chapman.edu/students/health-and-safety/psychological-counseling/_files/eating-disorder-files/13-barbie-facts.pdf" target="_blank">how ridiculous</a> the proportions are for the quintessential toy for young girls.
+
 ## BMI
 
-bla bla [CDC NCHS](https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf) [CDC BMI](https://www.cdc.gov/obesity/adult/defining.html)
+Body-Mass Index, aka BMI relates your weight to your height. As noted in [CDC page](https://www.cdc.gov/obesity/adult/defining.html), it is a screening tool for weight-related risks. For some healthy people, and especially athletes, BMI is known to be inaccurate. Note that, it is a _screening tool_ and not a diagnosis of body fat or health.
+
+That said, it's useful to see trends in BMI among Playmates, especially since it can be relatively accurate for populations. [CDC NCHS](https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf) has results from 2015-2018 among a sample population, so we can compare the average 20-29 year old woman to the average Playmate.
 
 <div>
   <div class="viz-title">Straddling the line</div>
-  <div class="viz-subtitle">Majority of Playmates are underweight, and just over half is in the Healthy range. There are only 2 other playmates (<1%) in any other category. The difference of the averages between US women and Playmates is staggering.</div>
+  <div class="viz-subtitle">More than half of Playmates are Underweight, 48% are in the Healthy range. There are only 2 other playmates (<1%) in any other category. The difference of the averages between US women and Playmates is staggering.</div>
   <div id="viz-bmi"></div>
 </div>
 
-der der
+## WHR
+
+## Geography
+
+Let's now take a little break from numbers, and look at the geography. Where are Playmates from? Despite it's global reach (as is common with most US-based media),
 
 <div>
   <div class="viz-title">birthplace</div>

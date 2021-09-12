@@ -489,7 +489,7 @@ const Scatter = () => {
           <AvgChange stage="waist" />
           <p>
             The highest change in body measurements are for waist, a whopping
-            11% increase with way more larger Playmates being features
+            11% increase with way more larger Playmates being featured
             especially after 2017.
           </p>
           <p>
@@ -502,8 +502,10 @@ const Scatter = () => {
               between 2015-2018
             </a>
             . If we plot it on this graph, it would extend beyond the top axis.
-            In other words, no Playmate has ever been at the US average for
-            waist measurement.
+            In other words,{' '}
+            <strong>
+              no Playmate has ever been at the US average for waist measurement.
+            </strong>
           </p>
           <p>
             Having a smaller waist is the most important distinction between
