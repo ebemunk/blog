@@ -86,7 +86,7 @@ That said, it's useful to see trends in BMI among Playmates, especially since it
 
 ## Geography
 
-Let's now take a little break from numbers, and look at some geography. Where are Playmates from? Despite it's global reach (as is common with most US-based media), only **42** countries have had Playmates and they account for only ~15% of the total.
+Let's now take a little break from numbers, and look at some geography. Where are Playmates from? Despite it's global reach (as is common with most US-based media), **41** countries have had Playmates outside of the US, and they account for only ~18% of the total.
 
 <div>
   <div class="viz-title">Birthplace of Playmates</div>
@@ -112,7 +112,7 @@ We can't ignore ~82% of the data though, so let's see the State's breakdown of b
   <div id="viz-birthplace-usa"></div>
 </div>
 
-Not surprising, as Playboy is headquartered in Beverly Hills, California and has largely carried some of the west coast sensibilities when it comes to beauty. I know my friends from the US like to compete with their states, so here's a tidbit: **Vermont** and **Delaware** are the only 2 states that have never had Playmates. Also, **Hawaii** has had more playmates than **Wyoming**, **South Dakota**, **Iowa**, **West Virginia** and **New Hampshire** combined.
+Not surprising, as Playboy is headquartered in Beverly Hills, California and has largely carried some of the west coast sensibilities when it comes to beauty. I know that some my friends from the US have rivalries among their home states, so here's a tidbit: **Vermont** and **Delaware** are the only 2 states that have never had Playmates. Also, **Hawaii** has had more playmates than **Wyoming**, **South Dakota**, **Iowa**, **West Virginia** and **New Hampshire** combined.
 
 Below a similar chart as the previous one, for the detail-oriented.
 
@@ -127,9 +127,8 @@ Below a similar chart as the previous one, for the detail-oriented.
 We focused on how the "Average US Woman 20-29" differs from the Playmates, but what about within the group? Who's the "averagest" Playmate, and who's the least average? To calculate, I first calculated the average values across all Playmates for their weight, height, body measurements, hair color and ethnicities. Then, I ordered them by their _distance_ from this average.
 
 <div>
-  <div class="viz-title">most average</div>
-  <div class="viz-subtitle">yeah
-  </div>
+  <div class="viz-title">Most/Least Average Playmates</div>
+  <div class="viz-subtitle">Playmates ordered by their distance to the average of their data points. Old-School vs New-School. Top 5 most average are all from older issues, whereas the top 5 least average are all from 2000 and later.</div>
   <div id="viz-mostaverage"></div>
 </div>
 
@@ -139,16 +138,19 @@ For the nerds among you, this is the _euclidian distance_ from the average. I al
 
 ## k-means What?
 
+I admit, this is the most gratuitous analysis here, but I wanted to see what an <a href="https://en.wikipedia.org/wiki/K-means_clustering" target="_blank">unsupervised learning algorithm</a> would say about our population of Playmates. This means absolutely nothing (seriously) and you should probably ignore it. Anyway...
+
+I picked 4 clusters for no good reason, and let the computer loose on the dataset. The results were interesting! Below visualization was inspired by the <a href="https://www.igi-global.com/article/mvclustviz/103841" target="_blank">MVClustViz</a> visualization.
+
 <div>
-  <div class="viz-title">kmeans</div>
-  <div class="viz-subtitle">yeah
-  </div>
+  <div class="viz-title">k-means clusters</div>
+  <div class="viz-subtitle">4 clusters for body shape, height and age. Some coincidental correspondence between hourglass, pear and inverted triangle body shapes.</div>
   <div id="viz-kmeans"></div>
 </div>
 
-yummy yummy
+## Outro
 
-yummy yummy
+Thanks for reading
 
 <div id="viz-trends"></div>
 
