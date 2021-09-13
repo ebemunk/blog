@@ -70,7 +70,7 @@ It is encouraging to see that 2020s have seen the breaking of this mold somewhat
 
 I plotted the controversial measurements for the Barbie doll to highlight <a href="https://www.chapman.edu/students/health-and-safety/psychological-counseling/_files/eating-disorder-files/13-barbie-facts.pdf" target="_blank">how ridiculous</a> the proportions are for the quintessential toy for young girls.
 
-## BMI
+## Body-Mass Index
 
 Body-Mass Index, aka BMI relates your weight to your height. As noted in [CDC page](https://www.cdc.gov/obesity/adult/defining.html), it is a screening tool for weight-related risks. For some healthy people, and especially athletes, BMI is known to be inaccurate. Note that, it is a _screening tool_ and not a diagnosis of body fat or health.
 
@@ -82,7 +82,21 @@ That said, it's useful to see trends in BMI among Playmates, especially since it
   <div id="viz-bmi"></div>
 </div>
 
-## WHR
+## Waist-to-Hips Ratio
+
+Waist-to-Hips Ratio, aka WHR is a simple ratio of waist circumference divided by hips circumference. It's been <a href="https://en.wikipedia.org/wiki/Waist%E2%80%93hip_ratio#As_an_indicator_of_attractiveness" target="_blank">theorized</a> that it has critical bearing on attractiveness. Interestingly, the research done around this also used Playboy model's WHRs in their dataset.
+
+<div>
+  <div class="viz-title">The Magic Number</div>
+  <div class="viz-subtitle">A Waist-to-Hip Ratio of 0.7, which accounts for 26% of Playmates is said to be the "perfect" ratio for attractiveness. Highlighted are the "most attractive" WHRs from other cultures/places.</div>
+  <div id="viz-whr"></div>
+</div>
+
+<a href="https://www.uni-regensburg.de/Fakultaeten/phil_Fak_II/Psychologie/Psy_II/beautycheck/english/figur/figur.htm" target="_blank">Here is some fantastic reading</a> about "figure" and theories around attractiveness. A quote from it:
+
+> The more traditional the women's role, the more curvaceous was the ideal figure. The greater the economic growth and the women's role in the educational system and employment, the less curvaceous was the ideal body.
+
+Is the pressure on attractiveness in a modern society a result of some of the many forms of patriarchal oppression?
 
 ## Geography
 

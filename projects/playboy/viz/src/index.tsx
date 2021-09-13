@@ -44,6 +44,9 @@ render(<MostAverage />, '#viz-mostaverage')
 import MostAverageYears from './mostaverage/years'
 render(<MostAverageYears />, '#viz-mostaverage-years')
 
+import WHR from './whr/index'
+render(<WHR />, '#viz-whr')
+
 //@ts-ignore
 window.showFps = function () {
   var script = document.createElement('script')

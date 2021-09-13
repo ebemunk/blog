@@ -4,13 +4,10 @@ import { Axis, ResponsiveSvg, usePlotContext } from 'vizlib'
 import * as d3 from 'd3'
 
 import { euclidian } from '.'
-import { data } from '../data'
 
 const yearAvgs = d3
   .groups(euclidian, d => d.year)
   .map(([year, arr]) => [year, d3.mean(arr, d => d.distance)])
-
-console.log('ya', yearAvgs)
 
 const Viz = () => {
   const ctx = usePlotContext()
