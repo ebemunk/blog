@@ -16,7 +16,7 @@ The two primary sources for the data here is [mypmates.club](https://mypmates.cl
 
 ## Who Reads Playboy?
 
-Turns out, Playboy is not very transparent with their demographics (not sure if this is common among other magazines). But, I did find some information about who reads playboy on their own [media kit from 2004](https://web.archive.org/web/20041019143228/https://www.playboy.com/mediakit/print_demographics.html). More than a decade later, obviously these values are outdated, but I think it gives a bit of context into _who Playboy is meant for_.
+Turns out, Playboy is not very transparent with their demographics (not sure if this is common among other magazines). But, I did find some information about who reads playboy from their own [media kit from 2004](https://web.archive.org/web/20041019143228/https://www.playboy.com/mediakit/print_demographics.html). More than a decade later, obviously these values are outdated, but I think it gives a bit of context into _who Playboy is meant for_.
 
 <div>
   <div class="viz-title">Reading it for the articles</div>
@@ -58,7 +58,7 @@ This was a high-level look into the patterns and quirks of our Playmate populati
 
 ## The Hourglass
 
-"The Hourglass Figure" is the most well-known body shapes. All across the media (including Playboy) it's shown to be the most desirable body shape. Yet, there is evidence that this insistance in the media is responsible for the <a href="https://www.semanticscholar.org/paper/An-Evolutionary-Theory-of-Female-Physical-Singh/00dde6b664c882410fa5e4ed1d7e17f994636793" target="_blank">widespread body dissatisfaction and eating disorders in young women</a>, and that "losing body weight by dieting may not lead to positive body image as weight loss does not significantly alter the nature of fat distribution".
+"The Hourglass Figure" is the most well-known body shapes. All across the media (including Playboy) it's shown to be the most desirable body shape. Yet, there is evidence that this insistance in the media is responsible for the [widespread body dissatisfaction and eating disorders in young women](https://www.semanticscholar.org/paper/An-Evolutionary-Theory-of-Female-Physical-Singh/00dde6b664c882410fa5e4ed1d7e17f994636793), and that "losing body weight by dieting may not lead to positive body image as weight loss does not significantly alter the nature of fat distribution".
 
 <div>
   <div class="viz-title">Breaking the mold</div>
@@ -68,7 +68,7 @@ This was a high-level look into the patterns and quirks of our Playmate populati
 
 It is encouraging to see that 2020s have seen the breaking of this mold somewhat. Both waist and hip measurements have gotten larger, to accommodate the other common body shapes, like the pear and the rectangle. "Thicc" seems to be finally embraced in the modern world by Playboy.
 
-I plotted the controversial measurements for the Barbie doll to highlight <a href="https://www.chapman.edu/students/health-and-safety/psychological-counseling/_files/eating-disorder-files/13-barbie-facts.pdf" target="_blank">how ridiculous</a> the proportions are for the quintessential toy for young girls.
+I plotted the controversial measurements for the Barbie doll to highlight [how ridiculous](https://www.chapman.edu/students/health-and-safety/psychological-counseling/_files/eating-disorder-files/13-barbie-facts.pdf) the proportions are for the quintessential toy for young girls.
 
 ## Body-Mass Index
 
@@ -84,7 +84,7 @@ That said, it's useful to see trends in BMI among Playmates, especially since it
 
 ## Waist-to-Hips Ratio
 
-Waist-to-Hips Ratio, aka WHR is a simple ratio of waist circumference divided by hips circumference. It's been <a href="https://en.wikipedia.org/wiki/Waist%E2%80%93hip_ratio#As_an_indicator_of_attractiveness" target="_blank">theorized</a> that it has critical bearing on attractiveness. Interestingly, the research done around this also used Playboy model's WHRs in their dataset.
+Waist-to-Hips Ratio, aka WHR is a simple ratio of waist circumference divided by hips circumference. It's been [theorized](https://en.wikipedia.org/wiki/Waist%E2%80%93hip_ratio#As_an_indicator_of_attractiveness) that it has critical bearing on attractiveness. Interestingly, the research done around this also used Playboy model's WHRs in their dataset.
 
 <div>
   <div class="viz-title">The Magic Number</div>
@@ -92,7 +92,7 @@ Waist-to-Hips Ratio, aka WHR is a simple ratio of waist circumference divided by
   <div id="viz-whr"></div>
 </div>
 
-<a href="https://www.uni-regensburg.de/Fakultaeten/phil_Fak_II/Psychologie/Psy_II/beautycheck/english/figur/figur.htm" target="_blank">Here is some fantastic reading</a> about "figure" and theories around attractiveness. A quote from it:
+[Here is some fantastic reading](https://www.uni-regensburg.de/Fakultaeten/phil_Fak_II/Psychologie/Psy_II/beautycheck/english/figur/figur.htm) about "figure" and theories around attractiveness. A quote from it:
 
 > The more traditional the women's role, the more curvaceous was the ideal figure. The greater the economic growth and the women's role in the educational system and employment, the less curvaceous was the ideal body.
 
@@ -158,13 +158,15 @@ For the nerds among you, this is the _euclidian distance_ from the average. I al
 
 ## k-means What?
 
-I admit, this is the most gratuitous analysis here, but I wanted to see what an <a href="https://en.wikipedia.org/wiki/K-means_clustering" target="_blank">unsupervised learning algorithm</a> would say about our population of Playmates. This means absolutely nothing (seriously) and you should probably ignore it. Anyway...
+I admit, this is the most gratuitous analysis here, but I wanted to see what an [unsupervised learning algorithm](https://en.wikipedia.org/wiki/K-means_clustering) would say about our population of Playmates, specifically body shapes.
 
-I picked 4 clusters for no good reason, and let the computer loose on the dataset. The results were interesting! Below visualization was inspired by the <a href="https://www.igi-global.com/article/mvclustviz/103841" target="_blank">MVClustViz</a> visualization.
+This is probably a coincidence and not to be taken seriously (seriously!), but was cool to see.
+
+Below visualization was inspired by the [MVClustViz](https://www.igi-global.com/article/mvclustviz/103841) visualization.
 
 <div>
-  <div class="viz-title">k-means clusters</div>
-  <div class="viz-subtitle">4 clusters for body shape, height and age. Some coincidental correspondence between hourglass, pear and inverted triangle body shapes.</div>
+  <div class="viz-title">k-means for body shape?</div>
+  <div class="viz-subtitle">Finding 3 clusters for bust, waist and hips measurements. Cluster 1 is for triangle, or "pear" shape. Cluster 2 is square, and Cluster 3 is hourglass.</div>
   <div id="viz-kmeans"></div>
 </div>
 

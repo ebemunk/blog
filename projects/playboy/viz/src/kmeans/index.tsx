@@ -6,7 +6,7 @@ import * as d3 from 'd3'
 import { data } from '../data'
 import { Axis, ResponsiveSvg, usePlotContext } from 'vizlib'
 
-const NUM_CLUSTERS = 4
+const NUM_CLUSTERS = 3
 
 const normalizer = accessor =>
   d3
@@ -24,15 +24,17 @@ const normalizedData = data.map(d => [
   normalizer(d => d.bustCM)(d.bustCM),
   normalizer(d => d.waistCM)(d.waistCM),
   normalizer(d => d.hipsCM)(d.hipsCM),
-  normalizer(d => d.heightCM)(d.heightCM),
+  // normalizer(d => d.heightCM)(d.heightCM),
   // normalizer(d => d.weightKG)(d.weightKG),
-  normalizer(d => d.mateAge)(d.mateAge),
+  // normalizer(d => d.mateAge)(d.mateAge),
 ])
 
 const clusters = KMeans(normalizedData, NUM_CLUSTERS, {
   seed: 6,
   tolerance: 1e-10,
 })
+
+const totals = d3.group(clusters.clusters, d => d)
 
 const dadz = data.map((d, i) => ({
   ...d,
@@ -90,9 +92,9 @@ const Viz = () => {
               d => d.bustCM,
               d => d.waistCM,
               d => d.hipsCM,
-              d => d.heightCM,
+              // d => d.heightCM,
               // d => d.weightKG,
-              d => d.mateAge,
+              // d => d.mateAge,
             ].map((accessor, i) => (
               <rect
                 key={i}
@@ -144,9 +146,9 @@ const Clusters = () => {
             'Bust',
             'Waist',
             'Hips',
-            'Height',
+            // 'Height',
             // 'Weight',
-            'Age',
+            // 'Age',
           ].map((d, i) => (
             <div
               key={d}
