@@ -337,7 +337,7 @@ const Scatter = () => {
         <WP
           onEnter={() => setStage('cup')}
           active={stage === 'cup'}
-          style={{ marginBottom: '5rem' }}
+          style={{ marginBottom: '20rem' }}
         >
           <h3>Cup Size</h3>
           <ScrollyText id="cup" />

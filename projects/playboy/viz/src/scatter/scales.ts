@@ -81,14 +81,14 @@ const scales = ({
       const nodes = packed.leaves()
 
       const csD = {
-        hair: ['Blonde', 'Brunette', 'Black', 'Red', 'Auburn'],
-        ethnicity: ['Caucasian', 'Black', 'Latin', 'Asian', 'Mixed', 'Other'],
-        breasts: ['Natural', 'Enhanced', null],
+        hair: ['Blond', 'Brown', 'Black', 'Red'],
+        ethnicity: ['Caucasian', 'Black', 'Asian', 'Latin'],
+        breasts: ['Real/Natural', 'Fake/Enhanced'],
         cup: ['A', 'B', 'C', 'D', 'DD', 'E', 'F', 'H', 'I', null],
       }
       const csR = {
-        hair: schemeSpectral[5],
-        ethnicity: schemeSpectral[6],
+        hair: schemeSpectral[4],
+        ethnicity: schemeSpectral[4],
         breasts: schemeSpectral[3],
         cup: schemeSpectral[10],
       }
