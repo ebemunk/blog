@@ -10,13 +10,17 @@ shortSummary = "Analyzing the last statements of 454 executed people in Texas."
 responsive = true
 +++
 
-**Since the subject matter is Playboy and their Playmates of the Month, you should beware that most links will be NSFW. I've taken care to <u>not have any NSFW content on this post</u>.**
+We're looking at some steamy data this time! I wanted to do something offbeat, but not quite [Last Words in Texas](https://blog.ebemunk.com/last-words-in-texas/)-level soul crushing. So, I gathered some data on Playboy's Playmates of the Month.
+
+There's a rich history behind Playboy, the taboo element, sexiness and beauty. Let's see what the data has to offer!
+
+**Since the subject matter is Playboy and their Playmates of the Month, you should beware that most links might be NSFW. I've taken care to <u>not have any NSFW content on this post</u>.**
 
 The two primary sources for the data here is [mypmates.club](https://mypmates.club/) and [Babepedia](https://www.babepedia.com/). Babepedia has a bit more information, whereas mypmates seems to be a Playboy affiliate site. When there were disagreements about the data, I went with the values in mypmates.
 
 ## Who Reads Playboy?
 
-Turns out, Playboy is not very transparent with their demographics (not sure if this is common among other magazines). But, I did find some information about who reads playboy from their own [media kit from 2004](https://web.archive.org/web/20041019143228/https://www.playboy.com/mediakit/print_demographics.html). More than a decade later, obviously these values are outdated, but I think it gives a bit of context into _who Playboy is meant for_.
+Turns out, Playboy is not very transparent about their demographics. But, I did find some information about who reads playboy from their own [media kit from 2004](https://web.archive.org/web/20041019143228/https://www.playboy.com/mediakit/print_demographics.html). More than a decade later, these values are very outdated, but I think it gives a bit of context into _who Playboy is meant for_.
 
 <div>
   <div class="viz-title">Reading it for the articles</div>
@@ -29,7 +33,7 @@ Turns out, Playboy is not very transparent with their demographics (not sure if 
   <div id="viz-demographics-print"></div>
 </div>
 
-Playboy also has information for their [online demographics](https://web.archive.org/web/20041022052012/http://www.playboy.com/mediakit/online_demographics.html). The values here are inconsistent, and combined with it's age, it's best to take these with a huge grain of salt.
+Playboy also has information about their [online demographics](https://web.archive.org/web/20041022052012/http://www.playboy.com/mediakit/online_demographics.html). The values here are inconsistent, and combined with it's age, it's best to take these with a huge grain of salt.
 
 <div>
   <div class="viz-title">Browsing for the articles</div>
@@ -44,7 +48,9 @@ Playboy also has information for their [online demographics](https://web.archive
 
 ## Playmates
 
-**806** unique Playmates.
+Since the first issue on December of 1953, Playboy has picked the Playmate of the Month **812** times. Among them are **806** unique Playmates. Playmates are generally featured in what's known as the "centerfold" of a magazine, where the pages have no break between them.
+
+Every Playmate of the Month is awarded prizes ranging from cash ($25,000) to other discretionary gifts. 2020 was the last year that had 12 Playmates of the Month, and since 2021 the Playmates are picked quarterly.
 
 We'll be talking about body measurements, and in this article you can pick which units you prefer to see these numbers in. You can change this at any time, and the visuals will adjust to your preference.
 
