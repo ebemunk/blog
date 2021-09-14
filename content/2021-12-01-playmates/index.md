@@ -56,6 +56,199 @@ We'll be talking about body measurements, and in this article you can pick which
 
 <div id="viz-units"></div>
 
+<div data-scrolly="start">
+
+The pink circles represent all the Playmates by year and month. Mouseover or tap the circles at any point to get more information about the Playmate.
+
+Visit the mypmates link to view the centerfold image.
+
+</div>
+
+<div data-scrolly="marilyn">
+
+Did you know the first woman to be featured in the Playboy magazine was **Marilyn Monroe**? The first edition did not have a "Playmate of the Month" title, but Monroe was crowned the "Sweetheart of the Month".
+
+</div>
+
+<div data-scrolly="noissue">
+
+On March of 1955, the staff couldn't meet the deadlines to deliver the issue, so nothing was released. More information [on this old FAQ](https://web.archive.org/web/20060326233118/http://www.playboy.com/worldofplayboy/faq/collecting.html#4).
+
+</div>
+
+<div data-scrolly="multiMonth">
+
+For the first few years, some women were Playmates for multiple months. **Marilyn Waltz** also appeared under the name of Margaret Scott. Here are all the women who were Playmates for multiple months:
+
+Marilyn Waltz: 3<br />
+Janet Pilgrim: 3<br />
+Margie Harrison: 2<br />
+Marguerite Empey: 2<br />
+
+</div>
+
+<div data-scrolly="multiGirl">
+
+There were 7 issues that featured multiple Playmates. Except for the first time in October 1958, all of them were either twins or triplets.
+
+In total, there are 5 sets of twins and 1 set of triplets that became Playmates at the same time.
+
+</div>
+
+<div data-scrolly="firstAsian">
+
+**China Lee** was the first asian Playmate. Her name is pronounced _chee-na_, coming from the nickname given to her by her Spanish-speaking neighbors "Chinita" (which apparently means "little Chinese girl"...)
+
+</div>
+
+<div data-scrolly="firstBlack">
+
+**Jennifer Jackson** was the first black Playmate ever
+to be featured in the magazine.
+
+Mere months later, at the height of the Civil Rights Movement in the
+US, the [Voting Rights Act of 1965](https://en.wikipedia.org/wiki/Civil_rights_movement#Voting_Rights_Act_of_1965) was introduced.
+
+HuffPost has a [very interesting interview](https://www.huffpost.com/entry/exclusive-interview-playmate-jennifer-jackson_n_980502) with her about her experiences.
+
+After online backlash for **Ines Rau**, Playboy [tweeted some of the "feedback" they received](https://twitter.com/Playboy/status/921155223745306624) after featuring a black Playmate.
+
+</div>
+
+<div data-scrolly="firstTransgender">
+
+In November 2017, **Ines Rau** became the first openly transgender Playmate in the history of the magazine.
+
+This was however her second appearence, first time in May 2014 with the title "Evolution".
+
+After backlash, Playboy [tweeted their support](https://twitter.com/Playboy/status/921155850269536256) for this decision with the caption: "Standing on the right side of history".
+
+Read more about it on [CNN's article](https://edition.cnn.com/2017/10/20/entertainment/ines-rau-playboy/index.html).
+
+</div>
+
+<div data-scrolly="momDaughter">
+
+**Carol Eden** and **Simone Eden** are the first (and only) Playmates who are mother and daughter.
+
+Simone, following in her mother's footsteps in 1960, became a Playmate in 1989.
+
+</div>
+
+<div data-scrolly="trump">
+
+**Karen McDougal** made headlines when her alleged affair, and its subsequent "catch and kill" of her story was made public 4 days before the election in 2016. [Read more about that](https://www.newyorker.com/news/news-desk/donald-trump-a-playboy-model-and-a-system-for-concealing-infidelity-national-enquirer-karen-mcdougal) in The New Yorker.
+
+</div>
+
+<div data-scrolly="otherFirsts">
+
+I highlighted some of the other "firsts" in Playmates' history. Feel free to explore them!
+
+</div>
+
+<div data-scrolly="hugh">
+
+Hugh Hefner passed away on September 27, 2017. It's reported that he has been personally involved in picking Playmates of the Month, and the data below suggests that the characteristics of who gets picked have started changing radically after his death.
+
+Even though it's evident that Playboy has always been progressive, this also highlights some of the biases that he might've reinforced through his personal touch.
+
+Also relevant is this compilation of [every Playmate who's ever spoken out against him](https://www.usmagazine.com/celebrity-news/pictures/every-former-playmate-whos-spoken-out-against-hugh-hefner/).
+
+</div>
+
+<div data-scrolly="mateAge">
+
+There has been a dramatic increase of about 4 years in the ages of Playmates since the first issue.
+
+I've drawn here what I call the YIKES zone. 8 Playmates, up until 1981 were under the age of 18 when photographed and picked as Playmates. This would be a felony today. Wikipedia quotes "in the early years of the magazine, laws regarding corruption of a minor were less well established".
+
+There is the interesting story of **Elizabeth Ann Roberts**, who was photographed at the age of 16. Hugh Hefner and Roberts' mother were arrested, but case was dismissed after they found that Roberts' mother had signed a statement saying that her daughter was 18. Here's an interesting [Time newsclip from 1958](http://content.time.com/time/subscriber/article/0,33009,865757,00.html).
+
+</div>
+
+<div data-scrolly="height">
+
+Playmates have always been taller than the average woman, but they have gotten even taller throught time, about a 5% increase since 1954.
+
+The average height of women in the US was 162.6 cm or 5'4" [between 2015-2018](https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf).
+
+</div>
+
+<div data-scrolly="weight">
+
+Weight has similarly seen an increase of about 8%. What is striking is how the variance in weight explodes after Hefner's death.
+
+It's unclear if this data is self-reported, in which case the measurements might be underestimates. Some reported weights seem very low.
+
+**Ali Chanel** is an obvious outlier, and a welcome one for body positivity. Dubbed "Playboy's curviest Playmate", attention was immediately focused on her. She talks about her experience and reactions in [her interview with FOX](https://www.foxnews.com/entertainment/ali-chanel-playboy-playmate).
+
+</div>
+
+<div data-scrolly="bust">
+
+There has been a significant drop in bust sizes, 9.6% decrease overall.
+
+This is interesting, because most sources online claim that bust size, especially in the US has actually _gone up_, but without citing clear sources.
+
+Between September 2012 until Hefner's death, there was an upper cap on bust size. We start seeing huge variance once again, like the early days, after his death.
+
+</div>
+
+<div data-scrolly="waist">
+
+The highest change in body measurements are for waist, a whopping 11% increase with way more larger Playmates being featured especially after 2017.
+
+Even with that, the average waist measurement of women in the US was 92.1 cm or 36.3" [between 2015-2018](https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf). If we plot it on this graph, it would extend beyond the top axis. In other words, **no Playmate has ever been at the US average for waist measurement**.
+
+Having a smaller waist is the most important distinction between Playmates and the US average.
+
+</div>
+
+<div data-scrolly="hips">
+
+Yet another example of explosion of variance after Hefner's death, hip measurements have seen a minor 2% increase, yet most of that increase is carried by the post-2017 Playmates with much higher measurements than in the history of Playmates.
+
+**Buffy Tyler** is the strong outlier here, with the smallest waist measurement ever by far.
+
+</div>
+
+<div data-scrolly="hair">
+
+Without looking at the data, my bias would've been that Playmates would be majority blond. It's not the case, as there is almost the same amount of blond and brown hair.
+
+That said, many sources claim that blond hair is much rarer than brown or black hair, by an order of magnitude. If that's true, then blondes are definitely overrepresented among Playmates.
+
+</div>
+
+<div data-scrolly="ethnicity">
+
+Despite featuring a black Playmate early in their publication, and receiving backlash for it, Playboy undoubtedly prefers white women, with a 90% majority.
+
+Too bad I have no data on the ethnicity of Playboy's demographics, but I would bet money that this Playmate distribution closely mirrors reader ethnicities as well.
+
+Also despite their progressive image, only 2019 and 2020 had 40% non-white Playmates, the most it's ever been in it's 67-year history.
+
+</div>
+
+<div data-scrolly="breasts">
+
+This was another surprise for me. You can clearly see that enhanced
+breasts came into prominence starting around 1995 and peaked around
+2010s before fading away again.
+
+</div>
+
+<div data-scrolly="cup">
+
+US average is reported to be DD cup.
+
+I'm not quite sure how these data points were gathered to be honest,
+so approach with healthy skepticism. Majority C cup is not
+surprising for me.
+
+</div>
+
 <div id="viz-scatter"></div>
 
 This was a high-level look into the patterns and quirks of our Playmate population. Let's now dig into some specifics which I found to be relevant in many respects. Before we proceed, you can once again make a selection to see the results in your preferred units.

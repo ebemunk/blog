@@ -137,6 +137,11 @@ const getCutouts = (
         .filter(d => ['Carol Eden', 'Simone Eden'].includes(d.datum.name))
         .map(mapPlaymateToCutoutCircle)
 
+    case 'trump':
+      return data
+        .filter(d => ['Karen McDougal'].includes(d.datum.name))
+        .map(mapPlaymateToCutoutCircle)
+
     case 'otherFirsts':
       return data
         .filter(d =>
@@ -191,28 +196,48 @@ const getCutouts = (
 }
 
 const StartHighlights = ({ subStage }: { subStage: string }) => {
-  const plotCtx = usePlotContext()
+  // const plotCtx = usePlotContext()
 
   const { data, scales } = useStageData('start')
 
   const cutouts = getCutouts(subStage, data, scales)
 
-  const pathRef = useRef(null)
+  // const pathRef = useRef(null)
   const circlesRef = useRef(null)
 
   useLayoutEffect(() => {
-    if (!pathRef.current || !circlesRef.current) return
+    if (!circlesRef.current) return
+    // if (!pathRef.current || !circlesRef.current) return
 
-    d3.select(pathRef.current).transition().duration(750).attr('opacity', 1)
+    // d3.select(pathRef.current).transition().duration(750).attr('opacity', 1)
 
-    d3.select(circlesRef.current).transition().duration(750).attr('opacity', 1)
+    d3.select(circlesRef.current)
+      .selectAll('circle')
+      .data(cutouts, d => d.key)
+      .join(
+        enter =>
+          enter
+            .append('circle')
+            .attr('cx', d => d.cx)
+            .attr('cy', d => d.cy)
+            .attr('r', 0)
+            .attr('fill', 'none')
+            .attr('stroke', 'red')
+            .attr('stroke-width', 3)
+            .call(enter => enter.transition().duration(750).attr('r', 10)),
+        update => update,
+        exit => exit.call(exit => exit.transition().duration(750).attr('r', 0)),
+      )
+      .transition()
+      .duration(750)
+      .attr('r', 10)
   }, [subStage])
 
   if (['start', 'hugh'].includes(subStage)) return null
 
   return (
     <>
-      <path
+      {/* <path
         ref={pathRef}
         d={`
           M 0,0 h${plotCtx.chartWidth} v${plotCtx.chartHeight} h-${
@@ -224,18 +249,19 @@ const StartHighlights = ({ subStage }: { subStage: string }) => {
         fill="black"
         fillOpacity={0.4}
         opacity={0}
-      />
-      <g ref={circlesRef} opacity={0} pointerEvents="none">
-        {cutouts.map(d => (
+      /> */}
+      <g ref={circlesRef} pointerEvents="none">
+        {/* {cutouts.map(d => (
           <circle
             key={`${d.key}-${d.key}`}
             cx={d.cx}
             cy={d.cy}
-            r={d.r}
+            r={0}
             fill="none"
-            stroke="white"
+            stroke="red"
+            strokeWidth={3}
           />
-        ))}
+        ))} */}
       </g>
     </>
   )
