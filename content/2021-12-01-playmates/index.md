@@ -3,7 +3,7 @@ publishDate = "2021-08-31"
 title = "Beholder: Beauty in the eyes of Playboy"
 slug = "beholder-beauty-in-the-eyes-of-playboy"
 tags = ["data visualization", "playboy", "long form"]
-image = "img/plane-crashes.png"
+image = "img/playboy.png"
 hidden = false
 related = ["2021-02-18-lastwords", "2019-01-05-plane-crashes.md"]
 shortSummary = "Analyzing the last statements of 454 executed people in Texas."
@@ -378,5 +378,7 @@ I hope the trend in embracing more diverse body types and characteristics contin
 
 <div id="mobile-warning"></div>
 
+<script src="build/bundle.js"></script>
+<!--
 <script src="http://localhost:9001/bundle.js"></script>
-<!-- <script src="/build/bundle.js"></script> -->
+-->
