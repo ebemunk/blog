@@ -137,7 +137,7 @@ Simone, following in her mother's footsteps in 1960, became a Playmate in 1989.
 
 <div data-scrolly="trump">
 
-**Karen McDougal** made headlines when her alleged affair, and its subsequent "catch and kill" of her story was made public 4 days before the election in 2016. [Read more about that](https://www.newyorker.com/news/news-desk/donald-trump-a-playboy-model-and-a-system-for-concealing-infidelity-national-enquirer-karen-mcdougal) in The New Yorker.
+**Karen McDougal** made headlines when her alleged affair with Trump, and its subsequent "catch and kill" of it's story was made public 4 days before the election in 2016. [Read more about that](https://www.newyorker.com/news/news-desk/donald-trump-a-playboy-model-and-a-system-for-concealing-infidelity-national-enquirer-karen-mcdougal) in The New Yorker.
 
 </div>
 
@@ -256,7 +256,7 @@ This was a high-level look into the patterns and quirks of our Playmate populati
 
 ## The Hourglass
 
-"The Hourglass Figure" is one the most well-known body shapes. All across media, including Playboy it's shown to be the most desirable. Yet, there is evidence that this insistance is responsible for the [widespread body dissatisfaction and eating disorders in young women](https://www.semanticscholar.org/paper/An-Evolutionary-Theory-of-Female-Physical-Singh/00dde6b664c882410fa5e4ed1d7e17f994636793), and that "losing body weight by dieting may not lead to positive body image as weight loss does not significantly alter the nature of fat distribution".
+"The Hourglass Figure" is one the most well-known body shapes. All across media, including in Playboy, it's shown to be the most desirable. Yet, there is evidence that this insistance is responsible for the [widespread body dissatisfaction and eating disorders in young women](https://www.semanticscholar.org/paper/An-Evolutionary-Theory-of-Female-Physical-Singh/00dde6b664c882410fa5e4ed1d7e17f994636793), and that _"losing body weight by dieting may not lead to positive body image as weight loss does not significantly alter the nature of fat distribution"_.
 
 <div>
   <div class="viz-title">Breaking the mold</div>
@@ -270,13 +270,13 @@ I plotted the controversial measurements for the Barbie doll to highlight [how r
 
 ## Body-Mass Index
 
-Body-Mass Index, aka BMI relates your weight to your height. As noted in [CDC page](https://www.cdc.gov/obesity/adult/defining.html), it is a screening tool for weight-related risks. For some healthy people, and especially athletes, BMI is known to be inaccurate. Note that, it is a _screening tool_ and not a diagnosis of body fat or health.
+Body-Mass Index, aka BMI relates your weight to your height. As noted in [CDC page](https://www.cdc.gov/obesity/adult/defining.html), it is a screening tool for weight-related risks. For some healthy people, and especially athletes, BMI is known to be inaccurate. Note that it is a _screening tool_ and not a diagnosis of body fat or health.
 
-That said, it's useful to see trends in BMI among Playmates, especially since it can be relatively accurate for populations. [CDC NCHS](https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf) has results from 2015-2018 among a sample population, so we can compare the average 20-29 year old woman to the average Playmate.
+[CDC NCHS](https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf) has results from 2015-2018 among a sample population, so we can compare the average 20-29 year old woman to the average Playmate.
 
 <div>
   <div class="viz-title">Straddling the line</div>
-  <div class="viz-subtitle">More than half of Playmates are Underweight, 48% are in the Healthy range. There are only 2 other playmates (<1%) in any other category. The difference of the averages between US women and Playmates is staggering.</div>
+  <div class="viz-subtitle">More than half of Playmates are Underweight, 48% are in the Healthy range. There are only 2 other Playmates (<1%) in any other category. The difference of the averages between US women and Playmates is staggering.</div>
   <div id="viz-bmi"></div>
 </div>
 
@@ -302,11 +302,11 @@ Let's now take a little break from numbers, and look at some geography. Where ar
 
 <div>
   <div class="viz-title">Birthplace of Playmates</div>
-  <div class="viz-subtitle">Only 18% of Playmates were born outside of the US. Focus on the regions of the world where no Playmate was born in. What does this say about Playboy?</div>
+  <div class="viz-subtitle">Only 18% of Playmates were born outside of the US. Focus on the regions of the world where no Playmate was born in.</div>
   <div id="viz-birthplace"></div>
 </div>
 
-Important thing to highlight here isn't "how many playmates came from which countries?", but "what regions of the world have never had Playmates?". Africa is almost completely ignored besides **Ida Ljungqvist** from Tanzania. Middle eastern countries have never had one, and most of Asia remains barren. **United Kingdom** and **Germany** lead among the European countries, and **Brazil** is the favorite in South America.
+Important thing to highlight here isn't "how many Playmates came from which countries?", but "what regions of the world have never had Playmates?". Africa is almost completely ignored besides **Ida Ljungqvist** from Tanzania. Middle eastern countries have never had one, and most of Asia remains barren. **United Kingdom** and **Germany** lead among the European countries, and **Brazil** is the favorite in South America.
 
 Below is a different view of the same data for those curious about the individual Playmates.
 
@@ -324,7 +324,7 @@ We can't ignore ~82% of the data though, so let's see the State's breakdown of b
   <div id="viz-birthplace-usa"></div>
 </div>
 
-Not surprising, as Playboy is headquartered in Beverly Hills, California and has largely carried some of the west coast sensibilities when it comes to beauty. I know that some my friends from the US have rivalries among their home states, so here's a tidbit: **Vermont** and **Delaware** are the only 2 states that have never had Playmates. Also, **Hawaii** has had more playmates than **Wyoming**, **South Dakota**, **Iowa**, **West Virginia** and **New Hampshire** combined.
+Not surprising, as Playboy is headquartered in Beverly Hills, California and has largely carried some of the west coast sensibilities when it comes to beauty. I know that some my friends from the US have rivalries among their home states, so here's a tidbit: **Vermont** and **Delaware** are the only 2 states that have never had Playmates. Also, **Hawaii** has had more Playmates than **Wyoming**, **South Dakota**, **Iowa**, **West Virginia** and **New Hampshire** combined.
 
 Below a similar chart as the previous one, for the detail-oriented.
 
@@ -336,7 +336,7 @@ Below a similar chart as the previous one, for the detail-oriented.
 
 ## The "Most Average" Playmates
 
-We focused on how the "Average US Woman 20-29" differs from the Playmates, but what about within the group? Who's the "averagest" Playmate, and who's the least average? To calculate, I first calculated the average values across all Playmates for their weight, height, body measurements, hair color and ethnicity. Then, I ordered them by their _distance_ from this average.
+We focused on how the "Average US Woman 20-29" differs from the Playmates, but what about within the group? Who's the "averagest" Playmate, and who's the least average? To find out, I first calculated the average values across all Playmates for their weight, height, body measurements, hair color and ethnicity. Then, I ordered them by their _distance_ from this average.
 
 <div>
   <div class="viz-title">Most/Least Average Playmates</div>
