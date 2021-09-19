@@ -8,6 +8,23 @@ import { ResponsiveSvg } from 'vizlib'
 import StartHighlights from './StartHighlights'
 import { formatFeetIn, loessKey, STAGES, STAGE_UNITS } from './util'
 import Viz from './Viz'
+import { useWindowSize } from '../util'
+
+const useWPStyles = createUseStyles({
+  wp: {
+    padding: '0.5rem',
+    background: 'rgba(0,0,0,0.85)',
+    pointerEvents: 'all',
+    marginTop: '10rem',
+    marginBottom: '10rem',
+  },
+  '@media (max-width: 1023px)': {
+    wp: {
+      marginTop: '80vh',
+      marginBottom: '80vh',
+    },
+  },
+})
 
 const WP = ({
   children,
@@ -18,22 +35,28 @@ const WP = ({
   children: React.ReactNode
   style?: React.CSSProperties
   active?: boolean
-} & React.ComponentProps<typeof Waypoint>) => (
-  <Waypoint topOffset="33%" bottomOffset="60%" {...rest}>
-    <div
-      style={{
-        padding: '0.5rem',
-        background: 'rgba(255,255,255,0.2)',
-        marginTop: '10rem',
-        marginBottom: '10rem',
-        opacity: active ? 1 : 0.3,
-        ...style,
-      }}
+} & React.ComponentProps<typeof Waypoint>) => {
+  const classes = useWPStyles()
+  const ws = useWindowSize()
+
+  return (
+    <Waypoint
+      topOffset={ws.width > 1023 ? '33%' : '10%'}
+      bottomOffset={ws.width > 1023 ? '60%' : '10%'}
+      {...rest}
     >
-      {children}
-    </div>
-  </Waypoint>
-)
+      <div
+        style={{
+          opacity: active ? 1 : 0.3,
+          ...style,
+        }}
+        className={classes.wp}
+      >
+        {children}
+      </div>
+    </Waypoint>
+  )
+}
 
 const useStyles = createUseStyles({
   wrap: {
@@ -61,8 +84,10 @@ const useStyles = createUseStyles({
     maxWidth: '100%',
   },
   story: {
+    zIndex: 0, // wtf? but needed
     flexBasis: '30%',
     maxWidth: '30%',
+    pointerEvents: 'none',
   },
   '@media (max-width: 1023px)': {
     wrap: {
@@ -75,6 +100,7 @@ const useStyles = createUseStyles({
     },
     story: {
       flexBasis: '100%',
+      maxWidth: '100%',
     },
   },
 })
@@ -114,6 +140,8 @@ const AvgChange = ({ stage }: { stage: typeof STAGES[number] }) => {
   return (
     <div
       style={{
+        maxWidth: '40rem',
+        margin: '0 auto',
         marginBottom: '1rem',
       }}
     >
@@ -337,7 +365,7 @@ const Scatter = () => {
         <WP
           onEnter={() => setStage('cup')}
           active={stage === 'cup'}
-          style={{ marginBottom: '20rem' }}
+          style={{ marginBottom: '15rem' }}
         >
           <h3>Cup Size</h3>
           <ScrollyText id="cup" />

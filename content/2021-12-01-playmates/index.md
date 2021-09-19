@@ -244,8 +244,7 @@ breasts came into prominence starting around 1995 and peaked around
 US average is reported to be DD cup.
 
 I'm not quite sure how these data points were gathered to be honest,
-so approach with healthy skepticism. Majority C cup is not
-surprising for me.
+so approach with healthy skepticism.
 
 </div>
 
@@ -257,17 +256,17 @@ This was a high-level look into the patterns and quirks of our Playmate populati
 
 ## The Hourglass
 
-"The Hourglass Figure" is the most well-known body shapes. All across the media (including Playboy) it's shown to be the most desirable body shape. Yet, there is evidence that this insistance in the media is responsible for the [widespread body dissatisfaction and eating disorders in young women](https://www.semanticscholar.org/paper/An-Evolutionary-Theory-of-Female-Physical-Singh/00dde6b664c882410fa5e4ed1d7e17f994636793), and that "losing body weight by dieting may not lead to positive body image as weight loss does not significantly alter the nature of fat distribution".
+"The Hourglass Figure" is one the most well-known body shapes. All across media, including Playboy it's shown to be the most desirable. Yet, there is evidence that this insistance is responsible for the [widespread body dissatisfaction and eating disorders in young women](https://www.semanticscholar.org/paper/An-Evolutionary-Theory-of-Female-Physical-Singh/00dde6b664c882410fa5e4ed1d7e17f994636793), and that "losing body weight by dieting may not lead to positive body image as weight loss does not significantly alter the nature of fat distribution".
 
 <div>
   <div class="viz-title">Breaking the mold</div>
-  <div class="viz-subtitle">2020 is the first and only year the hourglass-figure mold was broken. Bust measurements decline through the decades, waist and hips increase. Thicc is finally embraced in 2020. The "Ideal" <span data-cms="90">90</span>-<span data-cms="60">60</span>-<span data-cms="90">90</span> shown in red. <a href="https://www.huffpost.com/entry/the-scary-reality-of-a-re_b_845239" target="_blank">Projected dimensions</a> of the Barbie doll in yellow.</div>
+  <div class="viz-subtitle">2020 is the first and only year the hourglass-figure mold was broken. Bust measurements decline through the decades, waist and hips increase. Thicc is finally embraced in 2020. The "Ideal" <span data-cms="90">90</span>-<span data-cms="60">60</span>-<span data-cms="90">90</span> shown in red. <a href="https://www.huffpost.com/entry/the-scary-reality-of-a-re_b_845239" target="_blank">Projected dimensions</a> of the Barbie doll in yellow. Click on the decades to isolate.</div>
   <div id="viz-bwh"></div>
 </div>
 
-It is encouraging to see that 2020s have seen the breaking of this mold somewhat. Both waist and hip measurements have gotten larger, to accommodate the other common body shapes, like the pear and the rectangle. "Thicc" seems to be finally embraced in the modern world by Playboy.
+It is encouraging to see that 2020s have broken this mold. Both waist and hip measurements have gotten larger, to accommodate the other common body shapes, like the pear and the rectangle. Playboy is finally warming up to thiccness.
 
-I plotted the controversial measurements for the Barbie doll to highlight [how ridiculous](https://www.chapman.edu/students/health-and-safety/psychological-counseling/_files/eating-disorder-files/13-barbie-facts.pdf) the proportions are for the quintessential toy for young girls.
+I plotted the controversial measurements for the Barbie doll to highlight [how ridiculous](https://www.chapman.edu/students/health-and-safety/psychological-counseling/_files/eating-disorder-files/13-barbie-facts.pdf) the proportions [used to be](https://time.com/barbie-new-body-cover-story/).
 
 ## Body-Mass Index
 
@@ -337,7 +336,7 @@ Below a similar chart as the previous one, for the detail-oriented.
 
 ## The "Most Average" Playmates
 
-We focused on how the "Average US Woman 20-29" differs from the Playmates, but what about within the group? Who's the "averagest" Playmate, and who's the least average? To calculate, I first calculated the average values across all Playmates for their weight, height, body measurements, hair color and ethnicities. Then, I ordered them by their _distance_ from this average.
+We focused on how the "Average US Woman 20-29" differs from the Playmates, but what about within the group? Who's the "averagest" Playmate, and who's the least average? To calculate, I first calculated the average values across all Playmates for their weight, height, body measurements, hair color and ethnicity. Then, I ordered them by their _distance_ from this average.
 
 <div>
   <div class="viz-title">Most/Least Average Playmates</div>

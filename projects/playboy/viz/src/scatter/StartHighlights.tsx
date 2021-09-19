@@ -5,6 +5,7 @@ import { usePlotContext } from 'vizlib'
 import { PlaymateCircle } from '../types'
 
 import useStageData from './useStageData'
+import { useWindowSize } from '../util'
 
 const circle = (cx, cy, r) =>
   `M ${cx},${cy - r} A ${r},${r} 0 0,0 ${cx},${
@@ -202,14 +203,15 @@ const StartHighlights = ({ subStage }: { subStage: string }) => {
 
   const cutouts = getCutouts(subStage, data, scales)
 
+  console.log('cutouts', cutouts)
+
   // const pathRef = useRef(null)
   const circlesRef = useRef(null)
 
+  const ws = useWindowSize()
+
   useLayoutEffect(() => {
     if (!circlesRef.current) return
-    // if (!pathRef.current || !circlesRef.current) return
-
-    // d3.select(pathRef.current).transition().duration(750).attr('opacity', 1)
 
     d3.select(circlesRef.current)
       .selectAll('circle')
@@ -225,13 +227,16 @@ const StartHighlights = ({ subStage }: { subStage: string }) => {
             .attr('stroke', 'red')
             .attr('stroke-width', 3)
             .call(enter => enter.transition().duration(750).attr('r', 10)),
-        update => update,
-        exit => exit.call(exit => exit.transition().duration(750).attr('r', 0)),
+        update => update.attr('cx', d => d.cx).attr('cy', d => d.cy),
+        exit =>
+          exit.call(exit =>
+            exit.transition().duration(750).attr('r', 0).remove(),
+          ),
       )
       .transition()
       .duration(750)
       .attr('r', 10)
-  }, [subStage])
+  }, [subStage, scales])
 
   if (['start', 'hugh'].includes(subStage)) return null
 

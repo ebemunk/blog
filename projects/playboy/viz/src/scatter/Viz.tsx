@@ -33,7 +33,13 @@ const useOpacityTransition = (
   return ref
 }
 
-const Viz = ({ stage, subStage }: { stage: typeof STAGES[number] }) => {
+const Viz = ({
+  stage,
+  subStage,
+}: {
+  stage: typeof STAGES[number]
+  subStage: string
+}) => {
   const { chartHeight, chartWidth } = usePlotContext()
 
   const { scales, data, accessors } = useStageData(stage)

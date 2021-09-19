@@ -5,6 +5,7 @@ import * as d3 from 'd3'
 
 import PlaymateTooltip from '../scatter/PlaymateTooltip'
 import { Playmate } from '../types'
+import { PLAYMATE_PINK } from '../util'
 
 const Circle = ({ d }) => {
   const [pinned, setPinned] = useState(false)
@@ -64,7 +65,7 @@ const Circle = ({ d }) => {
           height: '8px',
           width: '8px',
           borderRadius: '100%',
-          background: showing?.data.name === d.name ? 'white' : 'pink',
+          background: showing?.data.name === d.name ? 'white' : PLAYMATE_PINK,
           margin: 1,
         }}
         data-playmate={d.name}
