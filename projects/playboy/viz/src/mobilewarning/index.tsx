@@ -43,7 +43,13 @@ const MobileWarning = () => {
         .
       </p>
       <p>
-        <a href="" onClick={() => setDismissed(true)}>
+        <a
+          href=""
+          onClick={e => {
+            e.preventDefault()
+            setDismissed(true)
+          }}
+        >
           Yeah whatever (dismiss).
         </a>
       </p>

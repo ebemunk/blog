@@ -114,6 +114,7 @@ const useStyles = createUseStyles({
     flexWrap: 'wrap',
     margin: 'auto',
     marginBottom: '1rem',
+    justifyContent: 'center',
 
     '& svg': {
       margin: '0.5rem',

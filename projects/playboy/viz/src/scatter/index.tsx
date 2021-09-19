@@ -15,8 +15,8 @@ const useWPStyles = createUseStyles({
     padding: '0.5rem',
     background: 'rgba(0,0,0,0.85)',
     pointerEvents: 'all',
-    marginTop: '10rem',
-    marginBottom: '10rem',
+    marginTop: '15rem',
+    marginBottom: '15rem',
   },
   '@media (max-width: 1023px)': {
     wp: {
@@ -183,6 +183,7 @@ const Scatter = () => {
     React.useState<typeof SUB_STAGES[number]>('start')
 
   const classes = useStyles()
+  const ws = useWindowSize()
 
   return (
     <div className={classes.wrap}>
@@ -200,6 +201,9 @@ const Scatter = () => {
             setSubStage('start')
           }}
           active={stage === 'start' && subStage === 'start'}
+          style={{
+            marginTop: ws.width <= 768 ? '0' : '15rem',
+          }}
         >
           <ScrollyText id="start" />
         </WP>
