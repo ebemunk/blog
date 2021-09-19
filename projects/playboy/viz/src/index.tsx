@@ -47,6 +47,9 @@ render(<MostAverageYears />, '#viz-mostaverage-years')
 import WHR from './whr/index'
 render(<WHR />, '#viz-whr')
 
+import MobileWarning from './mobilewarning/index'
+render(<MobileWarning />, '#mobile-warning')
+
 //@ts-ignore
 window.showFps = function () {
   var script = document.createElement('script')

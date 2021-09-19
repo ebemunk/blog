@@ -5,7 +5,7 @@ slug = "beholder-beauty-in-the-eyes-of-playboy"
 tags = ["data visualization", "playboy", "long form"]
 image = "img/plane-crashes.png"
 hidden = false
-related = ["2019-01-05-plane-crashes.md", "2016-02-27-chess-2mil.md"]
+related = ["2021-02-18-lastwords", "2019-01-05-plane-crashes.md"]
 shortSummary = "Analyzing the last statements of 454 executed people in Texas."
 responsive = true
 +++
@@ -376,7 +376,7 @@ Thanks for going down another rabbit hole with me! I hope this was informative a
 
 I hope the trend in embracing more diverse body types and characteristics continues into the future, a future where women don't feel the obscene pressure to conform to unreasonable standards set forth by random people, one where we are all beautiful.
 
-<div id="viz-trends"></div>
+<div id="mobile-warning"></div>
 
 <script src="http://localhost:9001/bundle.js"></script>
 <!-- <script src="/build/bundle.js"></script> -->

@@ -203,8 +203,6 @@ const StartHighlights = ({ subStage }: { subStage: string }) => {
 
   const cutouts = getCutouts(subStage, data, scales)
 
-  console.log('cutouts', cutouts)
-
   // const pathRef = useRef(null)
   const circlesRef = useRef(null)
 

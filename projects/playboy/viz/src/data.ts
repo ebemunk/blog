@@ -17,7 +17,7 @@ const _get = (key: Function): [Date, number][] =>
 
 export const get = memoize(_get)
 
-console.log('data', data)
+// console.log('data', data)
 
 // @ts-ignore
 window.data = data
