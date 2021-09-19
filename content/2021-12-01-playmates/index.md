@@ -354,7 +354,7 @@ Not surprising that **Ali Chanel** is the least average Playmate, as she was an 
 
 For the nerds among you, this is the _euclidian distance_ from the average. I also computed the _cosine similarity_ out of curiosity. Ask me about it on Twitter.
 
-## k-means What?
+## k-means Body Shapes
 
 I admit, this is the most gratuitous analysis here, but I wanted to see what an [unsupervised learning algorithm](https://en.wikipedia.org/wiki/K-means_clustering) would say about our population of Playmates, specifically body shapes.
 
@@ -368,9 +368,13 @@ Below visualization was inspired by the [MVClustViz](https://www.igi-global.com/
   <div id="viz-kmeans"></div>
 </div>
 
-## Outro
+It's interesting that k-means can find these 3 clusters which correspond pretty well with some common body shapes.
 
-Thanks for reading
+## Fin
+
+Thanks for going down another rabbit hole with me! I hope this was informative and entertaining. It's not a secret that women who appear in Playboy are far removed from the average person, even though they tout the "girl next door" vibe.
+
+I hope the trend in embracing more diverse body types and characteristics continues into the future, a future where women don't feel the obscene pressure to conform to unreasonable standards set forth by random people, one where we are all beautiful.
 
 <div id="viz-trends"></div>
 
