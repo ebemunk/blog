@@ -4,7 +4,7 @@
 	<section id="thumbs">
 		{{ range $key, $val := where .Paginator.Pages "Params.hidden" "ne" true }}
 			<a href="{{ .Permalink }}">
-				<img src="/{{ .Params.image }}" />
+				<img class="img" src="/{{ .Params.image }}" />
 				<div class="hover">
 					<span>{{ .Title }}</span>
 					<p>{{ .Params.shortSummary | markdownify }}</p>

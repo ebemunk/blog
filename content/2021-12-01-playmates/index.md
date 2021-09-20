@@ -6,7 +6,7 @@ tags = ["data visualization", "playboy", "long form"]
 image = "img/playboy.png"
 hidden = false
 related = ["2021-02-18-lastwords", "2019-01-05-plane-crashes.md"]
-shortSummary = "Analyzing the last statements of 454 executed people in Texas."
+shortSummary = "Finding out Playboy's idea of beauty from analyzing 806 Playmates."
 responsive = true
 +++
 

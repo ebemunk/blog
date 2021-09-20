@@ -290,10 +290,15 @@ article.article .footnotes hr {
   height: calc(33% / 1.5);
   position: relative;
   color: white;
+  overflow: hidden;
 }
-.home section#thumbs a img {
+.home section#thumbs a .img {
   width: 100%;
   height: auto;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
 }
 .home section#thumbs a .hover {
   background: rgba(0, 0, 0, 0.5);
@@ -331,6 +336,10 @@ article.article .footnotes hr {
 }
 .home section#thumbs a:hover {
   color: white;
+}
+.home section#thumbs a:hover .img {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 .home section#thumbs a:hover .hover {
   opacity: 1;
