@@ -87,7 +87,7 @@ const scales = ({
         cup: ['A', 'B', 'C', 'D', 'DD', 'E', 'F', 'H', 'I', null],
       }
       const csR = {
-        hair: schemeSpectral[4],
+        hair: ['#fee08b', 'rgb(140 81 23)', '#555', 'rgb(215, 25, 28)'],
         ethnicity: schemeSpectral[4],
         breasts: schemeSpectral[3],
         cup: schemeSpectral[10],
