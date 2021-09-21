@@ -147,7 +147,8 @@ const GroupingCircles = ({
               d =>
                 `${
                   d.data[0]
-                    ?.replace('Latin', 'Latino')
+                    ?.replace('Caucasian', 'White')
+                    ?.replace('Latin', 'Latina')
                     ?.replace('Real/Natural', 'Natural')
                     ?.replace('Fake/Enhanced', 'Enhanced') ?? '??'
                 } ${format('.0%')(d.children.length / total)}`,
@@ -173,7 +174,8 @@ const GroupingCircles = ({
               d =>
                 `${
                   d.data[0]
-                    ?.replace('Latin', 'Latino')
+                    ?.replace('Caucasian', 'White')
+                    ?.replace('Latin', 'Latina')
                     ?.replace('Real/Natural', 'Natural')
                     ?.replace('Fake/Enhanced', 'Enhanced') ?? '??'
                 } ${format('.0%')(d.children.length / total)}`,
