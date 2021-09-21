@@ -33,6 +33,16 @@ const PlaymateTooltip = ({
   const units = Store.useState(s => s.units)
   const isMetric = units === 'metric'
 
+  const hide = [
+    'Diane Hunter',
+    'Elizabeth Ann Roberts',
+    'Nancy Crawford',
+    'Teddi Smith',
+    'Donna Michelle',
+    'Patti Reynolds',
+    'Gina Goldberg',
+  ].includes(data.name)
+
   return (
     <div
       style={{
@@ -50,7 +60,7 @@ const PlaymateTooltip = ({
           fontWeight: 600,
         }}
       >
-        {data.name}
+        {hide ? 'N/A' : data.name}
       </div>
       <div
         style={{
@@ -117,32 +127,34 @@ const PlaymateTooltip = ({
                 .filter(Boolean)
                 .join(', ')}
             />
-            <div style={{ marginTop: '0.5rem' }}>
-              <a
-                href={`https://google.com/search?tbm=isch&q=${data.name}+playmate`}
-                target="_blank"
-              >
-                google images
-              </a>
-              {data.mypmatesUrl && (
-                <>
-                  {' '}
-                  |{' '}
-                  <a href={data.mypmatesUrl} target="_blank">
-                    mypmates
-                  </a>
-                </>
-              )}
-              {data.babepediaUrl && (
-                <>
-                  {' '}
-                  |{' '}
-                  <a href={data.babepediaUrl} target="_blank">
-                    babepedia
-                  </a>
-                </>
-              )}
-            </div>
+            {!hide && (
+              <div style={{ marginTop: '0.5rem' }}>
+                <a
+                  href={`https://google.com/search?tbm=isch&q=${data.name}+playmate`}
+                  target="_blank"
+                >
+                  google images
+                </a>
+                {data.mypmatesUrl && (
+                  <>
+                    {' '}
+                    |{' '}
+                    <a href={data.mypmatesUrl} target="_blank">
+                      mypmates
+                    </a>
+                  </>
+                )}
+                {data.babepediaUrl && (
+                  <>
+                    {' '}
+                    |{' '}
+                    <a href={data.babepediaUrl} target="_blank">
+                      babepedia
+                    </a>
+                  </>
+                )}
+              </div>
+            )}
           </div>
         </>
       )}

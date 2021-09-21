@@ -163,7 +163,9 @@ There has been a dramatic increase of about 4 years in the ages of Playmates sin
 
 Note the highlighted area in red. 8 Playmates, up until 1981 were under the age of 18 when photographed and picked as Playmates. This would be a felony today. Wikipedia quotes "in the early years of the magazine, laws regarding corruption of a minor were less well established".
 
-There is the interesting story of one Playmate, who was photographed at the age of 16. Hugh Hefner and Roberts' mother were arrested, but case was dismissed after they found that her mother had signed a statement saying that her daughter was 18.
+There is the interesting story of one Playmate, who was photographed at the age of 16. Hugh Hefner and the Playmate's mother were arrested, but case was dismissed after they found that her mother had signed a statement saying that her daughter was 18.
+
+I've chosen to not put names or links for these Playmates in this article.
 
 </div>
 
@@ -380,7 +382,7 @@ I hope the trend in embracing more diverse body types and characteristics contin
 
 <div id="mobile-warning"></div>
 
-<script src="build/bundle.js"></script>
 <!--
-<script src="http://localhost:9001/bundle.js"></script>
+<script src="build/bundle.js"></script>
 -->
+<script src="http://localhost:9001/bundle.js"></script>
