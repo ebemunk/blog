@@ -106,7 +106,7 @@ const Country = ({ path, feature }) => {
               </div>
               <div>
                 {hovered.data.data.length} playmate
-                {hovered.data.data.length > 1 ? 's' : ''}
+                {hovered.data.data.length !== 1 ? 's' : ''}
               </div>
             </div>
           </div>,

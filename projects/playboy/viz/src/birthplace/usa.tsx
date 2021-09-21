@@ -92,7 +92,7 @@ const State = ({ feature, path }) => {
               </div>
               <div>
                 {hovered.data.value} playmate
-                {hovered.data.value > 1 ? 's' : ''}
+                {hovered.data.value !== 1 ? 's' : ''}
               </div>
             </div>
           </div>,
