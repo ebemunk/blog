@@ -91,6 +91,10 @@ where name = 'Phyllis Coleman';
 update playmates
 set mypmates = mypmates::jsonb || '{"born":"October 9, 1942"}'::jsonb
 where name = 'Gay Collier';
+
+update playmates
+set mypmates = mypmates::jsonb || '{"hips":86,"waist":61}'::jsonb
+where name = 'Buffy Tyler';
 -- RUN AFTER STEP 3 END
 
 -- RUN AT THE END

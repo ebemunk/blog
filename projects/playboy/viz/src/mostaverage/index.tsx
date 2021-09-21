@@ -242,7 +242,7 @@ const Circle = ({ d, number }: { d: Playmate; number: number }) => {
         }}
       >
         <img
-          src={Images?.[d.name] ?? `https://picsum.photos/50"`}
+          src={Images?.[d.name] ?? `https://picsum.photos/50`}
           style={{
             borderRadius: '50%',
           }}
