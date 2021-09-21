@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom'
 
 import './global.css'
 
-const render = (component: React.ReactElement, selector: string) =>
-  ReactDOM.render(component, document.querySelector(selector))
+const render = (component: React.ReactElement, selector: string) => {
+  const el = document.querySelector(selector)
+  if (!el) return null
+
+  ReactDOM.render(component, el)
+}
 
 import Scatter from './scatter/index'
 render(<Scatter />, '#viz-scatter')
@@ -49,6 +53,11 @@ render(<WHR />, '#viz-whr')
 
 import MobileWarning from './mobilewarning/index'
 render(<MobileWarning />, '#mobile-warning')
+
+import Poster from './scatter/poster'
+document.querySelectorAll('div[data-stage]').forEach(el => {
+  ReactDOM.render(<Poster stage={el.attributes['data-stage'].value} />, el)
+})
 
 //@ts-ignore
 window.showFps = function () {

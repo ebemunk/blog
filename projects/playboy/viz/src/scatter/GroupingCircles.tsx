@@ -94,7 +94,7 @@ const GroupingCircles = ({
             .attr('stroke-opacity', 0.4)
             .attr('transform', d => `translate(${d.cx},${d.cy})`)
             .attr('opacity', 0)
-            .attr('id', d => `arc-${d.data[0]}`)
+            .attr('id', d => `arc-${d.data[0]}-${d.data[1]}`)
             .call(enter =>
               enter //
                 .transition()
@@ -110,7 +110,7 @@ const GroupingCircles = ({
               .attr('transform', d => `translate(${d.cx},${d.cy})`)
               .attr('stroke', d => d.stroke)
               .attr('fill', d => d.stroke)
-              .attr('id', d => `arc-${d.data[0]}`)
+              .attr('id', d => `arc-${d.data[0]}-${d.data[1]}`)
               .transition()
               .delay(transitionDuration)
               .duration(transitionDuration)
@@ -138,7 +138,7 @@ const GroupingCircles = ({
                 .attr('opacity', 1),
             )
             .append('textPath')
-            .attr('xlink:href', d => `#arc-${d.data[0]}`)
+            .attr('xlink:href', d => `#arc-${d.data[0]}-${d.data[1]}`)
             .attr('dominant-baseline', 'hanging')
             .attr('font-size', 14)
             .attr('fill', 'white')
@@ -152,7 +152,7 @@ const GroupingCircles = ({
                     ?.replace('Fake/Enhanced', 'Enhanced') ?? '??'
                 } ${format('.0%')(d.children.length / total)}`,
             )
-            .attr('id', d => `label-${d.data[0]}`)
+            .attr('id', d => `label-${d.data[0]}-${d.data[1]}`)
             .attr('data-length', function () {
               return this.getComputedTextLength()
             })
@@ -167,7 +167,7 @@ const GroupingCircles = ({
             .attr('opacity', 1)
             .select('textPath')
             .attr('xlink:href', d => {
-              return `#arc-${d.data[0]}`
+              return `#arc-${d.data[0]}-${d.data[1]}`
             })
             .text(
               d =>
@@ -178,7 +178,7 @@ const GroupingCircles = ({
                     ?.replace('Fake/Enhanced', 'Enhanced') ?? '??'
                 } ${format('.0%')(d.children.length / total)}`,
             )
-            .attr('id', d => `label-${d.data[0]}`)
+            .attr('id', d => `label-${d.data[0]}-${d.data[1]}`)
 
           return update
         },

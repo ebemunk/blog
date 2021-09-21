@@ -158,7 +158,7 @@ const Birthplace = () => {
   return (
     <div
       style={{
-        width: '100vw',
+        width: '100%',
         maxWidth: '1200px',
         display: 'flex',
         margin: 'auto',

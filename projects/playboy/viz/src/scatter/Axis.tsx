@@ -80,7 +80,7 @@ export const YAxis = ({
             y={rest.scale(rest.scale.domain()[0])}
             fill="currentColor"
             fontSize={12}
-            dx="12px"
+            dx="6px"
           >
             {units}
           </text>
