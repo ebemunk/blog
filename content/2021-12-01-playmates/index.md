@@ -12,7 +12,7 @@ responsive = true
 
 We're looking at some risque data this time! I wanted to do something offbeat, but not quite [Last Words in Texas](https://blog.ebemunk.com/last-words-in-texas/)-level soul crushing. So, I gathered some data on Playboy's Playmates of the Month.
 
-There's a rich history behind Playboy, the taboo element, sexiness and beauty. Let's see what the data has to offer!
+Playboy stopped picking the Playmate of the Month starting in 2021, and the 66 year saga came to an end. There's a rich history behind Playboy, the taboo element, sexiness and beauty. Let's see what the data has to offer!
 
 **Since the subject matter is Playboy and their Playmates of the Month, you should beware that most links might be NSFW. I've taken care to <u>not have any NSFW content on this page</u>.**
 
@@ -20,30 +20,21 @@ The two primary sources for the data here is [mypmates.club](https://mypmates.cl
 
 ## Who Reads Playboy?
 
-Turns out, Playboy is not very transparent about their demographics. But, I did find some information about who reads playboy from their own [media kit from 2004](https://web.archive.org/web/20041019143228/https://www.playboy.com/mediakit/print_demographics.html). More than a decade later, these values are very outdated, but I think it gives a bit of context into _who Playboy is meant for_.
+Turns out, Playboy is not very transparent about their demographics. But, I did find some information about who reads playboy from their own [media kit from 2004](https://web.archive.org/web/20041019143228/https://www.playboy.com/mediakit/print_demographics.html) and [online demographics](https://web.archive.org/web/20041022052012/http://www.playboy.com/mediakit/online_demographics.html). More than a decade later, these values are very outdated, but I think it gives a bit of context into _who Playboy is meant for_. The values here are inconsistent, and combined with its age, it's best to take these with a huge grain of salt.
 
 <div>
   <div class="viz-title">Reading it for the articles</div>
-  <div class="viz-subtitle">Demographics breakdown of the magazine (printed) from 2004. Playboy describes them as 
+  <div class="viz-subtitle">Demographics breakdown of the Print (magazine) and Online (playboy.com) versions from 2004. Playboy describes print readers as 
     <strong>brand conscious</strong>,
     <strong>outdoor enthusiasts</strong>,
     <strong>trendsetters</strong> and
-    <strong>socially active</strong>.
-  </div>
-  <div id="viz-demographics-print"></div>
-</div>
-
-Playboy also has information about their [online demographics](https://web.archive.org/web/20041022052012/http://www.playboy.com/mediakit/online_demographics.html). The values here are inconsistent, and combined with its age, it's best to take these with a huge grain of salt.
-
-<div>
-  <div class="viz-title">Browsing for the articles</div>
-  <div class="viz-subtitle">Demographics breakdown of playboy.com (online) from 2004. Playboy describes them as 
+    <strong>socially active</strong>. Online readers are 
     <strong>tech savvy</strong>,
     <strong>gamers</strong>,
     <strong>online shoppers</strong> and
-    <strong>active & adventurous</strong>. Employment adds up to 105%, Household Income adds up to 112% <span style="font-style: normal;">🤷‍♀️</span>.
+    <strong>active & adventurous</strong>.
   </div>
-  <div id="viz-demographics-online"></div>
+  <div id="viz-demographics-print"></div>
 </div>
 
 ## Playmates
@@ -137,7 +128,7 @@ Simone, following in her mother's footsteps in 1960, became a Playmate in 1989.
 
 <div data-scrolly="trump">
 
-**Karen McDougal** made headlines when her alleged affair with Donald Trump, and after the story broke in the media 4 days before the 2016 election. [Read more about that](https://www.newyorker.com/news/news-desk/donald-trump-a-playboy-model-and-a-system-for-concealing-infidelity-national-enquirer-karen-mcdougal) in The New Yorker.
+**Karen McDougal** made headlines when the story of her alleged affair with Donald Trump broke in the media 4 days before the 2016 election. [Read more about that](https://www.newyorker.com/news/news-desk/donald-trump-a-playboy-model-and-a-system-for-concealing-infidelity-national-enquirer-karen-mcdougal) in The New Yorker.
 
 </div>
 
@@ -211,8 +202,6 @@ Having a smaller waist is the most important distinction between Playmates and t
 
 Yet another example of explosion of variance after Hefner's death, hip measurements have seen a minor 2% increase, yet most of that increase is carried by the post-2017 Playmates with much higher measurements than in the history of Playmates.
 
-**Buffy Tyler** is the strong outlier here, with the smallest waist measurement ever by far.
-
 </div>
 
 <div data-scrolly="hair">
@@ -229,13 +218,13 @@ Despite featuring a Black Playmate early in their publication, and receiving bac
 
 Too bad I have no data on the ethnicity of Playboy's demographics, but I would bet money that this Playmate distribution closely mirrors reader ethnicities as well.
 
-Also despite their progressive image, only 2019 and 2020 had 40% non-white Playmates, the most it hass ever been in its 67-year history.
+Also despite their progressive image, only 2019 and 2020 had 40% non-white Playmates, the most it has ever been in its 67-year history.
 
 </div>
 
 <div data-scrolly="breasts">
 
-Yes, someone actually recorded this data.
+Yes, someone actually recorded this data..
 
 This was another surprise for me. You can clearly see that enhanced
 breasts came into prominence starting around 1995 and peaked around
@@ -290,7 +279,7 @@ Waist-to-Hips Ratio, aka WHR is a simple ratio of waist circumference divided by
 
 <div>
   <div class="viz-title">The Magic Number</div>
-  <div class="viz-subtitle">A Waist-to-Hip Ratio of 0.7, which accounts for 26% of Playmates is said to be the "perfect" ratio for attractiveness. Highlighted are the "most attractive" WHRs from other cultures/places.</div>
+  <div class="viz-subtitle">A Waist-to-Hip Ratio of 0.7, which accounts for ~20% of Playmates is said to be the "perfect" ratio for attractiveness. Highlighted are the "most attractive" WHRs from other cultures/places. No Playmate has ever been above 1.0 WHR.</div>
   <div id="viz-whr"></div>
 </div>
 
@@ -362,9 +351,7 @@ For the nerds among you, this is the _euclidian distance_ from the average. I al
 
 I admit, this is the most gratuitous analysis here, but I wanted to see what an [unsupervised learning algorithm](https://en.wikipedia.org/wiki/K-means_clustering) would say about our population of Playmates, specifically body shapes.
 
-This is probably a coincidence and not to be taken seriously (seriously!), but was cool to see.
-
-Below visualization was inspired by the [MVClustViz](https://www.igi-global.com/article/mvclustviz/103841) visualization.
+This is probably a coincidence and not to be taken seriously (seriously!), but was cool to see. Below visualization was inspired by the [MVClustViz](https://www.igi-global.com/article/mvclustviz/103841) visualization.
 
 <div>
   <div class="viz-title">k-means for body shape?</div>
