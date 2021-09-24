@@ -25,8 +25,6 @@ render(<BMI />, '#viz-bmi')
 
 import DemographicsPrint from './demographics/index'
 render(<DemographicsPrint />, '#viz-demographics-print')
-import DemographicsOnline from './demographics/online'
-render(<DemographicsOnline />, '#viz-demographics-online')
 
 import Birthplace from './birthplace/index'
 render(<Birthplace />, '#viz-birthplace')

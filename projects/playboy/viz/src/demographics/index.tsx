@@ -175,6 +175,7 @@ const Pie = ({ data, title, subtitle = '' }) => {
         </text>
         {['Print', 'Online'].map((d, i) => (
           <text
+            key={d}
             textAnchor="middle"
             alignmentBaseline="middle"
             fill="white"

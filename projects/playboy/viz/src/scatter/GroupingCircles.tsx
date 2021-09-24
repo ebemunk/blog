@@ -166,6 +166,8 @@ const GroupingCircles = ({
             .delay(transitionDuration)
             .duration(transitionDuration)
             .attr('opacity', 1)
+
+          update
             .select('textPath')
             .attr('xlink:href', d => {
               return `#arc-${d.data[0]}-${d.data[1].length}`

@@ -75,12 +75,23 @@ const useStyles = createUseStyles({
       marginBottom: 0,
     },
   },
+  innerWrap: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexBasis: '100%',
+    maxWidth: '100%',
+  },
+  title: {
+    position: 'sticky',
+    top: '5vh',
+    maxWidth: '100%',
+    marginLeft: '1rem',
+  },
   viz: {
     position: 'sticky',
-    top: '10vh',
+    top: 'calc(10vh)',
     // border: '2px solid blue',
     height: '80vh',
-    flexBasis: '100%',
     maxWidth: '100%',
   },
   story: {
@@ -93,10 +104,18 @@ const useStyles = createUseStyles({
     wrap: {
       flexWrap: 'wrap',
     },
+    innerWrap: {
+      display: 'flex',
+      flexDirection: 'column',
+      flexBasis: '100%',
+      maxWidth: '100%',
+      height: '80vh',
+      position: 'sticky',
+      top: '10vh',
+    },
     viz: {
       top: '20vh',
       flexBasis: '100%',
-      height: '60vh',
     },
     story: {
       flexBasis: '100%',
@@ -169,7 +188,8 @@ const ScrollyText = ({ id }) => {
     const element = document.querySelector(`div[data-scrolly="${id}"]`)
     if (!element) return
     setEl(element)
-    element.remove()
+    // element.remove()
+    element.style.display = 'none'
   }, [])
 
   if (!el) return null
@@ -187,11 +207,13 @@ const Scatter = () => {
 
   return (
     <div className={classes.wrap}>
-      <div className={classes.viz}>
-        <ResponsiveSvg margin={{ left: 30, top: 30, bottom: 10, right: 10 }}>
-          <Viz stage={stage} subStage={subStage} />
-          {stage === 'start' && <StartHighlights subStage={subStage} />}
-        </ResponsiveSvg>
+      <div className={classes.innerWrap}>
+        <div className={classes.viz}>
+          <ResponsiveSvg margin={{ left: 30, top: 30, bottom: 10, right: 10 }}>
+            <Viz stage={stage} subStage={subStage} />
+            {stage === 'start' && <StartHighlights subStage={subStage} />}
+          </ResponsiveSvg>
+        </div>
       </div>
 
       <div className={classes.story}>
@@ -282,20 +304,20 @@ const Scatter = () => {
         <WP
           onEnter={() => {
             setStage('start')
-            setSubStage('trump')
-          }}
-          active={stage === 'start' && subStage === 'trump'}
-        >
-          <ScrollyText id="trump" />
-        </WP>
-        <WP
-          onEnter={() => {
-            setStage('start')
             setSubStage('otherFirsts')
           }}
           active={stage === 'start' && subStage === 'otherFirsts'}
         >
           <ScrollyText id="otherFirsts" />
+        </WP>
+        <WP
+          onEnter={() => {
+            setStage('start')
+            setSubStage('trump')
+          }}
+          active={stage === 'start' && subStage === 'trump'}
+        >
+          <ScrollyText id="trump" />
         </WP>
         <WP
           onEnter={() => {
