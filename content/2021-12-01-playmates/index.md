@@ -253,7 +253,7 @@ This was a high-level look into the patterns and quirks of our Playmate populati
 
 <div>
   <div class="viz-title">Breaking the mold</div>
-  <div class="viz-subtitle">2020 is the first and only year the hourglass-figure mold was broken. Bust measurements decline through the decades, waist and hips increase. Thicc is finally embraced in 2020. The "Ideal" <span data-cms="90">90</span>-<span data-cms="60">60</span>-<span data-cms="90">90</span> shown in red. <a href="https://www.huffpost.com/entry/the-scary-reality-of-a-re_b_845239" target="_blank">Projected dimensions</a> of the Barbie doll in yellow. <br/><br/> Click on the decades to isolate.</div>
+  <div class="viz-subtitle">2020 is the first and only year the hourglass-figure mold was broken. Bust measurements decline through the decades, waist and hips increase. Thicc is finally embraced in 2020. The "Ideal" <span data-cms="90">36</span>-<span data-cms="60">24</span>-<span data-cms="90">36</span> shown in red. <a href="https://www.huffpost.com/entry/the-scary-reality-of-a-re_b_845239" target="_blank">Projected dimensions</a> of the Barbie doll in yellow. <br/><br/> Click on the decades to isolate.</div>
   <div id="viz-bwh"></div>
 </div>
 
