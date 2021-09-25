@@ -4,7 +4,12 @@ import { createUseStyles } from 'react-jss'
 import { Store } from '../store'
 import { Playmate } from '../types'
 import { MONTHS_FULL } from '../util'
+import PlaymateHist from './PlaymateHist'
 import { formatFeetIn, STAGES, STAGE_UNITS } from './util'
+
+import Google from './google.png'
+import Mypmates from './mypmates.png'
+import Babepedia from './babepedia.png'
 
 const useStyles = createUseStyles({
   click: {
@@ -17,6 +22,10 @@ const useStyles = createUseStyles({
     color: 'lightgray',
     fontStyle: 'italic',
     textAlign: 'center',
+  },
+  img: {
+    width: '24px',
+    height: '24px',
   },
 })
 
@@ -83,37 +92,16 @@ const PlaymateTooltip = ({
           >
             <IfExists label="Age" value={data.mateAge} />
             <IfExists
+              label="Birthplace"
+              value={[data.town, data.state, data.country]
+                .filter(Boolean)
+                .join(', ')}
+            />
+            <IfExists
               label="Ethnicity"
               value={data.ethnicity.replace('Latin', 'Latino')}
             />
             <IfExists label="Hair" value={data.hair} />
-            <IfExists
-              label="Height"
-              value={isMetric ? data.heightCM : formatFeetIn(data.heightIN)}
-              units={isMetric ? STAGE_UNITS[units].height : null}
-            />
-            <IfExists
-              label="Weight"
-              value={isMetric ? data.weightKG : formatVal(data.weightLB)}
-              units={STAGE_UNITS[units].weight}
-            />
-            <IfExists
-              label="Bust"
-              value={isMetric ? formatVal(data.bustCM) : formatVal(data.bustIN)}
-              units={STAGE_UNITS[units].bust}
-            />
-            <IfExists
-              label="Waist"
-              value={
-                isMetric ? formatVal(data.waistCM) : formatVal(data.waistIN)
-              }
-              units={STAGE_UNITS[units].waist}
-            />
-            <IfExists
-              label="Hips"
-              value={isMetric ? formatVal(data.hipsCM) : formatVal(data.hipsIN)}
-              units={STAGE_UNITS[units].hips}
-            />
             <IfExists
               label="Breasts"
               value={data.breasts
@@ -122,38 +110,75 @@ const PlaymateTooltip = ({
             />
             <IfExists label="Cup" value={data.cup} />
             <IfExists
-              label="Birthplace"
-              value={[data.town, data.state, data.country]
-                .filter(Boolean)
-                .join(', ')}
+              label="Height"
+              value={isMetric ? data.heightCM : formatFeetIn(data.heightIN)}
+              units={isMetric ? STAGE_UNITS[units].height : null}
             />
+            <PlaymateHist pm={data} hkey="heightCM" />
+            <IfExists
+              label="Weight"
+              value={isMetric ? data.weightKG : formatVal(data.weightLB)}
+              units={STAGE_UNITS[units].weight}
+            />
+            <PlaymateHist pm={data} hkey="weightKG" />
+            <IfExists
+              label="Bust"
+              value={isMetric ? formatVal(data.bustCM) : formatVal(data.bustIN)}
+              units={STAGE_UNITS[units].bust}
+            />
+            <PlaymateHist pm={data} hkey="bustCM" />
+            <IfExists
+              label="Waist"
+              value={
+                isMetric ? formatVal(data.waistCM) : formatVal(data.waistIN)
+              }
+              units={STAGE_UNITS[units].waist}
+            />
+            <PlaymateHist pm={data} hkey="waistCM" />
+            <IfExists
+              label="Hips"
+              value={isMetric ? formatVal(data.hipsCM) : formatVal(data.hipsIN)}
+              units={STAGE_UNITS[units].hips}
+            />
+            <PlaymateHist pm={data} hkey="hipsCM" />
             {!hide && (
-              <div style={{ marginTop: '0.5rem' }}>
-                <a
-                  href={`https://google.com/search?tbm=isch&q=${data.name}+playmate`}
-                  target="_blank"
+              <>
+                <div
+                  style={{
+                    fontWeight: 'bold',
+                  }}
                 >
-                  google images
-                </a>
-                {data.mypmatesUrl && (
-                  <>
-                    {' '}
-                    |{' '}
-                    <a href={data.mypmatesUrl} target="_blank">
-                      mypmates
-                    </a>
-                  </>
-                )}
-                {data.babepediaUrl && (
-                  <>
-                    {' '}
-                    |{' '}
-                    <a href={data.babepediaUrl} target="_blank">
-                      babepedia
-                    </a>
-                  </>
-                )}
-              </div>
+                  Links
+                </div>
+                <div
+                  style={{
+                    marginTop: '0.5rem',
+                    display: 'flex',
+                    justifyContent: 'space-around',
+                  }}
+                >
+                  <a
+                    href={`https://google.com/search?tbm=isch&q=${data.name}+playmate`}
+                    target="_blank"
+                  >
+                    <img src={Google} className={classes.img} />
+                  </a>
+                  {data.mypmatesUrl && (
+                    <>
+                      <a href={data.mypmatesUrl} target="_blank">
+                        <img src={Mypmates} className={classes.img} />
+                      </a>
+                    </>
+                  )}
+                  {data.babepediaUrl && (
+                    <>
+                      <a href={data.babepediaUrl} target="_blank">
+                        <img src={Babepedia} className={classes.img} />
+                      </a>
+                    </>
+                  )}
+                </div>
+              </>
             )}
           </div>
         </>
