@@ -11,7 +11,6 @@ const getHistFor = (key: keyof Playmate) => {
   const dats = data.map(d => d[key])
 
   const bins = d3.bin().domain(d3.extent(dats))(data.map(d => d[key]))
-  console.log(key, dats, bins)
 
   return bins
 }

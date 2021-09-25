@@ -30,7 +30,7 @@ import Birthplace from './birthplace/index'
 render(<Birthplace />, '#viz-birthplace')
 
 import BirthplaceBins from './birthplace/bins'
-import { byCountry } from './data'
+import { byCountry, data } from './data'
 render(<BirthplaceBins data={byCountry} />, '#viz-birthplace-bins')
 
 import BirthplaceUSA from './birthplace/usa'
@@ -57,6 +57,11 @@ document.querySelectorAll('div[data-stage]').forEach(el => {
   ReactDOM.render(<Poster stage={el.attributes['data-stage'].value} />, el)
 })
 
+render(
+  <PlaymateTooltip data={data.find(d => d.name === 'Dalene Kurtis')} pinned />,
+  '#viz-pmexample',
+)
+
 //@ts-ignore
 window.showFps = function () {
   var script = document.createElement('script')
@@ -80,6 +85,7 @@ if (process.env.NODE_ENV === 'development') {
 
 import { Store } from './store'
 import { format } from 'd3'
+import PlaymateTooltip from './scatter/PlaymateTooltip'
 const cm2in = num => (num ? num / 2.54 : null)
 const in2cm = num => (num ? num * 2.54 : null)
 const kg2lb = num => (num ? num / 0.45359237 : null)
