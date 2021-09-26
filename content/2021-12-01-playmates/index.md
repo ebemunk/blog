@@ -10,9 +10,11 @@ shortSummary = "Finding out Playboy's idea of beauty from analyzing 806 Playmate
 responsive = true
 +++
 
+1972-11 LENA!
+
 We're looking at some risque data this time! I wanted to do something offbeat, but not quite [Last Words in Texas](https://blog.ebemunk.com/last-words-in-texas/)-level soul crushing. So, I gathered some data on Playboy's Playmates of the Month.
 
-Playboy stopped picking the Playmate of the Month starting in 2021, and the 66 year saga came to an end. There's a rich history behind Playboy, the taboo element, sexiness and beauty. Let's see what the data has to offer!
+Playboy stopped picking the Playmate of the Month starting in 2021, and the 66 year saga came to an end. More, the physical magazine itself was discontinued in [late 2020](https://medium.com/naked-open-letters-from-playboy/an-open-letter-to-our-team-and-partners-b859b1a4c663).There's a rich history behind Playboy, the taboo element, sexiness and beauty. Let's see what the data has to offer!
 
 **Since the subject matter is Playboy and their Playmates of the Month, you should beware that most links might be NSFW. I've taken care to <u>not have any NSFW content on this page</u>.**
 
@@ -80,9 +82,13 @@ Marguerite Empey: 2<br />
 
 <div data-scrolly="multiGirl">
 
-There were 7 issues that featured multiple Playmates. Except for the first time in October 1958, all of them were either twins or triplets.
+There were 7 issues that featured multiple Playmates. Except for the first time in October 1958, all of them were either twins or triplets. **Pat Sheehan** and **Mara Corday** in 1958 were the only two that did not share the same centerfold image.
 
-In total, there are 5 sets of twins and 1 set of triplets that became Playmates at the same time.
+All others were on the same centerfold image, with their siblings.
+
+In total, there are 5 sets of twins and 1 set of triplets that became Playmates at the same time and shared the same centerfold.
+
+In addition, one set of twins, **Kristina and Karissa Shannon** shared the same centerfold, but were chosen Playmates for July and August of 2009 on the same issue.
 
 </div>
 

@@ -110,6 +110,12 @@ const getCutouts = (
             ['Natalie Campbell', 'Jennifer Campbell'].includes(d.datum.name),
           )
           .reduce(avgCenter, startCenter),
+
+        ...data
+          .filter(d =>
+            ['Karissa Shannon', 'Kristina Shannon'].includes(d.datum.name),
+          )
+          .map(mapPlaymateToCutoutCircle),
       ]
     }
 
