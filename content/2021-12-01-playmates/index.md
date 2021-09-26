@@ -10,8 +10,6 @@ shortSummary = "Finding out Playboy's idea of beauty from analyzing 806 Playmate
 responsive = true
 +++
 
-1972-11 LENA!
-
 We're looking at some risque data this time! I wanted to do something offbeat, but not quite [Last Words in Texas](https://blog.ebemunk.com/last-words-in-texas/)-level soul crushing. So, I gathered some data on Playboy's Playmates of the Month.
 
 Playboy stopped picking the Playmate of the Month starting in 2021, and the 66 year saga came to an end. More, the physical magazine itself was discontinued in [late 2020](https://medium.com/naked-open-letters-from-playboy/an-open-letter-to-our-team-and-partners-b859b1a4c663).There's a rich history behind Playboy, the taboo element, sexiness and beauty. Let's see what the data has to offer!
@@ -366,6 +364,12 @@ This is probably a coincidence and not to be taken seriously (seriously!), but w
 </div>
 
 It's interesting that k-means can find these 3 clusters which correspond pretty well with some common body shapes.
+
+## lena.jpg
+
+Another tidbit for the geeks: if you've ever worked with computer image processing, you have most likely come across `lena.jpg`. [It's one of the most used images in computer history](https://web.archive.org/web/19970704201816/http://www.playboy.com/news/lena/lena.html). This iconic image is a crop of **Lena Sjooblom**'s (now Forsen) 1972 November centerfold!
+
+The usage has been [criticized](http://www.cs.umd.edu/users/oleary/faculty/node8.html), as "Suggestive pictures used in lectures on image processing ... convey the message that the lecturer caters to the males only". I have certainly come across this image when I was studying in university around 2010s. Does it still appear in lectures? Let me know!
 
 ## Fin
 
