@@ -26,10 +26,10 @@ const Viz = () => {
     .range([0, ctx.chartWidth])
     .nice()
 
-  const bins = d3.bin().domain(xScale.domain()).thresholds(xScale.ticks(51))(
+  const bins = d3.bin().domain(xScale.domain()).thresholds(xScale.ticks(26))(
     whr,
   )
-  const density = kde(epanechnikov(kernelSize), xScale.ticks(51), whr)
+  const density = kde(epanechnikov(kernelSize), xScale.ticks(26), whr)
 
   const yScale = d3
     .scaleLinear()
@@ -62,6 +62,7 @@ const Viz = () => {
         scale={xScale}
         orientation="bottom"
         transform={`translate(0,${ctx.chartHeight})`}
+        tickValues={xScale.ticks(26)}
       >
         <text
           fontSize={12}
@@ -73,15 +74,6 @@ const Viz = () => {
           Waist-to-Hip Ratio
         </text>
       </Axis>
-      <Axis
-        scale={xScale}
-        orientation="bottom"
-        transform={`translate(0,${ctx.chartHeight})`}
-        tickFormat={() => ''}
-        tickSizeInner={3}
-        tickSizeOuter={0}
-        tickValues={xScale.ticks(40)}
-      />
       <Axis scale={yScale} orientation="left" tickFormat={d3.format('.2p')} />
       {bins.map(d => (
         <rect

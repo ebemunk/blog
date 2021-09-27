@@ -80,7 +80,7 @@ Marguerite Empey: 2<br />
 
 <div data-scrolly="multiGirl">
 
-There were 7 issues that featured multiple Playmates. Except for the first time in October 1958, all of them were either twins or triplets. **Pat Sheehan** and **Mara Corday** in 1958 were the only two that did not share the same centerfold image.
+There were 8 issues that featured multiple Playmates. Except for the first time in October 1958, all of them were either twins or triplets. **Pat Sheehan** and **Mara Corday** in 1958 were the only two that did not share the same centerfold image.
 
 All others were on the same centerfold image, with their siblings.
 
@@ -231,7 +231,7 @@ Also despite their progressive image, only 2019 and 2020 had 40% non-white Playm
 Yes, someone actually recorded this data..
 
 This was another surprise for me. You can clearly see that enhanced
-breasts came into prominence starting around 1995 and peaked around
+breasts came into prominence starting around 1985 and peaked around
 2010s before fading away again.
 
 </div>

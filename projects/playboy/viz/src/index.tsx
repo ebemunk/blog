@@ -62,6 +62,9 @@ render(
   '#viz-pmexample',
 )
 
+import { selectAll } from 'd3'
+selectAll('.article a').attr('target', '_blank')
+
 //@ts-ignore
 window.showFps = function () {
   var script = document.createElement('script')
