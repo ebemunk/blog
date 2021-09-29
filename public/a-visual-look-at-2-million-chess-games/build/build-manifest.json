@@ -1,1 +1,507 @@
-{"inputs":{"_snowpack/pkg/d3.js":{"bytes":551366,"imports":[]},"_snowpack/pkg/chessjs.js":{"bytes":53024,"imports":[]},"_snowpack/pkg/@popperjs/core.js":{"bytes":55037,"imports":[]},"tooltip/style.css":{"bytes":166,"imports":[]},"tooltip/index.js":{"bytes":866,"imports":[{"path":"_snowpack/pkg/d3.js","kind":"import-statement"},{"path":"_snowpack/pkg/@popperjs/core.js","kind":"import-statement"},{"path":"tooltip/style.css","kind":"import-statement"}]},"board/style.css":{"bytes":72,"imports":[]},"board/pieces/k.svg.js":{"bytes":1988,"imports":[]},"board/pieces/q.svg.js":{"bytes":2260,"imports":[]},"board/pieces/r.svg.js":{"bytes":2428,"imports":[]},"board/pieces/b.svg.js":{"bytes":1700,"imports":[]},"board/pieces/n.svg.js":{"bytes":2136,"imports":[]},"board/pieces/p.svg.js":{"bytes":1068,"imports":[]},"board/pieces/k-w.svg.js":{"bytes":1840,"imports":[]},"board/pieces/q-w.svg.js":{"bytes":2096,"imports":[]},"board/pieces/r-w.svg.js":{"bytes":1572,"imports":[]},"board/pieces/b-w.svg.js":{"bytes":1700,"imports":[]},"board/pieces/n-w.svg.js":{"bytes":1748,"imports":[]},"board/pieces/p-w.svg.js":{"bytes":1068,"imports":[]},"board/pieceSvg.js":{"bytes":511,"imports":[{"path":"board/pieces/k.svg.js","kind":"import-statement"},{"path":"board/pieces/q.svg.js","kind":"import-statement"},{"path":"board/pieces/r.svg.js","kind":"import-statement"},{"path":"board/pieces/b.svg.js","kind":"import-statement"},{"path":"board/pieces/n.svg.js","kind":"import-statement"},{"path":"board/pieces/p.svg.js","kind":"import-statement"},{"path":"board/pieces/k-w.svg.js","kind":"import-statement"},{"path":"board/pieces/q-w.svg.js","kind":"import-statement"},{"path":"board/pieces/r-w.svg.js","kind":"import-statement"},{"path":"board/pieces/b-w.svg.js","kind":"import-statement"},{"path":"board/pieces/n-w.svg.js","kind":"import-statement"},{"path":"board/pieces/p-w.svg.js","kind":"import-statement"}]},"board/index.js":{"bytes":2560,"imports":[{"path":"board/style.css","kind":"import-statement"},{"path":"_snowpack/pkg/d3.js","kind":"import-statement"},{"path":"board/pieceSvg.js","kind":"import-statement"}]},"ecos.json.proxy.js":{"bytes":43966,"imports":[]},"openings/style.css":{"bytes":350,"imports":[]},"openings/index.js":{"bytes":4572,"imports":[{"path":"_snowpack/pkg/d3.js","kind":"import-statement"},{"path":"_snowpack/pkg/chessjs.js","kind":"import-statement"},{"path":"tooltip/index.js","kind":"import-statement"},{"path":"board/index.js","kind":"import-statement"},{"path":"ecos.json.proxy.js","kind":"import-statement"},{"path":"openings/style.css","kind":"import-statement"}]},"movepaths/style.css":{"bytes":327,"imports":[]},"movepaths/index.js":{"bytes":3831,"imports":[{"path":"_snowpack/pkg/d3.js","kind":"import-statement"},{"path":"board/index.js","kind":"import-statement"},{"path":"movepaths/style.css","kind":"import-statement"}]},"heatmap/pieceSelect.js":{"bytes":575,"imports":[{"path":"board/pieceSvg.js","kind":"import-statement"}]},"heatmap/style.css":{"bytes":381,"imports":[]},"heatmap/index.js":{"bytes":3553,"imports":[{"path":"_snowpack/pkg/d3.js","kind":"import-statement"},{"path":"board/index.js","kind":"import-statement"},{"path":"heatmap/pieceSelect.js","kind":"import-statement"},{"path":"tooltip/index.js","kind":"import-statement"},{"path":"heatmap/style.css","kind":"import-statement"}]},"castling/style.css":{"bytes":292,"imports":[]},"castling/index.js":{"bytes":1764,"imports":[{"path":"_snowpack/pkg/d3.js","kind":"import-statement"},{"path":"castling/style.css","kind":"import-statement"}]},"endings/style.css":{"bytes":234,"imports":[]},"endings/index.js":{"bytes":1696,"imports":[{"path":"_snowpack/pkg/d3.js","kind":"import-statement"},{"path":"endings/style.css","kind":"import-statement"}]},"bar/index.js":{"bytes":2250,"imports":[{"path":"_snowpack/pkg/d3.js","kind":"import-statement"},{"path":"tooltip/index.js","kind":"import-statement"}]},"line/index.js":{"bytes":1897,"imports":[{"path":"_snowpack/pkg/d3.js","kind":"import-statement"},{"path":"tooltip/index.js","kind":"import-statement"}]},"style.css":{"bytes":899,"imports":[]},"index.js":{"bytes":2245,"imports":[{"path":"openings/index.js","kind":"import-statement"},{"path":"movepaths/index.js","kind":"import-statement"},{"path":"heatmap/index.js","kind":"import-statement"},{"path":"castling/index.js","kind":"import-statement"},{"path":"endings/index.js","kind":"import-statement"},{"path":"bar/index.js","kind":"import-statement"},{"path":"line/index.js","kind":"import-statement"},{"path":"style.css","kind":"import-statement"},{"path":"_snowpack/pkg/d3.js","kind":"import-statement"}]}},"outputs":{"../../../projects/chess/~~bundle~~/index.js":{"imports":[],"exports":[],"inputs":{"_snowpack/pkg/d3.js":{"bytesInOutput":140402},"_snowpack/pkg/chessjs.js":{"bytesInOutput":17601},"_snowpack/pkg/@popperjs/core.js":{"bytesInOutput":18602},"tooltip/style.css":{"bytesInOutput":0},"tooltip/index.js":{"bytesInOutput":378},"board/style.css":{"bytesInOutput":0},"board/pieces/k.svg.js":{"bytesInOutput":1980},"board/pieces/q.svg.js":{"bytesInOutput":2252},"board/pieces/r.svg.js":{"bytesInOutput":2420},"board/pieces/b.svg.js":{"bytesInOutput":1692},"board/pieces/n.svg.js":{"bytesInOutput":2128},"board/pieces/p.svg.js":{"bytesInOutput":1060},"board/pieces/k-w.svg.js":{"bytesInOutput":1832},"board/pieces/q-w.svg.js":{"bytesInOutput":2088},"board/pieces/r-w.svg.js":{"bytesInOutput":1564},"board/pieces/b-w.svg.js":{"bytesInOutput":1692},"board/pieces/n-w.svg.js":{"bytesInOutput":1740},"board/pieces/p-w.svg.js":{"bytesInOutput":1060},"board/pieceSvg.js":{"bytesInOutput":69},"board/index.js":{"bytesInOutput":1501},"ecos.json.proxy.js":{"bytesInOutput":43987},"openings/style.css":{"bytesInOutput":0},"openings/index.js":{"bytesInOutput":2353},"movepaths/style.css":{"bytesInOutput":0},"movepaths/index.js":{"bytesInOutput":1724},"heatmap/pieceSelect.js":{"bytesInOutput":355},"heatmap/style.css":{"bytesInOutput":0},"heatmap/index.js":{"bytesInOutput":1698},"castling/style.css":{"bytesInOutput":0},"castling/index.js":{"bytesInOutput":964},"endings/style.css":{"bytesInOutput":0},"endings/index.js":{"bytesInOutput":938},"bar/index.js":{"bytesInOutput":1453},"line/index.js":{"bytesInOutput":1228},"style.css":{"bytesInOutput":0},"index.js":{"bytesInOutput":1451}},"bytes":256234},"../../../projects/chess/~~bundle~~/index.css":{"imports":[],"inputs":{"style.css":{"bytesInOutput":734},"castling/style.css":{"bytesInOutput":238},"endings/style.css":{"bytesInOutput":184},"heatmap/style.css":{"bytesInOutput":312},"movepaths/style.css":{"bytesInOutput":261},"openings/style.css":{"bytesInOutput":285},"board/style.css":{"bytesInOutput":55},"tooltip/style.css":{"bytesInOutput":133}},"bytes":2203}}}
+{
+  "inputs": {
+    "_snowpack/pkg/d3.js": {
+      "bytes": 551366,
+      "imports": []
+    },
+    "_snowpack/pkg/chessjs.js": {
+      "bytes": 53024,
+      "imports": []
+    },
+    "_snowpack/pkg/@popperjs/core.js": {
+      "bytes": 55037,
+      "imports": []
+    },
+    "tooltip/style.css": {
+      "bytes": 166,
+      "imports": []
+    },
+    "tooltip/index.js": {
+      "bytes": 866,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/@popperjs/core.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "tooltip/style.css",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "board/style.css": {
+      "bytes": 72,
+      "imports": []
+    },
+    "board/pieces/k.svg.js": {
+      "bytes": 1988,
+      "imports": []
+    },
+    "board/pieces/q.svg.js": {
+      "bytes": 2260,
+      "imports": []
+    },
+    "board/pieces/r.svg.js": {
+      "bytes": 2428,
+      "imports": []
+    },
+    "board/pieces/b.svg.js": {
+      "bytes": 1700,
+      "imports": []
+    },
+    "board/pieces/n.svg.js": {
+      "bytes": 2136,
+      "imports": []
+    },
+    "board/pieces/p.svg.js": {
+      "bytes": 1068,
+      "imports": []
+    },
+    "board/pieces/k-w.svg.js": {
+      "bytes": 1840,
+      "imports": []
+    },
+    "board/pieces/q-w.svg.js": {
+      "bytes": 2096,
+      "imports": []
+    },
+    "board/pieces/r-w.svg.js": {
+      "bytes": 1572,
+      "imports": []
+    },
+    "board/pieces/b-w.svg.js": {
+      "bytes": 1700,
+      "imports": []
+    },
+    "board/pieces/n-w.svg.js": {
+      "bytes": 1748,
+      "imports": []
+    },
+    "board/pieces/p-w.svg.js": {
+      "bytes": 1068,
+      "imports": []
+    },
+    "board/pieceSvg.js": {
+      "bytes": 511,
+      "imports": [
+        {
+          "path": "board/pieces/k.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/q.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/r.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/b.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/n.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/p.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/k-w.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/q-w.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/r-w.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/b-w.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/n-w.svg.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieces/p-w.svg.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "board/index.js": {
+      "bytes": 2560,
+      "imports": [
+        {
+          "path": "board/style.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/pieceSvg.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "ecos.json.proxy.js": {
+      "bytes": 43966,
+      "imports": []
+    },
+    "openings/style.css": {
+      "bytes": 350,
+      "imports": []
+    },
+    "openings/index.js": {
+      "bytes": 4572,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/chessjs.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "tooltip/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "ecos.json.proxy.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "openings/style.css",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "movepaths/style.css": {
+      "bytes": 327,
+      "imports": []
+    },
+    "movepaths/index.js": {
+      "bytes": 3831,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "movepaths/style.css",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "heatmap/pieceSelect.js": {
+      "bytes": 575,
+      "imports": [
+        {
+          "path": "board/pieceSvg.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "heatmap/style.css": {
+      "bytes": 381,
+      "imports": []
+    },
+    "heatmap/index.js": {
+      "bytes": 3553,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "board/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "heatmap/pieceSelect.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "tooltip/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "heatmap/style.css",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "castling/style.css": {
+      "bytes": 292,
+      "imports": []
+    },
+    "castling/index.js": {
+      "bytes": 1764,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "castling/style.css",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "endings/style.css": {
+      "bytes": 234,
+      "imports": []
+    },
+    "endings/index.js": {
+      "bytes": 1696,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "endings/style.css",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "bar/index.js": {
+      "bytes": 2250,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "tooltip/index.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "line/index.js": {
+      "bytes": 1897,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "tooltip/index.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "style.css": {
+      "bytes": 899,
+      "imports": []
+    },
+    "index.js": {
+      "bytes": 2245,
+      "imports": [
+        {
+          "path": "openings/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "movepaths/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "heatmap/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "castling/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "endings/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "bar/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "line/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "style.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/d3.js",
+          "kind": "import-statement"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "../../../projects/chess/~~bundle~~/index.js": {
+      "imports": [],
+      "exports": [],
+      "inputs": {
+        "_snowpack/pkg/d3.js": {
+          "bytesInOutput": 140402
+        },
+        "_snowpack/pkg/chessjs.js": {
+          "bytesInOutput": 17601
+        },
+        "_snowpack/pkg/@popperjs/core.js": {
+          "bytesInOutput": 18602
+        },
+        "tooltip/style.css": {
+          "bytesInOutput": 0
+        },
+        "tooltip/index.js": {
+          "bytesInOutput": 378
+        },
+        "board/style.css": {
+          "bytesInOutput": 0
+        },
+        "board/pieces/k.svg.js": {
+          "bytesInOutput": 1980
+        },
+        "board/pieces/q.svg.js": {
+          "bytesInOutput": 2252
+        },
+        "board/pieces/r.svg.js": {
+          "bytesInOutput": 2420
+        },
+        "board/pieces/b.svg.js": {
+          "bytesInOutput": 1692
+        },
+        "board/pieces/n.svg.js": {
+          "bytesInOutput": 2128
+        },
+        "board/pieces/p.svg.js": {
+          "bytesInOutput": 1060
+        },
+        "board/pieces/k-w.svg.js": {
+          "bytesInOutput": 1832
+        },
+        "board/pieces/q-w.svg.js": {
+          "bytesInOutput": 2088
+        },
+        "board/pieces/r-w.svg.js": {
+          "bytesInOutput": 1564
+        },
+        "board/pieces/b-w.svg.js": {
+          "bytesInOutput": 1692
+        },
+        "board/pieces/n-w.svg.js": {
+          "bytesInOutput": 1740
+        },
+        "board/pieces/p-w.svg.js": {
+          "bytesInOutput": 1060
+        },
+        "board/pieceSvg.js": {
+          "bytesInOutput": 69
+        },
+        "board/index.js": {
+          "bytesInOutput": 1501
+        },
+        "ecos.json.proxy.js": {
+          "bytesInOutput": 43987
+        },
+        "openings/style.css": {
+          "bytesInOutput": 0
+        },
+        "openings/index.js": {
+          "bytesInOutput": 2353
+        },
+        "movepaths/style.css": {
+          "bytesInOutput": 0
+        },
+        "movepaths/index.js": {
+          "bytesInOutput": 1724
+        },
+        "heatmap/pieceSelect.js": {
+          "bytesInOutput": 355
+        },
+        "heatmap/style.css": {
+          "bytesInOutput": 0
+        },
+        "heatmap/index.js": {
+          "bytesInOutput": 1698
+        },
+        "castling/style.css": {
+          "bytesInOutput": 0
+        },
+        "castling/index.js": {
+          "bytesInOutput": 964
+        },
+        "endings/style.css": {
+          "bytesInOutput": 0
+        },
+        "endings/index.js": {
+          "bytesInOutput": 938
+        },
+        "bar/index.js": {
+          "bytesInOutput": 1453
+        },
+        "line/index.js": {
+          "bytesInOutput": 1228
+        },
+        "style.css": {
+          "bytesInOutput": 0
+        },
+        "index.js": {
+          "bytesInOutput": 1451
+        }
+      },
+      "bytes": 256234
+    },
+    "../../../projects/chess/~~bundle~~/index.css": {
+      "imports": [],
+      "inputs": {
+        "style.css": {
+          "bytesInOutput": 734
+        },
+        "castling/style.css": {
+          "bytesInOutput": 238
+        },
+        "endings/style.css": {
+          "bytesInOutput": 184
+        },
+        "heatmap/style.css": {
+          "bytesInOutput": 312
+        },
+        "movepaths/style.css": {
+          "bytesInOutput": 261
+        },
+        "openings/style.css": {
+          "bytesInOutput": 285
+        },
+        "board/style.css": {
+          "bytesInOutput": 55
+        },
+        "tooltip/style.css": {
+          "bytesInOutput": 133
+        }
+      },
+      "bytes": 2203
+    }
+  }
+}

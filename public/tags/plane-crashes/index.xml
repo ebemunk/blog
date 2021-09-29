@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>plane crashes on Thinking Through the Party</title><link>https://blog.ebemunk.com/tags/plane-crashes/</link><description>Recent content in plane crashes on Thinking Through the Party</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 10 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.ebemunk.com/tags/plane-crashes/index.xml" rel="self" type="application/rss+xml"/><item><title>One Century of Plane Crashes</title><link>https://blog.ebemunk.com/century-of-plane-crashes/</link><pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate><guid>https://blog.ebemunk.com/century-of-plane-crashes/</guid><description>An exploration of 100 years of plane crashes. I discovered the ASN Aviation Safety Database some time ago, and knew almost instantly that I would have to dig deep on this one. The earliest crash is from August 2nd, 1919 and the latest record I have is from August 1st, 2019. There are approximately 22 thousand crash records.
-Planes and aviation represent a great chunk of our progress in technology and manufacturing, as well as bringing the world closer to us, with novel means of not just travel, but other endeavors like war and scientific research.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>plane crashes on Thinking Through the Party</title>
+    <link>https://blog.ebemunk.com/tags/plane-crashes/</link>
+    <description>Recent content in plane crashes on Thinking Through the Party</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.ebemunk.com/tags/plane-crashes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>One Century of Plane Crashes</title>
+      <link>https://blog.ebemunk.com/century-of-plane-crashes/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.ebemunk.com/century-of-plane-crashes/</guid>
+      <description>An exploration of 100 years of plane crashes. I discovered the ASN Aviation Safety Database some time ago, and knew almost instantly that I would have to dig deep on this one. The earliest crash is from August 2nd, 1919 and the latest record I have is from August 1st, 2019. There are approximately 22 thousand crash records.
+Planes and aviation represent a great chunk of our progress in technology and manufacturing, as well as bringing the world closer to us, with novel means of not just travel, but other endeavors like war and scientific research.</description>
+    </item>
+    
+  </channel>
+</rss>
