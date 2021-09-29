@@ -300,10 +300,12 @@ article.article {
       height: calc(33% / 1.5);
       position: relative;
       color: white;
+      overflow: hidden;
 
-      img {
+      .img {
         width: 100%;
         height: auto;
+        transition: transform 400ms;
       }
 
       .hover {
@@ -335,6 +337,10 @@ article.article {
 
       &:hover {
         color: white;
+
+        .img {
+          transform: scale(1.25);
+        }
 
         .hover {
           opacity: 1;
