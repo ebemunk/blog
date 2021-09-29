@@ -1,5 +1,5 @@
 +++
-publishDate = "2021-08-31"
+publishDate = "2021-09-28"
 title = "Beholder: Beauty in the eyes of Playboy"
 slug = "beholder-beauty-in-the-eyes-of-playboy"
 tags = ["data visualization", "playboy", "long form"]
@@ -379,7 +379,7 @@ I hope the trend in embracing more diverse body types and characteristics contin
 
 <div id="mobile-warning"></div>
 
-<!--
 <script src="build/bundle.js"></script>
--->
+<!--
 <script src="http://localhost:9001/bundle.js"></script>
+-->
