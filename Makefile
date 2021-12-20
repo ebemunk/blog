@@ -3,8 +3,7 @@ all:
 
 deploy:
 	rm -rf public
-	hugo
-	minify -aro public public
+	hugo --gc --minify
 	echo 'blog.ebemunk.com' > public/CNAME
 	git add -A
 	git commit -m "hugo rebuild"

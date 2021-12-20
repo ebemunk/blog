@@ -3,9 +3,9 @@
 <h1>{{ .Title }}</h1>
 
 <div class="tags-and-date">
-	<time title='{{ $.PublishDate.Format "2006-01-02 @ 15:04pm"}}'>{{ $.Date.Format "2 January 2006" }}</time>
+	<time title='{{ $.PublishDate.Format "2006-01-02"}}'>{{ $.Date.Format "2 January 2006" }}</time>
 	{{ if not (eq $.PublishDate $.Lastmod) }}
-	<div>Updated:  <time title='{{ $.Lastmod.Format "2006-01-02 @ 15:04pm"}}'>{{ $.Lastmod.Format "2 January 2006" }}</time></div>
+	<div>Updated:  <time title='{{ $.Lastmod.Format "2006-01-02"}}'>{{ $.Lastmod.Format "2 January 2006" }}</time></div>
 	{{ end }}
 	{{ partial "tags.html" . }}
 </div>
@@ -33,9 +33,10 @@
 	<div class="see-also-items">
 		{{ range $term := . }}
 			{{ $t := $.Site.GetPage $term }}
+			{{ $image := resources.Get $t.Params.image }}
 			<div class="suggestion">
 				<a href="{{ $t.RelPermalink }}">
-					<img src="/{{ $t.Params.image }}" />
+					<img src="{{ ($image.Resize "600x webp q100").RelPermalink }}" alt="thumbnail image for {{ $t.Title }}" />
 					{{ $t.Title }}
 				</a>
 			</div>

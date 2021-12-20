@@ -312,7 +312,7 @@
       ]
     },
     "style.css": {
-      "bytes": 899,
+      "bytes": 956,
       "imports": []
     },
     "index.js": {
@@ -358,7 +358,7 @@
     }
   },
   "outputs": {
-    "../../../projects/chess/~~bundle~~/index.js": {
+    "../../../projects/2016-02-27-visual-look-chess/~~bundle~~/index.js": {
       "imports": [],
       "exports": [],
       "inputs": {
@@ -473,11 +473,11 @@
       },
       "bytes": 256234
     },
-    "../../../projects/chess/~~bundle~~/index.css": {
+    "../../../projects/2016-02-27-visual-look-chess/~~bundle~~/index.css": {
       "imports": [],
       "inputs": {
         "style.css": {
-          "bytesInOutput": 734
+          "bytesInOutput": 791
         },
         "castling/style.css": {
           "bytesInOutput": 238
@@ -501,7 +501,7 @@
           "bytesInOutput": 133
         }
       },
-      "bytes": 2203
+      "bytes": 2260
     }
   }
 }

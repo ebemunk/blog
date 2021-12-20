@@ -9,15 +9,17 @@ pygmentscodefences = true
 googleAnalytics = "UA-212741-11"
 disqusShortname = "ebemunk"
 
+disableKinds = ["taxonomy", "section"]
+ignoreErrors = ["error-disable-taxonomy"]
+
 [params]
   author = "ebemunk"
 
 [taxonomies]
-tag = "tags"
-series = "series"
+  tag = "tags"
 
 [permalinks]
-post = "/:slug/"
+  post = "/:slug/"
 
 [markup.goldmark.renderer]
-unsafe= true
+  unsafe = true

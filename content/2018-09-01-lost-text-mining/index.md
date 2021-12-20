@@ -1,10 +1,9 @@
 +++
-date = "2018-09-01"
+publishDate = "2018-09-01"
 lastmod = "2021-04-25"
-draft = false
 title = "Text Mining LOST"
 slug = "lost-text-mining"
-tags = ["LOST", "data visualization", "text mining", "long form"]
+tags = ["data visualization", "text mining", "long form"]
 image = "img/lost-text-mining.png"
 shortSummary = "Text mining transcripts of the TV show LOST for gold."
 related = ["2016-02-27-visual-look-chess/index.md", "2019-01-05-plane-crashes.md"]
@@ -14,7 +13,7 @@ We're text mining the transcripts of the TV show LOST, and visualizing them!
 
 I retrieved and parsed the transcripts of LOST from [Lostpedia](http://lostpedia.wikia.com/wiki/Portal:Transcripts) and used a few different tools to look at this data.
 
-One thing to keep in mind is that this analysis is on only the text that the characters speak. I'm not a  LOST connoisseur, and haven't seen all the episodes. I'm not an authority on LOST, or on text mining.
+One thing to keep in mind is that this analysis is on only the text that the characters speak. I'm not a LOST connoisseur, and haven't seen all the episodes. I'm not an authority on LOST, or on text mining.
 
 So strap yourselves in for a disgustingly deep dive of this influential TV show, in what I should have titled "I've Finally LOST It".
 
@@ -89,7 +88,6 @@ Obviously flashbacks were an integral part of S1, and kept going until the end o
 
 The other Watson API, [Tone Analyzer](https://console.bluemix.net/docs/services/tone-analyzer/using-tone.html#using-the-general-purpose-endpoint), makes an attempt at determining the "tone" of a piece of text. This is also often referred to as "sentiment analysis" in some circles, but Tone Analyzer [determines 4 emotional tones, and 3 language tones](https://console.bluemix.net/docs/services/tone-analyzer/science.html#the-science-behind-the-service).
 
-
 The graph below shows the tones detected in each scene. Color-coded segments show that the tone was detected, while the opacity indicates the confidence of the tone being present. You can show/hide specific tones by clicking on the legend, so I hope you take some time to play around.
 
 <div id="scene-tone" class="viz"></div>
@@ -111,7 +109,6 @@ Honestly to me this is more of a vanity visualization, nevertheless there are so
 ## Reading Level
 
 Reading level is something I often wondered about TV shows. My gut feeling was that it'd be somewhat low, to appeal to a bigger and wider demographic. [textstat](https://github.com/shivam5992/textstat) is a tool that runs text through a few "reading level" measurements, and reports back a value that corresponds to the school grade level of the text. Below are the results of running textstat on the text of every episode.
-
 
 <div id="episode-reading-level" class="viz"></div>
 

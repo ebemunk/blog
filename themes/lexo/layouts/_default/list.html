@@ -2,6 +2,7 @@
 
 <div class="article-list">
 	{{ range $key, $val := where .Paginator.Pages "Params.hidden" "ne" true }}
+		{{ $image := resources.Get .Params.image }}
 		<article class="item">
 			<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 			<div class="tags-and-date">
@@ -10,7 +11,7 @@
 			</div>
 			<div class="split2">
 				<div class="image">
-					<img src="/{{ .Params.image }}" />
+					<img src="{{ ($image.Resize "600x webp q100").RelPermalink }}" alt="thumbnail image for {{ .Title }}" />
 				</div>
 				<div class="summary">
 					{{ if .Params.summary }}

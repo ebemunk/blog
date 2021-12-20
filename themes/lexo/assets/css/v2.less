@@ -1,0 +1,378 @@
+// out: v2.css, autoprefixer: last 2 versions
+
+@dark-grey: #282c34;
+@light-grey: lighten(@dark-grey, 5%);
+@yellow: #d19a66;
+@orange: #de5442;
+@darkOrange: darken(@orange, 12%);
+@purple: #c776df;
+@green: #7cb34b;
+@faded-gray: #9eabb3;
+@white: white;
+
+:root {
+  --color-dark-grey: @dark-grey;
+  --color-light-grey: @light-grey;
+  --color-yellow: @yellow;
+  --color-orange: @orange;
+  --color-dark-orange: @darkOrange;
+  --color-purple: @purple;
+  --color-green: @green;
+  --color-faded-gray: @faded-gray;
+  --color-white: @white;
+
+  --max-width: 40rem;
+
+  --font-heading: "Abril Fatface", serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+html {
+  height: 100%;
+  font-size: 18px;
+}
+
+body {
+  background: var(--color-dark-grey);
+  color: var(--color-white);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-family: var(--font-body);
+}
+
+header.site-header,
+header.site-header a {
+  height: 180px;
+  background: url("/img/wildpianoparty.png");
+  background-position: 50% -20px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-bottom: 4px solid black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-family: "Marcellus SC";
+  color: var(--color-dark-orange);
+  text-align: center;
+  text-decoration: none;
+  transition: color 400ms;
+
+  &:hover {
+    background-color: var(--color-light-grey);
+    color: var(--color-orange);
+  }
+}
+
+footer.site-footer {
+  height: 7em;
+  border-top: 4px solid black;
+
+  background: url("../img/wildpianoparty.png");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--color-light-grey);
+  }
+
+  p {
+    margin: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--color-faded-gray);
+  }
+}
+
+h1 {
+  color: var(--color-yellow);
+  margin: 1.5rem auto;
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  font-family: var(--font-heading);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-yellow);
+  margin: 1.3rem auto;
+  max-width: var(--max-width);
+  font-weight: 500;
+  font-family: var(--font-heading);
+}
+
+a,
+a:visited,
+a:active {
+  color: var(--color-white);
+  text-decoration: underline solid var(--color-green);
+  text-decoration-thickness: 3px;
+  transition: color 400ms;
+
+  &:hover {
+    color: var(--color-green);
+  }
+}
+
+blockquote {
+  box-sizing: border-box;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  border-left: 3px solid var(--color-white);
+  padding-left: 2rem;
+  font-style: italic;
+}
+
+.tags-and-date {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1.68rem;
+  font-size: 0.8rem;
+  color: darken(@white, 15%);
+}
+
+@media screen and (max-width: 40rem) {
+  article.article p,
+  article.article h2,
+  article.article h3,
+  article.article h4,
+  article.article h5,
+  article.article h6,
+  .share h4,
+  .article-list {
+    padding: 0 0.625rem;
+  }
+}
+
+article.article {
+  p {
+    max-width: var(--max-width);
+    margin: 0 auto 1.3rem auto;
+    font-size: 1rem;
+    line-height: 1.68rem;
+  }
+
+  ul {
+    max-width: var(--max-width);
+    margin: 0 auto 1.3rem auto;
+    list-style-type: square;
+  }
+
+  .footnotes {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    font-size: 0.625rem;
+    color: var(--color-faded-gray);
+    line-height: 1rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    hr {
+      border: 0.5px solid var(--color-faded-gray);
+    }
+  }
+}
+
+.share {
+  p {
+    &:extend(article.article p);
+  }
+}
+
+.article-list {
+  margin-bottom: 2rem;
+
+  .item {
+    h2 {
+      max-width: var(--max-width);
+      font-size: 2rem;
+      text-align: left;
+
+      a {
+        text-decoration: none;
+        color: var(--color-yellow);
+        transition: color;
+
+        &:hover {
+          color: var(--color-purple);
+        }
+      }
+    }
+
+    .tags-and-date {
+      text-align: left;
+      margin: -1rem auto 1rem auto;
+      font-size: 0.8rem;
+    }
+
+    .split2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .image {
+      width: 33%;
+      height: calc(33% / 1.5);
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .summary {
+      width: 66%;
+      line-height: 1.68rem;
+      padding: 0 0 0 1rem;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top-color: var(--color-faded-gray);
+    border-bottom: 1px solid var(--color-faded-gray);
+    height: 0.312rem;
+    position: relative;
+    overflow: visible;
+    margin: 2rem 0;
+
+    &:after {
+      content: "❦";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.5rem;
+      background: var(--color-dark-grey);
+    }
+
+    &:last-of-type {
+      display: none;
+    }
+  }
+}
+
+.see-also {
+  .see-also-items {
+    display: flex;
+    justify-content: center;
+
+    .suggestion {
+      flex-basis: 50%;
+      width: 50%;
+      height: calc(50% / 1.5);
+      max-width: 18rem;
+      margin: 1rem;
+      text-align: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0.5rem;
+      }
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.home {
+  section#thumbs {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      width: 33%;
+      height: calc(33% / 1.5);
+      position: relative;
+      color: var(--color-white);
+      overflow: hidden;
+      display: block;
+      margin-bottom: 0.5rem;
+
+      img {
+        transition: transform 400ms;
+        display: block;
+      }
+
+      .hover {
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        span {
+          font-size: 1.2rem;
+          display: block;
+          padding: 0.5rem;
+          font-family: var(--font-heading);
+        }
+
+        p {
+          padding: 0.5rem;
+          margin: 0;
+          display: none;
+        }
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.25);
+        }
+
+        p {
+          display: block;
+        }
+      }
+    }
+
+    @media all and (max-width: 425px) {
+      a {
+        flex-basis: 100%;
+        width: 100%;
+        height: calc(100% / 1.5);
+      }
+    }
+  }
+}
+
+h2.consult {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  font-family: var(--font-body);
+}

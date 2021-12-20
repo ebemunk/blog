@@ -2,10 +2,10 @@
 publishDate = "2021-04-03"
 title = "Last Words in Texas"
 slug = "last-words-in-texas"
-tags = ["data visualization", "long form"]
+tags = ["data visualization", "long form", "text mining"]
 image = "img/last-words-in-texas.png"
-related = ["2018-12-29-chess-part2.md", "2019-01-05-plane-crashes.md"]
 shortSummary = "Analyzing the last statements of 454 executed people in Texas."
+related = ["2018-12-29-chess-part2.md", "2019-01-05-plane-crashes.md"]
 responsive = true
 +++
 

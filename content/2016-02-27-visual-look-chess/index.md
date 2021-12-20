@@ -5,8 +5,8 @@ title = "A Visual Look at 2 Million Chess Games"
 slug = "a-visual-look-at-2-million-chess-games"
 tags = ["chess", "data visualization", "long form"]
 image = "img/visual-look.png"
-related = ["2018-12-29-chess-part2.md", "2019-01-05-plane-crashes.md"]
 shortSummary = "2 million chess games visualized."
+related = ["2018-12-29-chess-part2.md", "2019-01-05-plane-crashes.md"]
 +++
 
 I wanted to do something like this for a long time, and finally I think it's at a point where I can release this into the wild.
@@ -20,7 +20,7 @@ I also wanted to show off some of the software I wrote for this purpose, checkou
 Lets start with some general numbers. White wins a bit more often than Black, 39% to 30%, with the rest being draws. It's not very surprising, although I would have expected the difference to be less. There are also some negligible amount of unfinished games, and I couldn't discern what happened to those.
 
 <div id="wins-viz">
-		<span class="caption">Wins</span>
+	<span class="caption">Wins</span>
 </div>
 
 This generally seems to agree with all the other statistics out there. Nothing crazy going on here.

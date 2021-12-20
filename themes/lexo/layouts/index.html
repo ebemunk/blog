@@ -3,13 +3,18 @@
 <main class="home">
 	<section id="thumbs">
 		{{ range $key, $val := where .Paginator.Pages "Params.hidden" "ne" true }}
-			<a href="{{ .Permalink }}">
-				<img class="img" src="/{{ .Params.image }}" />
-				<div class="hover">
-					<span>{{ .Title }}</span>
-					<p>{{ .Params.shortSummary | markdownify }}</p>
-				</div>
-			</a>
+			{{ $image := resources.Get .Params.image }}
+			{{ if .Params.externalHref }}
+				<a href="{{ .Params.externalHref }}">
+			{{ else }}
+				<a href="{{ .Permalink }}">
+			{{ end }}
+					<img src="{{ ($image.Resize "600x webp q100").RelPermalink }}" alt="thumbnail image for {{ .Title }}" width="100%" height="100%" />
+					<div class="hover">
+						<span>{{ .Title }}</span>
+						<p>{{ .Params.shortSummary | markdownify }}</p>
+					</div>
+				</a>
 		{{ end }}
 	</section>
 </main>

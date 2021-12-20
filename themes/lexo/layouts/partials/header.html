@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		{{ if .Params.responsive }}
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		{{ else }}
@@ -12,29 +11,33 @@
 		<!-- facebook -->
 		<meta property="og:url" content="{{ .Permalink }}">
 		<meta property="og:type" content="website">
-		<meta property="og:title" content="{{ .Title }}">
 		<meta property="og:site_name" content="{{ .Site.Title }}">
 		<!-- twitter -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:url" content="{{ .Permalink }}">
-		<meta name="twitter:title" content="{{ .Title }}">
 		<meta name="twitter:creator" content="@{{ .Site.Params.author }}">
 		{{ if .IsPage }}
-			<meta name="description" content="{{ .Summary }}">
-			<meta property="og:description" content="{{ .Summary }}">
+			<meta property="og:title" content="{{ .Title }}">
+			<meta property="twitter:title" content="{{ .Title }}">
+			<meta name="description" content="{{ .Params.shortSummary }}">
+			<meta property="og:description" content="{{ .Params.shortSummary }}">
+			<meta name="twitter:description" content="{{ .Params.shortSummary }}">
 			<meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">
 			<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
 			<meta property="article:author" content="{{ .Site.Params.author }}">
-			<meta name="twitter:description" content="{{ .Summary }}">
 			{{ if .Params.image }}
-				<meta property="og:image" content="{{ .Params.image | absURL }}">
-				<meta name="twitter:image" content="{{ .Params.image | absURL }}">
+				{{ $image := resources.Get .Params.image }}
+				<meta property="og:image" content="{{ ($image.Resize "1200x webp q100").Permalink }}">
+				<meta name="twitter:image" content="{{ ($image.Resize "1200x webp q100").Permalink }}">
 			{{ end }}
+		{{ else }}
+			<meta property="og:title" content="{{ .Site.Title }}">
+			<meta name="twitter:title" content="{{ .Site.Title }}">
 		{{ end }}
 
-		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-		<link rel='stylesheet' href="//fonts.googleapis.com/css?family=Marcellus+SC">
-		<link rel="stylesheet" href="{{ .Site.BaseURL }}css/v2.css">
+		{{ with resources.Get "css/v2.css" | resources.Minify }}
+			<style>{{ .Content | safeCSS }}</style>
+		{{ end }}
 
 		{{ if .IsHome }}
 			<title>{{ .Site.Title }}</title>
