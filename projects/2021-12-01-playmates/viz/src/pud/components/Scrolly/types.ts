@@ -1,5 +1,4 @@
 import { Playmate } from '../../data/data'
-import { Paragraph, Quote, Title } from '../../type'
 
 export enum Step {
   Explainer = 'explainer',
@@ -52,11 +51,6 @@ export const ScatterSteps = [
 ]
 
 export const GroupingSteps = [Step.Hair, Step.Enhancements, Step.Ethnicity]
-
-export interface Section {
-  type: Step
-  value: (Paragraph | Title | Quote)[]
-}
 
 export interface PlaymateCircle {
   cx: number

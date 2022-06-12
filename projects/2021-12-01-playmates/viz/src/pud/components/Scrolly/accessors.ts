@@ -21,7 +21,7 @@ export default function accessors(
   switch (step) {
     case isInStepCategory(step, PointSteps):
       return [
-        d => d.year.toString(),
+        d => new Date(d.year, 0, 1),
         d => d.month.toString(),
         d => PLAYMATE_PINK,
       ]

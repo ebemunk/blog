@@ -37,10 +37,10 @@ export default function scales({
   switch (step) {
     case isInStepCategory(step, PointSteps): {
       return [
-        scalePoint()
-          .range([0, chartWidth])
-          .domain(data.map(d => d.year.toString()))
-          .padding(0.5),
+        scaleTime()
+          //@ts-ignore
+          .domain([new Date(1953, 11, 1), new Date(2020, 11, 1)])
+          .range([0, chartWidth]),
 
         scalePoint()
           .range([0, chartHeight])

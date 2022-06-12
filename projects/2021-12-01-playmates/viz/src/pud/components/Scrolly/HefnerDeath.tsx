@@ -16,7 +16,7 @@ export default function HefnerDeath({ sX, step }: { sX: any; step: Step }) {
     select(lineRef.current)
       .transition()
       .delay(0)
-      .duration(750)
+      .duration(1500)
       .attr('y2', chartHeight)
   }, [step])
 
@@ -26,7 +26,7 @@ export default function HefnerDeath({ sX, step }: { sX: any; step: Step }) {
         ref={ref}
         opacity={0}
         transform={`translate(${sX(
-          step === Step.Hefner ? '2017' : new Date(2017, 8, 27),
+          step === Step.Hefner ? new Date(2017, 0, 1) : new Date(2017, 8, 27),
         )},0)`}
       >
         <line ref={lineRef} x1={0} y1={0} x2={0} y2={0} stroke="white" />

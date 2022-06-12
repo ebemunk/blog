@@ -7,7 +7,7 @@ import { useStore } from '../../store'
 import { cm2in, kg2lb } from '../../util'
 import { Step } from './types'
 
-const transformUnits = (step: Step, units: string) => {
+export const transformUnits = (step: Step, units: string) => {
   return value => {
     switch (step) {
       case Step.Age:
