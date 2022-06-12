@@ -10,8 +10,10 @@ const render = (component: React.ReactElement, selector: string) => {
   ReactDOM.render(component, el)
 }
 
-import Scatter from './scatter/index'
-render(<Scatter />, '#viz-scatter')
+// import Scatter from './scatter/index'
+// render(<Scatter />, '#viz-scatter')
+import Scrolly from './pud/components/Scrolly'
+render(<Scrolly />, '#viz-scatter2')
 
 import BWH from './bwh/index'
 render(<BWH />, '#viz-bwh')
@@ -48,9 +50,6 @@ render(<MostAverageYears />, '#viz-mostaverage-years')
 
 import WHR from './whr/index'
 render(<WHR />, '#viz-whr')
-
-import MobileWarning from './mobilewarning/index'
-render(<MobileWarning />, '#mobile-warning')
 
 import Poster from './scatter/poster'
 document.querySelectorAll('div[data-stage]').forEach(el => {

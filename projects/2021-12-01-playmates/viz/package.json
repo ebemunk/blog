@@ -13,7 +13,7 @@
     "@babel/preset-env": "7.11.0",
     "@babel/preset-react": "7.10.4",
     "@swc/core": "^1.2.82",
-    "@types/d3": "^7.0.0",
+    "@types/d3": "^7.4.0",
     "@types/d3-hexbin": "^0.2.3",
     "@types/d3-scale-chromatic": "^2.0.0",
     "@types/node": "^14.14.6",
@@ -28,6 +28,7 @@
     "style-loader": "^0.23.1",
     "swc-loader": "^0.1.14",
     "ts-loader": "^8.0.2",
+    "ts-node": "^10.8.1",
     "typescript": "^3.9.7",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
@@ -37,7 +38,7 @@
     "@popperjs/core": "^2.9.3",
     "clsx": "^1.1.1",
     "core-js": "3",
-    "d3": "^7.0.1",
+    "d3": "^7.4.4",
     "d3-hexbin": "^0.2.2",
     "d3-scale-chromatic": "^2.0.0",
     "lodash": "^4.17.20",
@@ -58,6 +59,7 @@
     "us-atlas": "^3.0.0",
     "use-debounce": "^7.0.0",
     "vizlib": "../vizlib",
-    "world-atlas": "^2.0.2"
+    "world-atlas": "^2.0.2",
+    "zustand": "^4.0.0-rc.1"
   }
 }

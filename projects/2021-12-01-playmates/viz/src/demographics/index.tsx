@@ -114,8 +114,10 @@ const Pie = ({ data, title, subtitle = '' }) => {
       <g transform={`translate(${ctx.chartWidth / 2},${ctx.chartHeight / 2})`}>
         {arcsPrint.map(d => (
           <g key={d.data.label}>
+            {/*@ts-ignore*/}
             <path d={arc(d)} fill={color(d.data.label)} />
             <text
+              //@ts-ignore
               transform={`translate(${arc.centroid(d)})`}
               textAnchor="middle"
               dominantBaseline="hanging"
@@ -133,10 +135,13 @@ const Pie = ({ data, title, subtitle = '' }) => {
         ))}
         {arcsOnline.map(d => (
           <g key={d.data.label} transform={`rotate(180) translate(0,-10)`}>
+            {/*@ts-ignore*/}
             <path d={arc(d)} fill={color(d.data.label)} />
             <text
               transform={`rotate(180,${arc
+                //@ts-ignore
                 .centroid(d)
+                //@ts-ignore
                 .join(',')}) translate(${arc.centroid(d)})`}
               textAnchor="middle"
               dominantBaseline="hanging"
