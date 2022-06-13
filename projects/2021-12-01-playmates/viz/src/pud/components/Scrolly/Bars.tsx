@@ -12,7 +12,6 @@ import {
 } from 'd3'
 import React, { SVGProps, useEffect, useRef } from 'react'
 import { Axis } from 'vizlib'
-
 import { data, Playmate } from '../../data/data'
 import { useWindowSize, useYearTickValues } from '../../hooks'
 import { CAccessor, XAccessor, YAccessor } from './accessors'

@@ -1,15 +1,15 @@
-import { Step } from './types'
-import loessData from '../../data/loess.json'
-import { useStore } from '../../store'
-import { formatFeetIn } from '../../util'
 import { format } from 'd3'
-import { transformUnits } from './LOESS'
 import React from 'react'
 import { TiArrowDownThick, TiArrowUpThick } from 'react-icons/ti'
+import { Store } from '../../../store'
+import loessData from '../../data/loess.json'
+import { formatFeetIn } from '../../util'
+import { transformUnits } from './LOESS'
+import { Step } from './types'
 import { STEP_UNITS } from './util'
 
 const AvgChange = ({ step }: { step: Step }) => {
-  const units = useStore(state => state.units)
+  const units = Store.useState(state => state.units)
   const ld = loessData.find(
     d =>
       d.key ===

@@ -6,7 +6,6 @@ import {
   transition,
 } from 'd3'
 import React, { useEffect, useRef } from 'react'
-
 import { Playmate } from '../../data/data'
 
 type Data = (HierarchyCircularNode<Playmate> & {

@@ -13,7 +13,7 @@ const render = (component: React.ReactElement, selector: string) => {
 // import Scatter from './scatter/index'
 // render(<Scatter />, '#viz-scatter')
 import Scrolly from './pud/components/Scrolly'
-render(<Scrolly />, '#viz-scatter2')
+render(<Scrolly />, '#viz-scatter')
 
 import BWH from './bwh/index'
 render(<BWH />, '#viz-bwh')
@@ -51,19 +51,6 @@ render(<MostAverageYears />, '#viz-mostaverage-years')
 import WHR from './whr/index'
 render(<WHR />, '#viz-whr')
 
-import Poster from './scatter/poster'
-document.querySelectorAll('div[data-stage]').forEach(el => {
-  ReactDOM.render(<Poster stage={el.attributes['data-stage'].value} />, el)
-})
-
-render(
-  <PlaymateTooltip data={data.find(d => d.name === 'Dalene Kurtis')} pinned />,
-  '#viz-pmexample',
-)
-
-import { selectAll } from 'd3'
-selectAll('.article a').attr('target', '_blank')
-
 //@ts-ignore
 window.showFps = function () {
   var script = document.createElement('script')
@@ -87,10 +74,7 @@ if (process.env.NODE_ENV === 'development') {
 
 import { Store } from './store'
 import { format } from 'd3'
-import PlaymateTooltip from './scatter/PlaymateTooltip'
-const cm2in = num => (num ? num / 2.54 : null)
-const in2cm = num => (num ? num * 2.54 : null)
-const kg2lb = num => (num ? num / 0.45359237 : null)
+import { cm2in } from './pud/util'
 
 Store.subscribe(
   s => s.units,

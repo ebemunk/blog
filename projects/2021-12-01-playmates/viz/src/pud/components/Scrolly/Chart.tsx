@@ -1,9 +1,7 @@
 import { select } from 'd3'
 import React, { lazy, Suspense, useEffect, useRef } from 'react'
-
 import { usePlotContext } from 'vizlib'
-import { useIsMetric, useStore } from '../../store'
-
+import { Store, useIsMetric } from '../../../store'
 import { useWindowSize } from '../../hooks'
 import { formatFeetIn } from '../../util'
 import { XAxis, YAxis } from './Axis'
@@ -22,7 +20,7 @@ const LOESS = lazy(() => import('./LOESS'))
 export default function Chart({ step }: { step: Step }) {
   const { chartHeight, chartWidth } = usePlotContext()
   const { scales, data, accessors } = useData(step)
-  const units = useStore(state => state.units)
+  const units = Store.useState(state => state.units)
   const isMetric = useIsMetric()
 
   const ageRef = useRef()

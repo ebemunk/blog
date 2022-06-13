@@ -49,7 +49,7 @@ const getCutouts = (
     case Step.NoIssue:
       return [
         {
-          cx: scales.sX('1955'),
+          cx: scales.sX(new Date(1955, 0, 1)),
           cy: scales.sY('2'),
           r: 10,
           key: 'noissue',

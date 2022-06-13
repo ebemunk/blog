@@ -1,9 +1,8 @@
 import { area, line, select } from 'd3'
 import React, { useLayoutEffect, useRef } from 'react'
-
+import { Store } from '../../../store'
 import { data } from '../../data/data'
 import loessData from '../../data/loess.json'
-import { useStore } from '../../store'
 import { cm2in, kg2lb } from '../../util'
 import { Step } from './types'
 
@@ -32,7 +31,7 @@ export default function LOESS({
   sX: (d: any) => number
   sY: (d: any) => number
 }) {
-  const units = useStore(state => state.units)
+  const units = Store.useState(state => state.units)
   const ld = loessData.find(
     d =>
       d.key ===
@@ -87,7 +86,7 @@ export default function LOESS({
       <path
         ref={errRef}
         style={{
-          fill: 'gray',
+          fill: 'cyan',
         }}
         d={area<[number, number, number]>()
           .x(d => d[0])

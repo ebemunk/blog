@@ -1,7 +1,6 @@
+import { bin, extent, scaleLinear } from 'd3'
 import React from 'react'
-import { bin, extent, scaleLinear, schemeTableau10 } from 'd3'
-import { usePlotContext, Svg } from 'vizlib'
-
+import { Svg, usePlotContext } from 'vizlib'
 import { data, Playmate } from '../../data/data'
 import { PLAYMATE_PINK } from '../../util'
 

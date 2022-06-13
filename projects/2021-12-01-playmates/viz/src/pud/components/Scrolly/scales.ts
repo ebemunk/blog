@@ -1,20 +1,19 @@
-import { identity } from 'remeda/dist/es/identity'
 import {
-  scalePoint,
-  scaleTime,
-  scaleLinear,
-  scaleOrdinal,
-  range,
   extent,
   group,
   hierarchy,
   pack,
+  range,
+  scaleLinear,
+  scaleOrdinal,
+  scalePoint,
+  scaleTime,
   schemeSpectral,
 } from 'd3'
-
+import { identity } from 'remeda'
 import { Breasts, data, Ethnicity, Hair, Playmate } from '../../data/data'
-import { PointSteps, Step } from './types'
 import { CAccessor, XAccessor, YAccessor } from './accessors'
+import { PointSteps, Step } from './types'
 import { isInStepCategory } from './util'
 
 export default function scales({
@@ -39,7 +38,7 @@ export default function scales({
       return [
         scaleTime()
           //@ts-ignore
-          .domain([new Date(1953, 11, 1), new Date(2020, 11, 1)])
+          .domain([new Date(1953, 0, 1), new Date(2020, 11, 1)])
           .range([0, chartWidth]),
 
         scalePoint()

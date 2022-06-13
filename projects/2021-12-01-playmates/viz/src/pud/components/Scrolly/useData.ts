@@ -1,9 +1,8 @@
 import { useMemo } from 'react'
 import { usePlotContext } from 'vizlib'
-
+import { Store } from '../../../store'
 import { data } from '../../data/data'
 import { useWindowSize } from '../../hooks'
-import { useStore } from '../../store'
 import accessors from './accessors'
 import scales from './scales'
 import { PlaymateCircle, PointSteps, Step } from './types'
@@ -12,7 +11,7 @@ import { isInStepCategory } from './util'
 export default function useData(step: Step) {
   const ws = useWindowSize()
   const { chartHeight, chartWidth } = usePlotContext()
-  const units = useStore(s => s.units)
+  const units = Store.useState(s => s.units)
   const [xA, yA, cA] = useMemo(() => accessors(step, units), [step])
   const [sX, sY, sC, extras] = useMemo(
     () =>

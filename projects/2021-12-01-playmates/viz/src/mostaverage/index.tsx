@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import * as d3 from 'd3'
 import { hot } from 'react-hot-loader'
 import { data as rawData } from '../data'
-import PlaymateTooltip from '../scatter/PlaymateTooltip'
 import { uniqBy } from 'remeda'
 import { Playmate } from '../types'
 import { useState } from 'react'
@@ -153,6 +152,7 @@ import InesRau from './Ines-Rau.jpg'
 import LizStewart from './Liz-Stewart.jpg'
 import PhyllisColeman from './Phyllis-Coleman.jpg'
 import SallyTodd from './Sally-Todd.jpg'
+import PlaymateTooltip from '../pud/components/PlaymateTooltip'
 
 const Images = {
   'Ali Chanel': AliChanel,

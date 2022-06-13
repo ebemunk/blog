@@ -1,7 +1,6 @@
-import { identity } from 'remeda/dist/es/identity'
-
+import { identity } from 'remeda'
+import { Units } from '../../../store'
 import { Breasts, Ethnicity, Hair, Playmate } from '../../data/data'
-import { Units } from '../../store'
 import { cm2in, kg2lb, PLAYMATE_PINK } from '../../util'
 import { PointSteps, Step } from './types'
 import { isInStepCategory } from './util'
@@ -9,8 +8,6 @@ import { isInStepCategory } from './util'
 export type XAccessor = (d: Playmate) => number | string | Playmate | Date
 export type YAccessor = (d: Playmate) => number | string | Playmate
 export type CAccessor = (d: Playmate) => string
-
-const names = ['Marilyn Monroe', 'Jennifer Jackson', 'Ines Rau', 'Marsha Elle']
 
 export default function accessors(
   step: Step,

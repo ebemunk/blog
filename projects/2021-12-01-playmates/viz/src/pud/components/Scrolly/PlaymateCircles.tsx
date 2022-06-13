@@ -1,6 +1,5 @@
-import * as d3 from 'd3'
+import { select, transition } from 'd3'
 import React, { useEffect, useRef } from 'react'
-
 import { PlaymateCircle } from './types'
 
 export default function PlaymateCircles({
@@ -16,9 +15,9 @@ export default function PlaymateCircles({
   useEffect(() => {
     if (!ref.current) return
 
-    const t = d3.transition().duration(transitionDuration)
+    const t = transition().duration(transitionDuration)
 
-    d3.select(ref.current)
+    select(ref.current)
       .selectAll<SVGCircleElement, PlaymateCircle>('circle')
       .data(data, d => d.datum.name)
       .join(
@@ -26,9 +25,7 @@ export default function PlaymateCircles({
           const entered = enter
             .append('circle')
             .attr('opacity', 0)
-            .attr('fill', d =>
-              d.datum.name === 'Lenna Sjooblom' ? 'var(--color-lenna)' : d.fill,
-            )
+            .attr('fill', d => d.fill)
             .attr('cx', d => d.cx)
             .attr('cy', d => d?.cy ?? 0)
             .attr('r', r)
@@ -53,11 +50,7 @@ export default function PlaymateCircles({
               .transition(t)
               .attr('cx', d => d.cx)
               .attr('cy', d => d.cy)
-              .attr('fill', d =>
-                d.datum.name === 'Lenna Sjooblom'
-                  ? 'var(--color-lenna)'
-                  : d.fill,
-              )
+              .attr('fill', d => d.fill)
               .attr('opacity', 1),
           ),
         exit =>
@@ -73,7 +66,7 @@ export default function PlaymateCircles({
 
   useEffect(() => {
     const hoverListener = evt => {
-      d3.select(ref.current)
+      select(ref.current)
         .selectAll('circle')
         .select(function (this: SVGCircleElement) {
           //@ts-ignore stroke exists i promise
@@ -84,7 +77,7 @@ export default function PlaymateCircles({
       if (!evt.detail) return
 
       const key = `${evt.detail.name}-${evt.detail.year}-${evt.detail.month}`
-      d3.select(ref.current)
+      select(ref.current)
         .select(`[data-playmate="${key}"]`)
         .attr('stroke', 'white')
     }

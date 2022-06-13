@@ -3,9 +3,9 @@ import { createPortal } from 'react-dom'
 import { usePopper } from 'react-popper'
 import * as d3 from 'd3'
 
-import PlaymateTooltip from '../scatter/PlaymateTooltip'
 import { Playmate } from '../types'
 import { PLAYMATE_PINK } from '../util'
+import PlaymateTooltip from '../pud/components/PlaymateTooltip'
 
 const Circle = ({ d }) => {
   const [pinned, setPinned] = useState(false)

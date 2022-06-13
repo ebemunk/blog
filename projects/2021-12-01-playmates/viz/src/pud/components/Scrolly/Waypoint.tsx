@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react'
 import { Waypoint as ReactWaypoint } from 'react-waypoint'
-
 import { Step } from './types'
 
 export default function Waypoint({
@@ -30,6 +29,7 @@ export default function Waypoint({
           marginBottom: '90vh',
           pointerEvents: 'all',
           padding: '0 1rem',
+          background: 'rgba(40, 44, 52, 0.7)',
         }}
       >
         <div

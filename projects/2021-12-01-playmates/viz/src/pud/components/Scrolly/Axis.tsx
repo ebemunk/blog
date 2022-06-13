@@ -1,6 +1,5 @@
 import React, { ComponentProps } from 'react'
 import { Axis } from 'vizlib'
-
 import { useYearTickValues } from '../../hooks'
 import { PointSteps, ScatterSteps, Step } from './types'
 import { isInStepCategory, MONTHS } from './util'

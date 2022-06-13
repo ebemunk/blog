@@ -47,47 +47,7 @@ We'll be talking about body measurements, and in this article you can pick which
 
 <div id="viz-units"></div>
 
-<div data-scrolly="hair">
-
-Without looking at the data, my bias would've been that Playmates would be majority blond. It's not the case, as there is almost the same amount of blond and brown hair.
-
-That said, many sources claim that blond hair is much rarer than brown or black hair, by an order of magnitude. If that's true, then blondes are definitely overrepresented among Playmates.
-
-</div>
-
-<div data-scrolly="ethnicity">
-
-Despite featuring a Black Playmate early in their publication, and receiving backlash for it, Playboy undoubtedly prefers white women, with a 90% majority.
-
-Too bad I have no data on the ethnicity of Playboy's demographics, but I would bet money that this Playmate distribution closely mirrors reader ethnicities as well.
-
-Also despite their progressive image, only 2019 and 2020 had 40% non-white Playmates, the most it has ever been in its 67-year history.
-
-</div>
-
-<div data-scrolly="breasts">
-
-Yes, someone actually recorded this data..
-
-This was another surprise for me. You can clearly see that enhanced
-breasts came into prominence starting around 1985 and peaked around
-2010s before fading away again.
-
-</div>
-
-<div data-scrolly="cup">
-
-US average is reported to be DD cup. C cup is the most common among Playmates, but we see representation from all different ends of the scale.
-
-I'm not quite sure how these data points were gathered to be honest,
-so approach with healthy skepticism.
-
-</div>
-
 <div id="viz-scatter"></div>
-<div id="viz-scatter2"></div>
-
-This was a high-level look into the patterns and quirks of our Playmate population. Now let's dig into some specifics which I found to be relevant in many respects. Before we proceed, you can once again make a selection to see the results in your preferred units.
 
 <div id="viz-units2"></div>
 

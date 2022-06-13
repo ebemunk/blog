@@ -1,9 +1,8 @@
 import { Delaunay, pointer } from 'd3'
 import React, { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { usePopper } from 'react-popper'
 import { usePlotContext } from 'vizlib'
-
-import { createPortal } from 'react-dom'
 import { Playmate } from '../../data/data'
 import PlaymateTooltip from '../PlaymateTooltip'
 import { PlaymateCircle, Step } from './types'

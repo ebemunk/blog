@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { ResponsiveSvg } from 'vizlib'
+import Link from '../Link'
+import Measurement from '../Measurement'
 import AvgChange from './AvgChange'
-
 import Chart from './Chart'
 import Highlights from './Highlights'
 import { PointSteps, Step } from './types'
@@ -36,6 +37,7 @@ export default function Scrolly() {
             pointerEvents: 'none',
             display: 'flex',
             flexDirection: 'column',
+            marginLeft: '70px',
           }}
           className="scrolly-text"
         >
@@ -59,10 +61,10 @@ export default function Scrolly() {
             total={totalSlides}
           >
             <p>
-              <strong>Marilyn Monroe</strong> was the first-ever “Sweetheart of
-              the Month” before the introduction of the Playmate of the Month
+              <strong>Marilyn Monroe</strong> was the first-ever "Sweetheart of
+              the Month" before the introduction of the Playmate of the Month
               title. Hugh Hefner had bought previously unpublished nude photos
-              of her for a calendar and picked the “sexiest” picture for the
+              of her for a calendar and picked the "sexiest" picture for the
               first centerfold. Although she was not the copyright holder, Ms.
               Monroe did not consent to those images' use in the magazine, and
               she reportedly was not compensated.
@@ -82,13 +84,9 @@ export default function Scrolly() {
             <p>
               In March of 1955, the staff couldn't meet the deadlines to deliver
               the issue,{' '}
-              <a
-                href="https://web.archive.org/web/20060326233118/http://www.playboy.com/worldofplayboy/faq/collecting.html#4"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://web.archive.org/web/20060326233118/http://www.playboy.com/worldofplayboy/faq/collecting.html#4">
                 so nothing was released
-              </a>
+              </Link>
               .
             </p>
           </Waypoint>
@@ -109,6 +107,7 @@ export default function Scrolly() {
             Janet Pilgrim: 3<br />
             Margie Harrison: 2<br />
             Marguerite Empey: 2<br />
+            <br />
           </Waypoint>
 
           <Waypoint
@@ -136,9 +135,9 @@ export default function Scrolly() {
 
             <p>
               In addition, one set of twins,{' '}
-              <strong>Kristina and Karissa Shannon</strong>
-              shared the same centerfold, but were chosen Playmates for July and
-              August of 2009 on the same issue.
+              <strong>Kristina and Karissa Shannon</strong> shared the same
+              centerfold, but were chosen Playmates for July and August of 2009
+              on the same issue.
             </p>
           </Waypoint>
 
@@ -164,37 +163,25 @@ export default function Scrolly() {
           >
             <p>
               <strong>Jennifer Jackson</strong>,{' '}
-              <a
-                href="https://www.huffpost.com/entry/exclusive-interview-playmate-jennifer-jackson_n_980502"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://www.huffpost.com/entry/exclusive-interview-playmate-jennifer-jackson_n_980502">
                 model and now a social worker from Chicago
-              </a>
+              </Link>
               , was the first Black Playmate ever to be featured in the
               magazine.
             </p>
             <p>
               This was a time at the height of the Civil Rights Movement, and
               the{' '}
-              <a
-                href="https://en.wikipedia.org/wiki/Civil_rights_movement#Voting_Rights_Act_of_1965"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://en.wikipedia.org/wiki/Civil_rights_movement#Voting_Rights_Act_of_1965">
                 Voting Rights Act of 1965
-              </a>{' '}
+              </Link>{' '}
               would be introduced only months later.
             </p>
             <p>
               Years later, Playboy would{' '}
-              <a
-                href="https://twitter.com/Playboy/status/921155223745306624"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://twitter.com/Playboy/status/921155223745306624">
                 tweet some of the angry letters they received
-              </a>{' '}
+              </Link>{' '}
               after featuring a Black Playmate, as well as the support.
             </p>
           </Waypoint>
@@ -209,12 +196,9 @@ export default function Scrolly() {
               <strong>Karen McDougal</strong> made headlines when the story of
               her alleged affair with Donald Trump broke in the media 4 days
               before the 2016 election.{' '}
-              <a
-                href="https://www.newyorker.com/news/news-desk/donald-trump-a-playboy-model-and-a-system-for-concealing-infidelity-national-enquirer-karen-mcdougal"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://www.newyorker.com/news/news-desk/donald-trump-a-playboy-model-and-a-system-for-concealing-infidelity-national-enquirer-karen-mcdougal">
                 Read more about that
-              </a>{' '}
+              </Link>{' '}
               in The New Yorker.
             </p>
           </Waypoint>
@@ -226,14 +210,10 @@ export default function Scrolly() {
             total={totalSlides}
           >
             <p>
-              In November 2017, <strong>Ines Rau</strong> 
-              <a
-                href="https://edition.cnn.com/2017/10/20/entertainment/ines-rau-playboy/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              In November 2017, <strong>Ines Rau</strong>{' '}
+              <Link href="https://edition.cnn.com/2017/10/20/entertainment/ines-rau-playboy/index.html">
                 became the first openly transgender Playmate
-              </a>{' '}
+              </Link>{' '}
               in the magazine's history.
             </p>
             <p>
@@ -242,13 +222,9 @@ export default function Scrolly() {
             </p>
             <p>
               After backlash, Playboy{' '}
-              <a
-                href="https://twitter.com/Playboy/status/921155850269536256"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://twitter.com/Playboy/status/921155850269536256">
                 tweeted their support
-              </a>{' '}
+              </Link>{' '}
               for this decision with the caption: "Standing on the right side of
               history."
             </p>
@@ -266,14 +242,10 @@ export default function Scrolly() {
               <em>proximal femoral focal deficiency</em>, which required the
               amputation of her right leg, and she's had a prosthetic leg since
               she was 5 years old. After struggling with insecurity for most of
-              her life — she didn't wear shorts until she was 23 —{' '}
-              <a
-                href="https://www.foxnews.com/entertainment/playboy-playmate-marsha-elle"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              her life - she didn't wear shorts until she was 23 -{' '}
+              <Link href="https://www.foxnews.com/entertainment/playboy-playmate-marsha-elle">
                 she became the first amputee Playmate
-              </a>
+              </Link>
               .
             </p>
           </Waypoint>
@@ -299,13 +271,9 @@ export default function Scrolly() {
             <h2>End of an Era</h2>
             <p>
               Hugh Hefner passed away on September 27, 2017. It's{' '}
-              <a
-                href="https://money.cnn.com/2017/09/27/media/hugh-hefner/index.html#:~:text=Hefner%20helped%20personally%20select%20monthly%20%22Playmates%2C%22"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://money.cnn.com/2017/09/27/media/hugh-hefner/index.html#:~:text=Hefner%20helped%20personally%20select%20monthly%20%22Playmates%2C%22">
                 reported
-              </a>{' '}
+              </Link>{' '}
               that he was personally involved in picking Playmates of the Month,
               and the data below suggests that the characteristics of who gets
               selected have started changing significantly after his death.
@@ -313,21 +281,13 @@ export default function Scrolly() {
             <p>
               While Hefner had his fans, it is known that many of those who
               worked with him{' '}
-              <a
-                href="https://www.vice.com/en/article/bjvyvw/dont-mourn-for-hugh-hefner"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://www.vice.com/en/article/bjvyvw/dont-mourn-for-hugh-hefner">
                 had harrowing experiences
-              </a>
+              </Link>
               , and{' '}
-              <a
-                href="https://www.usmagazine.com/celebrity-news/pictures/every-former-playmate-whos-spoken-out-against-hugh-hefner/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://www.usmagazine.com/celebrity-news/pictures/every-former-playmate-whos-spoken-out-against-hugh-hefner/">
                 a lot of Playmates have spoken out against him
-              </a>
+              </Link>
               .
             </p>
           </Waypoint>
@@ -348,13 +308,9 @@ export default function Scrolly() {
               Note the highlighted area in red. Eight Playmates were under the
               age of 18 when photographed. By today's laws, this would be a
               felony. In the 1950s, Hefner was taken to court for{' '}
-              <a
-                href="https://www.newyorker.com/magazine/2006/03/20/the-girls-next-door-2"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://www.newyorker.com/magazine/2006/03/20/the-girls-next-door-2">
                 contributing to the delinquency of a minor
-              </a>
+              </Link>
               . Still, the case was dismissed as the child had written
               permission from her mother.
             </p>
@@ -375,14 +331,10 @@ export default function Scrolly() {
             </p>
             <p>
               The average height of women in the US was{' '}
-              <span data-cm={162.6}>5'4"</span>{' '}
-              <a
-                href="https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Measurement metric="162.6 cm" imperial={`5'4"`} />{' '}
+              <Link href="https://www.cdc.gov/nchs/data/series/sr_03/sr03-046-508.pdf">
                 between 2015-2018 [pdf]
-              </a>
+              </Link>
             </p>
           </Waypoint>
 
@@ -401,15 +353,11 @@ export default function Scrolly() {
               certain size.
             </p>
             <p>
-              <strong>Ali Chanel</strong>, dubbed “Playboy's curviest Playmate,”
+              <strong>Ali Chanel</strong>, dubbed "Playboy's curviest Playmate,"
               is regarded as a champion of body positivity and has{' '}
-              <a
-                href="https://www.foxnews.com/entertainment/ali-chanel-playboy-playmate"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://www.foxnews.com/entertainment/ali-chanel-playboy-playmate">
                 encouraged
-              </a>{' '}
+              </Link>{' '}
               others to accept their bodies as they are.
             </p>
           </Waypoint>
@@ -450,20 +398,14 @@ export default function Scrolly() {
               The most significant change among body measurements is the waist,
               with an <strong>11% increase</strong>. Playmates with larger waist
               measurements are featured more often after 2017. About 13% of the
-              women were above{' '}
-              <span data-cm={71.2} only-inches>
-                28”
-              </span>{' '}
+              women were above <Measurement metric="71.2 cm" imperial={`28"`} />{' '}
               after Hefner's death, compared to &lt;1% beforehand.
             </p>
 
             <p>
               Even with that, the average waist measurement of women in the US
-              was{' '}
-              <span data-cm={92.1} only-inches>
-                36"
-              </span>{' '}
-              between 2015-2018.{' '}
+              was <Measurement metric="92.1 cm" imperial={`36"`} /> between
+              2015-2018.{' '}
               <strong>
                 No Playmate has ever been at the US average for waist
                 measurement
@@ -512,15 +454,11 @@ export default function Scrolly() {
               the magazine. Black hair, however, is underrepresented.
             </p>
             <p>
-              Especially in the US, having light hair has become the “beauty
-              standard,” with{' '}
-              <a
-                href="https://books.google.ca/books?id=3asbkganD14C&q=What+percent+of+adults+are+naturally+blond%3F&pg=PA52&redir_esc=y#v=onepage&q=What%20percent%20of%20adults%20are%20naturally%20blond%3F&f=false"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              Especially in the US, having light hair has become the "beauty
+              standard," with{' '}
+              <Link href="https://books.google.ca/books?id=3asbkganD14C&q=What+percent+of+adults+are+naturally+blond%3F&pg=PA52&redir_esc=y#v=onepage&q=What%20percent%20of%20adults%20are%20naturally%20blond%3F&f=false">
                 48% of White college women dyeing their hair blond or blonder
-              </a>
+              </Link>
               , higher than any other color. In fact, a survey in 2003 reported
               that only 4% of adults in the US are naturally blond. So we see a
               considerable overrepresentation of blonds in the magazine. This
@@ -558,21 +496,17 @@ export default function Scrolly() {
             <h2>Ethnicity</h2>
             <p>
               Historically, the magazine has reinforced the{' '}
-              <a
-                href="https://www.npr.org/sections/codeswitch/2019/02/06/685506578/is-beauty-in-the-eyes-of-the-colonizer"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://www.npr.org/sections/codeswitch/2019/02/06/685506578/is-beauty-in-the-eyes-of-the-colonizer">
                 colonizer perspective
-              </a>{' '}
-              and constructs the “All-American Beauty” as a blond, skinny, white
+              </Link>{' '}
+              and constructs the "All-American Beauty" as a blond, skinny, white
               woman, with 90% of its Playmates being white. It featured a single
               Black woman for the first time in 1965, and it did not feature a
               Black woman again for four years.
             </p>
             <p>
               Playboy's exclusion of BIPOC individuals from its pages impacts
-              more than just its readers. The “blast radius” of its influence
+              more than just its readers. The "blast radius" of its influence
               continues to negatively impact BIPOC communities, especially young
               women, and will likely continue to affect them for years to come.
             </p>
@@ -580,24 +514,16 @@ export default function Scrolly() {
               Also, despite their progressive image, only 2019 and 2020 had 40%
               non-white Playmates, the most it has ever been in its 67-year
               history. In fact, these are the only years that reflect the{' '}
-              <a
-                href="https://en.wikipedia.org/wiki/Race_and_ethnicity_in_the_United_States#:~:text=2019%20U.S.%20Census%20Bureau%20Estimates%5B15%5D"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://en.wikipedia.org/wiki/Race_and_ethnicity_in_the_United_States#:~:text=2019%20U.S.%20Census%20Bureau%20Estimates%5B15%5D">
                 actual population distribution in the United States
-              </a>
+              </Link>
               .
             </p>
             <p>
               In contrast, Hefner{' '}
-              <a
-                href="https://people.com/music/hugh-hefner-dead-playboy-after-dark-music-performances/#:~:text=Mostly%20importantly%2C%20the%20publishing%20giant%20used%20his%20outlet%20to%20give%20equal%20airtime%20to%20African%2DAmerican%20artists%2C%20allowing%20Ike%20and%20Tina%20Turner%2C%20James%20Brown%2C%20B.B.%20King%20and%20Motown%E2%80%99s%20Marvin%20Gaye%20and%20Smokey%20Robinson%20an%20all%2Dtoo%2Drare%20opportunity%20to%20share%20their%20talent%20and%20message%20with%20the%20country."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://people.com/music/hugh-hefner-dead-playboy-after-dark-music-performances/#:~:text=Mostly%20importantly%2C%20the%20publishing%20giant%20used%20his%20outlet%20to%20give%20equal%20airtime%20to%20African%2DAmerican%20artists%2C%20allowing%20Ike%20and%20Tina%20Turner%2C%20James%20Brown%2C%20B.B.%20King%20and%20Motown%E2%80%99s%20Marvin%20Gaye%20and%20Smokey%20Robinson%20an%20all%2Dtoo%2Drare%20opportunity%20to%20share%20their%20talent%20and%20message%20with%20the%20country.">
                 gave equal airtime
-              </a>{' '}
+              </Link>{' '}
               to Black artists in his TV show "Playboy After Dark."
             </p>
           </Waypoint>

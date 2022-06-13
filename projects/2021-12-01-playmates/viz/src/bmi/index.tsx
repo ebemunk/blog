@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
 import intersect from 'path-intersection'
-
 import { data as rawData } from '../data'
 import { Axis, ResponsiveSvg, Svg, usePlotContext } from 'vizlib'
-import PlaymateCircles from '../scatter/PlaymateCircles'
 import { hot } from 'react-hot-loader'
 import { Store } from '../store'
-import { formatFeetIn } from '../scatter/util'
 import { uniqBy } from 'remeda'
+import PlaymateCircles from '../pud/components/Scrolly/PlaymateCircles'
+import { formatFeetIn } from '../pud/util'
 
 const data = rawData.filter(d => d.weightKG !== null && d.heightCM !== null)
 

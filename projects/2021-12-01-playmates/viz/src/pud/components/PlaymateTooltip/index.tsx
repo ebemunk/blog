@@ -1,12 +1,9 @@
 import React from 'react'
-
+import { useIsMetric } from '../../../store'
 import { Breasts, Ethnicity, Hair, Playmate } from '../../data/data'
-import { useStore } from '../../store'
 import { cm2in, formatFeetIn, kg2lb } from '../../util'
-// import Paragraphs from "../Paragraphs";
 import { MONTHS_FULL } from '../Scrolly/util'
 import TooltipHistogram from './TooltipHistogram'
-// import doc from "../../data/doc.json";
 
 export default function PlaymateTooltip({
   data,
@@ -15,8 +12,7 @@ export default function PlaymateTooltip({
   data: Playmate
   pinned: boolean
 }) {
-  const units = useStore(state => state.units)
-  const isMetric = units === 'metric'
+  const isMetric = useIsMetric
 
   const hide = [
     'Diane Hunter',
@@ -79,16 +75,7 @@ export default function PlaymateTooltip({
         </div>
       )}
 
-      {/* {pinned && data.name === "Lenna Sjooblom" && (
-        <Paragraphs
-          // @ts-ignore
-          data={doc.lenna}
-          style={{
-            fontSize: "0.8rem",
-          }}
-        />
-      )} */}
-      {pinned && data.name !== 'Lenna Sjooblom' && (
+      {pinned && (
         <>
           <div
             style={{
