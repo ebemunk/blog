@@ -10,13 +10,11 @@ const render = (component: React.ReactElement, selector: string) => {
   ReactDOM.render(component, el)
 }
 
-// import Scatter from './scatter/index'
-// render(<Scatter />, '#viz-scatter')
 import Scrolly from './pud/components/Scrolly'
 render(<Scrolly />, '#viz-scatter')
 
-import BWH from './bwh/index'
-render(<BWH />, '#viz-bwh')
+import Hourglass from './pud/components/Hourglass'
+render(<Hourglass />, '#viz-bwh')
 
 import Units from './units/index'
 render(<Units />, '#viz-units')
