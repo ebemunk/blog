@@ -41,10 +41,9 @@ render(<BirthplaceBins data={byState} />, '#viz-birthplace-bins-usa')
 import KMeans from './kmeans/index'
 render(<KMeans />, '#viz-kmeans')
 
-import MostAverage from './mostaverage/index'
-render(<MostAverage />, '#viz-mostaverage')
-import MostAverageYears from './mostaverage/years'
-render(<MostAverageYears />, '#viz-mostaverage-years')
+import MostAverage from './pud/components/MostAverage'
+render(<MostAverage type="avg" />, '#viz-mostaverage')
+render(<MostAverage type="year" />, '#viz-mostaverage-years')
 
 import WHR from './whr/index'
 render(<WHR />, '#viz-whr')

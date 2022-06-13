@@ -86,6 +86,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.webp$/i,
+        loaders: ['url-loader', 'webp-loader'],
+      },
     ],
   },
 }
