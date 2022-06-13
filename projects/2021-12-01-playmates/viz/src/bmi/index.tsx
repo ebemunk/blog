@@ -1,18 +1,30 @@
-import React, { useEffect, useRef, useState } from 'react'
-import * as d3 from 'd3'
+import {
+  area as d3area,
+  extent,
+  format,
+  group,
+  interpolateMagma,
+  line as d3line,
+  max,
+  mean,
+  range,
+  scaleLinear,
+  scaleOrdinal,
+  scaleSequential,
+  schemeReds,
+} from 'd3'
+import { hexbin } from 'd3-hexbin'
 import intersect from 'path-intersection'
-import { data as rawData } from '../data'
-import { Axis, ResponsiveSvg, Svg, usePlotContext } from 'vizlib'
+import React from 'react'
 import { hot } from 'react-hot-loader'
-import { Store } from '../store'
 import { uniqBy } from 'remeda'
-import PlaymateCircles from '../pud/components/Scrolly/PlaymateCircles'
-import { formatFeetIn } from '../pud/util'
-
-const data = rawData.filter(d => d.weightKG !== null && d.heightCM !== null)
+import { Axis, ResponsiveSvg, usePlotContext } from 'vizlib'
+import { data } from '../pud/data/data'
+import { cm2in, formatFeetIn, kg2lb, PLAYMATE_PINK } from '../pud/util'
+import { Store } from '../store'
 
 // https://www.cdc.gov/obesity/adult/defining.html
-const bmiz = d3.group(
+const bmiz = group(
   uniqBy(data, d => d.name),
   d => {
     const bmi = (d.weightKG / d.heightCM / d.heightCM) * 10000
@@ -45,7 +57,7 @@ const BMITick = ({
   const ctx = usePlotContext()
   const units = Store.useState(s => s.units)
 
-  const line = d3.line()
+  const line = d3line()
 
   const wtf = xScale
     .ticks(800)
@@ -56,7 +68,7 @@ const BMITick = ({
     .filter(d => d[1] > 0 && d[1] < ctx.chartHeight)
 
   const intx = intersect(
-    d3.line()([
+    d3line()([
       [0, 0],
       [ctx.chartWidth, ctx.chartHeight],
     ]),
@@ -123,66 +135,82 @@ const bmiRanges = [
   },
 ] as const
 
-const bmiColors = d3
-  .scaleOrdinal(d3.schemeReds[6])
-  .domain([
-    'Underweight',
-    'Healthy',
-    'Overweight',
-    'Obese (Class 1)',
-    'Obese (Class 2)',
-    'Obese (Class 3 - Severe)',
-  ])
+const bmiColors = scaleOrdinal(schemeReds[6]).domain([
+  'Underweight',
+  'Healthy',
+  'Overweight',
+  'Obese (Class 1)',
+  'Obese (Class 2)',
+  'Obese (Class 3 - Severe)',
+])
 
 const Viz = ({}) => {
   const ctx = usePlotContext()
 
   const units = Store.useState(s => s.units)
-  const Aweight = d => (units === 'metric' ? d.weightKG : d.weightLB)
-  const Aheight = d => (units === 'metric' ? d.heightCM : d.heightIN)
+  const Aweight = d => (units === 'metric' ? d.weightKG : kg2lb(d.weightKG))
+  const Aheight = d => (units === 'metric' ? d.heightCM : cm2in(d.heightCM))
 
-  const xScale = d3
-    .scaleLinear()
-    .domain(d3.extent(data, Aweight))
+  const xScale = scaleLinear()
+    .domain(extent(data, Aweight))
     .range([0, ctx.chartWidth])
     .nice()
 
-  const yScale = d3
-    .scaleLinear()
-    .domain(d3.extent(data, Aheight))
+  const yScale = scaleLinear()
+    .domain(extent(data, Aheight))
     .range([ctx.chartHeight, 0])
     .nice()
+
+  const hex = hexbin()
+    .x(d => d.cx)
+    .y(d => d.cy)
+    .radius(7)
+    .extent([
+      [0, 0],
+      [ctx.chartWidth, ctx.chartHeight],
+    ])
+
+  const bins = hex(
+    data.map(d => ({
+      cx: xScale(Aweight(d)),
+      cy: yScale(Aheight(d)),
+      datum: d,
+      fill: 'black',
+    })),
+  )
+
+  const colors = scaleSequential(interpolateMagma).domain([
+    0,
+    max(bins, d => d.length) / 2,
+  ])
 
   return (
     <>
       <g className="bmiRanges">
         {bmiRanges.map(bmiRange => {
-          const area = d3
-            .area<number[]>()
+          const area = d3area<number[]>()
             .x(d => d[0])
             .y0(d => d[1])
             .y1(d => d[2])
 
           const d = area(
-            d3
-              .range(xScale.domain()[0], xScale.domain()[1] + 1, 0.5)
-              .map(d => [
-                Math.min(ctx.chartWidth, xScale(d)),
-                Math.max(
-                  0,
-                  Math.min(
-                    ctx.chartHeight,
-                    yScale(invertBmiY(units, d, bmiRange.min)),
-                  ),
+            range(xScale.domain()[0], xScale.domain()[1] + 1, 0.5).map(d => [
+              Math.min(ctx.chartWidth, xScale(d)),
+              Math.max(
+                0,
+                Math.min(
+                  ctx.chartHeight,
+                  yScale(invertBmiY(units, d, bmiRange.min)),
                 ),
-                Math.max(
-                  0,
-                  Math.min(
-                    ctx.chartHeight,
-                    yScale(invertBmiY(units, d, bmiRange.max)),
-                  ),
+              ),
+              Math.max(
+                0,
+                Math.min(
+                  ctx.chartHeight,
+                  yScale(invertBmiY(units, d, bmiRange.max)),
                 ),
-              ]),
+              ),
+            ]),
           )
 
           return (
@@ -198,7 +226,7 @@ const Viz = ({}) => {
       </g>
 
       <g className="bmiTicks">
-        {d3.range(10, units !== 'metric' ? 50 : 47, 1).map(bmi => (
+        {range(10, units !== 'metric' ? 50 : 47, 1).map(bmi => (
           <BMITick bmi={bmi} xScale={xScale} yScale={yScale} key={bmi} />
         ))}
       </g>
@@ -207,13 +235,13 @@ const Viz = ({}) => {
         bmi={28.3}
         xScale={xScale}
         yScale={yScale}
-        stroke="forestgreen"
+        stroke="yellow"
         strokeWidth={3}
       >
         <text
           dy={-4}
           fontSize={12}
-          fill="forestgreen"
+          fill="yellow"
           x={ctx.chartHeight + 60}
           textAnchor="end"
           stroke={bmiColors('Overweight')}
@@ -226,16 +254,16 @@ const Viz = ({}) => {
         </text>
       </BMITick>
       <BMITick
-        bmi={d3.mean(data, d => bmi(d.weightKG, d.heightCM))}
+        bmi={mean(data, d => bmi(d.weightKG, d.heightCM))}
         xScale={xScale}
         yScale={yScale}
-        stroke="steelblue"
+        stroke={PLAYMATE_PINK}
         strokeWidth={3}
       >
         <text
           dy={-4}
           fontSize={12}
-          fill="steelblue"
+          fill={PLAYMATE_PINK}
           x={ctx.chartHeight + 60}
           textAnchor="end"
           stroke={bmiColors('Underweight')}
@@ -243,30 +271,23 @@ const Viz = ({}) => {
           paintOrder="stroke"
         >
           <textPath
-            xlinkHref={`#bmi-${d3.mean(data, d =>
-              bmi(d.weightKG, d.heightCM),
-            )}`}
+            xlinkHref={`#bmi-${mean(data, d => bmi(d.weightKG, d.heightCM))}`}
           >
             Average for Playmates
           </textPath>
         </text>
       </BMITick>
 
-      <PlaymateCircles
-        data={data
-          .map(d => ({
-            cx: xScale(Aweight(d)),
-            cy: yScale(Aheight(d)),
-            datum: d,
-            fill: 'black',
-          }))
-          .filter(
-            (val, i, arr) =>
-              i === arr.findIndex(t => t.cx === val.cx && t.cy === val.cy),
-          )}
-        transitionDuration={0}
-        r={3}
-      />
+      {bins.map((bin, i) => (
+        <path
+          key={i}
+          d={hex.hexagon()}
+          transform={`translate(${bin.x},${bin.y})`}
+          fill={colors(bin.length)}
+          stroke="black"
+          strokeWidth={0.2}
+        />
+      ))}
 
       <Axis
         scale={xScale}
@@ -361,6 +382,7 @@ const BMI = () => {
           display: 'flex',
           width: '100vw',
           maxWidth: 'calc(960px - 45px - 10px)',
+          marginLeft: '45px',
         }}
       >
         {bmiRanges.map(k => (
@@ -383,7 +405,7 @@ const BMI = () => {
                   fontSize: '0.8rem',
                 }}
               >
-                {d3.format('.2p')((bmiz.get(k.label)?.length ?? 0) / 806)}
+                {format('.2p')((bmiz.get(k.label)?.length ?? 0) / 806)}
               </span>
             )}
           </div>

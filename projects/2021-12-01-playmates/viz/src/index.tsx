@@ -16,7 +16,7 @@ render(<Scrolly />, '#viz-scatter')
 import Hourglass from './pud/components/Hourglass'
 render(<Hourglass />, '#viz-bwh')
 
-import Units from './units/index'
+import Units from './pud/components/Units/index'
 render(<Units />, '#viz-units')
 render(<Units />, '#viz-units2')
 
@@ -37,9 +37,6 @@ import BirthplaceUSA from './birthplace/usa'
 render(<BirthplaceUSA />, '#viz-birthplace-usa')
 import { byState } from './data'
 render(<BirthplaceBins data={byState} />, '#viz-birthplace-bins-usa')
-
-import KMeans from './kmeans/index'
-render(<KMeans />, '#viz-kmeans')
 
 import MostAverage from './pud/components/MostAverage'
 render(<MostAverage type="avg" />, '#viz-mostaverage')

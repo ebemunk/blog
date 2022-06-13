@@ -10,7 +10,7 @@ export default function USAverage({ value }: { value: number }) {
     <g
       transform={`translate(0,${value})`}
       // @ts-ignore attr exists
-      color="var(--yellow)"
+      color="yellow"
       ref={ref}
       opacity={0}
     >

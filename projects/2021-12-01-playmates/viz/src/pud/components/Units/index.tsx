@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import React, { useEffect } from 'react'
 import { createUseStyles } from 'react-jss'
-import { Store } from '../store'
+import { Store } from '../../../store'
 
 const useStyles = createUseStyles({
   button: {
