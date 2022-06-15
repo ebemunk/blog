@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { ResponsiveSvg } from 'vizlib'
+import { useWindowSize } from '../../../util'
 import Link from '../Link'
 import Measurement from '../Measurement'
 import AvgChange from './AvgChange'
@@ -11,6 +12,7 @@ import Waypoint from './Waypoint'
 export default function Scrolly() {
   const [step, setStep] = useState<Step>(Step.Explainer)
   const totalSlides = 21
+  const ws = useWindowSize()
   return (
     <>
       <div style={{ position: 'relative' }}>
@@ -37,7 +39,7 @@ export default function Scrolly() {
             pointerEvents: 'none',
             display: 'flex',
             flexDirection: 'column',
-            marginLeft: '70px',
+            marginLeft: ws.width < 768 ? '1rem' : '70px',
           }}
           className="scrolly-text"
         >

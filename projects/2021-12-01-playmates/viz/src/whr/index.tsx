@@ -67,7 +67,9 @@ const Viz = () => {
         scale={xScale}
         orientation="bottom"
         transform={`translate(0,${ctx.chartHeight})`}
-        tickValues={xScale.ticks(26)}
+        tickValues={xScale
+          .ticks(26)
+          .filter((t, i) => (ctx.chartWidth < 600 ? i % 3 === 0 : true))}
       >
         <text
           fontSize={12}

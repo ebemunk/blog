@@ -11,9 +11,5 @@ export interface Viz {
 }
 
 export default function Hourglass() {
-  return (
-    <figure>
-      <HourglassViz />
-    </figure>
-  )
+  return <HourglassViz />
 }

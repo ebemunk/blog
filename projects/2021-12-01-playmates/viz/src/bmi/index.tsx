@@ -1,9 +1,11 @@
 import {
   area as d3area,
+  color,
   extent,
   format,
   group,
   interpolateMagma,
+  interpolateRdPu,
   line as d3line,
   max,
   mean,
@@ -11,6 +13,7 @@ import {
   scaleLinear,
   scaleOrdinal,
   scaleSequential,
+  schemeRdPu,
   schemeReds,
 } from 'd3'
 import { hexbin } from 'd3-hexbin'
@@ -22,6 +25,7 @@ import { Axis, ResponsiveSvg, usePlotContext } from 'vizlib'
 import { data } from '../pud/data/data'
 import { cm2in, formatFeetIn, kg2lb, PLAYMATE_PINK } from '../pud/util'
 import { Store } from '../store'
+import Legend from './Legend'
 
 // https://www.cdc.gov/obesity/adult/defining.html
 const bmiz = group(
@@ -92,7 +96,7 @@ const BMITick = ({
           fontSize={12}
           x={intx[0].x}
           y={intx[0].y}
-          style={{ stroke: 'white', strokeWidth: 3, paintOrder: 'stroke' }}
+          // style={{ stroke: 'white', strokeWidth: 3, paintOrder: 'stroke' }}
         >
           {bmi}
         </text>
@@ -179,10 +183,9 @@ const Viz = ({}) => {
     })),
   )
 
-  const colors = scaleSequential(interpolateMagma).domain([
-    0,
-    max(bins, d => d.length) / 2,
-  ])
+  const colors = scaleSequential(interpolateRdPu).domain([0, 20])
+
+  const legend = Legend(colors, { title: '# of Playmates', marginLeft: 10 })
 
   return (
     <>
@@ -231,6 +234,70 @@ const Viz = ({}) => {
         ))}
       </g>
 
+      {[
+        {
+          text: 'UNDERWEIGHT',
+          bmi: 14.5,
+          color: color(bmiColors('Underweight')).darker(0.6).toString(),
+          dist: 150,
+        },
+        {
+          text: 'HEALTHY',
+          bmi: 21.5,
+          color: color(bmiColors('Healthy')).darker(0.6).toString(),
+          dist: 70,
+        },
+        {
+          text: 'OVERWEIGHT',
+          bmi: 27.5,
+          color: color(bmiColors('Overweight')).darker(0.6).toString(),
+          dist: 90,
+        },
+        {
+          text: 'OBESE (CLASS 1)',
+          bmi: 32.5,
+          color: color(bmiColors('Obese (Class 1)')).darker(0.6).toString(),
+          dist: 100,
+        },
+        {
+          text: 'OBESE (CLASS 2)',
+          bmi: 37.5,
+          color: color(bmiColors('Obese (Class 2)')).darker(0.6).toString(),
+          dist: 150,
+        },
+        {
+          text: 'OBESE (CLASS 3)',
+          bmi: 42.5,
+          color: color(bmiColors('Obese (Class 3 - Severe)'))
+            .darker(0.6)
+            .toString(),
+          dist: 300,
+        },
+      ].map(label => (
+        <BMITick
+          bmi={label.bmi}
+          xScale={xScale}
+          yScale={yScale}
+          strokeWidth={0}
+        >
+          <text
+            dy={4}
+            fontSize={16}
+            fill={label.color}
+            stroke={label.color}
+            fontWeight={700}
+          >
+            <textPath
+              xlinkHref={`#bmi-${label.bmi}`}
+              textAnchor="middle"
+              startOffset="50%"
+            >
+              {label.text}
+            </textPath>
+          </text>
+        </BMITick>
+      ))}
+
       <BMITick
         bmi={28.3}
         xScale={xScale}
@@ -242,13 +309,11 @@ const Viz = ({}) => {
           dy={-4}
           fontSize={12}
           fill="yellow"
-          x={ctx.chartHeight + 60}
-          textAnchor="end"
           stroke={bmiColors('Overweight')}
           strokeWidth={3}
           paintOrder="stroke"
         >
-          <textPath xlinkHref="#bmi-28.3">
+          <textPath xlinkHref="#bmi-28.3" textAnchor="end" startOffset="95%">
             Average for US Women 2015-2018
           </textPath>
         </text>
@@ -264,14 +329,14 @@ const Viz = ({}) => {
           dy={-4}
           fontSize={12}
           fill={PLAYMATE_PINK}
-          x={ctx.chartHeight + 60}
-          textAnchor="end"
           stroke={bmiColors('Underweight')}
           strokeWidth={3}
           paintOrder="stroke"
         >
           <textPath
             xlinkHref={`#bmi-${mean(data, d => bmi(d.weightKG, d.heightCM))}`}
+            textAnchor="end"
+            startOffset="95%"
           >
             Average for Playmates
           </textPath>
@@ -324,6 +389,7 @@ const Viz = ({}) => {
           Height {units === 'metric' ? '(cm)' : '(ft.in.)'}
         </text>
       </Axis>
+      <svg dangerouslySetInnerHTML={{ __html: legend.innerHTML }} y={-60} />
     </>
   )
 }
@@ -342,36 +408,8 @@ const BMI = () => {
         marginBottom: '1rem',
       }}
     >
-      <div
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-        }}
-      >
-        {bmiRanges.map(d => (
-          <div
-            key={d.label}
-            style={{
-              display: 'flex',
-              marginRight: '0.75rem',
-              fontSize: 12,
-              alignItems: 'center',
-            }}
-          >
-            <div
-              style={{
-                height: '1rem',
-                width: '1rem',
-                marginRight: '0.25rem',
-                background: bmiColors(d.label),
-              }}
-            />
-            <div>{d.label}</div>
-          </div>
-        ))}
-      </div>
       <ResponsiveSvg
-        margin={{ top: 10, left: 45, bottom: 40, right: 10 }}
+        margin={{ top: 60, left: 45, bottom: 40, right: 10 }}
         aspectRatio={1.68}
       >
         <Viz />
@@ -405,7 +443,8 @@ const BMI = () => {
                   fontSize: '0.8rem',
                 }}
               >
-                {format('.2p')((bmiz.get(k.label)?.length ?? 0) / 806)}
+                {format('.2p')((bmiz.get(k.label)?.length ?? 0) / 806)}{' '}
+                {k.label}
               </span>
             )}
           </div>

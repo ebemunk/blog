@@ -13,3 +13,9 @@
   font-style: italic;
   margin-bottom: 0.5rem;
 }
+
+@media (max-width: 768px) {
+  .viz-title, .viz-subtitle {
+    margin-left: 0.5rem;
+  }
+}
