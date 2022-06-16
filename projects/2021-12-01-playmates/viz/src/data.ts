@@ -19,9 +19,6 @@ export const get = memoize(_get)
 
 // console.log('data', data)
 
-// @ts-ignore
-window.data = data
-
 export const byCountry = group(
   uniqBy(data, d => d.name),
   d => d.country,

@@ -22,7 +22,7 @@ const Units = () => {
   const isMetric = unit === 'metric'
 
   useEffect(() => {
-    window.localStorage.setItem('beholder_units', unit)
+    window?.localStorage.setItem('beholder_units', unit)
   }, [unit])
 
   const classes = useStyles()

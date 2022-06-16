@@ -82,10 +82,10 @@ export default function PlaymateCircles({
         .attr('stroke', 'white')
     }
 
-    window.addEventListener('playmateCircleHover', hoverListener)
+    window?.addEventListener('playmateCircleHover', hoverListener)
 
     return () => {
-      window.removeEventListener('playmateCircleHover', hoverListener)
+      window?.removeEventListener('playmateCircleHover', hoverListener)
     }
   }, [])
 

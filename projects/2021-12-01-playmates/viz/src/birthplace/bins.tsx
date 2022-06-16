@@ -50,10 +50,10 @@ const Circle = ({ d }) => {
       }
     }
 
-    window.addEventListener('click', listener, { capture: true })
+    window?.addEventListener('click', listener, { capture: true })
 
     return () => {
-      window.removeEventListener('click', listener, { capture: true })
+      window?.removeEventListener('click', listener, { capture: true })
     }
   }, [setPinned, setShowing, pinned])
 

@@ -70,15 +70,15 @@ export default function Voronoi({
       }
     }
 
-    window.addEventListener('click', listener, { capture: true })
+    window?.addEventListener('click', listener, { capture: true })
 
     return () => {
-      window.removeEventListener('click', listener, { capture: true })
+      window?.removeEventListener('click', listener, { capture: true })
     }
   }, [setPinned, setShowing, pinned, ref.current])
 
   useEffect(() => {
-    window.dispatchEvent(
+    window?.dispatchEvent(
       new CustomEvent('playmateCircleHover', {
         detail: showing?.data,
       }),

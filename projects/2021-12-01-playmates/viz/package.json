@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server",
-    "build": "NODE_ENV=production webpack --env production --json > stats.json"
+    "build": "NODE_ENV=production webpack --env production --json > stats.json",
+    "build:ssr": "NODE_ENV=production webpack --env production --config ssr.webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "7.11.0",
