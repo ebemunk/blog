@@ -1,9 +1,9 @@
 +++
-publishDate = "2022-06-18"
+publishDate = "2022-06-14"
 title = "Beholder: Beauty in the eyes of Playboy"
 slug = "beholder-beauty-in-the-eyes-of-playboy"
 tags = ["data visualization", "long form"]
-image = "img/cacophony.png"
+image = "img/playmates.png"
 hidden = false
 related = ["2021-02-18-lastwords", "2019-01-05-plane-crashes.md"]
 shortSummary = "Finding out Playboy's idea of beauty from analyzing the data of 806 Playmates."
@@ -124,7 +124,7 @@ We can't ignore ~82% of the data though, so let's see the State's breakdown of b
   <div id="viz-birthplace-usa"></div>
 </div>
 
-Not surprising, as Playboy is headquartered in Beverly Hills, California and has largely carried some of the west coast sensibilities when it comes to beauty. I know that some my friends from the US have rivalries among their home states, so here's a tidbit: **Vermont** and **Delaware** are the only 2 states that have never had Playmates. Also, **Hawaii** has had more Playmates than **Wyoming**, **South Dakota**, **Iowa**, **West Virginia** and **New Hampshire** combined.
+Not surprising, as Playboy is headquartered in Beverly Hills, California and has largely carried some of the west coast sensibilities when it comes to beauty. **Vermont** and **Delaware** are the only 2 states that have never had Playmates. Also, **Hawaii** has had more Playmates than **Wyoming**, **South Dakota**, **Iowa**, **West Virginia** and **New Hampshire** combined.
 
 Below a similar chart as the previous one, for the detail-oriented.
 
@@ -179,7 +179,7 @@ They were and are real people who had a real impact on others around them, good 
 
 On December 2, 2021, Playboy announced its first-ever Creative Director In Residence <a href="https://www.plbygroup.com/news-releases/news-release-details/playboy-names-cardi-b-first-ever-creative-director-residence" target="_blank" rel="noopener noreferrer">as Cardi B</a>. In choosing the musician, the magazine signaled a commitment to leaving its old formula and its limited perspective squarely in the past. Just how far will this development push Playboy and their Playmates? We will have to wait and see.
 
-<!--
 <script src="build/bundle.js"></script>
--->
+<!--
 <script src="http://localhost:9001/bundle.js"></script>
+-->

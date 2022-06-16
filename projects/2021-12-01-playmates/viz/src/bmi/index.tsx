@@ -349,6 +349,7 @@ const Viz = ({}) => {
           d={hex.hexagon()}
           transform={`translate(${bin.x},${bin.y})`}
           fill={colors(bin.length)}
+          fillOpacity={0.8}
           stroke="black"
           strokeWidth={0.2}
         />
