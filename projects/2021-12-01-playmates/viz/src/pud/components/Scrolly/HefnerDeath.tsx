@@ -28,6 +28,7 @@ export default function HefnerDeath({ sX, step }: { sX: any; step: Step }) {
         transform={`translate(${sX(
           step === Step.Hefner ? new Date(2017, 0, 1) : new Date(2017, 8, 27),
         )},0)`}
+        className="hefner"
       >
         <line ref={lineRef} x1={0} y1={0} x2={0} y2={0} stroke="white" />
         <text fill="white" fontSize={11} transform="rotate(90)" dx={6} dy={-4}>

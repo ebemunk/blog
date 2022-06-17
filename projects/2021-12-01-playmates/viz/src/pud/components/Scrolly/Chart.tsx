@@ -17,7 +17,15 @@ import Voronoi from './Voronoi'
 
 const LOESS = lazy(() => import('./LOESS'))
 
-export default function Chart({ step }: { step: Step }) {
+export default function Chart({
+  step,
+  playmateCircleSize = 3,
+  forceFewerTicks = false,
+}: {
+  step: Step
+  playmateCircleSize?: number
+  forceFewerTicks?: boolean
+}) {
   const { chartHeight, chartWidth } = usePlotContext()
   const { scales, data, accessors } = useData(step)
   const units = Store.useState(state => state.units)
@@ -137,11 +145,16 @@ export default function Chart({ step }: { step: Step }) {
                     2
                   })`
             }
+            forceFewerTicks={forceFewerTicks}
           />
         </>
       )}
 
-      <PlaymateCircles data={data} r={3} transitionDuration={750} />
+      <PlaymateCircles
+        data={data}
+        r={playmateCircleSize}
+        transitionDuration={750}
+      />
       <Voronoi data={data} step={step} />
     </>
   )

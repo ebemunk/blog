@@ -279,6 +279,7 @@ const Viz = ({}) => {
           xScale={xScale}
           yScale={yScale}
           strokeWidth={0}
+          key={label.text}
         >
           <text
             dy={4}

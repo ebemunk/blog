@@ -20,7 +20,7 @@ Playboy stopped picking the Playmate of the Month starting in 2021, and the 66 y
 
 ## Who Reads Playboy?
 
-Turns out, Playboy is not very transparent about their demographics. But, I did find some information about it from their own [media kit from 2004](https://web.archive.org/web/20041019143228/https://www.playboy.com/mediakit/print_demographics.html) and [online demographics](https://web.archive.org/web/20041022052012/http://www.playboy.com/mediakit/online_demographics.html). More than a decade later, these numbers are very outdated, but I think it gives a bit of context into _who Playboy is meant for_. These are inconsistent, and combined with its age, it's best to take these with a huge grain of salt.
+Turns out, Playboy is not very transparent about their demographics. But, I did find some information about it from their own [media kit from 2004](https://web.archive.org/web/20041019143228/https://www.playboy.com/mediakit/print_demographics.html) and [online demographics](https://web.archive.org/web/20041022052012/http://www.playboy.com/mediakit/online_demographics.html). More than a decade later, these numbers are very outdated, but I think it gives a bit of context into _who Playboy is meant for_. Some numbers don't add up to 100%, and combined with its age, it's best to take these with a huge grain of salt.
 
 <div>
   <div class="viz-title">Reading it for the articles</div>
@@ -62,7 +62,7 @@ We'll be talking about body measurements, and in this article you can pick which
 
 <div>
   <div class="viz-title">Breaking the mold</div>
-  <div class="viz-subtitle">2020 is the first and only year the hourglass-figure mold was broken. Bust measurements decline through the decades, waist and hips increase. What some call curvy or "thick" is finally welcomed by Playboy in 2020. The <a href="https://en.wikipedia.org/wiki/Bust/waist/hip_measurements" target="_blank" rel="noopener noreferrer">"Ideal"</a> <span data-cms="90">36</span>-<span data-cms="60">24</span>-<span data-cms="90">36</span> shown in red. <a href="https://www.huffpost.com/entry/the-scary-reality-of-a-re_b_845239" target="_blank">Projected dimensions</a> of the Barbie doll in yellow. <br/><br/> Click on the decades to isolate.</div>
+  <div class="viz-subtitle">2020 is the first and only year the hourglass-figure mold was broken. Bust measurements decline through the decades, waist and hips increase. What some call curvy or "thick" is finally welcomed by Playboy in 2020. The <a href="https://en.wikipedia.org/wiki/Bust/waist/hip_measurements" target="_blank" rel="noopener noreferrer">"Ideal"</a> <span data-cms="90">36</span>-<span data-cms="60">24</span>-<span data-cms="90">36</span> shown in cyan. <a href="https://www.huffpost.com/entry/the-scary-reality-of-a-re_b_845239" target="_blank">Projected dimensions</a> of the Barbie doll in yellow. <br/><br/> Click on the decades to isolate.</div>
   <div id="viz-bwh"></div>
 </div>
 

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <style>
+      @font-face {
+        font-family: "Poppins";
+        font-style: italic;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLm21llEA.ttf)
+          format("truetype");
+      }
+      @font-face {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8V1s.ttf)
+          format("truetype");
+      }
+      @font-face {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7V1s.ttf)
+          format("truetype");
+      }
+      @font-face {
+        font-family: "Abril Fatface";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/abrilfatface/v12/zOL64pLDlL1D99S8g8PtiKchm-A.ttf)
+          format("truetype");
+      }
+    </style>
+
+    <style>
+      html {
+        font-size: 18px;
+        font-family: "Poppins";
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Abril Fatface";
+      }
+      body {
+        background: #282c34;
+        color: white;
+      }
+      a,
+      a:visited {
+        color: #7cb34b;
+        text-decoration: underline solid #7cb34b;
+        text-decoration-thickness: 3px;
+      }
+      h1 {
+        color: #d19a66;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 300;
+      }
+      p {
+        width: 40rem;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      }
+      p:nth-of-type(2) {
+        margin-bottom: 2rem;
+      }
+      #poster {
+        width: 960px;
+        display: flex;
+        flex-direction: column;
+        outline: 2px solid red;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+      #poster > div {
+        margin-bottom: 2rem;
+      }
+      .viz-title,
+      .viz-subtitle {
+        max-width: 40rem;
+        margin: 0 auto;
+      }
+
+      .viz-title {
+        font-weight: bold;
+        margin-bottom: 0.25rem;
+      }
+      .viz-subtitle {
+        font-size: 1rem;
+        font-style: italic;
+        margin-bottom: 0.5rem;
+      }
+      strong {
+        text-decoration: underline;
+      }
+      .up {
+        margin-top: -3rem;
+      }
+    </style>
+
+    <div id="poster">
+      <h1>Beholder: Beauty in the eyes of Playboy</h1>
+
+      <p>
+        Analyzing 806 Playmates of the Month across 66 years for a glimpse of
+        how the famous publication sees beauty. Read the full interactive story
+        with commentary (and bonus visualizations) on
+        <a href="#">blog.ebemunk.com/beholder-beauty-in-the-eyes-of-playboy/</a
+        >.
+      </p>
+      <p>Tweet <a href="#">@ebemunk</a> to discuss!</p>
+
+      <div>
+        <div class="viz-title">Reading it for the articles</div>
+        <div class="viz-subtitle">
+          Demographics breakdown of the Print (magazine) and Online
+          (playboy.com) versions from 2004 self-reported by Playboy. Playboy
+          describes print readers as
+          <strong>"brand conscious"</strong>,
+          <strong>"outdoor enthusiasts"</strong>,
+          <strong>"trendsetters"</strong> and
+          <strong>"socially active"</strong>. Online readers are
+          <strong>"tech savvy"</strong>, <strong>"gamers"</strong>,
+          <strong>"online shoppers"</strong> and
+          <strong>"active & adventurous"</strong>. Some numbers don't add up to
+          100%!
+        </div>
+        <div id="viz-demographics-print" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Age</div>
+        <div class="viz-subtitle">
+          There has been an <strong>increase of about 4 years</strong> in the
+          ages of Playmates since the first issue. Eight Playmates were under
+          the age of 18 when photographed, and Hefner was arrested in one
+          instance, but released.
+        </div>
+        <div id="viz-scrolly-age" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Height</div>
+        <div class="viz-subtitle"><strong>5% increase</strong> in height.</div>
+        <div id="viz-scrolly-height" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Weight</div>
+        <div class="viz-subtitle">
+          Weight has similarly seen an <strong>increase of about 8%</strong>
+          . The average weight after Hefner's death strays sharply from the
+          average prior, strongly suggesting Hefner favored women of a certain
+          size.
+        </div>
+        <div id="viz-scrolly-weight" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Bust</div>
+        <div class="viz-subtitle">
+          There has been a significant drop in bust sizes,
+          <strong>9.6% decrease</strong> overall. This is interesting, because
+          most sources online claim that bust size, especially in the US has
+          actually <em>gone up</em>.
+        </div>
+        <div id="viz-scrolly-bust" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Waist</div>
+        <div class="viz-subtitle">
+          Having a smaller waist is the most statistically significant
+          distinction between Playmates and the US average.
+        </div>
+        <div id="viz-scrolly-waist" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Hips</div>
+        <div class="viz-subtitle">
+          20% of the Playmates had larger hips in the period after Hefner's
+          death than at any other point in the magazine's history.
+        </div>
+        <div id="viz-scrolly-hips" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Hair</div>
+        <div class="viz-subtitle">
+          In the US, having light hair has become the "beauty standard," with
+          48% of White college women dyeing their hair blond or blonder. A
+          survey in 2003 reported that only 4% of adults in the US are naturally
+          blond.
+        </div>
+        <div id="viz-scrolly-hair" class="viz up"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Cosmetic Enhancements</div>
+        <div class="viz-subtitle">
+          Essential to the conversation surrounding Playboy's view of beauty is
+          the lengths that many individuals went to achieve it. Cosmetic
+          enhancements by way of surgical procedures are quite common among
+          Playmates.
+        </div>
+        <div id="viz-scrolly-enhancements" class="viz up"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Ethnicity</div>
+        <div class="viz-subtitle">
+          Historically, the magazine has reinforced the colonizer perspective
+          and constructs the "All-American Beauty" as a blond, skinny, white
+          woman, with 90% of its Playmates being white. It featured a single
+          Black woman for the first time in 1965, and it did not feature a Black
+          woman again for four years. Only 2019 and 2020 had 40% non-white
+          Playmates, the most it has ever been in its 67-year history.
+        </div>
+        <div id="viz-scrolly-ethnicity" class="viz up"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Breaking the mold</div>
+        <div class="viz-subtitle">
+          2020 is the first and only year the hourglass-figure mold was broken.
+          Bust measurements decline through the decades, waist and hips
+          increase. What some call curvy or "thick" is finally welcomed by
+          Playboy in 2020. The "Ideal" 36-24-36 shown in cyan. Projected
+          dimensions of the Barbie doll in yellow.
+        </div>
+        <div id="viz-bwh" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">BMI - Straddling the line</div>
+        <div class="viz-subtitle">
+          More than half of Playmates are Underweight, 48% are in the Healthy
+          range. There are only 2 other Playmates (&lt;1%) in any other
+          category. The difference of the averages between US women and
+          Playmates is staggering.
+        </div>
+        <div id="viz-bmi" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">The Magic Number</div>
+        <div class="viz-subtitle">
+          A Waist-to-Hip Ratio of 0.7, which accounts for ~20% of Playmates is
+          said to be the "perfect" ratio for attractiveness. Highlighted are the
+          "most attractive" WHRs from other cultures/places. No Playmate has
+          ever been above 1.0 WHR.
+        </div>
+        <div id="viz-whr" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Birthplace of Playmates</div>
+        <div class="viz-subtitle">
+          Only 18% of Playmates were born outside of the US. Focus on the
+          regions of the world where no Playmate was born in.
+        </div>
+        <div id="viz-birthplace" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Californication</div>
+        <div class="viz-subtitle">
+          West coast - best coast for Playmates. Vermont and Delaware are the
+          only states that have never had Playmates.
+        </div>
+        <div id="viz-birthplace-usa" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Most/Least Average Playmates</div>
+        <div class="viz-subtitle">
+          Playmates ordered by their distance to the average Playmate. The most
+          and least average top 5 Playmates split the age of the magazine into
+          almost perfect quarters. The top 5 most average are from older issues,
+          whereas the top 5 least average are from 2003 and later.
+        </div>
+        <div id="viz-mostaverage" class="viz"></div>
+      </div>
+
+      <div>
+        <div class="viz-title">Difference from Average per Year</div>
+        <div class="viz-subtitle">
+          Playmates have been increasingly different from the "Most Average
+          Playmate" through the years.
+        </div>
+        <div id="viz-mostaverage-years" class="viz"></div>
+      </div>
+
+      <p>
+        Read the full interactive story with commentary (and bonus
+        visualizations) on
+        <a href="blog.ebemunk.com/last-words-in-texas/"
+          >blog.ebemunk.com/last-words-in-texas/</a
+        >.
+      </p>
+    </div>
+
+    <script type="module" src="http://localhost:9001/poster.js"></script>
+  </body>
+</html>

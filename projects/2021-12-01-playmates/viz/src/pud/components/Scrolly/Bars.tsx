@@ -21,12 +21,14 @@ export default function Bars({
   height,
   colorScale,
   accessor,
+  forceFewerTicks = false,
   ...rest
 }: {
   width: number
   height: number
   colorScale: ScaleOrdinal<string, any, never>
   accessor: XAccessor | YAccessor | CAccessor
+  forceFewerTicks?: boolean
 } & SVGProps<SVGGElement>) {
   const years = range(1954, 2021).map(year => {
     const cols = Object.fromEntries(
@@ -111,7 +113,7 @@ export default function Bars({
   const ws = useWindowSize()
   const wWidth = ws.width ?? 0
   let xTickValues = useYearTickValues()
-  if (wWidth < 424) {
+  if (wWidth < 424 || forceFewerTicks) {
     xTickValues = range(1960, 2021, 20)
   } else if (wWidth <= 1024) {
     xTickValues = range(1960, 2021, 10)

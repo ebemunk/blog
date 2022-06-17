@@ -9,8 +9,12 @@ import Highlights from './Highlights'
 import { PointSteps, Step } from './types'
 import Waypoint from './Waypoint'
 
-export default function Scrolly() {
-  const [step, setStep] = useState<Step>(Step.Explainer)
+export default function Scrolly({
+  initialStep = Step.Explainer,
+}: {
+  initialStep?: Step
+}) {
+  const [step, setStep] = useState<Step>(initialStep)
   const totalSlides = 21
   const ws = useWindowSize()
   return (
@@ -532,5 +536,24 @@ export default function Scrolly() {
         </div>
       </div>
     </>
+  )
+}
+
+export function ScrollyJustChart({ initialStep }: { initialStep: Step }) {
+  return (
+    <div
+      style={{
+        // height: '350px',
+        // width: '60%',
+        width: '100%',
+        height: '500px',
+        margin: '0 auto',
+      }}
+    >
+      <ResponsiveSvg margin={{ top: 30, left: 40, right: 20, bottom: 10 }}>
+        <Chart step={initialStep} playmateCircleSize={3} />
+        {PointSteps.includes(initialStep) && <Highlights step={initialStep} />}
+      </ResponsiveSvg>
+    </div>
   )
 }
