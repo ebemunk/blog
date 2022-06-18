@@ -422,7 +422,6 @@ const BMI = () => {
           display: 'flex',
           width: '100vw',
           maxWidth: 'calc(960px - 45px - 10px)',
-          marginLeft: '45px',
         }}
       >
         {bmiRanges.map(k => (
