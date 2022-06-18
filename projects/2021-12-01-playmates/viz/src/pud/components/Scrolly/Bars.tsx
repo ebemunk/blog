@@ -99,6 +99,7 @@ export default function Bars({
           }),
       update =>
         update
+          .interrupt()
           .attr('x', d => xScale(d.data.year.toString()))
           .attr('width', () => xScale.bandwidth())
           .attr('y', yScale(yScale.domain()[0]))
