@@ -149,8 +149,12 @@ a,
 a:visited,
 a:active {
   color: var(--color-white);
-  -webkit-text-decoration: underline solid var(--color-green);
-          text-decoration: underline solid var(--color-green);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-color: var(--color-green);
+          text-decoration-color: var(--color-green);
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
   text-decoration-thickness: 3px;
   -webkit-transition: color 400ms;
   transition: color 400ms;
@@ -375,7 +379,7 @@ article.article .footnotes hr {
 .home section#thumbs a:hover p {
   display: block;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 40rem) {
   .home section#thumbs a {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;

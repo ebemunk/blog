@@ -38,7 +38,7 @@ export default function Scrolly({
         <div
           style={{
             maxWidth: '40ch',
-            zIndex: 1,
+            zIndex: 2,
             position: 'relative',
             pointerEvents: 'none',
             display: 'flex',

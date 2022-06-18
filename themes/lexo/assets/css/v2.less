@@ -122,7 +122,9 @@ a,
 a:visited,
 a:active {
   color: var(--color-white);
-  text-decoration: underline solid var(--color-green);
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-green);
+  text-decoration-style: solid;
   text-decoration-thickness: 3px;
   transition: color 400ms;
 
@@ -360,7 +362,7 @@ article.article {
       }
     }
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 40rem) {
       a {
         flex-basis: 100%;
         width: 100%;
