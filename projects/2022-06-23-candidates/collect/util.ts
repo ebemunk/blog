@@ -25,9 +25,12 @@ export function allPlayers(games: ParseTree[]) {
 }
 
 export function playerName(name: string) {
+  let ret = name;
   if (name.includes(", ")) {
     const [last, first] = name.split(", ");
-    return `${first} ${last}`;
+    ret = `${first} ${last}`;
   }
-  return name;
+
+  if (ret === "Liren Ding") return "Ding Liren";
+  return ret;
 }

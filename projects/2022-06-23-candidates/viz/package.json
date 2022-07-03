@@ -14,7 +14,8 @@
     "d3": "^7.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "vizlib": "../../2021-12-01-playmates/vizlib"
   },
   "devDependencies": {
     "@types/d3": "^7.4.0",

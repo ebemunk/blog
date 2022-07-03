@@ -1,9 +1,12 @@
 import Standings from "./Standings";
 import { createGlobalStyle } from "styled-components";
+import Bump from "./Bump";
+import Openings from "./Openings";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: #1b263b;
+    /* background-color: #1b263b; */
+    background-color: rgb(32,33,36);
     color: #e0e1dd;
   }
 
@@ -51,10 +54,12 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <>
+    <div style={{}}>
       <GlobalStyle />
       <Standings />
-    </>
+      <Bump />
+      <Openings />
+    </div>
   );
 }
 

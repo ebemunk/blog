@@ -2,6 +2,8 @@ import { GameResult } from "../../collect/standings";
 import { standings } from "./data";
 import "chessground/assets/chessground.cburnett.css";
 
+console.log({ standings });
+
 export default function Standings() {
   return (
     <>
@@ -33,6 +35,7 @@ export default function Standings() {
                 >
                   {result.games.map((game: GameResult) => (
                     <div
+                      key={game.endPositionFen}
                       style={{
                         position: "relative",
                         margin: 4,
@@ -59,7 +62,7 @@ export default function Standings() {
                         <div
                           className={`${
                             game.isWhite ? "white" : "black"
-                          } king piece`}
+                          } pawn piece`}
                           style={{
                             width: "100%",
                             height: "100%",

@@ -1,25 +1,19 @@
 #!/usr/bin/env -S deno run --allow-net --allow-read --allow-write
 import { ParseTree } from "https://esm.sh/@mliebelt/pgn-parser@1.4.4";
-// import { readPgn } from "./util.ts";
+import { readPgn } from "./util.ts";
 
-// const parsed = await readPgn();
+const games = await readPgn();
 
-// const movetimes = new Map<string, number>();
+const ecos = new Map<string, number>();
+for (const game of games) {
+  if (ecos.has(game.tags?.ECO)) {
+    ecos.set(game.tags?.ECO, ecos.get(game.tags?.ECO)! + 1);
+  } else {
+    ecos.set(game.tags?.ECO, 1);
+  }
+}
 
-// console.log(parsed[0].moves);
-
-// for (const game of parsed) {
-//   // console.log(game.tags);
-//   writeEMT(game);
-//   // for (const move of game.moves) {
-//   // movetimes.set(
-//   //   move.turn === 'w' ? game.tags.White : game.tags.Black,
-//   //   move.commentDiag.clk
-//   // )
-//   // }
-// }
-
-// writeEMT(parsed[0]);
+console.log(Array.from(ecos).sort((a, b) => b[1] - a[1]));
 
 export function writeEMT(game: ParseTree) {
   let white = clockToSeconds("2:00:00");
@@ -43,8 +37,9 @@ export function writeEMT(game: ParseTree) {
     }
 
     const currentPlayerClock = move.turn === "w" ? white : black;
-    if (!move.commentDiag.clk) {
+    if (!move.commentDiag?.clk) {
       console.log("no clock", move);
+      if (!move.commentDiag) move.commentDiag = {};
       move.commentDiag.emt = secondsToClock(0);
       continue;
     }

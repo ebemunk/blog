@@ -24,6 +24,8 @@ export default function Chessboard({
     Chessground(ref.current, {
       fen,
       orientation,
+      viewOnly: true,
+      coordinates: false,
     });
   }, []);
 
