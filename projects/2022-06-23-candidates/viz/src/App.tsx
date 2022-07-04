@@ -2,6 +2,7 @@ import Standings from "./Standings";
 import { createGlobalStyle } from "styled-components";
 import Bump from "./Bump";
 import Openings from "./Openings";
+import Mistakes from "./Mistakes";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -59,6 +60,7 @@ function App() {
       <Standings />
       <Bump />
       <Openings />
+      <Mistakes />
     </div>
   );
 }

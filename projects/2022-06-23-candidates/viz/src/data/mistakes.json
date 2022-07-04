@@ -1,0 +1,66 @@
+[
+  [
+    "Jan-Krzysztof Duda",
+    {
+      "inaccuracy": 22,
+      "mistake": 6,
+      "blunder": 4
+    }
+  ],
+  [
+    "Richard Rapport",
+    {
+      "inaccuracy": 18,
+      "mistake": 8,
+      "blunder": 5
+    }
+  ],
+  [
+    "Ding Liren",
+    {
+      "inaccuracy": 14,
+      "mistake": 4,
+      "blunder": 4
+    }
+  ],
+  [
+    "Ian Nepomniachtchi",
+    {
+      "inaccuracy": 13,
+      "mistake": 0,
+      "blunder": 0
+    }
+  ],
+  [
+    "Fabiano Caruana",
+    {
+      "inaccuracy": 27,
+      "mistake": 7,
+      "blunder": 3
+    }
+  ],
+  [
+    "Hikaru Nakamura",
+    {
+      "inaccuracy": 22,
+      "mistake": 12,
+      "blunder": 2
+    }
+  ],
+  [
+    "Teimour Radjabov",
+    {
+      "inaccuracy": 27,
+      "mistake": 8,
+      "blunder": 2
+    }
+  ],
+  [
+    "Alireza Firouzja",
+    {
+      "inaccuracy": 30,
+      "mistake": 8,
+      "blunder": 4
+    }
+  ]
+]

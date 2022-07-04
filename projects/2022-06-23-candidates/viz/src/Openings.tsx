@@ -96,10 +96,6 @@ export function Viz() {
 
         col = col.darker(d.depth * 0.15);
 
-        const berlin = ["e4", "e5", "Nf3", "Nc6", "Bb5", "Nf6"];
-        const depth = berlin.indexOf(d.data.San);
-        const isBerlin = d.depth === depth;
-
         return (
           <path
             d={arcG(d)}
