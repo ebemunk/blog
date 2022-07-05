@@ -1,245 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-		
-		<meta name="referrer" content="origin" />
-		
-		<meta property="og:url" content="https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/">
-		<meta property="og:type" content="website">
-		<meta property="og:site_name" content="Thinking Through the Party">
-		
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:url" content="https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/">
-		<meta name="twitter:creator" content="@ebemunk">
-		
-			<meta property="og:title" content="Optimizing Particle Background Performance with Quadtrees">
-			<meta property="twitter:title" content="Optimizing Particle Background Performance with Quadtrees">
-			<meta name="description" content="Using quadtrees to optimize particle systems.">
-			<meta property="og:description" content="Using quadtrees to optimize particle systems.">
-			<meta name="twitter:description" content="Using quadtrees to optimize particle systems.">
-			<meta property="article:published_time" content="2016-01-21T00:00:00Z">
-			<meta property="article:modified_time" content="2016-01-21T00:00:00Z">
-			<meta property="article:author" content="ebemunk">
-			
-				
-				<meta property="og:image" content="https://blog.ebemunk.com/img/quadtrees_huf0a35630ee0bb047391c1928f4e896f4_486876_1200x0_resize_q100_h2_box_3.webp">
-				<meta name="twitter:image" content="https://blog.ebemunk.com/img/quadtrees_huf0a35630ee0bb047391c1928f4e896f4_486876_1200x0_resize_q100_h2_box_3.webp">
-			
-		
-
-		
-			<style>:root{--color-dark-grey:#282c34;--color-light-grey:#333842;--color-yellow:#d19a66;--color-orange:#de5442;--color-dark-orange:#c13422;--color-purple:#c776df;--color-green:#7cb34b;--color-faded-gray:#9eabb3;--color-white:white;--max-width:40rem;--font-heading:"Abril Fatface", serif;--font-body:"Poppins", sans-serif}@font-face{font-family:poppins;font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiDyp8kv8JHgFVrJJLm21llEA.ttf)format('truetype')}@font-face{font-family:poppins;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8V1s.ttf)format('truetype')}@font-face{font-family:poppins;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7V1s.ttf)format('truetype')}@font-face{font-family:marcellus sc;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/marcellussc/v13/ke8iOgUHP1dg-Rmi6RWjbLEPgQ.ttf)format('truetype')}@font-face{font-family:abril fatface;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/abrilfatface/v19/zOL64pLDlL1D99S8g8PtiKchm-A.ttf)format('truetype')}html{height:100%;font-size:18px}body{background:var(--color-dark-grey);color:var(--color-white);margin:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:18px;font-family:var(--font-body)}header.site-header,header.site-header a{height:180px;background:url(/img/wildpianoparty.png);background-position:50% -20px;background-repeat:no-repeat;background-attachment:fixed;border-bottom:4px solid #000;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;font-size:3rem;line-height:3rem;font-family:marcellus sc;color:var(--color-dark-orange);text-align:center;text-decoration:none;-webkit-transition:color 400ms;transition:color 400ms}header.site-header:hover,header.site-header a:hover{background-color:var(--color-light-grey);color:var(--color-orange)}footer.site-footer{height:7em;border-top:4px solid #000;background:url(../img/wildpianoparty.png);background-position:50% 100%;background-repeat:no-repeat;background-attachment:fixed;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.site-footer:hover{background-color:var(--color-light-grey)}footer.site-footer p{margin:1rem;font-size:.8rem;font-weight:700;color:var(--color-faded-gray)}h1{color:var(--color-yellow);margin:1.5rem auto;font-size:3rem;font-weight:300;text-align:center;font-family:var(--font-heading)}h2,h3,h4,h5,h6{color:var(--color-yellow);margin:1.3rem auto;max-width:var(--max-width);font-weight:500;font-family:var(--font-heading)}a,a:visited,a:active{color:var(--color-white);-webkit-text-decoration-line:underline;text-decoration-line:underline;-webkit-text-decoration-color:var(--color-green);text-decoration-color:var(--color-green);-webkit-text-decoration-style:solid;text-decoration-style:solid;text-decoration-thickness:3px;-webkit-transition:color 400ms;transition:color 400ms}a:hover,a:visited:hover,a:active:hover{color:var(--color-green)}blockquote{-webkit-box-sizing:border-box;box-sizing:border-box;max-width:var(--max-width);margin:0 auto;border-left:3px solid var(--color-white);padding-left:2rem;font-style:italic}.tags-and-date{max-width:var(--max-width);margin:0 auto;text-align:center;margin-bottom:1.68rem;font-size:.8rem;color:#d9d9d9}@media screen and (max-width:40rem){article.article p,article.article h2,article.article h3,article.article h4,article.article h5,article.article h6,.share h4,.article-list,.share p{padding:0 .625rem}}article.article p,.share p{max-width:var(--max-width);margin:0 auto 1.3rem;font-size:1rem;line-height:1.68rem}article.article ul{max-width:var(--max-width);margin:0 auto 1.3rem;list-style-type:square}article.article .footnotes{max-width:var(--max-width);margin:0 auto;font-size:.625rem;color:var(--color-faded-gray);line-height:1rem}article.article .footnotes a{text-decoration:none}article.article .footnotes hr{border:.5px solid var(--color-faded-gray)}.article-list{margin-bottom:2rem}.article-list .item h2{max-width:var(--max-width);font-size:2rem;text-align:left}.article-list .item h2 a{text-decoration:none;color:var(--color-yellow);-webkit-transition:color;transition:color}.article-list .item h2 a:hover{color:var(--color-purple)}.article-list .item .tags-and-date{text-align:left;margin:-1rem auto 1rem;font-size:.8rem}.article-list .item .split2{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:var(--max-width);margin:0 auto}.article-list .item .image{width:33%;height:calc(33%/1.5)}.article-list .item .image img{width:100%;height:auto}.article-list .item .summary{width:66%;line-height:1.68rem;padding:0 0 0 1rem}.article-list hr{border:none;border-top-color:var(--color-faded-gray);border-bottom:1px solid var(--color-faded-gray);height:.312rem;position:relative;overflow:visible;margin:2rem 0}.article-list hr:after{content:"❦";position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);font-size:2.5rem;background:var(--color-dark-grey)}.article-list hr:last-of-type{display:none}.see-also .see-also-items{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.see-also .see-also-items .suggestion{-ms-flex-preferred-size:50%;flex-basis:50%;width:50%;height:calc(50%/1.5);max-width:18rem;margin:1rem;text-align:center}.see-also .see-also-items .suggestion img{width:100%;height:auto;margin-bottom:.5rem}.see-also .see-also-items .suggestion a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-weight:500;font-size:1.1rem}.home section#thumbs{margin-top:2rem;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.home section#thumbs a{width:33%;height:calc(33%/1.5);position:relative;color:var(--color-white);overflow:hidden;display:block;margin-bottom:.5rem}.home section#thumbs a img{-webkit-transition:-webkit-transform 400ms;transition:-webkit-transform 400ms;transition:transform 400ms;transition:transform 400ms,-webkit-transform 400ms;display:block}.home section#thumbs a .hover{background:rgba(0,0,0,.5);position:absolute;left:0;bottom:0;width:100%}.home section#thumbs a .hover span{font-size:1.2rem;display:block;padding:.5rem;font-family:var(--font-heading)}.home section#thumbs a .hover p{padding:.5rem;margin:0;display:none}.home section#thumbs a:hover img{-webkit-transform:scale(1.25);transform:scale(1.25)}.home section#thumbs a:hover p{display:block}@media screen and (max-width:40rem){.home section#thumbs a{-ms-flex-preferred-size:100%;flex-basis:100%;width:100%;height:calc(100%/1.5)}}h2.consult{font-size:1.1rem;color:#fff;font-weight:600;font-family:var(--font-body)}</style>
-		
-
-		
-			<title>Optimizing Particle Background Performance with Quadtrees - Thinking Through the Party</title>
-		
-
-		<meta name="generator" content="Hugo 0.91.0" />
-	</head>
-	<body>
-		<header class="site-header">
-			
-				<a href="/">Thinking Through the Party</a>
-			
-		</header>
-
-
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name=referrer content="origin">
+<meta property="og:url" content="https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Thinking Through the Party">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:url content="https://blog.ebemunk.com/optimizing-particle-background-performance-with-quadtrees/">
+<meta name=twitter:creator content="@ebemunk">
+<meta property="og:title" content="Optimizing Particle Background Performance with Quadtrees">
+<meta property="twitter:title" content="Optimizing Particle Background Performance with Quadtrees">
+<meta name=description content="Using quadtrees to optimize particle systems.">
+<meta property="og:description" content="Using quadtrees to optimize particle systems.">
+<meta name=twitter:description content="Using quadtrees to optimize particle systems.">
+<meta property="article:published_time" content="2016-01-21T00:00:00Z">
+<meta property="article:modified_time" content="2016-01-21T00:00:00Z">
+<meta property="article:author" content="ebemunk">
+<meta property="og:image" content="https://blog.ebemunk.com/img/quadtrees_huf0a35630ee0bb047391c1928f4e896f4_486876_1200x0_resize_q100_h2_box_3.webp">
+<meta name=twitter:image content="https://blog.ebemunk.com/img/quadtrees_huf0a35630ee0bb047391c1928f4e896f4_486876_1200x0_resize_q100_h2_box_3.webp">
+<style>:root{--color-dark-grey:#282c34;--color-light-grey:#333842;--color-yellow:#d19a66;--color-orange:#de5442;--color-dark-orange:#c13422;--color-purple:#c776df;--color-green:#7cb34b;--color-faded-gray:#9eabb3;--color-white:white;--max-width:40rem;--font-heading:"Abril Fatface", serif;--font-body:"Poppins", sans-serif}@font-face{font-family:poppins;font-style:italic;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiDyp8kv8JHgFVrJJLm21llEA.ttf)format('truetype')}@font-face{font-family:poppins;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8V1s.ttf)format('truetype')}@font-face{font-family:poppins;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7V1s.ttf)format('truetype')}@font-face{font-family:marcellus sc;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/marcellussc/v13/ke8iOgUHP1dg-Rmi6RWjbLEPgQ.ttf)format('truetype')}@font-face{font-family:abril fatface;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/abrilfatface/v19/zOL64pLDlL1D99S8g8PtiKchm-A.ttf)format('truetype')}html{height:100%;font-size:18px}body{background:var(--color-dark-grey);color:var(--color-white);margin:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;font-size:18px;font-family:var(--font-body)}header.site-header,header.site-header a{height:180px;background:url(/img/wildpianoparty.png);background-position:50% -20px;background-repeat:no-repeat;background-attachment:fixed;border-bottom:4px solid #000;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex;font-size:3rem;line-height:3rem;font-family:marcellus sc;color:var(--color-dark-orange);text-align:center;text-decoration:none;-webkit-transition:color 400ms;transition:color 400ms}header.site-header:hover,header.site-header a:hover{background-color:var(--color-light-grey);color:var(--color-orange)}footer.site-footer{height:7em;border-top:4px solid #000;background:url(../img/wildpianoparty.png);background-position:50% 100%;background-repeat:no-repeat;background-attachment:fixed;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}footer.site-footer:hover{background-color:var(--color-light-grey)}footer.site-footer p{margin:1rem;font-size:.8rem;font-weight:700;color:var(--color-faded-gray)}h1{color:var(--color-yellow);margin:1.5rem auto;font-size:3rem;font-weight:300;text-align:center;font-family:var(--font-heading)}h2,h3,h4,h5,h6{color:var(--color-yellow);margin:1.3rem auto;max-width:var(--max-width);font-weight:500;font-family:var(--font-heading)}a,a:visited,a:active{color:var(--color-white);-webkit-text-decoration-line:underline;text-decoration-line:underline;-webkit-text-decoration-color:var(--color-green);text-decoration-color:var(--color-green);-webkit-text-decoration-style:solid;text-decoration-style:solid;text-decoration-thickness:3px;-webkit-transition:color 400ms;transition:color 400ms}a:hover,a:visited:hover,a:active:hover{color:var(--color-green)}blockquote{-webkit-box-sizing:border-box;box-sizing:border-box;max-width:var(--max-width);margin:0 auto;border-left:3px solid var(--color-white);padding-left:2rem;font-style:italic}.tags-and-date{max-width:var(--max-width);margin:0 auto;text-align:center;margin-bottom:1.68rem;font-size:.8rem;color:#d9d9d9}@media screen and (max-width:40rem){article.article p,article.article h2,article.article h3,article.article h4,article.article h5,article.article h6,.share h4,.article-list,.share p{padding:0 .625rem}}article.article p,.share p{max-width:var(--max-width);margin:0 auto 1.3rem;font-size:1rem;line-height:1.68rem}article.article ul{max-width:var(--max-width);margin:0 auto 1.3rem;list-style-type:square}article.article .footnotes{max-width:var(--max-width);margin:0 auto;font-size:.625rem;color:var(--color-faded-gray);line-height:1rem}article.article .footnotes a{text-decoration:none}article.article .footnotes hr{border:.5px solid var(--color-faded-gray)}.article-list{margin-bottom:2rem}.article-list .item h2{max-width:var(--max-width);font-size:2rem;text-align:left}.article-list .item h2 a{text-decoration:none;color:var(--color-yellow);-webkit-transition:color;transition:color}.article-list .item h2 a:hover{color:var(--color-purple)}.article-list .item .tags-and-date{text-align:left;margin:-1rem auto 1rem;font-size:.8rem}.article-list .item .split2{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;max-width:var(--max-width);margin:0 auto}.article-list .item .image{width:33%;height:calc(33%/1.5)}.article-list .item .image img{width:100%;height:auto}.article-list .item .summary{width:66%;line-height:1.68rem;padding:0 0 0 1rem}.article-list hr{border:none;border-top-color:var(--color-faded-gray);border-bottom:1px solid var(--color-faded-gray);height:.312rem;position:relative;overflow:visible;margin:2rem 0}.article-list hr:after{content:"❦";position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);font-size:2.5rem;background:var(--color-dark-grey)}.article-list hr:last-of-type{display:none}.see-also .see-also-items{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.see-also .see-also-items .suggestion{-ms-flex-preferred-size:50%;flex-basis:50%;width:50%;height:calc(50%/1.5);max-width:18rem;margin:1rem;text-align:center}.see-also .see-also-items .suggestion img{width:100%;height:auto;margin-bottom:.5rem}.see-also .see-also-items .suggestion a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-weight:500;font-size:1.1rem}.home section#thumbs{margin-top:2rem;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.home section#thumbs a{width:33%;height:calc(33%/1.5);position:relative;color:var(--color-white);overflow:hidden;display:block;margin-bottom:.5rem}.home section#thumbs a img{-webkit-transition:-webkit-transform 400ms;transition:-webkit-transform 400ms;transition:transform 400ms;transition:transform 400ms,-webkit-transform 400ms;display:block}.home section#thumbs a .hover{background:rgba(0,0,0,.5);position:absolute;left:0;bottom:0;width:100%}.home section#thumbs a .hover span{font-size:1.2rem;display:block;padding:.5rem;font-family:var(--font-heading)}.home section#thumbs a .hover p{padding:.5rem;margin:0;display:none}.home section#thumbs a:hover img{-webkit-transform:scale(1.25);transform:scale(1.25)}.home section#thumbs a:hover p{display:block}@media screen and (max-width:40rem){.home section#thumbs a{-ms-flex-preferred-size:100%;flex-basis:100%;width:100%;height:calc(100%/1.5)}}h2.consult{font-size:1.1rem;color:#fff;font-weight:600;font-family:var(--font-body)}</style>
+<title>Optimizing Particle Background Performance with Quadtrees - Thinking Through the Party</title>
+<meta name=generator content="Hugo 0.91.0">
+</head>
+<body>
+<header class=site-header>
+<a href=/>Thinking Through the Party</a>
+</header>
 <h1>Optimizing Particle Background Performance with Quadtrees</h1>
-
-<div class="tags-and-date">
-	<time title='2016-01-21'>21 January 2016</time>
-	
-	<div class="tags">
-	<em>on:</em>
-	
-		<a href="/tags/technical">technical</a>,
-		<a href="/tags/javascript">javascript</a>
+<div class=tags-and-date>
+<time title=2016-01-21>21 January 2016</time>
+<div class=tags>
+<em>on:</em>
+<a href=/tags/technical>technical</a>,
+<a href=/tags/javascript>javascript</a>
 </div>
-
 </div>
-
-<article class="article">
-	<p>I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, <a href="https://github.com/jnicol/particleground">Particleground</a> and <a href="https://github.com/VincentGarreau/particles.js">particles.js</a>. Before jumping in and copy/pasting sample code, I figured I&rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance.</p>
+<article class=article>
+<p>I have been recently looking at some Javascript libraries to make particle-based backgrounds. I found 2 promising libraries, <a href=https://github.com/jnicol/particleground>Particleground</a> and <a href=https://github.com/VincentGarreau/particles.js>particles.js</a>. Before jumping in and copy/pasting sample code, I figured I&rsquo;d do some thinking of my own and see if I really need a library to achieve a simple particle background where the particles are connected by lines, depending on their distance.</p>
 <p>So - okay, simple enough, 100% width/height canvas at the background, put out some randomly placed dots, then link the dots depending on the distance. Hmm.</p>
 <p>How do you actually find the points closest to a given point? A naive approach is to loop over all points, and then for every point check all the other points and calculate their distance. Uh-oh, that sounds like a <em>O(n<sup>2</sup>)</em> algorithm.</p>
 <p>Okay, so maybe doing it myself from scratch isn&rsquo;t such a good idea. Surely, the libraries would have cleverer solutions than that, right? (Hint: <em>nope</em>)</p>
-<h2 id="digging-in">Digging in</h2>
+<h2 id=digging-in>Digging in</h2>
 <p>Lets dig in their code and see what they&rsquo;re actually doing to find points that are closer than some distance.</p>
 <p>In both cases, the main draw function does something to the effect of:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">points</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">point</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">points</span>[<span style="color:#a6e22e">i</span>];
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>points</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+  <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>point</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>points</span>[<span style=color:#a6e22e>i</span>];
 
-  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">points</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>) {
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">point2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">points</span>[<span style="color:#a6e22e">j</span>];
+  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>var</span> <span style=color:#a6e22e>j</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>; <span style=color:#a6e22e>j</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>points</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>j</span><span style=color:#f92672>++</span>) {
+    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>point2</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>points</span>[<span style=color:#a6e22e>j</span>];
 
-    <span style="color:#75715e">//get the distance between points
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">point</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">point2</span>.<span style="color:#a6e22e">x</span>;
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dy</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">point</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">point2</span>.<span style="color:#a6e22e">y</span>;
+    <span style=color:#75715e>//get the distance between points
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>dx</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>point</span>.<span style=color:#a6e22e>x</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>point2</span>.<span style=color:#a6e22e>x</span>;
+    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>dy</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>point</span>.<span style=color:#a6e22e>y</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>point2</span>.<span style=color:#a6e22e>y</span>;
 
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dist</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">sqrt</span>(<span style="color:#a6e22e">dx</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">dx</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">dy</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">dy</span>);
+    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>dist</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>sqrt</span>(<span style=color:#a6e22e>dx</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>dx</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>dy</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>dy</span>);
 
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">dist</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">someDistance</span>) {
-      <span style="color:#75715e">//link points - draw stuff
-</span><span style="color:#75715e"></span>    }
+    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>dist</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>someDistance</span>) {
+      <span style=color:#75715e>//link points - draw stuff
+</span><span style=color:#75715e></span>    }
   }
 }
 </code></pre></div><p>every single frame.</p>
 <p>Maybe it&rsquo;s not exactly <em>O(n<sup>2</sup>)</em>, but it seems like a whole lot of extra work. So basically, most of the processing is spent calculating euclidian distances only to throw it away.</p>
 <p>Surely, there must be a better way to do this! (Hint: <em>there is!</em>)</p>
-<h2 id="quadtrees">Quadtrees</h2>
-<p>Turns out, we can drastically reduce the number of checks we have to make, by using <a href="https://en.wikipedia.org/wiki/Quadtree">Quadtrees</a>. I wont go into how they work, there are a lot of resources out there. What I want to do is to see if we can improve the performance and squeeze more FPS out of them.</p>
-<p>Hang on, though, let&rsquo;s backtrack. Who&rsquo;s saying they are slow anyway? Just because the code <em>seems</em> slow doesn&rsquo;t mean it is. Checking out the demo pages, they seem to work just fine! But, I have a nagging feeling that they will get exponentially slower the more points we add&hellip;</p>
+<h2 id=quadtrees>Quadtrees</h2>
+<p>Turns out, we can drastically reduce the number of checks we have to make, by using <a href=https://en.wikipedia.org/wiki/Quadtree>Quadtrees</a>. I wont go into how they work, there are a lot of resources out there. What I want to do is to see if we can improve the performance and squeeze more FPS out of them.</p>
+<p>Hang on, though, let&rsquo;s backtrack. Who&rsquo;s saying they are slow anyway? Just because the code <em>seems</em> slow doesn&rsquo;t mean it is. Checking out the demo pages, they seem to work just fine! But, I have a nagging feeling that they will get exponentially slower the more points we add&mldr;</p>
 <p>Check out these examples and play with the density (Particleground - lower density = more points) and number of points (particles.js - more points = uh.. more points).</p>
-<h3 id="particleground">Particleground</h3>
-<iframe width="100%" height="300" src="//jsfiddle.net/ebemunk/jjvhdw7r/embedded/result/dark/" frameborder="0"></iframe>
-<h3 id="particlesjs">particles.js</h3>
-<iframe width="100%" height="300" src="//jsfiddle.net/ebemunk/q0try1kw/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<h3 id=particleground>Particleground</h3>
+<iframe width=100% height=300 src=//jsfiddle.net/ebemunk/jjvhdw7r/embedded/result/dark/ frameborder=0></iframe>
+<h3 id=particlesjs>particles.js</h3>
+<iframe width=100% height=300 src=//jsfiddle.net/ebemunk/q0try1kw/embedded/result,js,html,css/dark/ allowfullscreen frameborder=0></iframe>
 <p>Okay, so they obviously work well with default settings. Increasing the number of points very quickly grinds the performance to a halt, with about 500 points on screen, you&rsquo;re lucky to get 3-4 fps.</p>
 <p>Now here are the same examples, but this time I&rsquo;ve modified both sources to use a quadtree search instead of looping through a gazillion points every frame.</p>
-<p>For the quadtree implementation, I went with <a href="https://github.com/d3/d3-quadtree">d3-quadtree</a> from the brilliant d3 library. The guts of it is:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//on every frame, we reset the quadtree and reconstruct it, as such
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">QUADTREE</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d3</span>.<span style="color:#a6e22e">geom</span>
-  .<span style="color:#a6e22e">quadtree</span>()
-  <span style="color:#75715e">//luckily both libraries use .x .y properties
-</span><span style="color:#75715e"></span>  .<span style="color:#a6e22e">x</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">d</span>) {
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">x</span>;
+<p>For the quadtree implementation, I went with <a href=https://github.com/d3/d3-quadtree>d3-quadtree</a> from the brilliant d3 library. The guts of it is:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>//on every frame, we reset the quadtree and reconstruct it, as such
+</span><span style=color:#75715e></span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>QUADTREE</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>d3</span>.<span style=color:#a6e22e>geom</span>
+  .<span style=color:#a6e22e>quadtree</span>()
+  <span style=color:#75715e>//luckily both libraries use .x .y properties
+</span><span style=color:#75715e></span>  .<span style=color:#a6e22e>x</span>(<span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>d</span>) {
+    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>d</span>.<span style=color:#a6e22e>x</span>;
   })
-  .<span style="color:#a6e22e">y</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">d</span>) {
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">y</span>;
-  })(<span style="color:#a6e22e">points</span>); <span style="color:#75715e">//pass in the points
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">//searching the quadtree
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">closePoints</span>(<span style="color:#a6e22e">p</span>) {
-  <span style="color:#75715e">//we&#39;ll collect all the potentially close points
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [];
+  .<span style=color:#a6e22e>y</span>(<span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>d</span>) {
+    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>d</span>.<span style=color:#a6e22e>y</span>;
+  })(<span style=color:#a6e22e>points</span>); <span style=color:#75715e>//pass in the points
+</span><span style=color:#75715e></span>
+<span style=color:#75715e>//searching the quadtree
+</span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>closePoints</span>(<span style=color:#a6e22e>p</span>) {
+  <span style=color:#75715e>//we&#39;ll collect all the potentially close points
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>arr</span> <span style=color:#f92672>=</span> [];
 
-  <span style="color:#75715e">//distance calculations
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">//DISTANCE is whatever distance the library uses
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">//CANVAS refers to the canvas element of the library
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x0</span>, <span style="color:#a6e22e">y0</span>, <span style="color:#a6e22e">x3</span>, <span style="color:#a6e22e">y3</span>;
-  <span style="color:#a6e22e">x0</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">DISTANCE</span>);
-  <span style="color:#a6e22e">y0</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">DISTANCE</span>);
-  <span style="color:#a6e22e">x3</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">CANVAS</span>.<span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">DISTANCE</span>);
-  <span style="color:#a6e22e">y3</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">min</span>(<span style="color:#a6e22e">CANVAS</span>.<span style="color:#a6e22e">h</span>, <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">DISTANCE</span>);
+  <span style=color:#75715e>//distance calculations
+</span><span style=color:#75715e></span>  <span style=color:#75715e>//DISTANCE is whatever distance the library uses
+</span><span style=color:#75715e></span>  <span style=color:#75715e>//CANVAS refers to the canvas element of the library
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>x0</span>, <span style=color:#a6e22e>y0</span>, <span style=color:#a6e22e>x3</span>, <span style=color:#a6e22e>y3</span>;
+  <span style=color:#a6e22e>x0</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>max</span>(<span style=color:#ae81ff>0</span>, <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>x</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>DISTANCE</span>);
+  <span style=color:#a6e22e>y0</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>max</span>(<span style=color:#ae81ff>0</span>, <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>y</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>DISTANCE</span>);
+  <span style=color:#a6e22e>x3</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>min</span>(<span style=color:#a6e22e>CANVAS</span>.<span style=color:#a6e22e>w</span>, <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>x</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>DISTANCE</span>);
+  <span style=color:#a6e22e>y3</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>min</span>(<span style=color:#a6e22e>CANVAS</span>.<span style=color:#a6e22e>h</span>, <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>y</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>DISTANCE</span>);
 
-  <span style="color:#75715e">//start visiting nodes of the quadtree
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">QUADTREE</span>.<span style="color:#a6e22e">visit</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">node</span>, <span style="color:#a6e22e">x1</span>, <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">x2</span>, <span style="color:#a6e22e">y2</span>) {
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tooFar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x1</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">x3</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">y1</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">y3</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">x2</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">x0</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">y2</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">y0</span>;
+  <span style=color:#75715e>//start visiting nodes of the quadtree
+</span><span style=color:#75715e></span>  <span style=color:#a6e22e>QUADTREE</span>.<span style=color:#a6e22e>visit</span>(<span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>node</span>, <span style=color:#a6e22e>x1</span>, <span style=color:#a6e22e>y1</span>, <span style=color:#a6e22e>x2</span>, <span style=color:#a6e22e>y2</span>) {
+    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>tooFar</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x1</span> <span style=color:#f92672>&gt;=</span> <span style=color:#a6e22e>x3</span> <span style=color:#f92672>||</span> <span style=color:#a6e22e>y1</span> <span style=color:#f92672>&gt;=</span> <span style=color:#a6e22e>y3</span> <span style=color:#f92672>||</span> <span style=color:#a6e22e>x2</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>x0</span> <span style=color:#f92672>||</span> <span style=color:#a6e22e>y2</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>y0</span>;
 
-    <span style="color:#75715e">//make sure its not too far, and we dont return the point
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">//that we&#39;re searching against
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">data</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">tooFar</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">index</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">index</span>) {
-      <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">node</span>.<span style="color:#a6e22e">data</span>);
+    <span style=color:#75715e>//make sure its not too far, and we dont return the point
+</span><span style=color:#75715e></span>    <span style=color:#75715e>//that we&#39;re searching against
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>data</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#f92672>!</span><span style=color:#a6e22e>tooFar</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>data</span>.<span style=color:#a6e22e>index</span> <span style=color:#f92672>!=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>index</span>) {
+      <span style=color:#a6e22e>arr</span>.<span style=color:#a6e22e>push</span>(<span style=color:#a6e22e>node</span>.<span style=color:#a6e22e>data</span>);
     }
 
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">tooFar</span>;
+    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>tooFar</span>;
   });
-  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arr</span>;
+  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>arr</span>;
 }
 </code></pre></div><p>This will retrieve potentially close points, which we then iterate over and calculate the distance and connect/discard accordingly.</p>
 <p>Those of you with a keen eye will notice there is a further optimization we can do, in that once we connect PointX and PointY, we don&rsquo;t need to connect PointY to PointX. The naive approach of looping through all points avoids this, but with a quadtree we don&rsquo;t iterate over points sequentially, so it needs to be handled. I won&rsquo;t produce the code here, but it just involves keeping track of connected points discarding them if we&rsquo;ve already connected those two. Check out the examples below to see the difference.</p>
-<h3 id="particleground---quadtree">Particleground - Quadtree</h3>
-<iframe width="100%" height="300" src="//jsfiddle.net/ebemunk/n178donc/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-<h3 id="particlejs---quadtree">particle.js - Quadtree</h3>
-<iframe width="100%" height="300" src="//jsfiddle.net/ebemunk/bsfL61q0/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<h3 id=particleground---quadtree>Particleground - Quadtree</h3>
+<iframe width=100% height=300 src=//jsfiddle.net/ebemunk/n178donc/embedded/result,js,html,css/dark/ allowfullscreen frameborder=0></iframe>
+<h3 id=particlejs---quadtree>particle.js - Quadtree</h3>
+<iframe width=100% height=300 src=//jsfiddle.net/ebemunk/bsfL61q0/embedded/result,js,html,css/dark/ allowfullscreen frameborder=0></iframe>
 <p>Wow! Do you see that?</p>
 <p>In fact, here are some numbers: with 623 particles on the screen, the naive version has to do <strong>193,753</strong> comparisons per frame (623*622/2). Quadtree version does something around <strong>44,000</strong> comparisons per frame. That&rsquo;s almost 4.5 times the difference!</p>
-<h2 id="somethings-fishy-here">Something&rsquo;s fishy here</h2>
+<h2 id=somethings-fishy-here>Something&rsquo;s fishy here</h2>
 <p>Okay, so we do 4.5 times less work, but comparing the fiddle examples, the FPS increase is nowhere near 4.5 times! What gives?</p>
 <p>Well, turns out we hit the browser&rsquo;s limitations for canvas drawing a lot sooner than we hit the point where this optimization pays off. Replacing the canvas drawing with something that takes time, like an empty loop that does 10,000 iterations, the difference in FPS becomes much more noticeable.</p>
 <p>Of course, if you were doing something other than just drawing lines between points (for example, a force-directed graph, or an interactive one where the mouse somehow affects nearby points, or simulating gravity, etc.) you would almost certainly have to do such an optimization, and quadtrees are an awesome device for this (albeit not the only one).</p>
-<h2 id="take-aways">Take-aways</h2>
+<h2 id=take-aways>Take-aways</h2>
 <p>I learned two things from this experiment. Firstly, don&rsquo;t go cowboy mode and do the most naive implementation, especially when it involves exponential growth. It usually pays off greatly when you consider alternatives, which might be a tad more complicated, but have substantial performance gains.</p>
 <p>Secondly, make sure to optimize pieces of code that are actually bottlenecks. As seen above, the visible gains in FPS do not reflect the actual gains in performance, because the bottleneck in question soon becomes drawing on canvas, instead of the loop through the points.</p>
-<style>
-.highlight {
-  background: #272822;
-  margin: 1.68rem 0;
-  overflow-x: scroll;
-  padding: 1rem 0;
-}
-.highlight pre {
-  max-width: 40rem;
-  font-size: 0.87rem;
-  margin: 0 auto;
-}
-iframe {
-  margin: 1.68rem 0;
-}
-</style>
-
+<style>.highlight{background:#272822;margin:1.68rem 0;overflow-x:scroll;padding:1rem 0}.highlight pre{max-width:40rem;font-size:.87rem;margin:0 auto}iframe{margin:1.68rem 0}</style>
 </article>
-
-<div class="share">
-	<h4>Share this post</h4>
-	<p>I'm pretty sure you know how to share things on social media, so I'll spare you the 50 different obnoxious buttons. If you liked this, feel free to share anywhere, it helps me out.</p>
-	<p>
-		Have something to say? <a target="_blakn" href="https://twitter.com/search?q=https%3a%2f%2fblog.ebemunk.com%2foptimizing-particle-background-performance-with-quadtrees%2f">Discuss on Twitter</a>, or tell me <a href="https://twitter.com/ebemunk">@ebemunk</a>.
-		Consume my work <a href="https://instagram.com/thinkingthrougtheparty">on Instagram</a> or stalk me <a href="https://www.reddit.com/user/boxer-collar">on Reddit</a>.
-	</p>
-	<p>
-		Join my newsletter to get updates when I add new stuff here. I won't sell you anything or spam you with bs.
-	</p>
-	<div id="newsletter-signup"></div>
-
-<script async src="/newsletter-signup/bundle.js"></script>
-<link rel="stylesheet" href="/newsletter-signup/bundle.css" />
-
+<div class=share>
+<h4>Share this post</h4>
+<p>I'm pretty sure you know how to share things on social media, so I'll spare you the 50 different obnoxious buttons. If you liked this, feel free to share anywhere, it helps me out.</p>
+<p>
+Have something to say? <a target=_blakn href="https://twitter.com/search?q=https%3a%2f%2fblog.ebemunk.com%2foptimizing-particle-background-performance-with-quadtrees%2f">Discuss on Twitter</a>, or tell me <a href=https://twitter.com/ebemunk>@ebemunk</a>.
+Consume my work <a href=https://instagram.com/thinkingthrougtheparty>on Instagram</a> or stalk me <a href=https://www.reddit.com/user/boxer-collar>on Reddit</a>.
+</p>
+<p>
+Join my newsletter to get updates when I add new stuff here. I won't sell you anything or spam you with bs.
+</p>
+<div id=newsletter-signup></div>
+<script async src=/newsletter-signup/bundle.js></script>
+<link rel=stylesheet href=/newsletter-signup/bundle.css>
 </div>
-
-
-<div class="see-also">
-	<h4>See Also</h4>
-	<div class="see-also-items">
-		
-			
-			
-			<div class="suggestion">
-				<a href="/visual-look-at-2-million-chess-games-part-2/">
-					<img src="/img/visual-look-part-2_huf0a35630ee0bb047391c1928f4e896f4_171399_600x0_resize_q100_h2_box_3.webp" alt="thumbnail image for Visual Look at 2 Million Chess Games: Part 2" />
-					Visual Look at 2 Million Chess Games: Part 2
-				</a>
-			</div>
-		
-			
-			
-			<div class="suggestion">
-				<a href="/century-of-plane-crashes/">
-					<img src="/img/plane-crashes_huf0a35630ee0bb047391c1928f4e896f4_685414_600x0_resize_q100_h2_box_3.webp" alt="thumbnail image for One Century of Plane Crashes" />
-					One Century of Plane Crashes
-				</a>
-			</div>
-		
-	</div>
+<div class=see-also>
+<h4>See Also</h4>
+<div class=see-also-items>
+<div class=suggestion>
+<a href=/visual-look-at-2-million-chess-games-part-2/>
+<img src=/img/visual-look-part-2_huf0a35630ee0bb047391c1928f4e896f4_171399_600x0_resize_q100_h2_box_3.webp alt="thumbnail image for Visual Look at 2 Million Chess Games: Part 2">
+Visual Look at 2 Million Chess Games: Part 2
+</a>
 </div>
-
-
-<h2 class="consult">Like this stuff and want custom visualizations for your own data?<br />Let's work together. <a href="mailto:bugra@madfilaments.com">Get in touch!</a></h2>
-
-
-
-		<footer class="container site-footer">
-			<p>Thinking Through the Party &copy; 2022</p>
-			<p>Powered by <a href="http://gohugo.io" target="_blank" rel="noopener noreferrer nofollow">Hugo</a></p>
-		</footer>
-
-		
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-212741-11', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-	</body>
+<div class=suggestion>
+<a href=/century-of-plane-crashes/>
+<img src=/img/plane-crashes_huf0a35630ee0bb047391c1928f4e896f4_685414_600x0_resize_q100_h2_box_3.webp alt="thumbnail image for One Century of Plane Crashes">
+One Century of Plane Crashes
+</a>
+</div>
+</div>
+</div>
+<h2 class=consult>Like this stuff and want custom visualizations for your own data?<br>Let's work together. <a href=mailto:bugra@madfilaments.com>Get in touch!</a></h2>
+<footer class="container site-footer">
+<p>Thinking Through the Party &copy; 2022</p>
+<p>Powered by <a href=http://gohugo.io target=_blank rel="noopener noreferrer nofollow">Hugo</a></p>
+</footer>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-212741-11','auto'),ga('send','pageview'))</script>
+</body>
 </html>
-
