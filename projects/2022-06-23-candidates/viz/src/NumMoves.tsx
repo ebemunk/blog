@@ -7,15 +7,20 @@ import {
   schemeTableau10,
   sum,
 } from "d3";
-import { Axis, ResponsiveSvg, usePlotContext } from "vizlib";
+import { Axis, ResponsiveSvg, Svg, usePlotContext } from "vizlib";
 import { times } from "./Time";
 
 export default function NumMoves() {
   return (
-    <>
-      <ResponsiveSvg
-        aspectRatio={1.6}
-        maxWidth={750}
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <Svg
+        width={750}
+        height={468}
         margin={{
           top: 10,
           left: 30,
@@ -24,8 +29,8 @@ export default function NumMoves() {
         }}
       >
         <Viz />
-      </ResponsiveSvg>
-    </>
+      </Svg>
+    </div>
   );
 }
 
@@ -69,7 +74,7 @@ function Viz() {
           fill={schemeTableau10[1]}
         />
       ))}
-      <g transform={`translate(0,${yScale(avg)})`} color="yellow">
+      <g transform={`translate(0,${yScale(avg)})`} color="#f1c21b">
         <line x2={ctx.chartWidth} stroke="currentColor" />
         <text
           fontSize={10}
@@ -82,7 +87,7 @@ function Viz() {
         </text>
       </g>
       <g
-        color="red"
+        color="#da1e28"
         transform={`translate(${
           xScale(data[0][0]) + xScale.bandwidth() / 2
         },0)`}

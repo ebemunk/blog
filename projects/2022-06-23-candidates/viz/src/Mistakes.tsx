@@ -5,7 +5,7 @@ import data from "./data/mistakes.json";
 
 const types = ["total", "inaccuracy", "mistake", "blunder"];
 const color = scaleOrdinal(types, [
-  "rgba(255,255,255,0.5)",
+  "rgb(144,144,144)",
   "#f1c21b",
   "#ff832b",
   "#da1e28",
