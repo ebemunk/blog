@@ -2,28 +2,28 @@
 import { ParseTree } from "https://esm.sh/@mliebelt/pgn-parser@1.4.4";
 import { readPgn } from "./util.ts";
 
-const games = await readPgn();
+// const games = await readPgn();
 
-const ecos = new Map<string, number>();
-for (const game of games) {
-  if (ecos.has(game.tags?.ECO)) {
-    ecos.set(game.tags?.ECO, ecos.get(game.tags?.ECO)! + 1);
-  } else {
-    ecos.set(game.tags?.ECO, 1);
-  }
-}
+// const ecos = new Map<string, number>();
+// for (const game of games) {
+//   if (ecos.has(game.tags?.ECO)) {
+//     ecos.set(game.tags?.ECO, ecos.get(game.tags?.ECO)! + 1);
+//   } else {
+//     ecos.set(game.tags?.ECO, 1);
+//   }
+// }
 
-const openings = new Map<string, number>();
-for (const game of games) {
-  if (openings.has(game.tags?.Opening)) {
-    openings.set(game.tags?.Opening, openings.get(game.tags?.Opening)! + 1);
-  } else {
-    openings.set(game.tags?.Opening, 1);
-  }
-}
+// const openings = new Map<string, number>();
+// for (const game of games) {
+//   if (openings.has(game.tags?.Opening)) {
+//     openings.set(game.tags?.Opening, openings.get(game.tags?.Opening)! + 1);
+//   } else {
+//     openings.set(game.tags?.Opening, 1);
+//   }
+// }
 
-console.log(Array.from(ecos).sort((a, b) => b[1] - a[1]));
-console.log(Array.from(openings).sort((a, b) => b[1] - a[1]));
+// console.log(Array.from(ecos).sort((a, b) => b[1] - a[1]));
+// console.log(Array.from(openings).sort((a, b) => b[1] - a[1]));
 
 export function writeEMT(game: ParseTree) {
   let white = clockToSeconds("2:00:00");
@@ -72,12 +72,12 @@ export function writeEMT(game: ParseTree) {
   }
 }
 
-function clockToSeconds(clock: string) {
+export function clockToSeconds(clock: string) {
   const [hours, minutes, seconds] = clock.split(":").map(Number);
   return hours * 3600 + minutes * 60 + seconds;
 }
 
-function secondsToClock(seconds: number) {
+export function secondsToClock(seconds: number) {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   const sec = seconds % 60;

@@ -3,6 +3,8 @@ import { createGlobalStyle } from "styled-components";
 import Bump from "./Bump";
 import Openings from "./Openings";
 import Mistakes from "./Mistakes";
+import Time from "./Time";
+import NumMoves from "./NumMoves";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -100,7 +102,7 @@ function App() {
             style={{ marginLeft: "0.5rem" }}
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             version="1.1"
             viewBox="0 0 16 16"
             height="1em"
@@ -114,7 +116,7 @@ function App() {
             style={{ marginLeft: "0.5rem" }}
             stroke="currentColor"
             fill="currentColor"
-            stroke-width="0"
+            strokeWidth="0"
             viewBox="0 0 16 16"
             height="1em"
             width="1em"
@@ -136,15 +138,15 @@ function App() {
           <strong>Nepomniachtchi</strong> wins for a second time,{" "}
           <strong>Radjabov</strong> surprises in the last minute,{" "}
           <strong>Caruana</strong> implodes in the latter half. It will be{" "}
-          <strong>Nepomniachtchi</strong> vs <strong>Liren</strong> if Carlsen
-          doesn't defend his title.
+          <strong>Nepomniachtchi</strong> vs <strong>Ding</strong> if{" "}
+          <strong>Carlsen</strong> doesn't defend his title.
         </p>
         <p>
           Only Rounds 3 and 5 saw all-draws. <strong>Nepomniachtchi</strong> was
           the only player with no back-to-back black games while{" "}
-          <strong>Liren</strong> had 2 pairs and Firouzja had 2 pairs of
-          back-to-back whites. <strong>Caruana</strong> was the only one with no
-          back-to-back whites.
+          <strong>Ding</strong> had 2 pairs and <strong>Firouzja</strong> had 2
+          pairs of back-to-back whites. <strong>Caruana</strong> was the only
+          one with no back-to-back whites.
         </p>
         <Standings />
 
@@ -155,14 +157,20 @@ function App() {
         >
           <strong>Nepomniachtchi</strong> kept his lead throughout the whole
           tournament without a single loss. <strong>Caruana</strong> had good
-          chances but nosedived after Round 10. <strong>Liren</strong> had a
-          slow burn but finished 2nd. <strong>Radjabov</strong> started winning
-          after round 9 to end up 3rd. Nakamura lost out on €31,000 with his
-          last round loss.
+          chances but nosedived after Round 10. <strong>Ding</strong> had a slow
+          burn but finished 2nd. <strong>Radjabov</strong> started winning after
+          round 9 to end up 3rd. <strong>Nakamura</strong> lost out on €31,000
+          with his last round loss.
         </p>
         <Bump />
 
-        <h2>Openings</h2>
+        <h2
+          style={{
+            marginTop: "2rem",
+          }}
+        >
+          Openings
+        </h2>
         <p>
           <strong>Berlin Defense (C65)</strong> is still a favorite at this
           level, followed by <strong>Petrov Defense (C42)</strong> and{" "}
@@ -172,15 +180,36 @@ function App() {
         </p>
         <Openings />
 
-        <h2>Inaccuracies, Mistakes and Blunders</h2>
+        <h2
+          style={{
+            marginTop: "2rem",
+          }}
+        >
+          Inaccuracies, Mistakes and Blunders
+        </h2>
         <p>
           Count of mistakes from engine evaluation.{" "}
           <strong>Nepomniachtchi</strong> outclassed the field with &lt;1
           inaccuracy per game throughout the tournament. Even though{" "}
           <strong>Firouzja</strong> had more total mistakes, his second win gave
-          the edge over <strong>Duda</strong> and <strong>Rapport</strong>.
+          him the edge over <strong>Duda</strong> and <strong>Rapport</strong>.
         </p>
         <Mistakes />
+
+        <h2>Time Management</h2>
+        <p>
+          Remaining time after every move in each round. Players generally got
+          better after every round.
+        </p>
+        <Time />
+
+        <h2>Number of Moves</h2>
+        <p>
+          {" "}
+          <strong>Nepomniachtchi</strong>'s trick to winning? Just play less! He
+          made <strong>28%</strong> less moves than the other players.
+        </p>
+        <NumMoves />
       </div>
     </div>
   );
