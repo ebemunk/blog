@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import Bump from "./Bump";
 import Openings from "./Openings";
 import Mistakes from "./Mistakes";
+import { standings } from "./data";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -55,12 +56,20 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <div style={{}}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <GlobalStyle />
-      <Standings />
-      <Bump />
-      <Openings />
-      <Mistakes />
+      <div style={{ width: "960px" }}>
+        <Standings />
+        <Bump />
+        <Openings />
+        <Mistakes />
+      </div>
     </div>
   );
 }

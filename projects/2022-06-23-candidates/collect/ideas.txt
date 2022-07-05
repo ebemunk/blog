@@ -3,7 +3,7 @@ first exchange
 move time vs eval
 what eval did they resign
 bad draw (draw when eval is up?)
-win/lose/draw dots
+- win/lose/draw dots
 win with most blacks/whites
 longest streaks
-mistake/blunder counts
+- mistake/blunder counts

@@ -18,8 +18,6 @@ export interface GameResult {
 }
 
 export interface Result {
-  points: number;
-  sb: number;
   games: GameResult[];
   winsAgainst: { [key: string]: number };
 }
@@ -30,8 +28,6 @@ const standings = new Map<string, Result>();
 
 for (const player of players) {
   standings.set(player, {
-    points: 0,
-    sb: 0,
     games: [],
     winsAgainst: Array.from(players).reduce(
       (acc, p) => ({ ...acc, [p]: 0 }),
@@ -84,7 +80,6 @@ for (const game of games) {
       points: lastBlack?.points ?? 0,
       sb: NaN,
     });
-    white.points++;
     white.winsAgainst[blackName]++;
   } else if (game.tags.Result === "0-1") {
     white.games.push({
@@ -105,7 +100,6 @@ for (const game of games) {
       points: (lastBlack?.points ?? 0) + 1,
       sb: NaN,
     });
-    black.points++;
     black.winsAgainst[whiteName]++;
   } else if (game.tags.Result === "1/2-1/2") {
     white.games.push({
@@ -126,8 +120,6 @@ for (const game of games) {
       points: (lastBlack?.points ?? 0) + 0.5,
       sb: NaN,
     });
-    white.points += 0.5;
-    black.points += 0.5;
     white.winsAgainst[blackName] += 0.5;
     black.winsAgainst[whiteName] += 0.5;
   }
@@ -157,7 +149,13 @@ for (const name of players) {
 await Deno.writeTextFile(
   "../viz/src/data/standings.json",
   JSON.stringify(
-    Array.from(standings).sort((a, b) => b[1].points - a[1].points),
+    Array.from(standings).sort((a, b) => {
+      const numGames = a[1].games.length;
+      const aa = a[1].games[numGames - 1];
+      const bb = b[1].games[numGames - 1];
+      if (aa.points === bb.points) return bb.sb - aa.sb;
+      return bb.points - aa.points;
+    }),
     null,
     2
   )

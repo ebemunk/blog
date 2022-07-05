@@ -61,20 +61,18 @@ console.log({ rounds, players });
 export default function Bump() {
   return (
     <>
-      <div>
-        <ResponsiveSvg
-          aspectRatio={2}
-          maxWidth={960}
-          margin={{
-            left: 110,
-            bottom: 30,
-            right: 120,
-            top: 30,
-          }}
-        >
-          <Viz />
-        </ResponsiveSvg>
-      </div>
+      <ResponsiveSvg
+        aspectRatio={2}
+        maxWidth={960}
+        margin={{
+          left: 110,
+          bottom: 30,
+          right: 120,
+          top: 30,
+        }}
+      >
+        <Viz />
+      </ResponsiveSvg>
     </>
   );
 }
