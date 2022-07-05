@@ -207,7 +207,7 @@ function App() {
         <p>
           {" "}
           <strong>Nepomniachtchi</strong>'s trick to winning? Just play less! He
-          made <strong>28%</strong> less moves than the other players.
+          made <strong>28%</strong> fewer moves than the other players.
         </p>
         <NumMoves />
       </div>
