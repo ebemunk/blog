@@ -3,19 +3,39 @@ import { createGlobalStyle } from "styled-components";
 import Bump from "./Bump";
 import Openings from "./Openings";
 import Mistakes from "./Mistakes";
-import { standings } from "./data";
 
 const GlobalStyle = createGlobalStyle`
   body {
     /* background-color: #1b263b; */
     background-color: rgb(32,33,36);
     color: #e0e1dd;
+    font-family: 'Source Sans Pro';
+  }
+
+  h1, h2, p {
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  p {
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+  h1, h2 {
+    font-family: 'Libre Baskerville';
+  }
+
+  strong {
+    font-weight: 400;
   }
 
   div .piece {
     background-size: contain;
   }
-
   div .piece.pawn.white {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NSIgaGVpZ2h0PSI0NSI+PHBhdGggZD0iTTIyLjUgOWMtMi4yMSAwLTQgMS43OS00IDQgMCAuODkuMjkgMS43MS43OCAyLjM4QzE3LjMzIDE2LjUgMTYgMTguNTkgMTYgMjFjMCAyLjAzLjk0IDMuODQgMi40MSA1LjAzLTMgMS4wNi03LjQxIDUuNTUtNy40MSAxMy40N2gyM2MwLTcuOTItNC40MS0xMi40MS03LjQxLTEzLjQ3IDEuNDctMS4xOSAyLjQxLTMgMi40MS01LjAzIDAtMi40MS0xLjMzLTQuNS0zLjI4LTUuNjIuNDktLjY3Ljc4LTEuNDkuNzgtMi4zOCAwLTIuMjEtMS43OS00LTQtNHoiIGZpbGw9IiNmZmYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==');
   }
@@ -65,9 +85,101 @@ function App() {
     >
       <GlobalStyle />
       <div style={{ width: "960px" }}>
+        <h1>2022 Chess Candidates Tournament</h1>
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: "0.8rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          u/boxer-collar{" "}
+          <svg
+            style={{ marginLeft: "0.5rem" }}
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            version="1.1"
+            viewBox="0 0 16 16"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M16 3.538c-0.588 0.263-1.222 0.438-1.884 0.516 0.678-0.406 1.197-1.050 1.444-1.816-0.634 0.375-1.338 0.65-2.084 0.797-0.6-0.638-1.453-1.034-2.397-1.034-1.813 0-3.281 1.469-3.281 3.281 0 0.256 0.028 0.506 0.084 0.747-2.728-0.138-5.147-1.444-6.766-3.431-0.281 0.484-0.444 1.050-0.444 1.65 0 1.138 0.578 2.144 1.459 2.731-0.538-0.016-1.044-0.166-1.488-0.409 0 0.013 0 0.028 0 0.041 0 1.591 1.131 2.919 2.634 3.219-0.275 0.075-0.566 0.116-0.866 0.116-0.212 0-0.416-0.022-0.619-0.059 0.419 1.303 1.631 2.253 3.066 2.281-1.125 0.881-2.538 1.406-4.078 1.406-0.266 0-0.525-0.016-0.784-0.047 1.456 0.934 3.181 1.475 5.034 1.475 6.037 0 9.341-5.003 9.341-9.341 0-0.144-0.003-0.284-0.009-0.425 0.641-0.459 1.197-1.038 1.637-1.697z"></path>
+          </svg>
+          &nbsp;ebemunk{" "}
+          <svg
+            style={{ marginLeft: "0.5rem" }}
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+          </svg>
+          &nbsp;ThinkingThroughTheParty
+        </p>
+        <p
+          style={{
+            fontSize: "0.8rem",
+            textAlign: "center",
+          }}
+        >
+          data from <strong>lichess.org</strong>
+        </p>
+        <p>
+          <strong>Nepomniachtchi</strong> wins for a second time,{" "}
+          <strong>Radjabov</strong> surprises in the last minute,{" "}
+          <strong>Caruana</strong> implodes in the latter half. It will be{" "}
+          <strong>Nepomniachtchi</strong> vs <strong>Liren</strong> if Carlsen
+          doesn't defend his title.
+        </p>
+        <p>
+          Only Rounds 3 and 5 saw all-draws. <strong>Nepomniachtchi</strong> was
+          the only player with no back-to-back black games while{" "}
+          <strong>Liren</strong> had 2 pairs and Firouzja had 2 pairs of
+          back-to-back whites. <strong>Caruana</strong> was the only one with no
+          back-to-back whites.
+        </p>
         <Standings />
+
+        <p
+          style={{
+            marginBottom: "1.5rem",
+          }}
+        >
+          <strong>Nepomniachtchi</strong> kept his lead throughout the whole
+          tournament without a single loss. <strong>Caruana</strong> had good
+          chances but nosedived after Round 10. <strong>Liren</strong> had a
+          slow burn but finished 2nd. <strong>Radjabov</strong> started winning
+          after round 9 to end up 3rd. Nakamura lost out on €31,000 with his
+          last round loss.
+        </p>
         <Bump />
+
+        <h2>Openings</h2>
+        <p>
+          <strong>Berlin Defense (C65)</strong> is still a favorite at this
+          level, followed by <strong>Petrov Defense (C42)</strong> and{" "}
+          <strong>Sicilian Najdorf (B90)</strong>. Below is the openings chart
+          of the first 9-ply from every game, with the most popular line
+          highlighted.
+        </p>
         <Openings />
+
+        <h2>Inaccuracies, Mistakes and Blunders</h2>
+        <p>
+          Count of mistakes from engine evaluation.{" "}
+          <strong>Nepomniachtchi</strong> outclassed the field with &lt;1
+          inaccuracy per game throughout the tournament. Even though{" "}
+          <strong>Firouzja</strong> had more total mistakes, his second win gave
+          the edge over <strong>Duda</strong> and <strong>Rapport</strong>.
+        </p>
         <Mistakes />
       </div>
     </div>

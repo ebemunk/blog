@@ -5,11 +5,11 @@ import {
   partition,
   scaleOrdinal,
   scaleSqrt,
-  schemeCategory10,
+  schemeTableau10,
 } from "d3";
 import { ResponsiveSvg, usePlotContext } from "vizlib";
-import { pgnstats } from "./data";
 import Chessboard from "./components/Chessboard";
+import { pgnstats } from "./data";
 
 console.log(pgnstats);
 
@@ -72,7 +72,7 @@ export function Viz() {
     .innerRadius((d) => rScale(d.y0))
     .outerRadius((d) => rScale(d.y1 - 1));
 
-  const color = scaleOrdinal(schemeCategory10);
+  const color = scaleOrdinal(schemeTableau10);
 
   const getFirstParent = (d) => {
     let n = d;

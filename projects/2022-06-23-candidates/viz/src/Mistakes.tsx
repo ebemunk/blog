@@ -1,11 +1,19 @@
-import { max, scaleBand, scaleLinear } from "d3";
+import { max, scaleBand, scaleLinear, scaleOrdinal } from "d3";
 import { Axis, ResponsiveSvg, usePlotContext } from "vizlib";
 import { standings } from "./data";
 import data from "./data/mistakes.json";
 
+const types = ["total", "inaccuracy", "mistake", "blunder"];
+const color = scaleOrdinal(types, [
+  "rgba(255,255,255,0.5)",
+  "#f1c21b",
+  "#ff832b",
+  "#da1e28",
+]);
+
 export default function Mistakes() {
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <ResponsiveSvg
         aspectRatio={1.6}
         maxWidth={960}
@@ -18,11 +26,40 @@ export default function Mistakes() {
       >
         <Viz />
       </ResponsiveSvg>
-    </>
+      <div
+        style={{
+          position: "absolute",
+          top: "40px",
+          right: "30px",
+          fontSize: "10px",
+        }}
+      >
+        {types.map((type) => (
+          <div
+            key={type}
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <div
+              style={{
+                background: color(type),
+                width: "10px",
+                height: "10px",
+                marginRight: "3px",
+              }}
+            />
+            <div>
+              {type[0].toUpperCase()}
+              {type.slice(1)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
-
-const types = ["total", "inaccuracy", "mistake", "blunder"];
 
 function Viz() {
   const ctx = usePlotContext();
@@ -59,29 +96,28 @@ function Viz() {
             width={xAxis(inaccuracy + mistake + blunder)}
             y={yAxis(name) + y1Axis("total")}
             height={y1Axis.bandwidth()}
-            fill="white"
-            opacity={0.3}
+            fill={color("total")}
           />
           <rect
             x={0}
             width={xAxis(inaccuracy)}
             y={yAxis(name) + y1Axis("inaccuracy")}
             height={y1Axis.bandwidth()}
-            fill="yellow"
+            fill={color("inaccuracy")}
           />
           <rect
             x={0}
             width={xAxis(mistake)}
             y={yAxis(name) + y1Axis("mistake")}
             height={y1Axis.bandwidth()}
-            fill="orange"
+            fill={color("mistake")}
           />
           <rect
             x={0}
             width={xAxis(blunder)}
             y={yAxis(name) + y1Axis("blunder")}
             height={y1Axis.bandwidth()}
-            fill="red"
+            fill={color("blunder")}
           />
         </g>
       ))}

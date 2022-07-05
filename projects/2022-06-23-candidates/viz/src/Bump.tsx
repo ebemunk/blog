@@ -1,11 +1,4 @@
-import {
-  curveMonotoneX,
-  line,
-  range,
-  scaleOrdinal,
-  scalePoint,
-  schemeTableau10,
-} from "d3";
+import { curveMonotoneX, line, range, scaleOrdinal, scalePoint } from "d3";
 import { useMemo } from "react";
 import styled from "styled-components";
 import { Axis, ResponsiveSvg, usePlotContext } from "vizlib";
@@ -58,16 +51,20 @@ for (let round of rounds) {
 
 console.log({ rounds, players });
 
+const Path = styled.path`
+  mix-blend-mode: hard-light;
+`;
+
 export default function Bump() {
   return (
     <>
       <ResponsiveSvg
         aspectRatio={2}
-        maxWidth={960}
+        maxWidth={980}
         margin={{
-          left: 110,
+          left: 100,
           bottom: 30,
-          right: 120,
+          right: 112,
           top: 30,
         }}
       >
@@ -97,7 +94,17 @@ function Viz() {
   const colorScale = useMemo(() => {
     return scaleOrdinal(
       standings.map(([name]) => name),
-      schemeTableau10
+      [
+        "#fd7f6f",
+        "#7eb0d5",
+        "#b2e061",
+        "#bd7ebe",
+        "#ffb55a",
+        "#ffee65",
+        "#beb9db",
+        "#fdcce5",
+        "#8bd3c7",
+      ]
     );
   }, []);
 
@@ -125,9 +132,8 @@ function Viz() {
       <Axis
         orientation="top"
         scale={xScale}
-        // transform={`translate(0,${ctx.chartHeight})`}
         tickPadding={20}
-        tickFormat={(d) => (d === 0 ? "Drawing of lots" : `Round ${d}`)}
+        tickFormat={(d) => (d === 0 ? "Lot" : `Round ${d}`)}
         tickSizeInner={0}
       />
       <Axis
@@ -139,32 +145,29 @@ function Viz() {
         tickFormat={(d) => ""}
         opacity={0.5}
       />
-      {Array.from(players).map(([name, ranks]) => (
-        <g key={name}>
-          <title>{name}</title>
-          <path
-            d={
-              line(
-                (d) => xScale(d[0])!,
-                (d) => yScale(d[1])!
-              ).curve(curveMonotoneX)(ranks.map((s, i) => [i, s]))!
-            }
-            fill="none"
-            stroke={colorScale(name)}
-            strokeWidth={10}
-            strokeLinecap="round"
-          />
-          {/* {ranks.map((s, i) => (
-            <circle
-              key={i}
-              cx={xScale(i)}
-              cy={yScale(s)}
-              r={5}
-              fill={colorScale(name)}
+      <g
+        style={{
+          isolation: "isolate",
+        }}
+      >
+        {Array.from(players).map(([name, ranks]) => (
+          <g key={name}>
+            <title>{name}</title>
+            <Path
+              d={
+                line(
+                  (d) => xScale(d[0])!,
+                  (d) => yScale(d[1])!
+                ).curve(curveMonotoneX)(ranks.map((s, i) => [i, s]))!
+              }
+              fill="none"
+              stroke={colorScale(name)}
+              strokeWidth={10}
+              strokeLinecap="round"
             />
-          ))} */}
-        </g>
-      ))}
+          </g>
+        ))}
+      </g>
     </VizG>
   );
 }

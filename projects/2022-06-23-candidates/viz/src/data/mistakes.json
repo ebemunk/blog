@@ -2,7 +2,7 @@
   [
     "Jan-Krzysztof Duda",
     {
-      "inaccuracy": 22,
+      "inaccuracy": 24,
       "mistake": 6,
       "blunder": 4
     }
@@ -10,16 +10,16 @@
   [
     "Richard Rapport",
     {
-      "inaccuracy": 18,
-      "mistake": 8,
-      "blunder": 5
+      "inaccuracy": 21,
+      "mistake": 10,
+      "blunder": 7
     }
   ],
   [
     "Ding Liren",
     {
-      "inaccuracy": 14,
-      "mistake": 4,
+      "inaccuracy": 15,
+      "mistake": 5,
       "blunder": 4
     }
   ],
@@ -34,32 +34,32 @@
   [
     "Fabiano Caruana",
     {
-      "inaccuracy": 27,
-      "mistake": 7,
-      "blunder": 3
+      "inaccuracy": 30,
+      "mistake": 8,
+      "blunder": 4
     }
   ],
   [
     "Hikaru Nakamura",
     {
-      "inaccuracy": 22,
-      "mistake": 12,
+      "inaccuracy": 23,
+      "mistake": 16,
       "blunder": 2
     }
   ],
   [
     "Teimour Radjabov",
     {
-      "inaccuracy": 27,
-      "mistake": 8,
+      "inaccuracy": 30,
+      "mistake": 10,
       "blunder": 2
     }
   ],
   [
     "Alireza Firouzja",
     {
-      "inaccuracy": 30,
-      "mistake": 8,
+      "inaccuracy": 33,
+      "mistake": 10,
       "blunder": 4
     }
   ]

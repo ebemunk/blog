@@ -13,7 +13,17 @@ for (const game of games) {
   }
 }
 
+const openings = new Map<string, number>();
+for (const game of games) {
+  if (openings.has(game.tags?.Opening)) {
+    openings.set(game.tags?.Opening, openings.get(game.tags?.Opening)! + 1);
+  } else {
+    openings.set(game.tags?.Opening, 1);
+  }
+}
+
 console.log(Array.from(ecos).sort((a, b) => b[1] - a[1]));
+console.log(Array.from(openings).sort((a, b) => b[1] - a[1]));
 
 export function writeEMT(game: ParseTree) {
   let white = clockToSeconds("2:00:00");

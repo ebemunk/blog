@@ -7,9 +7,24 @@ console.log({ standings });
 export default function Standings() {
   return (
     <>
-      <table>
-        <thead>
-          <tr>
+      <table
+        style={{
+          margin: "2rem auto",
+          borderCollapse: "collapse",
+          // width: "960px",
+        }}
+      >
+        <thead
+          style={{
+            borderBottom: "1px solid white",
+            borderWidth: "medium",
+          }}
+        >
+          <tr
+            style={{
+              fontFamily: "Libre Baskerville",
+            }}
+          >
             <th>Rank</th>
             <th>Player</th>
             <th>Game Results</th>
@@ -18,8 +33,25 @@ export default function Standings() {
         </thead>
         <tbody>
           {standings.map(([name, result], i) => (
-            <tr key={name}>
-              <td>{i + 1}</td>
+            <tr
+              key={name}
+              style={
+                i === 0
+                  ? {
+                      background: "#ef9b20",
+                      color: "black",
+                      fontWeight: "bold",
+                    }
+                  : {}
+              }
+            >
+              <td
+                style={{
+                  textAlign: "center",
+                }}
+              >
+                {i + 1}
+              </td>
               <td
                 style={{
                   textAlign: "right",
@@ -31,6 +63,7 @@ export default function Standings() {
                 <div
                   style={{
                     display: "flex",
+                    justifyContent: "space-evenly",
                   }}
                 >
                   {result.games.map((game: GameResult) => (
@@ -49,12 +82,12 @@ export default function Standings() {
                           height: "100%",
                           top: "0",
                           left: 0,
-                          opacity: 0.5,
+                          // opacity: 0.5,
                           background:
                             game.result === "w"
-                              ? "green"
+                              ? "#87bc45"
                               : game.result === "l"
-                              ? "red"
+                              ? "#ea5545"
                               : "gray",
                           position: "absolute",
                         }}
@@ -73,7 +106,13 @@ export default function Standings() {
                   ))}
                 </div>
               </td>
-              <td>{result.points}</td>
+              <td
+                style={{
+                  textAlign: "center",
+                }}
+              >
+                {result.games[result.games.length - 1].points}
+              </td>
             </tr>
           ))}
         </tbody>
