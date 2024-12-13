@@ -1,0 +1,17 @@
+[
+  { "Ding, Liren": 0, "Gukesh D": 0 },
+  { "Gukesh D": 0, "Ding, Liren": 1, "white": "Gukesh D" },
+  { "Ding, Liren": 1.5, "Gukesh D": 0.5, "white": "Ding, Liren" },
+  { "Gukesh D": 1.5, "Ding, Liren": 1.5, "white": "Gukesh D" },
+  { "Ding, Liren": 2, "Gukesh D": 2, "white": "Ding, Liren" },
+  { "Gukesh D": 2.5, "Ding, Liren": 2.5, "white": "Gukesh D" },
+  { "Ding, Liren": 3, "Gukesh D": 3, "white": "Ding, Liren" },
+  { "Gukesh D": 3.5, "Ding, Liren": 3.5, "white": "Gukesh D" },
+  { "Ding, Liren": 4, "Gukesh D": 4, "white": "Ding, Liren" },
+  { "Gukesh D": 4.5, "Ding, Liren": 4.5, "white": "Gukesh D" },
+  { "Ding, Liren": 5, "Gukesh D": 5, "white": "Ding, Liren" },
+  { "Gukesh D": 6, "Ding, Liren": 5, "white": "Gukesh D" },
+  { "Ding, Liren": 6, "Gukesh D": 6, "white": "Ding, Liren" },
+  { "Gukesh D": 6.5, "Ding, Liren": 6.5, "white": "Gukesh D" },
+  { "Ding, Liren": 6.5, "Gukesh D": 7.5, "white": "Ding, Liren" }
+]

@@ -10,3 +10,4 @@ projects/plane-crashes/collect/data/*
 .parcel-cache
 
 projects/opeth/*
+projects/ironman/collect/tmp/**
