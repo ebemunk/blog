@@ -20,11 +20,6 @@
     },
     "treeParts": [
       {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
-      {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
         "id": "/?",
@@ -462,116 +457,7 @@
         "eval": {
           "cp": -30
         },
-        "clock": 197200,
-        "children": [
-          {
-            "ply": 41,
-            "fen": "2r1k2r/1p1bbppp/4p3/3pP3/1PqN1PP1/p1P1Q3/Pn3BBP/2R1R1K1 b k - 6 21",
-            "id": "('",
-            "uci": "f1e1",
-            "san": "Rfe1",
-            "children": [
-              {
-                "ply": 42,
-                "fen": "2r1k2r/1p1bbppp/4p3/3pP3/1P1N1PP1/p1PqQ3/Pn3BBP/2R1R1K1 w k - 7 22",
-                "id": "=6",
-                "uci": "c4d3",
-                "san": "Qd3",
-                "children": [
-                  {
-                    "ply": 43,
-                    "fen": "2r1k2r/1p1bbppp/4p3/3pP3/1P1N1PP1/p1PqQ3/Pn3B1P/2R1RBK1 b k - 8 22",
-                    "id": "1(",
-                    "uci": "g2f1",
-                    "san": "Bf1",
-                    "children": [
-                      {
-                        "ply": 44,
-                        "fen": "2r1k2r/1p1bbppp/4p3/3pP3/1P1N1PP1/p1P1q3/Pn3B1P/2R1RBK1 w k - 0 23",
-                        "id": "67",
-                        "uci": "d3e3",
-                        "san": "Qxe3",
-                        "children": [
-                          {
-                            "ply": 45,
-                            "fen": "2r1k2r/1p1bbppp/4p3/3pP3/1P1N1PP1/p1P1B3/Pn5P/2R1RBK1 b k - 0 23",
-                            "id": "07",
-                            "uci": "f2e3",
-                            "san": "Bxe3",
-                            "children": [
-                              {
-                                "ply": 46,
-                                "fen": "2r1k2r/1p1bbppp/4p3/3pP3/1PnN1PP1/p1P1B3/P6P/2R1RBK1 w k - 1 24",
-                                "id": ",=",
-                                "uci": "b2c4",
-                                "san": "Nc4",
-                                "children": [
-                                  {
-                                    "ply": 47,
-                                    "fen": "2r1k2r/1p1bbppp/4p3/3pP3/1PnN1PP1/p1P5/P4B1P/2R1RBK1 b k - 2 24",
-                                    "id": "70",
-                                    "uci": "e3f2",
-                                    "san": "Bf2",
-                                    "children": [
-                                      {
-                                        "ply": 48,
-                                        "fen": "4k2r/1prbbppp/4p3/3pP3/1PnN1PP1/p1P5/P4B1P/2R1RBK1 w k - 3 25",
-                                        "id": "]U",
-                                        "uci": "c8c7",
-                                        "san": "Rc7",
-                                        "children": [
-                                          {
-                                            "ply": 49,
-                                            "fen": "4k2r/1prbbppp/4p3/3pP3/1PnN1PP1/p1P5/P4BKP/2R1RB2 b k - 4 25",
-                                            "id": ")1",
-                                            "uci": "g1g2",
-                                            "san": "Kg2",
-                                            "children": [
-                                              {
-                                                "ply": 50,
-                                                "fen": "5rk1/1prbbppp/4p3/3pP3/1PnN1PP1/p1P5/P4BKP/2R1RB2 w - - 5 26",
-                                                "id": "_b",
-                                                "uci": "e8h8",
-                                                "san": "O-O",
-                                                "children": [
-                                                  {
-                                                    "ply": 51,
-                                                    "fen": "5rk1/1prbbppp/4p3/3pP1P1/1PnN1P2/p1P5/P4BKP/2R1RB2 b - - 0 26",
-                                                    "id": "AI",
-                                                    "uci": "g4g5",
-                                                    "san": "g5",
-                                                    "children": [
-                                                      {
-                                                        "ply": 52,
-                                                        "fen": "5rk1/1pr1bppp/4p3/3pP1P1/bPnN1P2/p1P5/P4BKP/2R1RB2 w - - 1 27",
-                                                        "id": "V;",
-                                                        "uci": "d7a4",
-                                                        "san": "Ba4",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 197200
       },
       {
         "ply": 41,
@@ -607,116 +493,7 @@
         "eval": {
           "cp": -100
         },
-        "clock": 192200,
-        "children": [
-          {
-            "ply": 43,
-            "fen": "2r1k2r/1p1bbppp/4p3/3pPP2/1P1N1QP1/p1Pq4/Pn3BBP/2R2RK1 b k - 2 22",
-            "id": "7@",
-            "uci": "e3f4",
-            "san": "Qf4",
-            "children": [
-              {
-                "ply": 44,
-                "fen": "2r1k2r/1p1bbp1p/4p3/3pPPp1/1P1N1QP1/p1Pq4/Pn3BBP/2R2RK1 w k g6 0 23",
-                "id": "YI",
-                "uci": "g7g5",
-                "san": "g5",
-                "children": [
-                  {
-                    "ply": 45,
-                    "fen": "2r1k2r/1p1bbp1p/4p3/3pPPp1/1P1N2P1/p1Pq2Q1/Pn3BBP/2R2RK1 b k - 1 23",
-                    "id": "@9",
-                    "uci": "f4g3",
-                    "san": "Qg3",
-                    "children": [
-                      {
-                        "ply": 46,
-                        "fen": "2r1k2r/1p1bbp1p/4p3/3pPPp1/1P1N2P1/p1P3q1/Pn3BBP/2R2RK1 w k - 0 24",
-                        "id": "69",
-                        "uci": "d3g3",
-                        "san": "Qxg3",
-                        "children": [
-                          {
-                            "ply": 47,
-                            "fen": "2r1k2r/1p1bbp1p/4p3/3pPPp1/1P1N2P1/p1P3B1/Pn4BP/2R2RK1 b k - 0 24",
-                            "id": "09",
-                            "uci": "f2g3",
-                            "san": "Bxg3",
-                            "children": [
-                              {
-                                "ply": 48,
-                                "fen": "2r2rk1/1p1bbp1p/4p3/3pPPp1/1P1N2P1/p1P3B1/Pn4BP/2R2RK1 w - - 1 25",
-                                "id": "_b",
-                                "uci": "e8h8",
-                                "san": "O-O",
-                                "children": [
-                                  {
-                                    "ply": 49,
-                                    "fen": "2r2rk1/1p1bbp1p/4pP2/3pP1p1/1P1N2P1/p1P3B1/Pn4BP/2R2RK1 b - - 0 25",
-                                    "id": "HP",
-                                    "uci": "f5f6",
-                                    "san": "f6",
-                                    "children": [
-                                      {
-                                        "ply": 50,
-                                        "fen": "2rb1rk1/1p1b1p1p/4pP2/3pP1p1/1P1N2P1/p1P3B1/Pn4BP/2R2RK1 w - - 1 26",
-                                        "id": "W^",
-                                        "uci": "e7d8",
-                                        "san": "Bd8",
-                                        "children": [
-                                          {
-                                            "ply": 51,
-                                            "fen": "2rb1rk1/1p1b1p1p/4pP2/3pP1p1/1P1N2P1/p1P2RB1/Pn4BP/2R3K1 b - - 2 26",
-                                            "id": "(8",
-                                            "uci": "f1f3",
-                                            "san": "Rf3",
-                                            "children": [
-                                              {
-                                                "ply": 52,
-                                                "fen": "2r2rk1/1p1b1p1p/1b2pP2/3pP1p1/1P1N2P1/p1P2RB1/Pn4BP/2R3K1 w - - 3 27",
-                                                "id": "^L",
-                                                "uci": "d8b6",
-                                                "san": "Bb6",
-                                                "children": [
-                                                  {
-                                                    "ply": 53,
-                                                    "fen": "2r2rk1/1p1b1p1p/1b2pP2/3pP1p1/1P1N2P1/p1P2R2/Pn3BBP/2R3K1 b - - 4 27",
-                                                    "id": "90",
-                                                    "uci": "g3f2",
-                                                    "san": "Bf2",
-                                                    "children": [
-                                                      {
-                                                        "ply": 54,
-                                                        "fen": "2r2rk1/1p3p1p/1b2pP2/3pP1p1/bP1N2P1/p1P2R2/Pn3BBP/2R3K1 w - - 5 28",
-                                                        "id": "V;",
-                                                        "uci": "d7a4",
-                                                        "san": "Ba4",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 192200
       },
       {
         "ply": 43,
@@ -851,17 +628,7 @@
         "eval": {
           "cp": -196
         },
-        "clock": 73300,
-        "children": [
-          {
-            "ply": 54,
-            "fen": "4k2r/1p3ppp/4b3/3pP3/1P1N1bPP/p1q5/Pn3BB1/1Q3RK1 w k - 0 28",
-            "id": "VO",
-            "uci": "d7e6",
-            "san": "Bxe6",
-            "children": []
-          }
-        ]
+        "clock": 73300
       },
       {
         "ply": 54,
@@ -930,26 +697,7 @@
         "eval": {
           "cp": -88
         },
-        "clock": 101700,
-        "children": [
-          {
-            "ply": 59,
-            "fen": "4k2r/1p1b2pp/4p3/2Bp4/1P3qPP/p7/Pn4B1/1Q3RK1 b k - 1 30",
-            "id": "0E",
-            "uci": "f2c5",
-            "san": "Bc5",
-            "children": [
-              {
-                "ply": 60,
-                "fen": "4k2r/1p1b2pp/4p3/2Bp4/1P4qP/p7/Pn4B1/1Q3RK1 w k - 0 31",
-                "id": "@A",
-                "uci": "f4g4",
-                "san": "Qxg4",
-                "children": []
-              }
-            ]
-          }
-        ]
+        "clock": 101700
       },
       {
         "ply": 59,
@@ -1097,26 +845,7 @@
         "eval": {
           "cp": -273
         },
-        "clock": 18900,
-        "children": [
-          {
-            "ply": 71,
-            "fen": "6k1/1p1b2pp/8/3p4/1P4qP/p2nQ1B1/P7/5BK1 b - - 1 36",
-            "id": "G9",
-            "uci": "e5g3",
-            "san": "Bg3",
-            "children": [
-              {
-                "ply": 72,
-                "fen": "6k1/1p1b2pp/8/3p4/1n4qP/p3Q1B1/P7/5BK1 w - - 0 37",
-                "id": "6<",
-                "uci": "d3b4",
-                "san": "Nxb4",
-                "children": []
-              }
-            ]
-          }
-        ]
+        "clock": 18900
       },
       {
         "ply": 71,
@@ -1196,116 +925,7 @@
         "eval": {
           "cp": -392
         },
-        "clock": 13500,
-        "children": [
-          {
-            "ply": 77,
-            "fen": "6k1/1p4p1/7p/1P1p4/4b1qP/p2nQ1B1/P5BK/8 b - - 0 39",
-            "id": "<D",
-            "uci": "b4b5",
-            "san": "b5",
-            "children": [
-              {
-                "ply": 78,
-                "fen": "8/1p4pk/7p/1P1p4/4b1qP/p2nQ1B1/P5BK/8 w - - 1 40",
-                "id": "aZ",
-                "uci": "g8h7",
-                "san": "Kh7",
-                "children": [
-                  {
-                    "ply": 79,
-                    "fen": "8/1p4pk/1P5p/3p4/4b1qP/p2nQ1B1/P5BK/8 b - - 0 40",
-                    "id": "DL",
-                    "uci": "b5b6",
-                    "san": "b6",
-                    "children": [
-                      {
-                        "ply": 80,
-                        "fen": "8/1p4pk/1P5p/3p1q2/4b2P/p2nQ1B1/P5BK/8 w - - 1 41",
-                        "id": "AH",
-                        "uci": "g4f5",
-                        "san": "Qf5",
-                        "children": [
-                          {
-                            "ply": 81,
-                            "fen": "8/1p4pk/1P5p/3p1q2/4b2P/p2nQ1B1/P5B1/6K1 b - - 2 41",
-                            "id": "2)",
-                            "uci": "h2g1",
-                            "san": "Kg1",
-                            "children": [
-                              {
-                                "ply": 82,
-                                "fen": "8/1p4pk/1P4qp/3p4/4b2P/p2nQ1B1/P5B1/6K1 w - - 3 42",
-                                "id": "HQ",
-                                "uci": "f5g6",
-                                "san": "Qg6",
-                                "children": [
-                                  {
-                                    "ply": 83,
-                                    "fen": "8/1p4pk/1P4qp/3p4/4b2P/p2nQ1B1/P5B1/7K b - - 4 42",
-                                    "id": ")*",
-                                    "uci": "g1h1",
-                                    "san": "Kh1",
-                                    "children": [
-                                      {
-                                        "ply": 84,
-                                        "fen": "8/1p4pk/1P4qp/3p4/4b2P/p3Q1B1/P5B1/2n4K w - - 5 43",
-                                        "id": "6%",
-                                        "uci": "d3c1",
-                                        "san": "Nc1",
-                                        "children": [
-                                          {
-                                            "ply": 85,
-                                            "fen": "8/1p4pk/1P4qp/3p4/4b2P/p3Q1B1/P5BK/2n5 b - - 6 43",
-                                            "id": "*2",
-                                            "uci": "h1h2",
-                                            "san": "Kh2",
-                                            "children": [
-                                              {
-                                                "ply": 86,
-                                                "fen": "8/1p4pk/1P4qp/3p4/7P/p3Q1B1/P5bK/2n5 w - - 0 44",
-                                                "id": "?1",
-                                                "uci": "e4g2",
-                                                "san": "Bxg2",
-                                                "children": [
-                                                  {
-                                                    "ply": 87,
-                                                    "fen": "8/1p4pk/1P4qp/3p4/7P/p5B1/P5bK/2Q5 b - - 0 44",
-                                                    "id": "7%",
-                                                    "uci": "e3c1",
-                                                    "san": "Qxc1",
-                                                    "children": [
-                                                      {
-                                                        "ply": 88,
-                                                        "fen": "8/1p4pk/1P4qp/3p4/7P/p4bB1/P6K/2Q5 w - - 1 45",
-                                                        "id": "18",
-                                                        "uci": "g2f3",
-                                                        "san": "Bf3",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 13500
       },
       {
         "ply": 77,
@@ -1386,118 +1006,7 @@
         "eval": {
           "cp": -570
         },
-        "clock": 177000,
-        "children": [
-          {
-            "ply": 83,
-            "fen": "6k1/1p4p1/3B3p/3p4/1P2b2P/p2nQ1K1/q7/5B2 b - - 1 42",
-            "id": ":(",
-            "uci": "h3f1",
-            "san": "Bf1",
-            "children": [
-              {
-                "ply": 84,
-                "fen": "6k1/1p4p1/3B3p/3p4/1P2b2P/p2nQ1K1/2q5/5B2 w - - 2 43",
-                "id": "+-",
-                "uci": "a2c2",
-                "san": "Qc2",
-                "children": [
-                  {
-                    "ply": 85,
-                    "fen": "6k1/1p4p1/3B3p/3p4/1P2b2P/p2BQ1K1/2q5/8 b - - 0 43",
-                    "id": "(6",
-                    "uci": "f1d3",
-                    "san": "Bxd3",
-                    "children": [
-                      {
-                        "ply": 86,
-                        "fen": "6k1/1p4p1/3B3p/3p4/1P5P/p2bQ1K1/2q5/8 w - - 0 44",
-                        "id": "?6",
-                        "uci": "e4d3",
-                        "san": "Bxd3",
-                        "children": [
-                          {
-                            "ply": 87,
-                            "fen": "6k1/1p4p1/3B3p/2Qp4/1P5P/p2b2K1/2q5/8 b - - 1 44",
-                            "id": "7E",
-                            "uci": "e3c5",
-                            "san": "Qc5",
-                            "children": [
-                              {
-                                "ply": 88,
-                                "fen": "6k1/1p4p1/3B3p/2Qp4/1Pb4P/p5K1/2q5/8 w - - 2 45",
-                                "id": "6=",
-                                "uci": "d3c4",
-                                "san": "Bc4",
-                                "children": [
-                                  {
-                                    "ply": 89,
-                                    "fen": "6k1/1p4p1/7p/2Qp4/1Pb2B1P/p5K1/2q5/8 b - - 3 45",
-                                    "id": "N@",
-                                    "uci": "d6f4",
-                                    "san": "Bf4",
-                                    "children": [
-                                      {
-                                        "ply": 90,
-                                        "fen": "6k1/1p4p1/6qp/2Qp4/1Pb2B1P/p5K1/8/8 w - - 4 46",
-                                        "id": "-Q",
-                                        "uci": "c2g6",
-                                        "san": "Qg6+",
-                                        "check": true,
-                                        "children": [
-                                          {
-                                            "ply": 91,
-                                            "fen": "6k1/1p4p1/6qp/2Qp4/1Pb2B1P/p7/7K/8 b - - 5 46",
-                                            "id": "92",
-                                            "uci": "g3h2",
-                                            "san": "Kh2",
-                                            "children": [
-                                              {
-                                                "ply": 92,
-                                                "fen": "6k1/1p4p1/5q1p/2Qp4/1Pb2B1P/p7/7K/8 w - - 6 47",
-                                                "id": "QP",
-                                                "uci": "g6f6",
-                                                "san": "Qf6",
-                                                "children": [
-                                                  {
-                                                    "ply": 93,
-                                                    "fen": "6k1/1p4p1/5q1p/2Qp4/1Pb4P/p3B3/7K/8 b - - 7 47",
-                                                    "id": "@7",
-                                                    "uci": "f4e3",
-                                                    "san": "Be3",
-                                                    "children": [
-                                                      {
-                                                        "ply": 94,
-                                                        "fen": "6k1/1p4p1/7p/2Qp4/1Pb4q/p3B3/7K/8 w - - 0 48",
-                                                        "id": "PB",
-                                                        "uci": "f6h4",
-                                                        "san": "Qxh4+",
-                                                        "check": true,
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 177000
       },
       {
         "ply": 83,
@@ -1558,11 +1067,6 @@
       }
     },
     "treeParts": [
-      {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
       {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
@@ -2092,11 +1596,6 @@
     },
     "treeParts": [
       {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
-      {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
         "id": ".>",
@@ -2479,26 +1978,7 @@
         "eval": {
           "cp": -47
         },
-        "clock": 502800,
-        "children": [
-          {
-            "ply": 36,
-            "fen": "r3k2r/pp1nbpn1/2p3p1/3p2P1/3P4/1PN2PB1/1PbNP3/R3KBR1 w Qq - 3 19",
-            "id": "`W",
-            "uci": "f8e7",
-            "san": "Be7",
-            "children": [
-              {
-                "ply": 37,
-                "fen": "r3k2r/pp1nbpn1/2p3p1/3p2P1/3P4/1PN2PB1/1PbNP3/2R1KBR1 b q - 4 19",
-                "id": "#%",
-                "uci": "a1c1",
-                "san": "Rc1",
-                "children": []
-              }
-            ]
-          }
-        ]
+        "clock": 502800
       },
       {
         "ply": 36,
@@ -2732,17 +2212,7 @@
         "eval": {
           "cp": 167
         },
-        "clock": 240700,
-        "children": [
-          {
-            "ply": 56,
-            "fen": "3rk3/1p3pb1/2p3p1/p3n1P1/3NP3/8/1PR1KBBr/6R1 w - - 0 29",
-            "id": "SC",
-            "uci": "a7a5",
-            "san": "a5",
-            "children": []
-          }
-        ]
+        "clock": 240700
       },
       {
         "ply": 56,
@@ -2932,117 +2402,7 @@
         "eval": {
           "cp": 369
         },
-        "clock": 57800,
-        "children": [
-          {
-            "ply": 72,
-            "fen": "4k3/1p1r1p2/p1p3p1/8/3bP3/1P3KrB/8/3R3R w - - 0 37",
-            "id": "I9",
-            "uci": "g5g3",
-            "san": "Rxg3+",
-            "check": true,
-            "children": [
-              {
-                "ply": 73,
-                "fen": "4k3/1p1r1p2/p1p3p1/8/3bP3/1P4KB/8/3R3R b - - 0 37",
-                "id": "89",
-                "uci": "f3g3",
-                "san": "Kxg3",
-                "children": [
-                  {
-                    "ply": 74,
-                    "fen": "3rk3/1p3p2/p1p3p1/8/3bP3/1P4KB/8/3R3R w - - 1 38",
-                    "id": "V^",
-                    "uci": "d7d8",
-                    "san": "Rd8",
-                    "children": [
-                      {
-                        "ply": 75,
-                        "fen": "3rk3/1p3p2/p1p3p1/8/3bP3/1P5B/6K1/3R3R b - - 2 38",
-                        "id": "91",
-                        "uci": "g3g2",
-                        "san": "Kg2",
-                        "children": [
-                          {
-                            "ply": 76,
-                            "fen": "3rk3/1p3p2/p5p1/2p5/3bP3/1P5B/6K1/3R3R w - - 0 39",
-                            "id": "ME",
-                            "uci": "c6c5",
-                            "san": "c5",
-                            "children": [
-                              {
-                                "ply": 77,
-                                "fen": "3rk3/1p3p2/p5p1/2p5/3bP1B1/1P6/6K1/3R3R b - - 1 39",
-                                "id": ":A",
-                                "uci": "h3g4",
-                                "san": "Bg4",
-                                "children": [
-                                  {
-                                    "ply": 78,
-                                    "fen": "3r4/1p2kp2/p5p1/2p5/3bP1B1/1P6/6K1/3R3R w - - 2 40",
-                                    "id": "_W",
-                                    "uci": "e8e7",
-                                    "san": "Ke7",
-                                    "children": [
-                                      {
-                                        "ply": 79,
-                                        "fen": "3r4/1p2kp1R/p5p1/2p5/3bP1B1/1P6/6K1/3R4 b - - 3 40",
-                                        "id": "*Z",
-                                        "uci": "h1h7",
-                                        "san": "Rh7",
-                                        "children": [
-                                          {
-                                            "ply": 80,
-                                            "fen": "3r4/4kp1R/p5p1/1pp5/3bP1B1/1P6/6K1/3R4 w - - 0 41",
-                                            "id": "TD",
-                                            "uci": "b7b5",
-                                            "san": "b5",
-                                            "children": [
-                                              {
-                                                "ply": 81,
-                                                "fen": "3r4/4kp1R/p5p1/1pp5/3bP1B1/1P6/6K1/4R3 b - - 1 41",
-                                                "id": "&'",
-                                                "uci": "d1e1",
-                                                "san": "Re1",
-                                                "children": [
-                                                  {
-                                                    "ply": 82,
-                                                    "fen": "3r4/4kp1R/p5p1/1pp5/4P1B1/1Pb5/6K1/4R3 w - - 2 42",
-                                                    "id": ">5",
-                                                    "uci": "d4c3",
-                                                    "san": "Bc3",
-                                                    "children": [
-                                                      {
-                                                        "ply": 83,
-                                                        "fen": "3r4/4kp1R/p5p1/1pp5/4P1B1/1Pb5/6K1/5R2 b - - 3 42",
-                                                        "id": "'(",
-                                                        "uci": "e1f1",
-                                                        "san": "Rf1",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 57800
       },
       {
         "ply": 72,
@@ -3113,11 +2473,6 @@
       }
     },
     "treeParts": [
-      {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
       {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1",
@@ -4043,11 +3398,6 @@
     },
     "treeParts": [
       {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
-      {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
         "id": "/?",
@@ -4534,118 +3884,7 @@
         "eval": {
           "cp": 0
         },
-        "clock": 287100,
-        "children": [
-          {
-            "ply": 45,
-            "fen": "4rk2/pp1b1pp1/1n6/3pR3/2pP1n2/2P3B1/PPBN1P1P/6K1 b - - 0 23",
-            "id": "'G",
-            "uci": "e1e5",
-            "san": "Rxe5",
-            "children": [
-              {
-                "ply": 46,
-                "fen": "5k2/pp1b1pp1/1n6/3pr3/2pP1n2/2P3B1/PPBN1P1P/6K1 w - - 0 24",
-                "id": "_G",
-                "uci": "e8e5",
-                "san": "Rxe5",
-                "children": [
-                  {
-                    "ply": 47,
-                    "fen": "5k2/pp1b1pp1/1n6/3pP3/2p2n2/2P3B1/PPBN1P1P/6K1 b - - 0 24",
-                    "id": ">G",
-                    "uci": "d4e5",
-                    "san": "dxe5",
-                    "children": [
-                      {
-                        "ply": 48,
-                        "fen": "5k2/pp3pp1/1n6/3pP3/b1p2n2/2P3B1/PPBN1P1P/6K1 w - - 1 25",
-                        "id": "V;",
-                        "uci": "d7a4",
-                        "san": "Ba4",
-                        "children": [
-                          {
-                            "ply": 49,
-                            "fen": "5k2/pp3pp1/1n6/3pP3/B1p2n2/2P3B1/PP1N1P1P/6K1 b - - 0 25",
-                            "id": "-;",
-                            "uci": "c2a4",
-                            "san": "Bxa4",
-                            "children": [
-                              {
-                                "ply": 50,
-                                "fen": "5k2/pp3pp1/1n6/3pP3/B1p5/2P3B1/PP1NnP1P/6K1 w - - 1 26",
-                                "id": "@/",
-                                "uci": "f4e2",
-                                "san": "Ne2+",
-                                "check": true,
-                                "children": [
-                                  {
-                                    "ply": 51,
-                                    "fen": "5k2/pp3pp1/1n6/3pP3/B1p5/2P3B1/PP1NnP1P/5K2 b - - 2 26",
-                                    "id": ")(",
-                                    "uci": "g1f1",
-                                    "san": "Kf1",
-                                    "children": [
-                                      {
-                                        "ply": 52,
-                                        "fen": "5k2/pp3pp1/1n6/3pP3/B1p5/2P3n1/PP1N1P1P/5K2 w - - 0 27",
-                                        "id": "/9",
-                                        "uci": "e2g3",
-                                        "san": "Nxg3+",
-                                        "check": true,
-                                        "children": [
-                                          {
-                                            "ply": 53,
-                                            "fen": "5k2/pp3pp1/1n6/3pP3/B1p5/2P3P1/PP1N3P/5K2 b - - 0 27",
-                                            "id": "09",
-                                            "uci": "f2g3",
-                                            "san": "fxg3",
-                                            "children": [
-                                              {
-                                                "ply": 54,
-                                                "fen": "5k2/pp3pp1/8/3pP3/n1p5/2P3P1/PP1N3P/5K2 w - - 0 28",
-                                                "id": "L;",
-                                                "uci": "b6a4",
-                                                "san": "Nxa4",
-                                                "children": [
-                                                  {
-                                                    "ply": 55,
-                                                    "fen": "5k2/pp3pp1/8/3pP3/n1p5/2P3P1/PP1NK2P/8 b - - 1 28",
-                                                    "id": "(/",
-                                                    "uci": "f1e2",
-                                                    "san": "Ke2",
-                                                    "children": [
-                                                      {
-                                                        "ply": 56,
-                                                        "fen": "5k2/pp3pp1/8/3pP3/2p5/2P3P1/Pn1NK2P/8 w - - 0 29",
-                                                        "id": ";,",
-                                                        "uci": "a4b2",
-                                                        "san": "Nxb2",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 287100
       },
       {
         "ply": 45,
@@ -5079,11 +4318,6 @@
       }
     },
     "treeParts": [
-      {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
       {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
@@ -5645,17 +4879,7 @@
         "eval": {
           "cp": 0
         },
-        "clock": 342300,
-        "children": [
-          {
-            "ply": 52,
-            "fen": "1r3rk1/p3qppp/8/3Q4/4p3/2P1P3/PP1R3P/2K1R3 w - - 10 27",
-            "id": "IW",
-            "uci": "g5e7",
-            "san": "Qe7",
-            "children": []
-          }
-        ]
+        "clock": 342300
       },
       {
         "ply": 52,
@@ -6147,11 +5371,6 @@
       }
     },
     "treeParts": [
-      {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
       {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1",
@@ -6790,116 +6009,7 @@
         "eval": {
           "cp": 199
         },
-        "clock": 89200,
-        "children": [
-          {
-            "ply": 59,
-            "fen": "5nk1/p2r1pbp/5np1/1R1P4/1Pp5/3qBBPP/2NQ1PK1/8 b - - 2 30",
-            "id": ">7",
-            "uci": "d4e3",
-            "san": "Be3",
-            "children": [
-              {
-                "ply": 60,
-                "fen": "5nk1/p2r1pbp/5np1/1R1P4/1Pp5/4BBPP/2Nq1PK1/8 w - - 0 31",
-                "id": "6.",
-                "uci": "d3d2",
-                "san": "Qxd2",
-                "children": [
-                  {
-                    "ply": 61,
-                    "fen": "5nk1/p2r1pbp/5np1/1R1P4/1Pp5/5BPP/2NB1PK1/8 b - - 0 31",
-                    "id": "7.",
-                    "uci": "e3d2",
-                    "san": "Bxd2",
-                    "children": [
-                      {
-                        "ply": 62,
-                        "fen": "4nnk1/p2r1pbp/6p1/1R1P4/1Pp5/5BPP/2NB1PK1/8 w - - 1 32",
-                        "id": "P_",
-                        "uci": "f6e8",
-                        "san": "Ne8",
-                        "children": [
-                          {
-                            "ply": 63,
-                            "fen": "4nnk1/p2r1pbp/6p1/1R1P4/1Pp5/4BBPP/2N2PK1/8 b - - 2 32",
-                            "id": ".7",
-                            "uci": "d2e3",
-                            "san": "Be3",
-                            "children": [
-                              {
-                                "ply": 64,
-                                "fen": "3rnnk1/p4pbp/6p1/1R1P4/1Pp5/4BBPP/2N2PK1/8 w - - 3 33",
-                                "id": "V^",
-                                "uci": "d7d8",
-                                "san": "Rd8",
-                                "children": [
-                                  {
-                                    "ply": 65,
-                                    "fen": "3rnnk1/p4pbp/6p1/R2P4/1Pp5/4BBPP/2N2PK1/8 b - - 4 33",
-                                    "id": "DC",
-                                    "uci": "b5a5",
-                                    "san": "Ra5",
-                                    "children": [
-                                      {
-                                        "ply": 66,
-                                        "fen": "3rn1k1/p2n1pbp/6p1/R2P4/1Pp5/4BBPP/2N2PK1/8 w - - 5 34",
-                                        "id": "`V",
-                                        "uci": "f8d7",
-                                        "san": "Nd7",
-                                        "children": [
-                                          {
-                                            "ply": 67,
-                                            "fen": "3rn1k1/R2n1pbp/6p1/3P4/1Pp5/4BBPP/2N2PK1/8 b - - 0 34",
-                                            "id": "CS",
-                                            "uci": "a5a7",
-                                            "san": "Rxa7",
-                                            "children": [
-                                              {
-                                                "ply": 68,
-                                                "fen": "3rn1k1/R2n1pbp/6p1/3P4/1P6/2p1BBPP/2N2PK1/8 w - - 0 35",
-                                                "id": "=5",
-                                                "uci": "c4c3",
-                                                "san": "c3",
-                                                "children": [
-                                                  {
-                                                    "ply": 69,
-                                                    "fen": "3rn1k1/3n1pbp/R5p1/3P4/1P6/2p1BBPP/2N2PK1/8 b - - 1 35",
-                                                    "id": "SK",
-                                                    "uci": "a7a6",
-                                                    "san": "Ra6",
-                                                    "children": [
-                                                      {
-                                                        "ply": 70,
-                                                        "fen": "3rn1k1/3n1p1p/R5p1/3Pb3/1P6/2p1BBPP/2N2PK1/8 w - - 2 36",
-                                                        "id": "YG",
-                                                        "uci": "g7e5",
-                                                        "san": "Be5",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 89200
       },
       {
         "ply": 59,
@@ -6957,17 +6067,7 @@
         "eval": {
           "cp": 165
         },
-        "clock": 47400,
-        "children": [
-          {
-            "ply": 63,
-            "fen": "5nk1/p2r1pbp/6p1/1R1P1qB1/1Pp2Q2/5BPP/5PK1/8 b - - 2 32",
-            "id": "PI",
-            "uci": "f6g5",
-            "san": "Bg5",
-            "children": []
-          }
-        ]
+        "clock": 47400
       },
       {
         "ply": 63,
@@ -7168,116 +6268,7 @@
         "eval": {
           "cp": 47
         },
-        "clock": 201400,
-        "children": [
-          {
-            "ply": 80,
-            "fen": "2n5/p2r1p2/5k1p/1P1P1p2/3R4/5BPP/5P2/5K2 w - - 2 41",
-            "id": "W]",
-            "uci": "e7c8",
-            "san": "Nc8",
-            "children": [
-              {
-                "ply": 81,
-                "fen": "2n5/p2r1p2/5k1p/1P1P1p2/3R4/5BPP/4KP2/8 b - - 3 41",
-                "id": "(/",
-                "uci": "f1e2",
-                "san": "Ke2",
-                "children": [
-                  {
-                    "ply": 82,
-                    "fen": "8/p2r1p2/3n1k1p/1P1P1p2/3R4/5BPP/4KP2/8 w - - 4 42",
-                    "id": "]N",
-                    "uci": "c8d6",
-                    "san": "Nd6",
-                    "children": [
-                      {
-                        "ply": 83,
-                        "fen": "8/p2r1p2/3n1k1p/1P1P1p2/7R/5BPP/4KP2/8 b - - 5 42",
-                        "id": ">B",
-                        "uci": "d4h4",
-                        "san": "Rh4",
-                        "children": [
-                          {
-                            "ply": 84,
-                            "fen": "8/p2r1pk1/3n3p/1P1P1p2/7R/5BPP/4KP2/8 w - - 6 43",
-                            "id": "PY",
-                            "uci": "f6g7",
-                            "san": "Kg7",
-                            "children": [
-                              {
-                                "ply": 85,
-                                "fen": "8/p2r1pk1/3n3p/1P1P1p2/7R/4KBPP/5P2/8 b - - 7 43",
-                                "id": "/7",
-                                "uci": "e2e3",
-                                "san": "Ke3",
-                                "children": [
-                                  {
-                                    "ply": 86,
-                                    "fen": "8/p2r1pk1/7p/1n1P1p2/7R/4KBPP/5P2/8 w - - 0 44",
-                                    "id": "ND",
-                                    "uci": "d6b5",
-                                    "san": "Nxb5",
-                                    "children": [
-                                      {
-                                        "ply": 87,
-                                        "fen": "8/p2r1pk1/7p/1n1P1p2/1R6/4KBPP/5P2/8 b - - 1 44",
-                                        "id": "B<",
-                                        "uci": "h4b4",
-                                        "san": "Rb4",
-                                        "children": [
-                                          {
-                                            "ply": 88,
-                                            "fen": "8/p1nr1pk1/7p/3P1p2/1R6/4KBPP/5P2/8 w - - 2 45",
-                                            "id": "DU",
-                                            "uci": "b5c7",
-                                            "san": "Nc7",
-                                            "children": [
-                                              {
-                                                "ply": 89,
-                                                "fen": "8/p1nr1pk1/7p/3P1p2/1R1K4/5BPP/5P2/8 b - - 3 45",
-                                                "id": "7>",
-                                                "uci": "e3d4",
-                                                "san": "Kd4",
-                                                "children": [
-                                                  {
-                                                    "ply": 90,
-                                                    "fen": "8/p1nr1p2/5k1p/3P1p2/1R1K4/5BPP/5P2/8 w - - 4 46",
-                                                    "id": "YP",
-                                                    "uci": "g7f6",
-                                                    "san": "Kf6",
-                                                    "children": [
-                                                      {
-                                                        "ply": 91,
-                                                        "fen": "8/p1nr1p2/5k1p/3P1p2/1R1K4/6PP/5PB1/8 b - - 5 46",
-                                                        "id": "81",
-                                                        "uci": "f3g2",
-                                                        "san": "Bg2",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 201400
       },
       {
         "ply": 80,
@@ -7368,17 +6359,7 @@
         "eval": {
           "cp": 204
         },
-        "clock": 160400,
-        "children": [
-          {
-            "ply": 87,
-            "fen": "8/p2r1p2/R7/1P2kp2/4n3/5BPP/5P2/5K2 b - - 4 44",
-            "id": "MK",
-            "uci": "c6a6",
-            "san": "Ra6",
-            "children": []
-          }
-        ]
+        "clock": 160400
       },
       {
         "ply": 87,
@@ -7436,17 +6417,7 @@
         "eval": {
           "cp": 123
         },
-        "clock": 32000,
-        "children": [
-          {
-            "ply": 91,
-            "fen": "8/p7/2R2p2/1P2kp2/4n2P/3r1BP1/4KP2/8 b - - 2 46",
-            "id": "'/",
-            "uci": "e1e2",
-            "san": "Ke2",
-            "children": []
-          }
-        ]
+        "clock": 32000
       },
       {
         "ply": 91,
@@ -8069,11 +7040,6 @@
     },
     "treeParts": [
       {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
-      {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1",
         "id": "-=",
@@ -8534,26 +7500,7 @@
         "eval": {
           "cp": 22
         },
-        "clock": 310700,
-        "children": [
-          {
-            "ply": 43,
-            "fen": "4r1k1/1pqn1bpp/n1p2p2/p7/2P5/3P1NP1/PB2P1BP/2RQ2K1 b - - 1 22",
-            "id": "3,",
-            "uci": "a3b2",
-            "san": "Bb2",
-            "children": [
-              {
-                "ply": 44,
-                "fen": "4r1k1/1pq2bpp/n1p2p2/p3n3/2P5/3P1NP1/PB2P1BP/2RQ2K1 w - - 2 23",
-                "id": "VG",
-                "uci": "d7e5",
-                "san": "Ne5",
-                "children": []
-              }
-            ]
-          }
-        ]
+        "clock": 310700
       },
       {
         "ply": 43,
@@ -8634,17 +7581,7 @@
         "eval": {
           "cp": -78
         },
-        "clock": 296400,
-        "children": [
-          {
-            "ply": 49,
-            "fen": "4r1k1/3n1bpp/nq3p2/pp6/8/B2P1NP1/P2QP1BP/1R3K2 b - - 1 25",
-            "id": "&.",
-            "uci": "d1d2",
-            "san": "Qd2",
-            "children": []
-          }
-        ]
+        "clock": 296400
       },
       {
         "ply": 49,
@@ -8691,17 +7628,7 @@
         "eval": {
           "cp": -169
         },
-        "clock": 91600,
-        "children": [
-          {
-            "ply": 52,
-            "fen": "4r1k1/6pp/nq3p2/ppn5/3B4/3P1NP1/b3P1BP/1R1Q1K2 w - - 2 27",
-            "id": "VE",
-            "uci": "d7c5",
-            "san": "Ndc5",
-            "children": []
-          }
-        ]
+        "clock": 91600
       },
       {
         "ply": 52,
@@ -8759,26 +7686,7 @@
         "eval": {
           "cp": 8
         },
-        "clock": 80700,
-        "children": [
-          {
-            "ply": 56,
-            "fen": "4r1k1/3n2pp/1q3p2/1pn5/p2B4/1b1P1NP1/4P1BP/2R1QK2 w - - 0 29",
-            "id": "C;",
-            "uci": "a5a4",
-            "san": "a4",
-            "children": [
-              {
-                "ply": 57,
-                "fen": "4r1k1/3n2pp/1q3p2/1pn5/pQ1B4/1b1P1NP1/4P1BP/2R2K2 b - - 1 29",
-                "id": "'<",
-                "uci": "e1b4",
-                "san": "Qb4",
-                "children": []
-              }
-            ]
-          }
-        ]
+        "clock": 80700
       },
       {
         "ply": 56,
@@ -9067,17 +7975,7 @@
         "eval": {
           "cp": 76
         },
-        "clock": 187300,
-        "children": [
-          {
-            "ply": 81,
-            "fen": "6k1/5bp1/5p1p/p2qn3/1p1B4/3P2P1/3KPQ1P/2R5 b - - 11 41",
-            "id": "E>",
-            "uci": "c5d4",
-            "san": "Bd4",
-            "children": []
-          }
-        ]
+        "clock": 187300
       },
       {
         "ply": 81,
@@ -9361,11 +8259,6 @@
       }
     },
     "treeParts": [
-      {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
       {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
@@ -10569,11 +9462,6 @@
     },
     "treeParts": [
       {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
-      {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
         "id": ".>",
@@ -11389,11 +10277,6 @@
     },
     "treeParts": [
       {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
-      {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1",
         "id": ")8",
@@ -11699,116 +10582,7 @@
         "eval": {
           "cp": -17
         },
-        "clock": 254100,
-        "children": [
-          {
-            "ply": 29,
-            "fen": "3rkb1r/1pq1pppp/8/pPn1n3/2Pp1Q2/P2P2PP/3N1PB1/R1B2RK1 b k - 8 15",
-            "id": "$.",
-            "uci": "b1d2",
-            "san": "Nd2",
-            "children": [
-              {
-                "ply": 30,
-                "fen": "3rkb1r/1pq2ppp/4p3/pPn1n3/2Pp1Q2/P2P2PP/3N1PB1/R1B2RK1 w k - 0 16",
-                "id": "WO",
-                "uci": "e7e6",
-                "san": "e6",
-                "children": [
-                  {
-                    "ply": 31,
-                    "fen": "3rkb1r/1pq2ppp/4p3/pPn1n3/2Pp1Q2/P2P2PP/3N1PB1/1RB2RK1 b k - 1 16",
-                    "id": "#$",
-                    "uci": "a1b1",
-                    "san": "Rb1",
-                    "children": [
-                      {
-                        "ply": 32,
-                        "fen": "1q1rkb1r/1p3ppp/4p3/pPn1n3/2Pp1Q2/P2P2PP/3N1PB1/1RB2RK1 w k - 2 17",
-                        "id": "U\\",
-                        "uci": "c7b8",
-                        "san": "Qb8",
-                        "children": [
-                          {
-                            "ply": 33,
-                            "fen": "1q1rkb1r/1p3ppp/1P2p3/p1n1n3/2Pp1Q2/P2P2PP/3N1PB1/1RB2RK1 b k - 0 17",
-                            "id": "DL",
-                            "uci": "b5b6",
-                            "san": "b6",
-                            "children": [
-                              {
-                                "ply": 34,
-                                "fen": "1q1rkb1r/1p3ppp/1P2p3/2n1n3/p1Pp1Q2/P2P2PP/3N1PB1/1RB2RK1 w k - 0 18",
-                                "id": "C;",
-                                "uci": "a5a4",
-                                "san": "a4",
-                                "children": [
-                                  {
-                                    "ply": 35,
-                                    "fen": "1q1rkb1r/1p3ppp/1P2p3/2n1n3/p1PpNQ2/P2P2PP/5PB1/1RB2RK1 b k - 1 18",
-                                    "id": ".?",
-                                    "uci": "d2e4",
-                                    "san": "Ne4",
-                                    "children": [
-                                      {
-                                        "ply": 36,
-                                        "fen": "1q1rkb1r/1p3ppp/1P2p3/4n3/p1PpNQ2/P2n2PP/5PB1/1RB2RK1 w k - 0 19",
-                                        "id": "E6",
-                                        "uci": "c5d3",
-                                        "san": "Ncxd3",
-                                        "children": [
-                                          {
-                                            "ply": 37,
-                                            "fen": "1q1rkb1r/1p3ppp/1P2p3/4n3/p1PpN3/P2n2PP/3Q1PB1/1RB2RK1 b k - 1 19",
-                                            "id": "@.",
-                                            "uci": "f4d2",
-                                            "san": "Qd2",
-                                            "children": [
-                                              {
-                                                "ply": 38,
-                                                "fen": "1q1rkb1r/1p3ppp/1P2p3/4n3/p1PpN3/P5PP/3Q1PB1/1Rn2RK1 w k - 0 20",
-                                                "id": "6%",
-                                                "uci": "d3c1",
-                                                "san": "Nxc1",
-                                                "children": [
-                                                  {
-                                                    "ply": 39,
-                                                    "fen": "1q1rkb1r/1p3ppp/1P2p3/4n3/p1PpN3/P5PP/5PB1/1RQ2RK1 b k - 0 20",
-                                                    "id": ".%",
-                                                    "uci": "d2c1",
-                                                    "san": "Qxc1",
-                                                    "children": [
-                                                      {
-                                                        "ply": 40,
-                                                        "fen": "1q1rk2r/1p2bppp/1P2p3/4n3/p1PpN3/P5PP/5PB1/1RQ2RK1 w k - 1 21",
-                                                        "id": "`W",
-                                                        "uci": "f8e7",
-                                                        "san": "Be7",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 254100
       },
       {
         "ply": 29,
@@ -11833,26 +10607,7 @@
             "name": "Dubious move"
           }
         ],
-        "clock": 217800,
-        "children": [
-          {
-            "ply": 30,
-            "fen": "3rkb1r/1pq2ppp/4p3/pPn1n3/2Pp1Q2/P2P2PP/5PB1/RNBR2K1 w k - 0 16",
-            "id": "WO",
-            "uci": "e7e6",
-            "san": "e6",
-            "children": [
-              {
-                "ply": 31,
-                "fen": "3rkb1r/1pq2ppp/1P2p3/p1n1n3/2Pp1Q2/P2P2PP/5PB1/RNBR2K1 b k - 0 16",
-                "id": "DL",
-                "uci": "b5b6",
-                "san": "b6",
-                "children": []
-              }
-            ]
-          }
-        ]
+        "clock": 217800
       },
       {
         "ply": 30,
@@ -12075,17 +10830,7 @@
         "eval": {
           "cp": 53
         },
-        "clock": 84800,
-        "children": [
-          {
-            "ply": 49,
-            "fen": "5rk1/1pqrpp2/2n3pb/pR5p/P1PpQ3/3P2PP/2N2PB1/1R4K1 b - - 5 25",
-            "id": "&$",
-            "uci": "d1b1",
-            "san": "Rdb1",
-            "children": []
-          }
-        ]
+        "clock": 84800
       },
       {
         "ply": 49,
@@ -12132,17 +10877,7 @@
         "eval": {
           "cp": 47
         },
-        "clock": 88200,
-        "children": [
-          {
-            "ply": 52,
-            "fen": "1r4k1/1pq1pp2/2nr2pb/pR5p/P1PpQ3/1N1P2PP/5PB1/3R2K1 w - - 8 27",
-            "id": "VN",
-            "uci": "d7d6",
-            "san": "Rd6",
-            "children": []
-          }
-        ]
+        "clock": 88200
       },
       {
         "ply": 52,
@@ -12189,17 +10924,7 @@
         "eval": {
           "cp": 134
         },
-        "clock": 46100,
-        "children": [
-          {
-            "ply": 55,
-            "fen": "1r4k1/1Nq1rp2/2n1p1pb/pR5p/P1PpQ3/3P2PP/5PB1/3R2K1 b - - 0 28",
-            "id": "ET",
-            "uci": "c5b7",
-            "san": "Nxb7",
-            "children": []
-          }
-        ]
+        "clock": 46100
       },
       {
         "ply": 55,
@@ -12224,26 +10949,7 @@
             "name": "Dubious move"
           }
         ],
-        "clock": 79200,
-        "children": [
-          {
-            "ply": 56,
-            "fen": "1r4k1/1pq1rp2/4p1pb/pRN4p/PnPpQ3/3P2PP/5PB1/1R4K1 w - - 4 29",
-            "id": "M<",
-            "uci": "c6b4",
-            "san": "Nb4",
-            "children": [
-              {
-                "ply": 57,
-                "fen": "1r4k1/1Nq1rp2/4p1pb/pR5p/PnPpQ3/3P2PP/5PB1/1R4K1 b - - 0 29",
-                "id": "ET",
-                "uci": "c5b7",
-                "san": "Nxb7",
-                "children": []
-              }
-            ]
-          }
-        ]
+        "clock": 79200
       },
       {
         "ply": 56,
@@ -12303,11 +11009,6 @@
       }
     },
     "treeParts": [
-      {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
       {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/2P5/8/PP1PPPPP/RNBQKBNR b KQkq - 0 1",
@@ -12735,116 +11436,7 @@
         "eval": {
           "cp": 100
         },
-        "clock": 180200,
-        "children": [
-          {
-            "ply": 40,
-            "fen": "1r1qr1k1/1pp1b1p1/1nn3bp/pN3p2/2PPp3/P1Q1B1PP/1P3PBK/3RR1N1 w - - 0 21",
-            "id": "XH",
-            "uci": "f7f5",
-            "san": "f5",
-            "children": [
-              {
-                "ply": 41,
-                "fen": "1r1qr1k1/1pp1b1p1/1nn3bp/pN3p2/2PPp3/P1Q1BPPP/1P4BK/3RR1N1 b - - 0 21",
-                "id": "08",
-                "uci": "f2f3",
-                "san": "f3",
-                "children": [
-                  {
-                    "ply": 42,
-                    "fen": "2rqr1k1/1pp1b1p1/1nn3bp/pN3p2/2PPp3/P1Q1BPPP/1P4BK/3RR1N1 w - - 1 22",
-                    "id": "\\]",
-                    "uci": "b8c8",
-                    "san": "Rc8",
-                    "children": [
-                      {
-                        "ply": 43,
-                        "fen": "2rqr1k1/1pp1b1p1/1nn3bp/pN3p2/2PPp3/P3BPPP/1PQ3BK/3RR1N1 b - - 2 22",
-                        "id": "5-",
-                        "uci": "c3c2",
-                        "san": "Qc2",
-                        "children": [
-                          {
-                            "ply": 44,
-                            "fen": "2rqr1k1/1pp1b1p1/1nn4p/pN3p1b/2PPp3/P3BPPP/1PQ3BK/3RR1N1 w - - 3 23",
-                            "id": "QJ",
-                            "uci": "g6h5",
-                            "san": "Bh5",
-                            "children": [
-                              {
-                                "ply": 45,
-                                "fen": "2rqr1k1/1pp1b1p1/1nn4p/pN3p1b/2PPp2P/P3BPP1/1PQ3BK/3RR1N1 b - - 0 23",
-                                "id": ":B",
-                                "uci": "h3h4",
-                                "san": "h4",
-                                "children": [
-                                  {
-                                    "ply": 46,
-                                    "fen": "2rqr1k1/1pp3p1/1nn2b1p/pN3p1b/2PPp2P/P3BPP1/1PQ3BK/3RR1N1 w - - 1 24",
-                                    "id": "WP",
-                                    "uci": "e7f6",
-                                    "san": "Bf6",
-                                    "children": [
-                                      {
-                                        "ply": 47,
-                                        "fen": "2rqr1k1/1pp3p1/1nn2b1p/pN3p1b/2PPp2P/P3BPPB/1PQ4K/3RR1N1 b - - 2 24",
-                                        "id": "1:",
-                                        "uci": "g2h3",
-                                        "san": "Bh3",
-                                        "children": [
-                                          {
-                                            "ply": 48,
-                                            "fen": "2r1r1k1/1ppq2p1/1nn2b1p/pN3p1b/2PPp2P/P3BPPB/1PQ4K/3RR1N1 w - - 3 25",
-                                            "id": "^V",
-                                            "uci": "d8d7",
-                                            "san": "Qd7",
-                                            "children": [
-                                              {
-                                                "ply": 49,
-                                                "fen": "2r1r1k1/1ppq2p1/1nn2b1p/pN3p1b/2PPp2P/P4PPB/1PQ2B1K/3RR1N1 b - - 4 25",
-                                                "id": "70",
-                                                "uci": "e3f2",
-                                                "san": "Bf2",
-                                                "children": [
-                                                  {
-                                                    "ply": 50,
-                                                    "fen": "3rr1k1/1ppq2p1/1nn2b1p/pN3p1b/2PPp2P/P4PPB/1PQ2B1K/3RR1N1 w - - 5 26",
-                                                    "id": "]^",
-                                                    "uci": "c8d8",
-                                                    "san": "Rcd8",
-                                                    "children": [
-                                                      {
-                                                        "ply": 51,
-                                                        "fen": "3rr1k1/1ppq2p1/1nn2b1p/pNP2p1b/3Pp2P/P4PPB/1PQ2B1K/3RR1N1 b - - 0 26",
-                                                        "id": "=E",
-                                                        "uci": "c4c5",
-                                                        "san": "c5",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 180200
       },
       {
         "ply": 40,
@@ -12902,17 +11494,7 @@
         "eval": {
           "cp": 153
         },
-        "clock": 143300,
-        "children": [
-          {
-            "ply": 44,
-            "fen": "1r1qr1k1/1pp2pp1/1n3bbp/nN6/p1PPp3/P3B1PP/1PQ1NPBK/3RR3 w - - 2 23",
-            "id": "MC",
-            "uci": "c6a5",
-            "san": "Na5",
-            "children": []
-          }
-        ]
+        "clock": 143300
       },
       {
         "ply": 44,
@@ -13014,116 +11596,7 @@
         "eval": {
           "cp": 264
         },
-        "clock": 83700,
-        "children": [
-          {
-            "ply": 52,
-            "fen": "2rqr1k1/1pp2pp1/nn4bp/1N1P4/p1P1pB2/P1Q3PP/1P3PBK/3RR3 w - - 1 27",
-            "id": "\\K",
-            "uci": "b8a6",
-            "san": "Na6",
-            "children": [
-              {
-                "ply": 53,
-                "fen": "2rqr1k1/1pp2pp1/nn4bp/1N1P4/p1PQpB2/P5PP/1P3PBK/3RR3 b - - 2 27",
-                "id": "5>",
-                "uci": "c3d4",
-                "san": "Qd4",
-                "children": [
-                  {
-                    "ply": 54,
-                    "fen": "2rqr1k1/1ppn1pp1/n5bp/1N1P4/p1PQpB2/P5PP/1P3PBK/3RR3 w - - 3 28",
-                    "id": "LV",
-                    "uci": "b6d7",
-                    "san": "Nd7",
-                    "children": [
-                      {
-                        "ply": 55,
-                        "fen": "2rqr1k1/1ppn1pp1/n2P2bp/1N6/p1PQpB2/P5PP/1P3PBK/3RR3 b - - 0 28",
-                        "id": "FN",
-                        "uci": "d5d6",
-                        "san": "d6",
-                        "children": [
-                          {
-                            "ply": 56,
-                            "fen": "2rqr1k1/1p1n1pp1/n2p2bp/1N6/p1PQpB2/P5PP/1P3PBK/3RR3 w - - 0 29",
-                            "id": "UN",
-                            "uci": "c7d6",
-                            "san": "cxd6",
-                            "children": [
-                              {
-                                "ply": 57,
-                                "fen": "2rqr1k1/1p1n1pp1/n2N2bp/8/p1PQpB2/P5PP/1P3PBK/3RR3 b - - 0 29",
-                                "id": "DN",
-                                "uci": "b5d6",
-                                "san": "Nxd6",
-                                "children": [
-                                  {
-                                    "ply": 58,
-                                    "fen": "2rqr1k1/1p1n1pp1/3N2bp/2n5/p1PQpB2/P5PP/1P3PBK/3RR3 w - - 1 30",
-                                    "id": "KE",
-                                    "uci": "a6c5",
-                                    "san": "Nac5",
-                                    "children": [
-                                      {
-                                        "ply": 59,
-                                        "fen": "2rqN1k1/1p1n1pp1/6bp/2n5/p1PQpB2/P5PP/1P3PBK/3RR3 b - - 0 30",
-                                        "id": "N_",
-                                        "uci": "d6e8",
-                                        "san": "Nxe8",
-                                        "children": [
-                                          {
-                                            "ply": 60,
-                                            "fen": "2r1q1k1/1p1n1pp1/6bp/2n5/p1PQpB2/P5PP/1P3PBK/3RR3 w - - 0 31",
-                                            "id": "^_",
-                                            "uci": "d8e8",
-                                            "san": "Qxe8",
-                                            "children": [
-                                              {
-                                                "ply": 61,
-                                                "fen": "2r1q1k1/1p1n1pp1/6bp/2n5/p1PQpB2/P4PPP/1P4BK/3RR3 b - - 0 31",
-                                                "id": "08",
-                                                "uci": "f2f3",
-                                                "san": "f3",
-                                                "children": [
-                                                  {
-                                                    "ply": 62,
-                                                    "fen": "2r1q1k1/1p1n2p1/6bp/2n2p2/p1PQpB2/P4PPP/1P4BK/3RR3 w - - 0 32",
-                                                    "id": "XH",
-                                                    "uci": "f7f5",
-                                                    "san": "f5",
-                                                    "children": [
-                                                      {
-                                                        "ply": 63,
-                                                        "fen": "2r1q1k1/1p1n2p1/6bp/2n2p2/p1PQPB2/P5PP/1P4BK/3RR3 b - - 0 32",
-                                                        "id": "8?",
-                                                        "uci": "f3e4",
-                                                        "san": "fxe4",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 83700
       },
       {
         "ply": 52,
@@ -13357,116 +11830,7 @@
         "eval": {
           "cp": 543
         },
-        "clock": 31500,
-        "children": [
-          {
-            "ply": 72,
-            "fen": "3r1rk1/1p1PRpp1/n5bp/1q1P4/p2Q1B2/P5PP/1P3PBK/3R4 w - - 1 37",
-            "id": "]^",
-            "uci": "c8d8",
-            "san": "Rcd8",
-            "children": [
-              {
-                "ply": 73,
-                "fen": "3r1rk1/1p1PRpp1/n2B2bp/1q1P4/p2Q4/P5PP/1P3PBK/3R4 b - - 2 37",
-                "id": "@N",
-                "uci": "f4d6",
-                "san": "Bd6",
-                "children": [
-                  {
-                    "ply": 74,
-                    "fen": "3r1rk1/1p1PRpp1/n2B3p/1q1P1b2/p2Q4/P5PP/1P3PBK/3R4 w - - 3 38",
-                    "id": "QH",
-                    "uci": "g6f5",
-                    "san": "Bf5",
-                    "children": [
-                      {
-                        "ply": 75,
-                        "fen": "3r1rk1/1p1P1pp1/n2B3p/1q1PRb2/p2Q4/P5PP/1P3PBK/3R4 b - - 4 38",
-                        "id": "WG",
-                        "uci": "e7e5",
-                        "san": "Re5",
-                        "children": [
-                          {
-                            "ply": 76,
-                            "fen": "3r1rk1/1p1q1pp1/n2B3p/3PRb2/p2Q4/P5PP/1P3PBK/3R4 w - - 0 39",
-                            "id": "DV",
-                            "uci": "b5d7",
-                            "san": "Qxd7",
-                            "children": [
-                              {
-                                "ply": 77,
-                                "fen": "3r1Bk1/1p1q1pp1/n6p/3PRb2/p2Q4/P5PP/1P3PBK/3R4 b - - 0 39",
-                                "id": "N`",
-                                "uci": "d6f8",
-                                "san": "Bxf8",
-                                "children": [
-                                  {
-                                    "ply": 78,
-                                    "fen": "5rk1/1p1q1pp1/n6p/3PRb2/p2Q4/P5PP/1P3PBK/3R4 w - - 0 40",
-                                    "id": "^`",
-                                    "uci": "d8f8",
-                                    "san": "Rxf8",
-                                    "children": [
-                                      {
-                                        "ply": 79,
-                                        "fen": "5rk1/1p1q1pp1/n6p/3PRb2/p2Q4/P5PP/1P3PBK/2R5 b - - 1 40",
-                                        "id": "&%",
-                                        "uci": "d1c1",
-                                        "san": "Rc1",
-                                        "children": [
-                                          {
-                                            "ply": 80,
-                                            "fen": "5rk1/1p1q1p2/n5pp/3PRb2/p2Q4/P5PP/1P3PBK/2R5 w - - 0 41",
-                                            "id": "YQ",
-                                            "uci": "g7g6",
-                                            "san": "g6",
-                                            "children": [
-                                              {
-                                                "ply": 81,
-                                                "fen": "5rk1/1p1q1p2/nQ4pp/3PRb2/p7/P5PP/1P3PBK/2R5 b - - 1 41",
-                                                "id": ">L",
-                                                "uci": "d4b6",
-                                                "san": "Qb6",
-                                                "children": [
-                                                  {
-                                                    "ply": 82,
-                                                    "fen": "5r2/1p1q1pk1/nQ4pp/3PRb2/p7/P5PP/1P3PBK/2R5 w - - 2 42",
-                                                    "id": "aY",
-                                                    "uci": "g8g7",
-                                                    "san": "Kg7",
-                                                    "children": [
-                                                      {
-                                                        "ply": 83,
-                                                        "fen": "5r2/1p1q1pk1/nQ4pp/3P1b2/p7/P5PP/1P2RPBK/2R5 b - - 3 42",
-                                                        "id": "G/",
-                                                        "uci": "e5e2",
-                                                        "san": "Re2",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 31500
       },
       {
         "ply": 72,
@@ -13524,116 +11888,7 @@
         "eval": {
           "cp": 660
         },
-        "clock": 22300,
-        "children": [
-          {
-            "ply": 76,
-            "fen": "5r2/1p1PRppk/n2B2bp/1q1P4/p7/P3Q1PP/1Pr2PBK/3R4 w - - 5 39",
-            "id": "aZ",
-            "uci": "g8h7",
-            "san": "Kh7",
-            "children": [
-              {
-                "ply": 77,
-                "fen": "5r2/1p1PRppk/n2B2bp/1q1P4/p3B3/P3Q1PP/1Pr2P1K/3R4 b - - 6 39",
-                "id": "1?",
-                "uci": "g2e4",
-                "san": "Be4",
-                "children": [
-                  {
-                    "ply": 78,
-                    "fen": "5r2/1p1PRppk/n2B2bp/3P4/p3B3/P3Q1PP/1qr2P1K/3R4 w - - 0 40",
-                    "id": "D,",
-                    "uci": "b5b2",
-                    "san": "Qxb2",
-                    "children": [
-                      {
-                        "ply": 79,
-                        "fen": "5r2/1p1PRppk/n2B2bp/3P4/p7/P3Q1PP/1qB2P1K/3R4 b - - 0 40",
-                        "id": "?-",
-                        "uci": "e4c2",
-                        "san": "Bxc2",
-                        "children": [
-                          {
-                            "ply": 80,
-                            "fen": "5r2/1p1PRppk/n2B2bp/3P4/p7/P3Q1PP/2q2P1K/3R4 w - - 0 41",
-                            "id": ",-",
-                            "uci": "b2c2",
-                            "san": "Qxc2",
-                            "children": [
-                              {
-                                "ply": 81,
-                                "fen": "5r2/1p1PRppk/n2B2bp/3P4/p7/P3Q1PP/2q2P1K/2R5 b - - 1 41",
-                                "id": "&%",
-                                "uci": "d1c1",
-                                "san": "Rc1",
-                                "children": [
-                                  {
-                                    "ply": 82,
-                                    "fen": "5r2/1p1PRppk/n2B2bp/3P1q2/p7/P3Q1PP/5P1K/2R5 w - - 2 42",
-                                    "id": "-H",
-                                    "uci": "c2f5",
-                                    "san": "Qf5",
-                                    "children": [
-                                      {
-                                        "ply": 83,
-                                        "fen": "5r2/1p1P1ppk/n2B2bp/3PRq2/p7/P3Q1PP/5P1K/2R5 b - - 3 42",
-                                        "id": "WG",
-                                        "uci": "e7e5",
-                                        "san": "Re5",
-                                        "children": [
-                                          {
-                                            "ply": 84,
-                                            "fen": "5r2/1p1q1ppk/n2B2bp/3PR3/p7/P3Q1PP/5P1K/2R5 w - - 0 43",
-                                            "id": "HV",
-                                            "uci": "f5d7",
-                                            "san": "Qxd7",
-                                            "children": [
-                                              {
-                                                "ply": 85,
-                                                "fen": "5B2/1p1q1ppk/n5bp/3PR3/p7/P3Q1PP/5P1K/2R5 b - - 0 43",
-                                                "id": "N`",
-                                                "uci": "d6f8",
-                                                "san": "Bxf8",
-                                                "children": [
-                                                  {
-                                                    "ply": 86,
-                                                    "fen": "3q1B2/1p3ppk/n5bp/3PR3/p7/P3Q1PP/5P1K/2R5 w - - 1 44",
-                                                    "id": "V^",
-                                                    "uci": "d7d8",
-                                                    "san": "Qd8",
-                                                    "children": [
-                                                      {
-                                                        "ply": 87,
-                                                        "fen": "3q4/1p2Bppk/n5bp/3PR3/p7/P3Q1PP/5P1K/2R5 b - - 2 44",
-                                                        "id": "`W",
-                                                        "uci": "f8e7",
-                                                        "san": "Be7",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 22300
       },
       {
         "ply": 76,
@@ -13694,11 +11949,6 @@
       }
     },
     "treeParts": [
-      {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
       {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
@@ -14226,26 +12476,7 @@
         "eval": {
           "cp": 109
         },
-        "clock": 117100,
-        "children": [
-          {
-            "ply": 49,
-            "fen": "2b1r1k1/pr2n1pp/3Bp1q1/1p6/2pP4/P1N2P2/1P2Q1PP/3RR1K1 b - - 10 25",
-            "id": "('",
-            "uci": "f1e1",
-            "san": "Rfe1",
-            "children": [
-              {
-                "ply": 50,
-                "fen": "2b1r1k1/1r2n1pp/3Bp1q1/pp6/2pP4/P1N2P2/1P2Q1PP/3RR1K1 w - - 0 26",
-                "id": "SC",
-                "uci": "a7a5",
-                "san": "a5",
-                "children": []
-              }
-            ]
-          }
-        ]
+        "clock": 117100
       },
       {
         "ply": 49,
@@ -14381,17 +12612,7 @@
         "eval": {
           "cp": 25
         },
-        "clock": 82800,
-        "children": [
-          {
-            "ply": 60,
-            "fen": "2b1r1k1/1r4pp/p7/1pQ5/2p5/P1N2P2/1P4PP/4qRK1 w - - 0 31",
-            "id": "O'",
-            "uci": "e6e1",
-            "san": "Qxe1",
-            "children": []
-          }
-        ]
+        "clock": 82800
       },
       {
         "ply": 60,
@@ -14416,120 +12637,7 @@
             "name": "Mistake"
           }
         ],
-        "clock": 48400,
-        "children": [
-          {
-            "ply": 61,
-            "fen": "2b1R1k1/1r3qpp/p7/1pQ5/2p5/P1N2P2/1P4PP/5RK1 b - - 0 31",
-            "id": "'_",
-            "uci": "e1e8",
-            "san": "Rxe8+",
-            "check": true,
-            "children": [
-              {
-                "ply": 62,
-                "fen": "2b1q1k1/1r4pp/p7/1pQ5/2p5/P1N2P2/1P4PP/5RK1 w - - 0 32",
-                "id": "X_",
-                "uci": "f7e8",
-                "san": "Qxe8",
-                "children": [
-                  {
-                    "ply": 63,
-                    "fen": "2b1q1k1/1r4pp/p7/1pQ5/2p1N3/P4P2/1P4PP/5RK1 b - - 1 32",
-                    "id": "5?",
-                    "uci": "c3e4",
-                    "san": "Ne4",
-                    "children": [
-                      {
-                        "ply": 64,
-                        "fen": "2b1q1k1/3r2pp/p7/1pQ5/2p1N3/P4P2/1P4PP/5RK1 w - - 2 33",
-                        "id": "TV",
-                        "uci": "b7d7",
-                        "san": "Rd7",
-                        "children": [
-                          {
-                            "ply": 65,
-                            "fen": "2b1q1k1/3r2pp/p2N4/1pQ5/2p5/P4P2/1P4PP/5RK1 b - - 3 33",
-                            "id": "?N",
-                            "uci": "e4d6",
-                            "san": "Nd6",
-                            "children": [
-                              {
-                                "ply": 66,
-                                "fen": "2bq2k1/3r2pp/p2N4/1pQ5/2p5/P4P2/1P4PP/5RK1 w - - 4 34",
-                                "id": "_^",
-                                "uci": "e8d8",
-                                "san": "Qd8",
-                                "children": [
-                                  {
-                                    "ply": 67,
-                                    "fen": "2bq2k1/3r2pp/p2N4/1p1Q4/2p5/P4P2/1P4PP/5RK1 b - - 5 34",
-                                    "id": "EF",
-                                    "uci": "c5d5",
-                                    "san": "Qd5+",
-                                    "check": true,
-                                    "children": [
-                                      {
-                                        "ply": 68,
-                                        "fen": "2bq1k2/3r2pp/p2N4/1p1Q4/2p5/P4P2/1P4PP/5RK1 w - - 6 35",
-                                        "id": "a`",
-                                        "uci": "g8f8",
-                                        "san": "Kf8",
-                                        "children": [
-                                          {
-                                            "ply": 69,
-                                            "fen": "2bq1k2/3r2pp/p2N4/1p3Q2/2p5/P4P2/1P4PP/5RK1 b - - 7 35",
-                                            "id": "FH",
-                                            "uci": "d5f5",
-                                            "san": "Qf5+",
-                                            "check": true,
-                                            "children": [
-                                              {
-                                                "ply": 70,
-                                                "fen": "2bq2k1/3r2pp/p2N4/1p3Q2/2p5/P4P2/1P4PP/5RK1 w - - 8 36",
-                                                "id": "`a",
-                                                "uci": "f8g8",
-                                                "san": "Kg8",
-                                                "children": [
-                                                  {
-                                                    "ply": 71,
-                                                    "fen": "2bq2k1/3r2pp/p2NQ3/1p6/2p5/P4P2/1P4PP/5RK1 b - - 9 36",
-                                                    "id": "HO",
-                                                    "uci": "f5e6",
-                                                    "san": "Qe6+",
-                                                    "check": true,
-                                                    "children": [
-                                                      {
-                                                        "ply": 72,
-                                                        "fen": "2bq1k2/3r2pp/p2NQ3/1p6/2p5/P4P2/1P4PP/5RK1 w - - 10 37",
-                                                        "id": "a`",
-                                                        "uci": "g8f8",
-                                                        "san": "Kf8",
-                                                        "children": []
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "clock": 48400
       },
       {
         "ply": 61,
@@ -15414,11 +13522,6 @@
     },
     "treeParts": [
       {
-        "ply": 0,
-        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-        "dests": "ksA owE bqs gvx jrz nvD muC ltB iqy pxF"
-      },
-      {
         "ply": 1,
         "fen": "rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1",
         "id": ")8",
@@ -15691,17 +13794,7 @@
         "eval": {
           "cp": 4
         },
-        "clock": 466000,
-        "children": [
-          {
-            "ply": 26,
-            "fen": "r1bq1rk1/pp3ppp/2n5/1N2p3/2Pb4/6P1/PP3PBP/R1BQ1RK1 w - - 0 14",
-            "id": "OG",
-            "uci": "e6e5",
-            "san": "e5",
-            "children": []
-          }
-        ]
+        "clock": 466000
       },
       {
         "ply": 26,
@@ -16631,17 +14724,7 @@
         "eval": {
           "cp": -14
         },
-        "clock": 404300,
-        "children": [
-          {
-            "ply": 109,
-            "fen": "B7/8/4b3/4kp2/R5p1/6P1/1r6/6K1 b - - 17 55",
-            "id": "@;",
-            "uci": "f4a4",
-            "san": "Ra4",
-            "children": []
-          }
-        ]
+        "clock": 404300
       },
       {
         "ply": 109,

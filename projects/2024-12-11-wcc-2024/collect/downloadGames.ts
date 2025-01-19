@@ -41,7 +41,10 @@ for (const round of broadcast.rounds) {
   roundHTMLScripts.push({
     pgn: pgns[i],
     analysis: pageInitData.data.analysis,
-    treeParts: pageInitData.data.treeParts,
+    treeParts: pageInitData.data.treeParts.slice(1).map((d) => {
+      delete d.children;
+      return d;
+    }),
   });
   i++;
 }
