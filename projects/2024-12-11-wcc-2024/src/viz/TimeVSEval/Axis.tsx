@@ -11,6 +11,7 @@ interface Scale<Range = number> {
   range(range: Range[]): this;
   ticks(count?: number): number[];
   tickFormat(count?: number, specifier?: string): ((d: number) => string);
+  bandwidth?: () => number;
 }
 
 interface AxisProps {
@@ -18,9 +19,10 @@ interface AxisProps {
   scale: Scale;
   transform?: string;
   tickFormat?: (value: number) => string;
+  tickCount?: number;
 }
 
-export function Axis({ type, scale, transform = "", tickFormat }: AxisProps) {
+export function Axis({ type, scale, transform = "", tickFormat, tickCount }: AxisProps) {
   const ref = useRef<SVGGElement>(null);
 
   useEffect(() => {
@@ -36,5 +38,41 @@ export function Axis({ type, scale, transform = "", tickFormat }: AxisProps) {
       .attr("transform", transform);
   }, [scale, type, transform, tickFormat]);
 
-  return <g ref={ref} />;
+  // For band scales, we want to center the ticks under each band
+  const bandAdjustment = scale.bandwidth ? scale.bandwidth() / 2 : 0;
+
+  return (
+    <g ref={ref} className={`axis axis-${type}`} transform={transform}>
+      {/* ... path code ... */}
+      {scale.ticks ? (
+        // For linear scales
+        scale.ticks(tickCount).map((d) => (
+          <g key={d} transform={`translate(${scale(d)},0)`}>
+            <line y2={type === "bottom" ? 6 : -6} stroke="currentColor" />
+            <text
+              y={type === "bottom" ? 9 : -9}
+              dy={type === "bottom" ? "0.71em" : "0.32em"}
+              textAnchor="middle"
+            >
+              {tickFormat ? tickFormat(d) : d}
+            </text>
+          </g>
+        ))
+      ) : (
+        // For band scales
+        scale.domain().map((d) => (
+          <g key={d} transform={`translate(${scale(d)! + bandAdjustment},0)`}>
+            <line y2={type === "bottom" ? 6 : -6} stroke="currentColor" />
+            <text
+              y={type === "bottom" ? 9 : -9}
+              dy={type === "bottom" ? "0.71em" : "0.32em"}
+              textAnchor="middle"
+            >
+              {tickFormat ? tickFormat(d) : d}
+            </text>
+          </g>
+        ))
+      )}
+    </g>
+  );
 } 

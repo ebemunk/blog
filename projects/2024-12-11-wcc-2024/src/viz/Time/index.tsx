@@ -118,6 +118,10 @@ function stuff(game: (typeof raw)[number]) {
       blackThinkingTimes.push(move.d_time);
     }
 
+    if (move.d_time > 60 * 60 * 1000) {
+      console.log("long move", move);
+    }
+
     if (isWhite) {
       whiteLast = move;
     } else {

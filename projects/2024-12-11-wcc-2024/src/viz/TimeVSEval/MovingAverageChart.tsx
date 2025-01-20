@@ -119,7 +119,7 @@ export function MovingAverageChart({
         transform={`translate(15, ${height/2}) rotate(-90)`}
         textAnchor="middle"
       >
-        Average Evaluation Change (cp)
+        Evaluation Change (cp)
       </text>
     </svg>
   );

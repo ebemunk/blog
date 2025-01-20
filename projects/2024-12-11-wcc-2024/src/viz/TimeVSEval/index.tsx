@@ -66,19 +66,25 @@ function calculateTimeSpent(
   moveNumber: number,
   timeControl: TimeControl
 ): number {
-  let timeSpent = lastClock - currentClock;
+  // Convert centiseconds to milliseconds
+  const lastMs = lastClock * 10;
+  const currentMs = currentClock * 10;
   
-  // Check if we just crossed the first time control
-  if (moveNumber === timeControl.firstTimeControl.moves) {
-    timeSpent -= timeControl.firstTimeControl.time;
+  // Basic time difference
+  let timeSpent = lastMs - currentMs;
+
+  // If time was added (clock increased)
+  if (currentMs > lastMs) {
+    if (moveNumber === timeControl.firstTimeControl.moves) {
+      // At move 40, they get 30 minutes added
+      timeSpent = lastMs + timeControl.firstTimeControl.time - currentMs;
+    } else if (moveNumber >= timeControl.increment.startMove) {
+      // After move 40, they get 30 seconds per move
+      timeSpent = lastMs + timeControl.increment.time - currentMs;
+    }
   }
   
-  // Check if we're in increment phase
-  if (moveNumber >= timeControl.increment.startMove) {
-    timeSpent -= timeControl.increment.time;
-  }
-  
-  return timeSpent;
+  return Math.max(0, timeSpent);
 }
 
 // Helper function to convert eval to centipawn score
@@ -97,7 +103,7 @@ function evalToCp(eval_?: Evaluation): number {
 function processGames(
   rawData: ChessGame[], 
   timeControl: TimeControl = WCC_2024_TIME_CONTROL,
-  players: [string, string] = ["Gukesh", "Ding"]  // Add players parameter
+  players: [string, string] = ["Gukesh", "Ding"]
 ): ProcessedMove[][] {
   return rawData.map((game, gameIndex) => {
     const processedMoves: ProcessedMove[] = [];
@@ -105,96 +111,66 @@ function processGames(
     if (!moves || moves.length === 0) return [];
 
     // Get player colors for this game from results
-    // Skip first entry (index 0) in results
     const gameResult = results[gameIndex + 1];
     const whitePlayer = gameResult.white.includes(players[0]) ? players[0] : players[1];
     const blackPlayer = whitePlayer === players[0] ? players[1] : players[0];
 
-    // Add first move with null values for time and eval change
-    processedMoves.push({
-      time_spent: null,
-      evalChange: null,
-      ply: 1,
-      side: 'w',
-      san: moves[0].san,
-      gameNumber: gameIndex + 1,
-      moveNumber: 1,
-      player: whitePlayer
-    });
-
-    // Initialize clock values from the first moves
-    let lastWhiteClock = moves[0].clock;
-    let lastBlackClock = moves[1].clock;
-
-    // Process white's moves (starting from move 2)
-    for (let i = 2; i < moves.length; i += 2) {
+    // Process white's moves
+    for (let i = 0; i < moves.length; i += 2) {
       const currentMove = moves[i];
-      const previousOpponentMove = moves[i - 1];
+      const previousMove = i > 0 ? moves[i - 2] : null;  // Get previous move by same player
+      const previousOpponentMove = i > 0 ? moves[i - 1] : null;
       const moveNumber = Math.ceil(currentMove.ply / 2);
       
-      if (!currentMove?.clock || !previousOpponentMove?.eval) continue;
+      if (!currentMove?.clock) continue;
 
-      const time_spent = calculateTimeSpent(
-        lastWhiteClock,
-        currentMove.clock,
-        moveNumber,
-        timeControl
-      );
+      const time_spent = previousMove 
+        ? calculateTimeSpent(previousMove.clock, currentMove.clock, moveNumber, timeControl)
+        : null;
       
       const currentEval = evalToCp(currentMove.eval);
-      const previousEval = evalToCp(previousOpponentMove.eval);
+      const previousEval = previousOpponentMove ? evalToCp(previousOpponentMove.eval) : 0;
       
-      if (time_spent >= 0) { // Only add valid time spent values
-        processedMoves.push({
-          time_spent,
-          evalChange: currentEval - previousEval, // White's perspective
-          ply: currentMove.ply,
-          side: 'w',
-          san: currentMove.san,
-          gameNumber: gameIndex + 1,
-          moveNumber: moveNumber,
-          player: whitePlayer
-        });
-      }
-
-      lastWhiteClock = currentMove.clock;
+      processedMoves.push({
+        time_spent,
+        evalChange: currentEval - previousEval,
+        ply: currentMove.ply,
+        side: 'w',
+        san: currentMove.san,
+        gameNumber: gameIndex + 1,
+        moveNumber,
+        player: whitePlayer
+      });
     }
 
-    // Process black's moves (starting from move 1)
+    // Process black's moves
     for (let i = 1; i < moves.length; i += 2) {
       const currentMove = moves[i];
+      const previousMove = i > 1 ? moves[i - 2] : null;  // Get previous move by same player
       const previousOpponentMove = moves[i - 1];
       const moveNumber = Math.floor(currentMove.ply / 2);
       
-      if (!currentMove?.clock || !previousOpponentMove?.eval) continue;
+      if (!currentMove?.clock) continue;
 
-      const time_spent = calculateTimeSpent(
-        lastBlackClock,
-        currentMove.clock,
-        moveNumber,
-        timeControl
-      );
+      const time_spent = previousMove 
+        ? calculateTimeSpent(previousMove.clock, currentMove.clock, moveNumber, timeControl)
+        : null;
       
       const currentEval = evalToCp(currentMove.eval);
       const previousEval = evalToCp(previousOpponentMove.eval);
       
-      if (time_spent >= 0) { // Only add valid time spent values
-        processedMoves.push({
-          time_spent,
-          evalChange: previousEval - currentEval, // White's perspective
-          ply: currentMove.ply,
-          side: 'b',
-          san: currentMove.san,
-          gameNumber: gameIndex + 1,
-          moveNumber: moveNumber,
-          player: blackPlayer
-        });
-      }
-
-      lastBlackClock = currentMove.clock;
+      processedMoves.push({
+        time_spent,
+        evalChange: previousEval - currentEval,  // Flip for black's moves
+        ply: currentMove.ply,
+        side: 'b',
+        san: currentMove.san,
+        gameNumber: gameIndex + 1,
+        moveNumber,
+        player: blackPlayer
+      });
     }
 
-    // Sort moves by ply to ensure correct order
     return processedMoves.sort((a, b) => a.ply - b.ply);
   });
 }
@@ -282,6 +258,12 @@ function ScatterPlot({ data }: { data: ProcessedMove[][] }) {
         scale={yScale} 
         transform={`translate(${margin.left},0)`}
       />
+      <text
+        transform={`translate(15, ${height/2}) rotate(-90)`}
+        textAnchor="middle"
+      >
+        Evaluation Change (cp)
+      </text>
     </svg>
   );
 }
@@ -328,25 +310,32 @@ function Legend({ players }: { players: [string, string] }) {
 }
 
 export function TimeVSEval({ data, players, timeControl = WCC_2024_TIME_CONTROL }: TimeVSEvalProps) {
-  const processedData = processGames(data, timeControl, players).map(d => d.filter(d => d.evalChange > -1000));
+  const processedData = processGames(data, timeControl, players)//.map(d => d.filter(d => d.evalChange > -1000));
   
   // Set the domain for the color scale
   playerColorScale.domain(players);
   
   return (
     <div>
-      <Legend players={players} />
       
       <h2>Time Spent vs Evaluation Change</h2>
+      <Legend players={players} />
       <ScatterPlot data={processedData} />
       
       <h2>Time Buckets Analysis</h2>
-      <TimeBucketChart data={processedData} />
+      <Legend players={players} />
+      <TimeBucketChart 
+        data={processedData} 
+        // evalRange="auto"  // Use full data range
+        evalRange={{ min: -160, max: 50 }}
+      />
       
       <h2>Moving Average Trend</h2>
+      <Legend players={players} />
       <MovingAverageChart data={processedData} />
       
       <h2>Move Distribution Heatmap</h2>
+      <Legend players={players} />
       <HeatmapChart data={processedData} />
     </div>
   );

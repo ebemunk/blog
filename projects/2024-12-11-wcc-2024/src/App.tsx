@@ -5,10 +5,13 @@ import raw from "../collect/wcc2024.json";
 
 function App() {
   return (
-    <TimeVSEval 
-      data={raw} 
-      players={["Gukesh", "Ding"]} 
-    />
+    <>
+      {/* <Time /> */}
+      <TimeVSEval 
+        data={raw} 
+        players={["Gukesh", "Ding"]} 
+      />
+    </>
   );
 }
 
