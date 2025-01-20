@@ -6,6 +6,8 @@ import { TimeBucketChart } from "./TimeBucketChart";
 import { MovingAverageChart } from "./MovingAverageChart";
 import { HeatmapChart } from "./HeatmapChart";
 import { formatTime } from "./utils";
+import { TimeControlViolinChart } from './TimeControlViolinChart';
+import { theme } from '../../theme';
 
 interface Evaluation {
   cp?: number;
@@ -221,14 +223,14 @@ function ScatterPlot({ data }: { data: ProcessedMove[][] }) {
       {/* Trend lines */}
       <path
         d={trendLine(gukeshTrendData) || undefined}
-        stroke={playerColorScale("Gukesh")}
+        stroke={theme.colors.players.player1}
         strokeWidth={1.5}
         strokeDasharray="4,4"
         fill="none"
       />
       <path
         d={trendLine(dingTrendData) || undefined}
-        stroke={playerColorScale("Ding")}
+        stroke={theme.colors.players.player2}
         strokeWidth={1.5}
         strokeDasharray="4,4"
         fill="none"
@@ -241,7 +243,7 @@ function ScatterPlot({ data }: { data: ProcessedMove[][] }) {
           cx={xScale(d.time_spent)}
           cy={yScale(d.evalChange)}
           r={4}
-          fill={playerColorScale(d.player)}
+          fill={theme.colors.players.player1}
           opacity={0.6}
         />
       ))}
@@ -276,7 +278,7 @@ interface TimeVSEvalProps {
 
 // Create a shared color scale that all components can use
 export const playerColorScale = scaleOrdinal<string, string>()
-  .range(["#1f77b4", "#ff7f0e"]);  // Remove specific domain
+  .range([theme.colors.players.player1, theme.colors.players.player2]);
 
 // Create a Legend component
 function Legend({ players }: { players: [string, string] }) {
@@ -326,7 +328,13 @@ export function TimeVSEval({ data, players, timeControl = WCC_2024_TIME_CONTROL 
       <Legend players={players} />
       <TimeBucketChart 
         data={processedData} 
-        // evalRange="auto"  // Use full data range
+        evalRange={{ min: -160, max: 50 }}
+      />
+      
+      <h2>Time Control Comparison</h2>
+      <Legend players={players} />
+      <TimeControlViolinChart 
+        data={processedData}
         evalRange={{ min: -160, max: 50 }}
       />
       

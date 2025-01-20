@@ -2,6 +2,7 @@ import { extent, quantile, scaleBand, scaleLinear } from "d3";
 import { Axis } from "./Axis";
 import { playerColorScale } from './index';
 import type { ProcessedMove } from "./types";
+import { theme } from '../../theme';
 
 interface TimeBucket {
   min: number;
@@ -10,7 +11,7 @@ interface TimeBucket {
 }
 
 // Default buckets based on chess time controls
-const DEFAULT_BUCKETS: TimeBucket[] = [
+export const DEFAULT_BUCKETS: TimeBucket[] = [
   { min: 0, max: 30_000, label: "< 30s" },
   { min: 30_000, max: 60_000, label: "30s-1m" },
   { min: 60_000, max: 180_000, label: "1m-3m" },
@@ -139,7 +140,7 @@ export function TimeBucketChart({
   const isInBounds = (value: number) => value >= yScale.domain()[0] && value <= yScale.domain()[1];
 
   return (
-    <svg width={width} height={height}>
+    <svg width={width} height={height} style={{ backgroundColor: theme.colors.chartBg }}>
       {/* Background stripes */}
       {buckets.map((bucket) => (
         <rect
@@ -148,7 +149,7 @@ export function TimeBucketChart({
           y={margin.top}
           width={xScale.bandwidth()}
           height={height - margin.top - margin.bottom}
-          fill="#f8f8f8"
+          fill={theme.colors.stripeBg}
         />
       ))}
 
@@ -160,7 +161,7 @@ export function TimeBucketChart({
           x2={width - margin.right}
           y1={yScale(tick)}
           y2={yScale(tick)}
-          stroke="#ddd"
+          stroke={theme.colors.gridLine}
           strokeDasharray="2,2"
         />
       ))}
@@ -171,7 +172,7 @@ export function TimeBucketChart({
         x2={width - margin.right}
         y1={yScale(0)}
         y2={yScale(0)}
-        stroke="#999"
+        stroke={theme.colors.zeroLine}
         strokeWidth={1}
       />
 
@@ -190,6 +191,7 @@ export function TimeBucketChart({
                 y={height - margin.bottom + 26}
                 textAnchor="middle"
                 fontSize="10"
+                fill={theme.colors.text}
               >
                 n=0
               </text>
@@ -285,6 +287,7 @@ export function TimeBucketChart({
               y={height - margin.bottom + 26}
               textAnchor="middle"
               fontSize="10"
+              fill={theme.colors.text}
             >
               n={stats.count}
             </text>
@@ -328,6 +331,7 @@ export function TimeBucketChart({
         x={margin.left + (width - margin.left - margin.right) / 2}
         y={height - 5}
         textAnchor="middle"
+        fill={theme.colors.text}
       >
         Time Spent
       </text>
@@ -336,6 +340,7 @@ export function TimeBucketChart({
       <text
         transform={`translate(15, ${margin.top + (height - margin.top - margin.bottom) / 2}) rotate(-90)`}
         textAnchor="middle"
+        fill={theme.colors.text}
       >
         Change in Evaluation (centipawns)
       </text>
