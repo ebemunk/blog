@@ -17,19 +17,24 @@ interface AxisProps {
   type: "left" | "bottom";
   scale: Scale;
   transform?: string;
+  tickFormat?: (value: number) => string;
 }
 
-export function Axis({ type, scale, transform = "" }: AxisProps) {
+export function Axis({ type, scale, transform = "", tickFormat }: AxisProps) {
   const ref = useRef<SVGGElement>(null);
 
   useEffect(() => {
     if (!ref.current) return;
 
     const axis = type === "left" ? axisLeft(scale as any) : axisBottom(scale as any);
+    if (tickFormat) {
+      axis.tickFormat(tickFormat);
+    }
+    
     select(ref.current)
       .call(axis)
       .attr("transform", transform);
-  }, [scale, type, transform]);
+  }, [scale, type, transform, tickFormat]);
 
   return <g ref={ref} />;
 } 

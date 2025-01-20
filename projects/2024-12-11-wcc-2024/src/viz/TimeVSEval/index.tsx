@@ -1,8 +1,11 @@
 import { scaleLinear, scaleOrdinal, scaleSymlog, extent, line } from "d3";
 import { regressionLinear } from "d3-regression";
-import raw from "../../../collect/wcc2024.json";
 import results from "../../../data/results.json";
 import { Axis } from "./Axis";
+import { TimeBucketChart } from "./TimeBucketChart";
+import { MovingAverageChart } from "./MovingAverageChart";
+import { HeatmapChart } from "./HeatmapChart";
+import { formatTime } from "./utils";
 
 interface Evaluation {
   cp?: number;
@@ -93,7 +96,8 @@ function evalToCp(eval_?: Evaluation): number {
 // Process raw data into the format we need
 function processGames(
   rawData: ChessGame[], 
-  timeControl: TimeControl = WCC_2024_TIME_CONTROL
+  timeControl: TimeControl = WCC_2024_TIME_CONTROL,
+  players: [string, string] = ["Gukesh", "Ding"]  // Add players parameter
 ): ProcessedMove[][] {
   return rawData.map((game, gameIndex) => {
     const processedMoves: ProcessedMove[] = [];
@@ -103,8 +107,8 @@ function processGames(
     // Get player colors for this game from results
     // Skip first entry (index 0) in results
     const gameResult = results[gameIndex + 1];
-    const whitePlayer = gameResult.white === "Gukesh D" ? "Gukesh" : "Ding";
-    const blackPlayer = whitePlayer === "Gukesh" ? "Ding" : "Gukesh";
+    const whitePlayer = gameResult.white.includes(players[0]) ? players[0] : players[1];
+    const blackPlayer = whitePlayer === players[0] ? players[1] : players[0];
 
     // Add first move with null values for time and eval change
     processedMoves.push({
@@ -217,49 +221,38 @@ function ScatterPlot({ data }: { data: ProcessedMove[][] }) {
     .range([height - margin.bottom, margin.top])
     .constant(10);
 
-  // Calculate trend line
-  const regression = regressionLinear()
+  // Calculate trend lines for each player
+  const gukeshRegression = regressionLinear()
     .x(d => d.time_spent)
     .y(d => d.evalChange);
   
-  const regressionLine = regression(validData);
-  const trendData = regressionLine.map(([x, y]) => ({ x, y }));
+  const dingRegression = regressionLinear()
+    .x(d => d.time_spent)
+    .y(d => d.evalChange);
+  
+  const gukeshLine = gukeshRegression(validData.filter(d => d.player === "Gukesh"));
+  const dingLine = dingRegression(validData.filter(d => d.player === "Ding"));
 
   const trendLine = line<{x: number, y: number}>()
     .x(d => xScale(d.x))
     .y(d => yScale(d.y));
 
-  // Color scale by game
-//   const gameColorScale = scaleOrdinal<number, string>()
-//     .domain(validData.map(d => d.gameNumber))
-//     .range([
-//       "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
-//       "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf",
-//       "#aec7e8", "#ffbb78", "#98df8a", "#ff9896", "#c5b0d5"
-//     ]);
-
-  // Player color scale
-  const playerColorScale = scaleOrdinal<string, string>()
-    .domain(["Gukesh", "Ding"])
-    .range(["#1f77b4", "#ff7f0e"]);
+  const gukeshTrendData = gukeshLine.map(([x, y]) => ({ x, y }));
+  const dingTrendData = dingLine.map(([x, y]) => ({ x, y }));
 
   return (
     <svg width={width} height={height}>
-      <Axis 
-        type="bottom" 
-        scale={xScale} 
-        transform={`translate(0,${height - margin.bottom})`}
-      />
-      <Axis 
-        type="left" 
-        scale={yScale} 
-        transform={`translate(${margin.left},0)`}
-      />
-
-      {/* Trend line */}
+      {/* Trend lines */}
       <path
-        d={trendLine(trendData) || undefined}
-        stroke="black"
+        d={trendLine(gukeshTrendData) || undefined}
+        stroke={playerColorScale("Gukesh")}
+        strokeWidth={1.5}
+        strokeDasharray="4,4"
+        fill="none"
+      />
+      <path
+        d={trendLine(dingTrendData) || undefined}
+        stroke={playerColorScale("Ding")}
         strokeWidth={1.5}
         strokeDasharray="4,4"
         fill="none"
@@ -278,31 +271,83 @@ function ScatterPlot({ data }: { data: ProcessedMove[][] }) {
       ))}
 
       {/* Add labels */}
-      <text
-        x={width / 2}
-        y={height - 5}
-        textAnchor="middle"
-      >
-        Time Spent (ms)
-      </text>
-      <text
-        transform={`translate(15, ${height/2}) rotate(-90)`}
-        textAnchor="middle"
-      >
-        Evaluation Change (cp)
-      </text>
+      <Axis 
+        type="bottom" 
+        scale={xScale} 
+        transform={`translate(0,${height - margin.bottom})`}
+        tickFormat={formatTime}
+      />
+      <Axis 
+        type="left" 
+        scale={yScale} 
+        transform={`translate(${margin.left},0)`}
+      />
     </svg>
   );
 }
 
-export function TimeVSEval() {
-  const data = processGames(raw as ChessGame[]);
-  console.log(data.map(d => d.filter(d => d.time_spent < 0)));
+interface TimeVSEvalProps {
+  data: ChessGame[];
+  players: [string, string];  // [player1, player2]
+  timeControl?: TimeControl;
+}
+
+// Create a shared color scale that all components can use
+export const playerColorScale = scaleOrdinal<string, string>()
+  .range(["#1f77b4", "#ff7f0e"]);  // Remove specific domain
+
+// Create a Legend component
+function Legend({ players }: { players: [string, string] }) {
+  const legendSpacing = 100;
+  const legendRadius = 4;
+
+  return (
+    <div style={{ 
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center',
+      gap: '50px',
+      margin: '20px 0'
+    }}>
+      {players.map((player, i) => (
+        <div key={player} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <svg width={legendRadius * 2} height={legendRadius * 2}>
+            <circle
+              cx={legendRadius}
+              cy={legendRadius}
+              r={legendRadius}
+              fill={playerColorScale(player)}
+              opacity={0.6}
+            />
+          </svg>
+          <span>{player}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function TimeVSEval({ data, players, timeControl = WCC_2024_TIME_CONTROL }: TimeVSEvalProps) {
+  const processedData = processGames(data, timeControl, players).map(d => d.filter(d => d.evalChange > -1000));
+  
+  // Set the domain for the color scale
+  playerColorScale.domain(players);
   
   return (
     <div>
+      <Legend players={players} />
+      
       <h2>Time Spent vs Evaluation Change</h2>
-      <ScatterPlot data={data} />
+      <ScatterPlot data={processedData} />
+      
+      <h2>Time Buckets Analysis</h2>
+      <TimeBucketChart data={processedData} />
+      
+      <h2>Moving Average Trend</h2>
+      <MovingAverageChart data={processedData} />
+      
+      <h2>Move Distribution Heatmap</h2>
+      <HeatmapChart data={processedData} />
     </div>
   );
 }
