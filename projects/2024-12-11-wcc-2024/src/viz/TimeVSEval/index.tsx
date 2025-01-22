@@ -6,8 +6,8 @@ import { TimeBucketChart } from "./TimeBucketChart";
 import { MovingAverageChart } from "./MovingAverageChart";
 import { HeatmapChart } from "./HeatmapChart";
 import { formatTime } from "./utils";
-import { TimeControlViolinChart } from './TimeControlViolinChart';
-import { theme } from '../../theme';
+import { TimeControlViolinChart } from "./TimeControlViolinChart";
+import { theme } from "../../theme";
 
 interface Evaluation {
   cp?: number;
@@ -29,36 +29,36 @@ interface ProcessedMove {
   time_spent: number | null;
   evalChange: number | null;
   ply: number;
-  side: 'w' | 'b';
+  side: "w" | "b";
   san: string;
   gameNumber: number;
-  moveNumber: number;  // Chess move number (1. e4, 1... e5, 2. Nf3, etc)
-  player: 'Gukesh' | 'Ding';
+  moveNumber: number; // Chess move number (1. e4, 1... e5, 2. Nf3, etc)
+  player: "Gukesh" | "Ding";
 }
 
 interface TimeControl {
-  mainTime: number;  // Initial time in milliseconds
+  mainTime: number; // Initial time in milliseconds
   firstTimeControl: {
-    moves: number;   // Number of moves for first time control
-    time: number;    // Time added after first time control in milliseconds
+    moves: number; // Number of moves for first time control
+    time: number; // Time added after first time control in milliseconds
   };
   increment: {
-    startMove: number;  // Move number when increment starts
-    time: number;       // Increment per move in milliseconds
+    startMove: number; // Move number when increment starts
+    time: number; // Increment per move in milliseconds
   };
 }
 
 // WCC 2024 time control
 const WCC_2024_TIME_CONTROL: TimeControl = {
-  mainTime: 120 * 60 * 1000,  // 120 minutes in ms
+  mainTime: 120 * 60 * 1000, // 120 minutes in ms
   firstTimeControl: {
     moves: 40,
-    time: 30 * 60 * 1000,     // 30 minutes in ms
+    time: 30 * 60 * 1000, // 30 minutes in ms
   },
   increment: {
     startMove: 41,
-    time: 30 * 1000,          // 30 seconds in ms
-  }
+    time: 30 * 1000, // 30 seconds in ms
+  },
 };
 
 // Helper function to calculate actual time spent considering time controls
@@ -71,7 +71,7 @@ function calculateTimeSpent(
   // Convert centiseconds to milliseconds
   const lastMs = lastClock * 10;
   const currentMs = currentClock * 10;
-  
+
   // Basic time difference
   let timeSpent = lastMs - currentMs;
 
@@ -85,7 +85,7 @@ function calculateTimeSpent(
       timeSpent = lastMs + timeControl.increment.time - currentMs;
     }
   }
-  
+
   return Math.max(0, timeSpent);
 }
 
@@ -103,7 +103,7 @@ function evalToCp(eval_?: Evaluation): number {
 
 // Process raw data into the format we need
 function processGames(
-  rawData: ChessGame[], 
+  rawData: ChessGame[],
   timeControl: TimeControl = WCC_2024_TIME_CONTROL,
   players: [string, string] = ["Gukesh", "Ding"]
 ): ProcessedMove[][] {
@@ -114,62 +114,76 @@ function processGames(
 
     // Get player colors for this game from results
     const gameResult = results[gameIndex + 1];
-    const whitePlayer = gameResult.white.includes(players[0]) ? players[0] : players[1];
+    const whitePlayer = gameResult.white.includes(players[0])
+      ? players[0]
+      : players[1];
     const blackPlayer = whitePlayer === players[0] ? players[1] : players[0];
 
     // Process white's moves
     for (let i = 0; i < moves.length; i += 2) {
       const currentMove = moves[i];
-      const previousMove = i > 0 ? moves[i - 2] : null;  // Get previous move by same player
+      const previousMove = i > 0 ? moves[i - 2] : null; // Get previous move by same player
       const previousOpponentMove = i > 0 ? moves[i - 1] : null;
       const moveNumber = Math.ceil(currentMove.ply / 2);
-      
+
       if (!currentMove?.clock) continue;
 
-      const time_spent = previousMove 
-        ? calculateTimeSpent(previousMove.clock, currentMove.clock, moveNumber, timeControl)
+      const time_spent = previousMove
+        ? calculateTimeSpent(
+            previousMove.clock,
+            currentMove.clock,
+            moveNumber,
+            timeControl
+          )
         : null;
-      
+
       const currentEval = evalToCp(currentMove.eval);
-      const previousEval = previousOpponentMove ? evalToCp(previousOpponentMove.eval) : 0;
-      
+      const previousEval = previousOpponentMove
+        ? evalToCp(previousOpponentMove.eval)
+        : 0;
+
       processedMoves.push({
         time_spent,
         evalChange: currentEval - previousEval,
         ply: currentMove.ply,
-        side: 'w',
+        side: "w",
         san: currentMove.san,
         gameNumber: gameIndex + 1,
         moveNumber,
-        player: whitePlayer
+        player: whitePlayer,
       });
     }
 
     // Process black's moves
     for (let i = 1; i < moves.length; i += 2) {
       const currentMove = moves[i];
-      const previousMove = i > 1 ? moves[i - 2] : null;  // Get previous move by same player
+      const previousMove = i > 1 ? moves[i - 2] : null; // Get previous move by same player
       const previousOpponentMove = moves[i - 1];
       const moveNumber = Math.floor(currentMove.ply / 2);
-      
+
       if (!currentMove?.clock) continue;
 
-      const time_spent = previousMove 
-        ? calculateTimeSpent(previousMove.clock, currentMove.clock, moveNumber, timeControl)
+      const time_spent = previousMove
+        ? calculateTimeSpent(
+            previousMove.clock,
+            currentMove.clock,
+            moveNumber,
+            timeControl
+          )
         : null;
-      
+
       const currentEval = evalToCp(currentMove.eval);
       const previousEval = evalToCp(previousOpponentMove.eval);
-      
+
       processedMoves.push({
         time_spent,
-        evalChange: previousEval - currentEval,  // Flip for black's moves
+        evalChange: previousEval - currentEval, // Flip for black's moves
         ply: currentMove.ply,
-        side: 'b',
+        side: "b",
         san: currentMove.san,
         gameNumber: gameIndex + 1,
         moveNumber,
-        player: blackPlayer
+        player: blackPlayer,
       });
     }
 
@@ -185,7 +199,8 @@ function ScatterPlot({ data }: { data: ProcessedMove[][] }) {
   // Flatten and prepare data
   const flatData = data.flat();
   const validData = flatData.filter(
-    (d) => d.time_spent !== null && d.evalChange !== null && d.evalChange > -1000
+    (d) =>
+      d.time_spent !== null && d.evalChange !== null && d.evalChange > -1000
   );
 
   // Scales
@@ -201,19 +216,21 @@ function ScatterPlot({ data }: { data: ProcessedMove[][] }) {
 
   // Calculate trend lines for each player
   const gukeshRegression = regressionLinear()
-    .x(d => d.time_spent)
-    .y(d => d.evalChange);
-  
-  const dingRegression = regressionLinear()
-    .x(d => d.time_spent)
-    .y(d => d.evalChange);
-  
-  const gukeshLine = gukeshRegression(validData.filter(d => d.player === "Gukesh"));
-  const dingLine = dingRegression(validData.filter(d => d.player === "Ding"));
+    .x((d) => d.time_spent)
+    .y((d) => d.evalChange);
 
-  const trendLine = line<{x: number, y: number}>()
-    .x(d => xScale(d.x))
-    .y(d => yScale(d.y));
+  const dingRegression = regressionLinear()
+    .x((d) => d.time_spent)
+    .y((d) => d.evalChange);
+
+  const gukeshLine = gukeshRegression(
+    validData.filter((d) => d.player === "Gukesh")
+  );
+  const dingLine = dingRegression(validData.filter((d) => d.player === "Ding"));
+
+  const trendLine = line<{ x: number; y: number }>()
+    .x((d) => xScale(d.x))
+    .y((d) => yScale(d.y));
 
   const gukeshTrendData = gukeshLine.map(([x, y]) => ({ x, y }));
   const dingTrendData = dingLine.map(([x, y]) => ({ x, y }));
@@ -249,19 +266,19 @@ function ScatterPlot({ data }: { data: ProcessedMove[][] }) {
       ))}
 
       {/* Add labels */}
-      <Axis 
-        type="bottom" 
-        scale={xScale} 
+      <Axis
+        type="bottom"
+        scale={xScale}
         transform={`translate(0,${height - margin.bottom})`}
         tickFormat={formatTime}
       />
-      <Axis 
-        type="left" 
-        scale={yScale} 
+      <Axis
+        type="left"
+        scale={yScale}
         transform={`translate(${margin.left},0)`}
       />
       <text
-        transform={`translate(15, ${height/2}) rotate(-90)`}
+        transform={`translate(15, ${height / 2}) rotate(-90)`}
         textAnchor="middle"
       >
         Evaluation Change (cp)
@@ -272,79 +289,48 @@ function ScatterPlot({ data }: { data: ProcessedMove[][] }) {
 
 interface TimeVSEvalProps {
   data: ChessGame[];
-  players: [string, string];  // [player1, player2]
+  players: [string, string]; // [player1, player2]
   timeControl?: TimeControl;
 }
 
 // Create a shared color scale that all components can use
-export const playerColorScale = scaleOrdinal<string, string>()
-  .range([theme.colors.players.player1, theme.colors.players.player2]);
+export const playerColorScale = scaleOrdinal<string, string>().range([
+  theme.colors.players.player1,
+  theme.colors.players.player2,
+]);
 
-// Create a Legend component
-function Legend({ players }: { players: [string, string] }) {
-  const legendSpacing = 100;
-  const legendRadius = 4;
+export function TimeVSEval({
+  data,
+  players,
+  timeControl = WCC_2024_TIME_CONTROL,
+}: TimeVSEvalProps) {
+  const processedData = processGames(data, timeControl, players); //.map(d => d.filter(d => d.evalChange > -1000));
 
-  return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center',
-      gap: '50px',
-      margin: '20px 0'
-    }}>
-      {players.map((player, i) => (
-        <div key={player} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <svg width={legendRadius * 2} height={legendRadius * 2}>
-            <circle
-              cx={legendRadius}
-              cy={legendRadius}
-              r={legendRadius}
-              fill={playerColorScale(player)}
-              opacity={0.6}
-            />
-          </svg>
-          <span>{player}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export function TimeVSEval({ data, players, timeControl = WCC_2024_TIME_CONTROL }: TimeVSEvalProps) {
-  const processedData = processGames(data, timeControl, players)//.map(d => d.filter(d => d.evalChange > -1000));
-  
   // Set the domain for the color scale
   playerColorScale.domain(players);
-  
+
   return (
     <div>
-      
-      <h2>Time Spent vs Evaluation Change</h2>
-      <Legend players={players} />
+      {/* <h2>Time Spent vs Evaluation Change</h2>
       <ScatterPlot data={processedData} />
-      
+       */}
       <h2>Time Buckets Analysis</h2>
-      <Legend players={players} />
-      <TimeBucketChart 
-        data={processedData} 
+      <TimeBucketChart
+        data={processedData}
         evalRange={{ min: -160, max: 50 }}
       />
-      
-      <h2>Time Control Comparison</h2>
-      <Legend players={players} />
+
+      {/* <h2>Time Control Comparison</h2>
       <TimeControlViolinChart 
         data={processedData}
         evalRange={{ min: -160, max: 50 }}
       />
       
       <h2>Moving Average Trend</h2>
-      <Legend players={players} />
       <MovingAverageChart data={processedData} />
       
       <h2>Move Distribution Heatmap</h2>
-      <Legend players={players} />
-      <HeatmapChart data={processedData} />
+      <HeatmapChart data={processedData} /> */}
     </div>
   );
 }

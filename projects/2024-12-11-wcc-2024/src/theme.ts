@@ -1,4 +1,8 @@
 export const theme = {
+  fonts: {
+    title: "freight-text-pro, Georgia, serif",
+    body: "proxima-nova, system-ui, sans-serif",
+  },
   colors: {
     // Base backgrounds
     background: '#1a1a1f',      // App background
