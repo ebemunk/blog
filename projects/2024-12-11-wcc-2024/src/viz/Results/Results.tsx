@@ -28,7 +28,7 @@ export function Results() {
   ).padding(0.1);
 
   const [data, setData] = useState<typeof results>(results.slice(0, 1));
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
   useEffect(() => {
     if (!playing) {
       return;
@@ -249,9 +249,9 @@ export function Results() {
         ) : null}
         <line
           x1={margin.left}
-          y1={scalePoints(7)}
+          y1={scalePoints(7.5)}
           x2={width - margin.right}
-          y2={scalePoints(7)}
+          y2={scalePoints(7.5)}
           stroke="black"
           strokeDasharray="5, 5"
         />
@@ -259,10 +259,10 @@ export function Results() {
           fontSize={12}
           textAnchor="start"
           x={margin.left}
-          y={scalePoints(7)}
+          y={scalePoints(7.5)}
           dy={-4}
         >
-          First to 7 points wins
+          First to 7.5 points wins
         </text>
       </svg>
     </>

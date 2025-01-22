@@ -1,14 +1,23 @@
-import { Results } from "./viz/Results";
-import { Time } from "./viz/Time";
-import { TimeVSEval } from "./viz/TimeVSEval";
 import raw from "../collect/wcc2024.json";
-import { theme } from "./theme";
+import { processTimeVSEval, WCC_2024_TIME_CONTROL } from "./processing/util";
+import { Results } from "./viz/Results/Results";
+import { TimeBucketChart } from "./viz/TimeBuckets/TimeBuckets";
 
 function App() {
+  const timeBucketData = processTimeVSEval(raw, WCC_2024_TIME_CONTROL, [
+    "Gukesh",
+    "Ding",
+  ]);
+
   return (
     <div>
-      {/* <Time /> */}
-      <TimeVSEval data={raw} players={["Gukesh", "Ding"]} />
+      <h1>Done</h1>
+      <Results />
+      <p></p>
+      <TimeBucketChart
+        data={timeBucketData}
+        evalRange={{ min: -160, max: 50 }}
+      />
     </div>
   );
 }

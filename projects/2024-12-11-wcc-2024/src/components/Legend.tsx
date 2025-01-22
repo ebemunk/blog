@@ -1,5 +1,5 @@
-import { playerColorScale } from "./index";
-import { theme } from "../../theme";
+import { playerColorScale } from "../processing/util";
+import { theme } from "../theme";
 
 interface LegendProps {
   players: string[];

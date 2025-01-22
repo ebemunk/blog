@@ -1,9 +1,9 @@
 import { extent, quantile, scaleBand, scaleLinear } from "d3";
-import { Axis } from "./Axis";
-import { playerColorScale } from "./index";
-import type { ProcessedMove } from "./types";
+import { Axis } from "../../components/Axis";
+import type { ProcessedMove } from "../../processing/types";
 import { theme } from "../../theme";
-import { Legend } from "./Legend";
+import { Legend } from "../../components/Legend";
+import { playerColorScale } from "../../processing/util";
 
 interface TimeBucket {
   min: number;
@@ -34,7 +34,7 @@ interface BoxPlotStats {
 }
 
 interface TimeBucketChartProps {
-  data: ProcessedMove[][];
+  data: ProcessedMove<string>[][];
   buckets?: TimeBucket[];
   evalRange?:
     | {
@@ -85,7 +85,10 @@ export function TimeBucketChart({
   // Calculate box plot statistics for each bucket and player
   const bucketStats = buckets.flatMap((bucket) => {
     const movesInBucket = flatData.filter(
-      (d) => d.time_spent >= bucket.min && d.time_spent < bucket.max
+      (d) =>
+        d.time_spent !== null &&
+        d.time_spent >= bucket.min &&
+        d.time_spent < bucket.max
     );
 
     return players.map((player) => {
@@ -128,7 +131,10 @@ export function TimeBucketChart({
   const pointsByBucket = buckets
     .map((bucket) => {
       const movesInBucket = flatData.filter(
-        (d) => d.time_spent >= bucket.min && d.time_spent < bucket.max
+        (d) =>
+          d.time_spent !== null &&
+          d.time_spent >= bucket.min &&
+          d.time_spent < bucket.max
       );
 
       return players.map((player) => ({
@@ -150,7 +156,6 @@ export function TimeBucketChart({
         color: theme.colors.text,
         width: "1080px",
         height: "566px",
-        outline: "1px solid red",
         position: "relative",
         padding: "0.25rem",
         boxSizing: "border-box",
@@ -436,3 +441,26 @@ export function TimeBucketChart({
     </div>
   );
 }
+
+export const InstagramDescription = `
+Move times from the World Chess Championship 2024 grouped into time buckets.
+
+Gukesh Dommaraju and Ding Liren showed a lot of similarity in their move times, as they made similar number of moves in each time bucket. In fact, they both made 311 moves under 30 seconds. I'll do a breakdown of their total move times in a future post.
+
+For this one, I wanted to see if there was a correlation between the computer eval, i.e. the score of the position, and how long they spent on each move.
+
+The y-axis shows the computer evaluation of the position, in centipawns. This is cropped to make it easier to see, and those of you who watched the games will know that of really big blunders, which this graph crops out.
+
+It's interesting to see the principled approach both players took, but the one glaring difference between them is that Ding on average lost more centipawns than Gukesh when he was thinking on a move for 30 seconds to 1 minute.
+
+Another interesting thing to note is that the moves that Ding made showed smaller variation in centipawns change than Gukesh. While Gukesh took a lot of chances, Ding was more conservative and stuck to his calculations.
+
+Ultimately the championship was decided by a single blunder, but it was a pleasure to watch the games.
+
+Source: lichess.org
+
+#data #dataviz #datavisualization #visualization #chart #graph #chess #wcc2024 #ding #gukesh #chesschampionship #dataart #champion
+`;
+
+export const AltText =
+  "A box plot chart comparing how chess players Gukesh and Ding spent their time during the 2024 World Chess Championship. The x-axis shows time buckets ranging from '<30s' to '> 1h', while the y-axis shows changes in computer evaluation measured in centipawns. Each time bucket contains two box plots, one for each player, color-coded in blue for Gukesh and orange for Ding. The chart reveals that both players had similar time management patterns, but Ding showed more consistency while Gukesh demonstrated wider evaluation swings. A notable difference appears in the 30s-1m bucket where Ding's moves resulted in more negative evaluation changes on average.";
