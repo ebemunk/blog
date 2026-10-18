@@ -1,6 +1,6 @@
 
 		<footer class="container site-footer">
-			<p>Thinking Through the Party &copy; {{ $.Site.LastChange.Year }}</p>
+			<p>Thinking Through the Party &copy; {{ with site.Lastmod }}{{ .Year }}{{ else }}{{ now.Year }}{{ end }}</p>
 			<p>Powered by <a href="http://gohugo.io" target="_blank" rel="noopener noreferrer nofollow">Hugo</a></p>
 		</footer>
 

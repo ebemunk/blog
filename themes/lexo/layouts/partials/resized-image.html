@@ -1,0 +1,9 @@
+{{- $path := .path -}}
+{{- $spec := .spec | default "600x webp q100" -}}
+{{- $alt := .alt | default "" -}}
+{{- with $path -}}
+	{{- with resources.Get . -}}
+		{{- $img := .Resize $spec -}}
+		<img src="{{ if $.permalink }}{{ $img.Permalink }}{{ else }}{{ $img.RelPermalink }}{{ end }}" alt="{{ $alt }}"{{ with $.width }} width="{{ . }}"{{ end }}{{ with $.height }} height="{{ . }}"{{ end }} />
+	{{- end -}}
+{{- end -}}

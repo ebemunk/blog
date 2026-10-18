@@ -1,8 +1,7 @@
-baseurl = "https://blog.ebemunk.com/"
-languageCode = "en-us"
+baseURL = "https://blog.ebemunk.com/"
 title = "Thinking Through the Party"
 theme = "lexo"
-paginate = 20
+locale = "en-US"
 
 pygmentscodefences = true
 
@@ -11,6 +10,13 @@ disqusShortname = "ebemunk"
 
 disableKinds = ["taxonomy", "section"]
 ignoreErrors = ["error-disable-taxonomy"]
+
+[pagination]
+  pagerSize = 20
+
+# Hugo 0.158+ denies content/*.html by default; a few posts ship HTML siblings.
+[security]
+  allowContent = ['(?i)text/(markdown|html|asciidoc|rst|org|pandoc)']
 
 [params]
   author = "ebemunk"

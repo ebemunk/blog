@@ -25,10 +25,12 @@
 			<meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">
 			<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
 			<meta property="article:author" content="{{ .Site.Params.author }}">
-			{{ if .Params.image }}
-				{{ $image := resources.Get .Params.image }}
-				<meta property="og:image" content="{{ ($image.Resize "1200x webp q100").Permalink }}">
-				<meta name="twitter:image" content="{{ ($image.Resize "1200x webp q100").Permalink }}">
+			{{ with .Params.image }}
+				{{ with resources.Get . }}
+					{{ $image := .Resize "1200x webp q100" }}
+					<meta property="og:image" content="{{ $image.Permalink }}">
+					<meta name="twitter:image" content="{{ $image.Permalink }}">
+				{{ end }}
 			{{ end }}
 		{{ else }}
 			<meta property="og:title" content="{{ .Site.Title }}">

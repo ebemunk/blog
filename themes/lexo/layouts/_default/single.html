@@ -32,14 +32,14 @@
 	<h4>See Also</h4>
 	<div class="see-also-items">
 		{{ range $term := . }}
-			{{ $t := $.Site.GetPage $term }}
-			{{ $image := resources.Get $t.Params.image }}
+			{{ with $.Site.GetPage $term }}
 			<div class="suggestion">
-				<a href="{{ $t.RelPermalink }}">
-					<img src="{{ ($image.Resize "600x webp q100").RelPermalink }}" alt="thumbnail image for {{ $t.Title }}" />
-					{{ $t.Title }}
+				<a href="{{ .RelPermalink }}">
+					{{ partial "resized-image.html" (dict "path" .Params.image "spec" "600x webp q100" "alt" (printf "thumbnail image for %s" .Title)) }}
+					{{ .Title }}
 				</a>
 			</div>
+			{{ end }}
 		{{ end }}
 	</div>
 </div>
