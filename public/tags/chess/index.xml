@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>chess on Thinking Through the Party</title><link>https://blog.ebemunk.com/tags/chess/</link><description>Recent content in chess on Thinking Through the Party</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 04 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.ebemunk.com/tags/chess/index.xml" rel="self" type="application/rss+xml"/><item><title>2022 Chess Candidates Tournament Recap</title><link>https://blog.ebemunk.com/candidates-2022/</link><pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate><guid>https://blog.ebemunk.com/candidates-2022/</guid><description>I wanted to do a quick recap of the 2022 Chess Candidates Tournament that saw Ian Nepomniachtchi emerge as the challenger for the second time. There were some good findings in there!
-Click on the graphic to see it in full size.</description></item><item><title>Visual Look at 2 Million Chess Games: Part 2</title><link>https://blog.ebemunk.com/visual-look-at-2-million-chess-games-part-2/</link><pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate><guid>https://blog.ebemunk.com/visual-look-at-2-million-chess-games-part-2/</guid><description>We&amp;rsquo;re looking deeper into the amazing MillionBase database with over two million chess games to see what else we can learn about the data specifically, and possibly about chess in general. I have analyzed some of this data in Part 1. If you haven&amp;rsquo;t seen that, feel free to give it a read.
-This post will focus on other aspects of the data, and I have drawn from some reader suggestions from the previous post.</description></item><item><title>A Visual Look at 2 Million Chess Games</title><link>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</link><pubDate>Wed, 02 Mar 2016 00:00:00 +0000</pubDate><guid>https://blog.ebemunk.com/a-visual-look-at-2-million-chess-games/</guid><description>I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.
-We&amp;rsquo;ll take a look at more than 2 million games, taken from the MillionBase PGN database. I ignored any Chess960 games contained, but in total there are 2,197,113 games. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Chess on Thinking Through the Party</title>
+		<link>http://localhost:1313/tags/chess/</link>
+		<description>Recent content in Chess on Thinking Through the Party</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 04 Jul 2022 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/chess/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>2022 Chess Candidates Tournament Recap</title>
+				<link>http://localhost:1313/candidates-2022/</link>
+				<pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/candidates-2022/</guid>
+				<description>&lt;p&gt;I wanted to do a quick recap of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Candidates_Tournament_2022&#34;&gt;2022 Chess Candidates Tournament&lt;/a&gt; that saw Ian Nepomniachtchi emerge as the challenger for the second time. There were some good findings in there!&lt;/p&gt;&#xA;&lt;p&gt;Click on the graphic to see it in full size.&lt;/p&gt;&#xA;&lt;a href=&#34;viz.png&#34; class=&#34;viz&#34;&gt;&#xA;  &lt;img src=&#34;viz.png&#34; /&gt;&#xA;&lt;/a&gt;&#xA;&lt;style&gt;&#xA;  .viz {&#xA;    margin: 1rem auto;&#xA;    display: block;&#xA;  }&#xA;  img {&#xA;    width: 100%;&#xA;  }&#xA;&lt;/style&gt;</description>
+			</item>
+			<item>
+				<title>Visual Look at 2 Million Chess Games: Part 2</title>
+				<link>http://localhost:1313/visual-look-at-2-million-chess-games-part-2/</link>
+				<pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/visual-look-at-2-million-chess-games-part-2/</guid>
+				<description>&lt;p&gt;We&amp;rsquo;re looking deeper into the amazing &lt;a href=&#34;http://www.top-5000.nl/pgn.htm&#34;&gt;MillionBase&lt;/a&gt; database with over two million chess games to see what else we can learn about the data specifically, and possibly about chess in general. I have analyzed some of this data in &lt;a href=&#34;http://localhost:1313/a-visual-look-at-2-million-chess-games/&#34;&gt;Part 1&lt;/a&gt;. If you haven&amp;rsquo;t seen that, feel free to give it a read.&lt;/p&gt;&#xA;&lt;p&gt;This post will focus on other aspects of the data, and I have drawn from some reader suggestions from the previous post. Since publishing that, I received so many great reader suggestions and requests. It was incredible to see such engagement and to reflect on the questions readers posed in Part 1.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>A Visual Look at 2 Million Chess Games</title>
+				<link>http://localhost:1313/a-visual-look-at-2-million-chess-games/</link>
+				<pubDate>Wed, 02 Mar 2016 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/a-visual-look-at-2-million-chess-games/</guid>
+				<description>&lt;p&gt;I wanted to do something like this for a long time, and finally I think it&amp;rsquo;s at a point where I can release this into the wild.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;ll take a look at more than 2 million games, taken from the &lt;a href=&#34;http://www.top-5000.nl/pgn.htm&#34;&gt;MillionBase&lt;/a&gt; PGN database. I ignored any Chess960 games contained, but in total there are &lt;strong&gt;2,197,113 games&lt;/strong&gt;. I was interested to see what kind of visualizations I can do, and what patterns would be revealed by considering so many games. It was the biggest collection of games I could find, spanning games from 1801 up to 2013, and players with ratings between 215 (wow!) to 2861 (I wonder who that is?). So I think it&amp;rsquo;s a pretty good representation of chess games all around.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Making Of: Ten Million Chess Openings</title>
+				<link>http://localhost:1313/making-of-ten-million-chess-openings/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/making-of-ten-million-chess-openings/</guid>
+				<description>&lt;p&gt;Whenever I share something I made, I get a lot of emails and comments, and by far the most common question is: &amp;ldquo;how did you make this?&amp;rdquo; The honest answer is usually &amp;ldquo;slowly, and with a lot of fiddling&amp;rdquo;, but I figured it deserves a better answer than that. The common tools I use are d3, and custom code. Most are disheartened when they hear this; they want to hear there&amp;rsquo;s some magic software that can do it for them.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

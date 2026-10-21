@@ -1,0 +1,169 @@
+.openings-stage {
+  width: min(44rem, 100%);
+  margin: 0 auto 2.2rem;
+  text-align: center;
+}
+
+.openings-stage-dark {
+  background: #000;
+  padding: 1.5rem 0.75rem 1.25rem;
+  width: min(48rem, 100%);
+}
+
+.openings-stage-wide {
+  width: min(50rem, 100%);
+}
+
+.openings-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.openings-panel {
+  margin: 0;
+  min-width: 0;
+}
+
+.openings-panel-label {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.openings-panel-note {
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+.openings-sunburst {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.openings-stage .viz-title {
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.openings-stage .viz-subtitle {
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0 auto 0.75rem;
+  max-width: 36rem;
+}
+
+.openings-stage .viz-meta {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #9eabb3;
+  margin-top: 0.4rem;
+}
+
+.openings-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.75rem auto 0;
+  max-width: 22rem;
+  font-size: 0.8rem;
+}
+
+.openings-controls label {
+  display: block;
+  flex: 1 1 12rem;
+  text-align: left;
+}
+
+.openings-controls input {
+  display: block;
+  width: 100%;
+}
+
+article.article .openings-poster {
+  display: block;
+  width: min(28rem, 100%);
+  margin: 0 auto 1.3rem;
+}
+
+article.article .openings-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.openings-segmented {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+}
+
+.openings-segmented button {
+  font: inherit;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid #7cb34b;
+  background: transparent;
+  color: #7cb34b;
+  cursor: pointer;
+}
+
+.openings-segmented button + button {
+  border-left-width: 0;
+}
+
+.openings-segmented button:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.openings-segmented button:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.openings-segmented button.active {
+  background: #638f3c;
+  color: #fff;
+}
+
+.openings-with-inset {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.openings-with-inset > .openings-sunburst {
+  flex: 3 1 18rem;
+  min-width: 0;
+}
+
+.openings-inset {
+  flex: 2 1 12rem;
+  max-width: 18rem;
+  margin: 0;
+}
+
+.openings-sunburst-inset {
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+}
+
+.openings-inset figcaption {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #9eabb3;
+  margin-top: 0.3rem;
+}
+
+.openings-mode-note {
+  font-size: 0.8rem;
+  margin: 0.6rem auto 0;
+  max-width: 34rem;
+}
