@@ -5,7 +5,7 @@ locale = "en-US"
 
 pygmentscodefences = true
 
-googleAnalytics = "UA-212741-11"
+googleAnalytics = "G-HYX1G0GTVT"
 disqusShortname = "ebemunk"
 
 disableKinds = ["taxonomy", "section"]

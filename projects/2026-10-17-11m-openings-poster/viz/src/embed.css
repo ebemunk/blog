@@ -1,5 +1,5 @@
 .openings-stage {
-  width: min(44rem, 100%);
+  width: min(34rem, 100%);
   margin: 0 auto 2.2rem;
   text-align: center;
 }
@@ -166,4 +166,103 @@ article.article .openings-poster img {
   font-size: 0.8rem;
   margin: 0.6rem auto 0;
   max-width: 34rem;
+}
+
+article.article .openings-closeup img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.openings-compare-data {
+  display: block;
+  width: min(26rem, 100%);
+  height: auto;
+  margin: 0 auto;
+  fill: #9eabb3;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+}
+
+.openings-compare-data .big {
+  fill: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.openings-swatches,
+.openings-type {
+  padding: 0.9rem 0.75rem 0.6rem;
+  border-radius: 4px;
+}
+
+.openings-swatches .chips {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0.4rem 0;
+}
+
+.openings-swatches .chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 3rem;
+}
+
+.openings-swatches .chip span {
+  display: block;
+  width: 100%;
+  height: 1.4rem;
+}
+
+.openings-swatches .chip b {
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+.openings-type-web {
+  background: #282c34;
+}
+
+.openings-type-web .t-title {
+  font-family: "Abril Fatface", serif;
+  color: #d19a66;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.openings-type-web .t-labels {
+  font-family: sans-serif;
+  font-size: 12px;
+  margin-top: 0.6rem;
+}
+
+.openings-type-poster {
+  background: #282323;
+}
+
+.openings-type-poster .t-title {
+  font-family: "Fanwood", serif;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.openings-type-poster .t-sub {
+  font-family: "Fanwood", serif;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.openings-type-poster .t-labels {
+  font-family: "Junction", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  margin-top: 0.6rem;
+  color: #c9bfcf;
+}
+
+.openings-photo {
+  max-width: 26rem;
+  margin: 0 auto;
 }

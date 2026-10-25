@@ -28,6 +28,8 @@ type Props = {
   /** Outline this window on top of the drawing. */
   highlight?: Frame;
   className?: string;
+  /** "sample-2015" is the d3 sequences-sunburst example tree. Default: chess. */
+  dataset?: "sample-2015";
 };
 
 /**
@@ -133,7 +135,7 @@ function firstParent(d: HierarchyRectangularNode<OpeningNode>) {
   return n;
 }
 
-export function Sunburst({ data, knobs, crop, highlight, className }: Props) {
+export function Sunburst({ data, knobs, crop, highlight, className, dataset }: Props) {
   const { width, hole } = knobs;
 
   const root = useMemo(() => {
@@ -169,17 +171,30 @@ export function Sunburst({ data, knobs, crop, highlight, className }: Props) {
 
   const posterExtraIndex = new Map<string, number>();
 
-  const color = useMemo(
-    () =>
-      scaleOrdinal<string, string>(
-        knobs.palette === "tableau10"
-          ? schemeTableau10
-          : knobs.palette === "category20-move"
-            ? category20
-            : schemeCategory10
-      ),
-    [knobs.palette]
-  );
+  const color = useMemo(() => {
+    const scale = scaleOrdinal<string, string>(
+      knobs.palette === "tableau10"
+        ? schemeTableau10
+        : knobs.palette === "category20-move"
+          ? category20
+          : schemeCategory10
+    );
+    // Oct 2015: category20 domain is unique names in partition order, root included
+    // (it is filtered by dx but not drawn). Later names reuse the first color.
+    if (dataset === "sample-2015") {
+      const min =
+        knobs.thresholdUnit === "fraction"
+          ? knobs.nodeThreshold * 2 * Math.PI
+          : knobs.nodeThreshold;
+      const names: string[] = [];
+      for (const d of root.descendants()) {
+        if (d.x1 - d.x0 <= min) continue;
+        if (!names.includes(d.data.san)) names.push(d.data.san);
+      }
+      scale.domain(names);
+    }
+    return scale;
+  }, [knobs.palette, knobs.thresholdUnit, knobs.nodeThreshold, dataset, root]);
 
   const arcGen = useMemo(
     () =>
@@ -246,10 +261,13 @@ export function Sunburst({ data, knobs, crop, highlight, className }: Props) {
         });
   const named = new Set(nameLabels.map((n) => n.d));
 
+  const sample = dataset === "sample-2015";
   const labels = !poster && knobs.showSan && labelKind !== "names"
     ? visible.filter((d) => {
         if (named.has(d)) return false;
         const span = d.x1 - d.x0;
+        // Oct 2015: (dx * 90 / π) >= 10, depth already excluded from `visible`.
+        if (sample) return (span * 90) / Math.PI >= 10;
         const t =
           knobs.thresholdUnit === "fraction"
             ? knobs.sanThreshold * 2 * Math.PI
@@ -312,20 +330,41 @@ export function Sunburst({ data, knobs, crop, highlight, className }: Props) {
           );
         })}
         {labels.map((d) => {
-          const x = (((d.x0 + d.x1) / 2) * 180) / Math.PI;
-          const y = rScale((d.y0 + d.y1) / 2);
-          const rotation = x - 90;
           const key = d
             .ancestors()
             .map((a) => a.data.san)
             .join(" ");
+          const fontSize = knobs.sanSize ?? (knobs.width < 600 ? 10 : 12);
+          const fill = knobs.sanColor ?? "white";
+          // Oct 2015 placed the name at arc.centroid, horizontal, no dy.
+          if (sample) {
+            const r0 = rScale(d.y0);
+            const r1 = rScale(Math.max(d.y0, d.y1 - knobs.ringGap));
+            const r = (r0 + r1) / 2;
+            const a = (d.x0 + d.x1) / 2 - Math.PI / 2;
+            return (
+              <text
+                key={key}
+                textAnchor="middle"
+                fontSize={fontSize}
+                fontFamily="sans-serif"
+                fill={fill}
+                transform={`translate(${Math.cos(a) * r},${Math.sin(a) * r})`}
+              >
+                {d.data.san}
+              </text>
+            );
+          }
+          const x = (((d.x0 + d.x1) / 2) * 180) / Math.PI;
+          const y = rScale((d.y0 + d.y1) / 2);
+          const rotation = x - 90;
           return (
             <text
               key={key}
               textAnchor="middle"
-              fontSize={knobs.sanSize ?? (knobs.width < 600 ? 10 : 12)}
+              fontSize={fontSize}
               fontFamily="sans-serif"
-              fill={knobs.sanColor ?? "white"}
+              fill={fill}
               transform={`rotate(${rotation}) translate(${y},0) rotate(${-rotation})`}
               dy="0.35em"
             >

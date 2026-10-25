@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { type Frame, Sunburst } from "./Sunburst";
-import { sourceTree } from "./source";
+import { sample2015Tree, sourceTree } from "./source";
 import { type Inset, type StageId, stages } from "./stages";
 import { prepareTree, treeStats } from "./tree";
 
@@ -20,10 +20,13 @@ export function StageFigure({ stageId }: Props) {
   const [knobs, setKnobs] = useState(stage?.knobs);
   const [modeId, setModeId] = useState(stage?.defaultMode ?? stage?.modes?.[0]?.id);
 
+  const dataset = stage?.modes?.find((m) => m.id === modeId)?.data;
+
   const tree = useMemo(() => {
-    if (!knobs) return sourceTree;
-    return prepareTree(sourceTree, knobs);
-  }, [knobs]);
+    const source = dataset === "sample-2015" ? sample2015Tree : sourceTree;
+    if (!knobs) return source;
+    return prepareTree(source, knobs);
+  }, [knobs, dataset]);
 
   const stats = useMemo(() => treeStats(tree), [tree]);
 
@@ -70,19 +73,25 @@ export function StageFigure({ stageId }: Props) {
           {stage.panels.map((p) => (
             <figure key={p.id} className="openings-panel">
               <figcaption className="openings-panel-label">{p.label}</figcaption>
-              <Sunburst data={tree} knobs={{ ...knobs, ...p.knobs }} crop={p.crop} />
+              <Sunburst
+                data={tree}
+                knobs={{ ...knobs, ...p.knobs }}
+                crop={p.crop}
+                dataset={dataset}
+              />
               <figcaption className="openings-panel-note">{p.note}</figcaption>
             </figure>
           ))}
         </div>
       ) : frame ? (
         <div className="openings-with-inset">
-          <Sunburst data={tree} knobs={knobs} highlight={frame} />
+          <Sunburst data={tree} knobs={knobs} highlight={frame} dataset={dataset} />
           <figure className="openings-inset">
             <Sunburst
               data={tree}
               knobs={knobs}
               crop={frame}
+              dataset={dataset}
               className="openings-sunburst openings-sunburst-inset"
             />
             <figcaption>
@@ -91,7 +100,7 @@ export function StageFigure({ stageId }: Props) {
           </figure>
         </div>
       ) : (
-        <Sunburst data={tree} knobs={knobs} />
+        <Sunburst data={tree} knobs={knobs} dataset={dataset} />
       )}
       {mode && (
         <div className="openings-mode-note">{mode.note}</div>
@@ -146,8 +155,8 @@ export function StageFigure({ stageId }: Props) {
         </div>
       )}
       <div className="viz-meta">
-        {stats.nodes} nodes · {stats.leaves} leaves · depth {stats.maxDepth} ·
-        2,197,113-game tree
+        {stats.nodes} nodes · {stats.leaves} leaves · depth {stats.maxDepth}
+        {dataset === "sample-2015" ? "" : " · 2,197,113-game tree"}
       </div>
     </div>
   );

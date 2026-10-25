@@ -64,6 +64,8 @@ export type StageMode = {
   label: string;
   note: string;
   knobs: Partial<Knobs>;
+  /** Which tree to draw. Default is the 2m chess openings tree. */
+  data?: "sample-2015";
 };
 
 /** One drawing in a row of small multiples; knobs merged over the stage's own. */
@@ -174,7 +176,8 @@ export const libraryModes: StageMode[] = [
     id: "2015-10",
     label: "Oct 2015",
     note:
-      "2015-10-17, first commit: the d3 \"sequences sunburst\" example pasted in. It still drew the example's sample data; here it gets the chess tree. A color per move (category20), no shading, biggest arcs first, 1px white lines.",
+      "Oct 17, 2015. first commit: copy-pasted d3 \"sequences sunburst\" example. It still drew the example's sample data, so that's what you see here. A color per move (d3.category20), no shading, biggest arcs first, 1px white lines. Ugly as sin.",
+    data: "sample-2015",
     knobs: {
       width: 550,
       palette: "category20-move",
@@ -197,7 +200,7 @@ export const libraryModes: StageMode[] = [
     id: "2015-11",
     label: "Nov 2015",
     note:
-      "2015-11-01, first chess version: color by first move (category10), rings alternate lighter and darker and fade outward, 0.5px white lines, move labels on more arcs.",
+      "Nov 1, 2015. First chess version: color by first move (d3.category10), rings alternate lighter and darker and fade outward, 0.5px white lines, move labels on more arcs.",
     knobs: {
       width: 550,
       palette: "category10",
@@ -218,9 +221,9 @@ export const libraryModes: StageMode[] = [
   },
   {
     id: "2015-12",
-    label: "Dec 2015 · 1.0.0",
+    label: "Dec 2015 · 1.0",
     note:
-      "2015-12-21, version 1.0.0, used by the 2016 post: no sorting, so moves keep the tree's order; cut-offs as fractions of the circle, so many more slivers survive; 700 wide, with the post's chessboard over the hole.",
+      "Dec 21, 2015. Version 1.0, used by the 2016 post: no sorting, so moves keep the tree's order; cut-offs as fractions of the circle, so many more slivers survive. Chessboard over the hole.",
     knobs: {
       width: 700,
       palette: "category10",
@@ -307,7 +310,7 @@ export const stages: Stage[] = [
     label: "0 · library",
     year: "2015",
     caption: "2015 — chess-dataviz, three commits",
-    blurb: "The library's openings chart at three points in its history, each drawn with that commit's settings on the same 2m tree. The hole is the starting position: the root arc is never drawn.",
+    blurb: "The library's openings chart at three points in its history, each drawn with that commit's settings. The first one still had the example's sample data; the other two draw the same chess dataset.",
     knobs: {
       width: 550,
       hole: 0,
@@ -341,7 +344,7 @@ export const stages: Stage[] = [
     label: "1 · blog",
     year: "2016",
     caption: "2016 post as published / 2021 rewrite",
-    blurb: "The same quarter of the circle, top right, from the same 2m tree. Illustration only: the real chart played the hovered line on the board and highlighted its path.",
+    blurb: "The same quarter of the circle, top right, from the same 2m tree.",
     knobs: { ...blog2016 },
     panels: [
       {
@@ -354,7 +357,7 @@ export const stages: Stage[] = [
       {
         id: "rewrite",
         label: "2021 rewrite",
-        note: "Small gaps instead of lines, deepest lines first, a softer fade, slightly brighter colors.",
+        note: "Small gaps instead of lines, deepest lines first, a softer fade, slightly better colors.",
         knobs: {},
         crop: { x: -30, y: -350, size: 380 },
       },
@@ -394,7 +397,7 @@ export const stages: Stage[] = [
       },
       {
         id: "sqrt",
-        label: "square root · 2016",
+        label: "square root",
         note: "Every ring the same area; rings thin out toward the edge.",
         knobs: { radius: "sqrt" },
       },

@@ -8,7 +8,7 @@ shortSummary = "How the 2 million game openings sunburst became a print."
 related = ["2016-02-27-visual-look-chess/index.md", "2018-12-29-chess-part2.md"]
 +++
 
-Whenever I share something I make, I get a lot of emails and comments, and by far the most common question is: "how did you make this?" The honest answer is usually _"slowly, and with a lot of fiddling"_, but I figured it deserves a better answer than that. This blog is [open-source](https://github.com/ebemunk/blog), the common tools I use are d3, and custom code. But no, I can't help you with tech support on this repo. Most are disheartened when they hear this; they want to hear there's some magic software that can just do it (and nowadays there just might be, with the proliferation of AI tools, that's another post).
+Whenever I share something I make, I get a lot of emails and comments, mostly asking: "how did you make this?" The honest answer is usually _"slowly, and with a lot of fiddling"_. This blog is [open-source](https://github.com/ebemunk/blog), the common tools I use are [d3](https://d3js.org/), and mountains of custom code. But no, I can't help you with tech support on this repo. Most are disheartened when they hear this; they want to hear there's some magic software that can just do it (and nowadays there just might be, with the proliferation of AI tools, that's another post).
 
 So this is a "making of" post. It's about a poster I just finished, [Ten Million Chess Openings](https://madfilaments.etsy.com/ca/listing/4531928752/chess-openings-data-art-ten-million), and by extension it's about the chess openings visualization it grew out of. I've wanted to make a print version of my dataviz work for a long time. I've had a few printed for myself over the years, but this is the first one I'm actually putting up for sale (the first of hopefully many). Instead of just rehashing an old viz, I wanted to bring you along for the ride as I took something built for a browser and turned it into ink on paper.
 
@@ -16,17 +16,15 @@ This isn't a tutorial or a step-by-step. It's more of a high-level tour through 
 
 ## Where it started
 
-Back in 2016 I wrote [A Visual Look at 2 Million Chess Games]({{< ref "2016-02-27-visual-look-chess/index.md" >}}), digging through 2,197,113 games from the MillionBase database. Out of everything in that post, the openings sunburst was the thing people kept coming back to. It got shared around a lot, and people spent a surprising amount of time just poking at it.
+Back in 2016 I wrote [A Visual Look at 2 Million Chess Games]({{< ref "2016-02-27-visual-look-chess/index.md" >}}), digging through ~2M games from the MillionBase database. Out of everything in that post, the openings sunburst was the thing people kept coming back to. It got shared around a lot, and people spent a surprising amount of time just poking at it.
 
 <video class="openings-recording" src="original-2016.mp4" poster="original-2016.jpg" autoplay loop muted playsinline controls width="692" style="display:block;max-width:100%;height:auto;margin:1rem auto"></video>
 
-For me, it was an amazing way to explore chess openings. You hover over a slice and the board plays out the line, and you start to *feel* the shape of opening theory: how 1.e4 takes up half the world, how the Sicilian fans out into a hundred little branches, how some lines that sound popular are actually tiny slivers. It's very tactile. I learned more about the openings I play (and the ones I don't) from messing with that thing than from any book.
+For me, it was an amazing way to explore chess openings. You hover over a slice and the board plays out the line, and you start to *feel* the shape of opening theory: how 1.e4 takes up half the world, how the Sicilian fans out into a hundred little branches, how some lines that sound popular are actually tiny slivers. It's very tactile.
 
-The idea is pretty simple. Every game starts at the center. Each ring outward is one more half-move (a "ply"), and the width (the arc-length) of each slice is how many games went down that path. Big slices are the main roads, thin slices are the side streets.
+The data side of this has always been [pgnstats](https://github.com/ebemunk/pgnstats), a PGN parser I wrote in Go for the original post. You point it at a PGN file and it chews through every game, building up the openings tree (and a bunch of other stats, like the heatmaps from the 2016 post) as it goes. It's made specifically for enormous files like MillionBase or Lumbra's Gigabase. That's a big part of why I could keep coming back to this: getting a fresh tree out of a new database is one command, and then all the fun happens on the drawing side.
 
-The data side of this has always been [pgnstats](https://github.com/ebemunk/pgnstats), a PGN parser I wrote in Go for the original post. You point it at a PGN file and it chews through every game, building up the openings tree (and a bunch of other stats, like the heatmaps from the 2016 post) as it goes. It handles huge files like a champ, which matters when the file has millions of games in it. That's a big part of why I could keep coming back to this: getting a fresh tree out of a new database is one command, and then all the fun happens on the drawing side.
-
-The first public version actually came a little before the post, as part of [chess-dataviz](https://github.com/ebemunk/chess-dataviz), a D3 library I put together for these charts. It started life as a straight copy/paste of a d3 sunburst example, and over a couple of months it slowly turned into something chess-shaped: colors by first move, rings that alternate light and dark, thin white lines between slices, and move names on the big ones. Nothing crazy going on here, but you can see it finding its feet.
+The first public version actually came a little before the post, as part of [chess-dataviz](https://github.com/ebemunk/chess-dataviz), a D3 library I put together for these charts. It started life as a straight copy/paste of a d3 sunburst example, and over a couple of months it slowly turned into something chess-shaped.
 
 <div data-openings-stage="library-2015"></div>
 
@@ -50,8 +48,6 @@ The first question is how many half-moves to show. Go too shallow and it's basic
 
 The 2016 version showed 10 plies. At some point in 2018 I refactored the parser and, without really noticing, it started producing 9. The poster also has 9 rings. I'd love to tell you that was a carefully considered artistic choice, but I honestly don't remember! It does look good though. Nine rings is just enough to walk you right up to the doorstep of the real named openings (the last ring of the Najdorf is 5.Nc3, one move short of 5...a6) without the outer ring falling apart.
 
-<!-- GAP: was 9 plies intentional for the print? User doesn't remember. -->
-
 ### What to throw away
 
 With millions of games, there's a very long tail of lines that were played once or twice. Some of those are real gems, and some are... questionable. Do you keep them?
@@ -60,7 +56,7 @@ With millions of games, there's a very long tail of lines that were played once 
 
 In 2016 I cut anything played in less than 0.1% of games while parsing, so the smallest slice on that chart is still 2,199 games. That keeps things tidy, but it also hides the texture at the edges, which turns out to be one of the prettiest parts.
 
-For the poster I went the other way: keep basically everything, and only skip slices at drawing time when they're too thin to see. Fun fact, I don't actually remember the exact threshold I used. So I measured the ring edges on the poster preview and worked backwards against a similar unpruned dataset, and it lands at "pretty much nothing pruned". Which feels right: on paper you can see far finer detail than on a screen, and those hairline slivers at the edge are what make it look like a print and not a pie chart.
+For the poster I kept it lighter, but could go in finer detail. I don't actually remember the exact threshold I used, but it feels right: on paper you can see far finer detail than on a screen.
 
 ### Squeezing the rings
 
@@ -68,11 +64,13 @@ Most of the data lives near the center. Every single game passes through the fir
 
 <div data-openings-stage="radius-linear"></div>
 
-A side effect I like a lot: the hole in the middle isn't a design decision, it's the "starting position" ring, the root that every game passes through, which just doesn't get drawn. With 9 rings, it ends up being about a third of the radius. That hole has been there since day one. In 2016 I put a chessboard in it, and for the poster I left it empty. More on that below.
+A side effect I like a lot: the hole in the middle isn't a design decision, it's the "starting position" ring, the root that every game passes through, which just doesn't get drawn. With 9 rings, it ends up being about a third of the radius. For the post I put a chessboard in it, and for the poster I left it empty. More on that below.
 
 ### Gaps and lines between slices
 
-How you separate slices sounds like a nitpick, but it changes the whole feel. The original library drew thin white lines, which look great on a screen. The 2021 rewrite added small gaps between slices instead. Later on I switched to a very thin dark line, which lets the colors sit right next to each other and makes the thin slices at the edge read as texture instead of noise.
+How you separate slices sounds like a nitpick, but it changes the whole feel. The original library drew thin white lines, the easiest and simplest way to achieve the separation. The 2021 rewrite added small gaps between slices instead. Later on I switched to a very thin dark line.
+
+In all cases, the issue is that you want the colored "ink" to correlate to the actual distribution of the data. This isn't a big deal for `e4` which takes up a big portion of the space, but if you're adding 1-2 pixel borders around tiny slivers, it actually takes away from the accuracy of the data for the farther moves. This is why sub-pixel lines are useful in the poster - it can delineate the different moves without affecting the actual size and scale of the inked area.
 
 <div data-openings-stage="separation"></div>
 
@@ -104,9 +102,47 @@ Here's where it gets interesting. I'd made some version of this chart a dozen ti
 
 <!-- iirc: defaults per user; pgnstats CLI has no game filters by default (only optional -fp player filter on v2). -->
 
+<div class="openings-stage">
+  <svg class="openings-compare-data" viewBox="0 0 440 230" role="img" aria-label="Two circles sized by number of games: 2,197,113 in 2016, 10,388,956 for the poster">
+    <circle cx="110" cy="112" r="44.1" fill="none" stroke="#9eabb3" />
+    <circle cx="310" cy="112" r="96" fill="none" stroke="#ab95b8" />
+    <text x="110" y="208" text-anchor="middle" class="big">2,197,113</text>
+    <text x="110" y="226" text-anchor="middle">games · MillionBase · 2016</text>
+    <text x="310" y="208" text-anchor="middle" class="big">10,388,956</text>
+    <text x="310" y="226" text-anchor="middle">games · Lumbra's Gigabase · poster</text>
+  </svg>
+  <div class="openings-mode-note">Circles sized by game count: about 4.7 times as many games.</div>
+</div>
+
 **An empty center.** In the end I left the hole empty. It gives your eye somewhere to rest, and honestly the circle reads better as one object without a board in the middle. Every game starts there anyway.
 
 **Background and color.** A warm near-black instead of a pure black, and a custom palette instead of a stock one. 1.e4 is violet, 1.d4 is sky blue, 1.Nf3 is pink, 1.c4 is mint. I wanted it to look good on a wall first, and like a chart second. Fun to see that e4 takes up exactly half the circle in this dataset, d4 about a third, and the rest share what's left.
+
+<div class="openings-stage openings-stage-wide">
+  <div class="openings-panels">
+    <figure class="openings-panel openings-swatches" style="background:#282c34">
+      <figcaption class="openings-panel-label">Web (the original post)</figcaption>
+      <div class="chips">
+      <div class="chip"><span style="background:#2791da"></span><span style="background:#196091"></span><b>1.e4</b></div>
+      <div class="chip"><span style="background:#ff9e48"></span><span style="background:#d96600"></span><b>1.d4</b></div>
+      <div class="chip"><span style="background:#36c336"></span><span style="background:#248124"></span><b>1.Nf3</b></div>
+      <div class="chip"><span style="background:#e05455"></span><span style="background:#ad1f20"></span><b>1.c4</b></div>
+      </div>
+      <figcaption class="openings-panel-note">d3's stock category10, on the blog's background.</figcaption>
+    </figure>
+    <figure class="openings-panel openings-swatches" style="background:#282323">
+      <figcaption class="openings-panel-label">Poster</figcaption>
+      <div class="chips">
+      <div class="chip"><span style="background:#ab95b8"></span><span style="background:#735882"></span><b>1.e4</b></div>
+      <div class="chip"><span style="background:#7eadd9"></span><span style="background:#3376b1"></span><b>1.d4</b></div>
+      <div class="chip"><span style="background:#d6a5b8"></span><span style="background:#aa5375"></span><b>1.Nf3</b></div>
+      <div class="chip"><span style="background:#88b7b1"></span><span style="background:#518279"></span><b>1.c4</b></div>
+      </div>
+      <figcaption class="openings-panel-note">Custom palette, on the poster's warm near-black.</figcaption>
+    </figure>
+  </div>
+  <div class="openings-mode-note">Each chip is a first move: the first ring's color on top, the second ring's below.</div>
+</div>
 
 **Lines.** Always-on hairlines between slices. With no mouse, the slices need to separate themselves.
 
@@ -114,9 +150,75 @@ Here's where it gets interesting. I'd made some version of this chart a dozen ti
 
 **Opening names.** This was the most work by far. The bigger openings get their names written inside the arcs. For the smaller ones out at the edges, there are about fifty little callouts with leader lines pointing to their slice. My little layout app handled the rendering and let me toggle each label on and off and drag it around, but the actual placement was all by hand. Lots of nudging something two pixels to the left, staring at it, and nudging it back.
 
+<div class="openings-stage openings-stage-wide">
+  <div class="openings-panels">
+    <figure class="openings-panel openings-closeup">
+      <img src="closeup-lines.jpg" alt="Close-up of the poster's outer rings, with hundreds of thin slices separated by dark hairlines" loading="lazy" />
+      <figcaption class="openings-panel-note">Hairlines between slices, out at the fringe.</figcaption>
+    </figure>
+    <figure class="openings-panel openings-closeup">
+      <img src="closeup-moves.jpg" alt="Close-up of the poster where move names like Nc6 and cxd4 follow the curve of each ring" loading="lazy" />
+      <figcaption class="openings-panel-note">Moves follow the rings; opening names sit underneath.</figcaption>
+    </figure>
+    <figure class="openings-panel openings-closeup">
+      <img src="closeup-callouts.jpg" alt="Close-up of hand-placed callouts on the poster: Chekhover, Moscow, Accelerated Dragon, with leader lines into their slices" loading="lazy" />
+      <figcaption class="openings-panel-note">Callouts, placed by hand.</figcaption>
+    </figure>
+  </div>
+</div>
+
 **Type.** If memory serves, Fanwood and Junction, both from [The League of Moveable Type](https://www.theleagueofmoveabletype.com).
 
-**Getting it printed.** This part was way less glamorous than I expected. I print through Prodigi, and my first few attempts at fancy press-ready exports (PDF, TIFF, a giant 4x render) all got rejected. What worked in the end was one 24×36" PNG master, resampled carefully, printed on 240gsm ultra-matte paper. Then I ordered test prints and held my breath.
+<style>
+@font-face { font-family: "Fanwood"; src: url("fonts/fanwood.woff") format("woff"); font-display: swap; }
+@font-face { font-family: "Fanwood"; font-style: italic; src: url("fonts/fanwood-italic.woff") format("woff"); font-display: swap; }
+@font-face { font-family: "Junction"; src: url("fonts/junction-regular.woff") format("woff"); font-display: swap; }
+</style>
+<div class="openings-stage openings-stage-wide">
+  <div class="openings-panels">
+    <figure class="openings-panel openings-type openings-type-web">
+      <figcaption class="openings-panel-label">Web (the original post)</figcaption>
+      <div class="t-title">A Visual Look at 2 Million Chess Games</div>
+      <div class="t-labels">e4 c5 Nf3 d6 d4 cxd4</div>
+      <figcaption class="openings-panel-note">The blog's heading font, and plain sans-serif for the move labels.</figcaption>
+    </figure>
+    <figure class="openings-panel openings-type openings-type-poster">
+      <figcaption class="openings-panel-label">Poster</figcaption>
+      <div class="t-title">Ten Million Openings</div>
+      <div class="t-sub">A visual record of 510 years of human play.</div>
+      <div class="t-labels">SICILIAN DEFENSE · e4 c5 Nf3 d6</div>
+      <figcaption class="openings-panel-note">Fanwood for the title, Junction for the labels.</figcaption>
+    </figure>
+  </div>
+</div>
+
+**Getting it printed.** This part was way less glamorous than I expected. I print through Prodigi, and my first few attempts at fancy press-ready exports (PDF, TIFF, a giant 4x render) all got rejected. What worked in the end was one 24×36" PNG master, resampled carefully. Then I ordered test prints and held my breath.
+
+Four of them: two big, two small, each size on two different papers. Up on the wall with painter's tape, so I could see them in real life, from across the room and up close. My dog supervised the whole process.
+
+<div class="openings-stage openings-stage-wide">
+  <figure class="openings-panel openings-closeup openings-photo">
+    <img src="testprints-wall.jpg" alt="Four test prints of the poster taped to a wall with green painter's tape, two large on top and two small below, with a dog lying underneath" loading="lazy" />
+    <figcaption class="openings-panel-note">The test prints: two sizes, two papers. Supervisor bottom left.</figcaption>
+  </figure>
+</div>
+
+**Picking the paper.** The two contenders were Prodigi's Smooth Art Paper (`ART-FAP-SAP`, 240gsm) and their Enhanced Matte Art (`GLOBAL-FAP`, 200gsm). Most of this poster is one big field of near-black ink, and that shows every mark, so I did the scientific thing and scratched them with my fingernail (no, it wasn't my dog's fingernail, you cannot prove anything).
+
+<div class="openings-stage openings-stage-wide">
+  <div class="openings-panels">
+    <figure class="openings-panel openings-closeup">
+      <img src="testprints-scratch.jpg" alt="Close-up of a test print's dark background with fingernail scratch marks under the purple e4 arcs" loading="lazy" />
+      <figcaption class="openings-panel-note">The fingernail test.</figcaption>
+    </figure>
+    <figure class="openings-panel openings-closeup">
+      <img src="testprints-scratch-text.jpg" alt="Angled close-up of the poster's title and description block, with scratches across the dark background" loading="lazy" />
+      <figcaption class="openings-panel-note">Dark ink shows everything.</figcaption>
+    </figure>
+  </div>
+</div>
+
+`GLOBAL-FAP` came out ahead on both print quality and durability, so that's what the poster is printed on, even though it costs a bit more.
 
 ## Ten Million Openings
 

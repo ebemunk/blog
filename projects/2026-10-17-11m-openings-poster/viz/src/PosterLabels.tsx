@@ -25,6 +25,8 @@ const UPPER_EM = 0.68;
 const SAN_EM = 0.6;
 
 const SAN_SIZE = 11;
+/** Smallest name allowed when it shares its ring with the move. */
+const STACKED_MIN = 5.5;
 const CALLOUT_SIZE = 13;
 const CALLOUT_GAP = 14;
 /** How many callouts, and the smallest share of all games one may stand for. */
@@ -98,7 +100,7 @@ function relax(items: { want: number; half: number }[]) {
   return a;
 }
 
-/** Labels in the style of the poster: radial moves, names along big arcs, callouts outside. */
+/** Labels in the style of the poster: names along big arcs, moves above those names, callouts outside. */
 export function PosterLabels({
   nodes,
   width,
@@ -116,37 +118,71 @@ export function PosterLabels({
     return { r0, r1, rMid: (r0 + r1) / 2 };
   };
 
-  // Names inside arcs big enough to hold them, minus room for the move at the start.
+  // Names inside arcs big enough to hold them. With moves shown, a named arc
+  // stacks the move above the name; both follow the arc at its middle angle.
   const showNames = labels !== "san";
   const showSan = labels !== "names";
-  const sanRoom = showSan ? SAN_SIZE * 1.8 : 0;
+  const minName = width / 75;
   const starts = nodes.filter((d) => nameOf(d) && !d.ancestors().slice(1).some((a) => nameOf(a) === nameOf(d)));
 
   const inArc = showNames
     ? starts.flatMap((d) => {
         const text = shortName(nameOf(d)!);
         const { r0, r1, rMid } = ring(d);
-        const length = rMid * (d.x1 - d.x0) - 2 * sanRoom;
-        const fit = (0.9 * length) / (text.length * UPPER_EM);
-        const fontSize = Math.min(18, 0.5 * (r1 - r0), fit);
-        if (fontSize < width / 75) return [];
-        return [{ d, text, fontSize, path: textArc(rMid, d.x0, d.x1) }];
+        const across = r1 - r0;
+        const span = d.x1 - d.x0;
+        const fitAt = (radius: number) => (0.9 * radius * span) / (text.length * UPPER_EM);
+        const centered = Math.min(18, 0.5 * across, fitAt(rMid));
+        if (centered < minName) return [];
+
+        let fontSize = centered;
+        let nameR = rMid;
+        let sanPath: string | undefined;
+        if (showSan) {
+          const mid = (d.x0 + d.x1) / 2;
+          // Outer side is page-up on the top half; inner side is page-up where text flips.
+          const up = mid > Math.PI / 2 && mid < (3 * Math.PI) / 2 ? -1 : 1;
+          // Name stays in its half of the ring, under the move's line.
+          const cap = 0.45 * (across - SAN_SIZE);
+          const size = Math.min(18, cap, fitAt(rMid));
+          // Thin rings shrink the name rather than lose the move, like the poster.
+          if (size >= STACKED_MIN) {
+            // Half a line each way, so the two lines clear and the pair stays centered.
+            const shift = (size + SAN_SIZE) / 4 + 1;
+            const tryName = rMid - up * shift;
+            const moveR = rMid + up * shift;
+            const sanLen = d.data.san.length * SAN_EM * SAN_SIZE;
+            const inRing =
+              tryName - size / 2 >= r0 &&
+              tryName + size / 2 <= r1 &&
+              moveR - SAN_SIZE / 2 >= r0 &&
+              moveR + SAN_SIZE / 2 <= r1;
+            if (inRing && sanLen <= 0.9 * moveR * span) {
+              fontSize = size;
+              nameR = tryName;
+              sanPath = textArc(moveR, d.x0, d.x1);
+            }
+          }
+        }
+
+        return [{ d, text, fontSize, path: textArc(nameR, d.x0, d.x1), sanPath }];
       })
     : [];
   const named = new Set(inArc.map((n) => n.d));
   const inArcText = new Set(inArc.map((n) => n.text));
 
-  // Moves: radial, wherever the arc is wide enough for the glyph height and
-  // the ring thick enough for the word. Named arcs carry the move at their start.
+  // Moves: radial on unnamed arcs, wherever the arc is wide enough for the
+  // glyph height and the ring thick enough for the word. Named arcs draw the
+  // move on a curve above the name instead.
   const sans = showSan
     ? nodes.flatMap((d) => {
-        const { r0, r1, rMid } = ring(d);
-        const along = rMid * (d.x1 - d.x0);
-        const across = r1 - r0;
+        if (named.has(d)) return [];
+        const band = ring(d);
+        const along = band.rMid * (d.x1 - d.x0);
+        const across = band.r1 - band.r0;
         if (along < SAN_SIZE * 1.15) return [];
         if (across < d.data.san.length * SAN_EM * SAN_SIZE + 6) return [];
-        const a = named.has(d) ? d.x0 + (SAN_SIZE * 0.9) / rMid : (d.x0 + d.x1) / 2;
-        return [{ d, a, rMid }];
+        return [{ d, a: (d.x0 + d.x1) / 2, rMid: band.rMid }];
       })
     : [];
 
@@ -177,11 +213,13 @@ export function PosterLabels({
 
   return (
     <g pointerEvents="none">
-      {inArc.map(({ d, text, fontSize, path }, i) => {
+      {inArc.map(({ d, text, fontSize, path, sanPath }, i) => {
         const id = `${idPrefix}-pname-${i}`;
+        const sanId = `${idPrefix}-psan-${i}`;
         return (
           <g key={id}>
             <path id={id} d={path} fill="none" />
+            {sanPath && <path id={sanId} d={sanPath} fill="none" />}
             <text
               fontSize={fontSize}
               fontFamily="'Avenir Next Condensed', 'Arial Narrow', sans-serif"
@@ -196,6 +234,20 @@ export function PosterLabels({
                 {text}
               </textPath>
             </text>
+            {sanPath && (
+              <text
+                fontSize={SAN_SIZE}
+                fontFamily="'Gill Sans', 'Avenir Next', sans-serif"
+                fill="#f6f3ee"
+                opacity={0.85}
+                dominantBaseline="central"
+                textAnchor="middle"
+              >
+                <textPath href={`#${sanId}`} startOffset="50%">
+                  {d.data.san}
+                </textPath>
+              </text>
+            )}
           </g>
         );
       })}
