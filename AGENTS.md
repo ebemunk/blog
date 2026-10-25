@@ -12,7 +12,6 @@ Makefile                    `make deploy` (see Preview and deploy)
 assets/img/<name>.png       post thumbnails, referenced by front matter `image`
 content/<YYYY-MM-DD-slug>/  one page bundle per post: index.md + its images, build/, fonts, …
 projects/<YYYY-MM-DD-slug>/ the code and data behind that post (same folder name)
-projects/starter/           an old (2019, webpack 4) template; do not copy it for new work
 themes/lexo/                the theme, vendored and patched in-repo (no submodule)
 public/                     the built site, committed; deployed to the gh-pages branch
 resources/_gen/             Hugo's resized thumbnails, committed
@@ -26,7 +25,7 @@ resources/_gen/             Hugo's resized thumbnails, committed
 
 1. Pick a slug and today's date. Create `content/<date-slug>/index.md` and `projects/<date-slug>/`.
 2. Put data collection in `projects/<post>/collect/` (or `data/`) and the figures in `projects/<post>/viz/`. Small projects can skip the split.
-3. Copy the viz setup from the newest post (`projects/2026-10-17-11m-openings-poster/viz/`), not from `starter/`.
+3. Copy the viz setup from the newest post (`projects/2026-10-17-11m-openings-poster/viz/`).
 4. Add a 1.5:1 thumbnail to `assets/img/<slug>.png` and point `image` at it.
 5. Write with `draft = true` and preview with `hugo serve -D`. Drop the draft flag to publish, then `make deploy`.
 
