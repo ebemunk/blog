@@ -10,11 +10,17 @@ import {
   schemeTableau10,
 } from "d3";
 import type { HierarchyRectangularNode } from "d3";
-import { useId, useMemo } from "react";
+import { createContext, useContext, useId, useMemo } from "react";
 import { CALLOUT_MARGIN, PosterLabels } from "./PosterLabels";
 import openingNames from "./data/opening-names-2m.json";
 import type { Knobs } from "./stages";
 import type { OpeningNode } from "./tree";
+
+/**
+ * Draw only the empty <svg> with its real viewBox. ssr.tsx prerenders lazy figures this way,
+ * so the page reserves their exact height before embed.tsx draws them.
+ */
+export const SkeletonContext = createContext(false);
 
 /** Square window in viewBox units (origin at the center of the sunburst). */
 export type Frame = { x: number; y: number; size: number };
@@ -136,6 +142,7 @@ function firstParent(d: HierarchyRectangularNode<OpeningNode>) {
 
 export function Sunburst({ data, knobs, crop, highlight, className, dataset }: Props) {
   const { width, hole } = knobs;
+  const skeleton = useContext(SkeletonContext);
 
   const root = useMemo(() => {
     const h = hierarchy(data, (d) => d.children);
@@ -282,6 +289,10 @@ export function Sunburst({ data, knobs, crop, highlight, className, dataset }: P
   const viewBox = crop
     ? `${crop.x} ${crop.y} ${crop.size} ${crop.size}`
     : `${-half} ${-half} ${2 * half} ${2 * half}`;
+
+  if (skeleton) {
+    return <svg viewBox={viewBox} role="img" className={className ?? "openings-sunburst"} />;
+  }
 
   return (
     <svg

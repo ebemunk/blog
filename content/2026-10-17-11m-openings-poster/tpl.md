@@ -1,16 +1,16 @@
 +++
-draft = true
 responsive = true
 title = "Making Of: Ten Million Chess Openings"
 slug = "making-of-ten-million-chess-openings"
-tags = ["chess", "data visualization", "long form", "making of"]
+tags = ["chess", "data visualization", "long form", "making of", "print"]
 shortSummary = "How the 2 million game openings sunburst became a print."
 related = ["2016-02-27-visual-look-chess/index.md", "2018-12-29-chess-part2.md"]
+publishDate = "2026-10-25"
 +++
 
-Whenever I share something I make, I get a lot of emails and comments, mostly asking: "how did you make this?" The honest answer is usually _"slowly, and with a lot of fiddling"_. This blog is [open-source](https://github.com/ebemunk/blog), the common tools I use are [d3](https://d3js.org/), and mountains of custom code. But no, I can't help you with tech support on this repo. Most are disheartened when they hear this; they want to hear there's some magic software that can just do it (and nowadays there just might be, with the proliferation of AI tools, that's another post).
+Whenever I share something I make, I get a lot of emails and comments, mostly asking: "how did you make this?" The honest answer is usually _"slowly, and with a lot of fiddling"_. This blog is [open-source](https://github.com/ebemunk/blog), the only common tool I use is [d3](https://d3js.org/), and mountains of custom code. But no, I can't help you with tech support on this repo. Most are disheartened when they hear this; they want to hear there's some magic software that can just do it (and nowadays there just might be, with the proliferation of AI tools, that's another post).
 
-So this is a "making of" post. It's about a poster I just finished, [Ten Million Chess Openings](https://madfilaments.etsy.com/ca/listing/4531928752/chess-openings-data-art-ten-million), and by extension it's about the chess openings visualization it grew out of. I've wanted to make a print version of my dataviz work for a long time. I've had a few printed for myself over the years, but this is the first one I'm actually putting up for sale (the first of hopefully many). Instead of just rehashing an old viz, I wanted to bring you along for the ride as I took something built for a browser and turned it into ink on paper.
+So this is a "making of" post. It's about a poster I just finished, [Ten Million Chess Openings](https://madfilaments.etsy.com/listing/4531928752/chess-openings-data-art-ten-million), and by extension it's about the chess openings visualization it grew out of. I've wanted to make a print version of my dataviz work for a long time. I've had a few printed for myself over the years, but this is the first one I'm actually putting up for sale (the first of hopefully many). Instead of just rehashing an old viz, I wanted to bring you along for the ride as I took something built for a browser and turned it into ink on paper.
 
 This isn't a tutorial or a step-by-step. It's more of a high-level tour through the things I tried, the knobs I turned, and the decisions I landed on. If I'm being honest, **I'm mostly winging it the whole time**, and I think that's part of the fun.
 
@@ -18,7 +18,7 @@ This isn't a tutorial or a step-by-step. It's more of a high-level tour through 
 
 Back in 2016 I wrote [A Visual Look at 2 Million Chess Games]({{< ref "2016-02-27-visual-look-chess/index.md" >}}), digging through ~2M games from the MillionBase database. Out of everything in that post, the openings sunburst was the thing people kept coming back to. It got shared around a lot, and people spent a surprising amount of time just poking at it.
 
-<video class="openings-recording" src="original-2016.mp4" poster="original-2016.jpg" autoplay loop muted playsinline controls width="692" style="display:block;max-width:100%;height:auto;margin:1rem auto"></video>
+<video class="openings-recording" src="original-2016.mp4" poster="original-2016.jpg" autoplay loop muted playsinline controls width="692" height="720" style="display:block;max-width:100%;height:auto;margin:1rem auto"></video>
 
 For me, it was an amazing way to explore chess openings. You hover over a slice and the board plays out the line, and you start to *feel* the shape of opening theory: how 1.e4 takes up half the world, how the Sicilian fans out into a hundred little branches, how some lines that sound popular are actually tiny slivers. It's very tactile.
 
@@ -56,15 +56,15 @@ With millions of games, there's a very long tail of lines that were played once 
 
 In 2016 I cut anything played in less than 0.1% of games while parsing, so the smallest slice on that chart is still 2,199 games. That keeps things tidy, but it also hides the texture at the edges, which turns out to be one of the prettiest parts.
 
-For the poster I kept it lighter, but could go in finer detail. I don't actually remember the exact threshold I used, but it feels right: on paper you can see far finer detail than on a screen.
+For the poster I kept it lighter, but not completely. I don't actually remember the exact threshold I used, but it feels right: on paper you can see far finer detail than on a screen.
 
 ### Squeezing the rings
 
 Most of the data lives near the center. Every single game passes through the first ring, and the further out you go, the more the games spread out into thinner and thinner lines. So that's where the visual weight should be too. If every ring had the same thickness, the outer rings would end up with way more area (a ring's area grows with its distance from the center), and all that ink would go to the sparse fringe instead of the main lines. So the radius uses a square root scale, which gives every ring the same *area* instead of the same thickness. The inner rings get thicker, the outer ones thinner, and the center gets the weight it deserves.
 
-<div data-openings-stage="radius-linear"></div>
+<div data-openings-stage="radius-linear" data-openings-lazy></div>
 
-A side effect I like a lot: the hole in the middle isn't a design decision, it's the "starting position" ring, the root that every game passes through, which just doesn't get drawn. With 9 rings, it ends up being about a third of the radius. For the post I put a chessboard in it, and for the poster I left it empty. More on that below.
+A side effect I like a lot: the hole in the middle isn't a design decision, it's the "starting position" ring, the root that every game passes through, which just doesn't get drawn. With 9 rings, it ends up being about a third of the radius. For the 2016 post I put a chessboard in it, and for the poster I left it empty. More on that below.
 
 ### Gaps and lines between slices
 
@@ -72,23 +72,23 @@ How you separate slices sounds like a nitpick, but it changes the whole feel. Th
 
 In all cases, the issue is that you want the colored "ink" to correlate to the actual distribution of the data. This isn't a big deal for `e4` which takes up a big portion of the space, but if you're adding 1-2 pixel borders around tiny slivers, it actually takes away from the accuracy of the data for the farther moves. This is why sub-pixel lines are useful in the poster - it can delineate the different moves without affecting the actual size and scale of the inked area.
 
-<div data-openings-stage="separation"></div>
+<div data-openings-stage="separation" data-openings-lazy></div>
 
 ### Color
 
 The very first version used a stock color palette. Later I switched to Tableau colors, which are nicer but still feel like "a chart". The color carries the first move: everything that starts with 1.e4 is one family, 1.d4 is another, and so on, with each ring getting slightly lighter or darker so you can still see the steps.
 
-<div data-openings-stage="palette"></div>
+<div data-openings-stage="palette" data-openings-lazy></div>
 
 Picking the colors was only half of it. How the color changes from ring to ring was a pretty conscious decision, and it took a lot of iterating to get there. The first version was one flat color per first move, which makes each family read as a blob. Then I made the rings alternate darker and lighter, which has a nice side effect: every other ring is a White move, and the ones in between are Black's, so you can kind of see the back and forth of the game. Finally, everything gets a little darker as you go outward, so the eye is pulled towards the center, where most of the games are.
 
-<div data-openings-stage="shading"></div>
+<div data-openings-stage="shading" data-openings-lazy></div>
 
 ### Move names vs opening names
 
 On the interactive version, the arcs show the moves (e4, c5, Nf3...) and the opening names live in a tooltip. That's great when you have a mouse. On paper, there's no hover, so the names have to be on the sheet somewhere, and that was a whole thing (see below).
 
-<div data-openings-stage="chessviz-tools"></div>
+<div data-openings-stage="chessviz-tools" data-openings-lazy></div>
 
 ### Board vs. no board
 
@@ -114,7 +114,7 @@ Here's where it gets interesting. I'd made some version of this chart a dozen ti
 
 **An empty center.** In the end I left the hole empty. It gives your eye somewhere to rest, and honestly the circle reads better as one object without a board in the middle. Every game starts there anyway.
 
-**Background and color.** A warm near-black instead of a pure black, and a custom palette instead of a stock one. 1.e4 is violet, 1.d4 is sky blue, 1.Nf3 is pink, 1.c4 is mint. I wanted it to look good on a wall first, and like a chart second. Fun to see that e4 takes up exactly half the circle in this dataset, d4 about a third, and the rest share what's left.
+**Background and color.** A warm near-black instead of a pure black, and a custom palette instead of a stock one. 1.e4 is violet, 1.d4 is sky blue, 1.Nf3 is pink, 1.c4 is mint. I wanted it to look good on a wall first, and like a chart second. Fun to see that e4 takes up about half the circle in this dataset, d4 about a third, and the rest share what's left.
 
 <div class="openings-stage openings-stage-wide">
   <div class="openings-panels">
@@ -151,21 +151,21 @@ Here's where it gets interesting. I'd made some version of this chart a dozen ti
 <div class="openings-stage openings-stage-wide">
   <div class="openings-panels">
     <figure class="openings-panel openings-closeup">
-      <img src="closeup-lines.jpg" alt="Close-up of the poster's outer rings, with hundreds of thin slices separated by dark hairlines" loading="lazy" />
+      <img src="closeup-lines.jpg" width="300" height="300" alt="Close-up of the poster's outer rings, with hundreds of thin slices separated by dark hairlines" loading="lazy" />
       <figcaption class="openings-panel-note">Hairlines between slices, out at the fringe.</figcaption>
     </figure>
     <figure class="openings-panel openings-closeup">
-      <img src="closeup-moves.jpg" alt="Close-up of the poster where move names like Nc6 and cxd4 follow the curve of each ring" loading="lazy" />
+      <img src="closeup-moves.jpg" width="300" height="300" alt="Close-up of the poster where move names like Nc6 and cxd4 follow the curve of each ring" loading="lazy" />
       <figcaption class="openings-panel-note">Moves follow the rings; opening names sit underneath.</figcaption>
     </figure>
     <figure class="openings-panel openings-closeup">
-      <img src="closeup-callouts.jpg" alt="Close-up of hand-placed callouts on the poster: Chekhover, Moscow, Accelerated Dragon, with leader lines into their slices" loading="lazy" />
+      <img src="closeup-callouts.jpg" width="300" height="300" alt="Close-up of hand-placed callouts on the poster: Chekhover, Moscow, Accelerated Dragon, with leader lines into their slices" loading="lazy" />
       <figcaption class="openings-panel-note">Callouts, placed by hand.</figcaption>
     </figure>
   </div>
 </div>
 
-**Type.** If memory serves, Fanwood and Junction, both from [The League of Moveable Type](https://www.theleagueofmoveabletype.com).
+**Type.** Fanwood and Junction, both from [The League of Moveable Type](https://www.theleagueofmoveabletype.com).
 
 <style>
 @font-face { font-family: "Fanwood"; src: url("fonts/fanwood.woff") format("woff"); font-display: swap; }
@@ -196,40 +196,40 @@ Four of them: two big, two small, each size on two different papers. Up on the w
 
 <div class="openings-stage openings-stage-wide">
   <figure class="openings-panel openings-closeup openings-photo">
-    <img src="testprints-wall.jpg" alt="Four test prints of the poster taped to a wall with green painter's tape, two large on top and two small below, with a dog lying underneath" loading="lazy" />
+    <img src="testprints-wall.jpg" width="768" height="1024" alt="Four test prints of the poster taped to a wall with green painter's tape, two large on top and two small below, with a dog lying underneath" loading="lazy" />
     <figcaption class="openings-panel-note">The test prints: two sizes, two papers. Supervisor bottom left.</figcaption>
   </figure>
 </div>
 
-**Picking the paper.** The two contenders were Prodigi's Smooth Art Paper (`ART-FAP-SAP`, 240gsm) and their Enhanced Matte Art (`GLOBAL-FAP`, 200gsm). Most of this poster is one big field of near-black ink, and that shows every mark, so I did the scientific thing and scratched them with my fingernail (no, it wasn't my dog's fingernail, you cannot prove anything).
+**Picking the paper.** The two contenders were Prodigi's "Smooth Art Paper" (240gsm) and their "Enhanced Matte Art Paper" (200gsm). Most of this poster is one big field of near-black ink, and that shows every mark, so I did the scientific thing and scratched them with my fingernail (no, it wasn't my dog's fingernail, you cannot prove anything).
 
 <div class="openings-stage openings-stage-wide">
   <div class="openings-panels">
     <figure class="openings-panel openings-closeup">
-      <img src="testprints-scratch.jpg" alt="Close-up of a test print's dark background with fingernail scratch marks under the purple e4 arcs" loading="lazy" />
+      <img src="testprints-scratch.jpg" width="768" height="1024" alt="Close-up of a test print's dark background with fingernail scratch marks under the purple e4 arcs" loading="lazy" />
       <figcaption class="openings-panel-note">The fingernail test.</figcaption>
     </figure>
     <figure class="openings-panel openings-closeup">
-      <img src="testprints-scratch-text.jpg" alt="Angled close-up of the poster's title and description block, with scratches across the dark background" loading="lazy" />
+      <img src="testprints-scratch-text.jpg" width="768" height="1024" alt="Angled close-up of the poster's title and description block, with scratches across the dark background" loading="lazy" />
       <figcaption class="openings-panel-note">Dark ink shows everything.</figcaption>
     </figure>
   </div>
 </div>
 
-`GLOBAL-FAP` came out ahead on both print quality and durability, so that's what the poster is printed on, even though it costs a bit more.
+The Enhanced Matter Art paper came out ahead on both print quality and durability, so that's what the poster is printed on, even though it costs a bit more.
 
 ## Ten Million Openings
 
 And here it is!
 
-<a class="openings-poster" href="https://madfilaments.etsy.com/ca/listing/4531928752/chess-openings-data-art-ten-million">
-  <img src="poster.jpg" alt="Ten Million Openings poster" />
+<a class="openings-poster" href="https://madfilaments.etsy.com/listing/4531928752/chess-openings-data-art-ten-million">
+  <img src="poster.jpg" width="739" height="1106" alt="Ten Million Openings poster" />
 </a>
 
 
 It's a little surreal to see something that started as a hover effect in a 2016 blog post hanging on a wall. Every slice is real games, every thin line out at the edge is someone, somewhere, trying something a bit different.
 
-If you'd like one for yourself, or you know a chess player who'd love it, it's available on [Etsy](https://madfilaments.etsy.com/ca/listing/4531928752/chess-openings-data-art-ten-million). Buying one genuinely helps me keep making these (and keep coming back to this sunburst for another ten years). If not, I hope you enjoyed the peek behind the curtain anyway. Let me know what you think, and if you have questions about any of the knobs, ask away!
+If you'd like one for yourself, or you know a chess player who'd love it, it's available on [Etsy](https://madfilaments.etsy.com/listing/4531928752/chess-openings-data-art-ten-million). Buying one genuinely helps me keep making these (and keep coming back to this sunburst for another ten years). If not, I hope you enjoyed the peek behind the curtain anyway. Let me know what you think, and if you have questions about any of the knobs, ask away!
 
 <link rel="stylesheet" href="build/index.css">
 <script type="module" src="build/index.js"></script>
