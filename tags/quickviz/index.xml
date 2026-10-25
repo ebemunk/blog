@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Quickviz on Thinking Through the Party</title>
-		<link>http://localhost:1313/tags/quickviz/</link>
+		<link>https://blog.ebemunk.com/tags/quickviz/</link>
 		<description>Recent content in Quickviz on Thinking Through the Party</description>
 		<generator>Hugo</generator>
 		<language>en-US</language>
@@ -12,26 +12,26 @@
 		
 			<lastBuildDate>Mon, 04 Jul 2022 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/quickviz/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://blog.ebemunk.com/tags/quickviz/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>2022 Chess Candidates Tournament Recap</title>
-				<link>http://localhost:1313/candidates-2022/</link>
+				<link>https://blog.ebemunk.com/candidates-2022/</link>
 				<pubDate>Mon, 04 Jul 2022 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/candidates-2022/</guid>
+				<guid>https://blog.ebemunk.com/candidates-2022/</guid>
 				<description>&lt;p&gt;I wanted to do a quick recap of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Candidates_Tournament_2022&#34;&gt;2022 Chess Candidates Tournament&lt;/a&gt; that saw Ian Nepomniachtchi emerge as the challenger for the second time. There were some good findings in there!&lt;/p&gt;&#xA;&lt;p&gt;Click on the graphic to see it in full size.&lt;/p&gt;&#xA;&lt;a href=&#34;viz.png&#34; class=&#34;viz&#34;&gt;&#xA;  &lt;img src=&#34;viz.png&#34; /&gt;&#xA;&lt;/a&gt;&#xA;&lt;style&gt;&#xA;  .viz {&#xA;    margin: 1rem auto;&#xA;    display: block;&#xA;  }&#xA;  img {&#xA;    width: 100%;&#xA;  }&#xA;&lt;/style&gt;</description>
 			</item>
 			<item>
 				<title>ca·coph·o·ny - a harsh discordant mixture of sounds.</title>
-				<link>http://localhost:1313/cacophony/</link>
+				<link>https://blog.ebemunk.com/cacophony/</link>
 				<pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/cacophony/</guid>
+				<guid>https://blog.ebemunk.com/cacophony/</guid>
 				<description>&lt;p&gt;I always get glimpses of cool ideas when I see great data, and after watching parts of the First Presidential Debate of 2020 I knew I had to do something with it. The transcript over at &lt;a href=&#34;https://www.rev.com/blog/transcripts/donald-trump-joe-biden-1st-presidential-debate-transcript-2020&#34;&gt;Rev.com&lt;/a&gt; contains incredibly detailed and millisecond timestamped data.&lt;/p&gt;&#xA;&lt;p&gt;Hearing about how chaotic the debate went (and witnessing it after digging into the data), I wanted to look at how often people spoke over each other.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Color in Books</title>
-				<link>http://localhost:1313/color-in-books/</link>
+				<link>https://blog.ebemunk.com/color-in-books/</link>
 				<pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/color-in-books/</guid>
+				<guid>https://blog.ebemunk.com/color-in-books/</guid>
 				<description>&lt;p&gt;&lt;a href=&#34;http://www.gutenberg.org/&#34;&gt;Project Gutenberg&lt;/a&gt; is an amazing source of books that are in the public domain. An avid reader myself, I wanted to make a creative visualization using the text of the great books when I came across the &lt;a href=&#34;http://www.gutenberg.org/ebooks/bookshelf/13&#34;&gt;&amp;ldquo;Best Books Ever&amp;rdquo;&lt;/a&gt; list.&lt;/p&gt;&#xA;&lt;p&gt;Click on the graphic to see it in full size.&lt;/p&gt;&#xA;&lt;p&gt;I hope this inspires you to read one of these classics!&lt;/p&gt;&#xA;&lt;a href=&#34;viz.png&#34; class=&#34;viz&#34;&gt;&#xA;  &lt;img src=&#34;viz.png&#34; /&gt;&#xA;&lt;/a&gt;&#xA;&lt;p&gt;Interested in prints of this graphic? I have a few copies printed on beautiful art paper. Reach out on twitter.&lt;/p&gt;</description>
 			</item>
 	</channel>
