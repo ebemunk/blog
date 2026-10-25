@@ -37,6 +37,9 @@
 			<meta name="twitter:title" content="{{ .Site.Title }}">
 		{{ end }}
 
+		<link rel="preload" href="/fonts/marcellus-sc-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/fonts/abril-fatface-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/fonts/poppins-300-latin.woff2" as="font" type="font/woff2" crossorigin>
 		{{ with resources.Get "css/v2.css" | resources.Minify }}
 			<style>{{ .Content | safeCSS }}</style>
 		{{ end }}
