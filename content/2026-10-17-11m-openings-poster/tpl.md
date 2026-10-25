@@ -100,8 +100,6 @@ Here's where it gets interesting. I'd made some version of this chart a dozen ti
 
 **Data.** First I needed more games. Back in 2016, MillionBase was the biggest free database around, so naturally I tried that first, but the link was down. Then I remembered that the owner of Caissabase had actually reached out to me at some point... about four years earlier. Oops. In the end I went with Lumbra's Gigabase, which I found through the [En Croissant database list](https://encroissant.org/docs/assets/databases). That's 10,388,956 games, almost five times what I had in 2016, so a big improvement. The earliest game in there is from 1515, which is where the subtitle comes from: "A visual record of 510 years of human play." I didn't do any fancy filtering either, it all went through pgnstats with the default settings.
 
-<!-- iirc: defaults per user; pgnstats CLI has no game filters by default (only optional -fp player filter on v2). -->
-
 <div class="openings-stage">
   <svg class="openings-compare-data" viewBox="0 0 440 230" role="img" aria-label="Two circles sized by number of games: 2,197,113 in 2016, 10,388,956 for the poster">
     <circle cx="110" cy="112" r="44.1" fill="none" stroke="#9eabb3" />

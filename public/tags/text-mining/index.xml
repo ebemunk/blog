@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Text Mining on Thinking Through the Party</title>
-		<link>http://localhost:1313/tags/text-mining/</link>
+		<link>https://blog.ebemunk.com/tags/text-mining/</link>
 		<description>Recent content in Text Mining on Thinking Through the Party</description>
 		<generator>Hugo</generator>
 		<language>en-US</language>
@@ -12,19 +12,19 @@
 		
 			<lastBuildDate>Sun, 25 Apr 2021 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/text-mining/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://blog.ebemunk.com/tags/text-mining/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Last Words in Texas</title>
-				<link>http://localhost:1313/last-words-in-texas/</link>
+				<link>https://blog.ebemunk.com/last-words-in-texas/</link>
 				<pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/last-words-in-texas/</guid>
+				<guid>https://blog.ebemunk.com/last-words-in-texas/</guid>
 				<description>&lt;p&gt;In July of 1976, the US Supreme Court set forth the framework that states must follow to comply with the ban on &lt;em&gt;cruel and unusual punishment&lt;/em&gt; in the Eighth Amendment with the &lt;em&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Gregg_v._Georgia#Decision_of_the_Court&#34;&gt;Gregg v. Georgia decision&lt;/a&gt;&lt;/em&gt;. Since then, &lt;strong&gt;1532 people were executed in the United States&lt;/strong&gt;. Death penalty and executions are subject to local laws and not every state carries them out to the same extent &lt;a href=&#34;https://en.wikipedia.org/wiki/Capital_punishment_in_the_United_States#/media/File:Death_penalty_in_the_United_States_with_hiatuses.svg&#34;&gt;(map)&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Texas carries out the majority of these executions, having executed more people than the next top 6 states combined. It&amp;rsquo;s also where the &lt;a href=&#34;https://en.wikipedia.org/wiki/Capital_punishment_in_Texas&#34;&gt;first execution by lethal injection in the world&lt;/a&gt; took place. In Texas, capital crimes generally involve &lt;a href=&#34;https://en.wikipedia.org/wiki/Capital_punishment_in_Texas#Capital_crimes&#34;&gt;murders&lt;/a&gt;.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Text Mining LOST</title>
-				<link>http://localhost:1313/lost-text-mining/</link>
+				<link>https://blog.ebemunk.com/lost-text-mining/</link>
 				<pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/lost-text-mining/</guid>
+				<guid>https://blog.ebemunk.com/lost-text-mining/</guid>
 				<description>&lt;p&gt;We&amp;rsquo;re text mining the transcripts of the TV show LOST, and visualizing them!&lt;/p&gt;&#xA;&lt;p&gt;I retrieved and parsed the transcripts of LOST from &lt;a href=&#34;http://lostpedia.wikia.com/wiki/Portal:Transcripts&#34;&gt;Lostpedia&lt;/a&gt; and used a few different tools to look at this data.&lt;/p&gt;&#xA;&lt;p&gt;One thing to keep in mind is that this analysis is on only the text that the characters speak. I&amp;rsquo;m not a LOST connoisseur, and haven&amp;rsquo;t seen all the episodes. I&amp;rsquo;m not an authority on LOST, or on text mining.&lt;/p&gt;</description>
 			</item>
 	</channel>

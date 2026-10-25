@@ -4,7 +4,6 @@ import {
   hsl,
   partition,
   scaleLinear,
-  scaleLog,
   scaleOrdinal,
   scaleSqrt,
   schemeCategory10,
@@ -160,10 +159,10 @@ export function Sunburst({ data, knobs, crop, highlight, className, dataset }: P
   const rScale = useMemo(() => {
     const domain: [number, number] = [0, width / 2];
     const range: [number, number] = [0, width / 2];
-    if (knobs.radius === "log") {
-      // log(y + 1), so the center stays at 0.
-      const log = scaleLog([1, width / 2 + 1], range);
-      return (y: number) => log(y + 1);
+    if (knobs.radius === "square") {
+      // The inverse of sqrt: y^2 / R, so each ring is thicker than the one inside it.
+      const R = width / 2;
+      return (y: number) => (y * y) / R;
     }
     const s = knobs.radius === "sqrt" ? scaleSqrt(domain, range) : scaleLinear(domain, range);
     return (y: number) => s(y);

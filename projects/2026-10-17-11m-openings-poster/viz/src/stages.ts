@@ -1,5 +1,5 @@
 export type Center = "none" | "board-disk" | "void";
-export type RadiusKind = "sqrt" | "linear" | "log";
+export type RadiusKind = "sqrt" | "linear" | "square";
 /** category20-move: every move its own color (the d3 sequences-sunburst example), not its first move's. */
 export type Palette = "category10" | "tableau10" | "poster" | "category20-move";
 /** flat: one color per family; alternate: rings alternate lighter/darker (odd ply = White, even = Black). */
@@ -402,10 +402,10 @@ export const stages: Stage[] = [
         knobs: { radius: "sqrt" },
       },
       {
-        id: "log",
-        label: "log",
-        note: "The first moves swell and the deep theory squeezes into a rim.",
-        knobs: { radius: "log" },
+        id: "square",
+        label: "square",
+        note: "The mirror of square root: every ring thicker than the one inside it. If we wanted to highlight the leaves, this could be a better option.",
+        knobs: { radius: "square" },
       },
     ],
   },
