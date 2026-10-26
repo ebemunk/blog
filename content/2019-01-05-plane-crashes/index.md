@@ -5,7 +5,7 @@ slug = "century-of-plane-crashes"
 tags = ["data visualization", "long form"]
 image = "img/plane-crashes.png"
 shortSummary = "An exploration of 100 years of plane crashes from 1919 to 2019."
-related = ["2016-02-27-visual-look-chess/index.md", "2018-09-01-lost-text-mining.md"]
+related = ["2026-10-17-11m-openings-poster/index.md", "2016-02-27-visual-look-chess/index.md"]
 +++
 
 An exploration of 100 years of plane crashes. I discovered the [ASN Aviation Safety Database](http://aviation-safety.net/database/) some time ago, and knew almost instantly that I would have to dig deep on this one. The earliest crash is from August 2nd, 1919 and the latest record I have is from August 1st, 2019. There are approximately 22 thousand crash records.

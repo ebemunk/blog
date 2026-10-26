@@ -5,7 +5,7 @@ slug = "beholder-beauty-in-the-eyes-of-playboy"
 tags = ["data visualization", "long form"]
 image = "img/playmates.png"
 hidden = false
-related = ["2021-02-18-lastwords", "2019-01-05-plane-crashes.md"]
+related = ["2026-10-17-11m-openings-poster/index.md", "2021-02-18-lastwords"]
 shortSummary = "Finding out Playboy's idea of beauty from analyzing the data of 806 Playmates."
 responsive = true
 +++

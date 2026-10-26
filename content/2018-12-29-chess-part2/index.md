@@ -5,7 +5,7 @@ slug = "visual-look-at-2-million-chess-games-part-2"
 tags = ["data visualization", "chess", "long form"]
 image = "img/visual-look-part-2.png"
 shortSummary = "Looking deeper into 2 million chess games with reader suggestions."
-related = ["2016-02-27-visual-look-chess/index.md", "2019-01-05-plane-crashes.md"]
+related = ["2026-10-17-11m-openings-poster/index.md", "2016-02-27-visual-look-chess/index.md"]
 +++
 
 We're looking deeper into the amazing [MillionBase](http://www.top-5000.nl/pgn.htm) database with over two million chess games to see what else we can learn about the data specifically, and possibly about chess in general. I have analyzed some of this data in [Part 1]({{< ref "2016-02-27-visual-look-chess/index.md" >}}). If you haven't seen that, feel free to give it a read.
