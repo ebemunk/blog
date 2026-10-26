@@ -5,6 +5,7 @@ slug = "making-of-ten-million-chess-openings"
 tags = ["chess", "data visualization", "long form", "making of", "print"]
 shortSummary = "How the 2 million game openings sunburst became a print."
 related = ["2016-02-27-visual-look-chess/index.md", "2018-12-29-chess-part2.md"]
+image = "img/making-of-ten-million-chess-openings.png"
 publishDate = "2026-10-25"
 +++
 

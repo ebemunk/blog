@@ -10,13 +10,15 @@
 		
 		
 		
+			<lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate>
+		
 			<atom:link href="https://blog.ebemunk.com/tags/making-of/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Making Of: Ten Million Chess Openings</title>
 				<link>https://blog.ebemunk.com/making-of-ten-million-chess-openings/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
 				<guid>https://blog.ebemunk.com/making-of-ten-million-chess-openings/</guid>
-				<description>&lt;p&gt;Whenever I share something I make, I get a lot of emails and comments, mostly asking: &amp;ldquo;how did you make this?&amp;rdquo; The honest answer is usually &lt;em&gt;&amp;ldquo;slowly, and with a lot of fiddling&amp;rdquo;&lt;/em&gt;. This blog is &lt;a href=&#34;https://github.com/ebemunk/blog&#34;&gt;open-source&lt;/a&gt;, the common tools I use are &lt;a href=&#34;https://d3js.org/&#34;&gt;d3&lt;/a&gt;, and mountains of custom code. But no, I can&amp;rsquo;t help you with tech support on this repo. Most are disheartened when they hear this; they want to hear there&amp;rsquo;s some magic software that can just do it (and nowadays there just might be, with the proliferation of AI tools, that&amp;rsquo;s another post).&lt;/p&gt;</description>
+				<description>&lt;p&gt;Whenever I share something I make, I get a lot of emails and comments, mostly asking: &amp;ldquo;how did you make this?&amp;rdquo; The honest answer is usually &lt;em&gt;&amp;ldquo;slowly, and with a lot of fiddling&amp;rdquo;&lt;/em&gt;. This blog is &lt;a href=&#34;https://github.com/ebemunk/blog&#34;&gt;open-source&lt;/a&gt;, the only common tool I use is &lt;a href=&#34;https://d3js.org/&#34;&gt;d3&lt;/a&gt;, and mountains of custom code. But no, I can&amp;rsquo;t help you with tech support on this repo. Most are disheartened when they hear this; they want to hear there&amp;rsquo;s some magic software that can just do it (and nowadays there just might be, with the proliferation of AI tools, that&amp;rsquo;s another post).&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
