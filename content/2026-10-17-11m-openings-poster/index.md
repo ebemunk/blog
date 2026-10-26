@@ -217,7 +217,7 @@ Four of them: two big, two small, each size on two different papers. Up on the w
   </div>
 </div>
 
-The Enhanced Matter Art paper came out ahead on both print quality and durability, so that's what the poster is printed on, even though it costs a bit more.
+The Enhanced Matte Art paper came out ahead on both print quality and durability, so that's what the poster is printed on, even though it costs a bit more.
 
 ## Ten Million Openings
 
