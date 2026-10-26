@@ -137,9 +137,6 @@ If you can't get enough, below is a list of similar analyses that you might like
 - [Visualization of affect in movie scripts](https://hal.archives-ouvertes.fr/hal-01099668/document)
 - [Detecting Mixtures of Genres in Movie Dialogues](https://saravananthirumuruganathan.wordpress.com/2012/01/10/detecting-mixtures-of-genres-in-movie-dialogues/)
 
-<!--
-<script src="http://localhost:9001/bundle.js"></script>
--->
 <script src="./build/bundle.js"></script>
 
 <style>

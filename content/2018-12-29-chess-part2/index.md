@@ -186,5 +186,4 @@ Most common positions in the database, overall, after 6 full moves and after 12 
 
 I hope this gave you some ideas of your own to explore. I would love to hear your thoughts and questions. I want to explore this database more and am considering focusing on a particular player or an event. In the future I want to explore pawn moves or look at different possibilities with engine analysis. I'm eager to hear what you think!
 
-<!-- <script src="http://localhost:9001/bundle.js"></script> -->
 <script src="bundle.js"></script>

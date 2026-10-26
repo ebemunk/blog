@@ -180,9 +180,6 @@ They were and are real people who had a real impact on others around them, good 
 On December 2, 2021, Playboy announced its first-ever Creative Director In Residence <a href="https://www.plbygroup.com/news-releases/news-release-details/playboy-names-cardi-b-first-ever-creative-director-residence" target="_blank" rel="noopener noreferrer">as Cardi B</a>. In choosing the musician, the magazine signaled a commitment to leaving its old formula and its limited perspective squarely in the past. Just how far will this development push Playboy and their Playmates? We will have to wait and see.
 
 <script src="build/bundle.js"></script>
-<!--
-<script src="http://localhost:9001/bundle.js"></script>
--->
 <style>
 .viz-title,
 .viz-subtitle {

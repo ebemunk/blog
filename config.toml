@@ -29,3 +29,7 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [markup.goldmark.renderer]
   unsafe = true
+
+# Keep comments: React SSR output relies on its empty <!-- --> text separators to hydrate.
+[minify.tdewolff.html]
+  keepComments = true

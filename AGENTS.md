@@ -79,7 +79,7 @@ Goldmark `unsafe = true`, so posts mix Markdown prose with raw HTML for figures.
   <script type="module" src="build/index.js"></script>
   ```
 
-  Older posts keep a commented-out `//localhost:8080/index.js` line above it for dev; that's fine to keep.
+  Don't leave commented-out dev `<script>` lines: `config.toml` keeps HTML comments through minify (React hydration needs them), so they would ship.
 - Theme facts the post CSS has to live with: body background `#282c34`, headings `#d19a66` in Abril Fatface, body in Poppins at 18px, prose max width `40rem`. Only `p`, `ul` and headings are width-limited, so a figure can be wider than the text column. Post content sits inside `article.article`; scope post CSS under that or under a post-specific class prefix (`.openings-…`) so it can't leak into the theme.
 - The theme already appends the share blurb, newsletter signup, "See Also" and the consulting line to every post. Don't repeat those in the body.
 

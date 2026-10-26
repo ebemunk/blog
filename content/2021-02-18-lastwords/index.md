@@ -160,9 +160,6 @@ Thanks for reading, if you've made it this far! This dataset is analyzed by many
 	window.HMR_WEBSOCKET_PORT = 8080
 </script>
 
-<!--
-<script type="module" src="//localhost:8080/index.js"></script>
--->
 <script type="module" src="build/index.js"></script>
 <link rel="stylesheet" href="build/index.css">
 <link rel="stylesheet" href="build/leaflet.css">
