@@ -20,6 +20,7 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [params]
   author = "ebemunk"
+  description = "Long-form data visualization essays by ebemunk: chess, books, Playboy, plane crashes, and whatever else gets stuck in my head."
 
 [taxonomies]
   tag = "tags"
