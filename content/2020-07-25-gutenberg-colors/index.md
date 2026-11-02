@@ -4,7 +4,7 @@ title = "Color in Books"
 slug = "color-in-books"
 tags = ["data visualization", "quickviz"]
 image = "img/color-in-books.png"
-shortSummary = "Visualizing color in the Greatest Books Ever."
+shortSummary = "Visualizing color in the Greatest Books Ever: every CSS named color mentioned in Project Gutenberg's top 25 Best Books Ever, read from start to end."
 related = ["2018-12-29-chess-part2.md", "2019-01-05-plane-crashes.md"]
 +++
 
@@ -15,7 +15,7 @@ Click on the graphic to see it in full size.
 I hope this inspires you to read one of these classics!
 
 <a href="viz.png" class="viz">
-  <img src="viz.png" />
+  <img src="viz-preview.webp" alt="Color in Books: a radial chart for each of Project Gutenberg's top 25 Best Books Ever, showing every CSS named color mentioned from start to end and the five most frequent ones" />
 </a>
 
 Interested in prints of this graphic? I have a few copies printed on beautiful art paper. Reach out on twitter.

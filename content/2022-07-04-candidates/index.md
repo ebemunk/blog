@@ -4,7 +4,7 @@ title = "2022 Chess Candidates Tournament Recap"
 slug = "candidates-2022"
 tags = ["data visualization", "quickviz", "chess"]
 image = "img/candidates2022.png"
-shortSummary = "Recap of the 2022 Chess Candidates Tournament"
+shortSummary = "A quick recap of the 2022 Chess Candidates Tournament that saw Ian Nepomniachtchi emerge as the challenger for the second time, all in one graphic."
 related = ["2026-10-17-11m-openings-poster/index.md", "2016-02-27-visual-look-chess/index.md"]
 +++
 
@@ -13,7 +13,7 @@ I wanted to do a quick recap of the [2022 Chess Candidates Tournament](https://e
 Click on the graphic to see it in full size.
 
 <a href="viz.png" class="viz">
-  <img src="viz.png" />
+  <img src="viz-preview.webp" alt="2022 Chess Candidates Tournament recap: results table, standings by round, openings chart, inaccuracies, mistakes and blunders, time management and number of moves per player" />
 </a>
 
 <style>

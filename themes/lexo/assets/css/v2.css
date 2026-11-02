@@ -479,3 +479,11 @@ h2.consult {
   font-weight: 600;
   font-family: var(--font-body);
 }
+.article-list h1.term-title {
+  font-size: 2rem;
+  margin: 1.5rem auto 0 auto;
+}
+.article-list h1.term-title em {
+  font-style: normal;
+  color: var(--color-white);
+}

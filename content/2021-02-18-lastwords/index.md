@@ -4,7 +4,7 @@ title = "Last Words in Texas"
 slug = "last-words-in-texas"
 tags = ["data visualization", "long form", "text mining"]
 image = "img/last-words-in-texas.png"
-shortSummary = "Analyzing the last statements of 454 executed people in Texas."
+shortSummary = "Analyzing the last statements of 454 executed people in Texas: the words, phrases and sentiment of what they said right before their execution."
 related = ["2018-12-29-chess-part2.md", "2019-01-05-plane-crashes.md"]
 responsive = true
 +++

@@ -4,7 +4,7 @@ title = "Visual Look at 2 Million Chess Games: Part 2"
 slug = "visual-look-at-2-million-chess-games-part-2"
 tags = ["data visualization", "chess", "long form"]
 image = "img/visual-look-part-2.png"
-shortSummary = "Looking deeper into 2 million chess games with reader suggestions."
+shortSummary = "Looking deeper into 2 million chess games with reader suggestions: branching factor, material when the game ends, pawn paths, imbalances and more."
 related = ["2026-10-17-11m-openings-poster/index.md", "2016-02-27-visual-look-chess/index.md"]
 +++
 

@@ -1,6 +1,9 @@
 {{ partial "header.html" . }}
 
 <div class="article-list">
+	{{ if eq .Kind "term" }}
+		<h1 class="term-title">Posts tagged <em>{{ .Data.Term }}</em></h1>
+	{{ end }}
 	{{ range $key, $val := where .Paginator.Pages "Params.hidden" "ne" true }}
 		<article class="item">
 			<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -13,10 +16,10 @@
 					{{ partial "resized-image.html" (dict "path" .Params.image "spec" "600x webp q100" "alt" (printf "thumbnail image for %s" .Title)) }}
 				</div>
 				<div class="summary">
-					{{ if .Params.summary }}
-						{{ .Params.summary | markdownify }}
+					{{ with .Params.shortSummary }}
+						{{ . | markdownify }}
 					{{ else }}
-						{{ .Summary }}
+						{{ .Summary | plainify }}
 					{{ end }}
 				</div>
 			</div>
