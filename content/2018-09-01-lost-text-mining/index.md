@@ -133,7 +133,7 @@ That's it, if you've made it this far, I thank you for reading along. Hope this 
 If you can't get enough, below is a list of similar analyses that you might like, which this post was heavily inspired from.
 
 - [An Interactive Analysis of Tolkien's Works](http://lotrproject.com/statistics/books/)
-- [Literature statistics](http://www.tylervigen.com/literature-statistics)
+- [Literature statistics](https://web.archive.org/web/20200217034306/http://www.tylervigen.com/literature-statistics)
 - [Visualization of affect in movie scripts](https://hal.archives-ouvertes.fr/hal-01099668/document)
 - [Detecting Mixtures of Genres in Movie Dialogues](https://saravananthirumuruganathan.wordpress.com/2012/01/10/detecting-mixtures-of-genres-in-movie-dialogues/)
 
