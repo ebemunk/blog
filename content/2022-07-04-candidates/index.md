@@ -13,7 +13,7 @@ I wanted to do a quick recap of the [2022 Chess Candidates Tournament](https://e
 Click on the graphic to see it in full size.
 
 <a href="viz.png" class="viz">
-  <img src="viz.png" />
+  <img src="viz-preview.webp" alt="2022 Chess Candidates Tournament recap: results table, standings by round, openings chart, inaccuracies, mistakes and blunders, time management and number of moves per player" />
 </a>
 
 <style>

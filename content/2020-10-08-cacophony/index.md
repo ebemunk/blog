@@ -15,13 +15,13 @@ Hearing about how chaotic the debate went (and witnessing it after digging into 
 Click on the graphics to see it in full size.
 
 <a href="ss-normal.png" class="viz">
-  <img src="ss-normal.png" />
+  <img src="ss-normal-preview.webp" alt="Timeline of the first 2020 presidential debate showing when Trump, Biden and Wallace spoke, when they spoke at the same time, and donut charts of each one's total speaking time" />
 </a>
 
 As I was making the pie charts, I thought why not try a polar version - maybe it'll make for better visual interest.
 
 <a href="ss-polar.png" class="viz">
-  <img src="ss-polar.png" />
+  <img src="ss-polar-preview.webp" alt="Polar version of the debate timeline: rings of speaking time for Trump, Biden, Wallace and overlapping speech around the total speaking time donut charts" />
 </a>
 
 Interested in prints of these graphics? I have a few copies printed on beautiful art paper. Reach out on twitter.

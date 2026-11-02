@@ -11,3 +11,5 @@ projects/plane-crashes/collect/data/*
 
 projects/opeth/*
 projects/ironman/collect/tmp/**
+# Ahrefs/SEO research lives outside this repo
+docs/research/ahrefs/

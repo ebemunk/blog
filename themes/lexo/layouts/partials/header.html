@@ -32,6 +32,13 @@
 					<meta name="twitter:image" content="{{ $image.Permalink }}">
 				{{ end }}
 			{{ end }}
+		{{ else if eq .Kind "term" }}
+			{{ $description := printf "Every post tagged \"%s\" on %s, a blog of long-form data visualization essays by ebemunk." .Data.Term .Site.Title }}
+			<meta property="og:title" content="Posts tagged {{ .Data.Term }} - {{ .Site.Title }}">
+			<meta name="twitter:title" content="Posts tagged {{ .Data.Term }} - {{ .Site.Title }}">
+			<meta name="description" content="{{ $description }}">
+			<meta property="og:description" content="{{ $description }}">
+			<meta name="twitter:description" content="{{ $description }}">
 		{{ else }}
 			<meta property="og:title" content="{{ .Site.Title }}">
 			<meta name="twitter:title" content="{{ .Site.Title }}">
