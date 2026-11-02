@@ -5,7 +5,7 @@ title = "A Visual Look at 2 Million Chess Games"
 slug = "a-visual-look-at-2-million-chess-games"
 tags = ["chess", "data visualization", "long form"]
 image = "img/visual-look.png"
-shortSummary = "2 million chess games visualized: patterns from 2,197,113 games in the MillionBase database, spanning games from 1801 up to 2013."
+shortSummary = "2 million chess games visualized."
 related = ["2026-10-17-11m-openings-poster/index.md", "2018-12-29-chess-part2.md"]
 +++
 

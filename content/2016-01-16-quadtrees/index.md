@@ -4,7 +4,7 @@ title = "Optimizing Particle Background Performance with Quadtrees"
 slug = "optimizing-particle-background-performance-with-quadtrees"
 tags = ["technical", "javascript"]
 image = "img/quadtrees.png"
-shortSummary = "Using quadtrees to optimize particle systems, after digging into particle background libraries and finding they check every point against every other point."
+shortSummary = "Using quadtrees to optimize particle systems."
 related = ["2018-12-29-chess-part2.md", "2019-01-05-plane-crashes.md"]
 +++
 

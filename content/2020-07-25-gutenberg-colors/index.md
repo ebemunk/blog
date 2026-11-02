@@ -4,7 +4,7 @@ title = "Color in Books"
 slug = "color-in-books"
 tags = ["data visualization", "quickviz"]
 image = "img/color-in-books.png"
-shortSummary = "Visualizing color in the Greatest Books Ever: every CSS named color mentioned in Project Gutenberg's top 25 Best Books Ever, read from start to end."
+shortSummary = "Visualizing color in the Greatest Books Ever."
 related = ["2018-12-29-chess-part2.md", "2019-01-05-plane-crashes.md"]
 +++
 

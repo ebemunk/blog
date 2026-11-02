@@ -6,7 +6,7 @@ tags = ["data visualization", "long form"]
 image = "img/playmates.png"
 hidden = false
 related = ["2026-10-17-11m-openings-poster/index.md", "2021-02-18-lastwords"]
-shortSummary = "Finding out Playboy's idea of beauty from analyzing the data of 806 Playmates: body measurements, BMI, waist-to-hips ratio and where they came from."
+shortSummary = "Finding out Playboy's idea of beauty from analyzing the data of 806 Playmates."
 responsive = true
 +++
 

@@ -4,7 +4,7 @@ title = "ca·coph·o·ny - a harsh discordant mixture of sounds."
 slug = "cacophony"
 tags = ["data visualization", "quickviz"]
 image = "img/cacophony.png"
-shortSummary = "2020 USA First Presidential Debate in perspective: a timeline of when Trump, Biden and Wallace spoke, and how often they spoke over each other."
+shortSummary = "2020 USA First Presidential Debate in perspective."
 related = ["2020-07-25-gutenberg-colors/index.md", "2019-01-05-plane-crashes.md"]
 +++
 

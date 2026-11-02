@@ -5,7 +5,7 @@ title = "Text Mining LOST"
 slug = "lost-text-mining"
 tags = ["data visualization", "text mining", "long form"]
 image = "img/lost-text-mining.png"
-shortSummary = "Text mining the transcripts of the TV show LOST for gold: characters, personalities, flashbacks, tone and reading level in a deep dive of the show."
+shortSummary = "Text mining transcripts of the TV show LOST for gold."
 related = ["2016-02-27-visual-look-chess/index.md", "2019-01-05-plane-crashes.md"]
 +++
 

@@ -4,7 +4,7 @@ title = "2022 Chess Candidates Tournament Recap"
 slug = "candidates-2022"
 tags = ["data visualization", "quickviz", "chess"]
 image = "img/candidates2022.png"
-shortSummary = "A quick recap of the 2022 Chess Candidates Tournament that saw Ian Nepomniachtchi emerge as the challenger for the second time, all in one graphic."
+shortSummary = "Recap of the 2022 Chess Candidates Tournament"
 related = ["2026-10-17-11m-openings-poster/index.md", "2016-02-27-visual-look-chess/index.md"]
 +++
 

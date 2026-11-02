@@ -4,7 +4,7 @@ title = "One Year in Vancouver: Visualizing Events"
 slug = "one-year-in-van"
 tags = ["data visualization", "maps", "long form"]
 image = "img/year-in-van.png"
-shortSummary = "2018 in Vancouver through the lens of event listings on the Georgia Straight, collected over the whole year and turned into heatmaps of the city."
+shortSummary = "2018 in Vancouver through the lens of event listings on the Georgia Straight."
 related = ["2016-02-27-visual-look-chess/index.md", "2019-01-05-plane-crashes.md"]
 +++
 
