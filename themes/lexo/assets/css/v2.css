@@ -487,3 +487,8 @@ h2.consult {
   font-style: normal;
   color: var(--color-white);
 }
+header.site-header h1.site-title {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}

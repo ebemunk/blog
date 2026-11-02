@@ -1,0 +1,33 @@
+{{- $author := dict "@type" "Person" "name" .Site.Params.author "url" .Site.BaseURL -}}
+{{- if .IsPage -}}
+	{{- $schema := dict
+		"@context" "https://schema.org"
+		"@type" "BlogPosting"
+		"mainEntityOfPage" .Permalink
+		"url" .Permalink
+		"headline" .Title
+		"description" .Params.shortSummary
+		"datePublished" (.PublishDate.Format "2006-01-02T15:04:05Z07:00")
+		"dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+		"author" $author
+		"publisher" $author
+		"keywords" .Params.tags
+	-}}
+	{{- with .Params.image -}}
+		{{- with resources.Get . -}}
+			{{- $schema = merge $schema (dict "image" (.Resize "1200x webp q100").Permalink) -}}
+		{{- end -}}
+	{{- end -}}
+	<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{- else if .IsHome -}}
+	{{- $schema := dict
+		"@context" "https://schema.org"
+		"@type" "WebSite"
+		"name" .Site.Title
+		"url" .Site.BaseURL
+		"description" .Site.Params.description
+		"author" $author
+		"publisher" $author
+	-}}
+	<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{- end -}}

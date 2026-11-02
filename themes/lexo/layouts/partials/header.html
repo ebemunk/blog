@@ -42,7 +42,13 @@
 		{{ else }}
 			<meta property="og:title" content="{{ .Site.Title }}">
 			<meta name="twitter:title" content="{{ .Site.Title }}">
+			{{ with .Site.Params.description }}
+				<meta name="description" content="{{ . }}">
+				<meta property="og:description" content="{{ . }}">
+				<meta name="twitter:description" content="{{ . }}">
+			{{ end }}
 		{{ end }}
+		{{ partial "schema.html" . }}
 
 		<link rel="preload" href="/fonts/marcellus-sc-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="preload" href="/fonts/abril-fatface-400-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -62,7 +68,7 @@
 	<body>
 		<header class="site-header">
 			{{ if .IsHome }}
-				{{ .Site.Title }}
+				<h1 class="site-title">{{ .Site.Title }}</h1>
 			{{ else }}
 				<a href="/">{{ .Site.Title }}</a>
 			{{ end }}
