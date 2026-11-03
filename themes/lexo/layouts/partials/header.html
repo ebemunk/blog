@@ -25,13 +25,6 @@
 			<meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">
 			<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
 			<meta property="article:author" content="{{ .Site.Params.author }}">
-			{{ with .Params.image }}
-				{{ with resources.Get . }}
-					{{ $image := .Resize "1200x webp q100" }}
-					<meta property="og:image" content="{{ $image.Permalink }}">
-					<meta name="twitter:image" content="{{ $image.Permalink }}">
-				{{ end }}
-			{{ end }}
 		{{ else if eq .Kind "term" }}
 			{{ $description := printf "Every post tagged \"%s\" on %s, a blog of long-form data visualization essays by ebemunk." .Data.Term .Site.Title }}
 			<meta property="og:title" content="Posts tagged {{ .Data.Term }} - {{ .Site.Title }}">
@@ -47,6 +40,11 @@
 				<meta property="og:description" content="{{ . }}">
 				<meta name="twitter:description" content="{{ . }}">
 			{{ end }}
+		{{ end }}
+		{{ with resources.Get (.Params.image | default .Site.Params.defaultImage) }}
+			{{ $image := .Resize "1200x webp q100" }}
+			<meta property="og:image" content="{{ $image.Permalink }}">
+			<meta name="twitter:image" content="{{ $image.Permalink }}">
 		{{ end }}
 		{{ partial "schema.html" . }}
 
